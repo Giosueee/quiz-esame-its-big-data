@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Esame — ITS Big Data</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">◆</span>
+      <div>
+        <h1>Quiz Esame</h1>
+        <p class="sub">Preparazione esami ITS Big Data</p>
+      </div>
+    </div>
+    <nav class="topnav">
+      <button class="ghost" id="nav-home">Home</button>
+      <button class="ghost" id="nav-errors">Errori commessi</button>
+      <button class="ghost" id="nav-stats">Statistiche</button>
+    </nav>
+  </header>
+
+  <!-- ============ SCHERMATA HOME ============ -->
+  <section id="screen-home" class="screen active">
+    <div class="hero">
+      <h2>Preparati all'esame a risposta multipla</h2>
+      <p>Domande casuali da slide, notebook e documentazione. Una o più risposte corrette per domanda. Ogni risposta viene salvata: il quiz ti riproporrà più spesso gli argomenti che sbagli.</p>
+    </div>
+
+    <div class="config card">
+      <div class="field">
+        <label>Materia</label>
+        <div class="segmented" id="opt-area">
+          <!-- generato dinamicamente da app.js in base alle materie registrate -->
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Numero di domande per sessione</label>
+        <div class="segmented" id="opt-count">
+          <button class="seg" data-val="10">10</button>
+          <button class="seg" data-val="20">20</button>
+          <button class="seg active" data-val="30">30</button>
+          <button class="seg" data-val="50">50</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Modalità</label>
+        <div class="segmented" id="opt-mode">
+          <button class="seg active" data-val="adattiva">Adattiva (consigliata)</button>
+          <button class="seg" data-val="casuale">Casuale pura</button>
+          <button class="seg" data-val="errori">Solo i miei errori</button>
+        </div>
+        <p class="hint" id="mode-hint">Adattiva: mescola domande nuove e domande che hai sbagliato in passato, dando priorità ai tuoi punti deboli.</p>
+      </div>
+
+      <button class="primary big" id="btn-start">Inizia la sessione →</button>
+    </div>
+
+    <div class="quickstats card" id="home-quickstats"></div>
+  </section>
+
+  <!-- ============ SCHERMATA QUIZ ============ -->
+  <section id="screen-quiz" class="screen">
+    <div class="quizbar">
+      <div class="progresswrap"><div class="progressbar" id="progressbar"></div></div>
+      <span class="progresstext" id="progresstext"></span>
+    </div>
+    <form id="quiz-form"></form>
+    <div class="quiz-actions">
+      <button class="ghost" id="btn-cancel">Annulla</button>
+      <button class="primary" id="btn-submit">Correggi e mostra risultati</button>
+    </div>
+  </section>
+
+  <!-- ============ SCHERMATA RISULTATI ============ -->
+  <section id="screen-results" class="screen">
+    <div class="scorecard card" id="scorecard"></div>
+    <div id="results-list"></div>
+    <div class="quiz-actions">
+      <button class="primary" id="btn-new">Nuova sessione</button>
+    </div>
+  </section>
+
+  <!-- ============ SCHERMATA ERRORI COMMESSI ============ -->
+  <section id="screen-errors" class="screen">
+    <div class="card">
+      <div class="stats-head">
+        <div>
+          <h2>Errori commessi</h2>
+          <p class="sub">Ogni domanda sbagliata resta qui per sempre (una sola volta), anche dopo averla imparata.</p>
+        </div>
+        <button class="primary" id="btn-train-errors">Allenati su questi</button>
+      </div>
+      <div id="errors-summary" class="stats-global"></div>
+      <div id="errors-legend" class="legend"></div>
+      <div id="errors-list" class="errors-list"></div>
+    </div>
+  </section>
+
+  <!-- ============ SCHERMATA STATISTICHE ============ -->
+  <section id="screen-stats" class="screen">
+    <div class="card">
+      <div class="stats-head">
+        <h2>Le tue statistiche</h2>
+        <button class="ghost danger" id="btn-reset">Azzera dati</button>
+      </div>
+      <div id="stats-global" class="stats-global"></div>
+
+      <h3>Padronanza degli errori <span class="h3sub">(quante domande sbagliate hai poi imparato)</span></h3>
+      <div id="stats-mastery" class="stats-global"></div>
+
+      <h3>Andamento nel tempo <span class="h3sub">(precisione per sessione)</span></h3>
+      <div id="chart-trend" class="chartbox"></div>
+
+      <h3>Precisione per materia</h3>
+      <div id="chart-area" class="chartbox"></div>
+
+      <h3>Precisione per argomento</h3>
+      <div id="stats-topics" class="topic-list"></div>
+
+      <h3>Domande più sbagliate</h3>
+      <div id="stats-worst" class="worst-list"></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>Dati salvati solo su questo computer (localStorage). Nessun dato inviato online.</span>
+  </footer>
+</div>
+
+<!-- 1) registro materie  2) una riga per ogni materia  3) logica app -->
+<script src="core.js"></script>
+<script src="questions/python.js"></script>
+<script src="questions/sql.js"></script>
+<script src="questions/ufs06_statistica.js"></script>
+<script src="questions/ufs07_modelli_statistici.js"></script>
+<script src="questions/ufs02_so_reti_virtualizzazione.js"></script>
+<script src="questions/ufs08_r.js"></script>
+<script src="questions/ufs09_machine_learning.js"></script>
+<script src="questions/ufs10_time_series.js"></script>
+<script src="questions/ufs12_data_pipelines.js"></script>
+<script src="questions/ufs13_bi_datawarehouse.js"></script>
+<script src="questions/ufs14_pandas.js"></script>
+<script src="questions/ufs15_iot_kafka.js"></script>
+<script src="questions/ufs17_spark.js"></script>
+<script src="questions/ufs18_end_to_end.js"></script>
+<script src="questions/ufs19_nlp.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
