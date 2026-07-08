@@ -18,22 +18,22 @@ registerSubject("Time Series", [
     id: "u10002", topic: "Componenti",
     q: "Quale di queste è una componente tipica di una serie temporale?",
     opts: [
-      "Il trend (andamento di fondo)",
       "La chiave primaria della tabella",
+      "Il trend (andamento di fondo)",
       "Lo schema di normalizzazione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le componenti di una serie temporale sono trend, stagionalità e rumore/residuo. Chiave primaria e normalizzazione sono concetti dei database relazionali, non delle serie storiche."
   },
   {
     id: "u10003", topic: "Trend",
     q: "Il trend di una serie temporale rappresenta:",
     opts: [
-      "L'andamento di fondo a lungo termine",
+      "Un singolo valore anomalo",
       "Le oscillazioni stagionali",
-      "Un singolo valore anomalo"
+      "L'andamento di fondo a lungo termine"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il trend è la direzione generale della serie nel lungo periodo (crescente, decrescente o stabile), al netto di stagionalità e rumore."
   },
   {
@@ -51,22 +51,22 @@ registerSubject("Time Series", [
     id: "u10005", topic: "Stazionarietà",
     q: "Una serie temporale è stazionaria quando:",
     opts: [
-      "Le sue proprietà statistiche (media, varianza) restano costanti nel tempo",
       "Ha un trend crescente marcato",
+      "Le sue proprietà statistiche (media, varianza) restano costanti nel tempo",
       "Cambia continuamente distribuzione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Una serie stazionaria ha media, varianza e autocorrelazione stabili nel tempo. Molti modelli (es. ARIMA) richiedono la stazionarietà, spesso ottenuta con differenziazione."
   },
   {
     id: "u10006", topic: "Differenziazione",
     q: "La differenziazione (differencing) di una serie serve a:",
     opts: [
-      "Renderla stazionaria rimuovendo trend/stagionalità",
+      "Amplificare la componente stagionale della serie",
       "Aggiungere un trend crescente alla serie",
-      "Amplificare la componente stagionale della serie"
+      "Renderla stazionaria rimuovendo trend/stagionalità"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Differenziare significa calcolare le differenze tra valori consecutivi (y_t − y_(t−1)): rimuove il trend e stabilizza la media, aiutando a rendere la serie stazionaria."
   },
   {
@@ -84,22 +84,22 @@ registerSubject("Time Series", [
     id: "u10008", topic: "PACF",
     q: "La PACF (autocorrelazione parziale) differisce dall'ACF perché:",
     opts: [
-      "Misura la correlazione a un lag rimuovendo l'effetto dei lag intermedi",
       "Coincide con l'autocorrelazione semplice senza controllare lag intermedi",
+      "Misura la correlazione a un lag rimuovendo l'effetto dei lag intermedi",
       "Misura la relazione tra due serie distinte invece dei lag della stessa serie"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La PACF isola la correlazione diretta tra y_t e y_(t−k) al netto dei lag intermedi. ACF e PACF insieme aiutano a scegliere gli ordini p e q di un modello ARIMA."
   },
   {
     id: "u10009", topic: "ARIMA",
     q: "In ARIMA(p, d, q), la lettera 'd' indica:",
     opts: [
-      "Il numero di differenziazioni per rendere la serie stazionaria",
+      "Il numero di osservazioni disponibili per stimare o valutare il modello",
       "La media della serie calcolata sull'intero intervallo osservato",
-      "Il numero di osservazioni disponibili per stimare o valutare il modello"
+      "Il numero di differenziazioni per rendere la serie stazionaria"
     ],
-    correct: [0],
+    correct: [2],
     exp: "In ARIMA: p = ordine della parte autoregressiva (AR), d = grado di differenziazione (I), q = ordine della media mobile (MA). 'd' rende la serie stazionaria."
   },
   {
@@ -117,22 +117,22 @@ registerSubject("Time Series", [
     id: "u10011", topic: "MA",
     q: "La componente MA (media mobile) di ARIMA modella il valore attuale in funzione di:",
     opts: [
-      "Gli errori (residui) dei periodi passati",
       "I valori medi delle categorie",
+      "Gli errori (residui) dei periodi passati",
       "Le variabili indipendenti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La parte MA usa gli errori di previsione passati per correggere la stima corrente. Da non confondere con la semplice media mobile di lisciamento."
   },
   {
     id: "u10012", topic: "Media mobile",
     q: "Una media mobile (moving average) di lisciamento serve a:",
     opts: [
-      "Attenuare il rumore evidenziando l'andamento di fondo",
+      "Trasformare valori numerici continui in categorie discrete",
       "Aggiungere artificialmente una componente stagionale al modello",
-      "Trasformare valori numerici continui in categorie discrete"
+      "Attenuare il rumore evidenziando l'andamento di fondo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La media mobile calcola la media su una finestra scorrevole di valori: smussa le fluttuazioni casuali e rende più visibile il trend. La finestra ne determina il grado di lisciamento."
   },
   {
@@ -150,22 +150,22 @@ registerSubject("Time Series", [
     id: "u10014", topic: "Additivo vs moltiplicativo",
     q: "In un modello moltiplicativo, la stagionalità:",
     opts: [
-      "Cresce in ampiezza al crescere del livello della serie",
       "Mantiene ampiezza stagionale costante come in un modello additivo",
+      "Cresce in ampiezza al crescere del livello della serie",
       "Assume sempre valori negativi indipendentemente dal livello"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Modello additivo: serie = trend + stagionalità + residuo (ampiezza stagionale costante). Moltiplicativo: componenti moltiplicate, con ampiezza stagionale proporzionale al livello."
   },
   {
     id: "u10015", topic: "Forecasting",
     q: "Il forecasting di una serie temporale consiste nel:",
     opts: [
-      "Prevedere i valori futuri sulla base di quelli passati",
+      "Descrivere solo il passato",
       "Classificare le categorie",
-      "Descrivere solo il passato"
+      "Prevedere i valori futuri sulla base di quelli passati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il forecasting stima i valori futuri della serie usando i pattern storici (trend, stagionalità, autocorrelazione). È l'obiettivo principale dell'analisi di molte serie storiche."
   },
   {
@@ -183,22 +183,22 @@ registerSubject("Time Series", [
     id: "u10017", topic: "White noise",
     q: "Il 'rumore bianco' (white noise) è una serie con:",
     opts: [
-      "Valori casuali indipendenti, media costante e nessuna autocorrelazione",
       "Una direzione di lungo periodo marcata, non rumore bianco",
+      "Valori casuali indipendenti, media costante e nessuna autocorrelazione",
       "Una serie monotona crescente, non casuale e indipendente"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il white noise è una sequenza di valori casuali incorrelati con media e varianza costanti: non è prevedibile. Se i residui di un modello sono white noise, il modello ha catturato tutta la struttura."
   },
   {
     id: "u10018", topic: "Lag",
     q: "Un 'lag' (ritardo) di una serie temporale è:",
     opts: [
-      "Il valore della serie spostato indietro di uno o più periodi",
+      "La componente di lungo periodo che descrive la direzione della serie",
       "Un'osservazione assente o non registrata nella serie temporale",
-      "La componente di lungo periodo che descrive la direzione della serie"
+      "Il valore della serie spostato indietro di uno o più periodi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il lag k è la serie ritardata di k periodi (y_(t−k)). Le feature di lag sono fondamentali per prevedere: il valore di oggi spesso dipende da quelli dei giorni precedenti."
   },
   {
@@ -216,22 +216,22 @@ registerSubject("Time Series", [
     id: "u10020", topic: "Exponential smoothing",
     q: "Il lisciamento esponenziale (exponential smoothing) assegna ai dati passati:",
     opts: [
-      "Pesi decrescenti in modo esponenziale (più recenti pesano di più)",
       "Peso solo al primo valore",
+      "Pesi decrescenti in modo esponenziale (più recenti pesano di più)",
       "Un peso nullo che esclude l'osservazione o la feature dal calcolo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Nello smoothing esponenziale le osservazioni recenti pesano più di quelle vecchie, con decadimento esponenziale. Metodi come Holt-Winters gestiscono anche trend e stagionalità."
   },
   {
     id: "u10021", topic: "Stazionarietà: test",
     q: "Il test di Dickey-Fuller aumentato (ADF) verifica:",
     opts: [
-      "Se una serie è stazionaria o presenta una radice unitaria",
+      "Il numero di stagioni",
       "La correlazione tra due serie",
-      "Il numero di stagioni"
+      "Se una serie è stazionaria o presenta una radice unitaria"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il test ADF controlla la stazionarietà: un p-value basso porta a rifiutare la presenza di radice unitaria, indicando stazionarietà. Serve prima di applicare modelli come ARIMA."
   },
   {
@@ -249,22 +249,22 @@ registerSubject("Time Series", [
     id: "u10023", topic: "Componente ciclica",
     q: "La componente ciclica differisce dalla stagionale perché:",
     opts: [
-      "Ha durata variabile e non un periodo fisso e regolare",
       "Si ripete sempre ogni 12 mesi",
+      "Ha durata variabile e non un periodo fisso e regolare",
       "Coincide col trend"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La stagionalità ha periodo fisso (es. annuale); la componente ciclica (es. cicli economici) ha durata irregolare e non predeterminata, di solito su archi temporali più lunghi."
   },
   {
     id: "u10024", topic: "Autocorrelazione",
     q: "Un'alta autocorrelazione a lag 12 in dati mensili suggerisce:",
     opts: [
-      "Stagionalità annuale (ripetizione ogni 12 mesi)",
+      "Rumore casuale senza componente informativa sfruttabile dal modello",
       "Assenza di pattern",
-      "Rumore casuale senza componente informativa sfruttabile dal modello"
+      "Stagionalità annuale (ripetizione ogni 12 mesi)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un picco di ACF al lag corrispondente al periodo stagionale (12 per dati mensili) indica stagionalità annuale: i valori si somigliano a distanza di un anno."
   },
   {
@@ -282,22 +282,22 @@ registerSubject("Time Series", [
     id: "u10026", topic: "Baseline forecasting",
     q: "Un modello baseline di previsione molto semplice è:",
     opts: [
-      "Il metodo naïve: prevedere per domani il valore di oggi",
       "Una rete neurale con più strati nascosti usata per apprendimento profondo",
+      "Il metodo naïve: prevedere per domani il valore di oggi",
       "Un ensemble di alberi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il metodo naïve (ultimo valore) o quello stagionale naïve (valore dello stesso periodo dell'anno prima) sono baseline: un modello complesso deve batterle per giustificarsi."
   },
   {
     id: "u10027", topic: "Trend: rimozione",
     q: "Per rimuovere un trend lineare da una serie si può:",
     opts: [
-      "Differenziare la serie (una volta)",
+      "Riordinare le osservazioni in base al valore",
       "Aggiungere una componente stagionale alla serie",
-      "Riordinare le osservazioni in base al valore"
+      "Differenziare la serie (una volta)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Una differenziazione di ordine 1 (y_t − y_(t−1)) elimina un trend lineare. Trend più complessi possono richiedere differenziazioni multiple o detrending con regressione."
   },
   {
@@ -315,22 +315,22 @@ registerSubject("Time Series", [
     id: "u10029", topic: "Feature temporali",
     q: "Estrarre da una data feature come mese, giorno della settimana, festività serve a:",
     opts: [
-      "Aiutare il modello a cogliere pattern stagionali e di calendario",
       "Cancellare la data",
+      "Aiutare il modello a cogliere pattern stagionali e di calendario",
       "Ridurre il numero di righe del dataset prima dell'analisi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le feature di calendario (mese, giorno, festività, ora) rendono espliciti i pattern periodici, migliorando i modelli di previsione, specie quelli non specifici per serie storiche."
   },
   {
     id: "u10030", topic: "Prophet",
     q: "Librerie come Prophet sono pensate per:",
     opts: [
-      "Previsioni di serie con trend e stagionalità in modo semi-automatico",
+      "Gestire database operazionali invece di stimare trend e stagionalità",
       "Classificare immagini statiche invece di modellare serie temporali",
-      "Gestire database operazionali invece di stimare trend e stagionalità"
+      "Previsioni di serie con trend e stagionalità in modo semi-automatico"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Prophet (di Meta) modella trend, stagionalità multiple e festività in modo robusto e facile, adatto a serie business con pattern stagionali e valori mancanti/outlier."
   },
   {
@@ -348,22 +348,22 @@ registerSubject("Time Series", [
     id: "u10032", topic: "Overfitting temporale",
     q: "Un modello di forecasting troppo complesso rischia di:",
     opts: [
-      "Adattarsi al rumore del passato e prevedere male il futuro",
       "Prevedere sempre perfettamente",
+      "Adattarsi al rumore del passato e prevedere male il futuro",
       "Diventare stazionario"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Anche nel forecasting l'overfitting è un pericolo: il modello impara fluttuazioni casuali del passato e generalizza male. La validazione temporale aiuta a rilevarlo."
   },
   {
     id: "u10033", topic: "Frequenza",
     q: "La 'frequenza' di una serie temporale indica:",
     opts: [
-      "Ogni quanto sono campionate le osservazioni",
+      "La media aritmetica dei valori osservati nella variabile",
       "Il valore massimo osservato nel vettore o nella serie",
-      "La media aritmetica dei valori osservati nella variabile"
+      "Ogni quanto sono campionate le osservazioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La frequenza è il passo temporale tra osservazioni (secondi, giorni, mesi). Determina come si definiscono i lag, la stagionalità e le aggregazioni."
   },
   {
@@ -381,22 +381,22 @@ registerSubject("Time Series", [
     id: "u10035", topic: "Serie multivariate",
     q: "Una serie temporale multivariata:",
     opts: [
-      "Registra nel tempo più variabili contemporaneamente",
       "Ha una sola variabile",
+      "Registra nel tempo più variabili contemporaneamente",
       "Non ha componente temporale"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Nelle serie multivariate si osservano più variabili nel tempo, possibilmente correlate (es. temperatura e consumo elettrico). Modelli come VAR le trattano congiuntamente."
   },
   {
     id: "u10036", topic: "Backtesting",
     q: "Il backtesting di un modello di forecasting consiste nel:",
     opts: [
-      "Simularne le previsioni sul passato per valutarne l'affidabilità",
+      "Non misurare gli errori delle previsioni simulate",
       "Eliminare lo storico invece di simulare previsioni sul passato",
-      "Non misurare gli errori delle previsioni simulate"
+      "Simularne le previsioni sul passato per valutarne l'affidabilità"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il backtesting valuta il modello su periodi storici come se fossero futuri (walk-forward), stimando quanto ci si può fidare delle previsioni prima di usarlo davvero."
   },
   {
@@ -414,22 +414,22 @@ registerSubject("Time Series", [
     id: "u10038", topic: "Autocorrelazione residui",
     q: "Se i residui di un modello mostrano ancora autocorrelazione, significa che:",
     opts: [
-      "Il modello non ha catturato tutta la struttura temporale",
       "Il modello è perfetto",
+      "Il modello non ha catturato tutta la struttura temporale",
       "I dati sono categorici"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Residui autocorrelati indicano struttura non modellata (trend/stagionalità/AR residui). Idealmente i residui devono essere white noise: allora il modello è adeguato."
   },
   {
     id: "u10039", topic: "Holt-Winters",
     q: "Il metodo di Holt-Winters gestisce:",
     opts: [
-      "Livello, trend e stagionalità con lisciamento esponenziale",
+      "Non modella né livello, né trend, né stagionalità",
       "Considera solo il livello medio, ignorando trend e stagionalità",
-      "Non modella né livello, né trend, né stagionalità"
+      "Livello, trend e stagionalità con lisciamento esponenziale"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Holt-Winters (triplo smoothing esponenziale) modella insieme livello, trend e stagionalità, aggiornandoli con pesi esponenziali. Adatto a serie con stagionalità regolare."
   },
   {
@@ -447,22 +447,22 @@ registerSubject("Time Series", [
     id: "u10041", topic: "Grafico serie",
     q: "Il primo passo nell'analisi di una serie temporale è di solito:",
     opts: [
-      "Visualizzarla nel tempo (line plot) per individuarne le componenti",
       "Applicare subito una rete neurale",
+      "Visualizzarla nel tempo (line plot) per individuarne le componenti",
       "Cancellare gli outlier"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Tracciare la serie nel tempo rivela a colpo d'occhio trend, stagionalità, outlier e cambi di regime, orientando le scelte successive di trasformazione e modello."
   },
   {
     id: "u10042", topic: "Radice unitaria",
     q: "Una serie con 'radice unitaria' (es. random walk) è:",
     opts: [
-      "Non stazionaria: shock hanno effetto permanente",
+      "Perfettamente prevedibile",
       "Sempre stazionaria",
-      "Perfettamente prevedibile"
+      "Non stazionaria: shock hanno effetto permanente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Con una radice unitaria (random walk) la serie non torna a una media stabile e gli shock si accumulano: è non stazionaria. Va differenziata prima di modellarla."
   },
   {
@@ -480,22 +480,22 @@ registerSubject("Time Series", [
     id: "u10044", topic: "Anomalie",
     q: "Rilevare anomalie in una serie temporale significa:",
     opts: [
-      "Individuare punti che deviano dal comportamento atteso nel tempo",
       "Calcolare la media generale di tutta la serie",
+      "Individuare punti che deviano dal comportamento atteso nel tempo",
       "Rimuovere il trend di fondo dalla serie"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'anomaly detection su serie segnala picchi, cali o cambi improvvisi rispetto al pattern atteso (utile per monitoraggio, frodi, guasti), tenendo conto di trend e stagionalità."
   },
   {
     id: "u10045", topic: "Cross-validation temporale",
     q: "La 'time series cross-validation' (walk-forward):",
     opts: [
-      "Espande progressivamente la finestra di training verso il futuro",
+      "Usa il futuro per addestrare",
       "Mescola casualmente passato e futuro invece di avanzare nel tempo",
-      "Usa il futuro per addestrare"
+      "Espande progressivamente la finestra di training verso il futuro"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nella cross-validation temporale si addestra su un blocco iniziale e si valida sul successivo, avanzando nel tempo. Rispetta l'ordine ed evita di usare il futuro nel passato."
   },
   {
@@ -513,22 +513,22 @@ registerSubject("Time Series", [
     id: "u10047", topic: "Differenziazione stagionale",
     q: "La differenziazione stagionale (es. y_t − y_(t−12)) serve a:",
     opts: [
-      "Rimuovere la stagionalità di periodo 12",
       "Aggiungere un trend",
+      "Rimuovere la stagionalità di periodo 12",
       "Aumentare la frequenza di campionamento dei dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Sottrarre il valore dello stesso periodo dell'anno prima (lag stagionale) elimina la stagionalità, come la differenziazione ordinaria rimuove il trend. Usata in SARIMA."
   },
   {
     id: "u10048", topic: "Interpretazione ACF",
     q: "Un ACF che decade lentamente indica tipicamente:",
     opts: [
-      "Presenza di un trend / non stazionarietà",
+      "Stagionalità perfetta",
       "Assenza di correlazione",
-      "Stagionalità perfetta"
+      "Presenza di un trend / non stazionarietà"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un ACF che scende molto lentamente segnala forte persistenza/trend (non stazionarietà): la serie va differenziata. Un ACF che si azzera rapidamente indica maggiore stazionarietà."
   },
   {
@@ -546,22 +546,22 @@ registerSubject("Time Series", [
     id: "u10050", topic: "Modelli ML per serie",
     q: "Per il forecasting si possono usare anche modelli ML (es. gradient boosting) se:",
     opts: [
-      "Si costruiscono feature di lag e di calendario adeguate",
       "Si ignora l'ordine temporale",
+      "Si costruiscono feature di lag e di calendario adeguate",
       "Non si creano feature"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Modelli ML generici prevedono serie temporali trasformando il problema in supervisionato con feature di lag, medie mobili e calendario, e validazione temporale per evitare leakage."
   },
   {
     id: "u10051", topic: "Trend non lineare",
     q: "Se il trend di una serie non è lineare, si può:",
     opts: [
-      "Usare trasformazioni o modelli flessibili (spline, Prophet)",
+      "Applicare una sola differenziazione anche se il trend resta non lineare",
       "Ignorare sempre il trend non lineare invece di modellarlo",
-      "Applicare una sola differenziazione anche se il trend resta non lineare"
+      "Usare trasformazioni o modelli flessibili (spline, Prophet)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Trend curvilinei richiedono trasformazioni (log), differenziazioni multiple o modelli che catturano curve (spline, Prophet, modelli non lineari), non solo un detrending lineare."
   },
   {
@@ -579,22 +579,22 @@ registerSubject("Time Series", [
     id: "u10053", topic: "Stagionalità: indici",
     q: "Gli indici stagionali quantificano:",
     opts: [
-      "Di quanto ciascun periodo si discosta in media dal livello base",
       "Il numero di osservazioni anomale nella serie",
+      "Di quanto ciascun periodo si discosta in media dal livello base",
       "La correlazione tra due serie temporali distinte"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Gli indici stagionali misurano l'effetto tipico di ogni periodo (es. dicembre +30%, agosto −20%): servono a destagionalizzare e a costruire previsioni stagionali."
   },
   {
     id: "u10054", topic: "Modello ingenuo stagionale",
     q: "Il 'seasonal naïve' prevede per un periodo futuro:",
     opts: [
-      "Il valore osservato nello stesso periodo del ciclo precedente",
+      "Un valore generato casualmente senza usare struttura o ordine dei dati",
       "La media complessiva della serie, ignorando finestra e stagionalità",
-      "Un valore generato casualmente senza usare struttura o ordine dei dati"
+      "Il valore osservato nello stesso periodo del ciclo precedente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il seasonal naïve usa come previsione il valore dello stesso periodo del ciclo precedente (es. le vendite di dicembre scorso per il prossimo dicembre): baseline forte con dati stagionali."
   },
   {
@@ -612,22 +612,22 @@ registerSubject("Time Series", [
     id: "u10056", topic: "Correlazione spuria temporale",
     q: "Due serie entrambe con trend crescente possono apparire correlate:",
     opts: [
-      "Anche senza alcun legame reale",
       "Solo in presenza di causalità diretta tra le due serie",
+      "Anche senza alcun legame reale",
       "Solo quando entrambe le serie sono già stazionarie"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Serie con trend tendono a correlare per il solo fatto di crescere insieme (correlazione spuria). Per un confronto corretto vanno rese stazionarie (es. differenziandole)."
   },
   {
     id: "u10057", topic: "Frequenza di campionamento",
     q: "Aggregare dati ad alta frequenza a una frequenza più bassa:",
     opts: [
-      "Riduce il rumore ma può nascondere pattern di breve periodo",
+      "Lascia invariato il risultato dell'operazione sui dati",
       "Aumenta sempre il dettaglio",
-      "Lascia invariato il risultato dell'operazione sui dati"
+      "Riduce il rumore ma può nascondere pattern di breve periodo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il downsampling (es. da minuti a ore) smussa il rumore e semplifica, ma può mascherare dinamiche rapide. La scelta della granularità dipende dall'obiettivo dell'analisi."
   },
   {
@@ -645,22 +645,22 @@ registerSubject("Time Series", [
     id: "u10059", topic: "Prevedibilità",
     q: "Una serie di puro rumore bianco è:",
     opts: [
-      "Sostanzialmente imprevedibile oltre la sua media",
       "Facilmente prevedibile oltre la media nonostante assenza di struttura",
+      "Sostanzialmente imprevedibile oltre la sua media",
       "Sempre crescente come una serie con trend monotono"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Se la serie è white noise non c'è struttura da sfruttare: la miglior previsione è la media. Quando i residui di un modello sono white noise, si è estratto tutto il segnale."
   },
   {
     id: "u10060", topic: "Lag plot",
     q: "Un lag plot (y_t contro y_(t−1)) serve a:",
     opts: [
-      "Visualizzare l'autocorrelazione a lag 1",
+      "Raggruppare osservazioni simili senza prevedere valori futuri",
       "Contare le categorie",
-      "Raggruppare osservazioni simili senza prevedere valori futuri"
+      "Visualizzare l'autocorrelazione a lag 1"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il lag plot mette in relazione ogni valore con il precedente: una nube allineata indica autocorrelazione (struttura), una nube sparsa indica assenza di dipendenza (rumore)."
   },
   {
@@ -678,22 +678,22 @@ registerSubject("Time Series", [
     id: "u10062", topic: "Componente irregolare",
     q: "La componente irregolare (residuo) di una serie è:",
     opts: [
-      "Ciò che resta dopo aver rimosso trend e stagionalità",
       "La componente di trend già rimossa nella decomposizione",
+      "Ciò che resta dopo aver rimosso trend e stagionalità",
       "La componente periodica della serie, non il residuo irregolare"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il residuo è la parte non spiegata da trend e stagionalità: idealmente casuale (white noise). Se contiene ancora struttura, il modello va migliorato."
   },
   {
     id: "u10063", topic: "Persistenza",
     q: "Una serie 'persistente' (alta autocorrelazione) implica che:",
     opts: [
-      "I valori vicini nel tempo tendono a somigliarsi",
+      "La media è nulla",
       "Ogni valore è indipendente",
-      "La media è nulla"
+      "I valori vicini nel tempo tendono a somigliarsi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Persistenza significa che un valore alto tende a essere seguito da valori alti (e viceversa): forte dipendenza temporale, sfruttabile per la previsione."
   },
   {
@@ -711,22 +711,22 @@ registerSubject("Time Series", [
     id: "u10065", topic: "Previsione multi-step",
     q: "Nella previsione a più passi (multi-step), un approccio è:",
     opts: [
-      "Ricorsivo: usare le previsioni precedenti come input per le successive",
       "Ignorare gli orizzonti successivi alla prima previsione",
+      "Ricorsivo: usare le previsioni precedenti come input per le successive",
       "Stimare solo l'orizzonte immediato senza catena multi-step"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Nel forecasting ricorsivo si prevede un passo alla volta reinserendo le previsioni come input. In alternativa si addestra un modello diretto per ciascun orizzonte."
   },
   {
     id: "u10066", topic: "Errore che si accumula",
     q: "Nelle previsioni ricorsive a lungo orizzonte l'errore:",
     opts: [
-      "Tende ad accumularsi passo dopo passo",
+      "Diventa negativo",
       "Diminuisce sempre",
-      "Diventa negativo"
+      "Tende ad accumularsi passo dopo passo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Usando le proprie previsioni come input, gli errori si propagano e si sommano: le previsioni a lungo termine sono meno affidabili di quelle a breve."
   },
   {
@@ -744,22 +744,22 @@ registerSubject("Time Series", [
     id: "u10068", topic: "Serie intermittenti",
     q: "Le serie 'intermittenti' (molti zeri, domanda sporadica) richiedono:",
     opts: [
-      "Metodi specifici (es. Croston), perché i modelli standard funzionano male",
       "Usare sempre un ARIMA classico anche con molti zeri e domanda sporadica",
+      "Metodi specifici (es. Croston), perché i modelli standard funzionano male",
       "Non applicare alcuna tecnica specifica nonostante zeri e irregolarità"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con domanda intermittente (tanti periodi a zero) i modelli classici falliscono. Metodi come Croston stimano separatamente la frequenza e l'entità della domanda."
   },
   {
     id: "u10069", topic: "Frequenza vs periodo",
     q: "In una serie mensile con stagionalità annuale, il periodo stagionale è:",
     opts: [
-      "12",
+      "24",
       "365",
-      "24"
+      "12"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il periodo stagionale è il numero di osservazioni per ciclo: 12 per dati mensili con ciclo annuale, 7 per dati giornalieri con ciclo settimanale, 24 per dati orari con ciclo giornaliero."
   },
   {
@@ -777,22 +777,22 @@ registerSubject("Time Series", [
     id: "u10071", topic: "Concetto di shock",
     q: "Uno 'shock' in una serie temporale è:",
     opts: [
-      "Una perturbazione improvvisa (es. evento eccezionale)",
       "La componente di lungo periodo che descrive la direzione della serie",
+      "Una perturbazione improvvisa (es. evento eccezionale)",
       "La cadenza con cui le osservazioni vengono registrate nel tempo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Uno shock è un evento inatteso che devia la serie (crisi, pandemia, promozione). In serie stazionarie l'effetto svanisce; con radice unitaria diventa permanente."
   },
   {
     id: "u10072", topic: "Feature: media mobile",
     q: "Usare la media mobile come feature in un modello di forecasting aiuta a:",
     opts: [
-      "Fornire una sintesi del recente andamento della serie",
+      "Creare classi discrete a partire da valori continui",
       "Aumentare il rumore",
-      "Creare classi discrete a partire da valori continui"
+      "Fornire una sintesi del recente andamento della serie"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le medie mobili (e altre statistiche su finestra) riassumono il comportamento recente della serie, offrendo al modello un segnale utile sul livello e sulla direzione correnti."
   },
   {
@@ -810,22 +810,22 @@ registerSubject("Time Series", [
     id: "u10074", topic: "Valutazione: naïve",
     q: "Se un modello complesso non batte il metodo naïve, allora:",
     opts: [
-      "Non vale la pena usarlo: non aggiunge valore predittivo",
       "Va reso più complesso a prescindere",
+      "Non vale la pena usarlo: non aggiunge valore predittivo",
       "Il naïve è sbagliato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La baseline naïve è il metro minimo: un modello sofisticato ha senso solo se la supera chiaramente. Altrimenti aggiunge complessità senza beneficio."
   },
   {
     id: "u10075", topic: "Serie storica: obiettivi",
     q: "Oltre alla previsione, l'analisi di serie storiche serve anche a:",
     opts: [
-      "Capire le componenti (trend, stagionalità) e rilevare anomalie",
+      "Trasformare la serie in una variabile categorica",
       "Ordinare le osservazioni in base al loro valore",
-      "Trasformare la serie in una variabile categorica"
+      "Capire le componenti (trend, stagionalità) e rilevare anomalie"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'analisi delle serie serve a descrivere e comprendere i fenomeni (trend, stagionalità, cicli), monitorare, rilevare anomalie e cambi di regime, oltre a prevedere."
   },
   {
@@ -843,22 +843,22 @@ registerSubject("Time Series", [
     id: "u10077", topic: "Frequenza irregolare",
     q: "Con osservazioni a intervalli irregolari, prima di molti modelli conviene:",
     opts: [
-      "Riportare la serie a una frequenza regolare",
       "Rimuovere tutte le date",
+      "Riportare la serie a una frequenza regolare",
       "Aggiungere rumore casuale alla serie osservata"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Molti modelli assumono passi temporali regolari: dati irregolari vanno ricondotti a una griglia temporale uniforme tramite aggregazione o interpolazione."
   },
   {
     id: "u10078", topic: "Componenti: ordine di analisi",
     q: "Un approccio comune è: prima stabilizzare la varianza, poi:",
     opts: [
-      "Rimuovere trend e stagionalità (rendere stazionaria) e infine modellare",
+      "Aggiungere rumore casuale prima di modellare",
       "Modellare subito la serie senza alcuna trasformazione",
-      "Aggiungere rumore casuale prima di modellare"
+      "Rimuovere trend e stagionalità (rendere stazionaria) e infine modellare"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Tipico flusso: log/Box-Cox per la varianza → differenziazione per trend/stagionalità → verifica stazionarietà → identificazione e stima del modello (es. ARIMA) → diagnostica dei residui."
   },
   {
@@ -876,22 +876,22 @@ registerSubject("Time Series", [
     id: "u10080", topic: "Serie e outlier",
     q: "Un outlier in una serie temporale può:",
     opts: [
-      "Distorcere trend, stagionalità e previsioni se non trattato",
       "Migliorare sempre il modello",
+      "Distorcere trend, stagionalità e previsioni se non trattato",
       "Rendere la serie stazionaria"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Gli outlier (picchi anomali) possono falsare la stima delle componenti e le previsioni. Vanno individuati e gestiti (correzione, modelli robusti), valutandone la natura."
   },
   {
     id: "u10081", topic: "Ciclo economico",
     q: "I cicli economici sono un esempio di componente:",
     opts: [
-      "Ciclica (durata variabile, non periodo fisso)",
+      "Una componente casuale senza struttura ciclica interpretabile",
       "Una componente stagionale con periodo fisso e regolare",
-      "Una componente casuale senza struttura ciclica interpretabile"
+      "Ciclica (durata variabile, non periodo fisso)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I cicli economici (espansioni e recessioni) hanno durata variabile e irregolare: sono componenti cicliche, distinte dalla stagionalità che ha periodo fisso e regolare."
   },
   {
@@ -909,22 +909,22 @@ registerSubject("Time Series", [
     id: "u10083", topic: "Stabilità del modello",
     q: "Ri-addestrare periodicamente un modello di forecasting serve a:",
     opts: [
-      "Adattarsi a nuovi dati e cambiamenti nei pattern",
       "Peggiorare le previsioni",
+      "Adattarsi a nuovi dati e cambiamenti nei pattern",
       "Ignorare il presente"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I pattern cambiano nel tempo (drift): aggiornare il modello con i dati recenti mantiene le previsioni allineate alla realtà corrente."
   },
   {
     id: "u10084", topic: "Media mobile ponderata",
     q: "Una media mobile ponderata assegna ai valori della finestra:",
     opts: [
-      "Pesi diversi (spesso maggiori ai più recenti)",
+      "Peso solo al primo",
       "Un peso nullo che esclude l'osservazione o la feature dal calcolo",
-      "Peso solo al primo"
+      "Pesi diversi (spesso maggiori ai più recenti)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La media mobile ponderata dà più importanza a certi valori (di solito i recenti), reagendo più prontamente ai cambiamenti rispetto alla media mobile semplice."
   },
   {
@@ -942,22 +942,22 @@ registerSubject("Time Series", [
     id: "u10086", topic: "Confronto modelli",
     q: "Per confrontare modelli di forecasting si usano criteri come:",
     opts: [
-      "AIC/BIC ed errori su dati di test (RMSE, MAE, MAPE)",
       "Una proprietà visuale del grafico, non una logica di calcolo",
+      "AIC/BIC ed errori su dati di test (RMSE, MAE, MAPE)",
       "Il numero di righe presenti nel dataset o nel risultato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Si combinano criteri di informazione (AIC/BIC, che penalizzano la complessità) e l'errore su dati di validazione/test. L'obiettivo è previsione accurata senza overfitting."
   },
   {
     id: "u10087", topic: "Serie e granularità",
     q: "Prevedere le vendite giornaliere è in genere ___ che prevedere quelle mensili.",
     opts: [
-      "Più difficile (più rumore e variabilità)",
+      "Con lo stesso livello di difficoltà e variabilità della serie aggregata",
       "Più facile perché si assume meno rumore nella granularità giornaliera",
-      "Con lo stesso livello di difficoltà e variabilità della serie aggregata"
+      "Più difficile (più rumore e variabilità)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "A granularità fine (giornaliera) c'è più rumore e variabilità (weekend, eventi), rendendo la previsione più difficile. L'aggregazione mensile smussa e spesso è più prevedibile."
   },
   {
@@ -975,22 +975,22 @@ registerSubject("Time Series", [
     id: "u10089", topic: "Previsione: punto di partenza",
     q: "Prima di scegliere un modello complesso conviene:",
     opts: [
-      "Provare baseline semplici (naïve, media mobile) come riferimento",
       "Usare subito il deep learning",
+      "Provare baseline semplici (naïve, media mobile) come riferimento",
       "Evitare qualsiasi valutazione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Partire da baseline semplici stabilisce un riferimento: molti problemi si risolvono bene senza modelli complessi, e comunque servono a giudicare i miglioramenti reali."
   },
   {
     id: "u10090", topic: "Serie: memoria lunga",
     q: "Una serie a 'memoria lunga' presenta:",
     opts: [
-      "Autocorrelazioni che decadono molto lentamente",
+      "Valori indipendenti",
       "Nessuna autocorrelazione",
-      "Valori indipendenti"
+      "Autocorrelazioni che decadono molto lentamente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nelle serie a memoria lunga la dipendenza tra osservazioni persiste su ritardi molto ampi (ACF che decade lentamente). Richiedono modelli specifici (es. ARFIMA)."
   },
   {
@@ -1008,22 +1008,22 @@ registerSubject("Time Series", [
     id: "u10092", topic: "Grafico stagionale",
     q: "Uno 'seasonal plot' (per periodo) aiuta a:",
     opts: [
-      "Confrontare l'andamento tra i vari cicli (es. anni) sovrapposti",
       "Contare le righe disponibili invece di analizzare il fenomeno richiesto",
+      "Confrontare l'andamento tra i vari cicli (es. anni) sovrapposti",
       "Raggruppare osservazioni simili senza prevedere valori futuri"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il seasonal plot sovrappone i cicli (es. tutti gli anni sullo stesso asse mensile) per evidenziare il pattern stagionale e le differenze tra periodi."
   },
   {
     id: "u10093", topic: "Aggregazione e previsione",
     q: "La 'previsione gerarchica' riconcilia previsioni fatte a:",
     opts: [
-      "Diversi livelli di aggregazione (es. prodotto, categoria, totale)",
+      "Livelli di aggregazione scelti casualmente senza coerenza contabile",
       "Un unico livello di aggregazione senza riconciliazione gerarchica",
-      "Livelli di aggregazione scelti casualmente senza coerenza contabile"
+      "Diversi livelli di aggregazione (es. prodotto, categoria, totale)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Con dati organizzati gerarchicamente (prodotto→categoria→totale), la previsione gerarchica assicura coerenza tra i livelli (le somme dei figli tornano col padre)."
   },
   {
@@ -1041,22 +1041,22 @@ registerSubject("Time Series", [
     id: "u10095", topic: "Modello ingenuo drift",
     q: "Il metodo 'naïve con drift' prevede:",
     opts: [
-      "L'ultimo valore più la variazione media osservata nel tempo",
       "Solo l'ultimo valore",
+      "L'ultimo valore più la variazione media osservata nel tempo",
       "Un valore generato casualmente senza usare struttura o ordine dei dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il naïve con drift estende l'ultimo valore lungo la pendenza media storica: una baseline che tiene conto di un trend, migliore del naïve puro su serie in crescita/calo costante."
   },
   {
     id: "u10096", topic: "Residui: diagnostica",
     q: "Una buona diagnostica dei residui di un modello di serie verifica che siano:",
     opts: [
-      "Incorrelati, a media zero e varianza costante",
+      "Con trend crescente",
       "Fortemente autocorrelati",
-      "Con trend crescente"
+      "Incorrelati, a media zero e varianza costante"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Idealmente i residui sono white noise: nessuna autocorrelazione (ACF piatta), media zero, varianza costante. In caso contrario resta struttura da modellare."
   },
   {
@@ -1074,22 +1074,22 @@ registerSubject("Time Series", [
     id: "u10098", topic: "Frequenza e stagionalità",
     q: "Una serie annuale (un dato per anno) può avere stagionalità infra-annuale?",
     opts: [
-      "No: con un solo dato per anno la stagionalità intra-annuale non è osservabile",
       "Sì, ma solo mensile",
+      "No: con un solo dato per anno la stagionalità intra-annuale non è osservabile",
       "Dipende da una proprietà grafica e non dalla struttura temporale dei dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La stagionalità richiede più osservazioni per ciclo: con dati annuali non si può cogliere una stagionalità mensile/trimestrale (non ci sono osservazioni entro l'anno)."
   },
   {
     id: "u10099", topic: "Interpolazione vs previsione",
     q: "Qual è la differenza tra interpolazione e previsione (estrapolazione)?",
     opts: [
-      "L'interpolazione stima valori dentro il range osservato, la previsione oltre",
+      "L'interpolazione riguarda il futuro",
       "La previsione è dentro il range",
-      "L'interpolazione riguarda il futuro"
+      "L'interpolazione stima valori dentro il range osservato, la previsione oltre"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Interpolare stima valori mancanti tra dati noti (dentro il range); prevedere estrapola oltre l'ultimo dato (nel futuro), operazione più incerta."
   },
   {

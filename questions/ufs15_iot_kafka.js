@@ -7,22 +7,22 @@ registerSubject("IoT e Streaming", [
     id: "u15001", topic: "IoT",
     q: "Cosa indica l'acronimo IoT?",
     opts: [
-      "Internet of Things",
       "Input Output Transfer",
+      "Internet of Things",
       "Integrated Online Tool"
     ],
-    correct: [0],
+    correct: [1],
     exp: "IoT (Internet of Things) è la rete di dispositivi fisici (sensori, attuatori) connessi che raccolgono e scambiano dati, generando flussi continui da elaborare."
   },
   {
     id: "u15002", topic: "Streaming vs batch",
     q: "L'elaborazione in streaming differisce dal batch perché:",
     opts: [
-      "Processa gli eventi in continuo appena arrivano (bassa latenza)",
+      "Usa solo configurazioni o layout, senza elaborare dati osservati",
       "Elabora sempre a blocchi periodici",
-      "Usa solo configurazioni o layout, senza elaborare dati osservati"
+      "Processa gli eventi in continuo appena arrivano (bassa latenza)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Lo streaming elabora i dati evento per evento in tempo (quasi) reale; il batch li accumula ed elabora a intervalli. Lo streaming abilita reazioni immediate (allarmi, dashboard live)."
   },
   {
@@ -40,22 +40,22 @@ registerSubject("IoT e Streaming", [
     id: "u15004", topic: "Topic",
     q: "In Kafka, un 'topic' è:",
     opts: [
-      "Un canale/categoria a cui vengono pubblicati i messaggi",
       "Un'applicazione che consuma i messaggi in arrivo",
+      "Un canale/categoria a cui vengono pubblicati i messaggi",
       "Il nodo del cluster che memorizza le partizioni"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il topic è un flusso nominato di messaggi (es. 'ordini', 'sensori-temperatura'). I producer scrivono su un topic, i consumer vi leggono. È l'unità logica di organizzazione dei dati."
   },
   {
     id: "u15005", topic: "Partizione",
     q: "Le partizioni di un topic Kafka servono a:",
     opts: [
-      "Distribuire e parallelizzare i dati per scalabilità",
+      "Definire per quanto tempo conservare i dati",
       "Cancellare automaticamente i messaggi più vecchi",
-      "Definire per quanto tempo conservare i dati"
+      "Distribuire e parallelizzare i dati per scalabilità"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un topic è diviso in partizioni: permettono di distribuire i dati su più broker e di consumarli in parallelo, aumentando throughput e scalabilità."
   },
   {
@@ -73,22 +73,22 @@ registerSubject("IoT e Streaming", [
     id: "u15007", topic: "Consumer",
     q: "Un 'consumer' in Kafka:",
     opts: [
-      "Legge (consuma) i messaggi da un topic",
       "Pubblica nuovi messaggi su un topic",
+      "Legge (consuma) i messaggi da un topic",
       "Crea e configura i topic del cluster"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il consumer legge i messaggi da uno o più topic e li elabora. Tiene traccia di fin dove ha letto tramite l'offset, così può riprendere dal punto giusto."
   },
   {
     id: "u15008", topic: "Broker",
     q: "Un 'broker' Kafka è:",
     opts: [
-      "Un server del cluster che memorizza i dati e serve producer/consumer",
+      "Un database relazionale interrogabile con SQL",
       "Un tipo di messaggio",
-      "Un database relazionale interrogabile con SQL"
+      "Un server del cluster che memorizza i dati e serve producer/consumer"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il broker è un nodo del cluster Kafka: conserva le partizioni e gestisce le richieste di lettura/scrittura. Più broker formano un cluster scalabile e tollerante ai guasti."
   },
   {
@@ -106,22 +106,22 @@ registerSubject("IoT e Streaming", [
     id: "u15010", topic: "Consumer group",
     q: "Un consumer group in Kafka serve a:",
     opts: [
-      "Far consumare un topic in parallelo distribuendo le partizioni tra i consumer",
       "Duplicare ogni messaggio verso tutti i consumer del gruppo",
+      "Far consumare un topic in parallelo distribuendo le partizioni tra i consumer",
       "Cancellare i messaggi dopo che un consumer li ha letti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "In un consumer group, ogni partizione è assegnata a un solo consumer del gruppo: così il carico si distribuisce e si scala orizzontalmente. Gruppi diversi ricevono ognuno tutti i messaggi."
   },
   {
     id: "u15011", topic: "Retention",
     q: "La 'retention' di un topic Kafka definisce:",
     opts: [
-      "Per quanto tempo (o quanto spazio) i messaggi vengono conservati",
+      "Il colore dei messaggi",
       "Il numero di partizioni fisiche o logiche usate per distribuire i dati",
-      "Il colore dei messaggi"
+      "Per quanto tempo (o quanto spazio) i messaggi vengono conservati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La retention stabilisce quanto a lungo Kafka conserva i messaggi (es. 7 giorni) o quanta memoria usare, dopodiché li elimina. A differenza di una coda tradizionale, i messaggi restano leggibili finché non scadono."
   },
   {
@@ -139,22 +139,22 @@ registerSubject("IoT e Streaming", [
     id: "u15013", topic: "MQTT",
     q: "Il protocollo MQTT è usato tipicamente per:",
     opts: [
-      "Comunicazioni IoT leggere tra dispositivi con banda limitata",
       "Trasferire grandi file",
+      "Comunicazioni IoT leggere tra dispositivi con banda limitata",
       "Gestire database SQL transazionali invece di messaggi publish/subscribe leggeri"
     ],
-    correct: [0],
+    correct: [1],
     exp: "MQTT è un protocollo di messaggistica publish/subscribe leggero, ideale per dispositivi IoT con risorse e banda limitate. Usa un broker e il modello a topic."
   },
   {
     id: "u15014", topic: "Pub/Sub",
     q: "Nel modello publish/subscribe:",
     opts: [
-      "I produttori pubblicano messaggi e i consumatori interessati li ricevono, disaccoppiati",
+      "I dati non cambiano nel tempo e non arrivano come flusso continuo",
       "Non ci sono messaggi",
-      "I dati non cambiano nel tempo e non arrivano come flusso continuo"
+      "I produttori pubblicano messaggi e i consumatori interessati li ricevono, disaccoppiati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nel pub/sub chi pubblica non conosce chi consuma: i messaggi vanno su topic e chi è iscritto li riceve. Producer e consumer sono disaccoppiati, facilitando scalabilità e flessibilità."
   },
   {
@@ -172,22 +172,22 @@ registerSubject("IoT e Streaming", [
     id: "u15016", topic: "Avro",
     q: "Apache Avro è:",
     opts: [
-      "Un formato di serializzazione compatto con schema, usato nello streaming",
       "Un database relazionale distribuito per lo streaming",
+      "Un formato di serializzazione compatto con schema, usato nello streaming",
       "Un linguaggio per interrogare gli stream come tabelle"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Avro serializza i dati in formato binario compatto insieme a uno schema: efficiente per lo scambio di messaggi (es. su Kafka) e supporta l'evoluzione dello schema."
   },
   {
     id: "u15017", topic: "CDC",
     q: "Il Change Data Capture (CDC, es. con Debezium) serve a:",
     opts: [
-      "Catturare i cambiamenti di un database e trasmetterli come stream di eventi",
+      "Cancellare periodicamente le tabelle non più usate",
       "Creare dashboard in tempo reale dai dati del database",
-      "Cancellare periodicamente le tabelle non più usate"
+      "Catturare i cambiamenti di un database e trasmetterli come stream di eventi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il CDC intercetta insert/update/delete di un database (leggendone il log) e li pubblica come eventi (es. su Kafka), permettendo di sincronizzare i dati in tempo reale verso altri sistemi."
   },
   {
@@ -205,22 +205,22 @@ registerSubject("IoT e Streaming", [
     id: "u15019", topic: "ksqlDB",
     q: "ksqlDB permette di:",
     opts: [
-      "Elaborare stream Kafka con query simili a SQL",
       "Sostituire il sistema operativo invece di virtualizzare risorse o servizi",
+      "Elaborare stream Kafka con query simili a SQL",
       "Gestire container applicativi invece di isolamento o rete del sistema"
     ],
-    correct: [0],
+    correct: [1],
     exp: "ksqlDB offre un linguaggio SQL-like per definire trasformazioni, filtri, join e aggregazioni sugli stream Kafka in tempo reale, senza scrivere codice a basso livello."
   },
   {
     id: "u15020", topic: "Docker",
     q: "Nel contesto dello streaming, Docker viene usato per:",
     opts: [
-      "Impacchettare ed eseguire i servizi (Kafka, connettori) in container isolati",
+      "Sostituire Kafka nella gestione degli stream",
       "Cifrare i messaggi che transitano nei topic Kafka",
-      "Sostituire Kafka nella gestione degli stream"
+      "Impacchettare ed eseguire i servizi (Kafka, connettori) in container isolati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Docker permette di avviare rapidamente ambienti di streaming riproducibili (Kafka, Schema Registry, connettori) in container, utile per sviluppo, test e deployment coerenti."
   },
   {
@@ -238,22 +238,22 @@ registerSubject("IoT e Streaming", [
     id: "u15022", topic: "Exactly-once",
     q: "La semantica 'exactly-once' garantisce che ogni messaggio sia elaborato:",
     opts: [
-      "Esattamente una volta, senza perdite né duplicati",
       "Almeno una volta, accettando possibili duplicati",
+      "Esattamente una volta, senza perdite né duplicati",
       "Al massimo una volta, accettando possibili perdite"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Exactly-once è la garanzia più forte (né perdite né duplicati) ma la più complessa e costosa. Kafka la supporta con transazioni e produttori idempotenti in specifiche condizioni."
   },
   {
     id: "u15023", topic: "Chiave del messaggio",
     q: "La chiave (key) di un messaggio Kafka serve a:",
     opts: [
-      "Determinare la partizione, garantendo l'ordine per una stessa chiave",
+      "Indicare per quanto tempo conservare il messaggio",
       "Cifrare il contenuto del messaggio prima dell'invio",
-      "Indicare per quanto tempo conservare il messaggio"
+      "Determinare la partizione, garantendo l'ordine per una stessa chiave"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I messaggi con la stessa chiave finiscono nella stessa partizione, che ne mantiene l'ordine. Es: tutti gli eventi di un cliente ordinati insieme. Senza chiave, la distribuzione è bilanciata ma senza garanzia d'ordine globale."
   },
   {
@@ -271,22 +271,22 @@ registerSubject("IoT e Streaming", [
     id: "u15025", topic: "Backpressure",
     q: "La 'backpressure' in un sistema di streaming indica:",
     opts: [
-      "Quando i consumatori non tengono il passo dei produttori e serve rallentare/bufferizzare",
       "Un aumento improvviso della velocità di elaborazione",
+      "Quando i consumatori non tengono il passo dei produttori e serve rallentare/bufferizzare",
       "Un tipo di finestra temporale usata nelle aggregazioni"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La backpressure si verifica quando i dati arrivano più velocemente di quanto vengano elaborati: il sistema deve bufferizzare, rallentare i producer o scalare i consumer per non collassare."
   },
   {
     id: "u15026", topic: "Windowing",
     q: "Nel processamento di stream, una 'finestra' (window) temporale serve a:",
     opts: [
-      "Aggregare eventi in intervalli di tempo",
+      "Creare automaticamente nuovi topic a intervalli regolari",
       "Cifrare i dati raccolti in un dato intervallo temporale",
-      "Creare automaticamente nuovi topic a intervalli regolari"
+      "Aggregare eventi in intervalli di tempo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le finestre raggruppano gli eventi per intervalli (tumbling, sliding, session window) per calcolare aggregazioni su flussi infiniti, es. il numero di click ogni minuto."
   },
   {
@@ -304,22 +304,22 @@ registerSubject("IoT e Streaming", [
     id: "u15028", topic: "Sensori IoT",
     q: "I sensori IoT generano tipicamente:",
     opts: [
-      "Flussi continui di misurazioni (telemetria) nel tempo",
       "Un singolo valore statico",
+      "Flussi continui di misurazioni (telemetria) nel tempo",
       "Immagini a bassa frequenza sempre"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I sensori (temperatura, movimento, GPS) producono telemetria: serie di misure ad alta frequenza. Questi flussi vengono ingeriti e processati in streaming per monitoraggio e allarmi."
   },
   {
     id: "u15029", topic: "Edge computing",
     q: "L'edge computing nell'IoT consiste nel:",
     opts: [
-      "Elaborare i dati vicino ai dispositivi (sul campo) invece che solo nel cloud",
+      "Cancellare i dati raccolti dai sensori dopo la lettura",
       "Elaborare tutti i dati esclusivamente nel cloud centrale",
-      "Cancellare i dati raccolti dai sensori dopo la lettura"
+      "Elaborare i dati vicino ai dispositivi (sul campo) invece che solo nel cloud"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'edge processa i dati vicino alla fonte (sul dispositivo o gateway): riduce latenza e banda verso il cloud, utile quando serve reazione immediata o connettività limitata."
   },
   {
@@ -337,22 +337,22 @@ registerSubject("IoT e Streaming", [
     id: "u15031", topic: "Kafka Connect",
     q: "Kafka Connect serve a:",
     opts: [
-      "Integrare Kafka con sistemi esterni (database, storage) tramite connettori pronti",
       "Cifrare i topic prima di renderli disponibili ai consumer",
+      "Integrare Kafka con sistemi esterni (database, storage) tramite connettori pronti",
       "Creare dashboard a partire dai messaggi dei topic"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Kafka Connect sposta dati tra Kafka e sistemi esterni (source e sink connector) senza scrivere codice: es. importare da un database (CDC) o esportare verso un data warehouse."
   },
   {
     id: "u15032", topic: "Throughput",
     q: "Il throughput di un sistema di streaming misura:",
     opts: [
-      "Quanti eventi/messaggi vengono elaborati per unità di tempo",
+      "Il numero di argomenti latenti scelti per il modello topic",
       "Il ritardo di un singolo evento",
-      "Il numero di argomenti latenti scelti per il modello topic"
+      "Quanti eventi/messaggi vengono elaborati per unità di tempo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il throughput è la capacità di elaborazione (es. messaggi/secondo). Kafka scala il throughput aggiungendo partizioni e broker. È distinto dalla latenza (ritardo del singolo evento)."
   },
   {
@@ -370,22 +370,22 @@ registerSubject("IoT e Streaming", [
     id: "u15034", topic: "Producer idempotente",
     q: "Un producer idempotente in Kafka evita:",
     opts: [
-      "I messaggi duplicati causati da retry di rete",
       "La perdita di tutti i messaggi in caso di guasto",
+      "I messaggi duplicati causati da retry di rete",
       "La cifratura non autorizzata dei messaggi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il producer idempotente assegna identificatori ai messaggi così che, in caso di retry, il broker non li scriva due volte. È un mattone per la semantica exactly-once."
   },
   {
     id: "u15035", topic: "Dashboard real-time",
     q: "Lo streaming abilita dashboard in tempo reale perché:",
     opts: [
-      "I dati vengono elaborati e mostrati appena arrivano",
+      "Usa solo configurazioni o layout, senza elaborare dati osservati",
       "I dati sono sempre vecchi",
-      "Usa solo configurazioni o layout, senza elaborare dati osservati"
+      "I dati vengono elaborati e mostrati appena arrivano"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Elaborando gli eventi in continuo, lo streaming aggiorna metriche e visualizzazioni quasi istantaneamente, utile per monitoraggio operativo, allarmi e decisioni immediate."
   },
   {
@@ -403,22 +403,22 @@ registerSubject("IoT e Streaming", [
     id: "u15037", topic: "Compattazione log",
     q: "La 'log compaction' in Kafka mantiene:",
     opts: [
-      "Solo l'ultimo valore per ciascuna chiave",
       "Tutti i messaggi per sempre",
+      "Solo l'ultimo valore per ciascuna chiave",
       "Solo i primi messaggi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La compaction conserva, per ogni chiave, l'ultimo messaggio, eliminando i più vecchi: utile per topic che rappresentano lo stato corrente di entità (es. l'ultimo profilo di ogni utente)."
   },
   {
     id: "u15038", topic: "Delivery semantics",
     q: "La semantica 'at-most-once' comporta:",
     opts: [
-      "Possibile perdita di messaggi, ma nessun duplicato",
+      "Sempre esattamente una volta",
       "Nessuna perdita, possibili duplicati",
-      "Sempre esattamente una volta"
+      "Possibile perdita di messaggi, ma nessun duplicato"
     ],
-    correct: [0],
+    correct: [2],
     exp: "At-most-once consegna ogni messaggio al massimo una volta: rapido ma può perdere dati (nessun retry). Accettabile solo dove qualche perdita non è critica (es. metriche approssimate)."
   },
   {
@@ -436,22 +436,22 @@ registerSubject("IoT e Streaming", [
     id: "u15040", topic: "Telemetria",
     q: "La telemetria in IoT è:",
     opts: [
-      "La raccolta e trasmissione automatica di misure dai dispositivi",
       "Un protocollo di cifratura per i dispositivi remoti",
+      "La raccolta e trasmissione automatica di misure dai dispositivi",
       "Un tipo di grafico per visualizzare i dati dei sensori"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La telemetria è l'invio continuo di dati di stato/misura dai dispositivi remoti a un sistema centrale, base per monitoraggio, manutenzione predittiva e automazione nell'IoT."
   },
   {
     id: "u15041", topic: "Scalabilità Kafka",
     q: "Per aumentare la capacità di un topic Kafka si può:",
     opts: [
-      "Aggiungere partizioni e broker per distribuire il carico",
+      "Cifrare i messaggi per renderli più compatti",
       "Ridurre il numero di partizioni per semplificare il topic",
-      "Cifrare i messaggi per renderli più compatti"
+      "Aggiungere partizioni e broker per distribuire il carico"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Più partizioni permettono più parallelismo tra consumer e distribuzione su più broker, aumentando throughput. È il meccanismo principale di scalabilità orizzontale di Kafka."
   },
   {
@@ -469,22 +469,22 @@ registerSubject("IoT e Streaming", [
     id: "u15043", topic: "Eventi fuori ordine",
     q: "Nello stream processing, gli eventi in ritardo o fuori ordine si gestiscono con:",
     opts: [
-      "Watermark e finestre con tolleranza al ritardo",
       "Ignorandoli sistematicamente senza elaborarli",
+      "Watermark e finestre con tolleranza al ritardo",
       "Cancellando l'intero topic e ricreandolo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I watermark stimano fino a che event time i dati sono 'completi', permettendo di chiudere le finestre con una tolleranza per i ritardatari, gestendo correttamente eventi fuori ordine."
   },
   {
     id: "u15044", topic: "IoT gateway",
     q: "Un gateway IoT serve a:",
     opts: [
-      "Raccogliere i dati dei dispositivi e inoltrarli",
+      "Cifrare l'intera comunicazione verso il cloud",
       "Sostituire i sensori nella raccolta delle misure",
-      "Cifrare l'intera comunicazione verso il cloud"
+      "Raccogliere i dati dei dispositivi e inoltrarli"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il gateway aggrega i dati di più dispositivi (magari con protocolli diversi), può filtrarli/pre-elaborarli (edge) e li inoltra al cloud o al broker, riducendo il traffico e la latenza."
   },
   {
@@ -502,22 +502,22 @@ registerSubject("IoT e Streaming", [
     id: "u15046", topic: "Commit offset",
     q: "Quando un consumer 'committa' l'offset:",
     opts: [
-      "Registra fin dove ha letto, così può riprendere da lì dopo un riavvio",
       "Cancella i messaggi già letti dalla partizione",
+      "Registra fin dove ha letto, così può riprendere da lì dopo un riavvio",
       "Crea un nuovo topic con i messaggi elaborati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il commit dell'offset salva la posizione raggiunta. In caso di riavvio o rebalance, il consumer riparte dall'ultimo offset committato, evitando di rileggere o saltare messaggi."
   },
   {
     id: "u15047", topic: "Rebalance",
     q: "Un 'rebalance' in un consumer group avviene quando:",
     opts: [
-      "Le partizioni vengono ridistribuite tra i consumer",
+      "Viene creato un nuovo topic con più partizioni",
       "I messaggi del topic vengono automaticamente cifrati",
-      "Viene creato un nuovo topic con più partizioni"
+      "Le partizioni vengono ridistribuite tra i consumer"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il rebalance riassegna le partizioni ai consumer del gruppo quando cambia la loro composizione (aggiunta/rimozione/crash), mantenendo il bilanciamento del carico."
   },
   {
@@ -535,22 +535,22 @@ registerSubject("IoT e Streaming", [
     id: "u15049", topic: "Manutenzione predittiva",
     q: "Analizzare in streaming i dati dei sensori permette la manutenzione predittiva, cioè:",
     opts: [
-      "Prevedere i guasti prima che accadano intervenendo per tempo",
       "Riparare i macchinari solo dopo che si sono guastati",
+      "Prevedere i guasti prima che accadano intervenendo per tempo",
       "Ignorare i dati dei sensori considerandoli irrilevanti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Elaborando la telemetria in tempo reale si individuano segnali di anomalia (vibrazioni, temperature) che anticipano i guasti, permettendo interventi programmati e riducendo i fermi macchina."
   },
   {
     id: "u15050", topic: "Durabilità",
     q: "La durabilità dei dati in Kafka è garantita da:",
     opts: [
-      "La scrittura su disco e la replica su più broker",
+      "La cifratura obbligatoria di tutti i messaggi",
       "L'assenza di qualsiasi meccanismo di persistenza",
-      "La cifratura obbligatoria di tutti i messaggi"
+      "La scrittura su disco e la replica su più broker"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Kafka persiste i messaggi su disco e li replica su più broker: anche in caso di guasto di un nodo i dati non si perdono, purché il replication factor sia adeguato."
   },
   {
@@ -568,22 +568,22 @@ registerSubject("IoT e Streaming", [
     id: "u15052", topic: "Stream join",
     q: "Fare il join tra due stream serve a:",
     opts: [
-      "Correlare in tempo reale eventi provenienti da flussi diversi",
       "Cancellare uno dei due stream per liberare risorse",
+      "Correlare in tempo reale eventi provenienti da flussi diversi",
       "Cifrare i dati scambiati tra i due flussi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il join di stream unisce eventi correlati (es. click e acquisti) entro una finestra temporale, arricchendo i dati in tempo reale. Richiede gestione dello stato e delle finestre."
   },
   {
     id: "u15053", topic: "Ingestione IoT",
     q: "Un flusso tipico di dati IoT è:",
     opts: [
-      "Dispositivo → gateway/broker → stream processing → storage/dashboard",
+      "Storage/dashboard → dispositivo → gateway/broker → stream processing",
       "Gateway/broker → dispositivo → stream processing → storage/dashboard",
-      "Storage/dashboard → dispositivo → gateway/broker → stream processing"
+      "Dispositivo → gateway/broker → stream processing → storage/dashboard"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I dati vanno dai dispositivi (via MQTT/gateway) a un broker (Kafka), vengono elaborati in streaming (filtri, aggregazioni, allarmi) e poi archiviati e visualizzati in dashboard."
   },
   {
@@ -601,22 +601,22 @@ registerSubject("IoT e Streaming", [
     id: "u15055", topic: "Idempotenza consumer",
     q: "Con garanzia at-least-once, il consumer dovrebbe essere:",
     opts: [
-      "Idempotente, per gestire correttamente eventuali messaggi duplicati",
       "Sempre più veloce indipendentemente da stato e duplicati",
+      "Idempotente, per gestire correttamente eventuali messaggi duplicati",
       "Indifferente ai duplicati anche con consegna at-least-once"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Poiché at-least-once può consegnare duplicati, il consumer deve elaborarli in modo idempotente (es. deduplicare per id) così che un doppione non alteri il risultato finale."
   },
   {
     id: "u15056", topic: "Zookeeper/KRaft",
     q: "In Kafka, la gestione dei metadati del cluster è affidata storicamente a:",
     opts: [
-      "ZooKeeper (sostituito nelle versioni recenti da KRaft)",
+      "Il consumer group attivo sul topic principale",
       "Il singolo producer che pubblica i messaggi",
-      "Il consumer group attivo sul topic principale"
+      "ZooKeeper (sostituito nelle versioni recenti da KRaft)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "ZooKeeper coordinava i metadati e l'elezione dei leader del cluster Kafka. Le versioni recenti usano KRaft (Kafka Raft), integrando la gestione dei metadati in Kafka stesso."
   },
   {
@@ -634,22 +634,22 @@ registerSubject("IoT e Streaming", [
     id: "u15058", topic: "Sicurezza streaming",
     q: "Cosa include la protezione di un cluster Kafka?",
     opts: [
-      "L'autenticazione dei client",
       "Lasciare i topic aperti senza controlli",
+      "L'autenticazione dei client",
       "Disattivare la cifratura per andare più veloce"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Proteggere Kafka richiede autenticazione dei client, cifratura in transito (TLS) e autorizzazioni (ACL) sui topic. Lasciare tutto aperto o disattivare la cifratura espone i dati."
   },
   {
     id: "u15059", topic: "Evoluzione schema",
     q: "Una modifica di schema 'compatibile all'indietro' (backward compatible) permette:",
     opts: [
-      "Ai nuovi consumer di leggere anche i dati prodotti con lo schema vecchio",
+      "Di cifrare i messaggi prodotti con il vecchio schema",
       "Di interrompere il funzionamento di tutti i consumer esistenti",
-      "Di cifrare i messaggi prodotti con il vecchio schema"
+      "Ai nuovi consumer di leggere anche i dati prodotti con lo schema vecchio"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La compatibilità all'indietro fa sì che il nuovo schema possa leggere i dati vecchi (es. aggiungendo campi con default): permette di evolvere senza interrompere i consumatori esistenti."
   },
   {
@@ -667,22 +667,22 @@ registerSubject("IoT e Streaming", [
     id: "u15061", topic: "Buffer",
     q: "Un buffer in un sistema di streaming serve a:",
     opts: [
-      "Assorbire temporaneamente i picchi di dati tra produttori e consumatori",
       "Cancellare i dati non appena vengono prodotti",
+      "Assorbire temporaneamente i picchi di dati tra produttori e consumatori",
       "Creare i grafici di monitoraggio del flusso"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il buffer immagazzina temporaneamente i dati quando arrivano più velocemente di quanto vengano consumati, smussando i picchi ed evitando perdite o sovraccarichi improvvisi."
   },
   {
     id: "u15062", topic: "Tumbling window",
     q: "Una 'tumbling window' è:",
     opts: [
-      "Una finestra a intervalli fissi non sovrapposti",
+      "Una finestra senza limite temporale di chiusura",
       "Una finestra sliding che avanza sovrapponendosi alle precedenti",
-      "Una finestra senza limite temporale di chiusura"
+      "Una finestra a intervalli fissi non sovrapposti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La tumbling window divide il tempo in blocchi fissi e non sovrapposti: ogni evento appartiene a una sola finestra. Es: conteggio eventi ogni 5 minuti esatti."
   },
   {
@@ -700,22 +700,22 @@ registerSubject("IoT e Streaming", [
     id: "u15064", topic: "Consumatori indipendenti",
     q: "Due consumer group diversi che leggono lo stesso topic:",
     opts: [
-      "Ricevono entrambi tutti i messaggi, in modo indipendente",
       "Si dividono i messaggi tra loro",
+      "Ricevono entrambi tutti i messaggi, in modo indipendente",
       "Cancellano i messaggi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Ogni consumer group ha i propri offset: gruppi diversi ricevono tutti i messaggi indipendentemente (es. uno per analytics, uno per allarmi). Dentro un gruppo, invece, le partizioni si dividono."
   },
   {
     id: "u15065", topic: "Protocollo leggero",
     q: "Perché MQTT è preferito a HTTP per molti dispositivi IoT?",
     opts: [
-      "È più leggero, efficiente su reti instabili e adatto a molti dispositivi",
+      "Richiede più banda e connessioni più costose per i dispositivi",
       "È più pesante di HTTP perché mantiene più stato applicativo",
-      "Richiede più banda e connessioni più costose per i dispositivi"
+      "È più leggero, efficiente su reti instabili e adatto a molti dispositivi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "MQTT ha overhead minimo, mantiene connessioni persistenti, gestisce reti instabili e il modello pub/sub scala bene con tanti dispositivi: ideale per l'IoT rispetto al più pesante HTTP request/response."
   },
   {
@@ -733,22 +733,22 @@ registerSubject("IoT e Streaming", [
     id: "u15067", topic: "Data in movimento vs a riposo",
     q: "Lo streaming lavora sui dati 'in movimento', a differenza del data warehouse che lavora su dati:",
     opts: [
-      "A riposo (già memorizzati)",
       "Anch'essi in continuo movimento",
+      "A riposo (già memorizzati)",
       "Che non esistono ancora nel sistema"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Lo streaming elabora i dati mentre fluiscono (in movimento); il data warehouse analizza dati già archiviati (a riposo). Molte architetture combinano entrambi gli approcci."
   },
   {
     id: "u15068", topic: "Fan-out",
     q: "Il 'fan-out' in un sistema pub/sub indica:",
     opts: [
-      "Un evento distribuito a molti consumatori interessati",
+      "La cifratura degli eventi prima della consegna",
       "Un evento consegnato a un solo destinatario fisso",
-      "La cifratura degli eventi prima della consegna"
+      "Un evento distribuito a molti consumatori interessati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il fan-out è la capacità di consegnare lo stesso evento a molti subscriber: un produttore, molti consumatori. Kafka lo realizza con più consumer group sullo stesso topic."
   },
   {
@@ -766,22 +766,22 @@ registerSubject("IoT e Streaming", [
     id: "u15070", topic: "Architettura event-driven",
     q: "In un'architettura event-driven i servizi comunicano:",
     opts: [
-      "Tramite eventi (messaggi) invece di chiamate dirette sincrone",
       "Solo tramite chiamate sincrone dirette tra servizi",
+      "Tramite eventi (messaggi) invece di chiamate dirette sincrone",
       "Solo tramite email invece di eventi applicativi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Nell'event-driven i componenti emettono e reagiscono a eventi tramite un broker, restando disaccoppiati: più scalabile e resiliente delle chiamate sincrone punto a punto."
   },
   {
     id: "u15071", topic: "IoT scala",
     q: "Una sfida tipica dell'IoT su larga scala è:",
     opts: [
-      "Gestire enormi volumi di dati da moltissimi dispositivi in modo affidabile",
+      "Assenza totale di connettività, non gestione su larga scala",
       "Avere pochi dati da pochi dispositivi, problema opposto alla scala",
-      "Assenza totale di connettività, non gestione su larga scala"
+      "Gestire enormi volumi di dati da moltissimi dispositivi in modo affidabile"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Milioni di dispositivi generano flussi enormi e continui: servono architetture scalabili (broker, streaming), gestione della connettività intermittente, sicurezza e storage adeguato."
   },
   {
@@ -799,22 +799,22 @@ registerSubject("IoT e Streaming", [
     id: "u15073", topic: "QoS MQTT",
     q: "I livelli di QoS in MQTT definiscono:",
     opts: [
-      "Le garanzie di consegna dei messaggi",
       "Il colore con cui rappresentare i messaggi",
+      "Le garanzie di consegna dei messaggi",
       "La priorità di cifratura dei singoli messaggi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "MQTT offre QoS 0 (at-most-once), 1 (at-least-once) e 2 (exactly-once): si sceglie in base al bilanciamento tra affidabilità richiesta e overhead sulla rete."
   },
   {
     id: "u15074", topic: "Digital twin",
     q: "Un 'digital twin' nell'IoT è:",
     opts: [
-      "Una replica virtuale di un dispositivo/sistema fisico aggiornata dai dati reali",
+      "Un grafico che mostra i dati del dispositivo",
       "Una copia di backup del database dei sensori",
-      "Un grafico che mostra i dati del dispositivo"
+      "Una replica virtuale di un dispositivo/sistema fisico aggiornata dai dati reali"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il digital twin è un modello digitale che rispecchia lo stato di un oggetto fisico grazie alla telemetria in tempo reale: permette simulazioni, monitoraggio e ottimizzazione."
   },
   {
@@ -832,22 +832,22 @@ registerSubject("IoT e Streaming", [
     id: "u15076", topic: "Watermark",
     q: "Un watermark nello stream processing indica:",
     opts: [
-      "Fino a quale event time si considerano arrivati (quasi) tutti gli eventi",
       "L'algoritmo di cifratura applicato agli eventi",
+      "Fino a quale event time si considerano arrivati (quasi) tutti gli eventi",
       "Il colore usato per rappresentare gli eventi in ritardo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il watermark è una stima del progresso dell'event time: segnala che gli eventi fino a quel momento sono probabilmente tutti arrivati, permettendo di chiudere le finestre e gestire i ritardatari."
   },
   {
     id: "u15077", topic: "Real-time vs near-real-time",
     q: "'near-real-time' significa:",
     opts: [
-      "Con un piccolo ritardo (secondi), non istantaneo al millisecondo",
+      "Senza alcun dato disponibile all'elaborazione",
       "Con un ritardo di diversi giorni sui dati",
-      "Senza alcun dato disponibile all'elaborazione"
+      "Con un piccolo ritardo (secondi), non istantaneo al millisecondo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Near-real-time indica elaborazione con latenza bassa ma non nulla (secondi): sufficiente per molti casi d'uso (dashboard, allarmi) senza la complessità del vero tempo reale sub-millisecondo."
   },
   {
@@ -865,22 +865,22 @@ registerSubject("IoT e Streaming", [
     id: "u15079", topic: "Deduplicazione stream",
     q: "Deduplicare in uno stream serve a:",
     opts: [
-      "Evitare di elaborare più volte lo stesso evento",
       "Duplicare volutamente gli eventi per ridondanza",
+      "Evitare di elaborare più volte lo stesso evento",
       "Cancellare l'intero topic in caso di duplicati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con garanzie at-least-once possono arrivare duplicati: deduplicare per identificatore univoco entro una finestra assicura che ogni evento sia conteggiato/elaborato una sola volta."
   },
   {
     id: "u15080", topic: "Partition key skew",
     q: "Se molti messaggi hanno la stessa chiave, si rischia:",
     opts: [
-      "Uno squilibrio (skew): una partizione sovraccarica e le altre scariche",
+      "La cifratura automatica dei messaggi ripetuti",
       "La perdita di tutti i messaggi con quella chiave",
-      "La cifratura automatica dei messaggi ripetuti"
+      "Uno squilibrio (skew): una partizione sovraccarica e le altre scariche"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Poiché la chiave determina la partizione, chiavi molto frequenti concentrano il carico su poche partizioni (data skew), limitando il parallelismo. Va scelta una chiave con buona distribuzione."
   },
   {
@@ -898,22 +898,22 @@ registerSubject("IoT e Streaming", [
     id: "u15082", topic: "Elaborazione continua",
     q: "Uno stream è concettualmente:",
     opts: [
-      "Un flusso di dati potenzialmente infinito e senza fine predefinita",
       "Un dataset finito e statico salvato su disco",
+      "Un flusso di dati potenzialmente infinito e senza fine predefinita",
       "Un grafico che rappresenta l'andamento dei dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Lo stream è unbounded (illimitato): i dati arrivano di continuo senza un 'ultimo record'. Questo richiede tecniche diverse dal batch (finestre, stato, watermark) per aggregare e analizzare."
   },
   {
     id: "u15083", topic: "Osservabilità streaming",
     q: "Monitorare consumer lag e throughput in Kafka serve a:",
     opts: [
-      "Accorgersi se il sistema non regge il carico e intervenire",
+      "Assegnare le partizioni ai consumer del gruppo",
       "Creare le dashboard di business intelligence",
-      "Assegnare le partizioni ai consumer del gruppo"
+      "Accorgersi se il sistema non regge il carico e intervenire"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Metriche come lag, throughput e tassi di errore rivelano se i consumer stanno al passo e se il cluster è sano, permettendo di scalare o ottimizzare prima che si accumulino ritardi."
   },
   {
@@ -931,22 +931,22 @@ registerSubject("IoT e Streaming", [
     id: "u15085", topic: "Alta disponibilità",
     q: "L'alta disponibilità di Kafka si basa su:",
     opts: [
-      "Cluster di più broker con partizioni replicate e failover automatico",
       "Un singolo broker che gestisce tutte le partizioni",
+      "Cluster di più broker con partizioni replicate e failover automatico",
       "La cifratura di tutti i messaggi del cluster"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Distribuendo le partizioni con repliche su più broker, se un nodo cade un altro assume la leadership della partizione: il servizio continua senza perdita di dati (con replication factor adeguato)."
   },
   {
     id: "u15086", topic: "Comando e telemetria",
     q: "Nell'IoT, oltre alla telemetria (dal dispositivo), i comandi vanno:",
     opts: [
-      "Dal sistema centrale verso i dispositivi",
+      "Non vengono mai inviati ai dispositivi",
       "Solo direttamente da un dispositivo all'altro",
-      "Non vengono mai inviati ai dispositivi"
+      "Dal sistema centrale verso i dispositivi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La comunicazione IoT è bidirezionale: i dispositivi inviano telemetria e ricevono comandi (es. spegni, aggiorna soglia) dal sistema centrale, spesso tramite topic dedicati."
   },
   {
@@ -964,22 +964,22 @@ registerSubject("IoT e Streaming", [
     id: "u15088", topic: "Ordinamento globale",
     q: "Per garantire l'ordine totale di TUTTI i messaggi di un topic Kafka bisognerebbe:",
     opts: [
-      "Usare una sola partizione",
       "Usare il maggior numero possibile di partizioni",
+      "Usare una sola partizione",
       "Cifrare tutti i messaggi del topic"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'ordine è garantito solo dentro una partizione: con una sola partizione si ha ordine totale ma nessun parallelismo. È un compromesso tra ordinamento globale e scalabilità."
   },
   {
     id: "u15089", topic: "Time to insight",
     q: "Il vantaggio dello streaming per il business è ridurre il 'time to insight', cioè:",
     opts: [
-      "Il tempo tra il verificarsi di un evento e la possibilità di agire su di esso",
+      "La dimensione dei dati",
       "Il numero di visualizzazioni presenti nel report o nella dashboard",
-      "La dimensione dei dati"
+      "Il tempo tra il verificarsi di un evento e la possibilità di agire su di esso"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Elaborando in tempo reale, si accorcia l'intervallo tra evento e decisione/azione: fondamentale per casi come rilevamento frodi, allarmi e personalizzazione immediata."
   },
   {
@@ -997,22 +997,22 @@ registerSubject("IoT e Streaming", [
     id: "u15091", topic: "Rilevamento anomalie realtime",
     q: "Rilevare anomalie in streaming permette di:",
     opts: [
-      "Segnalare comportamenti insoliti nel momento in cui accadono",
       "Analizzare soltanto dati raccolti anni prima",
+      "Segnalare comportamenti insoliti nel momento in cui accadono",
       "Cifrare gli eventi sospetti prima di scartarli"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Applicare regole o modelli sugli stream individua subito valori anomali (picchi, frodi, guasti) al loro verificarsi, permettendo allarmi e interventi immediati anziché scoperte tardive."
   },
   {
     id: "u15092", topic: "Message key vs value",
     q: "In un record Kafka, il 'value' contiene:",
     opts: [
-      "Il contenuto/payload principale del messaggio",
+      "L'offset del messaggio nella partizione",
       "La partizione a cui il messaggio è destinato",
-      "L'offset del messaggio nella partizione"
+      "Il contenuto/payload principale del messaggio"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il record ha una chiave (opzionale, per il partizionamento/ordinamento) e un value (il payload dei dati), oltre a timestamp e metadati. Il value è l'informazione vera e propria trasmessa."
   },
   {
@@ -1030,22 +1030,22 @@ registerSubject("IoT e Streaming", [
     id: "u15094", topic: "Streaming ETL",
     q: "Lo 'streaming ETL' consiste nel:",
     opts: [
-      "Estrarre, trasformare e caricare i dati in continuo, non a batch",
       "Elaborare i dati una sola volta all'anno",
+      "Estrarre, trasformare e caricare i dati in continuo, non a batch",
       "Caricare i dati senza applicare alcuna trasformazione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Nello streaming ETL le trasformazioni (pulizia, arricchimento, aggregazione) avvengono sul flusso in tempo reale mentre i dati transitano, alimentando destinazioni sempre aggiornate."
   },
   {
     id: "u15095", topic: "Contratti tra servizi",
     q: "Lo schema di un topic funge da 'contratto' perché:",
     opts: [
-      "Definisce la struttura attesa dei messaggi tra produttori e consumatori",
+      "Cancella i messaggi che non rispettano il formato",
       "Cifra i messaggi scambiati tra i due sistemi",
-      "Cancella i messaggi che non rispettano il formato"
+      "Definisce la struttura attesa dei messaggi tra produttori e consumatori"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Lo schema (gestito dallo Schema Registry) stabilisce il formato dei messaggi: producer e consumer vi si conformano, e le evoluzioni sono controllate per compatibilità, evitando rotture."
   },
   {
@@ -1063,22 +1063,22 @@ registerSubject("IoT e Streaming", [
     id: "u15097", topic: "Latenza end-to-end",
     q: "La latenza end-to-end in una pipeline di streaming è:",
     opts: [
-      "Il tempo totale dall'evento sorgente al risultato finale utilizzabile",
       "Solo il tempo di calcolo locale, ignorando acquisizione e trasporto",
+      "Il tempo totale dall'evento sorgente al risultato finale utilizzabile",
       "Il numero totale di eventi processati, non il tempo end-to-end"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La latenza end-to-end somma i ritardi di tutte le fasi (ingestione, broker, elaborazione, scrittura): è ciò che percepisce l'utente/sistema finale e va ottimizzata secondo i requisiti."
   },
   {
     id: "u15098", topic: "Replay",
     q: "Il 'replay' degli eventi in Kafka consente di:",
     opts: [
-      "Rileggere lo storico per rielaborare i dati",
+      "Cifrare gli eventi già consegnati ai consumer",
       "Cancellare in modo permanente gli eventi passati",
-      "Cifrare gli eventi già consegnati ai consumer"
+      "Rileggere lo storico per rielaborare i dati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Poiché Kafka conserva il log, si può riportare un consumer a un offset passato e rielaborare gli eventi: utile per correggere errori, testare nuova logica o ricostruire uno stato."
   },
   {
@@ -1096,11 +1096,11 @@ registerSubject("IoT e Streaming", [
     id: "u15100", topic: "Architettura streaming",
     q: "Un'architettura di streaming tipica comprende:",
     opts: [
-      "Sorgenti/sensori → broker (Kafka) → stream processing → storage e dashboard",
       "Broker (Kafka) → sorgenti/sensori → stream processing → storage e dashboard",
+      "Sorgenti/sensori → broker (Kafka) → stream processing → storage e dashboard",
       "Storage e dashboard → sorgenti/sensori → broker (Kafka) → stream processing"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il pattern: le sorgenti (dispositivi, app, CDC) pubblicano su Kafka; motori di stream processing trasformano e aggregano in tempo reale; i risultati vanno a storage, dashboard o sistemi che reagiscono."
   },
   // === AGGIUNGI NUOVE DOMANDE IOT E STREAMING QUI ===

@@ -19,22 +19,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18002", topic: "Obiettivo dell'analisi",
     q: "L'obiettivo finale di un progetto end-to-end e':",
     opts: [
-      "Trasformare dati grezzi in insight azionabili",
       "Scrivere codice senza comunicarlo",
+      "Trasformare dati grezzi in insight azionabili",
       "Archiviare file senza interpretarli"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il valore non e' nei dati grezzi ma nella capacita' di interpretarli e comunicarli in modo che guidino decisioni concrete."
   },
   {
     id: "u18003", topic: "Dato informazione insight",
     q: "Quale sequenza descrive meglio la crescita di valore nell'analisi?",
     opts: [
-      "Dato -> informazione -> insight -> azione",
+      "Azione -> dato -> grafico -> file",
       "Insight -> dato -> azione -> informazione",
-      "Azione -> dato -> grafico -> file"
+      "Dato -> informazione -> insight -> azione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il dato e' grezzo; diventa informazione quando e' contestualizzato; diventa insight quando cambia la comprensione e suggerisce un'azione."
   },
   {
@@ -52,22 +52,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18005", topic: "Informazione",
     q: "Quando un dato diventa informazione?",
     opts: [
-      "Quando viene contestualizzato e collegato ad altri elementi",
       "Quando e' lasciato senza confronto",
+      "Quando viene contestualizzato e collegato ad altri elementi",
       "Quando viene rimosso dal dataset"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Confrontare prezzi medi tra categorie, periodi o gruppi aggiunge contesto: il dato inizia a rispondere a una domanda."
   },
   {
     id: "u18006", topic: "Insight",
     q: "Un insight e':",
     opts: [
-      "Una comprensione che cambia prospettiva o orienta un'azione",
+      "Una variabile senza contesto",
       "Un numero isolato in una tabella",
-      "Una variabile senza contesto"
+      "Una comprensione che cambia prospettiva o orienta un'azione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un insight non descrive soltanto cosa accade: rivela un pattern, una relazione o un'anomalia che modifica il modo di interpretare il fenomeno."
   },
   {
@@ -85,22 +85,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18008", topic: "Exploratory vs explanatory",
     q: "L'analisi esplicativa serve soprattutto a:",
     opts: [
-      "Comunicare in modo chiaro cio' che e' stato scoperto",
       "Tenere tutto il codice sperimentale",
+      "Comunicare in modo chiaro cio' che e' stato scoperto",
       "Mostrare ogni tabella prodotta"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'explanatory analysis seleziona cio' che conta, costruisce una sequenza logica e trasforma l'esplorazione in una storia comprensibile."
   },
   {
     id: "u18009", topic: "Processo iterativo",
     q: "Perche' il ciclo end-to-end non e' lineare una volta per tutte?",
     opts: [
-      "Gli insight possono generare nuove domande e riportare a fasi precedenti",
+      "La comunicazione elimina ogni nuova analisi",
       "La raccolta dati avviene sempre alla fine",
-      "La comunicazione elimina ogni nuova analisi"
+      "Gli insight possono generare nuove domande e riportare a fasi precedenti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un progetto dati e' ciclico: analisi, comunicazione e azione possono far emergere nuove domande, richiedendo nuove raccolte o nuove trasformazioni."
   },
   {
@@ -118,22 +118,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18011", topic: "Comunicazione efficace",
     q: "Perche' la comunicazione e' una fase critica dell'analisi?",
     opts: [
-      "Perche' rende gli insight comprensibili e orientati all'azione",
       "Perche' sostituisce la qualita' dei dati",
+      "Perche' rende gli insight comprensibili e orientati all'azione",
       "Perche' serve solo a decorare slide"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Non basta trovare un insight: bisogna spiegarlo in modo chiaro all'audience giusta, collegandolo a decisioni e implicazioni."
   },
   {
     id: "u18012", topic: "Problem definition",
     q: "Una buona analisi dovrebbe partire da:",
     opts: [
-      "Una domanda o problema definito chiaramente",
+      "Un dataset senza obiettivo",
       "Una libreria installata prima del bisogno",
-      "Un dataset senza obiettivo"
+      "Una domanda o problema definito chiaramente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La definizione del problema orienta raccolta dati, trasformazioni, metriche e comunicazione. Senza domanda, l'analisi rischia di essere dispersiva."
   },
   {
@@ -151,22 +151,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18014", topic: "Base dati",
     q: "In una data story, una buona base dati deve essere:",
     opts: [
-      "Rilevante, affidabile e coerente con la domanda",
       "La piu' grande possibile anche se irrilevante",
+      "Rilevante, affidabile e coerente con la domanda",
       "Non documentata per restare sintetica"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La credibilita' della storia dipende da dati pertinenti, fonti chiare, periodo dichiarato, unita' di misura coerenti e limiti esplicitati."
   },
   {
     id: "u18015", topic: "Ridondanza",
     q: "Perche' evitare analisi accessorie in una presentazione dati?",
     opts: [
-      "Per non distrarre dal messaggio principale",
+      "Per evitare qualsiasi confronto",
       "Per nascondere i limiti dell'analisi",
-      "Per evitare qualsiasi confronto"
+      "Per non distrarre dal messaggio principale"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Una data story efficace seleziona solo le evidenze utili alla domanda e all'audience; il resto aumenta rumore cognitivo."
   },
   {
@@ -184,22 +184,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18017", topic: "Screen scraping",
     q: "Lo screen scraping si basa su:",
     opts: [
-      "Lettura dell'HTML e selezione di elementi tramite DOM/CSS",
       "Inserimento manuale dei record",
+      "Lettura dell'HTML e selezione di elementi tramite DOM/CSS",
       "Query SQL su un database locale"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Nel corso lo screen scraping usa la pagina HTML, il DOM e selettori CSS/XPath, spesso con rvest, quando non e' disponibile una API ufficiale."
   },
   {
     id: "u18018", topic: "API scraping",
     q: "Rispetto allo screen scraping, una API ufficiale di solito e':",
     opts: [
-      "Piu' stabile e restituisce dati gia' strutturati",
+      "Limitata solo a immagini",
       "Piu' fragile se cambia la grafica",
-      "Limitata solo a immagini"
+      "Piu' stabile e restituisce dati gia' strutturati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le API sono progettate per fornire dati: in genere sono piu' stabili, pulite e conformi rispetto all'estrazione dal layout HTML."
   },
   {
@@ -217,22 +217,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18020", topic: "robots.txt",
     q: "Prima di fare scraping e' corretto controllare robots.txt per:",
     opts: [
-      "Capire le regole dichiarate dal sito per i crawler",
       "Scaricare automaticamente tutti i file",
+      "Capire le regole dichiarate dal sito per i crawler",
       "Aggirare i limiti del server"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il file robots.txt indica quali aree del sito sono consentite o vietate ai crawler. Non sostituisce il giudizio legale, ma e' un controllo minimo."
   },
   {
     id: "u18021", topic: "HTTP request",
     q: "Nel codice di scraping, user agent e header servono a:",
     opts: [
-      "Presentare la richiesta al server in modo trasparente",
+      "Eliminare il bisogno di selettori",
       "Nascondere sempre l'identita' del codice",
-      "Eliminare il bisogno di selettori"
+      "Presentare la richiesta al server in modo trasparente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Specificare user agent e informazioni di contatto rende la richiesta piu' leggibile per il server e coerente con buone pratiche di scraping."
   },
   {
@@ -250,22 +250,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18023", topic: "CSS selector",
     q: "Un selettore CSS nello scraping serve a:",
     opts: [
-      "Individuare gli elementi HTML da cui estrarre dati",
       "Definire una regressione statistica",
+      "Individuare gli elementi HTML da cui estrarre dati",
       "Creare una matrice di frequenze"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con CSS selector si indicano nodi specifici del DOM, per esempio classi o combinazioni di elementi, da passare a funzioni come html_nodes()."
   },
   {
     id: "u18024", topic: "SelectorGadget",
     q: "SelectorGadget e' utile per:",
     opts: [
-      "Aiutare a individuare selettori CSS sulle pagine web",
+      "Calcolare pesi TF-IDF per termini in documenti testuali",
       "Pulire stopword italiane",
-      "Calcolare pesi TF-IDF per termini in documenti testuali"
+      "Aiutare a individuare selettori CSS sulle pagine web"
     ],
-    correct: [0],
+    correct: [2],
     exp: "SelectorGadget facilita l'identificazione dei CSS selector da usare nello scraping quando si esplora una pagina HTML."
   },
   {
@@ -283,22 +283,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18026", topic: "rvest",
     q: "In rvest, html_nodes(css = ...) serve a:",
     opts: [
-      "Selezionare nodi HTML usando un selettore CSS",
       "Convertire parole in token",
+      "Selezionare nodi HTML usando un selettore CSS",
       "Creare un file robots.txt"
     ],
-    correct: [0],
+    correct: [1],
     exp: "html_nodes() isola gli elementi della pagina che corrispondono al selettore CSS indicato."
   },
   {
     id: "u18027", topic: "rvest",
     q: "html_text2() e' usato per:",
     opts: [
-      "Estrarre testo da nodi HTML con gestione piu' pulita degli spazi",
+      "Calcolare frequenze per gruppo",
       "Creare un corpus quanteda prima delle analisi testuali",
-      "Calcolare frequenze per gruppo"
+      "Estrarre testo da nodi HTML con gestione piu' pulita degli spazi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "html_text() e html_text2() estraggono testo dai nodi; html_text2() tende a restituire testo piu' leggibile normalizzando meglio la spaziatura."
   },
   {
@@ -316,22 +316,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18029", topic: "Salvataggio HTML",
     q: "Perche' salvare localmente l'HTML scaricato puo' essere utile?",
     opts: [
-      "Per lavorare su una copia riproducibile durante estrazione e debugging",
       "Per evitare di pulire i testi",
+      "Per lavorare su una copia riproducibile durante estrazione e debugging",
       "Per sostituire sempre l'API"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Salvare una pagina consente di ispezionare la stessa versione mentre si costruisce il parser, riducendo dipendenza da cambiamenti immediati del sito."
   },
   {
     id: "u18030", topic: "Dataset wide",
     q: "Nell'esercizio sui corsi ITS, la tabella wide richiesta prevede:",
     opts: [
-      "Sezioni in riga e corsi diversi come colonne",
+      "Solo righe duplicate per ogni parola",
       "Una sola colonna con tutto il testo",
-      "Solo righe duplicate per ogni parola"
+      "Sezioni in riga e corsi diversi come colonne"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La consegna chiedeva di riassumere sezioni comuni delle pagine corso, confrontando le informazioni dei corsi in colonne diverse."
   },
   {
@@ -349,22 +349,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18032", topic: "Character in R",
     q: "In R, un vettore character rappresenta:",
     opts: [
-      "Testi o stringhe scritte tra virgolette",
       "Solo valori TRUE/FALSE",
+      "Testi o stringhe scritte tra virgolette",
       "Solo date in formato ISO"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le stringhe in R sono valori character e possono contenere lettere, spazi, numeri, simboli o emoji."
   },
   {
     id: "u18033", topic: "Case sensitivity",
     q: "R e' case-sensitive: questo significa che:",
     opts: [
-      "Maiuscole e minuscole possono essere trattate come valori diversi",
+      "Gli accenti vengono sempre corretti",
       "Tutti i testi diventano minuscoli automaticamente",
-      "Gli accenti vengono sempre corretti"
+      "Maiuscole e minuscole possono essere trattate come valori diversi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Per confronti e join su testo conviene spesso standardizzare con funzioni come str_to_lower(), per evitare differenze artificiali."
   },
   {
@@ -382,22 +382,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18035", topic: "stringr str_c",
     q: "In str_c(), l'argomento collapse serve a:",
     opts: [
-      "Unire tutti gli elementi di un vettore in un'unica stringa",
       "Separare colonne in piu' variabili",
+      "Unire tutti gli elementi di un vettore in un'unica stringa",
       "Convertire tutto in maiuscolo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "sep separa elementi passati insieme; collapse compatta un vettore intero in una stringa finale, spesso usando un separatore."
   },
   {
     id: "u18036", topic: "stringr case",
     q: "str_to_lower() e str_to_upper() sono utili per:",
     opts: [
-      "Standardizzare maiuscole e minuscole nei testi",
+      "Calcolare frequenze di parole",
       "Estrarre contenuto testuale da pagine o markup HTML",
-      "Calcolare frequenze di parole"
+      "Standardizzare maiuscole e minuscole nei testi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Sono funzioni stringr per uniformare il formato del testo, riducendo errori in confronti, filtri e join."
   },
   {
@@ -415,22 +415,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18038", topic: "stringr spazi",
     q: "Differenza corretta tra str_trim() e str_squish():",
     opts: [
-      "trim rimuove bordi; squish rimuove bordi e riduce spazi interni multipli",
       "trim ordina parole; squish crea token",
+      "trim rimuove bordi; squish rimuove bordi e riduce spazi interni multipli",
       "trim elimina numeri; squish elimina stopword"
     ],
-    correct: [0],
+    correct: [1],
     exp: "str_trim() toglie spazi iniziali/finali; str_squish() fa anche collassare sequenze di spazi interni a uno solo."
   },
   {
     id: "u18039", topic: "stringr detect",
     q: "str_detect(string, pattern) restituisce:",
     opts: [
-      "TRUE/FALSE per indicare se il pattern e' presente",
+      "Una matrice document-feature",
       "La prima parola estratta",
-      "Una matrice document-feature"
+      "TRUE/FALSE per indicare se il pattern e' presente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "str_detect() e' utile per filtrare commenti, creare variabili logiche e contare testi che contengono parole chiave."
   },
   {
@@ -448,22 +448,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18041", topic: "stringr extract",
     q: "str_extract_all() rispetto a str_extract():",
     opts: [
-      "Restituisce tutte le corrispondenze invece della prima soltanto",
       "Restituisce solo valori booleani",
+      "Restituisce tutte le corrispondenze invece della prima soltanto",
       "Rimuove automaticamente gli accenti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "str_extract() prende la prima corrispondenza; str_extract_all() raccoglie tutte quelle presenti in ogni stringa."
   },
   {
     id: "u18042", topic: "stringr sort",
     q: "str_sort() restituisce:",
     opts: [
-      "Le stringhe ordinate alfabeticamente",
+      "Una colonna pulita dagli spazi",
       "Gli indici delle stringhe ordinate",
-      "Una colonna pulita dagli spazi"
+      "Le stringhe ordinate alfabeticamente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "str_sort() restituisce i valori ordinati. str_order() restituisce invece le posizioni utili per riordinare un dataset."
   },
   {
@@ -481,22 +481,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18044", topic: "Regex",
     q: "Che cosa sono le espressioni regolari?",
     opts: [
-      "Un mini-linguaggio per descrivere pattern nel testo",
       "Un formato di grafico statistico",
+      "Un mini-linguaggio per descrivere pattern nel testo",
       "Una libreria per API ufficiali"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le regex permettono di cercare, estrarre, sostituire o rimuovere sequenze che rispettano uno schema, come cifre, prefissi o estensioni file."
   },
   {
     id: "u18045", topic: "Regex",
     q: "In R/stringr, il pattern per cercare una cifra si scrive:",
     opts: [
-      "\\\\d",
+      "csv$",
       "[A-Z]",
-      "csv$"
+      "\\\\d"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nelle stringhe R il backslash va scritto doppio; quindi il pattern regex per una cifra e' rappresentato come \\\\d."
   },
   {
@@ -514,22 +514,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18047", topic: "Regex",
     q: "Il simbolo ^ in un pattern come ^R indica:",
     opts: [
-      "Inizio della stringa",
       "Fine della stringa",
+      "Inizio della stringa",
       "Una vocale qualunque"
     ],
-    correct: [0],
+    correct: [1],
     exp: "^ vincola il match all'inizio della stringa: ^R trova testi che iniziano con R, non parole che contengono R altrove."
   },
   {
     id: "u18048", topic: "Regex",
     q: "Il pattern csv$ serve a trovare:",
     opts: [
-      "Stringhe che finiscono con csv",
+      "Qualsiasi cifra prima di csv",
       "Stringhe che iniziano con csv",
-      "Qualsiasi cifra prima di csv"
+      "Stringhe che finiscono con csv"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il simbolo $ indica la fine della stringa; csv$ intercetta nomi che terminano con csv."
   },
   {
@@ -547,22 +547,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18050", topic: "Encoding",
     q: "L'encoding dei caratteri definisce:",
     opts: [
-      "Come i byte vengono interpretati come lettere, simboli o emoji",
       "Come ordinare righe numeriche",
+      "Come i byte vengono interpretati come lettere, simboli o emoji",
       "Come calcolare una media"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Se l'encoding e' interpretato male, caratteri accentati possono apparire corrotti, per esempio Jose' letto come sequenze strane."
   },
   {
     id: "u18051", topic: "Encoding",
     q: "Quando importi un CSV con accenti corrotti, una soluzione corretta e':",
     opts: [
-      "Rileggere il file specificando fileEncoding appropriato",
+      "Rimuovere tutte le righe accentate",
       "Applicare sempre dfm_trim()",
-      "Rimuovere tutte le righe accentate"
+      "Rileggere il file specificando fileEncoding appropriato"
     ],
-    correct: [0],
+    correct: [2],
     exp: "read.csv() e funzioni simili permettono fileEncoding, per esempio UTF-8 o latin1, per interpretare correttamente i byte del file."
   },
   {
@@ -580,22 +580,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18053", topic: "Quanteda",
     q: "quanteda viene usato soprattutto per:",
     opts: [
-      "Analisi quantitativa di testi organizzati in corpus, token e DFM",
       "Eseguire query SQL su database",
+      "Analisi quantitativa di testi organizzati in corpus, token e DFM",
       "Standardizzare date contrattuali"
     ],
-    correct: [0],
+    correct: [1],
     exp: "quanteda porta i testi da stringhe/corpus a token e matrici numeriche, consentendo frequenze, confronti, concordanze e visualizzazioni testuali."
   },
   {
     id: "u18054", topic: "readtext",
     q: "Nel flusso quanteda, readtext serve a:",
     opts: [
-      "Importare file testuali da analizzare",
+      "Eseguire scraping del DOM",
       "Creare direttamente una dashboard",
-      "Eseguire scraping del DOM"
+      "Importare file testuali da analizzare"
     ],
-    correct: [0],
+    correct: [2],
     exp: "readtext facilita l'importazione di documenti testuali; poi quanteda costruisce corpus, token e DFM."
   },
   {
@@ -613,22 +613,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18056", topic: "Corpus",
     q: "In corpus(dati, text_field = 'testo'), text_field indica:",
     opts: [
-      "La colonna che contiene il testo da analizzare",
       "La colonna da eliminare",
+      "La colonna che contiene il testo da analizzare",
       "Il pattern regex da cercare"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Quando il corpus nasce da un dataframe, text_field specifica quale colonna contiene il contenuto testuale."
   },
   {
     id: "u18057", topic: "Docvars",
     q: "docvars() in quanteda permette di:",
     opts: [
-      "Visualizzare o usare metadati associati ai documenti",
+      "Calcolare un join tra tabelle",
       "Rimuovere la punteggiatura dai token",
-      "Calcolare un join tra tabelle"
+      "Visualizzare o usare metadati associati ai documenti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le docvars sono variabili documento, utili per analisi comparative per autore, gruppo, categoria, periodo o sentiment."
   },
   {
@@ -646,22 +646,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18059", topic: "textstat_summary",
     q: "textstat_summary() e' utile per:",
     opts: [
-      "Ottenere statistiche descrittive sui testi del corpus",
       "Correggere encoding automaticamente",
+      "Ottenere statistiche descrittive sui testi del corpus",
       "Sostituire tutte le parole"
     ],
-    correct: [0],
+    correct: [1],
     exp: "textstat_summary() produce statistiche piu' dettagliate sui documenti, utili per una prima diagnosi testuale."
   },
   {
     id: "u18060", topic: "Tokenizzazione",
     q: "tokens() in quanteda serve a:",
     opts: [
-      "Dividere testi in unita' minime di analisi",
+      "Convertire HTML in CSS",
       "Creare direttamente una API",
-      "Convertire HTML in CSS"
+      "Dividere testi in unita' minime di analisi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La tokenizzazione trasforma il testo grezzo in token, di solito parole, su cui applicare pulizia, conteggi e analisi."
   },
   {
@@ -679,22 +679,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18062", topic: "Tokenizzazione",
     q: "tokens_tolower() serve a:",
     opts: [
-      "Convertire tutti i token in minuscolo",
       "Rimuovere token troppo rari",
+      "Convertire tutti i token in minuscolo",
       "Creare una wordcloud basata sulle frequenze dei termini"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Portare i token in minuscolo rende confrontabili forme come Roma e roma, riducendo duplicazioni artificiali."
   },
   {
     id: "u18063", topic: "Stopword",
     q: "tokens_remove(Tokens, stopwords('it')) serve a:",
     opts: [
-      "Rimuovere parole comuni italiane poco informative",
+      "Creare un corpus partendo da colonne testuali del dataframe",
       "Unire parole composte",
-      "Creare un corpus partendo da colonne testuali del dataframe"
+      "Rimuovere parole comuni italiane poco informative"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le stopword sono parole frequenti come articoli e preposizioni; rimuoverle puo' ridurre rumore se non sono rilevanti per l'analisi."
   },
   {
@@ -712,22 +712,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18065", topic: "Stemming",
     q: "tokens_wordstem(language = 'italian') serve a:",
     opts: [
-      "Ridurre parole alla radice secondo la lingua scelta",
       "Tradurre testi in italiano",
+      "Ridurre parole alla radice secondo la lingua scelta",
       "Ordinare alfabeticamente documenti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Lo stemming unifica forme come amato, amare, amando in una radice comune, utile per ridurre varianti lessicali."
   },
   {
     id: "u18066", topic: "Multiword",
     q: "tokens_compound(phrase('colonna sonora')) serve a:",
     opts: [
-      "Trattare piu' parole come un unico token composto",
+      "Convertire un corpus in HTML",
       "Rimuovere tutte le parole rare",
-      "Convertire un corpus in HTML"
+      "Trattare piu' parole come un unico token composto"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le multiword expressions vanno unite quando il significato dipende dalla sequenza completa, per esempio big data o colonna sonora."
   },
   {
@@ -745,22 +745,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18068", topic: "DFM",
     q: "In una DFM, ogni colonna rappresenta tipicamente:",
     opts: [
-      "Una feature, spesso una parola o token",
       "Una slide della presentazione",
+      "Una feature, spesso una parola o token",
       "Una regola robots.txt"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le colonne della DFM sono le feature testuali; le righe sono i documenti, e i valori sono frequenze o conteggi."
   },
   {
     id: "u18069", topic: "dfm_trim",
     q: "dfm_trim() serve a:",
     opts: [
-      "Ridurre la DFM eliminando termini troppo rari o troppo frequenti",
+      "Fare scraping di una pagina web",
       "Creare automaticamente un corpus",
-      "Fare scraping di una pagina web"
+      "Ridurre la DFM eliminando termini troppo rari o troppo frequenti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Ridurre dimensionalita' puo' migliorare interpretabilita' e prestazioni, togliendo rumore o termini poco informativi."
   },
   {
@@ -778,22 +778,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18071", topic: "Frequenze",
     q: "textstat_frequency(x, groups = ...) permette di:",
     opts: [
-      "Calcolare frequenze anche per gruppi definiti da metadati",
       "Unire token multi-parola",
+      "Calcolare frequenze anche per gruppi definiti da metadati",
       "Ordinare file per estensione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con groups si confrontano frequenze tra categorie, autori, fonti o periodi usando le docvars."
   },
   {
     id: "u18072", topic: "Wordcloud",
     q: "textplot_wordcloud() visualizza:",
     opts: [
-      "Parole con dimensione proporzionale alla frequenza",
+      "Il DOM di una pagina web",
       "Relazioni causali tra variabili",
-      "Il DOM di una pagina web"
+      "Parole con dimensione proporzionale alla frequenza"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La wordcloud e' esplorativa: mostra rapidamente termini ricorrenti, ma non sostituisce analisi quantitative piu' rigorose."
   },
   {
@@ -811,22 +811,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18074", topic: "textplot_xray",
     q: "textplot_xray() visualizza:",
     opts: [
-      "Le posizioni delle parole chiave nei documenti",
       "Le colonne mancanti di un CSV",
+      "Le posizioni delle parole chiave nei documenti",
       "La struttura di un data warehouse"
     ],
-    correct: [0],
+    correct: [1],
     exp: "textplot_xray prende output KWIC e mostra dove compaiono i termini nei testi, anche confrontando piu' parole."
   },
   {
     id: "u18075", topic: "stringr vs quanteda",
     q: "Differenza corretta tra stringr e quanteda:",
     opts: [
-      "stringr pulisce/manipola stringhe; quanteda analizza collezioni di testi",
+      "quanteda serve solo per database SQL",
       "stringr crea solo DFM; quanteda fa solo CSS",
-      "quanteda serve solo per database SQL"
+      "stringr pulisce/manipola stringhe; quanteda analizza collezioni di testi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "stringr lavora su stringhe o vettori di stringhe. quanteda organizza testi in corpus, token e DFM per analisi quantitativa."
   },
   {
@@ -844,22 +844,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18077", topic: "Insight tempo",
     q: "Un insight basato su cambiamento nel tempo cerca di capire:",
     opts: [
-      "Come un fenomeno evolve tra periodi diversi",
       "Solo quale categoria ha piu' righe",
+      "Come un fenomeno evolve tra periodi diversi",
       "Solo quale parola e' piu' lunga"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Analizzare trend, stagionalita' o picchi temporali permette di individuare cambiamenti rilevanti, come effetti di campagne o anomalie mensili."
   },
   {
     id: "u18078", topic: "Insight relazione",
     q: "Un insight basato su relazione tra variabili riguarda:",
     opts: [
-      "Come due fattori si associano o influenzano nel contesto",
+      "Solo la sintassi del codice",
       "Solo l'ordine alfabetico dei nomi",
-      "Solo la sintassi del codice"
+      "Come due fattori si associano o influenzano nel contesto"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Esempio: ore di ascolto e probabilita' di abbonamento premium. La relazione va interpretata rispetto alla decisione di business."
   },
   {
@@ -877,22 +877,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18080", topic: "Insight anomalie",
     q: "Un outlier in una data story puo' essere utile per:",
     opts: [
-      "Individuare casi critici o buone pratiche da approfondire",
       "Dimostrare sempre un errore di codice",
+      "Individuare casi critici o buone pratiche da approfondire",
       "Eliminare ogni confronto"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le anomalie non vanno solo rimosse: possono rivelare problemi, opportunita' o casi eccezionali da studiare."
   },
   {
     id: "u18081", topic: "Storytelling",
     q: "Il data storytelling trasforma i dati in:",
     opts: [
-      "Una narrazione visiva e verbale orientata a comprensione e azione",
+      "Un archivio di file non commentati",
       "Una lista completa di ogni comando eseguito",
-      "Un archivio di file non commentati"
+      "Una narrazione visiva e verbale orientata a comprensione e azione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La storia mette in sequenza base dati, evidenza, contesto, interpretazione e azione, rendendo l'analisi comprensibile all'audience."
   },
   {
@@ -910,22 +910,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18083", topic: "Cognizione",
     q: "Perche' le storie aiutano con i dati?",
     opts: [
-      "Riducendo fatica cognitiva e dando struttura a numeri astratti",
       "Sostituendo la verifica dei dati",
+      "Riducendo fatica cognitiva e dando struttura a numeri astratti",
       "Eliminando la necessita' di grafici"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le persone cercano nessi e contesto. Una narrazione ben costruita rende memorabili e interpretabili evidenze che da sole resterebbero fredde."
   },
   {
     id: "u18084", topic: "Persuasione",
     q: "Nel corso, l'obiettivo della storia sui dati non e' solo far capire ma anche:",
     opts: [
-      "Far agire in modo coerente con le evidenze",
+      "Nascondere limiti e fonti",
       "Mostrare ogni esperimento fallito",
-      "Nascondere limiti e fonti"
+      "Far agire in modo coerente con le evidenze"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Gli insight devono guidare decisioni, strategie o cambiamenti. La comunicazione efficace collega evidenza e azione."
   },
   {
@@ -943,22 +943,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18086", topic: "Visualizzazione",
     q: "Una visualizzazione in una data story dovrebbe:",
     opts: [
-      "Sostenere il messaggio principale e ridurre ambiguita'",
       "Mostrare ogni variabile disponibile",
+      "Sostenere il messaggio principale e ridurre ambiguita'",
       "Essere decorativa prima che informativa"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il grafico deve chiarire l'insight, non moltiplicare rumore. Titoli, assi, confronti e selezione delle metriche devono servire la storia."
   },
   {
     id: "u18087", topic: "Metriche audience",
     q: "Nel caso rebranding, metriche come engagement rate, sentiment e share of voice sono piu' utili a:",
     opts: [
-      "Team marketing interessato a percezione e coinvolgimento",
+      "Database administrator sui backup",
       "Team logistico sui tempi consegna",
-      "Database administrator sui backup"
+      "Team marketing interessato a percezione e coinvolgimento"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le metriche vanno scelte per audience e obiettivo. Il marketing valuta impatto comunicativo e relazione con il pubblico."
   },
   {
@@ -976,22 +976,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18089", topic: "Progetto finale",
     q: "Il progetto finale di gruppo UFS18 valuta soprattutto:",
     opts: [
-      "Capacita' di gestire un caso reale end-to-end e presentare risultati",
       "Solo memorizzazione di comandi isolati",
+      "Capacita' di gestire un caso reale end-to-end e presentare risultati",
       "Solo installazione di pacchetti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La valutazione richiede integrazione: dataset, analisi, dashboard/storyline, insight e comunicazione dei risultati."
   },
   {
     id: "u18090", topic: "Dashboard dataset",
     q: "Per il dataset finale della dashboard, una richiesta era contenere:",
     opts: [
-      "Solo contratti attivi",
+      "Solo commenti testuali",
       "Solo contratti cancellati",
-      "Solo commenti testuali"
+      "Solo contratti attivi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La consegna chiedeva un dataset pulito e coerente per dashboard, filtrato sui contratti attivi e strutturato secondo modello."
   },
   {
@@ -1009,22 +1009,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18092", topic: "Join",
     q: "Effettuare join corretti con l'anagrafica significa:",
     opts: [
-      "Arricchire i contratti con attributi coerenti usando chiavi affidabili",
       "Duplicare ogni riga volontariamente",
+      "Arricchire i contratti con attributi coerenti usando chiavi affidabili",
       "Sostituire i dati con grafici"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I join devono preservare granularita' e coerenza: chiavi sbagliate creano duplicati, perdita di righe o attributi errati."
   },
   {
     id: "u18093", topic: "Indicatori binari",
     q: "Indicatori binari 0/1 per servizi attivi servono a:",
     opts: [
-      "Rappresentare chiaramente presenza o assenza di ciascun servizio",
+      "Evitare qualsiasi filtro",
       "Memorizzare testi lunghi in ogni cella",
-      "Evitare qualsiasi filtro"
+      "Rappresentare chiaramente presenza o assenza di ciascun servizio"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le colonne 0/1 rendono i servizi facili da aggregare, filtrare e visualizzare in dashboard."
   },
   {
@@ -1042,22 +1042,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18095", topic: "Traccia analisi",
     q: "La traccia dell'analisi richiede di chiarire:",
     opts: [
-      "Variabili, approcci, percorso logico, prime evidenze e ipotesi",
       "Solo il colore della dashboard",
+      "Variabili, approcci, percorso logico, prime evidenze e ipotesi",
       "Solo la lista dei pacchetti installati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Prima della presentazione va definita la strategia analitica: cosa si vuole capire, con quali variabili e quale storyline provvisoria."
   },
   {
     id: "u18096", topic: "Qualita' dati",
     q: "In un flusso end-to-end, la pulizia dei dati e' necessaria perche':",
     opts: [
-      "Errori, formati incoerenti e duplicati possono falsare gli insight",
+      "I grafici correggono automaticamente i dati",
       "La pulizia e' solo estetica",
-      "I grafici correggono automaticamente i dati"
+      "Errori, formati incoerenti e duplicati possono falsare gli insight"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La qualita' del dato condiziona tutte le fasi successive. Insight costruiti su dati sporchi producono decisioni fragili."
   },
   {
@@ -1075,22 +1075,22 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18098", topic: "Actionability",
     q: "Un insight e' azionabile quando:",
     opts: [
-      "Suggerisce chiaramente una decisione o un intervento possibile",
       "E' solo una descrizione neutra",
+      "Suggerisce chiaramente una decisione o un intervento possibile",
       "Non ha pubblico destinatario"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Azionabile significa che l'insight puo' orientare una scelta concreta, per esempio quando proporre un'offerta o su quale segmento intervenire."
   },
   {
     id: "u18099", topic: "Etica scraping",
     q: "Nel web scraping, un comportamento corretto include:",
     opts: [
-      "Rispettare regole del sito, limiti e carico sul server",
+      "Raccogliere qualunque dato senza verifica",
       "Ignorare robots.txt e fare richieste aggressive",
-      "Raccogliere qualunque dato senza verifica"
+      "Rispettare regole del sito, limiti e carico sul server"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Lo scraping deve essere responsabile: controllare regole, ridurre carico, usare richieste trasparenti e considerare vincoli legali ed etici."
   },
   {

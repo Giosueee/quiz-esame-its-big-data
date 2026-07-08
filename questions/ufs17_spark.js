@@ -7,11 +7,11 @@ registerSubject("Spark", [
     id: "u17001", topic: "Spark",
     q: "Cos'è Apache Spark?",
     opts: [
-      "Un motore distribuito per l'elaborazione di grandi volumi di dati in memoria",
+      "Un protocollo di comunicazione tra servizi o dispositivi",
       "Un foglio di calcolo usato per dati tabellari manuali",
-      "Un protocollo di comunicazione tra servizi o dispositivi"
+      "Un motore distribuito per l'elaborazione di grandi volumi di dati in memoria"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Spark è un framework di calcolo distribuito per big data: elabora grandi dataset su cluster, sfruttando la memoria per essere veloce. Supporta batch, streaming, SQL e machine learning."
   },
   {
@@ -29,22 +29,22 @@ registerSubject("Spark", [
     id: "u17003", topic: "RDD",
     q: "Cos'è un RDD in Spark?",
     opts: [
-      "Una collezione distribuita e immutabile di dati (Resilient Distributed Dataset)",
       "Un motore SQL centralizzato che tiene le tabelle su un unico nodo",
+      "Una collezione distribuita e immutabile di dati (Resilient Distributed Dataset)",
       "Un formato di file colonnare compresso per salvare i risultati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'RDD è l'astrazione di base di Spark: una collezione partizionata su più nodi, immutabile e ricostruibile (resiliente) tramite la sua lineage in caso di guasto."
   },
   {
     id: "u17004", topic: "DataFrame",
     q: "Un DataFrame in Spark è:",
     opts: [
-      "Una collezione distribuita organizzata in colonne con schema, come una tabella",
+      "Una singola riga di dati restituita da un'azione come first()",
       "Un file di testo grezzo privo di schema e di tipi",
-      "Una singola riga di dati restituita da un'azione come first()"
+      "Una collezione distribuita organizzata in colonne con schema, come una tabella"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il DataFrame è un'astrazione di più alto livello dell'RDD: dati distribuiti con schema (colonne tipizzate). Permette ottimizzazioni (Catalyst) ed è l'API consigliata per la maggior parte dei casi."
   },
   {
@@ -62,22 +62,22 @@ registerSubject("Spark", [
     id: "u17006", topic: "Lazy evaluation",
     q: "La valutazione pigra (lazy evaluation) in Spark permette di:",
     opts: [
-      "Ottimizzare l'intero piano prima di eseguirlo",
       "Salvare automaticamente ogni risultato intermedio su disco",
+      "Ottimizzare l'intero piano prima di eseguirlo",
       "Ridurre la memoria scartando le partizioni non ancora usate"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Rimandando l'esecuzione fino a un'azione, Spark può analizzare e ottimizzare l'intera catena di trasformazioni (es. combinare filtri, ridurre i dati letti) invece di eseguire passo per passo."
   },
   {
     id: "u17007", topic: "Driver",
     q: "Il 'driver' in un'applicazione Spark:",
     opts: [
-      "Coordina l'esecuzione: crea il piano e distribuisce i task agli executor",
+      "È il disco rigido locale della macchina, non il processo driver",
       "Esegue direttamente tutti i dati sul driver invece di distribuirli",
-      "È il disco rigido locale della macchina, non il processo driver"
+      "Coordina l'esecuzione: crea il piano e distribuisce i task agli executor"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il driver ospita il programma principale, costruisce il DAG dei task e li assegna agli executor, raccogliendone i risultati. È il 'cervello' che coordina l'applicazione."
   },
   {
@@ -95,22 +95,22 @@ registerSubject("Spark", [
     id: "u17009", topic: "Partizioni",
     q: "Le partizioni di un dataset Spark determinano:",
     opts: [
-      "Come i dati sono suddivisi e quanto parallelismo è possibile",
       "Lo schema con i tipi delle colonne del dataset",
+      "Come i dati sono suddivisi e quanto parallelismo è possibile",
       "L'ordine con cui vengono restituite le righe"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Spark divide i dati in partizioni elaborate in parallelo dai task: il numero di partizioni influenza il grado di parallelismo e le prestazioni. Troppo poche limitano il parallelismo, troppe creano overhead."
   },
   {
     id: "u17010", topic: "Shuffle",
     q: "Uno 'shuffle' in Spark avviene quando:",
     opts: [
-      "I dati devono essere ridistribuiti tra le partizioni (es. groupBy, join)",
+      "Si converte un DataFrame in formato Parquet",
       "Si applica una semplice map su ogni partizione",
-      "Si converte un DataFrame in formato Parquet"
+      "I dati devono essere ridistribuiti tra le partizioni (es. groupBy, join)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Lo shuffle sposta dati tra i nodi per raggruppare valori correlati (groupBy, join, reduceByKey): è costoso (I/O e rete). Minimizzare gli shuffle è chiave per le performance."
   },
   {
@@ -128,22 +128,22 @@ registerSubject("Spark", [
     id: "u17012", topic: "Cache/persist",
     q: "Fare cache() o persist() di un DataFrame serve a:",
     opts: [
-      "Conservarlo in memoria per riutilizzarlo senza ricalcolarlo",
       "Eliminarlo dalla memoria per liberare spazio sugli executor",
+      "Conservarlo in memoria per riutilizzarlo senza ricalcolarlo",
       "Convertirlo automaticamente in una tabella SQL nel metastore"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Se un dataset viene riutilizzato più volte (es. in iterazioni), cache/persist lo mantiene in memoria (o disco) evitando di ricalcolare l'intera lineage a ogni azione, accelerando molto."
   },
   {
     id: "u17013", topic: "Lineage",
     q: "La 'lineage' di un RDD è:",
     opts: [
-      "La sequenza di trasformazioni che lo hanno generato, usata per ricostruirlo",
+      "Il piano fisico ottimizzato dal Catalyst",
       "Il numero di partizioni in cui è suddiviso",
-      "Il piano fisico ottimizzato dal Catalyst"
+      "La sequenza di trasformazioni che lo hanno generato, usata per ricostruirlo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La lineage registra come è stato costruito un RDD: se una partizione si perde per un guasto, Spark la ricalcola applicando di nuovo le trasformazioni, garantendo la resilienza (la 'R' di RDD)."
   },
   {
@@ -161,22 +161,22 @@ registerSubject("Spark", [
     id: "u17015", topic: "Cluster manager",
     q: "Il cluster manager (es. YARN, Kubernetes) in Spark:",
     opts: [
-      "Alloca le risorse (CPU, memoria) del cluster all'applicazione",
       "Scrive e compila il codice dell'applicazione Spark",
+      "Alloca le risorse (CPU, memoria) del cluster all'applicazione",
       "Riscrive il piano di esecuzione delle query per ottimizzarle"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il cluster manager gestisce le risorse dei nodi e le assegna alle applicazioni Spark (driver ed executor). Spark supporta Standalone, YARN, Mesos e Kubernetes."
   },
   {
     id: "u17016", topic: "Azione collect",
     q: "L'azione collect() su un DataFrame enorme è pericolosa perché:",
     opts: [
-      "Porta tutti i dati nel driver, rischiando di esaurirne la memoria",
+      "È lenta ma sicura perché elabora un blocco alla volta",
       "Distribuisce i dati sugli executor rallentando il cluster",
-      "È lenta ma sicura perché elabora un blocco alla volta"
+      "Porta tutti i dati nel driver, rischiando di esaurirne la memoria"
     ],
-    correct: [0],
+    correct: [2],
     exp: "collect() raccoglie l'intero dataset distribuito nella memoria del driver: con dati grandi può causare out-of-memory. Meglio usare show(), take(n) o scrivere il risultato su storage distribuito."
   },
   {
@@ -194,22 +194,22 @@ registerSubject("Spark", [
     id: "u17018", topic: "Immutabilità",
     q: "Gli RDD/DataFrame sono immutabili: una trasformazione:",
     opts: [
-      "Restituisce un nuovo dataset senza modificare l'originale",
       "Modifica sul posto il dataset esistente aggiornandone le righe",
+      "Restituisce un nuovo dataset senza modificare l'originale",
       "Blocca l'originale impedendone la lettura ad altri task"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'immutabilità semplifica il calcolo distribuito e la resilienza: ogni trasformazione crea un nuovo RDD/DataFrame derivato, senza effetti collaterali sull'originale."
   },
   {
     id: "u17019", topic: "Catalyst",
     q: "Il Catalyst optimizer di Spark serve a:",
     opts: [
-      "Ottimizzare automaticamente i piani di esecuzione delle query",
+      "Distribuire manualmente le partizioni tra i nodi del cluster",
       "Convertire i DataFrame in file Parquet compressi su disco",
-      "Distribuire manualmente le partizioni tra i nodi del cluster"
+      "Ottimizzare automaticamente i piani di esecuzione delle query"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Catalyst analizza e riscrive il piano logico/fisico delle query (predicate pushdown, riordino dei join, ecc.) per eseguirle in modo efficiente, senza che lo sviluppatore ottimizzi a mano."
   },
   {
@@ -227,22 +227,22 @@ registerSubject("Spark", [
     id: "u17021", topic: "Lakehouse",
     q: "Un'architettura 'lakehouse' combina:",
     opts: [
-      "La flessibilità del data lake con le funzionalità (transazioni, schema) del data warehouse",
       "Usa solo un warehouse tradizionale senza flessibilità del lake",
+      "La flessibilità del data lake con le funzionalità (transazioni, schema) del data warehouse",
       "Non combina né caratteristiche da lake né caratteristiche da warehouse"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il lakehouse unisce lo storage economico e flessibile del data lake con affidabilità, transazioni ACID e performance del warehouse (es. tramite Delta Lake), su un'unica piattaforma."
   },
   {
     id: "u17022", topic: "Delta Lake",
     q: "Delta Lake aggiunge ai data lake:",
     opts: [
-      "Transazioni ACID, versionamento e gestione dello schema",
+      "La cifratura obbligatoria di tutti i dati del data lake",
       "Un motore di visualizzazione per dashboard sui dati del lake",
-      "La cifratura obbligatoria di tutti i dati del data lake"
+      "Transazioni ACID, versionamento e gestione dello schema"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Delta Lake porta affidabilità sui data lake: transazioni ACID, time travel (versioni storiche), enforcement dello schema e upsert/merge, abilitando l'architettura lakehouse."
   },
   {
@@ -260,22 +260,22 @@ registerSubject("Spark", [
     id: "u17024", topic: "Ripartizionamento",
     q: "repartition() in Spark serve a:",
     opts: [
-      "Cambiare il numero di partizioni (con shuffle) per bilanciare il parallelismo",
       "Eliminare definitivamente alcune partizioni per ridurre i dati",
+      "Cambiare il numero di partizioni (con shuffle) per bilanciare il parallelismo",
       "Unire due DataFrame partizionati sulla stessa chiave"
     ],
-    correct: [0],
+    correct: [1],
     exp: "repartition ridistribuisce i dati in un numero definito di partizioni tramite shuffle, utile per bilanciare il carico. coalesce() riduce le partizioni evitando lo shuffle completo (più efficiente per diminuirle)."
   },
   {
     id: "u17025", topic: "Broadcast join",
     q: "Un 'broadcast join' in Spark è efficiente quando:",
     opts: [
-      "Una delle tabelle è piccola e può essere inviata a tutti i nodi, evitando lo shuffle",
+      "Le due tabelle sono già ordinate sulla stessa chiave",
       "Entrambe le tabelle sono molto grandi e partizionate",
-      "Le due tabelle sono già ordinate sulla stessa chiave"
+      "Una delle tabelle è piccola e può essere inviata a tutti i nodi, evitando lo shuffle"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Se una tabella è abbastanza piccola, Spark la copia (broadcast) su tutti gli executor, così il join avviene localmente senza shuffle della tabella grande: molto più veloce."
   },
   {
@@ -293,22 +293,22 @@ registerSubject("Spark", [
     id: "u17027", topic: "Fault tolerance",
     q: "La tolleranza ai guasti in Spark è ottenuta:",
     opts: [
-      "Ricalcolando le partizioni perse tramite la lineage",
       "Ignorando le partizioni perse e restituendo un risultato parziale",
+      "Ricalcolando le partizioni perse tramite la lineage",
       "Replicando ogni partizione su tutti i nodi prima di elaborare"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Se un executor si guasta e perde delle partizioni, Spark le ricostruisce riapplicando le trasformazioni registrate nella lineage, senza dover ripartire da zero."
   },
   {
     id: "u17028", topic: "Structured Streaming",
     q: "Spark Structured Streaming permette di:",
     opts: [
-      "Elaborare stream con la stessa API dei DataFrame (micro-batch/continuo)",
+      "Gestire database SQL transazionali invece di elaborare stream con DataFrame",
       "Solo elaborazione batch",
-      "Gestire database SQL transazionali invece di elaborare stream con DataFrame"
+      "Elaborare stream con la stessa API dei DataFrame (micro-batch/continuo)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Structured Streaming tratta uno stream come una tabella che cresce nel tempo, usando l'API DataFrame: lo stesso codice funziona su dati batch e in streaming, con garanzie di consegna."
   },
   {
@@ -326,22 +326,22 @@ registerSubject("Spark", [
     id: "u17030", topic: "Formato Parquet",
     q: "Perché Spark lavora bene con file Parquet?",
     opts: [
-      "Colonnare, compresso e con schema: legge solo le colonne necessarie",
       "Non conserva schema e tipi delle colonne nei metadati",
+      "Colonnare, compresso e con schema: legge solo le colonne necessarie",
       "È sistematicamente più lento del CSV anche nelle letture colonnari"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Parquet è colonnare e compresso: Spark legge solo le colonne richieste (column pruning) e salta i blocchi non necessari (predicate pushdown), velocizzando molto le query analitiche."
   },
   {
     id: "u17031", topic: "select DataFrame",
     q: "In PySpark, df.select('nome','eta') restituisce:",
     opts: [
-      "Un nuovo DataFrame con solo quelle colonne",
+      "Un singolo valore aggregato calcolato sulle due colonne",
       "Le righe che soddisfano una condizione sulle colonne indicate",
-      "Un singolo valore aggregato calcolato sulle due colonne"
+      "Un nuovo DataFrame con solo quelle colonne"
     ],
-    correct: [0],
+    correct: [2],
     exp: "select proietta le colonne indicate, restituendo un nuovo DataFrame (trasformazione lazy). Simile alla SELECT di SQL sulle colonne."
   },
   {
@@ -359,22 +359,22 @@ registerSubject("Spark", [
     id: "u17033", topic: "groupBy Spark",
     q: "df.groupBy('reparto').agg({'stipendio':'avg'}):",
     opts: [
-      "Aggrega calcolando la media dello stipendio per reparto (comporta shuffle)",
       "Filtra righe già presenti in base a una condizione booleana",
+      "Aggrega calcolando la media dello stipendio per reparto (comporta shuffle)",
       "Rimuove i gruppi creati invece di calcolare riepiloghi per gruppo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "groupBy + agg raggruppa e aggrega, richiedendo uno shuffle per portare insieme le righe dello stesso reparto. È l'equivalente distribuito del GROUP BY."
   },
   {
     id: "u17034", topic: "Azione count",
     q: "df.count() in Spark:",
     opts: [
-      "È un'azione che conta le righe ed esegue il piano",
+      "Produce una visualizzazione grafica dei dati invece di trasformarli",
       "Cancella le righe",
-      "Produce una visualizzazione grafica dei dati invece di trasformarli"
+      "È un'azione che conta le righe ed esegue il piano"
     ],
-    correct: [0],
+    correct: [2],
     exp: "count() è un'azione: forza l'esecuzione dell'intero piano di trasformazioni per restituire il numero di righe. Prima di un'azione, nulla viene realmente calcolato."
   },
   {
@@ -392,22 +392,22 @@ registerSubject("Spark", [
     id: "u17036", topic: "Ottimizzazione shuffle",
     q: "Per migliorare le performance in Spark conviene:",
     opts: [
-      "Ridurre gli shuffle, filtrare presto e usare formati colonnari",
       "Massimizzare gli shuffle",
+      "Ridurre gli shuffle, filtrare presto e usare formati colonnari",
       "Portare tutto nel driver"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le buone pratiche: filtrare/proiettare presto (meno dati), minimizzare le operazioni wide (shuffle), usare Parquet e broadcast join per le tabelle piccole, e mettere in cache i dati riutilizzati."
   },
   {
     id: "u17037", topic: "Scalabilità orizzontale",
     q: "Spark scala aggiungendo:",
     opts: [
-      "Più nodi/executor al cluster (scalabilità orizzontale)",
+      "Un database più grande",
       "Più memoria a un solo PC sempre",
-      "Un database più grande"
+      "Più nodi/executor al cluster (scalabilità orizzontale)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Spark è progettato per lo scale-out: aggiungendo nodi al cluster si aumenta la capacità di elaborare dati più grandi e più velocemente, distribuendo il lavoro tra più executor."
   },
   {
@@ -425,22 +425,22 @@ registerSubject("Spark", [
     id: "u17039", topic: "Spark vs pandas",
     q: "Quando preferire Spark a pandas?",
     opts: [
-      "Quando i dati sono troppo grandi per la memoria di una singola macchina",
       "Sempre, anche per dataset piccoli che stanno in memoria",
+      "Quando i dati sono troppo grandi per la memoria di una singola macchina",
       "Mai: pandas gestisce qualsiasi volume meglio di Spark"
     ],
-    correct: [0],
+    correct: [1],
     exp: "pandas lavora in memoria su una macchina: ottimo per dati che ci stanno. Spark distribuisce su un cluster: necessario per big data che eccedono la memoria di un singolo nodo."
   },
   {
     id: "u17040", topic: "withColumn",
     q: "df.withColumn('iva', df.prezzo * 0.22) in Spark:",
     opts: [
-      "Crea un nuovo DataFrame con una colonna calcolata aggiunta",
+      "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto",
       "Rimuove una colonna esistente invece di crearne una calcolata",
-      "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto"
+      "Crea un nuovo DataFrame con una colonna calcolata aggiunta"
     ],
-    correct: [0],
+    correct: [2],
     exp: "withColumn aggiunge (o sostituisce) una colonna calcolata, restituendo un nuovo DataFrame (immutabilità). È una trasformazione lazy."
   },
   {
@@ -458,22 +458,22 @@ registerSubject("Spark", [
     id: "u17042", topic: "Spark UI",
     q: "La Spark UI serve a:",
     opts: [
-      "Monitorare job, stage, task e diagnosticare colli di bottiglia",
       "Scrivere ed eseguire il codice dell'applicazione Spark",
+      "Monitorare job, stage, task e diagnosticare colli di bottiglia",
       "Creare dashboard di business intelligence per gli utenti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La Spark UI mostra l'esecuzione (job, stage, task, shuffle, tempi, memoria): è lo strumento chiave per capire dove un'applicazione è lenta e ottimizzarla."
   },
   {
     id: "u17043", topic: "Data skew",
     q: "Il 'data skew' in Spark si verifica quando:",
     opts: [
-      "I dati sono distribuiti in modo sbilanciato tra le partizioni, rallentando alcuni task",
+      "Il dataset non contiene alcuna riga da elaborare",
       "I dati sono distribuiti in modo perfettamente uniforme",
-      "Il dataset non contiene alcuna riga da elaborare"
+      "I dati sono distribuiti in modo sbilanciato tra le partizioni, rallentando alcuni task"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Con lo skew alcune partizioni (es. una chiave molto frequente) contengono molti più dati: i relativi task diventano il collo di bottiglia. Si mitiga con tecniche come il salting delle chiavi."
   },
   {
@@ -491,22 +491,22 @@ registerSubject("Spark", [
     id: "u17045", topic: "Persistenza livelli",
     q: "persist(StorageLevel) in Spark permette di scegliere:",
     opts: [
-      "Dove conservare i dati (memoria, disco) e con quale ridondanza",
       "L'ordine con cui le righe vengono scritte su disco",
+      "Dove conservare i dati (memoria, disco) e con quale ridondanza",
       "L'algoritmo di cifratura da applicare ai dati persistiti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "persist consente livelli di storage diversi (solo memoria, memoria+disco, serializzato, replicato): si sceglie in base a memoria disponibile e costo di ricalcolo. cache() usa il livello di default in memoria."
   },
   {
     id: "u17046", topic: "Job, stage, task",
     q: "La gerarchia di esecuzione in Spark è:",
     opts: [
-      "Un'azione avvia un job, diviso in stage (dallo shuffle), a loro volta in task",
+      "Il job coincide sempre con un unico stage e un solo task",
       "Un task avvia un job che viene poi suddiviso in più stage",
-      "Il job coincide sempre con un unico stage e un solo task"
+      "Un'azione avvia un job, diviso in stage (dallo shuffle), a loro volta in task"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Ogni azione genera un job; Spark lo divide in stage separati dai confini di shuffle; ogni stage in task (uno per partizione) eseguiti in parallelo sugli executor."
   },
   {
@@ -524,22 +524,22 @@ registerSubject("Spark", [
     id: "u17048", topic: "Distribuzione dati",
     q: "Perché in un cluster è meglio 'portare il calcolo ai dati'?",
     opts: [
-      "Spostare i dati è costoso; elaborarli dove risiedono riduce il traffico di rete",
       "Il costo è identico ovunque si esegua il calcolo",
+      "Spostare i dati è costoso; elaborarli dove risiedono riduce il traffico di rete",
       "In un cluster i dati non si spostano mai tra i nodi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La 'data locality' fa eseguire i task dove i dati risiedono, riducendo il costoso trasferimento di grandi volumi in rete. Spark cerca di rispettarla per efficienza."
   },
   {
     id: "u17049", topic: "Streaming vs batch Spark",
     q: "Con Structured Streaming, rispetto al batch, cambia principalmente:",
     opts: [
-      "La sorgente è continua e i risultati si aggiornano incrementalmente",
+      "Non si possono usare i DataFrame",
       "La sintassi è completamente diversa",
-      "Non si possono usare i DataFrame"
+      "La sorgente è continua e i risultati si aggiornano incrementalmente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Structured Streaming riusa l'API DataFrame: la differenza è che i dati arrivano in continuo e Spark aggiorna i risultati in modo incrementale, con checkpoint per la resilienza."
   },
   {
@@ -557,22 +557,22 @@ registerSubject("Spark", [
     id: "u17051", topic: "Azione show",
     q: "df.show(5) in Spark:",
     opts: [
-      "È un'azione che stampa le prime righe",
       "È una trasformazione pigra che non esegue nulla subito",
+      "È un'azione che stampa le prime righe",
       "Cancella le prime righe dal DataFrame"
     ],
-    correct: [0],
+    correct: [1],
     exp: "show() è un'azione che esegue quanto basta del piano per mostrare alcune righe: comodo per ispezionare i dati senza portarli tutti nel driver come farebbe collect()."
   },
   {
     id: "u17052", topic: "Join distribuito",
     q: "Un join tra due grandi DataFrame in Spark comporta di solito:",
     opts: [
-      "Uno shuffle per portare le chiavi corrispondenti sugli stessi nodi",
+      "La cancellazione delle righe prive di corrispondenza",
       "La copia di entrambe le tabelle su ogni singolo nodo",
-      "La cancellazione delle righe prive di corrispondenza"
+      "Uno shuffle per portare le chiavi corrispondenti sugli stessi nodi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Per unire per chiave, Spark deve ridistribuire (shuffle) le righe delle due tabelle così che le chiavi uguali finiscano insieme: operazione costosa, mitigabile con broadcast join se una tabella è piccola."
   },
   {
@@ -590,22 +590,22 @@ registerSubject("Spark", [
     id: "u17054", topic: "Immutabilità e ottimizzazione",
     q: "L'immutabilità dei DataFrame consente a Spark di:",
     opts: [
-      "Ottimizzare e parallelizzare in sicurezza, ricostruendo i dati in caso di guasto",
       "Modificare liberamente i dati sul posto durante l'elaborazione",
+      "Ottimizzare e parallelizzare in sicurezza, ricostruendo i dati in caso di guasto",
       "Eliminare lo schema per rendere i dati più flessibili"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Senza modifiche in loco, Spark può riordinare/ottimizzare le operazioni e ricalcolare partizioni perse senza effetti collaterali: base di ottimizzazione e resilienza nel calcolo distribuito."
   },
   {
     id: "u17055", topic: "Formato di storage",
     q: "Il partizionamento su disco (es. per data) di una tabella Spark aiuta a:",
     opts: [
-      "Leggere solo le partizioni rilevanti (partition pruning), velocizzando le query",
+      "Unire tutte le partizioni in un unico grande file",
       "Rallentare le letture obbligando a scorrere tutti i file",
-      "Unire tutte le partizioni in un unico grande file"
+      "Leggere solo le partizioni rilevanti (partition pruning), velocizzando le query"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Scrivendo i dati partizionati (es. per anno/mese), le query che filtrano su quelle colonne leggono solo le cartelle interessate (partition pruning), riducendo drasticamente l'I/O."
   },
   {
@@ -623,22 +623,22 @@ registerSubject("Spark", [
     id: "u17057", topic: "Broadcast variable",
     q: "Una variabile broadcast in Spark serve a:",
     opts: [
-      "Distribuire in modo efficiente un dato di sola lettura a tutti gli executor",
       "Aggregare contatori scritti dai task verso il driver",
+      "Distribuire in modo efficiente un dato di sola lettura a tutti gli executor",
       "Ripartizionare i dati per bilanciare il carico"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le broadcast variable inviano una copia di un dato (es. una tabella di lookup) a ogni executor una sola volta, evitando di trasmetterlo con ogni task. Efficiente per dati condivisi in sola lettura."
   },
   {
     id: "u17058", topic: "Spark e SQL",
     q: "Scrivere una query con l'API DataFrame o con Spark SQL:",
     opts: [
-      "Dà lo stesso piano ottimizzato: sono due modi per lo stesso motore",
+      "DataFrame è sempre più lento",
       "Danno risultati diversi",
-      "DataFrame è sempre più lento"
+      "Dà lo stesso piano ottimizzato: sono due modi per lo stesso motore"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Sia l'API DataFrame sia le query SQL passano per Catalyst e producono lo stesso piano fisico ottimizzato: si sceglie in base alle preferenze, le performance sono equivalenti."
   },
   {
@@ -656,22 +656,22 @@ registerSubject("Spark", [
     id: "u17060", topic: "Elaborazione iterativa",
     q: "Spark eccelle negli algoritmi iterativi (es. ML) perché:",
     opts: [
-      "Mantiene i dati in memoria tra le iterazioni evitando di rileggerli da disco",
       "Riscrive tutti i dati su disco a ogni iterazione",
+      "Mantiene i dati in memoria tra le iterazioni evitando di rileggerli da disco",
       "Non supporta algoritmi iterativi come quelli di machine learning"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con cache/persist i dati restano in memoria tra le iterazioni: gli algoritmi che ripassano più volte sugli stessi dati (gradient descent, PageRank) sono molto più veloci che con MapReduce."
   },
   {
     id: "u17061", topic: "Formati semi-strutturati",
     q: "Quale formato Spark legge nativamente?",
     opts: [
-      "Parquet",
+      "Eseguibili .exe di Windows",
       "Solo file cifrati",
-      "Eseguibili .exe di Windows"
+      "Parquet"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Spark legge nativamente CSV, JSON e Parquet (colonnare, molto efficiente). Non è limitato a file cifrati né legge eseguibili di sistema."
   },
   {
@@ -689,22 +689,22 @@ registerSubject("Spark", [
     id: "u17063", topic: "Cluster vs locale",
     q: "La modalità 'local' di Spark serve a:",
     opts: [
-      "Eseguire Spark su una singola macchina, utile per sviluppo e test",
       "Eseguire l'applicazione su migliaia di nodi in produzione",
+      "Eseguire Spark su una singola macchina, utile per sviluppo e test",
       "Sostituire il driver con un processo esterno al cluster"
     ],
-    correct: [0],
+    correct: [1],
     exp: "In local mode Spark gira su un solo computer (usando i core disponibili): comoda per sviluppare e testare il codice prima di lanciarlo su un vero cluster distribuito."
   },
   {
     id: "u17064", topic: "Ordinamento globale",
     q: "Un orderBy() su tutto il DataFrame:",
     opts: [
-      "Richiede uno shuffle per ordinare globalmente i dati distribuiti",
+      "Ordina solo le colonne senza toccare le righe",
       "È gratuito perché ogni partizione è già ordinata",
-      "Ordina solo le colonne senza toccare le righe"
+      "Richiede uno shuffle per ordinare globalmente i dati distribuiti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Ordinare globalmente dati partizionati richiede di ridistribuirli (shuffle) così che l'ordine valga tra tutte le partizioni: operazione costosa su grandi volumi."
   },
   {
@@ -722,22 +722,22 @@ registerSubject("Spark", [
     id: "u17066", topic: "Salvare tabella",
     q: "Scrivere un DataFrame come tabella gestita in un metastore permette di:",
     opts: [
-      "Interrogarla successivamente con SQL riutilizzandone lo schema",
       "Cancellarla automaticamente al termine dell'applicazione",
+      "Interrogarla successivamente con SQL riutilizzandone lo schema",
       "Solo stamparla a video senza poterla riutilizzare"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Salvando i dati come tabella (con schema registrato nel metastore, es. Hive/Unity Catalog), altre query e utenti possono interrogarla con SQL, come in un data warehouse."
   },
   {
     id: "u17067", topic: "Executor cores",
     q: "Il numero di core per executor influenza:",
     opts: [
-      "Quanti task un executor può eseguire in parallelo",
+      "Il numero massimo di righe restituibili al driver",
       "La quantità di dati che ogni partizione può contenere",
-      "Il numero massimo di righe restituibili al driver"
+      "Quanti task un executor può eseguire in parallelo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Ogni core di un executor esegue un task alla volta: più core = più task paralleli per executor. Bilanciare core, memoria e numero di executor è chiave per il tuning delle prestazioni."
   },
   {
@@ -755,22 +755,22 @@ registerSubject("Spark", [
     id: "u17069", topic: "Costo dello shuffle",
     q: "Lo shuffle è costoso principalmente perché:",
     opts: [
-      "Comporta scrittura su disco e trasferimento di dati in rete tra i nodi",
       "Non usa mai la rete perché avviene tutto in memoria",
+      "Comporta scrittura su disco e trasferimento di dati in rete tra i nodi",
       "È sempre gratuito quando i dati sono già partizionati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Lo shuffle scrive i dati intermedi su disco e li trasferisce tra executor via rete: I/O e rete sono le operazioni più lente, quindi ridurre gli shuffle è la principale leva di ottimizzazione."
   },
   {
     id: "u17070", topic: "Lettura distribuita",
     q: "Leggere un grande file diviso in blocchi permette a Spark di:",
     opts: [
-      "Elaborarne le parti in parallelo su più task",
+      "Ignorarne i blocchi che superano una certa dimensione",
       "Elaborarlo solo in serie su un unico task",
-      "Ignorarne i blocchi che superano una certa dimensione"
+      "Elaborarne le parti in parallelo su più task"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I file grandi (o suddivisi) diventano più partizioni, ciascuna elaborata da un task in parallelo: così Spark sfrutta l'intero cluster per leggere ed elaborare rapidamente."
   },
   {
@@ -788,22 +788,22 @@ registerSubject("Spark", [
     id: "u17072", topic: "Idempotenza scrittura",
     q: "Scrivere l'output con modalità 'overwrite' della partizione aiuta a:",
     opts: [
-      "Rieseguire il job senza duplicare i dati (idempotenza)",
       "Aggiungere sempre nuove righe accodandole alle esistenti",
+      "Rieseguire il job senza duplicare i dati (idempotenza)",
       "Duplicare i dati per aumentarne la ridondanza"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Sovrascrivere la partizione di destinazione (invece di accodare) rende la scrittura idempotente: rilanciare il job produce lo stesso risultato, senza doppioni, importante in produzione."
   },
   {
     id: "u17073", topic: "Spark ecosistema",
     q: "Quale componente fa parte dell'ecosistema Spark?",
     opts: [
-      "MLlib",
+      "Apache Tomcat",
       "Microsoft Excel",
-      "Apache Tomcat"
+      "MLlib"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'ecosistema Spark comprende Spark SQL, MLlib (machine learning) e Structured Streaming. Excel è un foglio di calcolo e Tomcat un application server Java: non fanno parte di Spark."
   },
   {
@@ -821,22 +821,22 @@ registerSubject("Spark", [
     id: "u17075", topic: "Big data varietà",
     q: "Spark gestisce dati strutturati e semi-strutturati, il che riflette la 'V' di:",
     opts: [
-      "Variety (varietà dei formati)",
       "Volume (la grande quantità di dati)",
+      "Variety (varietà dei formati)",
       "Velocity (la rapidità di arrivo dei dati)"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La capacità di leggere formati diversi (tabellari, JSON, testo) risponde alla Variety dei big data. Il Volume riguarda la quantità, la Velocity la rapidità di arrivo."
   },
   {
     id: "u17076", topic: "Checkpoint Spark",
     q: "Il checkpoint di un RDD/stream serve a:",
     opts: [
-      "Salvare i dati su storage affidabile troncando la lineage o per la resilienza dello streaming",
+      "Proteggere il traffico di rete tra nodi senza salvare stato elaborativo",
       "Cancellare i dati intermedi per liberare memoria",
-      "Proteggere il traffico di rete tra nodi senza salvare stato elaborativo"
+      "Salvare i dati su storage affidabile troncando la lineage o per la resilienza dello streaming"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il checkpoint materializza i dati su storage durevole: tronca lineage troppo lunghe (evitando ricalcoli costosi) e, nello streaming, permette di riprendere dopo un guasto."
   },
   {
@@ -854,22 +854,22 @@ registerSubject("Spark", [
     id: "u17078", topic: "Numero partizioni default",
     q: "Un numero di partizioni troppo basso in Spark:",
     opts: [
-      "Limita il parallelismo, sottoutilizzando il cluster",
       "Migliora sempre le prestazioni riducendo l'overhead",
+      "Limita il parallelismo, sottoutilizzando il cluster",
       "Aumenta automaticamente il numero di executor"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con poche partizioni, molti core restano inattivi e i task diventano enormi: il cluster è sottoutilizzato. Troppe partizioni creano invece overhead di scheduling: serve un buon equilibrio."
   },
   {
     id: "u17079", topic: "Time travel",
     q: "Il 'time travel' di Delta Lake permette di:",
     opts: [
-      "Interrogare versioni storiche precedenti di una tabella",
+      "Accelerare le query eliminando le versioni vecchie",
       "Prevedere i valori futuri dei dati della tabella",
-      "Accelerare le query eliminando le versioni vecchie"
+      "Interrogare versioni storiche precedenti di una tabella"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Grazie al versionamento, Delta Lake consente di leggere lo stato di una tabella a una versione o timestamp passato: utile per audit, debugging e ripristino di dati."
   },
   {
@@ -887,22 +887,22 @@ registerSubject("Spark", [
     id: "u17081", topic: "Cache e memoria",
     q: "Mettere in cache un DataFrame che si usa una sola volta:",
     opts: [
-      "Non conviene: spreca memoria senza beneficio",
       "È sempre utile perché la cache accelera qualsiasi lettura",
+      "Non conviene: spreca memoria senza beneficio",
       "Raddoppia la velocità grazie alla ridondanza in memoria"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La cache conviene quando un dataset viene riutilizzato più volte (evita ricalcoli). Per un uso singolo occupa memoria inutilmente, potendo anzi peggiorare le prestazioni."
   },
   {
     id: "u17082", topic: "Spark e cloud",
     q: "Spark nel cloud spesso legge/scrive dati su:",
     opts: [
-      "Object storage (es. S3, ADLS, GCS)",
+      "Nessuno storage: i dati restano solo nel driver",
       "Esclusivamente la RAM, senza storage persistente",
-      "Nessuno storage: i dati restano solo nel driver"
+      "Object storage (es. S3, ADLS, GCS)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nelle architetture cloud, Spark usa lo storage a oggetti (S3, Azure Data Lake, GCS) come layer dati economico e scalabile, spesso in formato Parquet/Delta per il lakehouse."
   },
   {
@@ -920,22 +920,22 @@ registerSubject("Spark", [
     id: "u17084", topic: "Sink streaming",
     q: "In Structured Streaming, l'output mode 'append' scrive:",
     opts: [
-      "Solo le nuove righe risultanti a ogni trigger",
       "Un risultato vuoto perché nessun record soddisfa la condizione",
+      "Solo le nuove righe risultanti a ogni trigger",
       "Solo gli errori"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'append mode aggiunge solo i nuovi risultati; 'complete' riscrive l'intero risultato aggregato; 'update' scrive le righe cambiate. Si sceglie in base al tipo di query e destinazione."
   },
   {
     id: "u17085", topic: "Governance lakehouse",
     q: "Un catalogo (es. Unity Catalog) in un lakehouse serve a:",
     opts: [
-      "Gestire in modo centralizzato metadati, permessi e governance sui dati",
+      "Comprimere i dati archiviati per ridurre lo spazio",
       "Sostituire il motore Spark nell'esecuzione dei job",
-      "Comprimere i dati archiviati per ridurre lo spazio"
+      "Gestire in modo centralizzato metadati, permessi e governance sui dati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il catalogo centralizza schema, tabelle, permessi e lineage nel lakehouse, fornendo governance e sicurezza uniformi su dati usati da Spark, SQL e strumenti di BI."
   },
   {
@@ -953,22 +953,22 @@ registerSubject("Spark", [
     id: "u17087", topic: "Dataframe da RDD",
     q: "Perché di solito si preferiscono i DataFrame agli RDD?",
     opts: [
-      "Offrono ottimizzazioni (Catalyst), API più semplice e migliori performance",
       "I DataFrame non sono distribuiti",
+      "Offrono ottimizzazioni (Catalyst), API più semplice e migliori performance",
       "Gli RDD hanno più funzioni SQL"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I DataFrame, avendo uno schema, sfruttano l'ottimizzatore Catalyst e Tungsten per performance superiori, con un'API più espressiva. Gli RDD si usano per casi a basso livello o non tabellari."
   },
   {
     id: "u17088", topic: "Numero di executor",
     q: "Aumentare gli executor (entro i limiti del cluster) di solito:",
     opts: [
-      "Aumenta il parallelismo e riduce i tempi, se il lavoro è partizionato bene",
+      "Riduce automaticamente il numero di partizioni",
       "Non ha alcun effetto sui tempi di esecuzione",
-      "Riduce automaticamente il numero di partizioni"
+      "Aumenta il parallelismo e riduce i tempi, se il lavoro è partizionato bene"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Più executor eseguono più task in parallelo, riducendo la durata, purché i dati siano partizionati adeguatamente e non ci siano colli di bottiglia (skew, shuffle) o risorse insufficienti."
   },
   {
@@ -986,22 +986,22 @@ registerSubject("Spark", [
     id: "u17090", topic: "Immutabilità e concorrenza",
     q: "L'immutabilità aiuta il calcolo parallelo perché:",
     opts: [
-      "Elimina i conflitti di scrittura concorrente sugli stessi dati",
       "Rende i dati modificabili da più task contemporaneamente",
+      "Elimina i conflitti di scrittura concorrente sugli stessi dati",
       "Riduce il parallelismo costringendo a un'esecuzione sequenziale"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Se i dati non cambiano, più task possono leggerli in parallelo senza rischio di interferenze o race condition: l'immutabilità semplifica e rende sicuro il calcolo distribuito."
   },
   {
     id: "u17091", topic: "Analisi su cluster",
     q: "L'obiettivo di Spark per l'analisi su larga scala è:",
     opts: [
-      "Elaborare volumi che una singola macchina non gestirebbe, in tempi ragionevoli",
+      "Sostituire completamente gli strumenti di visualizzazione dati",
       "Elaborare esclusivamente dataset molto piccoli e semplici",
-      "Sostituire completamente gli strumenti di visualizzazione dati"
+      "Elaborare volumi che una singola macchina non gestirebbe, in tempi ragionevoli"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Spark abilita analisi (SQL, ML, aggregazioni) su dataset enormi distribuendo il calcolo su un cluster, ottenendo risultati in tempi accettabili dove un singolo nodo fallirebbe."
   },
   {
@@ -1019,22 +1019,22 @@ registerSubject("Spark", [
     id: "u17093", topic: "Sorgenti dati",
     q: "Spark può connettersi a database esterni tramite:",
     opts: [
-      "Connettori JDBC e sorgenti dati integrate",
       "Nessun connettore",
+      "Connettori JDBC e sorgenti dati integrate",
       "Solo tramite email"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Spark legge/scrive da database relazionali via JDBC e da molte sorgenti (Kafka, storage cloud, NoSQL) tramite connettori, integrandosi in architetture dati eterogenee."
   },
   {
     id: "u17094", topic: "Wide transformation esempi",
     q: "Quale di queste è una trasformazione 'wide' (con shuffle)?",
     opts: [
-      "groupByKey",
+      "filter",
       "map",
-      "filter"
+      "groupByKey"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le trasformazioni 'wide' ridistribuiscono i dati tra le partizioni (shuffle): groupByKey, join, reduceByKey. map e filter sono 'narrow': agiscono su ogni partizione senza shuffle."
   },
   {
@@ -1052,22 +1052,22 @@ registerSubject("Spark", [
     id: "u17096", topic: "Batch e streaming unificati",
     q: "Un vantaggio di Spark è offrire un'API unificata per:",
     opts: [
-      "Batch, streaming, SQL e machine learning",
       "Soltanto l'elaborazione batch di grandi dataset",
+      "Batch, streaming, SQL e machine learning",
       "Soltanto la gestione della sicurezza dei dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Spark unifica sotto un unico motore e API l'elaborazione batch, lo streaming (Structured Streaming), le query SQL e il ML (MLlib): si riutilizzano competenze e codice tra i vari carichi."
   },
   {
     id: "u17097", topic: "Costo di collect vs write",
     q: "Per salvare un grande risultato è meglio:",
     opts: [
-      "Scriverlo su storage distribuito (write) invece di collect nel driver",
+      "Raccoglierlo in un'unica partizione e tenerlo solo in memoria",
       "Fare collect di tutti i dati nel driver e poi salvarli da lì",
-      "Raccoglierlo in un'unica partizione e tenerlo solo in memoria"
+      "Scriverlo su storage distribuito (write) invece di collect nel driver"
     ],
-    correct: [0],
+    correct: [2],
     exp: "df.write scrive in parallelo dagli executor allo storage, scalabile per grandi output. collect porterebbe tutto nel driver, rischiando out-of-memory: da evitare su grandi volumi."
   },
   {
@@ -1085,22 +1085,22 @@ registerSubject("Spark", [
     id: "u17099", topic: "Ottimizzazione lettura",
     q: "Selezionare presto solo le colonne necessarie (column pruning) aiuta perché:",
     opts: [
-      "Riduce i dati letti ed elaborati, migliorando le performance",
       "Aumenta i dati letti perché carica anche le colonne inutili",
+      "Riduce i dati letti ed elaborati, migliorando le performance",
       "Non ha alcun effetto perché Spark legge sempre tutte le colonne"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Leggere solo le colonne che servono (specie da formati colonnari come Parquet) riduce l'I/O e la memoria usata: Spark lo fa automaticamente quando il piano lo permette (Catalyst)."
   },
   {
     id: "u17100", topic: "Flusso Spark",
     q: "Un flusso tipico di un job Spark è:",
     opts: [
-      "Leggere i dati → trasformare (lazy) → azione che esegue il piano ottimizzato → salvare",
+      "Salvare → leggere i dati → trasformare (lazy) → azione che esegue il piano ottimizzato",
       "Trasformare (lazy) → leggere i dati → azione che esegue il piano ottimizzato → salvare",
-      "Salvare → leggere i dati → trasformare (lazy) → azione che esegue il piano ottimizzato"
+      "Leggere i dati → trasformare (lazy) → azione che esegue il piano ottimizzato → salvare"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Si crea la SparkSession, si leggono i dati in DataFrame, si concatenano trasformazioni lazy (filtri, join, aggregazioni) e infine un'azione (write/count) fa eseguire il piano ottimizzato sul cluster."
   },
   // === AGGIUNGI NUOVE DOMANDE SPARK QUI ===

@@ -18,22 +18,22 @@ registerSubject("Pandas", [
     id: "u14002", topic: "Strutture dati",
     q: "Cos'è un DataFrame in pandas?",
     opts: [
-      "Una tabella 2D con righe e colonne etichettate",
       "Un array unidimensionale di valori (una sola colonna)",
+      "Una tabella 2D con righe e colonne etichettate",
       "Un dizionario semplice di coppie chiave-valore"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il DataFrame è la struttura tabellare 2D di pandas: colonne (Series) di tipi eventualmente diversi, con indice di riga. È il cuore dell'analisi dati in Python."
   },
   {
     id: "u14003", topic: "Import",
     q: "Quale funzione legge un CSV in un DataFrame?",
     opts: [
-      "pd.read_csv()",
+      "pd.open()",
       "pd.import_csv()",
-      "pd.open()"
+      "pd.read_csv()"
     ],
-    correct: [0],
+    correct: [2],
     exp: "pd.read_csv('file.csv') importa un CSV in un DataFrame, con molti argomenti (sep, header, index_col, dtype, parse_dates)."
   },
   {
@@ -51,22 +51,22 @@ registerSubject("Pandas", [
     id: "u14005", topic: "Esplorazione",
     q: "df.info() fornisce:",
     opts: [
-      "Tipi delle colonne, valori non nulli e uso di memoria",
       "La media e la deviazione standard di ogni colonna",
+      "Tipi delle colonne, valori non nulli e uso di memoria",
       "Il numero totale di righe e nient'altro"
     ],
-    correct: [0],
+    correct: [1],
     exp: "df.info() riepiloga struttura: numero di righe, colonne, dtype, conteggio dei non-null e memoria. Ottima per individuare valori mancanti e tipi errati."
   },
   {
     id: "u14006", topic: "Statistiche",
     q: "df.describe() restituisce:",
     opts: [
-      "Statistiche descrittive delle colonne numeriche",
+      "Un istogramma per mostrare la distribuzione dei valori numerici",
       "Il tipo di ogni colonna",
-      "Un istogramma per mostrare la distribuzione dei valori numerici"
+      "Statistiche descrittive delle colonne numeriche"
     ],
-    correct: [0],
+    correct: [2],
     exp: "df.describe() dà conteggio, media, deviazione standard, min, quartili e max per le colonne numeriche. Con include='all' considera anche quelle categoriche."
   },
   {
@@ -84,22 +84,22 @@ registerSubject("Pandas", [
     id: "u14008", topic: "loc vs iloc",
     q: "Qual è la differenza tra .loc e .iloc?",
     opts: [
-      ".loc usa etichette, .iloc usa posizioni intere",
       "Hanno comportamento e risultato identici nello stesso contesto operativo",
+      ".loc usa etichette, .iloc usa posizioni intere",
       ".iloc usa etichette e .loc posizioni, invertendo i due metodi"
     ],
-    correct: [0],
+    correct: [1],
     exp: ".loc seleziona per ETICHETTA (nome indice/colonna), .iloc per POSIZIONE numerica (0,1,2...). Es: df.loc[0,'eta'] vs df.iloc[0,2]."
   },
   {
     id: "u14009", topic: "Filtri",
     q: "df[df['eta'] > 30] restituisce:",
     opts: [
-      "Le righe con età maggiore di 30",
+      "Il numero di righe con età maggiore di 30",
       "Le prime 30 righe del DataFrame",
-      "Il numero di righe con età maggiore di 30"
+      "Le righe con età maggiore di 30"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il boolean indexing filtra le righe che soddisfano la condizione: df['eta']>30 crea una maschera booleana usata per selezionare le righe corrispondenti."
   },
   {
@@ -117,22 +117,22 @@ registerSubject("Pandas", [
     id: "u14011", topic: "groupby",
     q: "df.groupby('categoria')['prezzo'].mean() calcola:",
     opts: [
-      "La media del prezzo per ciascuna categoria",
       "La media calcolata su tutte le righe senza distinguere gruppi",
+      "La media del prezzo per ciascuna categoria",
       "La somma complessiva dei valori senza separare per categoria"
     ],
-    correct: [0],
+    correct: [1],
     exp: "groupby raggruppa per la colonna indicata e applica l'aggregazione (qui mean) alla colonna scelta: equivale al GROUP BY di SQL."
   },
   {
     id: "u14012", topic: "Aggregazioni",
     q: "df.groupby('reparto').agg({'stipendio':'mean','id':'count'}):",
     opts: [
-      "Applica aggregazioni diverse a colonne diverse per gruppo",
+      "Ordina le righe secondo una chiave, senza filtrare o aggregare",
       "Rimuove i gruppi creati invece di calcolare riepiloghi per gruppo",
-      "Ordina le righe secondo una chiave, senza filtrare o aggregare"
+      "Applica aggregazioni diverse a colonne diverse per gruppo"
     ],
-    correct: [0],
+    correct: [2],
     exp: ".agg() con un dizionario applica funzioni diverse a colonne diverse: qui media dello stipendio e conteggio degli id per ciascun reparto."
   },
   {
@@ -150,22 +150,22 @@ registerSubject("Pandas", [
     id: "u14014", topic: "Concat",
     q: "pd.concat([df1, df2]) di default:",
     opts: [
-      "Impila i DataFrame uno sotto l'altro (per riga)",
       "Li affianca per colonna allineandoli sull'indice",
+      "Impila i DataFrame uno sotto l'altro (per riga)",
       "Restituisce solo le righe presenti in entrambi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "concat unisce lungo le righe (axis=0) di default, impilando i DataFrame. Con axis=1 li affianca per colonna. merge invece unisce su chiavi."
   },
   {
     id: "u14015", topic: "Valori mancanti",
     q: "df.isna() restituisce:",
     opts: [
-      "Una maschera booleana con True dove i valori sono mancanti",
+      "Le righe che contengono almeno un valore mancante",
       "Il numero totale di valori mancanti nel DataFrame",
-      "Le righe che contengono almeno un valore mancante"
+      "Una maschera booleana con True dove i valori sono mancanti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "df.isna() (o isnull()) dà True nelle celle con NaN. df.isna().sum() conta i mancanti per colonna. Fondamentale nel data cleaning."
   },
   {
@@ -183,22 +183,22 @@ registerSubject("Pandas", [
     id: "u14017", topic: "Valori mancanti",
     q: "df.dropna() di default:",
     opts: [
-      "Elimina le righe che contengono almeno un valore mancante",
       "Elimina le colonne sempre",
+      "Elimina le righe che contengono almeno un valore mancante",
       "Lascia invariati i valori mancanti senza rimuovere righe o colonne"
     ],
-    correct: [0],
+    correct: [1],
     exp: "dropna rimuove le righe con almeno un NaN (axis=0). Con axis=1 rimuove le colonne. Attenzione: può ridurre molto i dati."
   },
   {
     id: "u14018", topic: "Ordinamento",
     q: "df.sort_values('prezzo', ascending=False):",
     opts: [
-      "Ordina le righe per prezzo in ordine decrescente",
+      "Filtra i prezzi secondo una soglia invece di ordinare il risultato",
       "Ordina per indice",
-      "Filtra i prezzi secondo una soglia invece di ordinare il risultato"
+      "Ordina le righe per prezzo in ordine decrescente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "sort_values ordina per i valori di una colonna. ascending=False dà l'ordine decrescente. sort_index() ordina invece per l'indice."
   },
   {
@@ -216,22 +216,22 @@ registerSubject("Pandas", [
     id: "u14020", topic: "Nuove colonne",
     q: "df['iva'] = df['prezzo'] * 0.22 in pandas:",
     opts: [
-      "Crea una nuova colonna calcolata dalle altre (operazione vettorializzata)",
       "Rimuove una colonna esistente invece di crearne una calcolata",
+      "Crea una nuova colonna calcolata dalle altre (operazione vettorializzata)",
       "Ordina il DataFrame per indice o per valore, lasciando invariata la struttura logica"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Assegnare a una nuova etichetta crea o sovrascrive una colonna. Le operazioni sono vettorializzate: si applicano a tutta la colonna senza cicli espliciti."
   },
   {
     id: "u14021", topic: "apply",
     q: "df['nome'].apply(len) applica:",
     opts: [
-      "La funzione len a ciascun elemento della colonna",
+      "Un filtro che tiene solo i nomi lunghi",
       "La somma delle lunghezze di tutti i nomi",
-      "Un filtro che tiene solo i nomi lunghi"
+      "La funzione len a ciascun elemento della colonna"
     ],
-    correct: [0],
+    correct: [2],
     exp: "apply esegue una funzione su ogni elemento (o riga/colonna). Utile per trasformazioni personalizzate quando non basta un'operazione vettorializzata pronta."
   },
   {
@@ -249,22 +249,22 @@ registerSubject("Pandas", [
     id: "u14023", topic: "Date",
     q: "pd.to_datetime(df['data']) serve a:",
     opts: [
-      "Convertire una colonna in tipo datetime",
       "Ordinare il DataFrame in base alla data",
+      "Convertire una colonna in tipo datetime",
       "Estrarre l'anno da una colonna di date"
     ],
-    correct: [0],
+    correct: [1],
     exp: "to_datetime converte stringhe/numeri in datetime, abilitando operazioni temporali (.dt.year, .dt.month, differenze tra date, resampling)."
   },
   {
     id: "u14024", topic: "Datetime accessor",
     q: "df['data'].dt.year estrae:",
     opts: [
-      "L'anno da una colonna datetime",
+      "La data formattata come stringa",
       "Il giorno della settimana da una data",
-      "La data formattata come stringa"
+      "L'anno da una colonna datetime"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'accessor .dt espone componenti temporali: .year, .month, .day, .dayofweek, .hour. Utile per creare feature di calendario da una colonna datetime."
   },
   {
@@ -282,22 +282,22 @@ registerSubject("Pandas", [
     id: "u14026", topic: "Rinominare",
     q: "df.rename(columns={'old':'new'}):",
     opts: [
-      "Rinomina le colonne indicate",
       "Ordina le righe",
+      "Rinomina le colonne indicate",
       "Elimina le colonne"
     ],
-    correct: [0],
+    correct: [1],
     exp: "rename cambia i nomi di colonne (o indici) senza toccare i dati. Per applicarlo sul posto si usa inplace=True o si riassegna il risultato."
   },
   {
     id: "u14027", topic: "Drop",
     q: "df.drop('colonna', axis=1):",
     opts: [
-      "Rimuove la colonna indicata",
+      "Rinomina la colonna",
       "Rimuove una riga per default",
-      "Rinomina la colonna"
+      "Rimuove la colonna indicata"
     ],
-    correct: [0],
+    correct: [2],
     exp: "drop rimuove etichette: axis=1 per le colonne, axis=0 (default) per le righe. Restituisce un nuovo DataFrame (o inplace=True)."
   },
   {
@@ -315,22 +315,22 @@ registerSubject("Pandas", [
     id: "u14029", topic: "set_index",
     q: "df.set_index('id') serve a:",
     opts: [
-      "Usare la colonna 'id' come indice di riga",
       "Ordinare le righe in base alla colonna 'id'",
+      "Usare la colonna 'id' come indice di riga",
       "Contare i valori distinti nella colonna 'id'"
     ],
-    correct: [0],
+    correct: [1],
     exp: "set_index promuove una colonna a indice del DataFrame, utile per allineamenti e ricerche per etichetta con .loc."
   },
   {
     id: "u14030", topic: "Tipi",
     q: "df.dtypes restituisce:",
     opts: [
-      "Il tipo di dato di ciascuna colonna",
+      "La media di ogni colonna numerica",
       "Il numero di righe del DataFrame",
-      "La media di ogni colonna numerica"
+      "Il tipo di dato di ciascuna colonna"
     ],
-    correct: [0],
+    correct: [2],
     exp: "df.dtypes mostra il dtype di ogni colonna (int64, float64, object per stringhe, datetime64, category). Controllarli evita errori (es. numeri letti come testo)."
   },
   {
@@ -348,22 +348,22 @@ registerSubject("Pandas", [
     id: "u14032", topic: "Duplicati",
     q: "df.drop_duplicates() rimuove:",
     opts: [
-      "Le righe duplicate",
       "Le colonne duplicate del DataFrame",
+      "Le righe duplicate",
       "Le righe che non rispettano lo schema"
     ],
-    correct: [0],
+    correct: [1],
     exp: "drop_duplicates elimina le righe identiche (o duplicate su un sottoinsieme di colonne con subset=). df.duplicated() individua invece i duplicati."
   },
   {
     id: "u14033", topic: "Dimensioni",
     q: "df.shape restituisce:",
     opts: [
-      "Una tupla (numero di righe, numero di colonne)",
+      "Restituisce solo il numero di colonne, non la tupla completa",
       "Restituisce solo il numero di righe, non la tupla completa",
-      "Restituisce solo il numero di colonne, non la tupla completa"
+      "Una tupla (numero di righe, numero di colonne)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "df.shape dà (righe, colonne). len(df) dà il numero di righe. È tra i primi controlli sulle dimensioni di un dataset."
   },
   {
@@ -381,22 +381,22 @@ registerSubject("Pandas", [
     id: "u14035", topic: "map",
     q: "df['genere'].map({'M':'Maschio','F':'Femmina'}):",
     opts: [
-      "Sostituisce i valori secondo il dizionario di mappatura",
       "Ordina i valori in ordine crescente o decrescente senza trasformarli",
+      "Sostituisce i valori secondo il dizionario di mappatura",
       "Conta i valori presenti senza modificare granularità o struttura"
     ],
-    correct: [0],
+    correct: [1],
     exp: "map su una Series applica una funzione o un dizionario di sostituzione elemento per elemento: comodo per ricodificare valori categorici."
   },
   {
     id: "u14036", topic: "Missing: conteggio",
     q: "df.isna().sum() restituisce:",
     opts: [
-      "Il numero di valori mancanti per ciascuna colonna",
+      "La media di ciascuna colonna esclusi i NaN",
       "Le righe che contengono valori mancanti",
-      "La media di ciascuna colonna esclusi i NaN"
+      "Il numero di valori mancanti per ciascuna colonna"
     ],
-    correct: [0],
+    correct: [2],
     exp: "isna() dà la maschera booleana; sum() la somma per colonna (True=1), ottenendo il conteggio dei mancanti per colonna. Passo chiave nell'esplorazione."
   },
   {
@@ -414,22 +414,22 @@ registerSubject("Pandas", [
     id: "u14038", topic: "query",
     q: "df.query('eta > 30 and citta == \"Milano\"'):",
     opts: [
-      "Filtra le righe usando un'espressione testuale",
       "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto",
+      "Filtra le righe usando un'espressione testuale",
       "Rimuove colonne dal dataset invece di combinare o filtrare i record"
     ],
-    correct: [0],
+    correct: [1],
     exp: "query filtra con una stringa leggibile, alternativa al boolean indexing. Comoda per condizioni multiple senza ripetere il nome del DataFrame."
   },
   {
     id: "u14039", topic: "Statistiche colonna",
     q: "df['prezzo'].mean() calcola:",
     opts: [
-      "La media della colonna 'prezzo'",
+      "Il prezzo massimo della colonna",
       "Il numero di righe con un prezzo",
-      "Il prezzo massimo della colonna"
+      "La media della colonna 'prezzo'"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I metodi statistici (mean, sum, min, max, std, median) si applicano direttamente a una Series o a un DataFrame (per colonna). Ignorano i NaN di default."
   },
   {
@@ -447,22 +447,22 @@ registerSubject("Pandas", [
     id: "u14041", topic: "nunique",
     q: "df['citta'].nunique() restituisce:",
     opts: [
-      "Il numero di valori distinti",
       "L'elenco di tutti i valori della colonna",
+      "Il numero di valori distinti",
       "La media dei valori numerici"
     ],
-    correct: [0],
+    correct: [1],
     exp: "nunique conta i valori unici (escludendo i NaN). unique() restituisce invece l'array dei valori distinti."
   },
   {
     id: "u14042", topic: "Selezione colonne numeriche",
     q: "df.select_dtypes(include='number') restituisce:",
     opts: [
-      "Solo le colonne numeriche",
+      "Tutte le colonne",
       "Solo quelle testuali",
-      "Tutte le colonne"
+      "Solo le colonne numeriche"
     ],
-    correct: [0],
+    correct: [2],
     exp: "select_dtypes filtra le colonne per tipo: comodo per applicare operazioni solo alle numeriche o solo alle categoriche."
   },
   {
@@ -480,22 +480,22 @@ registerSubject("Pandas", [
     id: "u14044", topic: "loc assegnazione",
     q: "df.loc[df['eta']<18, 'minorenne'] = True:",
     opts: [
-      "Imposta True nella colonna 'minorenne' solo per le righe selezionate",
       "Rimuove righe dal dataset invece di trasformare o calcolare valori",
+      "Imposta True nella colonna 'minorenne' solo per le righe selezionate",
       "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto"
     ],
-    correct: [0],
+    correct: [1],
     exp: ".loc permette di assegnare valori a un sottoinsieme di righe/colonne in modo sicuro (evita il 'SettingWithCopyWarning' del chained indexing)."
   },
   {
     id: "u14045", topic: "crosstab",
     q: "pd.crosstab(df['genere'], df['acquisto']) crea:",
     opts: [
-      "Una tabella di contingenza tra le due variabili",
+      "La media di 'acquisto' per ciascun genere",
       "Un grafico a torta delle due variabili",
-      "La media di 'acquisto' per ciascun genere"
+      "Una tabella di contingenza tra le due variabili"
     ],
-    correct: [0],
+    correct: [2],
     exp: "crosstab conta le frequenze incrociate tra due (o più) variabili categoriche, producendo una tabella di contingenza."
   },
   {
@@ -513,22 +513,22 @@ registerSubject("Pandas", [
     id: "u14047", topic: "Filtri isin",
     q: "df[df['citta'].isin(['Milano','Roma'])]:",
     opts: [
-      "Tiene le righe la cui città è tra quelle elencate",
       "Ordina la colonna città senza filtrare i valori richiesti",
+      "Tiene le righe la cui città è tra quelle elencate",
       "Conta le città presenti invece di filtrare quelle richieste"
     ],
-    correct: [0],
+    correct: [1],
     exp: "isin verifica l'appartenenza a una lista di valori: pratico per filtrare più categorie insieme, come l'operatore IN di SQL."
   },
   {
     id: "u14048", topic: "NaN nei calcoli",
     q: "df['x'].sum() con dei NaN nella colonna:",
     opts: [
-      "Ignora i NaN e somma i valori presenti",
+      "Genera un errore di esecuzione invece di produrre un risultato valido",
       "Restituisce NaN",
-      "Genera un errore di esecuzione invece di produrre un risultato valido"
+      "Ignora i NaN e somma i valori presenti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I metodi di aggregazione di pandas (sum, mean, ...) escludono i NaN per default (skipna=True). Attenzione: comportamento diverso da NumPy grezzo."
   },
   {
@@ -546,22 +546,22 @@ registerSubject("Pandas", [
     id: "u14050", topic: "Cumulate",
     q: "df['x'].cumsum() restituisce:",
     opts: [
-      "La somma cumulata progressiva",
       "La somma totale della colonna",
+      "La somma cumulata progressiva",
       "La media progressiva dei valori"
     ],
-    correct: [0],
+    correct: [1],
     exp: "cumsum dà la somma progressiva riga per riga; esistono anche cumprod, cummax, cummin. Utili per totali progressivi."
   },
   {
     id: "u14051", topic: "Categoria",
     q: "Convertire una colonna a dtype 'category' serve a:",
     opts: [
-      "Risparmiare memoria e trattarla come categorica",
+      "Rimuovere i valori mancanti dalla colonna",
       "Ordinare la colonna in modo alfabetico",
-      "Rimuovere i valori mancanti dalla colonna"
+      "Risparmiare memoria e trattarla come categorica"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il dtype category memorizza le categorie una sola volta con codici interni: riduce la memoria e velocizza raggruppamenti su colonne con pochi valori distinti."
   },
   {
@@ -579,22 +579,22 @@ registerSubject("Pandas", [
     id: "u14053", topic: "Colonne",
     q: "df.columns restituisce:",
     opts: [
-      "L'elenco (Index) dei nomi delle colonne",
       "L'elenco dei valori della prima riga",
+      "L'elenco (Index) dei nomi delle colonne",
       "Il numero di colonne del DataFrame"
     ],
-    correct: [0],
+    correct: [1],
     exp: "df.columns è l'oggetto Index con i nomi delle colonne. Si può convertire in lista con list(df.columns) o rinominare riassegnandolo."
   },
   {
     id: "u14054", topic: "Ordinamento multiplo",
     q: "df.sort_values(['reparto','stipendio']):",
     opts: [
-      "Ordina prima per reparto, poi per stipendio dentro ciascun reparto",
+      "Filtra righe già presenti in base a una condizione booleana",
       "Ordina solo per stipendio",
-      "Filtra righe già presenti in base a una condizione booleana"
+      "Ordina prima per reparto, poi per stipendio dentro ciascun reparto"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Passando una lista di colonne, sort_values ordina gerarchicamente: prima per la prima colonna, poi per la seconda a parità della prima."
   },
   {
@@ -612,22 +612,22 @@ registerSubject("Pandas", [
     id: "u14056", topic: "Merge how",
     q: "In pd.merge, how='left' mantiene:",
     opts: [
-      "Tutte le righe del DataFrame di sinistra",
       "Tutte le righe di destra",
+      "Tutte le righe del DataFrame di sinistra",
       "Un risultato vuoto perché nessun record soddisfa la condizione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "how='left' conserva tutte le righe del DataFrame sinistro, riempiendo con NaN dove manca la corrispondenza a destra, come la LEFT JOIN di SQL."
   },
   {
     id: "u14057", topic: "Aggregazione con reset",
     q: "Dopo un groupby().sum(), la colonna di raggruppamento diventa:",
     opts: [
-      "L'indice del risultato (si usa reset_index() per riportarla in colonna)",
+      "Una colonna che viene automaticamente cancellata",
       "Una normale colonna come tutte le altre",
-      "Una colonna che viene automaticamente cancellata"
+      "L'indice del risultato (si usa reset_index() per riportarla in colonna)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il risultato di groupby ha come indice la chiave di raggruppamento; reset_index() la riporta come colonna normale, comodo per successive elaborazioni o merge."
   },
   {
@@ -645,22 +645,22 @@ registerSubject("Pandas", [
     id: "u14059", topic: "where",
     q: "df['x'].where(df['x']>0, 0) restituisce:",
     opts: [
-      "I valori dove la condizione è vera, altrimenti 0",
       "Un errore perché where non accetta un valore",
+      "I valori dove la condizione è vera, altrimenti 0",
       "La media dei valori positivi della colonna"
     ],
-    correct: [0],
+    correct: [1],
     exp: "where mantiene i valori dove la condizione è True e sostituisce gli altri (default NaN, qui 0). np.where offre una logica if/else vettorializzata simile."
   },
   {
     id: "u14060", topic: "Testo: contains",
     q: "df[df['nome'].str.contains('an')]:",
     opts: [
-      "Tiene le righe il cui nome contiene 'an'",
+      "Rimuove la colonna",
       "Ordina i nomi alfabeticamente senza cercare pattern nei dati",
-      "Rimuove la colonna"
+      "Tiene le righe il cui nome contiene 'an'"
     ],
-    correct: [0],
+    correct: [2],
     exp: "str.contains(pattern) restituisce True dove la stringa contiene il pattern (anche regex): usato come maschera per filtrare righe testuali."
   },
   {
@@ -678,22 +678,22 @@ registerSubject("Pandas", [
     id: "u14062", topic: "NaN riempimento avanti",
     q: "df.fillna(method='ffill') riempie i NaN con:",
     opts: [
-      "L'ultimo valore valido precedente (forward fill)",
       "Il valore zero in tutte le celle mancanti",
+      "L'ultimo valore valido precedente (forward fill)",
       "Il primo valore valido successivo (backward fill)"
     ],
-    correct: [0],
+    correct: [1],
     exp: "ffill (forward fill) propaga in avanti l'ultimo valore valido; bfill fa l'opposto (all'indietro). Comuni con serie temporali ordinate."
   },
   {
     id: "u14063", topic: "Numero righe uniche",
     q: "len(df) restituisce:",
     opts: [
-      "Il numero di righe del DataFrame",
+      "Le prime righe del DataFrame",
       "Il numero di colonne del DataFrame",
-      "Le prime righe del DataFrame"
+      "Il numero di righe del DataFrame"
     ],
-    correct: [0],
+    correct: [2],
     exp: "len(df) conta le righe. Per le colonne si usa len(df.columns) o df.shape[1]; df.shape dà entrambe."
   },
   {
@@ -711,22 +711,22 @@ registerSubject("Pandas", [
     id: "u14065", topic: "Media per gruppo su tutte",
     q: "df.groupby('reparto').mean(numeric_only=True):",
     opts: [
-      "Calcola la media di tutte le colonne numeriche per reparto",
       "Solo la prima colonna",
+      "Calcola la media di tutte le colonne numeriche per reparto",
       "Elimina la struttura dei gruppi senza produrre un risultato per ogni gruppo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Senza specificare una colonna, l'aggregazione si applica a tutte le colonne numeriche del gruppo. numeric_only=True evita errori con colonne non numeriche."
   },
   {
     id: "u14066", topic: "Applica dizionario replace",
     q: "df.replace({'-':None}) serve a:",
     opts: [
-      "Sostituire valori specifici in tutto il DataFrame",
+      "Ordinare le righe in base a quel valore",
       "Filtrare le righe che contengono quel valore",
-      "Ordinare le righe in base a quel valore"
+      "Sostituire valori specifici in tutto il DataFrame"
     ],
-    correct: [0],
+    correct: [2],
     exp: "replace sostituisce valori ovunque compaiano (utile per uniformare 'placeholder' come '-', 'N/A' in veri NaN). Accetta valori singoli, liste o dizionari."
   },
   {
@@ -744,22 +744,22 @@ registerSubject("Pandas", [
     id: "u14068", topic: "Valori unici ordinati",
     q: "df['categoria'].value_counts(normalize=True) restituisce:",
     opts: [
-      "Le proporzioni (frequenze relative) di ciascuna categoria",
       "I conteggi assoluti di ciascuna categoria",
+      "Le proporzioni (frequenze relative) di ciascuna categoria",
       "Le prime righe della colonna categoria"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con normalize=True, value_counts dà le frequenze relative (che sommano a 1) invece dei conteggi assoluti: utile per percentuali."
   },
   {
     id: "u14069", topic: "Merge chiavi diverse",
     q: "Se le chiavi hanno nomi diversi, in merge si usa:",
     opts: [
-      "left_on e right_on",
+      "index_col per allineare le due tabelle",
       "solo il parametro on con lo stesso nome",
-      "index_col per allineare le due tabelle"
+      "left_on e right_on"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Quando le colonne chiave si chiamano diversamente: pd.merge(a, b, left_on='id_a', right_on='id_b'). 'on' si usa solo se il nome è identico."
   },
   {
@@ -777,22 +777,22 @@ registerSubject("Pandas", [
     id: "u14071", topic: "Indice datetime",
     q: "Impostare un indice datetime permette di:",
     opts: [
-      "Fare slicing per periodo e resampling temporale",
       "Eliminare le date",
+      "Fare slicing per periodo e resampling temporale",
       "Contare le righe disponibili invece di analizzare il fenomeno richiesto"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con un DatetimeIndex si può selezionare per intervallo (df['2023-01']) e usare resample per aggregare a diverse frequenze, sfruttando le funzioni temporali di pandas."
   },
   {
     id: "u14072", topic: "Resample",
     q: "df.resample('M').sum() (con indice datetime):",
     opts: [
-      "Aggrega i dati a frequenza mensile sommandoli",
+      "Ordina le date dell'indice senza cambiare frequenza",
       "Filtra i mesi presenti senza aggregare alla frequenza mensile",
-      "Ordina le date dell'indice senza cambiare frequenza"
+      "Aggrega i dati a frequenza mensile sommandoli"
     ],
-    correct: [0],
+    correct: [2],
     exp: "resample raggruppa per intervalli temporali (M=mensile, D=giornaliero) e applica un'aggregazione: è il 'groupby del tempo' per le serie."
   },
   {
@@ -810,22 +810,22 @@ registerSubject("Pandas", [
     id: "u14074", topic: "apply lambda",
     q: "df['prezzo'].apply(lambda x: x*1.1):",
     opts: [
-      "Aumenta ogni prezzo del 10% con una funzione anonima",
       "Ordina i prezzi",
+      "Aumenta ogni prezzo del 10% con una funzione anonima",
       "Filtra i prezzi secondo una soglia invece di ordinare il risultato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "apply con una lambda applica una trasformazione al volo a ogni elemento. Per operazioni semplici, però, la vettorializzazione diretta (df['prezzo']*1.1) è più veloce."
   },
   {
     id: "u14075", topic: "Gestione indici duplicati",
     q: "df.index.is_unique verifica:",
     opts: [
-      "Se le etichette dell'indice sono tutte diverse",
+      "La media dei valori dell'indice",
       "Se la colonna indice contiene valori mancanti",
-      "La media dei valori dell'indice"
+      "Se le etichette dell'indice sono tutte diverse"
     ],
-    correct: [0],
+    correct: [2],
     exp: "is_unique è True se l'indice non ha duplicati. Indici duplicati possono causare comportamenti inattesi in selezioni e allineamenti."
   },
   {
@@ -843,22 +843,22 @@ registerSubject("Pandas", [
     id: "u14077", topic: "Colonne calcolate condizionali",
     q: "np.where(df['eta']>=18, 'adulto', 'minore'):",
     opts: [
-      "Assegna 'adulto'/'minore' in base alla condizione, in modo vettorializzato",
       "Filtra tenendo solo le righe con età >= 18",
+      "Assegna 'adulto'/'minore' in base alla condizione, in modo vettorializzato",
       "Ordina le righe in base all'età"
     ],
-    correct: [0],
+    correct: [1],
     exp: "np.where(condizione, se_vero, se_falso) è un if/else vettorializzato: crea una colonna derivata rapidamente, alternativa a apply."
   },
   {
     id: "u14078", topic: "Info memoria",
     q: "df.memory_usage(deep=True) mostra:",
     opts: [
-      "L'uso di memoria di ciascuna colonna",
+      "La media dei valori di ogni colonna",
       "Il numero di righe di ciascuna colonna",
-      "La media dei valori di ogni colonna"
+      "L'uso di memoria di ciascuna colonna"
     ],
-    correct: [0],
+    correct: [2],
     exp: "memory_usage(deep=True) stima la memoria reale (incluse le stringhe). Utile per ottimizzare (es. convertire a category o a tipi più piccoli)."
   },
   {
@@ -876,22 +876,22 @@ registerSubject("Pandas", [
     id: "u14080", topic: "Valori mancanti: interpolate",
     q: "df['x'].interpolate() serve a:",
     opts: [
-      "Stimare i NaN interpolando tra valori noti",
       "Sostituire con zero",
+      "Stimare i NaN interpolando tra valori noti",
       "Eliminare le righe"
     ],
-    correct: [0],
+    correct: [1],
     exp: "interpolate riempie i mancanti stimandoli (di default lineare) tra i valori adiacenti: utile su serie ordinate per mantenere la continuità."
   },
   {
     id: "u14081", topic: "Applica a intero DataFrame",
     q: "df.apply(np.sum) di default calcola:",
     opts: [
-      "La somma di ciascuna colonna",
+      "La media di ciascuna colonna",
       "La somma di ciascuna riga",
-      "La media di ciascuna colonna"
+      "La somma di ciascuna colonna"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Su un DataFrame, apply opera per colonna (axis=0) di default: qui somma ciascuna colonna. Con axis=1 opererebbe per riga."
   },
   {
@@ -909,22 +909,22 @@ registerSubject("Pandas", [
     id: "u14083", topic: "Filtri combinati query",
     q: "Perché usare parentesi in df[(df.a>1) & (df.b<5)]?",
     opts: [
-      "Perché & ha precedenza alta e senza parentesi la valutazione sarebbe errata",
       "Le parentesi non sono mai necessarie nelle maschere booleane pandas",
+      "Perché & ha precedenza alta e senza parentesi la valutazione sarebbe errata",
       "Serve solo a rendere più leggibile il codice, senza effetto sulla valutazione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'operatore & ha precedenza maggiore dei confronti, quindi senza parentesi pandas proverebbe a valutare 1 & df.b prima, dando errore. Le parentesi impongono l'ordine corretto."
   },
   {
     id: "u14084", topic: "assign",
     q: "df.assign(iva = df['prezzo']*0.22):",
     opts: [
-      "Restituisce un nuovo DataFrame con la colonna aggiunta",
+      "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto",
       "Rimuove una colonna esistente invece di crearne una calcolata",
-      "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto"
+      "Restituisce un nuovo DataFrame con la colonna aggiunta"
     ],
-    correct: [0],
+    correct: [2],
     exp: "assign crea una copia con nuove colonne calcolate, utile nelle catene di metodi (method chaining) senza modificare l'originale."
   },
   {
@@ -942,22 +942,22 @@ registerSubject("Pandas", [
     id: "u14086", topic: "MultiIndex",
     q: "Un MultiIndex in pandas è:",
     opts: [
-      "Un indice a più livelli (gerarchico)",
       "Un errore di indicizzazione del DataFrame",
+      "Un indice a più livelli (gerarchico)",
       "Una singola colonna usata come chiave"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il MultiIndex permette indici gerarchici (es. regione dentro anno), tipici dopo raggruppamenti multipli o pivot. Si naviga con .loc a livelli e si appiattisce con reset_index."
   },
   {
     id: "u14087", topic: "Applica funzione riga complessa",
     q: "Per creare una colonna che dipende da più colonne, un modo pulito è:",
     opts: [
-      "Operazioni vettorializzate o np.where, evitando apply quando possibile",
+      "Solo un merge tra le colonne",
       "Un ciclo for che scorre riga per riga",
-      "Solo un merge tra le colonne"
+      "Operazioni vettorializzate o np.where, evitando apply quando possibile"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Combinare colonne con operazioni vettorializzate (df['a']+df['b']) o np.where è più veloce di apply(axis=1); apply si usa quando la logica è troppo complessa per la vettorializzazione."
   },
   {
@@ -975,22 +975,22 @@ registerSubject("Pandas", [
     id: "u14089", topic: "Colonne booleane",
     q: "(df['eta']>=18).sum() restituisce:",
     opts: [
-      "Il numero di righe con età >= 18",
       "La somma delle età di tutte le persone",
+      "Il numero di righe con età >= 18",
       "Le righe con età maggiore o uguale a 18"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La maschera booleana ha True=1 e False=0: sommandola si contano le righe che soddisfano la condizione. Trucco comune per contare rapidamente."
   },
   {
     id: "u14090", topic: "Cast a intero con NaN",
     q: "Una colonna con NaN non può essere int64 standard perché:",
     opts: [
-      "NaN è un float; serve il tipo 'Int64' nullable per interi con mancanti",
+      "È un errore generico di pandas non legato al tipo nullable",
       "Gli interi non sono supportati come tipo dati in pandas",
-      "È un errore generico di pandas non legato al tipo nullable"
+      "NaN è un float; serve il tipo 'Int64' nullable per interi con mancanti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "NaN è rappresentato come float, quindi una colonna intera con mancanti diventa float64. Pandas offre il tipo nullable 'Int64' (maiuscolo) per interi con valori mancanti."
   },
   {
@@ -1008,22 +1008,22 @@ registerSubject("Pandas", [
     id: "u14092", topic: "Applica su gruppi personalizzata",
     q: "df.groupby('reparto').apply(func):",
     opts: [
-      "Applica una funzione personalizzata a ciascun sotto-DataFrame di gruppo",
       "Somma tutti i valori del DataFrame",
+      "Applica una funzione personalizzata a ciascun sotto-DataFrame di gruppo",
       "Ordina le righe di ciascun reparto"
     ],
-    correct: [0],
+    correct: [1],
     exp: "groupby().apply passa a func l'intero sotto-DataFrame di ogni gruppo: massima flessibilità (es. calcoli che coinvolgono più colonne per gruppo), ma più lenta di agg/transform."
   },
   {
     id: "u14093", topic: "Loc con lista",
     q: "df.loc[[0,2,5]] seleziona:",
     opts: [
-      "Le righe con etichette 0, 2 e 5",
+      "Un singolo valore nella posizione 0",
       "Le prime cinque righe del DataFrame",
-      "Un singolo valore nella posizione 0"
+      "Le righe con etichette 0, 2 e 5"
     ],
-    correct: [0],
+    correct: [2],
     exp: ".loc con una lista di etichette seleziona quelle righe specifiche. Con iloc si userebbero le posizioni intere."
   },
   {
@@ -1041,22 +1041,22 @@ registerSubject("Pandas", [
     id: "u14095", topic: "Chained indexing",
     q: "Perché è sconsigliato df[df.a>0]['b'] = 1?",
     opts: [
-      "Il chained indexing può agire su una copia, non modificando l'originale (SettingWithCopyWarning)",
       "È più veloce perché evita controlli sull'indice e sulle copie intermedie",
+      "Il chained indexing può agire su una copia, non modificando l'originale (SettingWithCopyWarning)",
       "Fallisce sempre, anche quando la selezione produce un oggetto valido"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il doppio indexing 'a catena' può restituire una copia temporanea: l'assegnazione potrebbe non avere effetto. Si usa invece df.loc[df.a>0, 'b'] = 1, sicuro e chiaro."
   },
   {
     id: "u14096", topic: "Numeri e testo",
     q: "pd.to_numeric(df['x'], errors='coerce'):",
     opts: [
-      "Converte in numero, trasformando i valori non validi in NaN",
+      "Conta i valori presenti senza modificare granularità o struttura",
       "Ordina i valori in ordine crescente o decrescente senza trasformarli",
-      "Conta i valori presenti senza modificare granularità o struttura"
+      "Converte in numero, trasformando i valori non validi in NaN"
     ],
-    correct: [0],
+    correct: [2],
     exp: "to_numeric con errors='coerce' forza la conversione numerica e mette NaN dove il valore non è convertibile: utile per pulire colonne 'sporche' lette come testo."
   },
   {
@@ -1074,22 +1074,22 @@ registerSubject("Pandas", [
     id: "u14098", topic: "Applica formattazione",
     q: "df.round(2) su colonne numeriche:",
     opts: [
-      "Arrotonda i valori a due decimali",
       "Ordina i valori numerici in modo crescente",
+      "Arrotonda i valori a due decimali",
       "Conta i valori con due cifre decimali"
     ],
-    correct: [0],
+    correct: [1],
     exp: "round arrotonda i valori numerici al numero di decimali indicato, su tutto il DataFrame o su colonne selezionate. Utile prima di esportare o visualizzare."
   },
   {
     id: "u14099", topic: "Contare per gruppo",
     q: "df.groupby('reparto').size() restituisce:",
     opts: [
-      "Il numero di righe per ciascun reparto",
+      "I valori distinti presenti in ogni reparto",
       "La media dei valori di ciascun reparto",
-      "I valori distinti presenti in ogni reparto"
+      "Il numero di righe per ciascun reparto"
     ],
-    correct: [0],
+    correct: [2],
     exp: "size() conta le righe di ogni gruppo (inclusi i NaN), restituendo una Series. count() invece conta i non-null per colonna."
   },
   {

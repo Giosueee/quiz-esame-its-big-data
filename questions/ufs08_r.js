@@ -7,22 +7,22 @@ registerSubject("R", [
     id: "u08001", topic: "Assegnazione",
     q: "Qual è l'operatore di assegnazione idiomatico in R?",
     opts: [
-      "<-",
       "=>",
+      "<-",
       "::"
     ],
-    correct: [0],
+    correct: [1],
     exp: "In R si usa <- per assegnare (x <- 5). Anche = funziona, ma <- è la convenzione. == è il confronto di uguaglianza."
   },
   {
     id: "u08002", topic: "Vettori",
     q: "Come si crea un vettore in R?",
     opts: [
-      "c(1, 2, 3)",
+      "array=1,2,3",
       "vector[1,2,3]",
-      "array=1,2,3"
+      "c(1, 2, 3)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La funzione c() ('combine') crea un vettore: c(1,2,3). È la struttura dati di base di R; gli elementi devono essere dello stesso tipo."
   },
   {
@@ -40,22 +40,22 @@ registerSubject("R", [
     id: "u08004", topic: "Data frame",
     q: "Cos'è un data frame in R?",
     opts: [
-      "Una tabella con righe e colonne di tipi anche diversi",
       "Un vettore che può contenere valori di un solo tipo",
+      "Una tabella con righe e colonne di tipi anche diversi",
       "Una funzione che riassume le statistiche dei dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il data frame è la struttura tabellare di R: colonne (variabili) di tipo eventualmente diverso e righe (osservazioni). È l'equivalente di un DataFrame pandas o di una tabella."
   },
   {
     id: "u08005", topic: "Tipi di dato",
     q: "In R, un 'factor' rappresenta:",
     opts: [
-      "Una variabile categorica con livelli predefiniti",
+      "Una funzione matematica",
       "Una data del calendario",
-      "Una funzione matematica"
+      "Una variabile categorica con livelli predefiniti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il factor è il tipo per le variabili categoriche (es. 'basso','medio','alto'): memorizza i livelli (levels) e si usa nei modelli e nei grafici per gestire le categorie."
   },
   {
@@ -73,22 +73,22 @@ registerSubject("R", [
     id: "u08007", topic: "Valori mancanti",
     q: "In R, un valore mancante è rappresentato da:",
     opts: [
-      "NA",
       "NULL",
+      "NA",
       "''"
     ],
-    correct: [0],
+    correct: [1],
     exp: "NA (Not Available) indica un dato mancante. NULL è l'oggetto vuoto/assente. Molte funzioni hanno l'argomento na.rm=TRUE per ignorare gli NA nei calcoli."
   },
   {
     id: "u08008", topic: "Valori mancanti",
     q: "mean(c(1, 2, NA)) restituisce:",
     opts: [
-      "NA",
+      "Errore",
       "1.5",
-      "Errore"
+      "NA"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Se il vettore contiene NA, mean() restituisce NA per default. Per ignorare i mancanti si usa mean(x, na.rm=TRUE), che darebbe 1.5."
   },
   {
@@ -106,22 +106,22 @@ registerSubject("R", [
     id: "u08010", topic: "ggplot2",
     q: "In ggplot2, aes() serve a:",
     opts: [
-      "Mappare le variabili sugli assi/estetiche (x, y, colore)",
       "Salvare il grafico su file",
+      "Mappare le variabili sugli assi/estetiche (x, y, colore)",
       "Calcolare le statistiche"
     ],
-    correct: [0],
+    correct: [1],
     exp: "aes() (aesthetics) mappa le colonne dei dati sulle proprietà visive: x, y, color, size, fill. Es: aes(x=eta, y=reddito, color=genere)."
   },
   {
     id: "u08011", topic: "ggplot2",
     q: "Quale geom si usa per un diagramma a dispersione (scatter) in ggplot2?",
     opts: [
-      "geom_point()",
+      "geom_histogram()",
       "geom_line()",
-      "geom_histogram()"
+      "geom_point()"
     ],
-    correct: [0],
+    correct: [2],
     exp: "geom_point() disegna i punti (scatter). geom_bar() barre, geom_line() linee, geom_histogram() istogrammi. I geom definiscono il tipo di rappresentazione."
   },
   {
@@ -139,22 +139,22 @@ registerSubject("R", [
     id: "u08013", topic: "dplyr",
     q: "In dplyr, select() serve a:",
     opts: [
-      "Scegliere le colonne di un data frame",
       "Calcolare una media",
+      "Scegliere le colonne di un data frame",
       "Unire due tabelle"
     ],
-    correct: [0],
+    correct: [1],
     exp: "select() sceglie/riordina le COLONNE (es. select(df, nome, eta)). Da non confondere con filter(), che agisce sulle righe."
   },
   {
     id: "u08014", topic: "dplyr",
     q: "L'operatore pipe di dplyr/magrittr è:",
     opts: [
-      "%>%",
+      "->>",
       "|>|",
-      "->>"
+      "%>%"
     ],
-    correct: [0],
+    correct: [2],
     exp: "%>% (pipe) passa il risultato di un'espressione alla funzione successiva: df %>% filter(...) %>% select(...). Rende leggibili le catene di operazioni. (R base ha anche |> )."
   },
   {
@@ -172,22 +172,22 @@ registerSubject("R", [
     id: "u08016", topic: "Strutture di controllo",
     q: "Quale struttura esegue codice ripetutamente in R?",
     opts: [
-      "for",
       "switch",
+      "for",
       "geom"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il ciclo for itera su una sequenza (for(i in 1:10){...}). In R però si preferiscono spesso le funzioni vettorializzate (apply, sapply) ai cicli espliciti."
   },
   {
     id: "u08017", topic: "Funzioni apply",
     q: "La famiglia di funzioni apply (sapply, lapply) serve a:",
     opts: [
-      "Applicare una funzione a ogni elemento senza scrivere cicli espliciti",
+      "Gestire NA e valori mancanti senza applicare funzioni iterate",
       "Disegnare grafici invece di applicare funzioni agli elementi",
-      "Gestire NA e valori mancanti senza applicare funzioni iterate"
+      "Applicare una funzione a ogni elemento senza scrivere cicli espliciti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "apply/lapply/sapply applicano una funzione a ciascun elemento di una struttura (lista, vettore, colonne), in modo conciso e vettorializzato, evitando i cicli for."
   },
   {
@@ -205,22 +205,22 @@ registerSubject("R", [
     id: "u08019", topic: "RMarkdown",
     q: "A cosa serve RMarkdown?",
     opts: [
-      "A creare report che uniscono testo, codice R e risultati",
       "A connettersi a un database",
+      "A creare report che uniscono testo, codice R e risultati",
       "A creare macchine virtuali"
     ],
-    correct: [0],
+    correct: [1],
     exp: "RMarkdown combina testo formattato (Markdown) e blocchi di codice R eseguibili in un unico documento riproducibile, esportabile in HTML, PDF o Word. Ideale per report e analisi."
   },
   {
     id: "u08020", topic: "Test statistici in R",
     q: "La funzione t.test() in R esegue:",
     opts: [
-      "Un test t di Student",
+      "Un raggruppamento",
       "Una regressione lineare",
-      "Un raggruppamento"
+      "Un test t di Student"
     ],
-    correct: [0],
+    correct: [2],
     exp: "t.test() effettua il test t (a uno o due campioni) e restituisce statistica, p-value e intervallo di confidenza. Per la regressione si usa lm()."
   },
   {
@@ -238,22 +238,22 @@ registerSubject("R", [
     id: "u08022", topic: "Formula",
     q: "In R, la formula y ~ x indica:",
     opts: [
-      "y è la variabile dipendente, x l'indipendente",
       "x è trattata come variabile dipendente e y come predittore",
+      "y è la variabile dipendente, x l'indipendente",
       "y diviso x come operazione aritmetica, non formula statistica"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La sintassi formula 'risposta ~ predittori' è usata da lm/glm e nei grafici: y ~ x significa modellare y in funzione di x. Si aggiungono predittori con y ~ x1 + x2."
   },
   {
     id: "u08023", topic: "Vettorializzazione",
     q: "In R, c(1,2,3) * 2 restituisce:",
     opts: [
-      "c(2, 4, 6)",
+      "Errore",
       "c(1, 2, 3, 2)",
-      "Errore"
+      "c(2, 4, 6)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le operazioni in R sono vettorializzate: moltiplicare un vettore per uno scalare moltiplica ogni elemento → c(2,4,6). Non serve un ciclo esplicito."
   },
   {
@@ -271,22 +271,22 @@ registerSubject("R", [
     id: "u08025", topic: "str()",
     q: "La funzione str() in R serve a:",
     opts: [
-      "Mostrare la struttura di un oggetto (tipi e dimensioni)",
       "Convertire un oggetto in una stringa di testo",
+      "Mostrare la struttura di un oggetto (tipi e dimensioni)",
       "Rimuovere gli spazi iniziali e finali di una stringa"
     ],
-    correct: [0],
+    correct: [1],
     exp: "str() ('structure') dà una panoramica compatta di un oggetto: tipo, dimensioni, primi valori delle colonne. Utilissima per ispezionare rapidamente un data frame."
   },
   {
     id: "u08026", topic: "summary()",
     q: "summary() applicata a un data frame numerico restituisce:",
     opts: [
-      "Statistiche descrittive per ogni colonna (min, media, quartili, max)",
+      "La correlazione tra colonne",
       "Un grafico a barre per confrontare categorie o frequenze",
-      "La correlazione tra colonne"
+      "Statistiche descrittive per ogni colonna (min, media, quartili, max)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "summary() fornisce un riepilogo statistico colonna per colonna: minimo, primo quartile, mediana, media, terzo quartile, massimo (e conteggio NA)."
   },
   {
@@ -304,22 +304,22 @@ registerSubject("R", [
     id: "u08028", topic: "Boxplot",
     q: "In R, un boxplot mostra:",
     opts: [
-      "Mediana, quartili e valori anomali di una distribuzione",
       "La sola media, ignorando dispersione, dipendenze o struttura dei dati",
+      "Mediana, quartili e valori anomali di una distribuzione",
       "La correlazione tra due variabili"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il boxplot visualizza la mediana (linea centrale), i quartili (scatola), i baffi e gli outlier. Ottimo per confrontare la distribuzione tra gruppi."
   },
   {
     id: "u08029", topic: "Fattori e livelli",
     q: "Perché usare un factor invece di una stringa per una variabile categorica?",
     opts: [
-      "Gestisce i livelli in modo esplicito ed è trattato correttamente da modelli e grafici",
+      "Non permette di definire o usare livelli ordinati",
       "Occupa sempre più memoria rispetto a una stringa semplice",
-      "Non permette di definire o usare livelli ordinati"
+      "Gestisce i livelli in modo esplicito ed è trattato correttamente da modelli e grafici"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il factor definisce i livelli ammessi e il loro ordine, così i modelli statistici e ggplot2 li trattano come categorie (non come testo libero), con codifiche corrette."
   },
   {
@@ -337,22 +337,22 @@ registerSubject("R", [
     id: "u08031", topic: "library()",
     q: "library(dplyr) serve a:",
     opts: [
-      "Caricare il pacchetto già installato nella sessione corrente",
       "Installare il pacchetto da repository prima del caricamento",
+      "Caricare il pacchetto già installato nella sessione corrente",
       "Rimuovere il pacchetto installato dalla libreria locale"
     ],
-    correct: [0],
+    correct: [1],
     exp: "library() carica in memoria un pacchetto già installato, rendendone disponibili le funzioni. Va eseguita a ogni nuova sessione in cui serve il pacchetto."
   },
   {
     id: "u08032", topic: "mutate()",
     q: "In dplyr, mutate() serve a:",
     opts: [
-      "Creare o modificare colonne del data frame",
+      "Ordinare le righe in base a una colonna",
       "Filtrare le righe secondo una condizione",
-      "Ordinare le righe in base a una colonna"
+      "Creare o modificare colonne del data frame"
     ],
-    correct: [0],
+    correct: [2],
     exp: "mutate() aggiunge nuove colonne o trasforma quelle esistenti (es. mutate(df, prezzo_iva = prezzo*1.22)), mantenendo tutte le righe."
   },
   {
@@ -370,22 +370,22 @@ registerSubject("R", [
     id: "u08034", topic: "Join",
     q: "In dplyr, inner_join() unisce due data frame tenendo:",
     opts: [
-      "Solo le righe con corrispondenza in entrambi",
       "Solo quelle senza corrispondenza",
+      "Solo le righe con corrispondenza in entrambi",
       "Solo il primo data frame"
     ],
-    correct: [0],
+    correct: [1],
     exp: "inner_join() mantiene solo le righe con chiave presente in entrambe le tabelle, come la INNER JOIN di SQL. Esistono anche left_join, right_join, full_join."
   },
   {
     id: "u08035", topic: "Riproducibilità",
     q: "set.seed() in R serve a:",
     opts: [
-      "Rendere riproducibili i risultati casuali",
+      "Fissare il numero di decimali",
       "Impostare la cartella di lavoro",
-      "Fissare il numero di decimali"
+      "Rendere riproducibili i risultati casuali"
     ],
-    correct: [0],
+    correct: [2],
     exp: "set.seed(n) inizializza il generatore di numeri casuali: con lo stesso seme si ottengono le stesse sequenze casuali, rendendo l'analisi riproducibile."
   },
   {
@@ -403,22 +403,22 @@ registerSubject("R", [
     id: "u08037", topic: "head/tail",
     q: "head(df) mostra:",
     opts: [
-      "Le prime righe del data frame",
       "Il nome delle colonne",
+      "Le prime righe del data frame",
       "Il numero di righe"
     ],
-    correct: [0],
+    correct: [1],
     exp: "head(df) mostra le prime 6 righe (di default); tail(df) le ultime. Utili per ispezionare rapidamente i dati."
   },
   {
     id: "u08038", topic: "nrow/ncol",
     q: "nrow(df) restituisce:",
     opts: [
-      "Il numero di righe",
+      "Il nome delle righe",
       "Il numero di colonne",
-      "Il nome delle righe"
+      "Il numero di righe"
     ],
-    correct: [0],
+    correct: [2],
     exp: "nrow() conta le righe, ncol() le colonne. dim() restituisce entrambe. Servono a conoscere le dimensioni di un data frame."
   },
   {
@@ -436,22 +436,22 @@ registerSubject("R", [
     id: "u08040", topic: "$",
     q: "L'operatore $ in R (es. df$nome) serve a:",
     opts: [
-      "Accedere a una colonna di un data frame per nome",
       "Moltiplicare due colonne",
+      "Accedere a una colonna di un data frame per nome",
       "Definire una funzione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "df$colonna estrae quella colonna come vettore. È il modo più diretto per riferirsi a una variabile di un data frame o a un elemento di una lista."
   },
   {
     id: "u08041", topic: "is.na()",
     q: "is.na(x) restituisce:",
     opts: [
-      "TRUE dove ci sono valori mancanti",
+      "Il numero di elementi",
       "La media di x",
-      "Il numero di elementi"
+      "TRUE dove ci sono valori mancanti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "is.na(x) dà un vettore logico con TRUE nelle posizioni con NA. Utile per contare (sum(is.na(x))) o rimuovere i mancanti."
   },
   {
@@ -469,22 +469,22 @@ registerSubject("R", [
     id: "u08043", topic: "Correlazione in R",
     q: "cor(x, y) in R calcola:",
     opts: [
-      "Il coefficiente di correlazione tra x e y",
       "La covarianza soltanto",
+      "Il coefficiente di correlazione tra x e y",
       "La media di x e y"
     ],
-    correct: [0],
+    correct: [1],
     exp: "cor() restituisce il coefficiente di correlazione (Pearson di default), tra -1 e 1. cov() dà la covarianza, lm() stima la regressione."
   },
   {
     id: "u08044", topic: "Tabelle di frequenza",
     q: "table(x) in R produce:",
     opts: [
-      "Il conteggio delle occorrenze di ogni valore",
+      "La media dei valori presenti nel vettore",
       "Un data frame vuoto con le stesse colonne",
-      "La media dei valori presenti nel vettore"
+      "Il conteggio delle occorrenze di ogni valore"
     ],
-    correct: [0],
+    correct: [2],
     exp: "table() crea una tabella di frequenza contando quante volte compare ciascun valore/categoria. Con due argomenti crea una tabella di contingenza."
   },
   {
@@ -502,22 +502,22 @@ registerSubject("R", [
     id: "u08046", topic: "Funzioni utente",
     q: "Come si definisce una funzione in R?",
     opts: [
-      "nome <- function(x) { ... }",
       "function nome(x) {}",
+      "nome <- function(x) { ... }",
       "func nome = x =>"
     ],
-    correct: [0],
+    correct: [1],
     exp: "In R le funzioni si assegnano: quadr <- function(x){ x^2 }. Si richiamano con quadr(4). L'ultima espressione valutata è il valore di ritorno (o si usa return())."
   },
   {
     id: "u08047", topic: "Sequenze",
     q: "1:5 in R genera:",
     opts: [
-      "Il vettore 1 2 3 4 5",
+      "Una divisione",
       "Solo il numero 15",
-      "Una divisione"
+      "Il vettore 1 2 3 4 5"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'operatore : crea una sequenza di interi: 1:5 → 1 2 3 4 5. Per passi diversi si usa seq(1, 10, by=2)."
   },
   {
@@ -535,22 +535,22 @@ registerSubject("R", [
     id: "u08049", topic: "Facet",
     q: "In ggplot2, facet_wrap() serve a:",
     opts: [
-      "Creare più sotto-grafici, uno per categoria",
       "Modificare solo la presentazione grafica dei risultati",
+      "Creare più sotto-grafici, uno per categoria",
       "Aggiungere un titolo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "facet_wrap(~categoria) suddivide il grafico in pannelli separati per ciascun livello di una variabile: utile per confrontare i sottogruppi affiancati."
   },
   {
     id: "u08050", topic: "Salvataggio grafici",
     q: "ggsave() in ggplot2:",
     opts: [
-      "Salva l'ultimo grafico su un file immagine",
+      "Installa un pacchetto",
       "Calcola statistiche",
-      "Installa un pacchetto"
+      "Salva l'ultimo grafico su un file immagine"
     ],
-    correct: [0],
+    correct: [2],
     exp: "ggsave('grafico.png') esporta il grafico corrente in un file (PNG, PDF, ecc.), con dimensioni e risoluzione configurabili."
   },
   {
@@ -568,22 +568,22 @@ registerSubject("R", [
     id: "u08052", topic: "quantile()",
     q: "quantile(x) in R restituisce:",
     opts: [
-      "I quantili (0%, 25%, 50%, 75%, 100%) della distribuzione",
       "La sola media, ignorando dispersione, dipendenze o struttura dei dati",
+      "I quantili (0%, 25%, 50%, 75%, 100%) della distribuzione",
       "Un istogramma per mostrare la distribuzione dei valori numerici"
     ],
-    correct: [0],
+    correct: [1],
     exp: "quantile() calcola i quantili: di default minimo, primo quartile, mediana, terzo quartile, massimo. Si possono richiedere percentili specifici con l'argomento probs."
   },
   {
     id: "u08053", topic: "ifelse()",
     q: "ifelse(x > 0, 'pos', 'neg') in R:",
     opts: [
-      "Restituisce 'pos'/'neg' elemento per elemento in modo vettorializzato",
+      "Genera una visualizzazione invece di restituire valori trasformati",
       "Valuta un solo valore invece di operare elemento per elemento",
-      "Genera una visualizzazione invece di restituire valori trasformati"
+      "Restituisce 'pos'/'neg' elemento per elemento in modo vettorializzato"
     ],
-    correct: [0],
+    correct: [2],
     exp: "ifelse() è la versione vettorializzata dell'if: valuta la condizione su ogni elemento e restituisce un vettore con i valori corrispondenti. Comoda per creare variabili derivate."
   },
   {
@@ -601,22 +601,22 @@ registerSubject("R", [
     id: "u08055", topic: "length()",
     q: "length(x) su un vettore restituisce:",
     opts: [
-      "Il numero di elementi",
       "La somma degli elementi",
+      "Il numero di elementi",
       "Il tipo del vettore"
     ],
-    correct: [0],
+    correct: [1],
     exp: "length() conta gli elementi di un vettore o di una lista. Per i data frame length() dà il numero di colonne (usare nrow/ncol per le dimensioni)."
   },
   {
     id: "u08056", topic: "Visualizzazione linee",
     q: "geom_line() è adatto a rappresentare:",
     opts: [
-      "L'andamento di una variabile nel tempo o su una sequenza ordinata",
+      "Una matrice di correlazione",
       "La distribuzione di frequenza",
-      "Una matrice di correlazione"
+      "L'andamento di una variabile nel tempo o su una sequenza ordinata"
     ],
-    correct: [0],
+    correct: [2],
     exp: "geom_line() collega i punti con una linea, ideale per serie temporali o relazioni ordinate. Per categorie discrete si usano barre."
   },
   {
@@ -634,22 +634,22 @@ registerSubject("R", [
     id: "u08058", topic: "Conversione tipi",
     q: "as.numeric('3.14') in R restituisce:",
     opts: [
-      "Il numero 3.14",
       "La stringa '3.14'",
+      "Il numero 3.14",
       "Errore"
     ],
-    correct: [0],
+    correct: [1],
     exp: "as.numeric() converte in numero: as.numeric('3.14') → 3.14. Se la stringa non è convertibile restituisce NA con un warning."
   },
   {
     id: "u08059", topic: "Riepilogo per gruppo",
     q: "Qual è l'equivalente R del GROUP BY di SQL?",
     opts: [
-      "group_by() seguito da summarise() in dplyr",
+      "arrange(), che riordina righe senza riassumere gruppi",
       "select(), che sceglie colonne senza calcolare aggregazioni",
-      "arrange(), che riordina righe senza riassumere gruppi"
+      "group_by() seguito da summarise() in dplyr"
     ],
-    correct: [0],
+    correct: [2],
     exp: "group_by() + summarise() replica il GROUP BY con aggregazioni: raggruppa e calcola statistiche per gruppo. filter/select agiscono su righe/colonne, non aggregano."
   },
   {
@@ -667,22 +667,22 @@ registerSubject("R", [
     id: "u08061", topic: "Grafici: tema",
     q: "In ggplot2, theme_minimal() cambia:",
     opts: [
-      "L'aspetto grafico (sfondo, griglie, stile)",
       "Il tipo di modello",
+      "L'aspetto grafico (sfondo, griglie, stile)",
       "Le variabili sugli assi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I theme_*() controllano l'estetica non legata ai dati: sfondo, griglie, font. theme_minimal() dà un look pulito. Non alterano i dati né le mappature aes."
   },
   {
     id: "u08062", topic: "Rinominare",
     q: "rename() in dplyr serve a:",
     opts: [
-      "Cambiare il nome delle colonne",
+      "Filtrare le righe secondo una condizione",
       "Modificare i valori contenuti nelle colonne",
-      "Filtrare le righe secondo una condizione"
+      "Cambiare il nome delle colonne"
     ],
-    correct: [0],
+    correct: [2],
     exp: "rename(df, nuovo = vecchio) rinomina le colonne mantenendo i dati. È diverso da mutate(), che crea o trasforma i valori."
   },
   {
@@ -700,22 +700,22 @@ registerSubject("R", [
     id: "u08064", topic: "Grafico densità",
     q: "geom_density() rappresenta:",
     opts: [
-      "Una stima liscia della distribuzione di una variabile continua",
       "Le categorie discrete di una variabile qualitativa",
+      "Una stima liscia della distribuzione di una variabile continua",
       "Una serie temporale disegnata come funzione a gradini"
     ],
-    correct: [0],
+    correct: [1],
     exp: "geom_density() disegna la curva di densità (una versione 'liscia' dell'istogramma) che stima la distribuzione di probabilità di una variabile continua."
   },
   {
     id: "u08065", topic: "pivot",
     q: "In tidyr, pivot_longer() trasforma i dati:",
     opts: [
-      "Da formato largo a formato lungo (più righe, meno colonne)",
+      "Rimuove righe dal dataset invece di trasformare o calcolare valori",
       "Da lungo a largo",
-      "Rimuove righe dal dataset invece di trasformare o calcolare valori"
+      "Da formato largo a formato lungo (più righe, meno colonne)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "pivot_longer() 'allunga' i dati portando più colonne in coppie chiave-valore (formato tidy). pivot_wider() fa l'opposto, allargando."
   },
   {
@@ -733,22 +733,22 @@ registerSubject("R", [
     id: "u08067", topic: "round()",
     q: "round(3.14159, 2) restituisce:",
     opts: [
-      "3.14",
       "3.1416",
+      "3.14",
       "3.142"
     ],
-    correct: [0],
+    correct: [1],
     exp: "round(x, n) arrotonda a n cifre decimali: round(3.14159, 2) → 3.14. Esistono anche floor() (per difetto) e ceiling() (per eccesso)."
   },
   {
     id: "u08068", topic: "seq()",
     q: "seq(0, 10, by = 2) genera:",
     opts: [
-      "0 2 4 6 8 10",
+      "2 4 6 8 10",
       "0 1 2 ... 10",
-      "2 4 6 8 10"
+      "0 2 4 6 8 10"
     ],
-    correct: [0],
+    correct: [2],
     exp: "seq(da, a, by=passo) crea una sequenza con passo definito: seq(0,10,by=2) → 0 2 4 6 8 10. Più flessibile dell'operatore :."
   },
   {
@@ -766,22 +766,22 @@ registerSubject("R", [
     id: "u08070", topic: "Fattori ordinati",
     q: "Un factor ordinato (ordered) è utile quando:",
     opts: [
-      "Le categorie hanno un ordine naturale (es. basso<medio<alto)",
       "Le categorie non hanno ordine",
+      "Le categorie hanno un ordine naturale (es. basso<medio<alto)",
       "Non ci sono categorie"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il factor ordinato mantiene un ordine tra i livelli (scala ordinale), permettendo confronti come < e >. Utile per soddisfazione, classi di età, ecc."
   },
   {
     id: "u08071", topic: "Grafici: colore",
     q: "In aes(), mappare color a una variabile categorica:",
     opts: [
-      "Colora i punti/linee in base ai livelli di quella variabile",
+      "Non modifica né l'output né lo stato dell'oggetto analizzato",
       "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto",
-      "Non modifica né l'output né lo stato dell'oggetto analizzato"
+      "Colora i punti/linee in base ai livelli di quella variabile"
     ],
-    correct: [0],
+    correct: [2],
     exp: "aes(color = categoria) assegna un colore diverso a ciascun livello, con legenda automatica: rende visibili i gruppi nel grafico."
   },
   {
@@ -799,22 +799,22 @@ registerSubject("R", [
     id: "u08073", topic: "lm summary",
     q: "In summary(lm(...)), il valore 'Multiple R-squared' indica:",
     opts: [
-      "La quota di varianza della risposta spiegata dal modello",
       "La pendenza della retta",
+      "La quota di varianza della risposta spiegata dal modello",
       "Il numero di osservazioni disponibili per stimare o valutare il modello"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'R² del summary di lm() esprime la frazione di variabilità di y spiegata dai predittori. L'Adjusted R² penalizza i predittori inutili."
   },
   {
     id: "u08074", topic: "Predizione",
     q: "predict(modello, newdata) in R serve a:",
     opts: [
-      "Ottenere previsioni del modello su nuovi dati",
+      "Disegnare un grafico",
       "Riaddestrare il modello",
-      "Disegnare un grafico"
+      "Ottenere previsioni del modello su nuovi dati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "predict() applica un modello stimato (lm, glm, ...) a nuovi dati per ottenere i valori previsti. È il passo di inferenza/predizione dopo l'addestramento."
   },
   {
@@ -832,22 +832,22 @@ registerSubject("R", [
     id: "u08076", topic: "Grafici: aggiungere layer",
     q: "In ggplot2 i componenti si combinano con:",
     opts: [
-      "L'operatore +",
       "L'operatore %>%",
+      "L'operatore +",
       "L'operatore <-"
     ],
-    correct: [0],
+    correct: [1],
     exp: "In ggplot2 i layer si sommano con +: ggplot(df, aes(x,y)) + geom_point() + theme_minimal(). Il pipe %>% è invece di dplyr per le trasformazioni dati."
   },
   {
     id: "u08077", topic: "factor levels",
     q: "levels(f) su un factor restituisce:",
     opts: [
-      "I livelli (categorie) del factor",
+      "Il numero di righe",
       "I valori numerici",
-      "Il numero di righe"
+      "I livelli (categorie) del factor"
     ],
-    correct: [0],
+    correct: [2],
     exp: "levels() elenca le categorie ammesse di un factor. L'ordine dei livelli influenza modelli e grafici (es. la categoria di riferimento nella regressione)."
   },
   {
@@ -865,22 +865,22 @@ registerSubject("R", [
     id: "u08079", topic: "Reshape",
     q: "pivot_wider() è utile quando si vuole:",
     opts: [
-      "Trasformare valori di una colonna in nuove colonne",
       "Allungare i dati portando le colonne in righe",
+      "Trasformare valori di una colonna in nuove colonne",
       "Ordinare il data frame in base alla data"
     ],
-    correct: [0],
+    correct: [1],
     exp: "pivot_wider() 'allarga' i dati: prende una colonna di chiavi e una di valori e le distribuisce in più colonne. Opposto di pivot_longer()."
   },
   {
     id: "u08080", topic: "Random",
     q: "rnorm(10) in R genera:",
     opts: [
-      "10 numeri casuali da una distribuzione normale",
+      "Un istogramma per mostrare la distribuzione dei valori numerici",
       "Un vettore di zeri",
-      "Un istogramma per mostrare la distribuzione dei valori numerici"
+      "10 numeri casuali da una distribuzione normale"
     ],
-    correct: [0],
+    correct: [2],
     exp: "rnorm(n) estrae n valori casuali dalla normale (media 0, sd 1 di default). Esistono runif (uniforme), rbinom (binomiale), ecc."
   },
   {
@@ -898,22 +898,22 @@ registerSubject("R", [
     id: "u08082", topic: "Grafici: scala",
     q: "scale_y_log10() in ggplot2:",
     opts: [
-      "Trasforma l'asse y in scala logaritmica",
       "Cambia la codifica cromatica senza modificare dati o modello",
+      "Trasforma l'asse y in scala logaritmica",
       "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto"
     ],
-    correct: [0],
+    correct: [1],
     exp: "scale_y_log10() applica una scala logaritmica all'asse y: utile quando i valori variano su ordini di grandezza molto diversi."
   },
   {
     id: "u08083", topic: "unique()",
     q: "unique(x) restituisce:",
     opts: [
-      "I valori distinti di x",
+      "Il primo valore",
       "Il numero di valori",
-      "Il primo valore"
+      "I valori distinti di x"
     ],
-    correct: [0],
+    correct: [2],
     exp: "unique() elimina i duplicati restituendo i valori distinti. Per contarli si usa length(unique(x))."
   },
   {
@@ -931,22 +931,22 @@ registerSubject("R", [
     id: "u08085", topic: "Concatenare data frame",
     q: "bind_rows() in dplyr:",
     opts: [
-      "Impila due data frame uno sotto l'altro",
       "Affianca le colonne",
+      "Impila due data frame uno sotto l'altro",
       "Filtra righe già presenti in base a una condizione booleana"
     ],
-    correct: [0],
+    correct: [1],
     exp: "bind_rows() unisce i data frame per riga (uno sotto l'altro), come UNION. bind_cols() li affianca per colonna."
   },
   {
     id: "u08086", topic: "case_when",
     q: "case_when() in dplyr è utile per:",
     opts: [
-      "Creare una variabile con più condizioni (if/else multiplo)",
+      "Unire due data frame su una chiave comune",
       "Contare le righe che soddisfano una condizione",
-      "Unire due data frame su una chiave comune"
+      "Creare una variabile con più condizioni (if/else multiplo)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "case_when() gestisce condizioni multiple in modo leggibile, assegnando valori diversi a seconda dei casi: è un if/else annidato vettorializzato."
   },
   {
@@ -964,22 +964,22 @@ registerSubject("R", [
     id: "u08088", topic: "Visualizzazione correlazione",
     q: "Un grafico adatto a mostrare la relazione tra due variabili numeriche in R è:",
     opts: [
-      "Lo scatter plot (geom_point)",
       "Il grafico a torta",
+      "Lo scatter plot (geom_point)",
       "Il boxplot di una sola variabile"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Lo scatter plot (geom_point) visualizza la relazione tra due variabili quantitative. Aggiungendo geom_smooth() si può sovrapporre una linea di tendenza."
   },
   {
     id: "u08089", topic: "Ambiente",
     q: "ls() in R elenca:",
     opts: [
-      "Gli oggetti presenti nell'ambiente di lavoro",
+      "I pacchetti installati",
       "I file della cartella",
-      "I pacchetti installati"
+      "Gli oggetti presenti nell'ambiente di lavoro"
     ],
-    correct: [0],
+    correct: [2],
     exp: "ls() mostra i nomi degli oggetti (variabili, funzioni) creati nella sessione. rm() li rimuove; rm(list=ls()) pulisce tutto."
   },
   {
@@ -997,22 +997,22 @@ registerSubject("R", [
     id: "u08091", topic: "Tipi numerici",
     q: "In R, la differenza tra integer e double è:",
     opts: [
-      "integer sono interi, double numeri in virgola mobile",
       "integer è testo",
+      "integer sono interi, double numeri in virgola mobile",
       "double è logico"
     ],
-    correct: [0],
+    correct: [1],
     exp: "double memorizza numeri con decimali (default per i numeri in R); integer memorizza interi (si forza con L, es. 5L). Entrambi sono numeric."
   },
   {
     id: "u08092", topic: "Funzioni anonime",
     q: "In R, function(x) x^2 è:",
     opts: [
-      "Una funzione anonima (senza nome)",
+      "Un vettore",
       "Un errore",
-      "Un vettore"
+      "Una funzione anonima (senza nome)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "È una funzione anonima, spesso passata a sapply/map: sapply(1:3, function(x) x^2) → 1 4 9. R recente ammette anche la sintassi \\(x) x^2."
   },
   {
@@ -1030,22 +1030,22 @@ registerSubject("R", [
     id: "u08094", topic: "Grafici: dimensione",
     q: "In aes(size = popolazione), la dimensione dei punti:",
     opts: [
-      "Varia in base al valore della variabile popolazione",
       "Cambia la codifica cromatica senza modificare dati o modello",
+      "Varia in base al valore della variabile popolazione",
       "Non modifica né l'output né lo stato dell'oggetto analizzato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Mappare size a una variabile crea una 'bubble chart': punti più grandi per valori maggiori, aggiungendo una terza dimensione informativa al grafico."
   },
   {
     id: "u08095", topic: "Struttura condizionale",
     q: "In R, l'if classico (non vettorializzato) valuta:",
     opts: [
-      "Una singola condizione logica (lunghezza 1)",
+      "Sempre tutti i rami",
       "Un intero vettore elemento per elemento",
-      "Sempre tutti i rami"
+      "Una singola condizione logica (lunghezza 1)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "if() valuta UNA condizione scalare: if(x>0){...}else{...}. Per condizioni su interi vettori si usa ifelse(), vettorializzato."
   },
   {
@@ -1063,22 +1063,22 @@ registerSubject("R", [
     id: "u08097", topic: "Aggregate base",
     q: "aggregate(prezzo ~ categoria, df, mean) calcola:",
     opts: [
-      "La media del prezzo per ciascuna categoria",
       "Il numero di categorie distinte presenti nei dati",
+      "La media del prezzo per ciascuna categoria",
       "La media complessiva di tutti i prezzi insieme"
     ],
-    correct: [0],
+    correct: [1],
     exp: "aggregate() in R base raggruppa per categoria e applica una funzione (qui mean) alla variabile: equivale a group_by()+summarise() di dplyr."
   },
   {
     id: "u08098", topic: "Salvare dati",
     q: "write.csv(df, 'out.csv') in R:",
     opts: [
-      "Salva il data frame in un file CSV",
+      "Crea un grafico",
       "Legge un file",
-      "Crea un grafico"
+      "Salva il data frame in un file CSV"
     ],
-    correct: [0],
+    correct: [2],
     exp: "write.csv() esporta un data frame in un file CSV. saveRDS() salva invece un oggetto R in formato binario, ricaricabile con readRDS()."
   },
   {
@@ -1096,11 +1096,11 @@ registerSubject("R", [
     id: "u08100", topic: "Pipeline analisi",
     q: "Un tipico flusso di analisi dati in R con tidyverse è:",
     opts: [
-      "Importare → pulire (tidy) → trasformare (dplyr) → visualizzare (ggplot2) → modellare",
       "Pulire (tidy) → importare → trasformare (dplyr) → visualizzare (ggplot2) → modellare",
+      "Importare → pulire (tidy) → trasformare (dplyr) → visualizzare (ggplot2) → modellare",
       "Modellare → importare → pulire (tidy) → trasformare (dplyr) → visualizzare (ggplot2)"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il flusso tidyverse: import (readr) → tidy (tidyr) → transform (dplyr) → visualize (ggplot2) → model. È un ciclo iterativo di esplorazione e analisi dei dati."
   },
   // === AGGIUNGI NUOVE DOMANDE R QUI ===

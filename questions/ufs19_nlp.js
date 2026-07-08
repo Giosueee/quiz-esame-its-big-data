@@ -8,22 +8,22 @@ registerSubject("NLP e LLM", [
     id: "u19001", topic: "NLP",
     q: "Che cosa indica NLP?",
     opts: [
-      "Natural Language Processing: elaborazione automatica del linguaggio naturale",
       "Network Layer Protocol, acronimo di rete non legato al linguaggio",
+      "Natural Language Processing: elaborazione automatica del linguaggio naturale",
       "Natural Logic Parser, parser logico ma non definizione standard di NLP"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il NLP e' l'intersezione tra linguistica, informatica e machine learning per trattare testi in linguaggio naturale con sistemi computazionali."
   },
   {
     id: "u19002", topic: "Task NLP",
     q: "Quale di questi è un task di NLP?",
     opts: [
-      "Il Named Entity Recognition",
+      "La compressione delle immagini",
       "La deframmentazione del disco",
-      "La compressione delle immagini"
+      "Il Named Entity Recognition"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Sono task NLP la classificazione del sentiment, il Named Entity Recognition e la traduzione automatica. Deframmentazione del disco e compressione di immagini non riguardano il linguaggio."
   },
   {
@@ -41,22 +41,22 @@ registerSubject("NLP e LLM", [
     id: "u19004", topic: "Pipeline NLP",
     q: "Una pipeline NLP tradizionale contiene spesso:",
     opts: [
-      "Pulizia, tokenizzazione, vettorizzazione e modello",
       "Solo esportazione in immagine",
+      "Pulizia, tokenizzazione, vettorizzazione e modello",
       "Solo ordinamento alfabetico dei file"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il flusso tipico porta il testo da grezzo a pulito, poi a token e rappresentazioni numeriche, infine a inferenza o machine learning."
   },
   {
     id: "u19005", topic: "Tokenizzazione",
     q: "La tokenizzazione consiste nel:",
     opts: [
-      "Dividere il testo in unita' minime come caratteri, parole o subword",
+      "Eliminare parole rare invece di segmentare il testo",
       "Tradurre il testo invece di dividerlo in unità",
-      "Eliminare parole rare invece di segmentare il testo"
+      "Dividere il testo in unita' minime come caratteri, parole o subword"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I token sono le unita' su cui lavora il sistema: possono essere caratteri, parole, parti di parola o simboli a seconda della strategia."
   },
   {
@@ -74,22 +74,22 @@ registerSubject("NLP e LLM", [
     id: "u19007", topic: "Tokenizzazione caratteri",
     q: "Un vantaggio della tokenizzazione a caratteri e':",
     opts: [
-      "Ha un vocabolario piccolo e semplice",
       "Cattura sempre bene la semantica",
+      "Ha un vocabolario piccolo e semplice",
       "Produce sequenze molto corte"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Usare caratteri riduce il numero di simboli possibili, ma crea sequenze lunghe e poco rappresentative semanticamente."
   },
   {
     id: "u19008", topic: "Tokenizzazione parole",
     q: "Un limite della tokenizzazione a parole e':",
     opts: [
-      "Il vocabolario puo' diventare enorme e includere forme nuove o flesse",
+      "Funziona solo con immagini",
       "Non rappresenta mai parole intere",
-      "Funziona solo con immagini"
+      "Il vocabolario puo' diventare enorme e includere forme nuove o flesse"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le lingue hanno molte parole, flessioni, errori e neologismi. Un tokenizer a parole puo' incontrare molti termini rari o non visti."
   },
   {
@@ -107,22 +107,22 @@ registerSubject("NLP e LLM", [
     id: "u19010", topic: "Normalizzazione",
     q: "La normalizzazione del testo serve a:",
     opts: [
-      "Ridurre varianti superficiali e carico computazionale",
       "Aumentare volutamente il rumore",
+      "Ridurre varianti superficiali e carico computazionale",
       "Rimuovere tutti i nomi propri sempre"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Lowercase, rimozione doppi spazi, accenti o normalizzazione Unicode possono rendere il testo piu' coerente. Va pero' evitata perdita di informazione utile."
   },
   {
     id: "u19011", topic: "Normalizzazione",
     q: "Quale rischio ha una normalizzazione troppo aggressiva?",
     opts: [
-      "Perdere informazioni rilevanti come differenze semantiche o accenti",
+      "Rendere impossibile la tokenizzazione",
       "Aumentare sempre la precisione",
-      "Rendere impossibile la tokenizzazione"
+      "Perdere informazioni rilevanti come differenze semantiche o accenti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Esempio: papa e papa' non sono equivalenti. Normalizzare senza criterio puo' cancellare distinzioni importanti."
   },
   {
@@ -140,22 +140,22 @@ registerSubject("NLP e LLM", [
     id: "u19013", topic: "Stopword",
     q: "Le stopword sono:",
     opts: [
-      "Parole molto frequenti spesso poco discriminanti, come articoli e preposizioni",
       "Parole offensive per definizione, non semplicemente frequenti",
+      "Parole molto frequenti spesso poco discriminanti, come articoli e preposizioni",
       "Solo nomi propri invece di parole funzionali frequenti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Rimuoverle puo' ridurre rumore e carico computazionale, soprattutto in analisi basate su frequenze."
   },
   {
     id: "u19014", topic: "Stopword",
     q: "Quando rimuovere stopword puo' essere sbagliato?",
     opts: [
-      "Quando sintassi e contesto completo sono importanti",
+      "Solo con testi in inglese",
       "Quando si usa un corpus piccolo",
-      "Solo con testi in inglese"
+      "Quando sintassi e contesto completo sono importanti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "In task dove negazioni, pronomi o struttura della frase contano, rimuovere stopword puo' togliere informazione essenziale."
   },
   {
@@ -173,22 +173,22 @@ registerSubject("NLP e LLM", [
     id: "u19016", topic: "Lemmatizzazione",
     q: "La lemmatizzazione mira a ottenere:",
     opts: [
-      "Il lemma, cioe' la forma base linguistica della parola",
       "Un vettore sparso di frequenze",
+      "Il lemma, cioe' la forma base linguistica della parola",
       "La prima lettera della parola"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La lemmatizzazione e' piu' accurata dello stemming ma richiede strumenti linguistici piu' ricchi e puo' essere piu' lenta."
   },
   {
     id: "u19017", topic: "Stemming vs Lemmatizzazione",
     q: "Differenza corretta tra stemming e lemmatizzazione:",
     opts: [
-      "Stemming e' piu' semplice; lemmatizzazione conserva forme base linguistiche",
+      "Lo stemming usa transformer",
       "La lemmatizzazione elimina sempre il contesto",
-      "Lo stemming usa transformer"
+      "Stemming e' piu' semplice; lemmatizzazione conserva forme base linguistiche"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Stemming taglia parti finali; lemmatizzazione riconosce la forma base, spesso usando informazioni morfologiche e lessicali."
   },
   {
@@ -206,22 +206,22 @@ registerSubject("NLP e LLM", [
     id: "u19019", topic: "PoS Tagging",
     q: "Il Part-of-Speech tagging assegna a ogni token:",
     opts: [
-      "Una categoria grammaticale come nome, verbo o aggettivo",
       "Una chiave primaria SQL",
+      "Una categoria grammaticale come nome, verbo o aggettivo",
       "Un colore di dashboard"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il PoS tagging etichetta il ruolo grammaticale dei token e puo' richiedere contesto per risolvere ambiguita'."
   },
   {
     id: "u19020", topic: "PoS Tagging",
     q: "Perche' il contesto e' importante nel PoS tagging?",
     opts: [
-      "La stessa forma puo' avere ruoli diversi, come nome o verbo",
+      "Il contesto va rimosso sempre",
       "Ogni parola ha sempre un solo ruolo",
-      "Il contesto va rimosso sempre"
+      "La stessa forma puo' avere ruoli diversi, come nome o verbo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Esempio: una parola puo' essere sostantivo in una frase e verbo in un'altra. Il sistema deve guardare la frase."
   },
   {
@@ -239,22 +239,22 @@ registerSubject("NLP e LLM", [
     id: "u19022", topic: "NER",
     q: "Quale coppia e' coerente con NER?",
     opts: [
-      "Milano -> LOC",
       "Mangiare -> DATE",
+      "Milano -> LOC",
       "42 -> PERSON sempre"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Milano e' tipicamente un luogo. Le altre associazioni sono errate o non valide senza contesto specifico."
   },
   {
     id: "u19023", topic: "Intenti",
     q: "In alcuni sistemi, classificare i verbi come intenti serve a:",
     opts: [
-      "Capire l'azione o richiesta implicata nel testo",
+      "Convertire testo in audio",
       "Creare un vocabolario di emoji",
-      "Convertire testo in audio"
+      "Capire l'azione o richiesta implicata nel testo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nel NLP applicativo, riconoscere intenti aiuta chatbot e sistemi a decidere quale azione eseguire."
   },
   {
@@ -272,22 +272,22 @@ registerSubject("NLP e LLM", [
     id: "u19025", topic: "Bigrammi",
     q: "In un testo tokenizzato a parole, un bigramma contiene:",
     opts: [
-      "Due token consecutivi",
       "Una sola lettera",
+      "Due token consecutivi",
       "Tutto il corpus"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Bi-gramma significa sequenza di due token. Trigramma ne contiene tre."
   },
   {
     id: "u19026", topic: "Bag-of-Words",
     q: "Bag-of-Words rappresenta un testo come:",
     opts: [
-      "Frequenze di parole senza ordine e struttura sintattica",
+      "Embedding contestuale per ogni token",
       "Sequenza completa con grammatica preservata",
-      "Embedding contestuale per ogni token"
+      "Frequenze di parole senza ordine e struttura sintattica"
     ],
-    correct: [0],
+    correct: [2],
     exp: "BoW ignora l'ordine delle parole e conserva soprattutto il conteggio delle feature nel vocabolario."
   },
   {
@@ -305,22 +305,22 @@ registerSubject("NLP e LLM", [
     id: "u19028", topic: "BoW vettori",
     q: "Dopo avere un vocabolario, ogni frase BoW diventa:",
     opts: [
-      "Un vettore di frequenze sulle parole del vocabolario",
       "Una rappresentazione visuale a pixel invece di un vettore testuale",
+      "Un vettore di frequenze sulle parole del vocabolario",
       "Una query SQL testuale invece di una rappresentazione vettoriale"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Ogni posizione del vettore corrisponde a una feature del vocabolario e contiene il conteggio o peso relativo."
   },
   {
     id: "u19029", topic: "Limite BoW",
     q: "Un limite forte di BoW e':",
     opts: [
-      "Non cattura ordine, sintassi e semantica profonda",
+      "Non puo' contare parole",
       "Conserva troppo contesto grammaticale",
-      "Non puo' contare parole"
+      "Non cattura ordine, sintassi e semantica profonda"
     ],
-    correct: [0],
+    correct: [2],
     exp: "BoW puo' dire che due testi condividono parole, ma non capisce sinonimi, ordine o significati dipendenti dal contesto."
   },
   {
@@ -338,22 +338,22 @@ registerSubject("NLP e LLM", [
     id: "u19031", topic: "TF-IDF",
     q: "IDF in TF-IDF aumenta il peso di parole:",
     opts: [
-      "Rare nel corpus e quindi piu' discriminanti",
       "Comuni in tutti i documenti",
+      "Rare nel corpus e quindi piu' discriminanti",
       "Piu' lunghe di dieci lettere"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Inverse Document Frequency riduce il peso delle parole troppo comuni e valorizza termini che distinguono documenti."
   },
   {
     id: "u19032", topic: "TF-IDF",
     q: "TF-IDF e' utile per:",
     opts: [
-      "Pesare parole in base a frequenza locale e rarita' nel corpus",
+      "Invocare funzioni esterne",
       "Generare testo autoregressivo",
-      "Invocare funzioni esterne"
+      "Pesare parole in base a frequenza locale e rarita' nel corpus"
     ],
-    correct: [0],
+    correct: [2],
     exp: "TF-IDF e' una rappresentazione tradizionale efficace per retrieval, similarita' e classificazione di testi."
   },
   {
@@ -371,22 +371,22 @@ registerSubject("NLP e LLM", [
     id: "u19034", topic: "Vettori sparsi",
     q: "BoW e TF-IDF producono spesso vettori:",
     opts: [
-      "Sparsi, con molti zeri quando il vocabolario e' grande",
       "Una rappresentazione senza variabili misurabili o coordinate utili",
+      "Sparsi, con molti zeri quando il vocabolario e' grande",
       "Solo binari senza frequenze"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Se il vocabolario ha molte parole, un documento usa solo una piccola parte delle dimensioni, lasciando molte celle a zero."
   },
   {
     id: "u19035", topic: "Embedding",
     q: "Gli embedding sono:",
     opts: [
-      "Vettori densi e continui che catturano aspetti semantici",
+      "Regole per ridurre parole alla radice, non embedding",
       "Tabelle HTML con frequenze, non vettori densi continui",
-      "Regole per ridurre parole alla radice, non embedding"
+      "Vettori densi e continui che catturano aspetti semantici"
     ],
-    correct: [0],
+    correct: [2],
     exp: "A differenza di BoW, gli embedding cercano di rappresentare significato e vicinanza semantica in uno spazio vettoriale denso."
   },
   {
@@ -404,22 +404,22 @@ registerSubject("NLP e LLM", [
     id: "u19037", topic: "Embedding",
     q: "I valori di un embedding sono tipicamente:",
     opts: [
-      "Numeri reali in un vettore",
       "Solo lettere maiuscole",
+      "Numeri reali in un vettore",
       "Solo valori TRUE/FALSE"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Gli embedding sono array di numeri reali, per esempio 0.12, -0.35, 0.78, usati per calcolare similarita'."
   },
   {
     id: "u19038", topic: "Semantica",
     q: "Perche' due frasi semanticamente simili possono avere embedding vicini?",
     opts: [
-      "Il modello codifica significato e contesto in uno spazio vettoriale",
+      "Perche' BoW conserva sinonimi automaticamente",
       "Perche' hanno necessariamente le stesse parole",
-      "Perche' BoW conserva sinonimi automaticamente"
+      "Il modello codifica significato e contesto in uno spazio vettoriale"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Frasi come 'il mio cane dorme' e 'il mio animale domestico dorme' possono risultare vicine anche senza coincidenza perfetta di parole."
   },
   {
@@ -437,22 +437,22 @@ registerSubject("NLP e LLM", [
     id: "u19040", topic: "CBOW",
     q: "Nel modello CBOW di Word2Vec, l'obiettivo e':",
     opts: [
-      "Predire una parola dal suo contesto",
       "Predire il contesto da una parola",
+      "Predire una parola dal suo contesto",
       "Generare JSON strutturato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "CBOW sta per Continuous Bag of Words: usa le parole vicine per predire quella centrale."
   },
   {
     id: "u19041", topic: "Skip-gram",
     q: "Nel modello Skip-gram di Word2Vec, l'obiettivo e':",
     opts: [
-      "Predire il contesto a partire da una parola",
+      "Rimuovere parole molto frequenti e poco informative dal testo",
       "Predire una parola dal documento intero",
-      "Rimuovere parole molto frequenti e poco informative dal testo"
+      "Predire il contesto a partire da una parola"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Skip-gram usa una parola sorgente per predire parole di contesto circostanti."
   },
   {
@@ -470,22 +470,22 @@ registerSubject("NLP e LLM", [
     id: "u19043", topic: "FastText",
     q: "FastText gestisce meglio parole rare perche':",
     opts: [
-      "Usa n-grammi di caratteri oltre alla parola intera",
       "Ignora ogni sottoparola",
+      "Usa n-grammi di caratteri oltre alla parola intera",
       "Usa solo parole funzionali frequenti del corpus"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Rappresentare parole tramite n-grammi di caratteri consente di comporre vettori anche per parole rare o non viste."
   },
   {
     id: "u19044", topic: "Polisemia",
     q: "Un limite di Word2Vec, GloVe e FastText classici e':",
     opts: [
-      "Non gestiscono bene significati diversi della stessa parola in contesti diversi",
+      "Sono modelli pensati solo per immagini, non per testo",
       "Non producono rappresentazioni vettoriali delle parole",
-      "Sono modelli pensati solo per immagini, non per testo"
+      "Non gestiscono bene significati diversi della stessa parola in contesti diversi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Una parola polisemica tende ad avere un solo vettore statico, anche se in frasi diverse assume significati diversi."
   },
   {
@@ -503,22 +503,22 @@ registerSubject("NLP e LLM", [
     id: "u19046", topic: "Distanze vettoriali",
     q: "La distanza coseno misura soprattutto:",
     opts: [
-      "L'angolo/direzione tra vettori",
       "Solo la lunghezza assoluta del testo",
+      "L'angolo/direzione tra vettori",
       "La posizione nel documento"
     ],
-    correct: [0],
+    correct: [1],
     exp: "In NLP si usa spesso la similarita' coseno per confrontare embedding in base alla direzione, riducendo l'effetto della magnitudine."
   },
   {
     id: "u19047", topic: "Distanze vettoriali",
     q: "Un limite della distanza euclidea sugli embedding e':",
     opts: [
-      "Vettori grandi possono falsare la misura se conta troppo la magnitudine",
+      "Misura token testuali grezzi invece di vettori embedding",
       "Non può essere calcolata tra vettori numerici",
-      "Misura token testuali grezzi invece di vettori embedding"
+      "Vettori grandi possono falsare la misura se conta troppo la magnitudine"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La distanza euclidea misura una linea retta nello spazio; in NLP spesso la direzione semantica e' piu' utile della grandezza del vettore."
   },
   {
@@ -536,22 +536,22 @@ registerSubject("NLP e LLM", [
     id: "u19049", topic: "Vector DB",
     q: "Un database vettoriale serve a:",
     opts: [
-      "Indicizzare embedding e recuperare elementi semanticamente simili",
       "Archiviare solo CSV invece di indicizzare embedding",
+      "Indicizzare embedding e recuperare elementi semanticamente simili",
       "Applicare stemming invece di recuperare elementi semanticamente simili"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I vector database consentono ricerca per similarita' su embedding, base di semantic search e RAG."
   },
   {
     id: "u19050", topic: "Semantic search",
     q: "La semantic search differisce da una ricerca solo keyword perche':",
     opts: [
-      "Recupera contenuti vicini per significato, non solo per parole identiche",
+      "Usa solo ordinamento alfabetico",
       "Cerca solo caratteri maiuscoli",
-      "Usa solo ordinamento alfabetico"
+      "Recupera contenuti vicini per significato, non solo per parole identiche"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Con embedding, query e documenti possono essere confrontati semanticamente anche se non condividono le stesse parole."
   },
   {
@@ -569,22 +569,22 @@ registerSubject("NLP e LLM", [
     id: "u19052", topic: "RNN",
     q: "Un limite delle RNN rispetto ai Transformer e':",
     opts: [
-      "Elaborazione piu' sequenziale e meno parallelizzabile",
       "Impossibilita' di leggere token",
+      "Elaborazione piu' sequenziale e meno parallelizzabile",
       "Uso esclusivo di immagini"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le RNN processano la sequenza passo dopo passo; i Transformer permettono maggiore parallelizzazione e connessioni piu' dirette tramite attention."
   },
   {
     id: "u19053", topic: "Transformer",
     q: "Il paper 'Attention is all you need' introduce:",
     opts: [
-      "L'architettura Transformer basata su meccanismi di attention",
+      "Un database vettoriale usato per retrieval semantico",
       "La prima lista di stopword",
-      "Un database vettoriale usato per retrieval semantico"
+      "L'architettura Transformer basata su meccanismi di attention"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il Transformer sposta il centro sull'attention, riducendo dipendenza da ricorrenza sequenziale."
   },
   {
@@ -602,22 +602,22 @@ registerSubject("NLP e LLM", [
     id: "u19055", topic: "Multi-head attention",
     q: "La multi-head attention serve a:",
     opts: [
-      "Osservare diverse relazioni tra token in parallelo",
       "Usare una sola relazione fissa",
+      "Osservare diverse relazioni tra token in parallelo",
       "Sostituire la tokenizzazione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Teste diverse possono catturare aspetti differenti: relazioni grammaticali, semantiche, posizionali o di dipendenza."
   },
   {
     id: "u19056", topic: "Encoder",
     q: "Nel Transformer, l'encoder:",
     opts: [
-      "Trasforma la frase sorgente in rappresentazioni contestuali",
+      "Rimuove ogni informazione di posizione",
       "Genera sempre token futuri uno alla volta",
-      "Rimuove ogni informazione di posizione"
+      "Trasforma la frase sorgente in rappresentazioni contestuali"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'encoder legge la sequenza e produce embedding contestuali che rappresentano il contenuto in modo ricco."
   },
   {
@@ -635,22 +635,22 @@ registerSubject("NLP e LLM", [
     id: "u19058", topic: "Masked self-attention",
     q: "La masked self-attention nel decoder impedisce di:",
     opts: [
-      "Vedere token futuri durante la generazione",
       "Vedere token passati",
+      "Vedere token futuri durante la generazione",
       "Calcolare probabilita'"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Durante la generazione autoregressiva il modello deve predire il prossimo token usando solo il contesto precedente."
   },
   {
     id: "u19059", topic: "Autoregressione",
     q: "Un modello autoregressivo genera testo:",
     opts: [
-      "Predicendo il prossimo token dato il contesto precedente",
+      "Ordinando parole alfabeticamente",
       "Leggendo sempre l'intera risposta futura",
-      "Ordinando parole alfabeticamente"
+      "Predicendo il prossimo token dato il contesto precedente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "GPT e' decoder-only autoregressivo: produce un token alla volta condizionato dai token precedenti."
   },
   {
@@ -668,22 +668,22 @@ registerSubject("NLP e LLM", [
     id: "u19061", topic: "T5",
     q: "T5 mantiene un'architettura:",
     opts: [
-      "Encoder-decoder adatta a task testo-a-testo",
       "Solo encoder come BERT",
+      "Encoder-decoder adatta a task testo-a-testo",
       "Solo decoder come GPT"
     ],
-    correct: [0],
+    correct: [1],
     exp: "T5 trasforma diversi compiti in formato text-to-text, utile per traduzione, riassunto e task seq2seq."
   },
   {
     id: "u19062", topic: "BERT",
     q: "BERT usa principalmente:",
     opts: [
-      "Solo la parte encoder del Transformer",
+      "Un database vettoriale usato per retrieval semantico",
       "Solo la parte decoder autoregressiva",
-      "Un database vettoriale usato per retrieval semantico"
+      "Solo la parte encoder del Transformer"
     ],
-    correct: [0],
+    correct: [2],
     exp: "BERT e' encoder-only e costruisce rappresentazioni bidirezionali adatte a comprensione del testo."
   },
   {
@@ -701,22 +701,22 @@ registerSubject("NLP e LLM", [
     id: "u19064", topic: "BERT",
     q: "BERT e' particolarmente utile per:",
     opts: [
-      "Comprensione, classificazione e web search",
       "Solo generazione autoregressiva lunga",
+      "Comprensione, classificazione e web search",
       "Solo compressione file"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Essendo encoder bidirezionale, BERT e varianti sono adatti a rappresentare testo per classificare o recuperare informazioni."
   },
   {
     id: "u19065", topic: "GPT",
     q: "GPT e' descritto come modello:",
     opts: [
-      "Transformer decoder-only autoregressivo",
+      "Solo n-grammi statistici",
       "Encoder-only bidirezionale",
-      "Solo n-grammi statistici"
+      "Transformer decoder-only autoregressivo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "GPT predice il prossimo token dato il contesto precedente usando masked self-attention."
   },
   {
@@ -734,22 +734,22 @@ registerSubject("NLP e LLM", [
     id: "u19067", topic: "Training LLM",
     q: "Un flusso tipico per modelli GPT include:",
     opts: [
-      "Pre-training, fine-tuning e feedback umano o ottimizzazione per chat",
       "Applicare solo stemming manuale senza reti neurali",
+      "Pre-training, fine-tuning e feedback umano o ottimizzazione per chat",
       "Usare solo bag-of-words senza modelli neurali"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le slide distinguono pre-training su enormi corpus, adattamenti successivi e ottimizzazione per interazione."
   },
   {
     id: "u19068", topic: "GPT capacita'",
     q: "Pur essendo decoder-only, GPT puo' svolgere anche:",
     opts: [
-      "Classificazione, traduzione e altri task tramite prompting o adattamento",
+      "Solo PoS tagging manuale",
       "Solo completamento di una singola lettera",
-      "Solo PoS tagging manuale"
+      "Classificazione, traduzione e altri task tramite prompting o adattamento"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I decoder-only moderni apprendono capacita' generali e possono seguire istruzioni per molti compiti testuali."
   },
   {
@@ -767,22 +767,22 @@ registerSubject("NLP e LLM", [
     id: "u19070", topic: "LLM capacita'",
     q: "Quale capacità è tipica di un LLM?",
     opts: [
-      "Il question answering",
       "Il partizionamento del disco",
+      "Il question answering",
       "La compilazione del codice C"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Gli LLM generano testo, riassumono e rispondono a domande (question answering). Partizionare un disco o compilare codice C non sono capacità linguistiche di un modello."
   },
   {
     id: "u19071", topic: "Limiti LLM",
     q: "Quale di questi è un limite o rischio degli LLM?",
     opts: [
-      "Le allucinazioni",
+      "L'assenza totale di qualsiasi bias",
       "La garanzia assoluta di verità",
-      "L'assenza totale di qualsiasi bias"
+      "Le allucinazioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Limiti reali degli LLM: allucinazioni, bias e costi computazionali. Garantire la verità assoluta o essere privi di bias NON sono caratteristiche degli LLM: sono il contrario dei loro limiti."
   },
   {
@@ -800,22 +800,22 @@ registerSubject("NLP e LLM", [
     id: "u19073", topic: "System prompt",
     q: "Il system o developer prompt serve a:",
     opts: [
-      "Dare istruzioni di comportamento o vincoli definiti dallo sviluppatore",
       "Rimuovere parole molto frequenti e poco informative dal testo",
+      "Dare istruzioni di comportamento o vincoli definiti dallo sviluppatore",
       "Scrivere CSS selector"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I prompt di sistema/sviluppatore impostano ruolo, regole e limiti dell'assistente prima dell'input utente."
   },
   {
     id: "u19074", topic: "Zero-shot",
     q: "Zero-shot prompting significa:",
     opts: [
-      "Chiedere un compito senza fornire esempi nel prompt",
+      "Fornire molti esempi",
       "Fornire un esempio",
-      "Fornire molti esempi"
+      "Chiedere un compito senza fornire esempi nel prompt"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nel zero-shot il modello deve generalizzare dall'istruzione e dalle sue capacita' pre-addestrate, senza esempi specifici."
   },
   {
@@ -833,22 +833,22 @@ registerSubject("NLP e LLM", [
     id: "u19076", topic: "Few-shot",
     q: "Few-shot prompting significa:",
     opts: [
-      "Fornire pochi esempi nel prompt",
       "Non fornire alcun esempio",
+      "Fornire pochi esempi nel prompt",
       "Fare fine-tuning con GPU"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con pochi esempi il modello inferisce pattern di risposta, classificazione o formato senza aggiornare i pesi."
   },
   {
     id: "u19077", topic: "Chain of Thought",
     q: "La Chain of Thought nel prompting mira a:",
     opts: [
-      "Guidare il ragionamento passo passo",
+      "Ridurre il contesto a una parola",
       "Eliminare ogni spiegazione",
-      "Ridurre il contesto a una parola"
+      "Guidare il ragionamento passo passo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La CoT invita il modello a scomporre problemi complessi in passaggi intermedi, quando appropriato."
   },
   {
@@ -866,22 +866,22 @@ registerSubject("NLP e LLM", [
     id: "u19079", topic: "Top-k top-p",
     q: "Top-k e top-p servono a:",
     opts: [
-      "Filtrare le scelte di token candidate durante la generazione",
       "Rimuovere parole frequenti invece di filtrare token candidati",
+      "Filtrare le scelte di token candidate durante la generazione",
       "Creare un encoder invece di filtrare le opzioni di generazione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Top-k limita ai k token piu' probabili; top-p considera un insieme cumulativo di probabilita'."
   },
   {
     id: "u19080", topic: "Max tokens",
     q: "Il parametro max tokens definisce:",
     opts: [
-      "La lunghezza massima dell'output generato",
+      "La dimensione del database",
       "Il numero di documenti presenti nel corpus testuale",
-      "La dimensione del database"
+      "La lunghezza massima dell'output generato"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Max tokens pone un limite alla quantita' di testo che il modello puo' generare nella risposta."
   },
   {
@@ -899,22 +899,22 @@ registerSubject("NLP e LLM", [
     id: "u19082", topic: "Chunking",
     q: "Il chunking per testi lunghi serve a:",
     opts: [
-      "Spezzare documenti in parti gestibili dalla context window o dal retrieval",
       "Unire tutto in un prompt infinito",
+      "Spezzare documenti in parti gestibili dalla context window o dal retrieval",
       "Convertire vettori in parole"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Documenti lunghi vengono divisi in chunk per indicizzazione, embedding, recupero e uso nel contesto del modello."
   },
   {
     id: "u19083", topic: "RAG",
     q: "Retrieval Augmented Generation combina:",
     opts: [
-      "Recupero di informazioni esterne e generazione del modello",
+      "Fare solo traduzione automatica senza retrieval",
       "Usare solo bag-of-words e part-of-speech tagging",
-      "Fare solo traduzione automatica senza retrieval"
+      "Recupero di informazioni esterne e generazione del modello"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La RAG cerca documenti rilevanti e li fornisce al modello come contesto per generare risposte piu' fondate."
   },
   {
@@ -932,22 +932,22 @@ registerSubject("NLP e LLM", [
     id: "u19085", topic: "RAG vantaggio",
     q: "La RAG puo' ridurre allucinazioni perche':",
     opts: [
-      "Ancora la risposta a documenti esterni recuperati",
       "Elimina il modello linguistico",
+      "Ancora la risposta a documenti esterni recuperati",
       "Impedisce qualsiasi errore in assoluto"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Fornire contesto verificabile migliora accuratezza, anche se non elimina del tutto errori o cattivo recupero."
   },
   {
     id: "u19086", topic: "Fine-tuning",
     q: "Il fine-tuning consiste nel:",
     opts: [
-      "Riaddestrare/adattare il modello su dati specifici di dominio",
+      "Rimuovere token futuri invece di riaddestrare su dominio",
       "Scrivere un prompt generico senza adattare i pesi del modello",
-      "Rimuovere token futuri invece di riaddestrare su dominio"
+      "Riaddestrare/adattare il modello su dati specifici di dominio"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il fine-tuning modifica i parametri o adattatori del modello per specializzarlo su compiti o domini specifici."
   },
   {
@@ -965,22 +965,22 @@ registerSubject("NLP e LLM", [
     id: "u19088", topic: "Function calling",
     q: "Il function calling permette al modello di:",
     opts: [
-      "Restituire una chiamata strutturata a una funzione o API",
       "Accedere sempre a Internet da solo",
+      "Restituire una chiamata strutturata a una funzione o API",
       "Creare un corpus quanteda prima delle analisi testuali"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il modello puo' indicare nome funzione e parametri in forma strutturata; il sistema esegue il tool e passa il risultato al modello."
   },
   {
     id: "u19089", topic: "Function calling",
     q: "Perche' JSON e' comune nel function calling?",
     opts: [
-      "Perche' rappresenta parametri strutturati leggibili dal programma",
+      "Perché JSON sostituirebbe qualunque API esterna",
       "Perché JSON sarebbe un embedding vettoriale",
-      "Perché JSON sostituirebbe qualunque API esterna"
+      "Perche' rappresenta parametri strutturati leggibili dal programma"
     ],
-    correct: [0],
+    correct: [2],
     exp: "JSON consente output strutturati e validabili, piu' affidabili di testo libero per integrazioni programmatiche."
   },
   {
@@ -998,22 +998,22 @@ registerSubject("NLP e LLM", [
     id: "u19091", topic: "MCP",
     q: "Il Model Context Protocol serve a:",
     opts: [
-      "Standardizzare come gli LLM accedono a strumenti e fonti esterne",
       "Calcolare pesi TF-IDF per termini in documenti testuali",
+      "Standardizzare come gli LLM accedono a strumenti e fonti esterne",
       "Definire stopword italiane"
     ],
-    correct: [0],
+    correct: [1],
     exp: "MCP e' un protocollo aperto per esporre strumenti, risorse e contesto ai modelli in modo standardizzato."
   },
   {
     id: "u19092", topic: "Agenti",
     q: "Un agente basato su LLM e':",
     opts: [
-      "Un sistema che pianifica ed esegue piu' azioni usando ragionamento e tool",
+      "Una lista di parole comuni da rimuovere nel preprocessing",
       "Un solo prompt statico senza azioni",
-      "Una lista di parole comuni da rimuovere nel preprocessing"
+      "Un sistema che pianifica ed esegue piu' azioni usando ragionamento e tool"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Gli agenti combinano pianificazione, esecuzione, uso di tool/API e spesso iterazioni per completare compiti multi-step."
   },
   {
@@ -1031,22 +1031,22 @@ registerSubject("NLP e LLM", [
     id: "u19094", topic: "Tool per agenti",
     q: "Quale di questi può essere un tool per un agente LLM?",
     opts: [
-      "Un database o base di conoscenza",
       "Soltanto i segni di punteggiatura",
+      "Un database o base di conoscenza",
       "Soltanto gli spazi bianchi del testo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Un agente può usare come tool API esterne, database/basi di conoscenza, classificatori o web search. Punteggiatura e spazi bianchi sono elementi del testo, non strumenti."
   },
   {
     id: "u19095", topic: "LangChain",
     q: "LangChain e' un framework per:",
     opts: [
-      "Costruire applicazioni basate su LLM con prompt, chain, tool e integrazioni",
+      "Disegnare selettori CSS invece di orchestrare LLM",
       "Calcolare solo distanze euclidee tra embedding",
-      "Disegnare selettori CSS invece di orchestrare LLM"
+      "Costruire applicazioni basate su LLM con prompt, chain, tool e integrazioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "LangChain offre moduli per chatbot, RAG, agenti, integrazioni con API, database e vector store."
   },
   {
@@ -1064,22 +1064,22 @@ registerSubject("NLP e LLM", [
     id: "u19097", topic: "Hugging Face",
     q: "Nel contesto UFS19, Hugging Face e' rilevante per:",
     opts: [
-      "Trovare e usare modelli NLP/embedding open-source",
       "Definire espressioni cron",
+      "Trovare e usare modelli NLP/embedding open-source",
       "Creare database relazionali"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le slide citano risorse di embedding anche su Hugging Face, piattaforma nota per modelli e dataset NLP."
   },
   {
     id: "u19098", topic: "Prompt vs fine-tuning",
     q: "Differenza corretta tra prompting e fine-tuning:",
     opts: [
-      "Il prompting guida l'output senza cambiare pesi; il fine-tuning adatta parametri o adattatori",
+      "Il fine-tuning e' solo un esempio nel prompt",
       "Il prompting richiede sempre GPU",
-      "Il fine-tuning e' solo un esempio nel prompt"
+      "Il prompting guida l'output senza cambiare pesi; il fine-tuning adatta parametri o adattatori"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Prompting agisce nel contesto della richiesta. Fine-tuning modifica il comportamento del modello tramite addestramento aggiuntivo."
   },
   {
@@ -1097,11 +1097,11 @@ registerSubject("NLP e LLM", [
     id: "u19100", topic: "Sintesi UFS19",
     q: "Quale sequenza riassume meglio l'evoluzione trattata in UFS19?",
     opts: [
-      "Preprocessing -> BoW/TF-IDF -> embedding -> Transformer/LLM -> RAG/agenti",
       "Docker -> SQL -> kernel -> virtualizzazione",
+      "Preprocessing -> BoW/TF-IDF -> embedding -> Transformer/LLM -> RAG/agenti",
       "Media -> varianza -> test t -> ANOVA"
     ],
-    correct: [0],
+    correct: [1],
     exp: "UFS19 parte dalle basi del testo, passa dal NLP tradizionale alle rappresentazioni dense, poi ai Transformer, LLM e applicazioni moderne con retrieval, tool e agenti."
   },
   // === AGGIUNGI NUOVE DOMANDE NLP E LLM QUI ===

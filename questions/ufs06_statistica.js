@@ -8,11 +8,11 @@ registerSubject("Statistica", [
     id: "u06001", topic: "Media",
     q: "La media aritmetica di un insieme di dati si calcola:",
     opts: [
-      "Sommando tutti i valori e dividendo per il numero di valori",
+      "Sottraendo il valore minimo da quello massimo dei dati",
       "Prendendo il valore che si trova esattamente al centro dei dati ordinati",
-      "Sottraendo il valore minimo da quello massimo dei dati"
+      "Sommando tutti i valori e dividendo per il numero di valori"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La media aritmetica è la somma dei valori divisa per il loro numero. Il valore centrale è la mediana, quello più frequente è la moda, la differenza max-min è il campo di variazione."
   },
   {
@@ -30,22 +30,22 @@ registerSubject("Statistica", [
     id: "u06003", topic: "Media vs mediana",
     q: "In presenza di forti valori anomali (outlier), quale indice è più robusto e meno influenzato?",
     opts: [
-      "La mediana, perché dipende dalla posizione centrale e non dai valori estremi",
       "La media, perché tiene conto di tutti i valori compresi quelli estremi",
+      "La mediana, perché dipende dalla posizione centrale e non dai valori estremi",
       "Il campo di variazione, perché misura l'ampiezza totale dei dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La media risente molto degli outlier (un valore enorme la trascina). La mediana, basandosi sulla posizione, resta stabile: per questo è preferita con distribuzioni asimmetriche, es. i redditi."
   },
   {
     id: "u06004", topic: "Moda",
     q: "Che cos'è la moda di una distribuzione?",
     opts: [
-      "Il valore (o la classe) che si presenta con la frequenza più elevata",
+      "La radice quadrata della varianza calcolata sui dati",
       "Il valore che divide esattamente a metà i dati ordinati in due parti",
-      "La radice quadrata della varianza calcolata sui dati"
+      "Il valore (o la classe) che si presenta con la frequenza più elevata"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La moda è il valore più frequente. Una distribuzione può essere unimodale, bimodale o plurimodale (più mode) e in alcuni casi non avere moda se tutti i valori compaiono una sola volta."
   },
   {
@@ -63,22 +63,22 @@ registerSubject("Statistica", [
     id: "u06006", topic: "Indici di posizione",
     q: "Quale di questi è un indice di posizione (tendenza centrale)?",
     opts: [
-      "La media aritmetica",
       "La deviazione standard",
+      "La media aritmetica",
       "Il campo di variazione (range)"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Media, mediana e moda sono indici di POSIZIONE (descrivono il centro della distribuzione). La deviazione standard e il campo di variazione misurano invece la DISPERSIONE dei dati."
   },
   {
     id: "u06007", topic: "Varianza",
     q: "La varianza misura:",
     opts: [
-      "Quanto i dati si disperdono attorno alla media, come media dei quadrati degli scarti",
+      "La differenza tra il valore massimo e il valore minimo osservati nella serie di dati",
       "La frequenza con cui compare il valore più comune all'interno della serie di dati",
-      "La differenza tra il valore massimo e il valore minimo osservati nella serie di dati"
+      "Quanto i dati si disperdono attorno alla media, come media dei quadrati degli scarti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La varianza è la media dei quadrati degli scarti dalla media: quantifica la dispersione. Più è alta, più i dati sono 'sparpagliati'. Si eleva al quadrato per evitare che scarti positivi e negativi si annullino."
   },
   {
@@ -96,22 +96,22 @@ registerSubject("Statistica", [
     id: "u06009", topic: "Deviazione standard",
     q: "Se tutti i valori di un insieme sono identici tra loro, la deviazione standard vale:",
     opts: [
-      "0, perché non c'è alcuna variabilità attorno alla media",
       "1, perché è il valore minimo che la deviazione standard può assumere",
+      "0, perché non c'è alcuna variabilità attorno alla media",
       "La media stessa dei valori considerati nell'insieme"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Se i dati sono tutti uguali, ognuno coincide con la media: gli scarti sono nulli, quindi varianza e deviazione standard valgono 0. La deviazione standard non può mai essere negativa."
   },
   {
     id: "u06010", topic: "Campo di variazione",
     q: "Il campo di variazione (range) di una serie di dati è:",
     opts: [
-      "La differenza tra il valore massimo e il valore minimo osservati",
+      "Il rapporto tra la deviazione standard e la media dei dati",
       "Il valore centrale che divide i dati ordinati in due metà uguali",
-      "Il rapporto tra la deviazione standard e la media dei dati"
+      "La differenza tra il valore massimo e il valore minimo osservati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il range è semplicemente max − min: la misura di dispersione più elementare. È molto sensibile agli outlier, perché dipende solo dai due valori estremi."
   },
   {
@@ -129,22 +129,22 @@ registerSubject("Statistica", [
     id: "u06012", topic: "Dispersione",
     q: "La varianza può assumere valori negativi?",
     opts: [
-      "No, perché è una media di quadrati e i quadrati non sono mai negativi",
       "Sì, quando la maggior parte degli scarti dalla media è negativa",
+      "No, perché è una media di quadrati e i quadrati non sono mai negativi",
       "Sì, ma solo se la media dei dati risulta essere negativa"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La varianza è la media di scarti ELEVATI AL QUADRATO: i quadrati sono sempre ≥ 0, quindi la varianza è sempre ≥ 0. Vale 0 solo se tutti i dati sono uguali."
   },
   {
     id: "u06013", topic: "Frequenze",
     q: "La frequenza relativa di una modalità è:",
     opts: [
-      "Il rapporto tra la frequenza assoluta e il numero totale di osservazioni",
+      "La differenza tra la frequenza più alta e quella più bassa osservate nei dati",
       "Il numero di volte in cui quella specifica modalità compare all'interno dei dati",
-      "La differenza tra la frequenza più alta e quella più bassa osservate nei dati"
+      "Il rapporto tra la frequenza assoluta e il numero totale di osservazioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La frequenza relativa = frequenza assoluta / totale (compresa tra 0 e 1, o in %). La frequenza assoluta è il semplice conteggio; la somma progressiva è la frequenza cumulata."
   },
   {
@@ -162,22 +162,22 @@ registerSubject("Statistica", [
     id: "u06015", topic: "Grafici",
     q: "Qual è la differenza principale tra un istogramma e un diagramma a barre?",
     opts: [
-      "L'istogramma è per dati continui in classi; le barre per categorie",
       "Il diagramma a barre si usa solo per i dati continui suddivisi in classi di frequenza",
+      "L'istogramma è per dati continui in classi; le barre per categorie",
       "L'istogramma può rappresentare al massimo due categorie di dati per volta, non di più"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'istogramma è per variabili quantitative continue divise in classi: le barre sono attaccate perché l'asse è una scala continua. Il diagramma a barre è per categorie distinte, con barre separate."
   },
   {
     id: "u06016", topic: "Boxplot",
     q: "In un boxplot, la linea interna alla scatola rappresenta:",
     opts: [
-      "La mediana della distribuzione",
+      "Il valore massimo osservato",
       "La media aritmetica dei dati",
-      "Il valore massimo osservato"
+      "La mediana della distribuzione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nel boxplot la scatola va dal primo al terzo quartile e la linea interna è la MEDIANA. I 'baffi' si estendono verso i valori estremi (entro 1,5×IQR); oltre ci sono gli outlier."
   },
   {
@@ -195,22 +195,22 @@ registerSubject("Statistica", [
     id: "u06018", topic: "Percentili",
     q: "Il 25° percentile di una distribuzione:",
     opts: [
-      "È il valore sotto il quale si trova il 25% delle osservazioni",
       "È il valore che compare nel 25% dei casi come modalità",
+      "È il valore sotto il quale si trova il 25% delle osservazioni",
       "Corrisponde sempre a un quarto del valore massimo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il p-esimo percentile è il valore sotto cui cade il p% delle osservazioni. Il 25° percentile coincide con il primo quartile Q1; il 50° con la mediana; il 75° con Q3."
   },
   {
     id: "u06019", topic: "Quartili",
     q: "Lo scarto interquartile (IQR) è definito come:",
     opts: [
-      "La differenza tra il terzo e il primo quartile (Q3 − Q1)",
+      "La somma del primo e del terzo quartile diviso due",
       "La differenza tra il valore massimo e il valore minimo",
-      "La somma del primo e del terzo quartile diviso due"
+      "La differenza tra il terzo e il primo quartile (Q3 − Q1)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "IQR = Q3 − Q1 misura la dispersione del 50% centrale dei dati ed è robusto agli outlier. Si usa nel boxplot per individuare i valori anomali (oltre 1,5×IQR dai quartili)."
   },
   {
@@ -228,22 +228,22 @@ registerSubject("Statistica", [
     id: "u06021", topic: "Probabilità",
     q: "Secondo la definizione classica, la probabilità di un evento è:",
     opts: [
-      "Il rapporto tra i casi favorevoli e i casi possibili, se equiprobabili",
       "Il numero di volte in cui l'evento si è verificato in passato",
+      "Il rapporto tra i casi favorevoli e i casi possibili, se equiprobabili",
       "La somma dei casi favorevoli e dei casi possibili dell'esperimento"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Definizione classica: P(E) = casi favorevoli / casi possibili, valida quando i casi sono equiprobabili. La probabilità è sempre compresa tra 0 e 1."
   },
   {
     id: "u06022", topic: "Probabilità",
     q: "Quale di questi valori NON può essere una probabilità?",
     opts: [
-      "1,2",
+      "1",
       "0",
-      "1"
+      "1,2"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La probabilità è sempre compresa tra 0 e 1 (estremi inclusi). 1,2 è maggiore di 1, quindi impossibile. 0 (evento impossibile) e 1 (evento certo) sono invece ammessi."
   },
   {
@@ -261,22 +261,22 @@ registerSubject("Statistica", [
     id: "u06024", topic: "Eventi incompatibili",
     q: "Due eventi si dicono incompatibili (mutuamente esclusivi) quando:",
     opts: [
-      "Non possono verificarsi entrambi contemporaneamente: P(A e B) = 0",
       "Il verificarsi di uno non cambia la probabilità dell'altro",
+      "Non possono verificarsi entrambi contemporaneamente: P(A e B) = 0",
       "Hanno sempre la stessa identica probabilità di verificarsi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Eventi incompatibili non possono accadere insieme: la loro intersezione è vuota, P(A∩B)=0. Attenzione: incompatibile NON significa indipendente (anzi, due eventi incompatibili con prob. positiva sono dipendenti)."
   },
   {
     id: "u06025", topic: "Eventi indipendenti",
     q: "Due eventi A e B sono indipendenti quando:",
     opts: [
-      "P(A e B) = P(A) × P(B): il verificarsi di uno non influenza l'altro",
+      "La somma delle loro probabilità è sempre uguale a 1",
       "Non possono mai verificarsi contemporaneamente nello stesso esperimento",
-      "La somma delle loro probabilità è sempre uguale a 1"
+      "P(A e B) = P(A) × P(B): il verificarsi di uno non influenza l'altro"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Per eventi indipendenti la probabilità congiunta è il prodotto: P(A∩B)=P(A)·P(B), e P(A|B)=P(A). Indipendenza riguarda l'influenza reciproca, cosa diversa dall'incompatibilità."
   },
   {
@@ -294,22 +294,22 @@ registerSubject("Statistica", [
     id: "u06027", topic: "Eventi incompatibili vs indipendenti",
     q: "'incompatibili' e 'indipendenti' sono sinonimi?",
     opts: [
-      "No: incompatibili non possono coesistere, indipendenti non si influenzano",
       "Sì, indicano entrambi che gli eventi non si verificano mai insieme",
+      "No: incompatibili non possono coesistere, indipendenti non si influenzano",
       "No: incompatibili significa che uno è il complementare dell'altro"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Sono concetti diversi. Incompatibili: P(A∩B)=0 (non coesistono). Indipendenti: P(A∩B)=P(A)·P(B) (non si influenzano). Due eventi incompatibili con probabilità non nulle sono in realtà DIPENDENTI."
   },
   {
     id: "u06028", topic: "Probabilità condizionata",
     q: "La probabilità condizionata P(A|B) rappresenta:",
     opts: [
-      "La probabilità che si verifichi A sapendo che B si è verificato",
+      "La probabilità che B si verifichi sapendo che A è avvenuto",
       "La probabilità che si verifichi almeno uno tra A e B",
-      "La probabilità che B si verifichi sapendo che A è avvenuto"
+      "La probabilità che si verifichi A sapendo che B si è verificato"
     ],
-    correct: [0],
+    correct: [2],
     exp: "P(A|B) è la probabilità di A DATO che B è avvenuto, e si calcola come P(A∩B)/P(B). Attenzione a non invertirla con P(B|A): sono in generale diverse."
   },
   {
@@ -327,22 +327,22 @@ registerSubject("Statistica", [
     id: "u06030", topic: "Bayes",
     q: "Il teorema di Bayes serve principalmente a:",
     opts: [
-      "Aggiornare la probabilità di un'ipotesi con nuove evidenze",
       "Calcolare la media di una distribuzione di probabilità continua",
+      "Aggiornare la probabilità di un'ipotesi con nuove evidenze",
       "Verificare se due variabili numeriche sono tra loro correlate"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Bayes 'inverte' il condizionamento e aggiorna una probabilità a priori in una a posteriori dopo aver osservato un'evidenza: P(ipotesi|dato)=P(dato|ipotesi)·P(ipotesi)/P(dato). Base di molti classificatori."
   },
   {
     id: "u06031", topic: "Probabilità congiunta",
     q: "Per due eventi indipendenti, la probabilità che si verifichino entrambi è:",
     opts: [
-      "Il prodotto delle loro probabilità: P(A) × P(B)",
+      "La più grande tra le due probabilità P(A) e P(B)",
       "La somma delle loro probabilità: P(A) + P(B)",
-      "La più grande tra le due probabilità P(A) e P(B)"
+      "Il prodotto delle loro probabilità: P(A) × P(B)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Per eventi indipendenti P(A∩B)=P(A)·P(B). Es: due lanci di moneta, P(due teste)=0,5·0,5=0,25. Per eventi dipendenti serve invece P(A)·P(B|A)."
   },
   {
@@ -360,22 +360,22 @@ registerSubject("Statistica", [
     id: "u06033", topic: "Distribuzione normale",
     q: "La distribuzione normale (gaussiana) ha forma:",
     opts: [
-      "A campana, simmetrica rispetto alla media",
       "Uniforme, con tutti i valori ugualmente probabili",
+      "A campana, simmetrica rispetto alla media",
       "Fortemente asimmetrica verso destra"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La normale è la classica curva 'a campana', simmetrica attorno alla media: media, mediana e moda coincidono. È descritta da due parametri: media (posizione) e deviazione standard (larghezza)."
   },
   {
     id: "u06034", topic: "Distribuzione normale",
     q: "Nella distribuzione normale, media, mediana e moda:",
     opts: [
-      "Coincidono: la curva è simmetrica",
+      "Non sono definite per questa distribuzione",
       "Hanno la media doppia rispetto alla mediana",
-      "Non sono definite per questa distribuzione"
+      "Coincidono: la curva è simmetrica"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nella normale, essendo simmetrica e unimodale, i tre indici di posizione coincidono nel centro. In distribuzioni asimmetriche invece si separano (es. media > mediana se coda a destra)."
   },
   {
@@ -393,22 +393,22 @@ registerSubject("Statistica", [
     id: "u06036", topic: "Standardizzazione",
     q: "Lo z-score (punteggio standardizzato) di un valore indica:",
     opts: [
-      "A quante deviazioni standard il valore si trova dalla media",
       "La probabilità esatta che il valore si verifichi",
+      "A quante deviazioni standard il valore si trova dalla media",
       "Il valore diviso per il numero totale di osservazioni"
     ],
-    correct: [0],
+    correct: [1],
     exp: "z = (x − media) / deviazione standard: dice quante deviazioni standard un valore dista dalla media. Uno z=2 significa 'due deviazioni sopra la media'. Serve a confrontare valori di distribuzioni diverse."
   },
   {
     id: "u06037", topic: "Distribuzione normale standard",
     q: "La distribuzione normale standard ha:",
     opts: [
-      "Media 0 e deviazione standard 1",
+      "Media e deviazione standard entrambe pari a 100",
       "Media 1 e deviazione standard 0",
-      "Media e deviazione standard entrambe pari a 100"
+      "Media 0 e deviazione standard 1"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La normale standard è una normale con media 0 e deviazione standard 1. Ogni normale può essere ricondotta a essa con la standardizzazione (z-score), per usare le tavole di Gauss."
   },
   {
@@ -426,22 +426,22 @@ registerSubject("Statistica", [
     id: "u06039", topic: "Distribuzione di Poisson",
     q: "La distribuzione di Poisson è tipicamente usata per modellare:",
     opts: [
-      "Il numero di eventi rari che avvengono in un dato intervallo di tempo o spazio",
       "La media di un campione estratto casualmente da una popolazione normale",
+      "Il numero di eventi rari che avvengono in un dato intervallo di tempo o spazio",
       "Il valore centrale di una distribuzione simmetrica a forma di campana"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La Poisson descrive il conteggio di eventi rari e indipendenti in un intervallo fisso (es. chiamate a un call center in un'ora, difetti per metro di tessuto). Dipende dal solo parametro λ (tasso medio)."
   },
   {
     id: "u06040", topic: "Distribuzioni",
     q: "In una distribuzione asimmetrica con coda a destra (asimmetria positiva), di solito:",
     opts: [
-      "La media è maggiore della mediana, tirata verso i valori alti",
+      "La moda è maggiore sia della media sia della mediana",
       "Media e mediana coincidono sempre nonostante l'asimmetria",
-      "La moda è maggiore sia della media sia della mediana"
+      "La media è maggiore della mediana, tirata verso i valori alti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Con coda a destra i pochi valori molto alti trascinano la MEDIA verso l'alto più della mediana, quindi tipicamente media > mediana > moda. È il caso classico dei redditi."
   },
   {
@@ -459,22 +459,22 @@ registerSubject("Statistica", [
     id: "u06042", topic: "Correlazione",
     q: "Un coefficiente di correlazione pari a 0 indica che:",
     opts: [
-      "Non c'è relazione lineare tra le due variabili",
       "Le due variabili sono perfettamente correlate in modo diretto tra di loro",
+      "Non c'è relazione lineare tra le due variabili",
       "Una delle due variabili è costante nel tempo e non varia in alcun modo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "r=0 significa assenza di relazione LINEARE, ma potrebbe esistere una relazione non lineare (es. a U) che il coefficiente di Pearson non coglie. Correlazione nulla non implica indipendenza totale."
   },
   {
     id: "u06043", topic: "Correlazione e causa",
     q: "Una forte correlazione tra due variabili implica che una causa l'altra?",
     opts: [
-      "No: la correlazione non implica un rapporto di causa-effetto",
+      "No, la correlazione esiste solo tra variabili senza alcun legame",
       "Sì: se sono correlate, una è sicuramente causa dell'altra",
-      "No, la correlazione esiste solo tra variabili senza alcun legame"
+      "No: la correlazione non implica un rapporto di causa-effetto"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Correlazione ≠ causalità. Due variabili possono correlare per caso o per effetto di una terza variabile nascosta (confondente). Es: gelati venduti e annegamenti correlano, ma la causa comune è il caldo."
   },
   {
@@ -492,22 +492,22 @@ registerSubject("Statistica", [
     id: "u06045", topic: "Popolazione e campione",
     q: "Qual è la differenza tra popolazione e campione?",
     opts: [
-      "La popolazione è l'insieme completo; il campione è un sottoinsieme di essa",
       "Il campione è l'insieme completo; la popolazione un suo sottoinsieme",
+      "La popolazione è l'insieme completo; il campione è un sottoinsieme di essa",
       "La popolazione riguarda le persone, il campione gli oggetti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La popolazione è l'insieme di TUTTI gli elementi di interesse; il campione è un sottoinsieme che si studia per inferire proprietà della popolazione, quando esaminarla tutta è impossibile o costoso."
   },
   {
     id: "u06046", topic: "Parametro e statistica",
     q: "La media calcolata su un campione è un...",
     opts: [
-      "Una statistica, perché calcolata sui dati campionari",
+      "Un valore sempre uguale alla media della popolazione",
       "Un parametro, perché descrive l'intera popolazione",
-      "Un valore sempre uguale alla media della popolazione"
+      "Una statistica, perché calcolata sui dati campionari"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La media del campione è una STATISTICA (una stima); la media dell'intera popolazione è un PARAMETRO. La statistica campionaria varia da campione a campione e approssima il parametro."
   },
   {
@@ -525,22 +525,22 @@ registerSubject("Statistica", [
     id: "u06048", topic: "Errore standard",
     q: "L'errore standard della media misura:",
     opts: [
-      "La variabilità della media campionaria da un campione all'altro",
       "La media dei valori campionari estratti dalla popolazione",
+      "La variabilità della media campionaria da un campione all'altro",
       "La differenza tra il valore massimo e minimo del campione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'errore standard è la deviazione standard della distribuzione delle medie campionarie: quantifica quanto la media di un campione può variare rispetto ad altri campioni. Diminuisce all'aumentare della numerosità n (σ/√n)."
   },
   {
     id: "u06049", topic: "Errore standard",
     q: "Aumentando la numerosità del campione, l'errore standard della media:",
     opts: [
-      "Diminuisce, perché la stima diventa più precisa (si divide per √n)",
+      "Diventa uguale alla deviazione standard della popolazione",
       "Aumenta, perché ci sono più dati da cui può derivare errore",
-      "Diventa uguale alla deviazione standard della popolazione"
+      "Diminuisce, perché la stima diventa più precisa (si divide per √n)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'errore standard = σ/√n: cresce n → diminuisce l'errore standard, cioè la media campionaria è più precisa. Per dimezzarlo serve però un campione quattro volte più grande."
   },
   {
@@ -558,22 +558,22 @@ registerSubject("Statistica", [
     id: "u06051", topic: "Tipi di dati",
     q: "Quale di queste è una variabile qualitativa (categorica)?",
     opts: [
-      "Il colore degli occhi",
       "L'altezza misurata in centimetri",
+      "Il colore degli occhi",
       "Il numero di figli di una persona"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il colore degli occhi è qualitativo (categorie senza ordine numerico). L'altezza in cm e il numero di figli sono variabili QUANTITATIVE (misurabili con numeri): rispettivamente continua e discreta."
   },
   {
     id: "u06052", topic: "Scale di misura",
     q: "Una variabile su scala ORDINALE:",
     opts: [
-      "Ha categorie ordinabili ma senza distanze numeriche significative, es. basso/medio/alto",
+      "È sempre e comunque una variabile numerica di tipo continuo, come il peso o l'altezza",
       "Ha categorie prive di qualsiasi ordine possibile tra loro, come ad esempio il colore",
-      "È sempre e comunque una variabile numerica di tipo continuo, come il peso o l'altezza"
+      "Ha categorie ordinabili ma senza distanze numeriche significative, es. basso/medio/alto"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La scala ordinale ha un ordine tra le categorie (es. livello di soddisfazione basso<medio<alto) ma le distanze non sono quantificabili. La nominale non ha ordine; le scale a intervalli/rapporti sono numeriche."
   },
   {
@@ -591,22 +591,22 @@ registerSubject("Statistica", [
     id: "u06054", topic: "Intervallo di confidenza",
     q: "Un intervallo di confidenza al 95% significa che:",
     opts: [
-      "Nel 95% dei campioni l'intervallo contiene il vero parametro",
       "Il 95% dei dati del campione si trova dentro l'intervallo",
+      "Nel 95% dei campioni l'intervallo contiene il vero parametro",
       "Il parametro ha il 5% di probabilità di essere corretto"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Un IC al 95% è costruito con un metodo che, ripetendo il campionamento, cattura il vero parametro nel 95% dei casi. Non è la probabilità che il singolo intervallo lo contenga (il parametro è fisso)."
   },
   {
     id: "u06055", topic: "Stima",
     q: "Uno stimatore si dice corretto (non distorto) quando:",
     opts: [
-      "Il valore atteso coincide col parametro da stimare",
+      "Fornisce sempre un valore superiore al parametro reale",
       "Restituisce sempre lo stesso valore in ogni campione",
-      "Fornisce sempre un valore superiore al parametro reale"
+      "Il valore atteso coincide col parametro da stimare"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Uno stimatore corretto (unbiased) ha valore atteso uguale al parametro: in media 'ci azzecca'. Es: la media campionaria è uno stimatore corretto della media della popolazione."
   },
   {
@@ -624,22 +624,22 @@ registerSubject("Statistica", [
     id: "u06057", topic: "Outlier",
     q: "Un outlier è:",
     opts: [
-      "Un valore anomalo, molto distante dagli altri dati della distribuzione osservata",
       "Il valore che compare con la frequenza più alta all'interno della distribuzione",
+      "Un valore anomalo, molto distante dagli altri dati della distribuzione osservata",
       "La media aritmetica calcolata solo sui valori estremi della serie di dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Un outlier è un valore fortemente distante dagli altri, spesso identificato oltre 1,5×IQR dai quartili. Può essere un errore di misura o un caso reale ma raro: va indagato, non sempre eliminato."
   },
   {
     id: "u06058", topic: "Frequenze",
     q: "La somma di tutte le frequenze relative di una distribuzione è pari a:",
     opts: [
-      "1 (ovvero 100%)",
+      "La media delle frequenze assolute",
       "Il numero totale di osservazioni",
-      "La media delle frequenze assolute"
+      "1 (ovvero 100%)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le frequenze relative sono quote sul totale, quindi la loro somma è 1 (100%). La somma delle frequenze ASSOLUTE è invece pari al numero totale di osservazioni."
   },
   {
@@ -657,22 +657,22 @@ registerSubject("Statistica", [
     id: "u06060", topic: "Probabilità",
     q: "Estraendo una carta da un mazzo di 52, la probabilità che sia un asso è:",
     opts: [
-      "1/13",
       "4/13",
+      "1/13",
       "1/4"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Ci sono 4 assi su 52 carte: P = 4/52 = 1/13 ≈ 0,077. I casi favorevoli sono 4, i possibili 52."
   },
   {
     id: "u06061", topic: "Distribuzione uniforme",
     q: "In una distribuzione uniforme discreta:",
     opts: [
-      "Tutti i valori sono equiprobabili",
+      "Un solo valore ha probabilità 1 e gli altri 0",
       "La probabilità cresce linearmente con il valore",
-      "Un solo valore ha probabilità 1 e gli altri 0"
+      "Tutti i valori sono equiprobabili"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nella uniforme tutti gli esiti sono equiprobabili, es. il lancio di un dado equilibrato (ogni faccia 1/6). La forma è 'piatta', senza valori privilegiati."
   },
   {
@@ -690,22 +690,22 @@ registerSubject("Statistica", [
     id: "u06063", topic: "Curtosi",
     q: "La curtosi di una distribuzione descrive:",
     opts: [
-      "Quanto è 'appuntita' la distribuzione e quanto sono pesanti le sue code",
       "La direzione della relazione lineare che lega due variabili osservate",
+      "Quanto è 'appuntita' la distribuzione e quanto sono pesanti le sue code",
       "Il numero complessivo di mode presenti nella distribuzione dei dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La curtosi misura il 'peso' delle code e l'appuntimento del picco rispetto alla normale: alta curtosi = code pesanti e picco pronunciato (più outlier), bassa = distribuzione più piatta."
   },
   {
     id: "u06064", topic: "Probabilità totale",
     q: "La probabilità di ottenere almeno una testa in 2 lanci di una moneta equa è:",
     opts: [
-      "3/4",
+      "1, perché è certo ottenere almeno una testa",
       "1/4, cioè due teste di fila",
-      "1, perché è certo ottenere almeno una testa"
+      "3/4"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Conviene usare il complementare: P(nessuna testa)=P(TT... croce-croce)=1/2·1/2=1/4, quindi P(almeno una testa)=1−1/4=3/4. Calcolare 'almeno uno' col complementare è spesso più semplice."
   },
   {
@@ -723,22 +723,22 @@ registerSubject("Statistica", [
     id: "u06066", topic: "Probabilità",
     q: "Un evento con probabilità 0 è:",
     opts: [
-      "Un evento impossibile",
       "Un evento certo",
+      "Un evento impossibile",
       "Un evento molto probabile"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Probabilità 0 = evento impossibile; probabilità 1 = evento certo. Tutti gli altri eventi hanno probabilità intermedia tra 0 e 1."
   },
   {
     id: "u06067", topic: "Distribuzione normale",
     q: "Cambiando la deviazione standard di una normale (a parità di media), la curva:",
     opts: [
-      "Cambia larghezza: con σ più grande la campana è più larga e più bassa",
+      "Diventa fortemente asimmetrica con una coda più lunga verso destra",
       "Cambia soltanto il colore della curva ma non la sua forma complessiva",
-      "Diventa fortemente asimmetrica con una coda più lunga verso destra"
+      "Cambia larghezza: con σ più grande la campana è più larga e più bassa"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La deviazione standard controlla la LARGHEZZA: σ grande → campana larga e schiacciata; σ piccola → stretta e alta. È la media a spostare la curva lateralmente, non σ."
   },
   {
@@ -756,22 +756,22 @@ registerSubject("Statistica", [
     id: "u06069", topic: "Probabilità condizionata",
     q: "In un'urna con 3 palline rosse e 2 nere, estraendone due SENZA reinserimento, la probabilità che la seconda sia rossa dipende:",
     opts: [
-      "Dall'esito della prima estrazione",
       "Non dipende dalla prima: gli eventi sono indipendenti",
+      "Dall'esito della prima estrazione",
       "Solo dal numero totale iniziale di palline"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Senza reinserimento la composizione dell'urna cambia dopo la prima estrazione: gli eventi sono DIPENDENTI e serve la probabilità condizionata. Con reinserimento sarebbero invece indipendenti."
   },
   {
     id: "u06070", topic: "Statistica descrittiva vs inferenziale",
     q: "Qual è la differenza tra statistica descrittiva e inferenziale?",
     opts: [
-      "La descrittiva sintetizza i dati raccolti; l'inferenziale generalizza alla popolazione",
+      "La descrittiva riguarda soltanto i grafici, l'inferenziale soltanto le tabelle",
       "La descrittiva fa uso della probabilità mentre l'inferenziale non la utilizza affatto",
-      "La descrittiva riguarda soltanto i grafici, l'inferenziale soltanto le tabelle"
+      "La descrittiva sintetizza i dati raccolti; l'inferenziale generalizza alla popolazione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La statistica descrittiva sintetizza e rappresenta i dati raccolti (indici, grafici). L'inferenziale usa un campione per trarre conclusioni (stime, test) sull'intera popolazione, con un margine di incertezza."
   },
   {
@@ -789,22 +789,22 @@ registerSubject("Statistica", [
     id: "u06072", topic: "Deviazione standard",
     q: "Sommando una costante c a ogni valore dei dati, la deviazione standard:",
     opts: [
-      "Resta invariata, perché aggiungere una costante non cambia la dispersione",
       "Viene moltiplicata per il valore della costante c aggiunta a ciascun dato",
+      "Resta invariata, perché aggiungere una costante non cambia la dispersione",
       "Diventa esattamente zero indipendentemente dai valori assunti dai dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Aggiungere una costante SPOSTA tutti i dati (cambia la media di c) ma non ne modifica la dispersione: gli scarti dalla media restano identici, quindi la deviazione standard non cambia."
   },
   {
     id: "u06073", topic: "Probabilità",
     q: "La probabilità che, lanciando un dado equo, esca un numero pari è:",
     opts: [
-      "1/2",
+      "2/3",
       "1/3",
-      "2/3"
+      "1/2"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I numeri pari su un dado sono 2, 4, 6: tre casi favorevoli su sei possibili → 3/6 = 1/2."
   },
   {
@@ -822,22 +822,22 @@ registerSubject("Statistica", [
     id: "u06075", topic: "Distribuzioni",
     q: "Quale distribuzione è più adatta a modellare il numero di clienti che entrano in un negozio in un'ora?",
     opts: [
-      "La distribuzione di Poisson",
       "La distribuzione normale standard",
+      "La distribuzione di Poisson",
       "La distribuzione uniforme continua"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il conteggio di eventi che accadono in un intervallo di tempo (arrivi di clienti) è tipicamente modellato dalla Poisson, con parametro λ pari al tasso medio di arrivi."
   },
   {
     id: "u06076", topic: "Correlazione",
     q: "Una correlazione di −0,9 tra due variabili indica:",
     opts: [
-      "Una forte relazione lineare inversa tra le variabili",
+      "Una relazione lineare diretta molto forte tra le due variabili osservate",
       "L'assenza totale di qualsiasi relazione tra le due variabili considerate",
-      "Una relazione lineare diretta molto forte tra le due variabili osservate"
+      "Una forte relazione lineare inversa tra le variabili"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il segno indica il verso (− = inversa) e il valore assoluto la forza: |−0,9| è vicino a 1, quindi relazione lineare inversa MOLTO forte. Non è debole: la debolezza si ha vicino a 0."
   },
   {
@@ -855,22 +855,22 @@ registerSubject("Statistica", [
     id: "u06078", topic: "Media geometrica",
     q: "La media geometrica è particolarmente indicata per:",
     opts: [
-      "Tassi di crescita e rapporti, come le crescite percentuali composte nel tempo",
       "Individuare il valore che si presenta più spesso all'interno di una serie",
+      "Tassi di crescita e rapporti, come le crescite percentuali composte nel tempo",
       "Misurare quanto i dati si disperdono attorno alla loro media aritmetica"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La media geometrica (radice n-esima del prodotto dei valori) è adatta a grandezze moltiplicative come tassi di crescita e rendimenti composti, dove la media aritmetica sovrastimerebbe."
   },
   {
     id: "u06079", topic: "Campionamento",
     q: "Un campione si dice 'distorto' (biased) quando:",
     opts: [
-      "Non è rappresentativo della popolazione e favorisce sistematicamente certi elementi",
+      "È stato estratto in modo perfettamente casuale da tutta la popolazione",
       "Contiene esattamente la metà degli elementi dell'intera popolazione studiata",
-      "È stato estratto in modo perfettamente casuale da tutta la popolazione"
+      "Non è rappresentativo della popolazione e favorisce sistematicamente certi elementi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un campione distorto sovra o sotto-rappresenta parti della popolazione in modo sistematico (es. sondaggio solo tra chi usa internet), producendo stime fuorvianti. Il campionamento casuale riduce il bias."
   },
   {
@@ -888,22 +888,22 @@ registerSubject("Statistica", [
     id: "u06081", topic: "Distribuzione normale",
     q: "Nella normale, la probabilità di ottenere ESATTAMENTE un valore preciso (es. x = 1,73000...) è:",
     opts: [
-      "0, perché su una variabile continua i singoli punti hanno probabilità nulla",
       "Un valore pari all'altezza della curva di densità in quel preciso punto",
+      "0, perché su una variabile continua i singoli punti hanno probabilità nulla",
       "1, perché quel valore rientra sicuramente tra quelli che si possono verificare"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Per una variabile continua la probabilità di un singolo valore esatto è 0: ha senso solo la probabilità su un INTERVALLO (area sotto la curva). L'altezza della curva è la densità, non una probabilità."
   },
   {
     id: "u06082", topic: "Indici",
     q: "Quale coppia di indici misura la DISPERSIONE (e non la posizione)?",
     opts: [
-      "La varianza e la deviazione standard",
+      "La media e la moda dei dati",
       "La mediana e la moda della serie",
-      "La media e la moda dei dati"
+      "La varianza e la deviazione standard"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Varianza e deviazione standard misurano la dispersione (quanto i dati si allontanano dal centro). Media, mediana e moda sono indici di posizione (dove si colloca il centro)."
   },
   {
@@ -921,22 +921,22 @@ registerSubject("Statistica", [
     id: "u06084", topic: "Distribuzione binomiale",
     q: "Nella distribuzione binomiale, il valore atteso (media) del numero di successi è:",
     opts: [
-      "n × p, cioè numero di prove per probabilità di successo",
       "p / n, cioè probabilità di successo divisa per il numero di prove",
+      "n × p, cioè numero di prove per probabilità di successo",
       "n + p, cioè numero di prove più la probabilità di successo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Per la binomiale il numero medio di successi è n·p. Es: in 10 lanci di moneta (p=0,5), il numero atteso di teste è 10·0,5 = 5."
   },
   {
     id: "u06085", topic: "Probabilità",
     q: "Due dadi vengono lanciati. La probabilità di ottenere due numeri uguali (un 'doppio') è:",
     opts: [
-      "1/6",
+      "5/36",
       "1/2",
-      "5/36"
+      "1/6"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I doppi sono (1,1)(2,2)(3,3)(4,4)(5,5)(6,6): 6 casi su 36 → 1/6. Ogni faccia deve ripetersi identica."
   },
   {
@@ -954,22 +954,22 @@ registerSubject("Statistica", [
     id: "u06087", topic: "Scale di misura",
     q: "La temperatura in gradi Celsius è una variabile su scala:",
     opts: [
-      "A intervalli (lo zero è convenzionale, non assoluto)",
       "A rapporti (lo zero indica assenza della grandezza)",
+      "A intervalli (lo zero è convenzionale, non assoluto)",
       "Ordinale"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La scala Celsius è a intervalli: le differenze hanno senso ma lo zero è convenzionale (0°C non è 'assenza di temperatura'), quindi non si può dire che 20°C è 'il doppio' di 10°C. La scala Kelvin è invece a rapporti."
   },
   {
     id: "u06088", topic: "Probabilità",
     q: "La probabilità di NON ottenere un 6 in un singolo lancio di dado è:",
     opts: [
-      "5/6",
+      "4/6",
       "1/2",
-      "4/6"
+      "5/6"
     ],
-    correct: [0],
+    correct: [2],
     exp: "P(non 6) = 1 − P(6) = 1 − 1/6 = 5/6. Le facce diverse da 6 sono cinque su sei."
   },
   {
@@ -987,22 +987,22 @@ registerSubject("Statistica", [
     id: "u06090", topic: "Correlazione",
     q: "Il diagramma più adatto a visualizzare la relazione tra due variabili quantitative è:",
     opts: [
-      "Lo scatter plot (diagramma a dispersione)",
       "Il diagramma a torta",
+      "Lo scatter plot (diagramma a dispersione)",
       "Il diagramma a barre"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Lo scatter plot mostra ogni osservazione come un punto (x,y) e rende visibile la relazione tra due variabili quantitative (lineare, non lineare, assente). La torta è per composizioni, l'istogramma per una sola variabile."
   },
   {
     id: "u06091", topic: "Media",
     q: "In un gruppo di 10 persone il salario medio è 2.000€. Se entra una persona che guadagna 52.000€, la media:",
     opts: [
-      "Sale a circa 6.545€ per via del valore estremo",
+      "Scende, perché aumenta il numero di persone",
       "Sale esattamente a 3.000€",
-      "Scende, perché aumenta il numero di persone"
+      "Sale a circa 6.545€ per via del valore estremo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nuovo totale = 10·2000 + 52000 = 72000, diviso 11 ≈ 6.545€. Un singolo outlier stravolge la media: qui la mediana (più robusta) resterebbe vicina a 2.000€ e descriverebbe meglio il gruppo."
   },
   {
@@ -1020,22 +1020,22 @@ registerSubject("Statistica", [
     id: "u06093", topic: "Inferenza",
     q: "Aumentare il livello di confidenza (es. dal 90% al 99%), a parità di dati, rende l'intervallo:",
     opts: [
-      "Più ampio, perché per essere più 'sicuri' serve un intervallo più largo",
       "Più stretto, perché all'aumentare della confidenza aumenta la precisione",
+      "Più ampio, perché per essere più 'sicuri' serve un intervallo più largo",
       "Invariato, perché l'ampiezza non dipende dal livello di confidenza scelto"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Più confidenza vuoi, più devi 'allargare la rete': l'intervallo diventa più ampio. C'è un compromesso tra confidenza e precisione: per stringerlo mantenendo la confidenza serve più dati."
   },
   {
     id: "u06094", topic: "Statistica descrittiva",
     q: "Quale misura è più appropriata per descrivere il 'valore tipico' di una variabile categorica (es. il colore preferito)?",
     opts: [
-      "La moda",
+      "La mediana",
       "La media",
-      "La mediana"
+      "La moda"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Su una variabile categorica non ha senso sommare o ordinare i valori, quindi media e mediana non si applicano: l'unico indice di posizione utilizzabile è la MODA (la categoria più frequente)."
   },
   {
@@ -1053,22 +1053,22 @@ registerSubject("Statistica", [
     id: "u06096", topic: "Distribuzioni",
     q: "In una distribuzione simmetrica e unimodale, quale relazione è vera?",
     opts: [
-      "Media ≈ mediana ≈ moda",
       "Moda > media > mediana",
+      "Media ≈ mediana ≈ moda",
       "Media < moda < mediana"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Nella simmetria unimodale i tre indici coincidono (o quasi) al centro. Le disuguaglianze tra media, mediana e moda emergono solo in presenza di asimmetria."
   },
   {
     id: "u06097", topic: "Errore standard",
     q: "L'errore standard e la deviazione standard sono la stessa cosa?",
     opts: [
-      "No: la SD misura la dispersione dei dati, l'errore standard quella della media campionaria",
+      "Sì, ma l'errore standard si utilizza soltanto quando i campioni sono molto piccoli",
       "No, l'errore standard riguarda esclusivamente i dati di tipo qualitativo o categorico",
-      "Sì, ma l'errore standard si utilizza soltanto quando i campioni sono molto piccoli"
+      "No: la SD misura la dispersione dei dati, l'errore standard quella della media campionaria"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La deviazione standard descrive quanto variano i DATI; l'errore standard (σ/√n) descrive quanto varia la MEDIA da campione a campione. L'errore standard è più piccolo e diminuisce con n."
   },
   {
@@ -1086,22 +1086,22 @@ registerSubject("Statistica", [
     id: "u06099", topic: "Grafici",
     q: "Per rappresentare la composizione percentuale di un totale (es. quote di mercato), il grafico più adatto è:",
     opts: [
-      "Il diagramma a torta, oppure le barre impilate",
       "Il diagramma a dispersione tra due variabili",
+      "Il diagramma a torta, oppure le barre impilate",
       "Il boxplot che mostra quartili e mediana"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Torta o barre impilate mostrano bene come un totale si suddivide in parti (quote che sommano a 100%). Lo scatter serve per relazioni tra variabili, l'istogramma per distribuzioni, il boxplot per posizione/dispersione."
   },
   {
     id: "u06100", topic: "Probabilità condizionata",
     q: "Su 100 persone, 40 usano gli occhiali e, tra queste, 10 sono mancine. La probabilità di essere mancino DATO che si portano gli occhiali è:",
     opts: [
-      "10/40 = 0,25",
+      "40/10 = 4",
       "40/100 = 0,40",
-      "40/10 = 4"
+      "10/40 = 0,25"
     ],
-    correct: [0],
+    correct: [2],
     exp: "P(mancino | occhiali) = mancini con occhiali / totale con occhiali = 10/40 = 0,25. Il condizionamento restringe lo spazio ai soli 40 con occhiali, non ai 100 totali."
   },
   // === AGGIUNGI NUOVE DOMANDE STATISTICA QUI ===

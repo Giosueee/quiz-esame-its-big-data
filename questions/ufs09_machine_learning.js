@@ -7,11 +7,11 @@ registerSubject("Machine Learning", [
     id: "u09001", topic: "Tipi di ML",
     q: "Nel machine learning supervisionato:",
     opts: [
-      "Si impara da dati etichettati",
+      "L'algoritmo non impara dai dati",
       "Non ci sono etichette nei dati",
-      "L'algoritmo non impara dai dati"
+      "Si impara da dati etichettati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nel supervisionato ogni esempio ha una label (output corretto): il modello impara la relazione input→output per prevedere nuovi casi. Classificazione e regressione sono supervisionate."
   },
   {
@@ -29,22 +29,22 @@ registerSubject("Machine Learning", [
     id: "u09003", topic: "Classificazione vs regressione",
     q: "La differenza tra classificazione e regressione è che:",
     opts: [
-      "La classificazione predice categorie, la regressione valori numerici continui",
       "La regressione produce classi discrete invece di valori continui",
+      "La classificazione predice categorie, la regressione valori numerici continui",
       "La classificazione apprende senza label come un metodo non supervisionato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Classificazione → output categorico (spam/non spam). Regressione → output numerico continuo (prezzo di una casa). Entrambe sono supervisionate."
   },
   {
     id: "u09004", topic: "Overfitting",
     q: "L'overfitting si verifica quando un modello:",
     opts: [
-      "Si adatta troppo ai dati di training e generalizza male su dati nuovi",
+      "Non riceve dati di training e quindi non apprende parametri",
       "È troppo semplice e non riesce a rappresentare la relazione nei dati",
-      "Non riceve dati di training e quindi non apprende parametri"
+      "Si adatta troppo ai dati di training e generalizza male su dati nuovi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'overfitting è l'apprendimento a memoria del rumore del training: ottime prestazioni sul training ma scarse sul test. Si combatte con regolarizzazione, più dati, modelli più semplici."
   },
   {
@@ -62,22 +62,22 @@ registerSubject("Machine Learning", [
     id: "u09006", topic: "Train/test split",
     q: "Perché si divide il dataset in training e test?",
     opts: [
-      "Per valutare le prestazioni su dati mai visti dal modello",
       "Per aumentare artificialmente il training set a scapito della valutazione",
+      "Per valutare le prestazioni su dati mai visti dal modello",
       "Usare tutto il dataset insieme senza separare training e test"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il test set, mai visto durante l'addestramento, stima la capacità di GENERALIZZAZIONE. Valutare sul training darebbe risultati ottimistici e ingannevoli."
   },
   {
     id: "u09007", topic: "Validation set",
     q: "A cosa serve il validation set?",
     opts: [
-      "A scegliere iperparametri e modelli senza toccare il test",
+      "Assegnare manualmente le label invece di scegliere iperparametri",
       "Usare la validazione al posto dei dati di addestramento",
-      "Assegnare manualmente le label invece di scegliere iperparametri"
+      "A scegliere iperparametri e modelli senza toccare il test"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il validation set serve per tuning di iperparametri e selezione del modello. Il test finale resta 'intatto' per una stima imparziale delle prestazioni finali."
   },
   {
@@ -95,22 +95,22 @@ registerSubject("Machine Learning", [
     id: "u09009", topic: "Bias-variance",
     q: "Il compromesso bias-variance dice che:",
     opts: [
-      "Ridurre il bias tende ad aumentare la varianza e viceversa",
       "Bias e varianza cambiano indipendentemente dalla complessità del modello",
+      "Ridurre il bias tende ad aumentare la varianza e viceversa",
       "Si possono portare a zero bias e varianza con una scelta semplice"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Modelli semplici hanno alto bias/bassa varianza (underfit); modelli complessi basso bias/alta varianza (overfit). L'obiettivo è il punto di equilibrio che minimizza l'errore su dati nuovi."
   },
   {
     id: "u09010", topic: "Confusion matrix",
     q: "La matrice di confusione mostra:",
     opts: [
-      "Il confronto tra classi predette e classi reali",
+      "Mostra la distribuzione delle osservazioni nel dataset",
       "Mostra solo la percentuale di predizioni corrette",
-      "Mostra la distribuzione delle osservazioni nel dataset"
+      "Il confronto tra classi predette e classi reali"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La confusion matrix incrocia previsioni e verità: veri positivi, falsi positivi, falsi negativi, veri negativi. Da essa si ricavano accuratezza, precisione, recall, F1."
   },
   {
@@ -128,22 +128,22 @@ registerSubject("Machine Learning", [
     id: "u09012", topic: "Metriche",
     q: "La precision (precisione) misura:",
     opts: [
-      "Tra i casi predetti positivi, quanti lo sono davvero",
       "Tra i positivi reali, quanti sono stati trovati",
+      "Tra i casi predetti positivi, quanti lo sono davvero",
       "Il numero totale di errori"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Precision = TP/(TP+FP): dei predetti positivi, quanti giusti. Alta precision = pochi falsi allarmi. Importante quando un falso positivo è costoso."
   },
   {
     id: "u09013", topic: "Metriche",
     q: "La recall (sensibilità) misura:",
     opts: [
-      "Tra i positivi reali, quanti ne ha trovati il modello",
+      "La varianza del modello",
       "Tra i predetti positivi, quanti giusti",
-      "La varianza del modello"
+      "Tra i positivi reali, quanti ne ha trovati il modello"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Recall = TP/(TP+FN): dei casi realmente positivi, quanti individuati. Alta recall = pochi falsi negativi. Cruciale quando 'mancare' un positivo è grave (es. diagnosi)."
   },
   {
@@ -161,22 +161,22 @@ registerSubject("Machine Learning", [
     id: "u09015", topic: "Trade-off P/R",
     q: "Aumentare la recall tende a:",
     opts: [
-      "Ridurre la precision (e viceversa)",
       "Aumentare anche la precision",
+      "Ridurre la precision (e viceversa)",
       "Azzerare i falsi negativi e i falsi positivi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Abbassando la soglia di classificazione si trovano più positivi (recall su) ma con più falsi allarmi (precision giù). C'è un compromesso tra le due, riassunto dall'F1 o dalla curva P-R."
   },
   {
     id: "u09016", topic: "Metriche regressione",
     q: "L'RMSE (Root Mean Squared Error) misura:",
     opts: [
-      "L'errore tipico delle previsioni, nella stessa unità della variabile",
+      "Misura la relazione lineare tra variabili di input",
       "La percentuale di previsioni corrette",
-      "Misura la relazione lineare tra variabili di input"
+      "L'errore tipico delle previsioni, nella stessa unità della variabile"
     ],
-    correct: [0],
+    correct: [2],
     exp: "RMSE è la radice della media degli errori al quadrato: penalizza molto gli errori grandi ed è nelle unità della variabile target. Più basso = previsioni migliori."
   },
   {
@@ -194,22 +194,22 @@ registerSubject("Machine Learning", [
     id: "u09018", topic: "Feature scaling",
     q: "Perché si normalizzano/standardizzano le feature?",
     opts: [
-      "Per evitare che feature con scale diverse dominino il modello",
       "Per aumentare il numero di righe",
+      "Per evitare che feature con scale diverse dominino il modello",
       "Per assegnare label manuali ai dati prima di usarli nel modello"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Algoritmi basati su distanze o gradiente (KNN, SVM, reti) sono sensibili alla scala: standardizzare (media 0, sd 1) o normalizzare mette le feature su scale comparabili."
   },
   {
     id: "u09019", topic: "Encoding",
     q: "Il one-hot encoding serve a:",
     opts: [
-      "Trasformare una variabile categorica in colonne binarie 0/1",
+      "Rimuovere i valori mancanti",
       "Ridurre il numero di righe",
-      "Rimuovere i valori mancanti"
+      "Trasformare una variabile categorica in colonne binarie 0/1"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il one-hot crea una colonna binaria per ciascuna categoria, evitando di imporre un ordine numerico fittizio. Necessario per algoritmi che accettano solo input numerici."
   },
   {
@@ -227,22 +227,22 @@ registerSubject("Machine Learning", [
     id: "u09021", topic: "K-means",
     q: "Nel k-means, il valore di k:",
     opts: [
-      "Va scelto in anticipo dall'utente",
       "È sempre uguale al numero di righe",
+      "Va scelto in anticipo dall'utente",
       "Coincide col numero di feature"
     ],
-    correct: [0],
+    correct: [1],
     exp: "k (numero di cluster) è un iperparametro da fissare prima. Si sceglie con euristiche come il metodo del gomito (elbow) o il silhouette score."
   },
   {
     id: "u09022", topic: "PCA",
     q: "La PCA (Analisi delle Componenti Principali) serve a:",
     opts: [
-      "Ridurre la dimensionalità conservando la massima varianza",
+      "Aggiungere manualmente label ai record prima dell'addestramento",
       "Aumentare il numero di feature",
-      "Aggiungere manualmente label ai record prima dell'addestramento"
+      "Ridurre la dimensionalità conservando la massima varianza"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La PCA proietta i dati su nuove componenti ortogonali che catturano la maggior varianza: riduce le dimensioni mantenendo l'informazione, contro la 'maledizione della dimensionalità'."
   },
   {
@@ -260,22 +260,22 @@ registerSubject("Machine Learning", [
     id: "u09024", topic: "Random forest",
     q: "Una random forest è:",
     opts: [
-      "Un insieme (ensemble) di molti alberi di decisione",
       "Un singolo albero molto profondo",
+      "Un insieme (ensemble) di molti alberi di decisione",
       "Un algoritmo che raggruppa osservazioni senza label"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La random forest combina molti alberi addestrati su sottocampioni casuali e ne media le previsioni: riduce l'overfitting del singolo albero ed è robusta e accurata."
   },
   {
     id: "u09025", topic: "KNN",
     q: "Il k-Nearest Neighbors classifica un punto in base a:",
     opts: [
-      "Le classi dei k vicini più prossimi",
+      "La media calcolata su tutte le righe senza distinguere gruppi",
       "Una soglia sul primo attributo",
-      "La media calcolata su tutte le righe senza distinguere gruppi"
+      "Le classi dei k vicini più prossimi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "KNN assegna la classe più frequente tra i k punti più vicini (per distanza). È semplice, 'pigro' (non addestra un modello) e sensibile alla scala delle feature."
   },
   {
@@ -293,22 +293,22 @@ registerSubject("Machine Learning", [
     id: "u09027", topic: "Gradient descent",
     q: "La discesa del gradiente (gradient descent) serve a:",
     opts: [
-      "Minimizzare la funzione di costo aggiornando i parametri passo passo",
       "Separare i dati in sottoinsiemi di training, validazione e test",
+      "Minimizzare la funzione di costo aggiornando i parametri passo passo",
       "Assegnare nomi leggibili alle classi dopo la previsione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il gradient descent aggiorna i parametri nella direzione opposta al gradiente della funzione di costo, riducendola iterativamente fino a un minimo. È il motore di molti modelli."
   },
   {
     id: "u09028", topic: "Learning rate",
     q: "Un learning rate troppo alto nella discesa del gradiente:",
     opts: [
-      "Può far divergere l'ottimizzazione (salta il minimo)",
+      "Lascia invariati parametri, dati e risultato del modello",
       "Rende sempre l'addestramento più preciso",
-      "Lascia invariati parametri, dati e risultato del modello"
+      "Può far divergere l'ottimizzazione (salta il minimo)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un tasso di apprendimento troppo grande fa 'rimbalzare' i parametri e può divergere; troppo piccolo rende l'addestramento lentissimo. Va calibrato con attenzione."
   },
   {
@@ -326,22 +326,22 @@ registerSubject("Machine Learning", [
     id: "u09030", topic: "Data leakage",
     q: "Il data leakage (fuga di dati) si verifica quando:",
     opts: [
-      "Informazioni del test/futuro filtrano nel training, gonfiando le prestazioni",
       "Un modello con capacità insufficiente rispetto ai pattern",
+      "Informazioni del test/futuro filtrano nel training, gonfiando le prestazioni",
       "Assenza di label disponibili per l'apprendimento supervisionato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il leakage avviene quando il modello 'vede' in addestramento informazioni non disponibili in produzione (es. normalizzare usando anche il test): dà risultati ottimistici e falsi."
   },
   {
     id: "u09031", topic: "Iperparametri",
     q: "Un iperparametro (es. profondità dell'albero, k del KNN):",
     opts: [
-      "È impostato prima dell'addestramento, non appreso dai dati",
+      "È l'output del modello",
       "È appreso automaticamente dai dati",
-      "È l'output del modello"
+      "È impostato prima dell'addestramento, non appreso dai dati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Gli iperparametri configurano l'algoritmo e si scelgono prima (o tramite tuning su validation). I parametri veri (es. i pesi) sono invece appresi dai dati durante l'addestramento."
   },
   {
@@ -359,22 +359,22 @@ registerSubject("Machine Learning", [
     id: "u09033", topic: "Ensemble",
     q: "I metodi ensemble (bagging, boosting) migliorano le prestazioni:",
     opts: [
-      "Combinando più modelli deboli in uno più forte",
       "Usando un solo modello semplice",
+      "Combinando più modelli deboli in uno più forte",
       "Riducendo sempre l'interpretabilità a zero"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Gli ensemble aggregano più modelli: il bagging (random forest) riduce la varianza, il boosting (es. XGBoost) riduce il bias addestrando in sequenza correggendo gli errori."
   },
   {
     id: "u09034", topic: "Boosting",
     q: "Nel boosting, i modelli vengono addestrati:",
     opts: [
-      "In sequenza, ciascuno correggendo gli errori del precedente",
+      "Senza usare le etichette",
       "Tutti in parallelo e indipendenti",
-      "Senza usare le etichette"
+      "In sequenza, ciascuno correggendo gli errori del precedente"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il boosting costruisce modelli in serie: ogni nuovo modello si concentra sugli esempi sbagliati dai precedenti. Esempi: AdaBoost, Gradient Boosting, XGBoost."
   },
   {
@@ -392,22 +392,22 @@ registerSubject("Machine Learning", [
     id: "u09036", topic: "Curse of dimensionality",
     q: "La 'maledizione della dimensionalità' indica che:",
     opts: [
-      "Con troppe feature i dati diventano radi e i modelli peggiorano",
       "Più feature sono sempre meglio",
+      "Con troppe feature i dati diventano radi e i modelli peggiorano",
       "I dati diventano più densi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "All'aumentare delle dimensioni lo spazio cresce esponenzialmente e i punti diventano sparsi: distanze poco significative, rischio overfitting. Da qui l'utilità della riduzione (PCA)."
   },
   {
     id: "u09037", topic: "Naive Bayes",
     q: "Il classificatore Naive Bayes assume che le feature siano:",
     opts: [
-      "Indipendenti tra loro data la classe",
+      "Feature etichettate manualmente una per una",
       "Feature sempre dipendenti tra loro data la classe",
-      "Feature etichettate manualmente una per una"
+      "Indipendenti tra loro data la classe"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Naive Bayes applica Bayes assumendo indipendenza condizionata tra le feature: assunzione spesso irrealistica ma che funziona bene, es. nella classificazione di testi/spam."
   },
   {
@@ -425,22 +425,22 @@ registerSubject("Machine Learning", [
     id: "u09039", topic: "Clustering gerarchico",
     q: "Il clustering gerarchico produce:",
     opts: [
-      "Una struttura ad albero (dendrogramma) di raggruppamenti annidati",
       "Un unico valore numerico invece di una struttura di cluster",
+      "Una struttura ad albero (dendrogramma) di raggruppamenti annidati",
       "Una regressione che predice un valore numerico continuo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il clustering gerarchico costruisce cluster annidati visualizzati in un dendrogramma: si può 'tagliare' a diverse altezze per ottenere un diverso numero di gruppi, senza fissare k a priori."
   },
   {
     id: "u09040", topic: "Generalizzazione",
     q: "L'obiettivo finale di un modello ML è:",
     opts: [
-      "Generalizzare bene su dati nuovi mai visti",
+      "Avere il maggior numero di parametri",
       "Memorizzare perfettamente il training",
-      "Avere il maggior numero di parametri"
+      "Generalizzare bene su dati nuovi mai visti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un modello utile GENERALIZZA: fa buone previsioni su dati nuovi. Ottime prestazioni solo sul training (overfitting) non servono nella realtà."
   },
   {
@@ -458,22 +458,22 @@ registerSubject("Machine Learning", [
     id: "u09042", topic: "Pipeline ML",
     q: "Un tipico flusso di un progetto ML è:",
     opts: [
-      "Raccolta dati → preparazione → addestramento → valutazione → deploy",
       "Raccolta dati → preparazione → valutazione → addestramento → deploy",
+      "Raccolta dati → preparazione → addestramento → valutazione → deploy",
       "Deploy → raccolta dati → preparazione → addestramento → valutazione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il flusso: raccogliere e pulire i dati, ingegnerizzare feature, addestrare, valutare su dati indipendenti e infine mettere in produzione (e monitorare). È iterativo."
   },
   {
     id: "u09043", topic: "Imputazione",
     q: "Gestire i valori mancanti tramite imputazione significa:",
     opts: [
-      "Sostituirli con stime",
+      "Duplicare le righe",
       "Ignorarli lasciandoli vuoti",
-      "Duplicare le righe"
+      "Sostituirli con stime"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'imputazione riempie i mancanti con valori stimati (media/mediana, o modelli più sofisticati) per non perdere righe. La rimozione è un'alternativa ma riduce i dati."
   },
   {
@@ -491,22 +491,22 @@ registerSubject("Machine Learning", [
     id: "u09045", topic: "Metriche regressione",
     q: "Il MAE (Mean Absolute Error) rispetto all'RMSE:",
     opts: [
-      "Penalizza meno gli errori grandi",
       "Penalizza di più gli errori grandi",
+      "Penalizza meno gli errori grandi",
       "È sempre uguale all'RMSE"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il MAE è la media degli errori in valore assoluto: tratta tutti gli errori linearmente. L'RMSE, elevando al quadrato, penalizza di più gli errori grandi ed è più sensibile agli outlier."
   },
   {
     id: "u09046", topic: "Etichette",
     q: "In un problema supervisionato, la 'target' (o label) è:",
     opts: [
-      "La variabile che il modello deve prevedere",
+      "Un parametro scelto prima dell'addestramento del modello",
       "Il numero di righe presenti nel dataset o nel risultato",
-      "Un parametro scelto prima dell'addestramento del modello"
+      "La variabile che il modello deve prevedere"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La target/label è l'output da prevedere (es. il prezzo, la classe). Le feature sono gli input usati per predirla."
   },
   {
@@ -524,22 +524,22 @@ registerSubject("Machine Learning", [
     id: "u09048", topic: "Silhouette",
     q: "Il silhouette score in un clustering misura:",
     opts: [
-      "Quanto i punti sono coesi nel proprio cluster e separati dagli altri",
       "Il numero di variabili usate per rappresentare ogni osservazione",
+      "Quanto i punti sono coesi nel proprio cluster e separati dagli altri",
       "L'accuratezza rispetto a etichette note"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il silhouette (tra -1 e 1) valuta la qualità dei cluster: alto se i punti sono vicini al proprio gruppo e lontani dagli altri. Aiuta a scegliere il numero di cluster."
   },
   {
     id: "u09049", topic: "Baseline",
     q: "Perché si definisce un modello 'baseline'?",
     opts: [
-      "Per avere un riferimento minimo con cui confrontare i modelli veri",
+      "Per assegnare label manuali ai dati prima di usarli nel modello",
       "Per usarlo in produzione senza modifiche",
-      "Per assegnare label manuali ai dati prima di usarli nel modello"
+      "Per avere un riferimento minimo con cui confrontare i modelli veri"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La baseline (es. predire sempre la media o la classe più frequente) fornisce un metro minimo: un modello complesso ha senso solo se batte chiaramente la baseline."
   },
   {
@@ -557,22 +557,22 @@ registerSubject("Machine Learning", [
     id: "u09051", topic: "Feature selection",
     q: "La selezione delle feature (feature selection) serve a:",
     opts: [
-      "Tenere solo le variabili più informative, riducendo rumore e complessità",
       "Aggiungere sempre più variabili",
+      "Tenere solo le variabili più informative, riducendo rumore e complessità",
       "Aggiungere manualmente label ai record prima dell'addestramento"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Selezionare le feature rilevanti riduce overfitting, tempi di calcolo e migliora l'interpretabilità, scartando variabili ridondanti o irrilevanti."
   },
   {
     id: "u09052", topic: "Modello parametrico",
     q: "Un modello 'parametrico' (es. regressione lineare):",
     opts: [
-      "Ha un numero fisso di parametri indipendente dalla mole di dati",
+      "È sempre un modello ad albero indipendentemente dalla formulazione",
       "Non contiene parametri stimati o fissati dal modello",
-      "È sempre un modello ad albero indipendentemente dalla formulazione"
+      "Ha un numero fisso di parametri indipendente dalla mole di dati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I modelli parametrici assumono una forma con parametri fissi (es. i coefficienti di una retta). I non parametrici (KNN, alberi) adattano la complessità ai dati."
   },
   {
@@ -590,22 +590,22 @@ registerSubject("Machine Learning", [
     id: "u09054", topic: "Batch",
     q: "Nel mini-batch gradient descent, il modello aggiorna i pesi:",
     opts: [
-      "Su piccoli sottoinsiemi (batch) di dati alla volta",
       "Solo dopo l'intero dataset",
+      "Su piccoli sottoinsiemi (batch) di dati alla volta",
       "Non avviene in nessuna configurazione utile del problema"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il mini-batch aggiorna i parametri su piccoli gruppi di esempi: compromesso tra il batch completo (stabile ma lento) e lo stocastico su singolo esempio (rumoroso ma rapido)."
   },
   {
     id: "u09055", topic: "Overfitting: rimedi",
     q: "Quale tecnica riduce l'overfitting?",
     opts: [
-      "La regolarizzazione dei pesi del modello",
+      "La riduzione dei dati di addestramento",
       "L'aumento della complessità del modello",
-      "La riduzione dei dati di addestramento"
+      "La regolarizzazione dei pesi del modello"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Regolarizzazione, più dati di training e modelli più semplici riducono l'overfitting. Aumentare la complessità del modello o ridurre i dati lo PEGGIORANO, perché il modello memorizza il rumore."
   },
   {
@@ -623,22 +623,22 @@ registerSubject("Machine Learning", [
     id: "u09057", topic: "Centroide",
     q: "Nel k-means, un centroide è:",
     opts: [
-      "Il punto medio di un cluster",
       "Il punto più lontano",
+      "Il punto medio di un cluster",
       "Un iperparametro fisso"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il centroide è la media delle posizioni dei punti di un cluster. L'algoritmo alterna assegnazione dei punti al centroide più vicino e aggiornamento dei centroidi."
   },
   {
     id: "u09058", topic: "Threshold",
     q: "In un classificatore probabilistico, abbassare la soglia di decisione:",
     opts: [
-      "Aumenta i positivi predetti",
+      "Lascia invariato il risultato dell'operazione sui dati",
       "Riduce sempre i falsi negativi e i falsi positivi",
-      "Lascia invariato il risultato dell'operazione sui dati"
+      "Aumenta i positivi predetti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Con soglia più bassa più casi vengono etichettati positivi: sale la recall ma scende la precision. La soglia si tara secondo il costo relativo di falsi positivi e negativi."
   },
   {
@@ -656,22 +656,22 @@ registerSubject("Machine Learning", [
     id: "u09060", topic: "Modello vs algoritmo",
     q: "Qual è la differenza tra algoritmo e modello?",
     opts: [
-      "L'algoritmo è la procedura di apprendimento; il modello è il risultato addestrato",
       "Sono termini sinonimi e non cambiano la procedura richiesta",
+      "L'algoritmo è la procedura di apprendimento; il modello è il risultato addestrato",
       "Il modello addestra l'algoritmo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'algoritmo (es. random forest) è la procedura; il modello è ciò che si ottiene dopo l'addestramento sui dati (con i parametri appresi), pronto a fare previsioni."
   },
   {
     id: "u09061", topic: "Bagging",
     q: "Il bagging (bootstrap aggregating) riduce principalmente:",
     opts: [
-      "La varianza, addestrando modelli su campioni bootstrap e mediando",
+      "Il numero di variabili usate per rappresentare ogni osservazione",
       "La componente di errore dovuta a ipotesi troppo semplici del modello",
-      "Il numero di variabili usate per rappresentare ogni osservazione"
+      "La varianza, addestrando modelli su campioni bootstrap e mediando"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il bagging addestra più modelli su campioni casuali con rimpiazzo e ne aggrega le previsioni: media gli errori e riduce la varianza. La random forest ne è l'esempio."
   },
   {
@@ -689,22 +689,22 @@ registerSubject("Machine Learning", [
     id: "u09063", topic: "Normalizzazione min-max",
     q: "La normalizzazione min-max porta i valori:",
     opts: [
-      "In un intervallo fisso",
       "A media 0 e sd 1",
+      "In un intervallo fisso",
       "A soli valori interi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Min-max riscala: (x−min)/(max−min) → valori in [0,1]. Sensibile agli outlier (che spostano min/max). La standardizzazione usa invece media e deviazione standard."
   },
   {
     id: "u09064", topic: "Ensemble voting",
     q: "In un classificatore ensemble a votazione, la previsione finale è:",
     opts: [
-      "La classe scelta dalla maggioranza dei modelli",
+      "Una scelta casuale non guidata dai dati né da una metrica",
       "Sempre quella del primo modello",
-      "Una scelta casuale non guidata dai dati né da una metrica"
+      "La classe scelta dalla maggioranza dei modelli"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nel voting 'hard' vince la classe più votata dai modelli; nel 'soft' si mediano le probabilità. Aggregare più modelli spesso batte il singolo."
   },
   {
@@ -722,22 +722,22 @@ registerSubject("Machine Learning", [
     id: "u09066", topic: "Sovracampionamento",
     q: "Con classi sbilanciate, l'oversampling (es. SMOTE) serve a:",
     opts: [
-      "Aumentare gli esempi della classe minoritaria",
       "Aggiungere manualmente label ai record prima dell'addestramento",
+      "Aumentare gli esempi della classe minoritaria",
       "Cambiare l'algoritmo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'oversampling (o SMOTE che genera esempi sintetici) bilancia le classi aumentando la minoritaria. L'undersampling invece riduce la maggioritaria. Servono a gestire lo sbilanciamento."
   },
   {
     id: "u09067", topic: "Modello lineare",
     q: "La regressione lineare presuppone una relazione:",
     opts: [
-      "Approssimativamente lineare tra feature e target",
+      "Una scelta casuale non guidata dai dati né da una metrica",
       "Sempre esponenziale",
-      "Una scelta casuale non guidata dai dati né da una metrica"
+      "Approssimativamente lineare tra feature e target"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La regressione lineare modella una relazione lineare. Se la relazione è fortemente non lineare, servono trasformazioni, feature polinomiali o modelli non lineari."
   },
   {
@@ -755,22 +755,22 @@ registerSubject("Machine Learning", [
     id: "u09069", topic: "Dimensionalità",
     q: "La riduzione della dimensionalità è utile per:",
     opts: [
-      "Visualizzare, velocizzare e ridurre l'overfitting",
       "Aumentare il numero di variabili",
+      "Visualizzare, velocizzare e ridurre l'overfitting",
       "Aggiungere manualmente label ai record prima dell'addestramento"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Ridurre le dimensioni (PCA, t-SNE) aiuta a visualizzare i dati in 2D/3D, accelera i modelli e attenua la maledizione della dimensionalità e l'overfitting."
   },
   {
     id: "u09070", topic: "Modello generativo vs discriminativo",
     q: "Un modello discriminativo (es. regressione logistica) impara:",
     opts: [
-      "Direttamente il confine tra le classi (P(y|x))",
+      "Solo a generare nuovi dati",
       "La distribuzione completa dei dati",
-      "Solo a generare nuovi dati"
+      "Direttamente il confine tra le classi (P(y|x))"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I discriminativi modellano P(classe|input), concentrandosi sul confine decisionale. I generativi (es. Naive Bayes) modellano come i dati sono generati (P(x|classe)) e poi applicano Bayes."
   },
   {
@@ -788,22 +788,22 @@ registerSubject("Machine Learning", [
     id: "u09072", topic: "Cross-val: vantaggio",
     q: "Il vantaggio della cross-validation rispetto a un singolo split è:",
     opts: [
-      "Una stima più stabile usando tutti i dati per validare",
       "È sempre più veloce, anche quando i dati sono eterogenei o copiati",
+      "Una stima più stabile usando tutti i dati per validare",
       "Elimina il bisogno di dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La k-fold riduce la dipendenza da un particolare split fortunato/sfortunato: ogni dato viene usato sia per addestrare sia per validare, dando una stima più affidabile."
   },
   {
     id: "u09073", topic: "Feature importance",
     q: "La 'feature importance' di una random forest indica:",
     opts: [
-      "Quanto ciascuna variabile contribuisce alle previsioni",
+      "La dimensione del dataset",
       "L'accuratezza totale",
-      "La dimensione del dataset"
+      "Quanto ciascuna variabile contribuisce alle previsioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La feature importance quantifica il contributo di ogni variabile al modello: utile per interpretare e selezionare feature, pur con cautela in presenza di variabili correlate."
   },
   {
@@ -821,22 +821,22 @@ registerSubject("Machine Learning", [
     id: "u09075", topic: "Encoding ordinale",
     q: "L'encoding ordinale è appropriato quando la categoria:",
     opts: [
-      "Ha un ordine naturale (es. basso<medio<alto)",
       "Non possiede un ordine naturale tra le categorie",
+      "Ha un ordine naturale (es. basso<medio<alto)",
       "È una variabile numerica continua, non una categoria ordinata"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'ordinal encoding assegna numeri crescenti a categorie ordinate. Per categorie senza ordine si usa il one-hot, per non introdurre relazioni d'ordine inesistenti."
   },
   {
     id: "u09076", topic: "Modello: parametri",
     q: "I parametri di un modello (es. i pesi) sono:",
     opts: [
-      "Appresi dai dati durante l'addestramento",
+      "I dati grezzi",
       "Fissati a mano prima",
-      "I dati grezzi"
+      "Appresi dai dati durante l'addestramento"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I parametri (pesi, coefficienti) sono ciò che il modello apprende ottimizzando la funzione di costo. Gli iperparametri, invece, si impostano prima dell'addestramento."
   },
   {
@@ -854,22 +854,22 @@ registerSubject("Machine Learning", [
     id: "u09078", topic: "Generalizzazione: rumore",
     q: "Il 'rumore' nei dati è:",
     opts: [
-      "Variabilità casuale non spiegabile che il modello non dovrebbe imparare",
       "La parte informativa dei dati che il modello dovrebbe apprendere",
+      "Variabilità casuale non spiegabile che il modello non dovrebbe imparare",
       "Un parametro scelto prima dell'addestramento del modello"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il rumore è la parte casuale/errata dei dati. Un buon modello coglie il segnale ma non il rumore; adattarsi al rumore è overfitting."
   },
   {
     id: "u09079", topic: "Kernel",
     q: "Nei metodi come le SVM, il 'kernel trick' permette di:",
     opts: [
-      "Gestire separazioni non lineari senza calcolare esplicitamente nuove dimensioni",
+      "Eliminare gli iperparametri",
       "Ridurre il numero di esempi disponibili per l'addestramento",
-      "Eliminare gli iperparametri"
+      "Gestire separazioni non lineari senza calcolare esplicitamente nuove dimensioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il kernel calcola similarità in uno spazio a più dimensioni implicitamente, permettendo confini non lineari nello spazio originale senza costruire davvero quelle dimensioni."
   },
   {
@@ -887,22 +887,22 @@ registerSubject("Machine Learning", [
     id: "u09081", topic: "Deep learning",
     q: "Il deep learning usa:",
     opts: [
-      "Reti neurali con molti livelli (layer)",
       "Solo regressione lineare",
+      "Reti neurali con molti livelli (layer)",
       "Nessun dato viene usato per calcolare il risultato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il deep learning impiega reti neurali profonde (molti strati) capaci di apprendere rappresentazioni complesse: eccelle con immagini, audio e testo, ma richiede molti dati e calcolo."
   },
   {
     id: "u09082", topic: "Attivazione",
     q: "In una rete neurale, la funzione di attivazione serve a:",
     opts: [
-      "Introdurre non linearità permettendo di apprendere relazioni complesse",
+      "Serializzare il modello addestrato su disco per riutilizzarlo",
       "Ridurre il numero di esempi disponibili per l'addestramento",
-      "Serializzare il modello addestrato su disco per riutilizzarlo"
+      "Introdurre non linearità permettendo di apprendere relazioni complesse"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Senza funzioni di attivazione non lineari (ReLU, sigmoide) una rete equivarrebbe a un modello lineare. La non linearità permette di modellare relazioni complesse."
   },
   {
@@ -920,22 +920,22 @@ registerSubject("Machine Learning", [
     id: "u09084", topic: "Early stopping",
     q: "L'early stopping consiste nel:",
     opts: [
-      "Fermare l'addestramento quando l'errore di validazione smette di migliorare",
       "Usare il test set per decidere quando fermare il training",
+      "Fermare l'addestramento quando l'errore di validazione smette di migliorare",
       "Continuare l'addestramento senza criterio di arresto"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'early stopping interrompe l'addestramento quando le prestazioni sul validation peggiorano, evitando che il modello continui a specializzarsi sul training (overfitting)."
   },
   {
     id: "u09085", topic: "Modello benchmark",
     q: "Confrontare più modelli richiede:",
     opts: [
-      "Le stesse condizioni: stessi dati di test e stesse metriche",
+      "Solo il training set",
       "Metriche diverse per ciascuno",
-      "Solo il training set"
+      "Le stesse condizioni: stessi dati di test e stesse metriche"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Per un confronto equo i modelli vanno valutati sugli stessi dati di test con le stesse metriche. Cambiare le condizioni rende i confronti privi di significato."
   },
   {
@@ -953,22 +953,22 @@ registerSubject("Machine Learning", [
     id: "u09087", topic: "Clustering vs classificazione",
     q: "Il clustering è:",
     opts: [
-      "Non supervisionato (nessuna etichetta nota)",
       "Supervisionato, perché sfrutta etichette note",
+      "Non supervisionato (nessuna etichetta nota)",
       "Una tecnica di regressione su valori continui"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il clustering raggruppa i dati senza etichette (non supervisionato). La classificazione, invece, usa etichette note per assegnare categorie."
   },
   {
     id: "u09088", topic: "Metriche: macro/micro",
     q: "In problemi multiclasse, la media 'macro' di una metrica:",
     opts: [
-      "Media la metrica calcolata per classe, trattandole con lo stesso peso",
+      "Calcola la metrica solo sulla classe più frequente",
       "Pesa le classi in base alla numerosità, come una media weighted",
-      "Calcola la metrica solo sulla classe più frequente"
+      "Media la metrica calcolata per classe, trattandole con lo stesso peso"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La macro-media calcola la metrica per ciascuna classe e ne fa la media semplice (ogni classe conta uguale). La micro-media aggrega prima i conteggi, dando più peso alle classi numerose."
   },
   {
@@ -986,22 +986,22 @@ registerSubject("Machine Learning", [
     id: "u09090", topic: "Modello robusto",
     q: "Rendere un modello più robusto significa:",
     opts: [
-      "Renderlo meno sensibile a rumore, outlier e piccole variazioni",
       "Aumentare sempre i parametri invece di ridurre sensibilità al rumore",
+      "Renderlo meno sensibile a rumore, outlier e piccole variazioni",
       "Eliminare la valutazione invece di rendere stabile il modello"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Un modello robusto mantiene buone prestazioni anche con dati imperfetti (rumore, outlier, drift lieve). Si ottiene con regolarizzazione, feature stabili, tecniche robuste."
   },
   {
     id: "u09091", topic: "Overfitting: complessità",
     q: "A parità di prestazioni su dati nuovi, è preferibile il modello:",
     opts: [
-      "Più semplice (principio di parsimonia)",
+      "Con più parametri",
       "Con più feature",
-      "Con più parametri"
+      "Più semplice (principio di parsimonia)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il rasoio di Occam: a parità di risultati, il modello più semplice generalizza meglio, è più interpretabile e meno soggetto a overfitting."
   },
   {
@@ -1019,22 +1019,22 @@ registerSubject("Machine Learning", [
     id: "u09093", topic: "Validazione temporale",
     q: "Con dati temporali (serie storiche), lo split train/test deve:",
     opts: [
-      "Rispettare l'ordine cronologico",
       "Mescolare casualmente passato e futuro nella valutazione",
+      "Rispettare l'ordine cronologico",
       "Ignorare l'ordine temporale nello split o nella trasformazione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con dati nel tempo uno split casuale causa leakage (usare il futuro per prevedere il passato). Si addestra sui dati passati e si valida sui successivi, con validazione temporale."
   },
   {
     id: "u09094", topic: "Pipeline scikit-learn",
     q: "Una Pipeline (es. in scikit-learn) serve a:",
     opts: [
-      "Concatenare pre-processing e modello in un unico flusso riproducibile",
+      "A rimuovere i dati disponibili prima dell'elaborazione",
       "Solo a visualizzare i dati",
-      "A rimuovere i dati disponibili prima dell'elaborazione"
+      "Concatenare pre-processing e modello in un unico flusso riproducibile"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La Pipeline incapsula i passi (scaling, encoding, modello) in sequenza: garantisce che le stesse trasformazioni siano applicate in training e in predizione, prevenendo leakage."
   },
   {
@@ -1052,22 +1052,22 @@ registerSubject("Machine Learning", [
     id: "u09096", topic: "Bias del campione",
     q: "Se i dati di training non rappresentano la popolazione reale, il modello:",
     opts: [
-      "Erediterà quel bias e generalizzerà male sul mondo reale",
       "Ignorerà i dati",
+      "Erediterà quel bias e generalizzerà male sul mondo reale",
       "Diventerà non supervisionato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "'Garbage in, garbage out': un campione distorto produce un modello distorto. La rappresentatività e la qualità dei dati sono fondamentali, oltre all'algoritmo."
   },
   {
     id: "u09097", topic: "Ottimizzazione",
     q: "La funzione di costo (loss) in un modello:",
     opts: [
-      "Misura quanto le previsioni si discostano dai valori reali, da minimizzare",
+      "Conta il numero di feature usate dal modello",
       "Va sempre massimizzata come se fosse una metrica di accuratezza",
-      "Conta il numero di feature usate dal modello"
+      "Misura quanto le previsioni si discostano dai valori reali, da minimizzare"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La loss quantifica l'errore del modello (es. MSE, cross-entropy): l'addestramento cerca i parametri che la MINIMIZZANO. Loss diverse portano a comportamenti diversi."
   },
   {
@@ -1085,22 +1085,22 @@ registerSubject("Machine Learning", [
     id: "u09099", topic: "Explainability",
     q: "Tecniche come SHAP e LIME servono a:",
     opts: [
-      "Spiegare le previsioni di modelli complessi (interpretabilità)",
       "Addestrare più velocemente",
+      "Spiegare le previsioni di modelli complessi (interpretabilità)",
       "Aumentare il volume dei dati senza risolvere il fallimento del task"
     ],
-    correct: [0],
+    correct: [1],
     exp: "SHAP e LIME attribuiscono a ciascuna feature il contributo a una specifica previsione, rendendo interpretabili anche modelli 'black box' come reti ed ensemble."
   },
   {
     id: "u09100", topic: "Ciclo ML",
     q: "Dopo il deploy, un progetto ML si considera:",
     opts: [
-      "Da monitorare e mantenere nel tempo",
+      "Inutile da monitorare dopo la messa in produzione",
       "Terminato definitivamente dopo il primo rilascio",
-      "Inutile da monitorare dopo la messa in produzione"
+      "Da monitorare e mantenere nel tempo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il deploy non è la fine: i modelli vanno monitorati per drift e degrado, ri-addestrati con dati nuovi e mantenuti. Il ML è un ciclo di vita continuo, non un'attività una tantum."
   },
   // === AGGIUNGI NUOVE DOMANDE MACHINE LEARNING QUI ===

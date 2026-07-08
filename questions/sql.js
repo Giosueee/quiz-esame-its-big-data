@@ -9,11 +9,11 @@ registerSubject("SQL", [
     id: "sql001", topic: "Concetti di base",
     q: "Che cos'è un database?",
     opts: [
-      "Una collezione di dati organizzata, aggiornabile, interrogabile e gestibile",
+      "Un linguaggio dichiarativo usato per interrogare e modificare i dati",
       "Il software che permette di creare, gestire e interrogare i dati archiviati",
-      "Un linguaggio dichiarativo usato per interrogare e modificare i dati"
+      "Una collezione di dati organizzata, aggiornabile, interrogabile e gestibile"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un database è una raccolta ORGANIZZATA di dati (aggiornabile, interrogabile, gestibile). Il DBMS è invece il SOFTWARE che gestisce quei dati: sono due cose distinte."
   },
   {
@@ -31,22 +31,22 @@ registerSubject("SQL", [
     id: "sql003", topic: "Architettura DBMS",
     q: "Che tipo di architettura hanno tipicamente i DBMS relazionali?",
     opts: [
-      "Client/Server",
       "Peer-to-peer",
+      "Client/Server",
       "Monolitica a singolo utente"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I DBMS hanno tipicamente un'architettura CLIENT/SERVER: il client (es. Workbench, uno script Python) invia richieste SQL; il server elabora e gestisce i dati, restituendo i risultati."
   },
   {
     id: "sql004", topic: "Modello E-R",
     q: "Chi ha formalizzato il modello Entità-Relazione (E-R) e in che anno?",
     opts: [
-      "Peter Chen, 1976",
+      "Tim Berners-Lee, 1989",
       "Edgar Codd, 1970",
-      "Tim Berners-Lee, 1989"
+      "Peter Chen, 1976"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il modello E-R è stato formalizzato da Peter Chen nel 1976. Nonostante l'età, è ancora oggi il sistema più usato per progettare la struttura concettuale di un database."
   },
   {
@@ -64,22 +64,22 @@ registerSubject("SQL", [
     id: "sql006", topic: "Modello E-R",
     q: "Nel diagramma E-R, come si rappresentano graficamente entità, relazioni e attributi?",
     opts: [
-      "Entità = rettangoli, Relazioni = rombi, Attributi = ovali",
       "Entità = cerchi, Relazioni = quadrati, Attributi = triangoli",
+      "Entità = rettangoli, Relazioni = rombi, Attributi = ovali",
       "Entità = rombi, Relazioni = rettangoli, Attributi = linee"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Nel diagramma E-R: le ENTITÀ sono rettangoli, le RELAZIONI sono rombi (rombi/diamanti), gli ATTRIBUTI sono ovali (ellissi). È lo schema visuale standard."
   },
   {
     id: "sql007", topic: "Modello E-R",
     q: "Cos'è un'entità nel modello E-R?",
     opts: [
-      "Un oggetto (una tabella) che raccoglie dati con proprietà comuni, es. i clienti",
+      "Una singola proprietà elementare di una tabella, come il nome o la data",
       "Un collegamento logico che mette in relazione due o più tabelle tra loro",
-      "Una singola proprietà elementare di una tabella, come il nome o la data"
+      "Un oggetto (una tabella) che raccoglie dati con proprietà comuni, es. i clienti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un'entità è un oggetto/tabella che raccoglie dati con proprietà comuni (es. i 'clienti' con indirizzo, P.IVA, recapiti). Le relazioni collegano le entità; gli attributi sono le loro proprietà."
   },
   {
@@ -97,22 +97,22 @@ registerSubject("SQL", [
     id: "sql009", topic: "Modelli di dati",
     q: "Cosa rappresenta il modello FISICO di un database?",
     opts: [
-      "Il database già assemblato con tabelle, campi e relazioni, che opera su disco",
       "Lo schema concettuale astratto che descrive entità e relazioni prima di realizzarle",
+      "Il database già assemblato con tabelle, campi e relazioni, che opera su disco",
       "Il diagramma entità-relazione disegnato su carta durante la fase iniziale"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il modello fisico è il database concretamente realizzato (tabelle, campi, relazioni) che 'vive' fisicamente sul disco del computer, pronto all'uso. È l'ultimo livello dopo il concettuale (E-R) e il logico."
   },
   {
     id: "sql010", topic: "Normalizzazione",
     q: "A cosa serve la normalizzazione di un database?",
     opts: [
-      "A eliminare ridondanze e incoerenze nei dati, sfruttando il modello E-R",
+      "A rendere il database più lento in cambio di una maggiore sicurezza",
       "Ad aumentare volutamente la ridondanza per avere più copie dei dati",
-      "A rendere il database più lento in cambio di una maggiore sicurezza"
+      "A eliminare ridondanze e incoerenze nei dati, sfruttando il modello E-R"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La normalizzazione elimina RIDONDANZE (stesso dato ripetuto → spreco di spazio) e INCOERENZE (stesso dato scritto diversamente in più punti). Migliora coerenza e manutenzione del DB."
   },
   {
@@ -130,22 +130,22 @@ registerSubject("SQL", [
     id: "sql012", topic: "Normalizzazione",
     q: "Cosa richiede la SECONDA forma normale (2NF)?",
     opts: [
-      "Ogni colonna non chiave dipende dall'intera chiave primaria, non solo da una parte",
       "Che ogni cella della tabella contenga un solo valore atomico, mai un elenco",
+      "Ogni colonna non chiave dipende dall'intera chiave primaria, non solo da una parte",
       "Che le colonne non chiave non dipendano le une dalle altre nella tabella"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La 2NF (presuppone la 1NF) richiede che ogni colonna non chiave dipenda dall'INTERA chiave primaria e non solo da una parte di essa (rilevante quando la chiave è composta da più campi)."
   },
   {
     id: "sql013", topic: "Normalizzazione",
     q: "Cosa richiede la TERZA forma normale (3NF)?",
     opts: [
-      "Le colonne non chiave dipendono solo dalla chiave, non da altre colonne non chiave",
+      "Che tutte le colonne della tabella facciano parte della chiave primaria composta",
       "Che ogni cella della tabella possa contenere un elenco ordinato di più valori",
-      "Che tutte le colonne della tabella facciano parte della chiave primaria composta"
+      "Le colonne non chiave dipendono solo dalla chiave, non da altre colonne non chiave"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La 3NF (presuppone la 2NF) richiede che nessuna colonna non chiave dipenda da un'altra colonna non chiave: ogni attributo non chiave deve dipendere SOLO dalla chiave primaria."
   },
   {
@@ -163,22 +163,22 @@ registerSubject("SQL", [
     id: "sql015", topic: "Chiavi",
     q: "Qual è lo scopo di una FOREIGN KEY (chiave esterna)?",
     opts: [
-      "Che un campo contenga solo valori esistenti come chiave altrove",
       "Garantire che ogni valore del campo sia univoco e identifichi una sola riga",
+      "Che un campo contenga solo valori esistenti come chiave altrove",
       "Ordinare in automatico le righe della tabella in base al valore del campo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La FOREIGN KEY è un campo che fa riferimento alla PRIMARY KEY di un'altra tabella. Garantisce che il valore inserito corrisponda sempre a un record esistente nell'altra tabella (integrità referenziale)."
   },
   {
     id: "sql016", topic: "Chiavi",
     q: "Cosa garantiscono insieme PRIMARY KEY e FOREIGN KEY?",
     opts: [
-      "L'integrità referenziale: i riferimenti tra le tabelle restano validi e coerenti",
+      "L'esecuzione di un backup automatico ogni volta che i dati vengono modificati",
       "L'aumento della velocità delle query che coinvolgono più tabelle in join",
-      "L'esecuzione di un backup automatico ogni volta che i dati vengono modificati"
+      "L'integrità referenziale: i riferimenti tra le tabelle restano validi e coerenti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "PK e FK insieme garantiscono l'INTEGRITÀ REFERENZIALE: non può esistere una riga che fa riferimento a un ID inesistente in un'altra tabella. I collegamenti restano sempre coerenti."
   },
   {
@@ -196,22 +196,22 @@ registerSubject("SQL", [
     id: "sql018", topic: "Tipi di dato",
     q: "Quale tipo di dato è più adatto per memorizzare un valore booleano (Sì/No, attivo/non attivo)?",
     opts: [
-      "BIT",
       "VARCHAR",
+      "BIT",
       "FLOAT"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il tipo BIT contiene un solo bit (0 o 1), quindi è ideale per dati booleani come 'utente attivo Sì/No'. VARCHAR è per il testo, DATE per le date, FLOAT per i decimali."
   },
   {
     id: "sql019", topic: "Tipi di dato",
     q: "Qual è la differenza principale tra VARCHAR(50) e CHAR(2)?",
     opts: [
-      "VARCHAR ha lunghezza variabile fino al massimo indicato; CHAR ha lunghezza fissa",
+      "VARCHAR può contenere solo cifre, mentre CHAR può contenere anche lettere",
       "CHAR serve a memorizzare numeri interi, mentre VARCHAR serve per le date",
-      "VARCHAR può contenere solo cifre, mentre CHAR può contenere anche lettere"
+      "VARCHAR ha lunghezza variabile fino al massimo indicato; CHAR ha lunghezza fissa"
     ],
-    correct: [0],
+    correct: [2],
     exp: "VARCHAR(n) memorizza testo di lunghezza VARIABILE fino a n caratteri (occupa solo lo spazio necessario). CHAR(n) ha lunghezza FISSA di n caratteri: utile per dati sempre della stessa lunghezza, come la sigla provincia CHAR(2)."
   },
   {
@@ -229,22 +229,22 @@ registerSubject("SQL", [
     id: "sql021", topic: "Sottolinguaggi SQL",
     q: "A quale sottolinguaggio SQL appartiene l'istruzione CREATE TABLE ?",
     opts: [
-      "DDL (Data Definition Language)",
       "DML (Data Manipulation Language)",
+      "DDL (Data Definition Language)",
       "DQL (Data Query Language)"
     ],
-    correct: [0],
+    correct: [1],
     exp: "CREATE TABLE (come CREATE DATABASE, ALTER, DROP) definisce la STRUTTURA del database, quindi appartiene al DDL – Data Definition Language."
   },
   {
     id: "sql022", topic: "Sottolinguaggi SQL",
     q: "A quale sottolinguaggio appartengono INSERT, UPDATE e DELETE ?",
     opts: [
-      "DML (Data Manipulation Language)",
+      "DCL (Data Control Language)",
       "DDL (Data Definition Language)",
-      "DCL (Data Control Language)"
+      "DML (Data Manipulation Language)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "INSERT, UPDATE e DELETE manipolano i DATI memorizzati (inserire, modificare, cancellare), quindi fanno parte del DML – Data Manipulation Language."
   },
   {
@@ -262,22 +262,22 @@ registerSubject("SQL", [
     id: "sql024", topic: "Sottolinguaggi SQL",
     q: "A quale sottolinguaggio appartengono GRANT e REVOKE (gestione permessi)?",
     opts: [
-      "DCL (Data Control Language) — gestione dei permessi",
       "DDL (Data Definition Language) — definizione delle tabelle",
+      "DCL (Data Control Language) — gestione dei permessi",
       "DML (Data Manipulation Language) — inserimento e modifica"
     ],
-    correct: [0],
+    correct: [1],
     exp: "GRANT (concedere) e REVOKE (revocare) gestiscono i PERMESSI/autorizzazioni degli utenti, quindi appartengono al DCL – Data Control Language."
   },
   {
     id: "sql025", topic: "Creazione tabelle",
     q: "Quale clausola impone che un campo contenga SEMPRE un valore (non possa essere vuoto)?",
     opts: [
-      "NOT NULL",
+      "DEFAULT",
       "UNIQUE",
-      "DEFAULT"
+      "NOT NULL"
     ],
-    correct: [0],
+    correct: [2],
     exp: "NOT NULL obbliga il campo ad avere sempre un valore. È obbligatoria per i campi chiave (una PRIMARY KEY deve essere sempre NOT NULL)."
   },
   {
@@ -295,22 +295,22 @@ registerSubject("SQL", [
     id: "sql027", topic: "Modificare tabelle",
     q: "Quale istruzione si usa per AGGIUNGERE una colonna a una tabella già esistente?",
     opts: [
-      "ALTER TABLE tabella ADD colonna tipo",
       "UPDATE tabella ADD colonna (confonde schema e righe)",
+      "ALTER TABLE tabella ADD colonna tipo",
       "CREATE COLUMN colonna (sintassi non prevista da SQL)"
     ],
-    correct: [0],
+    correct: [1],
     exp: "ALTER TABLE modifica la struttura di una tabella esistente. Es: ALTER TABLE nomi ADD ProvinciaNascita CHAR(2); aggiunge una nuova colonna."
   },
   {
     id: "sql028", topic: "Modificare tabelle",
     q: "Quale istruzione ELIMINA completamente una tabella (struttura + dati)?",
     opts: [
-      "DROP TABLE nome_tabella",
+      "REMOVE TABLE nome_tabella",
       "DELETE TABLE nome_tabella",
-      "REMOVE TABLE nome_tabella"
+      "DROP TABLE nome_tabella"
     ],
-    correct: [0],
+    correct: [2],
     exp: "DROP TABLE elimina l'intera tabella (struttura e dati). Attenzione a non confonderla con DELETE, che invece cancella solo le RIGHE lasciando la tabella in piedi."
   },
   {
@@ -328,22 +328,22 @@ registerSubject("SQL", [
     id: "sql030", topic: "INSERT / UPDATE / DELETE",
     q: "Perché è FONDAMENTALE la clausola WHERE in un'istruzione UPDATE o DELETE?",
     opts: [
-      "Perché senza WHERE l'operazione modifica o cancella TUTTE le righe della tabella",
       "Perché è obbligatoria e senza di essa la query genera un errore di sintassi",
+      "Perché senza WHERE l'operazione modifica o cancella TUTTE le righe della tabella",
       "Perché rende la query più lenta, filtrando una riga alla volta durante l'esecuzione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "WHERE filtra su quali righe agire. Un UPDATE o DELETE SENZA WHERE colpisce TUTTE le righe della tabella! Consiglio della slide: prima di una DELETE, prova la stessa WHERE con una SELECT per vedere cosa cancelleresti."
   },
   {
     id: "sql031", topic: "INSERT / UPDATE / DELETE",
     q: "Quale istruzione useresti per modificare il nome del record con ID=1?",
     opts: [
-      "UPDATE tabella SET Nome='Carlo' WHERE ID=1",
+      "ALTER tabella SET Nome='Carlo' (cambia lo schema invece dei dati)",
       "INSERT tabella SET Nome='Carlo' (crea un record invece di modificarlo)",
-      "ALTER tabella SET Nome='Carlo' (cambia lo schema invece dei dati)"
+      "UPDATE tabella SET Nome='Carlo' WHERE ID=1"
     ],
-    correct: [0],
+    correct: [2],
     exp: "UPDATE ... SET campo=valore WHERE condizione aggiorna i dati esistenti. Il WHERE ID=1 limita la modifica alla sola riga con ID=1: qui si vede l'utilità della chiave primaria."
   },
   {
@@ -361,22 +361,22 @@ registerSubject("SQL", [
     id: "sql033", topic: "SELECT",
     q: "Cosa restituisce una SELECT senza la clausola WHERE?",
     opts: [
-      "TUTTE le righe della tabella",
       "Nessuna riga",
+      "TUTTE le righe della tabella",
       "Solo la prima riga"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Senza WHERE la SELECT non filtra nulla e restituisce TUTTE le righe della tabella. Il WHERE serve proprio a selezionare solo le righe che soddisfano una condizione."
   },
   {
     id: "sql034", topic: "SELECT",
     q: "A cosa serve la parola chiave AS in una SELECT?",
     opts: [
-      "A dare un alias, cioè un nome alternativo, a un campo o a una tabella",
+      "A filtrare le righe mantenendo solo quelle che rispettano una condizione",
       "A ordinare le righe del risultato in base al valore di un determinato campo",
-      "A filtrare le righe mantenendo solo quelle che rispettano una condizione"
+      "A dare un alias, cioè un nome alternativo, a un campo o a una tabella"
     ],
-    correct: [0],
+    correct: [2],
     exp: "AS assegna un ALIAS: SELECT Nome AS NomeContatto rinomina l'intestazione della colonna nel risultato. Utile anche per abbreviare i nomi delle tabelle nelle JOIN. In molti DBMS AS è opzionale."
   },
   {
@@ -394,22 +394,22 @@ registerSubject("SQL", [
     id: "sql036", topic: "JOIN",
     q: "A cosa serve una JOIN?",
     opts: [
-      "A combinare in una query i dati provenienti da più tabelle collegate tra loro",
       "A creare fisicamente una nuova tabella su disco unendo il contenuto di altre due",
+      "A combinare in una query i dati provenienti da più tabelle collegate tra loro",
       "A cancellare in un colpo solo le righe corrispondenti da più tabelle collegate"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La JOIN unisce i dati di più tabelle in un unico risultato (a video, non su disco), collegandole tramite i campi in comune (di solito PK e FK)."
   },
   {
     id: "sql037", topic: "JOIN",
     q: "Quale JOIN restituisce TUTTI i record della tabella di sinistra, anche quelli senza corrispondenza a destra (campi mancanti a NULL)?",
     opts: [
-      "LEFT JOIN",
+      "CROSS JOIN",
       "INNER JOIN",
-      "CROSS JOIN"
+      "LEFT JOIN"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La LEFT JOIN restituisce tutte le righe della tabella di sinistra; dove manca la corrispondenza nella tabella di destra, i relativi campi risultano NULL/vuoti. Es: tutti i nominativi, anche quelli senza chiamate ricevute."
   },
   {
@@ -427,22 +427,22 @@ registerSubject("SQL", [
     id: "sql039", topic: "JOIN",
     q: "Nella clausola JOIN, a cosa serve la parola chiave ON?",
     opts: [
-      "A specificare il campo (o i campi) su cui collegare le righe delle due tabelle",
       "A ordinare il risultato della join in base ai valori del campo indicato",
+      "A specificare il campo (o i campi) su cui collegare le righe delle due tabelle",
       "A definire l'alias con cui la tabella verrà richiamata nella query"
     ],
-    correct: [0],
+    correct: [1],
     exp: "ON indica la CONDIZIONE di collegamento: ...LEFT JOIN Tabella2 ON Tabella1.CampoID = Tabella2.CampoID. Specifica quali campi devono corrispondere per associare le righe."
   },
   {
     id: "sql040", topic: "JOIN",
     q: "Quando due tabelle hanno un campo con lo STESSO nome (es. ID), come si evita l'ambiguità nella SELECT?",
     opts: [
-      "Premettendo al campo il nome della tabella, es. Tabella1.ID e Tabella2.ID",
+      "Eseguendo due SELECT separate e unendo poi a mano i due risultati",
       "Rinominando fisicamente una delle due colonne omonime sul database",
-      "Eseguendo due SELECT separate e unendo poi a mano i due risultati"
+      "Premettendo al campo il nome della tabella, es. Tabella1.ID e Tabella2.ID"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Si prefissa il campo col nome (o alias) della tabella seguito dal punto: Tabella1.ID. Così la query sa da quale tabella prendere il campo, evitando ambiguità."
   },
   {
@@ -460,22 +460,22 @@ registerSubject("SQL", [
     id: "sql042", topic: "Algebra booleana",
     q: "Perché WHERE Reddito<20000 AND Età<30 OR Età>55 può dare risultati SBAGLIATI?",
     opts: [
-      "Conta la precedenza degli operatori: senza parentesi il risultato può cambiare",
       "Gli operatori AND e OR non possono mai comparire insieme nella stessa WHERE",
+      "Conta la precedenza degli operatori: senza parentesi il risultato può cambiare",
       "Mancano gli apici attorno ai valori numerici, che in SQL vanno sempre messi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Come in matematica, anche nella logica booleana conta la PRECEDENZA (AND si valuta prima di OR). Senza parentesi il significato cambia. Vanno usate le parentesi per raggruppare correttamente: es. ...AND (Età<30 OR Età>55)."
   },
   {
     id: "sql043", topic: "Funzioni di aggregazione",
     q: "Quale di queste è una funzione di aggregazione in SQL?",
     opts: [
-      "SUM",
+      "WHERE",
       "SELECT",
-      "WHERE"
+      "SUM"
     ],
-    correct: [0],
+    correct: [2],
     exp: "SUM è una funzione di aggregazione (come AVG, MAX, MIN, COUNT): combina più righe in un unico risultato. SELECT è l'istruzione di interrogazione e WHERE una clausola di filtro: non sono funzioni di aggregazione."
   },
   {
@@ -493,22 +493,22 @@ registerSubject("SQL", [
     id: "sql045", topic: "HAVING vs WHERE",
     q: "Qual è la differenza tra WHERE e HAVING?",
     opts: [
-      "WHERE filtra le righe prima del gruppo; HAVING gli aggregati",
       "HAVING filtra le singole righe, mentre WHERE agisce sui gruppi della GROUP BY",
+      "WHERE filtra le righe prima del gruppo; HAVING gli aggregati",
       "HAVING si può usare solo quando nella query non è presente la GROUP BY"
     ],
-    correct: [0],
+    correct: [1],
     exp: "WHERE agisce sulle singole righe PRIMA del raggruppamento. HAVING agisce DOPO, sul risultato delle aggregazioni (es. HAVING SUM(Vendite)>1000 per tenere solo i gruppi che superano 1000). Con WHERE non si può filtrare su un SUM."
   },
   {
     id: "sql046", topic: "Proprietà ACID",
     q: "Cosa significa l'acronimo ACID?",
     opts: [
-      "Atomicity, Consistency, Isolation, Durability",
+      "Atomicity, Cache, Integrity, Delete",
       "Access, Control, Identity, Data",
-      "Atomicity, Cache, Integrity, Delete"
+      "Atomicity, Consistency, Isolation, Durability"
     ],
-    correct: [0],
+    correct: [2],
     exp: "ACID = Atomicity (atomicità), Consistency (coerenza), Isolation (isolamento), Durability (durabilità). Sono le proprietà che le transazioni devono avere per garantire la validità dei dati anche in caso di guasti."
   },
   {
@@ -526,22 +526,22 @@ registerSubject("SQL", [
     id: "sql048", topic: "Proprietà ACID",
     q: "Cosa distingue i DBMS relazionali dai database NoSQL riguardo ad ACID?",
     opts: [
-      "I DBMS relazionali sono ACID compliant, adatti dove i dati devono essere validi",
       "I database NoSQL sono sempre ACID compliant, mentre quelli relazionali non lo sono",
+      "I DBMS relazionali sono ACID compliant, adatti dove i dati devono essere validi",
       "Le proprietà ACID riguardano solo la velocità di esecuzione delle query, non i dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I DBMS relazionali sono ACID compliant: garantiscono la validità dei dati anche in caso di errori. Questo li rende ideali dove non ci si può permettere dati incoerenti (es. transazioni bancarie). È un elemento che li differenzia da molti NoSQL."
   },
   {
     id: "sql049", topic: "Transazioni",
     q: "Qual è il vantaggio principale di una transazione?",
     opts: [
-      "Raggruppa più operazioni in un blocco unico che ha effetto solo se riescono tutte",
+      "Crea una copia di backup dei dati prima di eseguire ogni singola operazione",
       "Rende più veloci le query eseguendo le operazioni in parallelo su più core",
-      "Crea una copia di backup dei dati prima di eseguire ogni singola operazione"
+      "Raggruppa più operazioni in un blocco unico che ha effetto solo se riescono tutte"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La transazione raggruppa più operazioni in un corpo unico: il DBMS le rende definitive solo quando TUTTE sono completate. In caso contrario, tutte le modifiche vengono annullate (rollback), preservando la coerenza."
   },
   {
@@ -559,22 +559,22 @@ registerSubject("SQL", [
     id: "sql051", topic: "Indici",
     q: "A cosa serve un INDICE su una tabella?",
     opts: [
-      "A rendere più veloce la ricerca dei dati su un determinato campo della tabella",
       "A eliminare automaticamente i valori duplicati presenti in una colonna",
+      "A rendere più veloce la ricerca dei dati su un determinato campo della tabella",
       "A creare una nuova tabella a partire dai dati di quella che viene indicizzata"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Un indice crea un elenco ordinato dei valori di un campo, così la ricerca avviene rapidamente sull'indice invece di scorrere tutta la tabella. Rende più veloci le SELECT su quel campo."
   },
   {
     id: "sql052", topic: "Indici",
     q: "Qual è lo SVANTAGGIO degli indici?",
     opts: [
-      "Velocizzano le ricerche ma rallentano gli inserimenti e occupano spazio in più",
+      "Cancellano i dati della colonna indicizzata quando l'indice viene aggiornato",
       "Rallentano tutte le SELECT perché costringono a scorrere l'intera tabella",
-      "Cancellano i dati della colonna indicizzata quando l'indice viene aggiornato"
+      "Velocizzano le ricerche ma rallentano gli inserimenti e occupano spazio in più"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'indice accelera le ricerche (lettura) ma va aggiornato a ogni INSERT/UPDATE/DELETE, quindi rallenta le scritture e occupa spazio aggiuntivo. Vanno creati con criterio, sui campi cercati spesso."
   },
   {
@@ -592,22 +592,22 @@ registerSubject("SQL", [
     id: "sql054", topic: "SQL dichiarativo",
     q: "SQL, nella sua specifica ANSI, è un linguaggio...",
     opts: [
-      "Dichiarativo: ogni istruzione dichiara il risultato voluto, non i passi per ottenerlo",
       "Imperativo/strutturato: si definiscono i singoli passi che il motore deve eseguire",
+      "Dichiarativo: ogni istruzione dichiara il risultato voluto, non i passi per ottenerlo",
       "Orientato agli oggetti, con classi e istanze come nei linguaggi tipo Python o Java"
     ],
-    correct: [0],
+    correct: [1],
     exp: "SQL è DICHIARATIVO: dichiari COSA vuoi ottenere (il risultato), non COME ottenerlo passo per passo (a differenza dei linguaggi imperativi come Python). È il DBMS a decidere come eseguire la query."
   },
   {
     id: "sql055", topic: "Stored procedure",
     q: "Cos'è una STORED PROCEDURE?",
     opts: [
-      "Un programma con variabili, cicli e condizioni salvato nel database e da richiamare",
+      "Un elenco ordinato dei valori di una colonna per velocizzare le ricerche",
       "Una singola istruzione SELECT salvata e richiamabile come se fosse una tabella",
-      "Un elenco ordinato dei valori di una colonna per velocizzare le ricerche"
+      "Un programma con variabili, cicli e condizioni salvato nel database e da richiamare"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Una stored procedure è un vero programma ('stored' = salvato dentro il DB) con variabili, iterazioni, condizioni e gestione errori. Non parte da sola: va avviata con CALL nome (MySQL) o EXEC nome (SQL Server)."
   },
   {
@@ -625,22 +625,22 @@ registerSubject("SQL", [
     id: "sql057", topic: "Stored function",
     q: "Qual è la caratteristica principale di una STORED FUNCTION rispetto a una procedura?",
     opts: [
-      "Restituisce un valore con RETURNS e può essere richiamata dentro una query",
       "Non può contenere istruzioni SQL né logica: dichiara solo i parametri in ingresso",
+      "Restituisce un valore con RETURNS e può essere richiamata dentro una query",
       "Serve esclusivamente a cancellare dati e non restituisce mai alcun valore"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Una stored function RESTITUISCE un valore (clausola RETURNS) e può essere usata dentro le query, es. SELECT aggiungi_iva(importo). Estende le funzioni 'build-in' del DBMS come YEAR, ROUND, TRIM."
   },
   {
     id: "sql058", topic: "Funzioni built-in",
     q: "Quale di queste è una funzione built-in di SQL?",
     opts: [
-      "YEAR (estrae l'anno da una data)",
+      "EXCEL (apre un foglio di calcolo)",
       "PYTHON (esegue codice Python)",
-      "EXCEL (apre un foglio di calcolo)"
+      "YEAR (estrae l'anno da una data)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "YEAR, ROUND e TRIM sono funzioni built-in del DBMS (estraggono l'anno, arrotondano, rimuovono spazi). 'PYTHON' ed 'EXCEL' non sono funzioni SQL: sono distrattori inventati."
   },
   {
@@ -658,22 +658,22 @@ registerSubject("SQL", [
     id: "sql060", topic: "Trigger",
     q: "Quale di questi è un momento di attivazione valido per un trigger?",
     opts: [
-      "AFTER INSERT",
       "DURING SELECT",
+      "AFTER INSERT",
       "AFTER ORDER BY"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Un trigger si attiva PRIMA (BEFORE) o DOPO (AFTER) un INSERT, UPDATE o DELETE. Non esiste un trigger su SELECT né su ORDER BY: i trigger reagiscono solo alle modifiche dei dati."
   },
   {
     id: "sql061", topic: "Federated Database",
     q: "Cos'è un Federated Database System (FDBS)?",
     opts: [
-      "Un meta-database che appare come un unico DB ma mappa i dati su più database esterni",
+      "Un sistema che replica gli stessi dati su più server per garantirne la disponibilità",
       "Un unico grande database che raccoglie fisicamente al suo interno tutti i dati aziendali",
-      "Un sistema che replica gli stessi dati su più server per garantirne la disponibilità"
+      "Un meta-database che appare come un unico DB ma mappa i dati su più database esterni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un FDBS è un meta-database: appare come un unico DB, ma internamente mappa dati provenienti da più database esterni (SQL, NoSQL, persino file Excel/PDF), traducendo e suddividendo le query verso le varie fonti."
   },
   {
@@ -691,22 +691,22 @@ registerSubject("SQL", [
     id: "sql063", topic: "Sicurezza",
     q: "Quale di queste proprietà fa parte della sicurezza dei dati (triade CIA)?",
     opts: [
-      "Riservatezza (confidenzialità)",
       "Velocità di esecuzione delle query",
+      "Riservatezza (confidenzialità)",
       "Portabilità tra sistemi diversi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La triade CIA della sicurezza è Riservatezza (Confidentiality), Integrità e Disponibilità (Availability). Velocità e portabilità sono qualità del sistema, ma non proprietà di sicurezza."
   },
   {
     id: "sql064", topic: "Sicurezza",
     q: "Cos'è un attacco di tipo SQL injection?",
     opts: [
-      "L'inserimento di comandi SQL malevoli via input non validati",
+      "Il fallimento di una procedura di backup che lascia i dati non protetti",
       "Un guasto hardware del server che corrompe i dati memorizzati nel database",
-      "Il fallimento di una procedura di backup che lascia i dati non protetti"
+      "L'inserimento di comandi SQL malevoli via input non validati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La SQL injection consiste nell'iniettare comandi SQL malevoli attraverso gli input di un'applicazione (form web, header HTTP) non validati, per manipolare o rubare dati. Si previene con query parametrizzate e validazione degli input."
   },
   {
@@ -724,22 +724,22 @@ registerSubject("SQL", [
     id: "sql066", topic: "Best practice sicurezza",
     q: "Quale di queste è una best practice di sicurezza per un database?",
     opts: [
-      "Crittografare i dati sia a riposo sia in transito",
       "Lasciare le password di default per comodità di accesso",
+      "Crittografare i dati sia a riposo sia in transito",
       "Disattivare del tutto i log per risparmiare spazio"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Best practice: crittografare i dati (a riposo e in transito), aggiornare il software con le patch, proteggere i backup. Lasciare password di default o disattivare i log sono invece gravi vulnerabilità."
   },
   {
     id: "sql067", topic: "Crittografia",
     q: "Qual è la differenza tra cifratura SIMMETRICA e ASIMMETRICA?",
     opts: [
-      "Simmetrica usa la stessa chiave per cifrare e decifrare; asimmetrica usa due chiavi diverse",
+      "La cifratura asimmetrica non utilizza alcuna chiave, mentre la simmetrica ne usa una",
       "Simmetrica usa due chiavi diverse, mentre asimmetrica ne usa una sola per entrambe",
-      "La cifratura asimmetrica non utilizza alcuna chiave, mentre la simmetrica ne usa una"
+      "Simmetrica usa la stessa chiave per cifrare e decifrare; asimmetrica usa due chiavi diverse"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nella cifratura SIMMETRICA la chiave per cifrare è la STESSA che serve per decifrare. Nell'ASIMMETRICA le chiavi sono DIVERSE: si cifra con la chiave pubblica del destinatario e solo la sua chiave privata può decifrare."
   },
   {
@@ -757,22 +757,22 @@ registerSubject("SQL", [
     id: "sql069", topic: "Crittografia",
     q: "Perché nelle comunicazioni si combinano spesso RSA e AES?",
     opts: [
-      "RSA è sicuro ma lento: serve a scambiare una chiave AES temporanea, poi si cifra con AES",
       "AES da solo è insicuro, perciò RSA viene usato per cifrare l'intero messaggio ogni volta",
+      "RSA è sicuro ma lento: serve a scambiare una chiave AES temporanea, poi si cifra con AES",
       "RSA non funziona su Internet, quindi AES lo sostituisce del tutto tra client e server"
     ],
-    correct: [0],
+    correct: [1],
     exp: "RSA (asimmetrico) è solido ma lento; AES (simmetrico) è veloce. Soluzione ibrida: RSA serve solo a scambiare in modo sicuro una chiave AES temporanea; poi la comunicazione vera e propria viaggia cifrata con AES, veloce."
   },
   {
     id: "sql070", topic: "Crittografia",
     q: "In MySQL, quale funzione permette di memorizzare un dato in forma cifrata?",
     opts: [
-      "aes_encrypt()",
+      "crypt_field()",
       "encrypt_data()",
-      "crypt_field()"
+      "aes_encrypt()"
     ],
-    correct: [0],
+    correct: [2],
     exp: "In MySQL si usa la funzione aes_encrypt() (con una chiave di cifratura) in fase di inserimento per salvare il dato cifrato, e aes_decrypt() per rileggerlo in chiaro. Una chiave lunga e con caratteri speciali è più sicura."
   },
   {
@@ -790,22 +790,22 @@ registerSubject("SQL", [
     id: "sql072", topic: "ACL e permessi",
     q: "Quali istruzioni SQL concedono e revocano i permessi a un utente?",
     opts: [
-      "GRANT concede i permessi e REVOKE li revoca, entrambe del sottolinguaggio DCL",
       "ALLOW per concedere i permessi e DENY per negarli a un determinato utente",
+      "GRANT concede i permessi e REVOKE li revoca, entrambe del sottolinguaggio DCL",
       "ADD per aggiungere i permessi e REMOVE per toglierli a un determinato utente"
     ],
-    correct: [0],
+    correct: [1],
     exp: "GRANT concede permessi (es. GRANT SELECT, INSERT ON tabella TO utente), REVOKE li revoca. Fanno parte del DCL (Data Control Language)."
   },
   {
     id: "sql073", topic: "Ruoli",
     q: "Perché conviene gestire i permessi tramite RUOLI in ambienti con tanti utenti?",
     opts: [
-      "Un ruolo raggruppa i privilegi da assegnare a più utenti simili, semplificando la gestione",
+      "I ruoli rendono più veloci le query perché precaricano i permessi in memoria",
       "I ruoli cifrano i dati a cui gli utenti accedono, proteggendoli dagli accessi non autorizzati",
-      "I ruoli rendono più veloci le query perché precaricano i permessi in memoria"
+      "Un ruolo raggruppa i privilegi da assegnare a più utenti simili, semplificando la gestione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un ruolo raggruppa privilegi comuni a utenti che svolgono la stessa attività: assegni il ruolo invece di ripetere i permessi per ogni utente. Più semplice da gestire e meno soggetto a errori in ambienti grandi."
   },
   {
@@ -823,22 +823,22 @@ registerSubject("SQL", [
     id: "sql075", topic: "Backup",
     q: "Quale tipologia di backup salva solo le modifiche fatte dall'ultimo backup COMPLETO?",
     opts: [
-      "Differenziale",
       "Incrementale (salva dall'ultimo backup di qualsiasi tipo)",
+      "Differenziale",
       "Completo (salva tutti i dati ogni volta da zero)"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il backup differenziale salva le modifiche rispetto all'ultimo backup COMPLETO. L'incrementale salva invece dall'ultimo backup di QUALSIASI tipo; il completo copia ogni volta tutti i dati."
   },
   {
     id: "sql076", topic: "Backup",
     q: "Perché il backup è un elemento fondamentale di ogni database?",
     opts: [
-      "Per recuperare i dati dopo guasti o attacchi informatici",
+      "Per ridurre lo spazio occupato dai dati sul disco",
       "Per rendere più veloci le query eseguite sul database",
-      "Per ridurre lo spazio occupato dai dati sul disco"
+      "Per recuperare i dati dopo guasti o attacchi informatici"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il backup serve al disaster recovery (guasti hardware/software), al ripristino dopo attacchi informatici ed è richiesto da normative come il GDPR. Non ha nulla a che vedere con velocità o spazio occupato."
   },
   {
@@ -856,22 +856,22 @@ registerSubject("SQL", [
     id: "sql078", topic: "Python e DB",
     q: "Qual è la differenza tra i metodi fetchone() e fetchall() del cursor?",
     opts: [
-      "fetchone() restituisce una sola riga; fetchall() restituisce tutte le righe",
       "fetchall() restituisce una sola riga, mentre fetchone() l'intero risultato",
+      "fetchone() restituisce una sola riga; fetchall() restituisce tutte le righe",
       "fetchone() cancella la prima riga dal database dopo averla letta dal cursore"
     ],
-    correct: [0],
+    correct: [1],
     exp: "fetchone() recupera UNA riga alla volta dal risultato della query; fetchall() recupera TUTTE le righe (come lista). Si scelgono in base a quanti risultati ci si aspetta."
   },
   {
     id: "sql079", topic: "Python e DB",
     q: "Cosa cambia usando cursor(dictionary=True) in mysql.connector?",
     opts: [
-      "I risultati sono restituiti come dizionari, letti per nome colonna",
+      "Le query vengono eseguite più velocemente perché i dati vengono compressi",
       "I risultati sono restituiti come tuple, accessibili per posizione (es. x[0])",
-      "Le query vengono eseguite più velocemente perché i dati vengono compressi"
+      "I risultati sono restituiti come dizionari, letti per nome colonna"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Con dictionary=True ogni riga è un dizionario: accedi ai campi per NOME (x['Name']) invece che per posizione nella tupla (x[0]). Rende il codice più leggibile e robusto se cambia l'ordine delle colonne."
   },
   {
@@ -889,22 +889,22 @@ registerSubject("SQL", [
     id: "sql081", topic: "Python e DB",
     q: "In una query parametrizzata mysql.connector come cursor.execute(query, (city_id,)), quale segnaposto si usa nella stringa della query?",
     opts: [
-      "%s",
       "?",
+      "%s",
       "$1"
     ],
-    correct: [0],
+    correct: [1],
     exp: "In mysql.connector il segnaposto per i parametri è %s (indipendentemente dal tipo di dato). I valori si passano come tupla a execute(): è il modo sicuro per evitare la SQL injection."
   },
   {
     id: "sql082", topic: "Cloud DB",
     q: "Cos'è un database in cloud?",
     opts: [
-      "Un sistema di gestione dati ospitato su una piattaforma cloud e accessibile via Internet",
+      "Un tipo speciale di indice che velocizza le ricerche sui dati archiviati da remoto",
       "Un database che per motivi di sicurezza può funzionare solo in modalità offline",
-      "Un tipo speciale di indice che velocizza le ricerche sui dati archiviati da remoto"
+      "Un sistema di gestione dati ospitato su una piattaforma cloud e accessibile via Internet"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un database cloud è ospitato su una piattaforma cloud e raggiungibile via Internet, invece di risiedere su un server locale. Offre accessibilità globale, alta disponibilità e scalabilità."
   },
   {
@@ -922,22 +922,22 @@ registerSubject("SQL", [
     id: "sql084", topic: "Cloud DB",
     q: "Quale di questi è un vantaggio tipico di un database in cloud?",
     opts: [
-      "L'accessibilità globale da qualsiasi luogo connesso a Internet",
       "Il funzionamento anche del tutto senza connessione a Internet",
+      "L'accessibilità globale da qualsiasi luogo connesso a Internet",
       "L'eliminazione della necessità di qualsiasi copia di backup"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I vantaggi del cloud sono accessibilità globale, alta disponibilità (uptime) e scalabilità. Proprio perché è accessibile via Internet richiede una connessione, e i backup restano comunque necessari."
   },
   {
     id: "sql085", topic: "Tipi di dato / ENUM",
     q: "Nel DB Medico la colonna è definita: sesso ENUM('M','F'). Cosa fa il tipo ENUM?",
     opts: [
-      "Limita il campo a un insieme predefinito di valori ammessi (qui solo 'M' o 'F')",
+      "Genera in automatico un valore progressivo a ogni nuovo inserimento",
       "Permette di inserire qualsiasi testo, funzionando come un normale VARCHAR",
-      "Genera in automatico un valore progressivo a ogni nuovo inserimento"
+      "Limita il campo a un insieme predefinito di valori ammessi (qui solo 'M' o 'F')"
     ],
-    correct: [0],
+    correct: [2],
     exp: "ENUM vincola il campo a uno dei valori elencati: sesso ENUM('M','F') accetta solo 'M' o 'F'. Serve a garantire coerenza dei dati impedendo l'inserimento di valori non previsti."
   },
   {
@@ -955,22 +955,22 @@ registerSubject("SQL", [
     id: "sql087", topic: "SELECT / ORDER BY",
     q: "A cosa serve la clausola ORDER BY in una SELECT (es. ORDER BY Population)?",
     opts: [
-      "A ordinare le righe del risultato in base a uno o più campi",
       "A raggruppare le righe con lo stesso valore per calcolarne un totale",
+      "A ordinare le righe del risultato in base a uno o più campi",
       "A eliminare dal risultato le righe duplicate lasciando solo valori distinti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "ORDER BY ordina il risultato in base al campo indicato (crescente di default, ASC; DESC per decrescente). Es. ORDER BY Population ordina le città dalla meno alla più popolosa."
   },
   {
     id: "sql088", topic: "SELECT / LIKE",
     q: "Nell'operatore LIKE, cosa rappresenta il carattere % (es. Name LIKE 'Mil%')?",
     opts: [
-      "Una sequenza di zero o più caratteri qualsiasi (è il carattere jolly)",
+      "Il simbolo di percentuale inteso in modo letterale, cioè il carattere %",
       "Un singolo carattere qualsiasi in quella esatta posizione della stringa",
-      "Il simbolo di percentuale inteso in modo letterale, cioè il carattere %"
+      "Una sequenza di zero o più caratteri qualsiasi (è il carattere jolly)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nel LIKE, % è il carattere jolly che sostituisce QUALSIASI sequenza di caratteri (anche vuota). 'Mil%' trova tutte le stringhe che iniziano con 'Mil' (Milano, Milazzo...). Il jolly _ (underscore) sostituisce invece un singolo carattere."
   },
   {
@@ -988,22 +988,22 @@ registerSubject("SQL", [
     id: "sql090", topic: "SELECT / DISTINCT",
     q: "A cosa serve la parola chiave DISTINCT in SELECT DISTINCT Regione FROM ... ?",
     opts: [
-      "A restituire solo i valori diversi, eliminando i duplicati dal risultato",
       "A contare quante righe sono presenti nel risultato prodotto dalla query",
+      "A restituire solo i valori diversi, eliminando i duplicati dal risultato",
       "A ordinare i valori del risultato in ordine crescente in base alla colonna"
     ],
-    correct: [0],
+    correct: [1],
     exp: "DISTINCT elimina i duplicati dal RISULTATO della query, restituendo solo i valori distinti. Non modifica i dati sul disco: agisce solo sull'output della SELECT."
   },
   {
     id: "sql100", topic: "Funzioni di aggregazione",
     q: "Cosa restituisce SELECT COUNT(*) FROM Clienti ?",
     opts: [
-      "Il numero totale di righe presenti nella tabella",
+      "L'elenco completo dei nomi di tutti i clienti in tabella",
       "La somma dei valori contenuti in una colonna numerica",
-      "L'elenco completo dei nomi di tutti i clienti in tabella"
+      "Il numero totale di righe presenti nella tabella"
     ],
-    correct: [0],
+    correct: [2],
     exp: "COUNT(*) conta il numero di righe (record). Qui restituisce quanti clienti ci sono. COUNT(colonna) conta invece i valori non NULL di quella colonna."
   },
   {
@@ -1021,22 +1021,22 @@ registerSubject("SQL", [
     id: "sql102", topic: "Valori NULL",
     q: "Come si selezionano le righe in cui il campo Telefono è vuoto (NULL)?",
     opts: [
-      "WHERE Telefono IS NULL",
       "WHERE Telefono = NULL",
+      "WHERE Telefono IS NULL",
       "WHERE Telefono = ''"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Per confrontare con NULL si usa IS NULL (o IS NOT NULL), MAI = NULL: in SQL NULL significa 'valore assente' e ogni confronto con = dà risultato sconosciuto, non vero."
   },
   {
     id: "sql103", topic: "ORDER BY",
     q: "Cosa fa ORDER BY Prezzo DESC ?",
     opts: [
-      "Ordina il risultato per prezzo in modo decrescente, dal più alto al più basso",
+      "Mantiene solo le righe con il prezzo più alto, scartando tutte le altre",
       "Ordina il risultato per prezzo in modo crescente, dal più basso al più alto",
-      "Mantiene solo le righe con il prezzo più alto, scartando tutte le altre"
+      "Ordina il risultato per prezzo in modo decrescente, dal più alto al più basso"
     ],
-    correct: [0],
+    correct: [2],
     exp: "DESC ordina in modo DECRESCENTE (dal più grande al più piccolo). Senza indicazione, o con ASC, l'ordinamento è crescente."
   },
   {
@@ -1054,22 +1054,22 @@ registerSubject("SQL", [
     id: "sql105", topic: "Cancellare i dati",
     q: "Qual è la differenza tra TRUNCATE TABLE e DELETE FROM (senza WHERE)?",
     opts: [
-      "Entrambi svuotano i dati, ma TRUNCATE è più rapido e senza WHERE; DELETE va riga per riga",
       "TRUNCATE elimina anche la struttura della tabella, mentre DELETE ne conserva le sole righe",
+      "Entrambi svuotano i dati, ma TRUNCATE è più rapido e senza WHERE; DELETE va riga per riga",
       "DELETE è più veloce di TRUNCATE perché non scrive nel log delle transazioni"
     ],
-    correct: [0],
+    correct: [1],
     exp: "TRUNCATE svuota rapidamente l'intera tabella (senza WHERE, spesso resettando l'auto-increment). DELETE cancella le righe una a una e accetta una WHERE per rimuoverne solo alcune. DROP invece elimina proprio la tabella."
   },
   {
     id: "sql106", topic: "Chiavi",
     q: "Cos'è una chiave primaria COMPOSTA (composite key)?",
     opts: [
-      "Una chiave primaria formata da più colonne insieme, la cui combinazione è univoca",
+      "Un altro nome con cui viene indicata la chiave esterna che collega due tabelle",
       "Una chiave il cui valore può ripetersi tra le righe senza violare alcun vincolo",
-      "Un altro nome con cui viene indicata la chiave esterna che collega due tabelle"
+      "Una chiave primaria formata da più colonne insieme, la cui combinazione è univoca"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Una chiave primaria composta è formata da due o più colonne: è la loro COMBINAZIONE a dover essere univoca. Utile ad es. nelle tabelle ponte di una relazione molti-a-molti."
   },
   {
@@ -1087,22 +1087,22 @@ registerSubject("SQL", [
     id: "sql108", topic: "Subquery",
     q: "Cos'è una subquery (query annidata)?",
     opts: [
-      "Una query scritta dentro un'altra, il cui risultato viene usato da quella esterna",
       "Una query salvata nel database e richiamabile con una SELECT come una vista",
+      "Una query scritta dentro un'altra, il cui risultato viene usato da quella esterna",
       "Un elenco ordinato dei valori di una colonna usato per velocizzare le ricerche"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Una subquery è una query interna a un'altra, spesso nel WHERE o nel FROM. Es. WHERE prezzo > (SELECT AVG(prezzo) FROM articoli): la query interna calcola la media, quella esterna la usa come filtro."
   },
   {
     id: "sql109", topic: "NoSQL",
     q: "Quale di questi è un database NoSQL (non relazionale)?",
     opts: [
-      "MongoDB",
+      "PostgreSQL (è relazionale)",
       "MySQL (è relazionale)",
-      "PostgreSQL (è relazionale)"
+      "MongoDB"
     ],
-    correct: [0],
+    correct: [2],
     exp: "MongoDB (documenti), Cassandra (a colonne) e DynamoDB (chiave-valore) sono database NoSQL. MySQL e PostgreSQL sono invece RDBMS relazionali basati su SQL."
   },
   {
@@ -1120,22 +1120,22 @@ registerSubject("SQL", [
     id: "sql111", topic: "Funzioni di aggregazione",
     q: "In una colonna con alcuni valori NULL, cosa conta COUNT(colonna) rispetto a COUNT(*)?",
     opts: [
-      "COUNT(colonna) conta solo i valori NON NULL; COUNT(*) conta tutte le righe",
       "Contano entrambi tutte le righe, inclusi i valori NULL presenti nella colonna",
+      "COUNT(colonna) conta solo i valori NON NULL; COUNT(*) conta tutte le righe",
       "COUNT(colonna) conta i NULL, mentre COUNT(*) li esclude dal totale"
     ],
-    correct: [0],
+    correct: [1],
     exp: "COUNT(colonna) ignora i NULL e conta solo i valori presenti; COUNT(*) conta le righe a prescindere dai NULL. Trappola frequente quando una colonna ha valori mancanti."
   },
   {
     id: "sql112", topic: "Valori NULL",
     q: "Cosa restituisce la query ... WHERE Telefono = NULL ?",
     opts: [
-      "Nessuna riga: con NULL serve IS NULL, non l'operatore =",
+      "Tutte le righe della tabella, dato che NULL corrisponde a qualunque valore",
       "Tutte le righe in cui il campo Telefono è effettivamente vuoto, come atteso",
-      "Tutte le righe della tabella, dato che NULL corrisponde a qualunque valore"
+      "Nessuna riga: con NULL serve IS NULL, non l'operatore ="
     ],
-    correct: [0],
+    correct: [2],
     exp: "Trappola: = NULL non fa quel che sembra. In SQL ogni confronto con NULL dà 'sconosciuto', mai vero, quindi non estrae righe. Bisogna usare IS NULL / IS NOT NULL."
   },
   {
@@ -1153,22 +1153,22 @@ registerSubject("SQL", [
     id: "sql114", topic: "JOIN",
     q: "Vuoi elencare TUTTI i clienti, anche quelli che non hanno mai fatto un ordine. Quale join usi?",
     opts: [
-      "LEFT JOIN da Clienti verso Ordini, così restano anche i clienti senza ordini",
       "INNER JOIN tra Clienti e Ordini, così ottieni tutte le combinazioni possibili",
+      "LEFT JOIN da Clienti verso Ordini, così restano anche i clienti senza ordini",
       "Una semplice SELECT sulla sola tabella Ordini, che contiene già tutti i clienti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La INNER JOIN scarterebbe i clienti senza ordini (nessuna corrispondenza). La LEFT JOIN da Clienti mantiene TUTTI i clienti, riempiendo con NULL i dati degli ordini mancanti. Trappola classica INNER vs LEFT."
   },
   {
     id: "sql115", topic: "GROUP BY",
     q: "SELECT Reparto, Nome, COUNT(*) FROM Dipendenti GROUP BY Reparto. Cosa c'è di sbagliato?",
     opts: [
-      "Nome non è aggregato né nella GROUP BY, come invece richiesto",
+      "GROUP BY va scritto prima di FROM e non dopo, quindi la query non è valida",
       "Non si può usare COUNT(*) insieme alla clausola GROUP BY nella stessa query",
-      "GROUP BY va scritto prima di FROM e non dopo, quindi la query non è valida"
+      "Nome non è aggregato né nella GROUP BY, come invece richiesto"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Regola: ogni campo nella SELECT che non è dentro una funzione di aggregazione deve comparire nella GROUP BY. Qui Nome viola la regola. COUNT(*) con GROUP BY è invece del tutto legittimo."
   },
   {
@@ -1186,22 +1186,22 @@ registerSubject("SQL", [
     id: "sql117", topic: "UNION",
     q: "Qual è la differenza tra UNION e UNION ALL?",
     opts: [
-      "UNION elimina le righe duplicate dal risultato; UNION ALL le mantiene tutte",
       "UNION affianca le colonne, mentre UNION ALL le impila una sotto l'altra",
+      "UNION elimina le righe duplicate dal risultato; UNION ALL le mantiene tutte",
       "UNION unisce due tabelle con una join; UNION ALL fa un prodotto incrociato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Entrambi impilano le righe di due query compatibili. UNION rimuove i duplicati (ed è più lento); UNION ALL li mantiene tutti. Non c'entrano con l'affiancare colonne (quello è la JOIN)."
   },
   {
     id: "sql118", topic: "Chiavi",
     q: "Una colonna definita come PRIMARY KEY può contenere il valore NULL?",
     opts: [
-      "No: una chiave primaria deve essere sempre univoca e NOT NULL",
+      "Solo se la chiave primaria è composta da più colonne insieme",
       "Sì, ma è ammesso un solo valore NULL in tutta la colonna",
-      "Solo se la chiave primaria è composta da più colonne insieme"
+      "No: una chiave primaria deve essere sempre univoca e NOT NULL"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La PRIMARY KEY identifica in modo univoco ogni riga, quindi non può mai essere NULL né ripetersi. È invece il vincolo UNIQUE che, in alcuni DBMS, tollera un valore NULL."
   },
   {

@@ -7,11 +7,11 @@ registerSubject("BI e Data Warehouse", [
     id: "u13001", topic: "Business Intelligence",
     q: "Cos'è la Business Intelligence (BI)?",
     opts: [
-      "L'insieme di strumenti e processi per trasformare i dati in informazioni per le decisioni",
+      "La progettazione dell'infrastruttura hardware e di rete dei sistemi aziendali",
       "L'insieme delle tecniche per registrare le transazioni operative quotidiane",
-      "La progettazione dell'infrastruttura hardware e di rete dei sistemi aziendali"
+      "L'insieme di strumenti e processi per trasformare i dati in informazioni per le decisioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La BI raccoglie, integra, analizza e presenta i dati aziendali (dashboard, report) per supportare le decisioni. Trasforma dati grezzi in informazioni utili al business."
   },
   {
@@ -29,22 +29,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13003", topic: "OLTP vs OLAP",
     q: "Qual è la differenza tra OLTP e OLAP?",
     opts: [
-      "OLTP gestisce transazioni operative; OLAP serve all'analisi di grandi volumi",
       "OLAP gestisce le transazioni operative; OLTP serve all'analisi storica",
+      "OLTP gestisce transazioni operative; OLAP serve all'analisi di grandi volumi",
       "OLTP funziona solo in cloud, mentre OLAP solo su server locali"
     ],
-    correct: [0],
+    correct: [1],
     exp: "OLTP (Online Transaction Processing) gestisce operazioni quotidiane (inserimenti, aggiornamenti) su database normalizzati; OLAP (Online Analytical Processing) analizza grandi aggregazioni di dati storici."
   },
   {
     id: "u13004", topic: "Schema a stella",
     q: "Nello schema a stella (star schema):",
     opts: [
-      "Una tabella dei fatti centrale è collegata a più tabelle dimensione",
+      "Non esistono tabelle dimensione: i dati stanno in un'unica tabella",
       "Tutte le tabelle sono normalizzate al massimo grado per evitare ridondanze",
-      "Non esistono tabelle dimensione: i dati stanno in un'unica tabella"
+      "Una tabella dei fatti centrale è collegata a più tabelle dimensione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Lo star schema ha al centro la fact table (metriche) circondata dalle dimension table (contesto: tempo, prodotto, cliente). Denormalizzato per query analitiche veloci."
   },
   {
@@ -62,22 +62,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13006", topic: "Dimension table",
     q: "Una tabella dimensione (dimension) contiene:",
     opts: [
-      "Attributi descrittivi che danno contesto ai fatti (chi, cosa, quando, dove)",
       "Le transazioni operative registrate in tempo reale dai sistemi",
+      "Attributi descrittivi che danno contesto ai fatti (chi, cosa, quando, dove)",
       "Nessuna chiave: è collegata ai fatti solo in base alla posizione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le dimensioni descrivono il contesto: cliente (nome, città), prodotto (categoria, marca), tempo (giorno, mese, anno). Permettono di 'affettare' i fatti per diverse prospettive."
   },
   {
     id: "u13007", topic: "Schema a fiocco",
     q: "Lo schema a fiocco di neve (snowflake) differisce dallo star perché:",
     opts: [
-      "Le dimensioni sono normalizzate in più tabelle collegate",
+      "È sempre più veloce dello star grazie a un numero minore di join",
       "Non esiste una tabella dei fatti al centro dello schema",
-      "È sempre più veloce dello star grazie a un numero minore di join"
+      "Le dimensioni sono normalizzate in più tabelle collegate"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Nello snowflake le dimensioni sono suddivise in sotto-tabelle normalizzate (es. prodotto→categoria→reparto): risparmia spazio ma richiede più join, spesso più lente dello star."
   },
   {
@@ -95,22 +95,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13009", topic: "ELT",
     q: "Qual è la differenza tra ETL ed ELT?",
     opts: [
-      "Nell'ELT si caricano prima i dati grezzi e si trasformano dopo, dentro il warehouse",
       "Nell'ELT i dati non vengono mai trasformati, ma solo copiati",
+      "Nell'ELT si caricano prima i dati grezzi e si trasformano dopo, dentro il warehouse",
       "Nell'ETL i dati non vengono mai estratti dalle sorgenti originali"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Nell'ELT si estrae e si carica (Load) prima nel data warehouse, sfruttandone la potenza per trasformare (Transform) dopo. Comune nei data warehouse cloud moderni con dbt."
   },
   {
     id: "u13010", topic: "Power BI",
     q: "Cos'è Power BI?",
     opts: [
-      "Uno strumento di visualizzazione e reportistica dati di Microsoft",
+      "Un linguaggio di programmazione per sviluppare applicazioni web",
       "Un database relazionale usato per archiviare grandi volumi di dati",
-      "Un linguaggio di programmazione per sviluppare applicazioni web"
+      "Uno strumento di visualizzazione e reportistica dati di Microsoft"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Power BI è una piattaforma di BI: importa dati da varie fonti, li modella e crea dashboard e report interattivi. Include Power Query (ETL) e il linguaggio DAX."
   },
   {
@@ -128,22 +128,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13012", topic: "Misure",
     q: "Una 'misura' (measure) in Power BI:",
     opts: [
-      "È un calcolo aggregato che si adatta al contesto del report",
       "È una colonna con valori fissi calcolati una volta al caricamento",
+      "È un calcolo aggregato che si adatta al contesto del report",
       "È un tipo di grafico predefinito disponibile nelle dashboard"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le misure calcolano valori aggregati (somme, medie) che reagiscono ai filtri e al contesto del visual (es. totale vendite per la selezione corrente). Sono calcolate 'al volo'."
   },
   {
     id: "u13013", topic: "Power Query",
     q: "Power Query in Power BI serve a:",
     opts: [
-      "Estrarre, pulire e trasformare i dati prima del caricamento",
+      "Pubblicare e condividere il report con gli altri utenti",
       "Creare i grafici e i visual interattivi della dashboard finale",
-      "Pubblicare e condividere il report con gli altri utenti"
+      "Estrarre, pulire e trasformare i dati prima del caricamento"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Power Query è lo strumento ETL di Power BI: connette le fonti, applica trasformazioni (filtri, join, pulizia) registrandole come passi ripetibili, e carica i dati nel modello."
   },
   {
@@ -161,22 +161,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13015", topic: "Fivetran",
     q: "Strumenti come Fivetran servono a:",
     opts: [
-      "Estrarre e caricare (EL) dati da varie fonti nel warehouse in modo automatico",
       "Trasformare i dati grezzi già caricati in modelli dimensionali",
+      "Estrarre e caricare (EL) dati da varie fonti nel warehouse in modo automatico",
       "Addestrare modelli di machine learning a partire dai dati raccolti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Fivetran è un tool di data integration che automatizza l'estrazione e il caricamento (Extract-Load) da centinaia di sorgenti verso il data warehouse, gestendo connettori e schema."
   },
   {
     id: "u13016", topic: "Slowly Changing Dimensions",
     q: "Le Slowly Changing Dimensions (SCD) gestiscono:",
     opts: [
-      "Come registrare i cambiamenti degli attributi di una dimensione nel tempo",
+      "Come cifrare gli attributi sensibili contenuti in una dimensione",
       "Come gestire le transazioni operative in tempo reale sul database",
-      "Come cifrare gli attributi sensibili contenuti in una dimensione"
+      "Come registrare i cambiamenti degli attributi di una dimensione nel tempo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le SCD trattano l'evoluzione dei dati dimensionali (es. un cliente cambia città): il tipo 1 sovrascrive, il tipo 2 conserva lo storico creando nuove righe con validità temporale."
   },
   {
@@ -194,22 +194,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13018", topic: "Data mart",
     q: "Un data mart è:",
     opts: [
-      "Un sottoinsieme del data warehouse focalizzato su un'area/reparto",
       "L'intero data warehouse aziendale con tutti i dati integrati",
+      "Un sottoinsieme del data warehouse focalizzato su un'area/reparto",
       "Un semplice file CSV esportato dal data warehouse"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il data mart è una porzione tematica del DW dedicata a un dominio (vendite, marketing): più piccolo e specifico, facilita l'accesso ai dati per quel reparto."
   },
   {
     id: "u13019", topic: "Grain",
     q: "Il 'grain' (grana) di una fact table indica:",
     opts: [
-      "Il livello di dettaglio di ogni riga (cosa rappresenta una riga)",
+      "L'ordine con cui le righe vengono restituite dalle query",
       "Il numero complessivo di colonne presenti nella tabella dei fatti",
-      "L'ordine con cui le righe vengono restituite dalle query"
+      "Il livello di dettaglio di ogni riga (cosa rappresenta una riga)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La grana definisce cosa rappresenta una singola riga dei fatti (es. una riga = una vendita di un prodotto in un giorno). Definire la grana è il primo passo della modellazione dimensionale."
   },
   {
@@ -227,22 +227,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13021", topic: "Dashboard",
     q: "Una dashboard di BI serve a:",
     opts: [
-      "Mostrare a colpo d'occhio metriche e KPI con visualizzazioni interattive",
       "Estrarre e trasformare i dati prima di caricarli nel warehouse",
+      "Mostrare a colpo d'occhio metriche e KPI con visualizzazioni interattive",
       "Definire i permessi di accesso degli utenti ai vari report"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La dashboard riassume visivamente le informazioni chiave (grafici, KPI, tabelle) in modo interattivo, permettendo di monitorare l'andamento e approfondire (drill-down)."
   },
   {
     id: "u13022", topic: "Denormalizzazione",
     q: "Perché i data warehouse sono spesso denormalizzati?",
     opts: [
-      "Per velocizzare le query analitiche riducendo il numero di join",
+      "Per gestire meglio le transazioni concorrenti di molti utenti",
       "Per garantire la massima integrità dei dati durante la scrittura",
-      "Per gestire meglio le transazioni concorrenti di molti utenti"
+      "Per velocizzare le query analitiche riducendo il numero di join"
     ],
-    correct: [0],
+    correct: [2],
     exp: "A differenza degli OLTP normalizzati (per l'integrità in scrittura), i DW privilegiano la lettura veloce di grandi aggregazioni: la denormalizzazione (star schema) riduce i join costosi."
   },
   {
@@ -260,22 +260,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13024", topic: "Cubo OLAP",
     q: "Un cubo OLAP permette di:",
     opts: [
-      "Analizzare i dati secondo più dimensioni con aggregazioni rapide",
       "Memorizzare i file binari e i documenti allegati dell'azienda",
+      "Analizzare i dati secondo più dimensioni con aggregazioni rapide",
       "Definire i permessi di accesso ai dati per ciascun utente"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il cubo OLAP pre-aggrega i dati lungo più dimensioni (tempo, geografia, prodotto), consentendo analisi multidimensionali rapide con slice, dice, drill-down e roll-up."
   },
   {
     id: "u13025", topic: "Staging area",
     q: "L'area di staging in un processo ETL serve a:",
     opts: [
-      "Ospitare temporaneamente i dati grezzi prima della trasformazione",
+      "Gestire gli account e i permessi degli utenti del warehouse",
       "Mostrare le dashboard finali agli utenti di business",
-      "Gestire gli account e i permessi degli utenti del warehouse"
+      "Ospitare temporaneamente i dati grezzi prima della trasformazione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Lo staging è un'area di transito dove i dati estratti vengono depositati grezzi prima di pulizia e trasformazione, isolando i sistemi sorgente dal warehouse finale."
   },
   {
@@ -293,22 +293,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13027", topic: "Relazioni Power BI",
     q: "In Power BI, il modello dati collega le tabelle tramite:",
     opts: [
-      "Relazioni tra colonne chiave (uno-a-molti tipicamente)",
       "Un unico file di testo che contiene tutte le tabelle",
+      "Relazioni tra colonne chiave (uno-a-molti tipicamente)",
       "Copie manuali dei dati incollate tra una tabella e l'altra"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Nel modello di Power BI si definiscono relazioni tra dimensioni e fatti (di solito uno-a-molti): permettono ai visual di filtrare e aggregare correttamente tra le tabelle."
   },
   {
     id: "u13028", topic: "CALCULATE",
     q: "La funzione DAX CALCULATE serve a:",
     opts: [
-      "Valutare un'espressione modificando il contesto dei filtri",
+      "Importare i dati dalle sorgenti esterne dentro il modello",
       "Creare un nuovo grafico all'interno della pagina del report",
-      "Importare i dati dalle sorgenti esterne dentro il modello"
+      "Valutare un'espressione modificando il contesto dei filtri"
     ],
-    correct: [0],
+    correct: [2],
     exp: "CALCULATE è la funzione DAX più potente: calcola una misura applicando o modificando i filtri (es. vendite solo per una regione), controllando il contesto di calcolo."
   },
   {
@@ -326,22 +326,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13030", topic: "Data pipeline",
     q: "Una data pipeline è:",
     opts: [
-      "Un flusso automatizzato che sposta e trasforma i dati tra sistemi",
       "Un singolo file statico in cui sono salvati tutti i dati",
+      "Un flusso automatizzato che sposta e trasforma i dati tra sistemi",
       "Un grafico che mostra l'andamento dei dati nel tempo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La data pipeline orchestra i passi (estrazione, trasformazione, caricamento) per portare i dati dalle sorgenti alla destinazione (DW), in modo ripetibile e automatizzato."
   },
   {
     id: "u13031", topic: "OLAP operazioni",
     q: "L'operazione OLAP di 'slice' consiste nel:",
     opts: [
-      "Fissare il valore di una dimensione per estrarne una fetta",
+      "Eliminare completamente una dimensione dall'analisi del cubo",
       "Aggregare i dati salendo a un livello di dettaglio superiore",
-      "Eliminare completamente una dimensione dall'analisi del cubo"
+      "Fissare il valore di una dimensione per estrarne una fetta"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Lo slice fissa una dimensione (es. anno=2023) per analizzare una 'fetta' del cubo. Il dice seleziona un sotto-cubo su più dimensioni; drill-down/roll-up cambiano il dettaglio."
   },
   {
@@ -359,22 +359,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13033", topic: "Data lineage",
     q: "Il 'data lineage' descrive:",
     opts: [
-      "Il percorso e le trasformazioni dei dati dalla sorgente alla destinazione",
       "Il numero di utenti che accedono ai dati in un dato periodo",
+      "Il percorso e le trasformazioni dei dati dalla sorgente alla destinazione",
       "La velocità della rete che collega le sorgenti al warehouse"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il data lineage traccia da dove vengono i dati e come sono stati trasformati lungo la pipeline: fondamentale per fiducia, debugging e conformità normativa."
   },
   {
     id: "u13034", topic: "Aggregazioni pre-calcolate",
     q: "Pre-calcolare le aggregazioni in un DW serve a:",
     opts: [
-      "Velocizzare le query analitiche frequenti",
+      "Impedire l'accesso concorrente alle tabelle",
       "Rallentare volutamente le query poco usate",
-      "Impedire l'accesso concorrente alle tabelle"
+      "Velocizzare le query analitiche frequenti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Materializzare aggregati (tabelle di riepilogo, cubi) evita di ricalcolare ogni volta grandi somme, accelerando i report a scapito di più spazio e aggiornamenti."
   },
   {
@@ -392,22 +392,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13036", topic: "Contesto di filtro DAX",
     q: "In DAX, il 'contesto di filtro' determina:",
     opts: [
-      "Quali righe sono considerate nel calcolo di una misura",
       "La combinazione di colori applicata ai visual del report",
+      "Quali righe sono considerate nel calcolo di una misura",
       "Il nome della tabella da cui provengono i dati mostrati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il contesto di filtro (dato da slicer, righe/colonne del visual, CALCULATE) definisce il sottoinsieme di dati su cui la misura viene calcolata. È centrale in DAX."
   },
   {
     id: "u13037", topic: "Incrementale",
     q: "Un caricamento incrementale nel DW:",
     opts: [
-      "Aggiorna solo i dati nuovi o modificati, non tutto da capo",
+      "Cancella i dati esistenti prima di ogni nuovo caricamento",
       "Non aggiorna mai i dati una volta caricati la prima volta",
-      "Cancella i dati esistenti prima di ogni nuovo caricamento"
+      "Aggiorna solo i dati nuovi o modificati, non tutto da capo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il refresh incrementale carica solo le variazioni (nuove righe, modifiche) invece dell'intero dataset: più rapido ed efficiente su grandi volumi rispetto al full load."
   },
   {
@@ -425,22 +425,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13039", topic: "Self-service BI",
     q: "La 'self-service BI' permette agli utenti di business di:",
     opts: [
-      "Creare report e analisi autonomamente, senza dipendere dall'IT",
       "Programmare direttamente il database sottostante con codice SQL",
+      "Creare report e analisi autonomamente, senza dipendere dall'IT",
       "Gestire e configurare i server su cui gira la piattaforma"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Strumenti come Power BI abilitano gli utenti a esplorare i dati e costruire report da soli, riducendo il collo di bottiglia dell'IT, purché su dati governati e affidabili."
   },
   {
     id: "u13040", topic: "Trasformazioni dbt",
     q: "In dbt, un 'model' è:",
     opts: [
-      "Un file SQL che definisce una trasformazione (una SELECT) materializzata come tabella/vista",
+      "Un grafico predefinito incluso nelle dashboard interattive",
       "Un modello di machine learning addestrato sui dati del warehouse",
-      "Un grafico predefinito incluso nelle dashboard interattive"
+      "Un file SQL che definisce una trasformazione (una SELECT) materializzata come tabella/vista"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un model dbt è una SELECT SQL che dbt esegue e materializza (come tabella o vista) nel warehouse. I model si compongono referenziandosi tra loro con ref()."
   },
   {
@@ -458,22 +458,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13042", topic: "Modellazione dimensionale",
     q: "Il primo passo della modellazione dimensionale (Kimball) è:",
     opts: [
-      "Scegliere il processo di business e definire la grana dei fatti",
       "Disegnare subito le dashboard e i grafici finali del progetto",
+      "Scegliere il processo di business e definire la grana dei fatti",
       "Applicare la cifratura a tutte le tabelle del data warehouse"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Kimball: 1) scegliere il processo di business, 2) dichiarare la grana, 3) identificare le dimensioni, 4) identificare i fatti. Definire la grana è cruciale e precede le dimensioni."
   },
   {
     id: "u13043", topic: "Visualizzazione appropriata",
     q: "Per mostrare l'andamento delle vendite nel tempo, il grafico più adatto è:",
     opts: [
-      "Un grafico a linee",
+      "Un istogramma di una variabile",
       "Un grafico a torta",
-      "Un istogramma di una variabile"
+      "Un grafico a linee"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il grafico a linee mostra bene l'evoluzione temporale. La torta è per composizioni (parti di un totale), non per trend. Scegliere il visual giusto è chiave in BI."
   },
   {
@@ -491,22 +491,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13045", topic: "Refresh",
     q: "La pianificazione dell'aggiornamento (refresh) di un report serve a:",
     opts: [
-      "Mantenere i dati del report allineati alle sorgenti a intervalli regolari",
       "Eliminare periodicamente i dati storici per liberare spazio",
+      "Mantenere i dati del report allineati alle sorgenti a intervalli regolari",
       "Creare nuovi account per gli utenti che consultano il report"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I dati importati vanno aggiornati periodicamente (schedulato) affinché dashboard e report riflettano i valori più recenti delle sorgenti."
   },
   {
     id: "u13046", topic: "Dati storici",
     q: "Perché un data warehouse conserva i dati storici mentre un OLTP spesso no?",
     opts: [
-      "Perché l'analisi richiede confronti nel tempo e trend, non solo lo stato attuale",
+      "Perché i dati storici non servono mai alle decisioni aziendali",
       "Perché conservare i dati storici occupa molto meno spazio su disco",
-      "Perché i dati storici non servono mai alle decisioni aziendali"
+      "Perché l'analisi richiede confronti nel tempo e trend, non solo lo stato attuale"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'OLTP tiene lo stato corrente per l'operatività; il DW conserva la storia per analizzare trend, stagionalità e confronti tra periodi, essenziali per le decisioni."
   },
   {
@@ -524,22 +524,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13048", topic: "Sorgenti eterogenee",
     q: "Il data warehouse integra dati da sorgenti eterogenee, quindi deve:",
     opts: [
-      "Uniformare formati, unità e definizioni durante la trasformazione",
       "Lasciare i dati esattamente come sono nelle sorgenti originali",
+      "Uniformare formati, unità e definizioni durante la trasformazione",
       "Evitare qualsiasi trasformazione per non alterare i dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Dati da CRM, ERP, file, API hanno formati e definizioni diverse: l'ETL/ELT li standardizza (date, valute, chiavi, categorie) per renderli confrontabili e coerenti."
   },
   {
     id: "u13049", topic: "Semantica condivisa",
     q: "Un 'semantic layer' (o modello semantico) serve a:",
     opts: [
-      "Definire metriche e relazioni in modo coerente per tutti gli utenti",
+      "Gestire la rete che collega il warehouse ai client di analisi",
       "Cifrare i dati prima di mostrarli nelle dashboard agli utenti",
-      "Gestire la rete che collega il warehouse ai client di analisi"
+      "Definire metriche e relazioni in modo coerente per tutti gli utenti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il layer semantico traduce le tabelle tecniche in concetti di business (metriche, dimensioni) con definizioni condivise, così tutti calcolano gli stessi KPI allo stesso modo."
   },
   {
@@ -557,22 +557,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13051", topic: "Aggregazione temporale",
     q: "Una tabella 'dimensione tempo' (date dimension) serve a:",
     opts: [
-      "Fornire attributi di calendario (giorno, mese, trimestre, festività) per le analisi temporali",
       "Cifrare le date per proteggere le informazioni sensibili dei clienti",
+      "Fornire attributi di calendario (giorno, mese, trimestre, festività) per le analisi temporali",
       "Sostituire la tabella dei fatti nelle analisi che coinvolgono il tempo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La dimensione tempo pre-costruita permette di aggregare e filtrare i fatti per periodo (mese, trimestre, anno, festività) senza calcolare ogni volta le componenti dalle date."
   },
   {
     id: "u13052", topic: "Formato colonnare",
     q: "I data warehouse analitici usano spesso storage colonnare perché:",
     opts: [
-      "Legge solo le colonne necessarie, velocizzando le aggregazioni",
+      "Serve esclusivamente a cifrare le colonne con dati sensibili",
       "Registra i dati riga per riga, ideale per le transazioni operative",
-      "Serve esclusivamente a cifrare le colonne con dati sensibili"
+      "Legge solo le colonne necessarie, velocizzando le aggregazioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Lo storage colonnare memorizza i dati per colonna: le query analitiche che aggregano poche colonne su molte righe leggono solo ciò che serve e comprimono meglio, risultando molto più veloci."
   },
   {
@@ -590,22 +590,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13054", topic: "Ruoli e sicurezza",
     q: "La row-level security (RLS) in Power BI serve a:",
     opts: [
-      "Mostrare a ciascun utente solo le righe di dati che gli competono",
       "Cambiare la combinazione di colori del report per ogni utente",
+      "Mostrare a ciascun utente solo le righe di dati che gli competono",
       "Creare automaticamente nuove misure DAX per ciascun utente"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La RLS filtra i dati in base al ruolo/utente (es. un responsabile vede solo la sua regione): stessa dashboard, dati diversi secondo i permessi."
   },
   {
     id: "u13055", topic: "Metriche vs dimensioni",
     q: "'fatturato' e 'regione' sono rispettivamente:",
     opts: [
-      "Una misura (numerica) e una dimensione (categorica)",
+      "Due tabelle dei fatti collegate alla stessa dimensione",
       "Due dimensioni categoriche usate per filtrare i dati",
-      "Due tabelle dei fatti collegate alla stessa dimensione"
+      "Una misura (numerica) e una dimensione (categorica)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il fatturato è una misura (si somma, si media); la regione è una dimensione (contesto per cui si analizza). Distinguere misure e dimensioni è alla base della modellazione BI."
   },
   {
@@ -623,22 +623,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13057", topic: "SCD tipo 2",
     q: "Una SCD di tipo 2 conserva lo storico:",
     opts: [
-      "Creando una nuova riga a ogni cambiamento, con date di validità",
       "Sovrascrivendo il vecchio valore con quello nuovo, senza storico",
+      "Creando una nuova riga a ogni cambiamento, con date di validità",
       "Cancellando l'intera dimensione a ogni cambiamento rilevato"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La SCD di tipo 2 storicizza: quando un attributo cambia, si aggiunge una nuova riga (con chiave surrogata e periodo di validità), mantenendo anche la versione precedente. Il tipo 1 sovrascrive."
   },
   {
     id: "u13058", topic: "Drill-through",
     q: "Il 'drill-through' in un report permette di:",
     opts: [
-      "Passare a una pagina di dettaglio filtrata sul contesto selezionato",
+      "Eliminare un visual dalla pagina corrente del report",
       "Cambiare la combinazione di colori dell'intero report",
-      "Eliminare un visual dalla pagina corrente del report"
+      "Passare a una pagina di dettaglio filtrata sul contesto selezionato"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il drill-through porta l'utente a una pagina di approfondimento mostrando i dettagli relativi all'elemento selezionato (es. cliccando una regione si aprono i dettagli di quella regione)."
   },
   {
@@ -656,22 +656,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13060", topic: "Modello dati Power BI",
     q: "Uno schema a stella è consigliato in Power BI perché:",
     opts: [
-      "Ottimizza le prestazioni e semplifica le misure DAX",
       "Rallenta i calcoli ma garantisce una maggiore sicurezza",
+      "Ottimizza le prestazioni e semplifica le misure DAX",
       "Impedisce di creare relazioni tra le tabelle del modello"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Power BI lavora meglio con un modello a stella (fatti + dimensioni): relazioni chiare, query più veloci e formule DAX più semplici e prevedibili rispetto a modelli piatti o troppo normalizzati."
   },
   {
     id: "u13061", topic: "Aggregare in visual",
     q: "In un visual di Power BI, trascinare una misura la mostra:",
     opts: [
-      "Aggregata secondo le dimensioni presenti nel visual",
+      "Senza alcun calcolo, mostrando solo il nome della misura",
       "Riga per riga così com'è, senza alcuna aggregazione",
-      "Senza alcun calcolo, mostrando solo il nome della misura"
+      "Aggregata secondo le dimensioni presenti nel visual"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La misura viene calcolata per ogni combinazione delle dimensioni del visual (es. vendite per regione e anno): il contesto del visual determina il livello di aggregazione."
   },
   {
@@ -689,22 +689,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13063", topic: "Materializzazione dbt",
     q: "In dbt, materializzare un model come 'table' invece che 'view' significa:",
     opts: [
-      "Salvare fisicamente i risultati (più veloci in lettura, ma da aggiornare)",
       "Non salvare nulla e ricalcolare la query a ogni interrogazione",
+      "Salvare fisicamente i risultati (più veloci in lettura, ma da aggiornare)",
       "Generare automaticamente un grafico a partire dai risultati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Una view ricalcola la query a ogni interrogazione (sempre fresca ma potenzialmente lenta); una table salva i risultati (letture rapide, ma va rigenerata). La scelta bilancia freschezza e performance."
   },
   {
     id: "u13064", topic: "Additività",
     q: "Una misura 'additiva' (es. quantità venduta):",
     opts: [
-      "Può essere sommata lungo tutte le dimensioni",
+      "È in realtà una dimensione e non una misura numerica",
       "Non può mai essere sommata lungo nessuna dimensione",
-      "È in realtà una dimensione e non una misura numerica"
+      "Può essere sommata lungo tutte le dimensioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le misure additive si sommano su qualunque dimensione (tempo, prodotto, luogo). Alcune sono semi-additive (es. saldo di magazzino: non si somma nel tempo) o non additive (es. rapporti/percentuali)."
   },
   {
@@ -722,22 +722,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13066", topic: "Metrica vs KPI",
     q: "Qual è la differenza tra metrica e KPI?",
     opts: [
-      "Il KPI è una metrica LEGATA a un obiettivo strategico; non tutte le metriche sono KPI",
       "La metrica è legata a un obiettivo strategico; il KPI è una misura qualsiasi",
+      "Il KPI è una metrica LEGATA a un obiettivo strategico; non tutte le metriche sono KPI",
       "La metrica è sempre più importante e strategica del KPI"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Una metrica è qualunque valore misurabile; il KPI è una metrica selezionata perché critica per un obiettivo (es. il tasso di abbandono per l'obiettivo di retention). Pochi KPI, molte metriche."
   },
   {
     id: "u13067", topic: "Aggregazione errata",
     q: "Fare la 'media delle medie' su gruppi di dimensione diversa:",
     opts: [
-      "Può dare un risultato errato: serve ponderare per la numerosità",
+      "Non è mai un problema perché le medie si sommano tra loro",
       "Dà sempre il risultato corretto indipendentemente dai gruppi",
-      "Non è mai un problema perché le medie si sommano tra loro"
+      "Può dare un risultato errato: serve ponderare per la numerosità"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Mediare medie di gruppi con numerosità diverse senza pesarle distorce il risultato. Serve la media ponderata o calcolare somma/conteggio totali. Errore comune nei report."
   },
   {
@@ -755,22 +755,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13069", topic: "Reporting vs analisi",
     q: "L'analisi 'ad hoc' si distingue dal reporting standard perché:",
     opts: [
-      "Esplora domande specifiche e non pianificate sui dati",
       "Non utilizza affatto i dati del data warehouse aziendale",
+      "Esplora domande specifiche e non pianificate sui dati",
       "Serve soltanto a creare grafici colorati per le presentazioni"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il reporting standard produce report ricorrenti predefiniti; l'analisi ad hoc risponde a domande estemporanee esplorando i dati liberamente, spesso in self-service."
   },
   {
     id: "u13070", topic: "Ottimizzazione DAX",
     q: "Per performance in Power BI, è meglio:",
     opts: [
-      "Usare misure ben scritte su un modello a stella pulito",
+      "Importare tutto senza modellare",
       "Molte colonne calcolate su tabelle enormi e piatte",
-      "Importare tutto senza modellare"
+      "Usare misure ben scritte su un modello a stella pulito"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Prestazioni migliori si ottengono con un modello a stella snello, tipi di dato adeguati e misure DAX efficienti, evitando tabelle enormi denormalizzate e colonne calcolate inutili."
   },
   {
@@ -788,22 +788,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13072", topic: "Fact type",
     q: "Una 'fact table' senza misure numeriche, che registra solo il verificarsi di eventi, è detta:",
     opts: [
-      "Factless fact table (tabella dei fatti senza fatti)",
       "Una normale tabella dimensione con soli attributi descrittivi",
+      "Factless fact table (tabella dei fatti senza fatti)",
       "Una tabella di staging usata solo in modo temporaneo"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La factless fact table registra eventi/relazioni (es. presenze studenti a lezione) senza metriche numeriche: si analizza contando le righe. Utile per coperture e occorrenze."
   },
   {
     id: "u13073", topic: "Trasformazioni comuni",
     q: "Tra le trasformazioni ETL più comuni c'è:",
     opts: [
-      "Pulizia, deduplicazione, join e standardizzazione dei valori",
+      "Nessuna trasformazione: i dati passano del tutto invariati",
       "La semplice copia dei file senza applicare alcuna modifica",
-      "Nessuna trasformazione: i dati passano del tutto invariati"
+      "Pulizia, deduplicazione, join e standardizzazione dei valori"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le trasformazioni tipiche includono pulizia (NaN, formati), deduplicazione, unione di sorgenti (join), calcolo di campi derivati e standardizzazione di codici/unità."
   },
   {
@@ -821,22 +821,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13075", topic: "Storicizzazione",
     q: "Registrare uno snapshot periodico dei dati (es. giacenze a fine mese) serve a:",
     opts: [
-      "Analizzare l'evoluzione nel tempo di grandezze che verrebbero sovrascritte",
       "Cancellare lo storico per mantenere solo il valore più recente",
+      "Analizzare l'evoluzione nel tempo di grandezze che verrebbero sovrascritte",
       "Cifrare periodicamente i dati per proteggerli dagli accessi"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Gli snapshot periodici (accumulating/periodic snapshot fact) fotografano lo stato a intervalli regolari, permettendo confronti temporali su grandezze come saldi e giacenze."
   },
   {
     id: "u13076", topic: "Definizione condivisa",
     q: "Se due reparti calcolano il 'fatturato' con regole diverse:",
     opts: [
-      "Servono definizioni condivise (governance) per evitare numeri contrastanti",
+      "Basta cambiare la combinazione di colori dei grafici prodotti",
       "Va bene così: ogni reparto può usare la propria definizione",
-      "Basta cambiare la combinazione di colori dei grafici prodotti"
+      "Servono definizioni condivise (governance) per evitare numeri contrastanti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Definizioni incoerenti generano report che si contraddicono e sfiducia nei dati. La governance stabilisce definizioni univoche (metriche certificate) come 'single source of truth'."
   },
   {
@@ -854,22 +854,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13078", topic: "Visual comparativo",
     q: "Per confrontare un valore effettivo con un obiettivo, un visual adatto è:",
     opts: [
-      "Il grafico a KPI o il bullet chart",
       "Il grafico a torta che mostra la composizione di un totale",
+      "Il grafico a KPI o il bullet chart",
       "Il diagramma a dispersione tra due variabili numeriche"
     ],
-    correct: [0],
+    correct: [1],
     exp: "KPI card e bullet chart mostrano il valore attuale rispetto a un target/soglia, evidenziando il raggiungimento dell'obiettivo. Scelte più efficaci di grafici generici per i KPI."
   },
   {
     id: "u13079", topic: "Chiave naturale vs surrogata",
     q: "Perché non usare la chiave naturale (es. codice cliente) come chiave della dimensione?",
     opts: [
-      "Può cambiare o essere riusata: la surrogata garantisce stabilità e supporta lo storico",
+      "Occupa molto meno spazio su disco rispetto alla surrogata",
       "È sempre più veloce da usare rispetto a una chiave surrogata",
-      "Occupa molto meno spazio su disco rispetto alla surrogata"
+      "Può cambiare o essere riusata: la surrogata garantisce stabilità e supporta lo storico"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le chiavi naturali dei sistemi sorgente possono cambiare, ripetersi o differire tra fonti. La surrogata (interna, stabile) disaccoppia il DW e abilita la storicizzazione (SCD tipo 2)."
   },
   {
@@ -887,22 +887,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13081", topic: "Report interattivo",
     q: "Uno 'slicer' in Power BI serve a:",
     opts: [
-      "Filtrare interattivamente i dati del report per l'utente",
       "Connettere il report direttamente al database sorgente",
+      "Filtrare interattivamente i dati del report per l'utente",
       "Esportare l'intero report in un file PDF condivisibile"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Lo slicer è un controllo di filtro visibile (es. selezione dell'anno o della regione) che l'utente usa per filtrare tutti i visual collegati, rendendo il report interattivo."
   },
   {
     id: "u13082", topic: "Modellazione: fatti multipli",
     q: "In presenza di più processi (vendite, resi, spedizioni) di solito si creano:",
     opts: [
-      "Più fact table che condividono le stesse dimensioni (conformi)",
+      "Una sola dimensione condivisa senza alcuna tabella dei fatti",
       "Un'unica tabella dei fatti che contiene tutti i processi insieme",
-      "Una sola dimensione condivisa senza alcuna tabella dei fatti"
+      "Più fact table che condividono le stesse dimensioni (conformi)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Ogni processo di business ha la sua fact table, ma condividono dimensioni 'conformi' (stesso cliente, stesso tempo): questo permette analisi integrate (drill across) tra i processi."
   },
   {
@@ -920,22 +920,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13084", topic: "Aggregazione a livelli",
     q: "Il roll-up in OLAP consiste nel:",
     opts: [
-      "Aggregare i dati a un livello di dettaglio superiore (es. da giorno a mese)",
       "Scendere verso un livello di dettaglio più fine (es. da mese a giorno)",
+      "Aggregare i dati a un livello di dettaglio superiore (es. da giorno a mese)",
       "Fissare il valore di una dimensione per estrarne una fetta"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il roll-up sale nella gerarchia aggregando (giorno→mese→anno). Il drill-down fa l'opposto. Sono le operazioni base per navigare le gerarchie di un cubo OLAP."
   },
   {
     id: "u13085", topic: "Trasformazione vs caricamento",
     q: "Nell'ELT moderno, la trasformazione avviene:",
     opts: [
-      "Dentro il data warehouse dopo il caricamento dei dati grezzi",
+      "Non avviene mai: i dati restano sempre allo stato grezzo",
       "Fuori dal warehouse, prima di caricare i dati al suo interno",
-      "Non avviene mai: i dati restano sempre allo stato grezzo"
+      "Dentro il data warehouse dopo il caricamento dei dati grezzi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'ELT sfrutta la potenza di calcolo del data warehouse cloud: si caricano i dati grezzi e li si trasforma lì (con SQL/dbt), a differenza dell'ETL che trasforma prima del caricamento."
   },
   {
@@ -953,22 +953,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13087", topic: "Chiavi nei fatti",
     q: "Le colonne chiave in una fact table sono per lo più:",
     opts: [
-      "Foreign key verso le dimensioni più le misure numeriche",
       "Soltanto attributi descrittivi di tipo testuale",
+      "Foreign key verso le dimensioni più le misure numeriche",
       "Nessuna chiave, ma solo valori numerici sciolti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La fact table contiene le FK verso le dimensioni (che ne definiscono il contesto) e le misure numeriche dell'evento. La combinazione delle FK spesso definisce la grana."
   },
   {
     id: "u13088", topic: "Cataloghi dati",
     q: "Un data catalog serve a:",
     opts: [
-      "Documentare e rendere ricercabili i dataset e i loro significati",
+      "Generare automaticamente i grafici delle dashboard aziendali",
       "Cifrare i dataset per proteggerli dagli accessi esterni",
-      "Generare automaticamente i grafici delle dashboard aziendali"
+      "Documentare e rendere ricercabili i dataset e i loro significati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il data catalog è un inventario dei dati aziendali con metadati, descrizioni, proprietari e lineage: aiuta gli utenti a trovare e capire i dati disponibili e affidabili."
   },
   {
@@ -986,22 +986,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13090", topic: "Aggregazioni Power BI",
     q: "Le 'aggregation tables' in Power BI servono a:",
     opts: [
-      "Rispondere a query su grandi volumi usando dati pre-aggregati, più veloci",
       "Cifrare i dati aggregati prima di mostrarli agli utenti",
+      "Rispondere a query su grandi volumi usando dati pre-aggregati, più veloci",
       "Creare relazioni casuali tra le tabelle del modello dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le tabelle di aggregazione contengono dati pre-riassunti: Power BI le usa automaticamente per le query di alto livello, ricorrendo al dettaglio solo quando serve, migliorando le performance."
   },
   {
     id: "u13091", topic: "Sicurezza dati",
     q: "Prima di condividere una dashboard esterna, è importante:",
     opts: [
-      "Verificare permessi, RLS e assenza di dati sensibili non autorizzati",
+      "Cancellare il modello dati per alleggerire il report",
       "Cambiare la combinazione di colori per renderla più gradevole",
-      "Cancellare il modello dati per alleggerire il report"
+      "Verificare permessi, RLS e assenza di dati sensibili non autorizzati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La condivisione deve rispettare la sicurezza: controllare chi può vedere cosa (RLS, permessi) ed evitare di esporre dati riservati. La governance della condivisione è parte della BI."
   },
   {
@@ -1019,22 +1019,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13093", topic: "Dimensione degenerata",
     q: "Una 'dimensione degenerata' è:",
     opts: [
-      "Un attributo dimensionale (es. numero d'ordine) memorizzato nella fact table",
       "Una tabella dei fatti che non contiene alcuna misura numerica",
+      "Un attributo dimensionale (es. numero d'ordine) memorizzato nella fact table",
       "Una dimensione con milioni di righe difficile da gestire"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La dimensione degenerata è un identificativo (es. numero fattura/ordine) che sta nella fact table senza una tabella dimensione propria: utile per raggruppare le righe di uno stesso evento."
   },
   {
     id: "u13094", topic: "Trasformazioni riproducibili",
     q: "Perché è importante che le trasformazioni dati siano versionate (es. con dbt/git)?",
     opts: [
-      "Per riproducibilità, tracciabilità delle modifiche e collaborazione",
+      "Non è importante: le trasformazioni non vanno versionate",
       "Per cifrare automaticamente i dati durante la trasformazione",
-      "Non è importante: le trasformazioni non vanno versionate"
+      "Per riproducibilità, tracciabilità delle modifiche e collaborazione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Versionare le trasformazioni (codice SQL) permette di sapere chi ha cambiato cosa, tornare indietro, testare e collaborare: porta le buone pratiche del software nell'analytics."
   },
   {
@@ -1052,22 +1052,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13096", topic: "Scelta del visual",
     q: "Usare troppi colori e grafici in una dashboard:",
     opts: [
-      "Riduce la leggibilità e distrae dai messaggi chiave",
       "Migliora sempre la comprensione dei dati da parte dell'utente",
+      "Riduce la leggibilità e distrae dai messaggi chiave",
       "Non ha alcun effetto sulla qualità della comunicazione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Un buon design privilegia chiarezza e semplicità: pochi visual mirati, colori con significato, gerarchia visiva. L'eccesso di elementi confonde e nasconde le informazioni importanti."
   },
   {
     id: "u13097", topic: "Batch notturno",
     q: "Perché molte pipeline ETL girano di notte?",
     opts: [
-      "Per sfruttare le finestre di basso carico e avere dati pronti al mattino",
+      "Perché la cifratura dei dati funziona soltanto di notte",
       "Perché i sistemi sorgente sono spenti durante le ore diurne",
-      "Perché la cifratura dei dati funziona soltanto di notte"
+      "Per sfruttare le finestre di basso carico e avere dati pronti al mattino"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le elaborazioni batch pesanti si schedulano in orari di basso utilizzo (notte) per non impattare i sistemi operativi e per avere i report aggiornati all'inizio della giornata lavorativa."
   },
   {
@@ -1085,22 +1085,22 @@ registerSubject("BI e Data Warehouse", [
     id: "u13099", topic: "Valore della BI",
     q: "L'obiettivo finale della BI è:",
     opts: [
-      "Supportare decisioni migliori basate sui dati (data-driven)",
       "Sostituire completamente i manager nelle decisioni aziendali",
+      "Supportare decisioni migliori basate sui dati (data-driven)",
       "Archiviare in modo sicuro tutti i dati storici dell'azienda"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La BI esiste per abilitare decisioni informate e tempestive basate sui dati, non per accumulare report. Il valore si misura dall'impatto sulle decisioni e sui risultati di business."
   },
   {
     id: "u13100", topic: "Flusso BI",
     q: "Un flusso tipico di un progetto BI è:",
     opts: [
-      "Sorgenti → ETL/ELT → data warehouse → modello → report/dashboard",
+      "Report/dashboard → sorgenti → ETL/ELT → data warehouse → modello",
       "Sorgenti → ETL/ELT → modello → data warehouse → report/dashboard",
-      "Report/dashboard → sorgenti → ETL/ELT → data warehouse → modello"
+      "Sorgenti → ETL/ELT → data warehouse → modello → report/dashboard"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il flusso: estrarre dai sistemi sorgente, trasformare e caricare nel DW, modellare (star schema, misure) e infine costruire report e dashboard per gli utenti di business."
   },
   // === AGGIUNGI NUOVE DOMANDE BI E DATA WAREHOUSE QUI ===

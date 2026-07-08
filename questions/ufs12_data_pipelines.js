@@ -7,22 +7,22 @@ registerSubject("Data Pipelines", [
     id: "u12001", topic: "Pipeline",
     q: "Cos'è una data pipeline?",
     opts: [
-      "Un flusso automatizzato di passi che spostano e trasformano i dati",
       "Un file isolato contenente dati, senza passi automatizzati di trasformazione",
+      "Un flusso automatizzato di passi che spostano e trasformano i dati",
       "Una visualizzazione statica dei dati già elaborati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La data pipeline è una sequenza di passi (estrazione, trasformazione, caricamento) automatizzati che portano i dati dalle sorgenti alla destinazione in modo ripetibile."
   },
   {
     id: "u12002", topic: "Orchestrazione",
     q: "Cosa fa un orchestratore di pipeline (es. Airflow)?",
     opts: [
-      "Coordina l'esecuzione dei task rispettando dipendenze e schedulazione",
+      "Sostituisce il database di destinazione invece di orchestrare il flusso",
       "Memorizza i dati come sistema di storage invece di coordinare i task",
-      "Sostituisce il database di destinazione invece di orchestrare il flusso"
+      "Coordina l'esecuzione dei task rispettando dipendenze e schedulazione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'orchestratore decide COSA eseguire, QUANDO e in quale ORDINE, gestendo dipendenze, ritenta i fallimenti e monitora l'esecuzione. Airflow è uno degli strumenti più diffusi."
   },
   {
@@ -40,22 +40,22 @@ registerSubject("Data Pipelines", [
     id: "u12004", topic: "Aciclico",
     q: "Perché il grafo di una pipeline deve essere ACICLICO?",
     opts: [
-      "Per evitare dipendenze circolari che bloccherebbero l'esecuzione",
       "Per ridurre lo spazio occupato dai metadati dei task",
+      "Per evitare dipendenze circolari che bloccherebbero l'esecuzione",
       "Per permettere ai task di eseguirsi in ordine casuale"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Un ciclo (A dipende da B che dipende da A) renderebbe impossibile stabilire l'ordine di esecuzione. L'assenza di cicli garantisce che i task possano essere ordinati ed eseguiti."
   },
   {
     id: "u12005", topic: "Task",
     q: "In Airflow, un 'task' è:",
     opts: [
-      "Un'unità di lavoro (un nodo del DAG) da eseguire",
+      "Il calendario che stabilisce quando parte la pipeline",
       "La connessione configurata verso una sorgente dati",
-      "Il calendario che stabilisce quando parte la pipeline"
+      "Un'unità di lavoro (un nodo del DAG) da eseguire"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il task è il singolo passo del workflow (es. estrarre un file, eseguire una query). I task sono istanze di operatori e vengono collegati tra loro con dipendenze."
   },
   {
@@ -73,22 +73,22 @@ registerSubject("Data Pipelines", [
     id: "u12007", topic: "Dipendenze",
     q: "In Airflow, task_a >> task_b significa:",
     opts: [
-      "task_b viene eseguito dopo task_a (a monte di b)",
       "task_a viene eseguito dopo task_b, invertendo la dipendenza indicata",
+      "task_b viene eseguito dopo task_a (a monte di b)",
       "I due task non hanno vincoli di dipendenza tra loro"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'operatore >> definisce la dipendenza: task_a deve completarsi prima di task_b. È il modo idiomatico di collegare i task nel DAG."
   },
   {
     id: "u12008", topic: "Schedulazione",
     q: "La schedulazione di un DAG serve a:",
     opts: [
-      "Definire quando e con quale frequenza la pipeline viene eseguita",
+      "Assegnare le risorse di calcolo ai singoli task",
       "Stabilire quali task dipendono da quali altri task",
-      "Assegnare le risorse di calcolo ai singoli task"
+      "Definire quando e con quale frequenza la pipeline viene eseguita"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Lo scheduling (es. ogni giorno, ogni ora, tramite espressione cron) stabilisce quando l'orchestratore avvia automaticamente il DAG, senza intervento manuale."
   },
   {
@@ -106,22 +106,22 @@ registerSubject("Data Pipelines", [
     id: "u12010", topic: "Idempotenza",
     q: "Perché un task di pipeline dovrebbe essere idempotente?",
     opts: [
-      "Così rieseguirlo (dopo un errore) non duplica né corrompe i dati",
       "Così viene eseguito più velocemente a ogni tentativo",
+      "Così rieseguirlo (dopo un errore) non duplica né corrompe i dati",
       "Così può dipendere da più task contemporaneamente"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'idempotenza garantisce che rieseguire un task produca lo stesso risultato senza duplicati: fondamentale perché le pipeline vanno spesso ritentate dopo fallimenti."
   },
   {
     id: "u12011", topic: "Retry",
     q: "La configurazione dei 'retries' in un task serve a:",
     opts: [
-      "Riprovare automaticamente in caso di fallimento temporaneo",
+      "Aumentare il volume dei dati senza risolvere il fallimento del task",
       "Rimuovere il task fallito invece di ritentarne l'esecuzione",
-      "Aumentare il volume dei dati senza risolvere il fallimento del task"
+      "Riprovare automaticamente in caso di fallimento temporaneo"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I retry ritentano automaticamente un task fallito (es. per un errore di rete transitorio), spesso con un intervallo tra i tentativi, aumentando la robustezza della pipeline."
   },
   {
@@ -139,22 +139,22 @@ registerSubject("Data Pipelines", [
     id: "u12013", topic: "ETL vs ELT",
     q: "Nell'ELT rispetto all'ETL:",
     opts: [
-      "Si caricano prima i dati grezzi e si trasformano dopo, nel warehouse",
       "Trasformare sempre prima del caricamento come nell'ETL classico",
+      "Si caricano prima i dati grezzi e si trasformano dopo, nel warehouse",
       "Non caricare mai dati nel warehouse o nel lake"
     ],
-    correct: [0],
+    correct: [1],
     exp: "ELT (Extract-Load-Transform) carica i dati grezzi nel data warehouse e li trasforma lì, sfruttandone la potenza. Comune nei DW cloud, spesso con dbt per la trasformazione."
   },
   {
     id: "u12014", topic: "Batch vs streaming",
     q: "L'elaborazione batch differisce dallo streaming perché:",
     opts: [
-      "Il batch processa dati a blocchi periodici; lo streaming in continuo, in tempo reale",
+      "Lo streaming processa a blocchi",
       "Il batch è sempre in tempo reale",
-      "Lo streaming processa a blocchi"
+      "Il batch processa dati a blocchi periodici; lo streaming in continuo, in tempo reale"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il batch elabora gruppi di dati a intervalli (es. ogni notte); lo streaming processa gli eventi appena arrivano (bassa latenza). La scelta dipende dai requisiti di freschezza."
   },
   {
@@ -172,22 +172,22 @@ registerSubject("Data Pipelines", [
     id: "u12016", topic: "Monitoraggio",
     q: "Il monitoraggio di una pipeline serve a:",
     opts: [
-      "Rilevare fallimenti, ritardi e anomalie per intervenire tempestivamente",
       "Definire lo schema dei dati letti dalle sorgenti",
+      "Rilevare fallimenti, ritardi e anomalie per intervenire tempestivamente",
       "Trasformare i dati grezzi in report pronti all'uso"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Monitorare esiti, tempi e volumi delle run permette di accorgersi subito di errori o dati mancanti prima che si propaghino a valle (report sbagliati, decisioni errate)."
   },
   {
     id: "u12017", topic: "Airflow UI",
     q: "L'interfaccia web di Airflow permette di:",
     opts: [
-      "Visualizzare lo stato dei DAG e delle run, e gestire le esecuzioni",
+      "Modellare i dati del data warehouse in schemi a stella",
       "Scrivere e compilare il codice delle trasformazioni SQL",
-      "Modellare i dati del data warehouse in schemi a stella"
+      "Visualizzare lo stato dei DAG e delle run, e gestire le esecuzioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La UI di Airflow mostra i DAG, lo stato dei task (successo/fallimento/in corso), i log e permette di rilanciare o mettere in pausa le esecuzioni. È lo strumento di controllo."
   },
   {
@@ -205,22 +205,22 @@ registerSubject("Data Pipelines", [
     id: "u12019", topic: "Sensor",
     q: "Un 'sensor' in Airflow è un task che:",
     opts: [
-      "Attende il verificarsi di una condizione",
       "Genera automaticamente i grafici di monitoraggio",
+      "Attende il verificarsi di una condizione",
       "Distribuisce i task tra i worker disponibili"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I sensor mettono in pausa la pipeline finché una condizione non è soddisfatta (es. un file è presente, una partizione è pronta): utili per sincronizzare con eventi esterni."
   },
   {
     id: "u12020", topic: "Data quality",
     q: "Inserire controlli di qualità (data quality checks) nella pipeline serve a:",
     opts: [
-      "Bloccare o segnalare dati errati prima che raggiungano i sistemi a valle",
+      "Ridurre il numero di partizioni dei dati elaborati",
       "Aumentare volutamente la latenza per sincronizzare i task",
-      "Ridurre il numero di partizioni dei dati elaborati"
+      "Bloccare o segnalare dati errati prima che raggiungano i sistemi a valle"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I check di qualità (valori nulli, range, unicità, conteggi attesi) intercettano problemi durante la pipeline, evitando che dati sbagliati arrivino ai report e alle decisioni."
   },
   {
@@ -238,22 +238,22 @@ registerSubject("Data Pipelines", [
     id: "u12022", topic: "Inmon",
     q: "L'approccio Inmon al data warehouse prevede:",
     opts: [
-      "Un data warehouse centrale normalizzato (3NF) come fonte unica",
       "Costruire solo data mart separati senza warehouse centrale",
+      "Un data warehouse centrale normalizzato (3NF) come fonte unica",
       "Eliminare completamente i processi ETL dal data warehouse"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Inmon propone un Corporate Information Factory: un DW centrale in terza forma normale, da cui si derivano data mart dimensionali. Approccio top-down, robusto ma più lungo da realizzare."
   },
   {
     id: "u12023", topic: "Parametrizzazione",
     q: "Parametrizzare una pipeline (es. con la data di esecuzione) serve a:",
     opts: [
-      "Riutilizzare lo stesso codice per periodi o ambienti diversi",
+      "Ridurre i permessi necessari per accedere alle sorgenti",
       "Aumentare il numero di task eseguiti in parallelo",
-      "Ridurre i permessi necessari per accedere alle sorgenti"
+      "Riutilizzare lo stesso codice per periodi o ambienti diversi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Passare parametri (data logica, ambiente, sorgente) rende la pipeline flessibile e riutilizzabile: la stessa logica gira su date o contesti diversi senza duplicare il codice."
   },
   {
@@ -271,22 +271,22 @@ registerSubject("Data Pipelines", [
     id: "u12025", topic: "Modularità",
     q: "Suddividere una pipeline in task piccoli e specifici aiuta a:",
     opts: [
-      "Isolare i guasti, riprovare solo il passo fallito e riusare i componenti",
       "Ridurre il numero totale di dati processati dalla pipeline",
+      "Isolare i guasti, riprovare solo il passo fallito e riusare i componenti",
       "Eliminare la necessità di definire dipendenze tra i task"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Task piccoli e mirati rendono la pipeline più manutenibile: si può ritentare solo il passo fallito, individuare rapidamente i problemi e riutilizzare i componenti."
   },
   {
     id: "u12026", topic: "Full vs incremental load",
     q: "Un caricamento incrementale rispetto al full load:",
     opts: [
-      "Elabora solo i dati nuovi/modificati, riducendo tempi e costi",
+      "Elimina i dati sorgente invece di conservarli o trasformarli",
       "Ricarica sempre tutto",
-      "Elimina i dati sorgente invece di conservarli o trasformarli"
+      "Elabora solo i dati nuovi/modificati, riducendo tempi e costi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'incremental load processa solo le variazioni (nuove righe, aggiornamenti) invece dell'intero dataset: molto più efficiente su grandi volumi rispetto al full load ogni volta."
   },
   {
@@ -304,22 +304,22 @@ registerSubject("Data Pipelines", [
     id: "u12028", topic: "Alert",
     q: "Configurare notifiche/alert su una pipeline serve a:",
     opts: [
-      "Avvisare il team quando un task fallisce o supera una soglia di tempo",
       "Aumentare automaticamente le risorse assegnate ai task lenti",
+      "Avvisare il team quando un task fallisce o supera una soglia di tempo",
       "Ridurre il numero di run schedulate durante la giornata"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Gli alert (email, Slack) informano subito gli operatori di fallimenti o ritardi, permettendo un intervento rapido invece di scoprire i problemi dai report sbagliati."
   },
   {
     id: "u12029", topic: "Parallelismo",
     q: "Task indipendenti in un DAG possono essere:",
     opts: [
-      "Eseguiti in parallelo per ridurre il tempo totale",
+      "Uniti obbligatoriamente in un unico grande task",
       "Eseguiti solo in sequenza uno dopo l'altro",
-      "Uniti obbligatoriamente in un unico grande task"
+      "Eseguiti in parallelo per ridurre il tempo totale"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'orchestratore esegue in parallelo i task senza dipendenze reciproche (compatibilmente con le risorse), riducendo la durata complessiva della pipeline."
   },
   {
@@ -337,22 +337,22 @@ registerSubject("Data Pipelines", [
     id: "u12031", topic: "Staging",
     q: "Un'area di staging in una pipeline serve a:",
     opts: [
-      "Ospitare i dati grezzi in transito prima delle trasformazioni",
       "Mostrare dashboard finali invece di ospitare dati grezzi",
+      "Ospitare i dati grezzi in transito prima delle trasformazioni",
       "Archiviare report finali invece di dati in transito"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Lo staging isola le sorgenti dal target: i dati estratti vi sostano grezzi prima di pulizia e caricamento, semplificando debugging e ripartenze."
   },
   {
     id: "u12032", topic: "Trigger",
     q: "Una pipeline 'event-driven' viene avviata:",
     opts: [
-      "Dal verificarsi di un evento (es. arrivo di un file) invece che a orario fisso",
+      "Da un altro task nello stesso identico DAG",
       "Solo manualmente da un operatore a ogni esecuzione",
-      "Da un altro task nello stesso identico DAG"
+      "Dal verificarsi di un evento (es. arrivo di un file) invece che a orario fisso"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le pipeline event-driven reagiscono a eventi (nuovo file, messaggio in coda) invece di una schedulazione fissa: utili quando i dati arrivano in modo irregolare o serve bassa latenza."
   },
   {
@@ -370,22 +370,22 @@ registerSubject("Data Pipelines", [
     id: "u12034", topic: "Dead letter",
     q: "Un meccanismo di 'dead letter' per i dati problematici serve a:",
     opts: [
-      "Mettere da parte i record non processabili per analizzarli senza bloccare tutto",
       "Eliminare definitivamente i record corretti già elaborati",
+      "Mettere da parte i record non processabili per analizzarli senza bloccare tutto",
       "Aumentare la priorità dei record problematici in coda"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I record che non superano le validazioni vengono deviati in un'area 'dead letter' per ispezione, così la pipeline continua sui dati validi senza fermarsi del tutto."
   },
   {
     id: "u12035", topic: "Idempotenza pratica",
     q: "Un modo per rendere idempotente un caricamento è:",
     opts: [
-      "Sostituire/sovrascrivere la partizione della data invece di accodare sempre",
+      "Cancellare tutto ogni volta a caso",
       "Aggiungere sempre nuove righe",
-      "Cancellare tutto ogni volta a caso"
+      "Sostituire/sovrascrivere la partizione della data invece di accodare sempre"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Riscrivere la partizione corrispondente alla data logica (upsert o overwrite) evita duplicati se il task viene rieseguito: il risultato è sempre lo stesso, a prescindere dai retry."
   },
   {
@@ -403,22 +403,22 @@ registerSubject("Data Pipelines", [
     id: "u12037", topic: "Data pipeline vs script",
     q: "Perché usare un orchestratore invece di un semplice script cron?",
     opts: [
-      "Gestisce dipendenze, retry, monitoraggio e visibilità meglio di uno script isolato",
       "Perché si attribuisce all'orchestratore un rallentamento come beneficio",
+      "Gestisce dipendenze, retry, monitoraggio e visibilità meglio di uno script isolato",
       "Non offre vantaggi rispetto a uno script isolato con schedulazione cron"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Un orchestratore offre gestione delle dipendenze tra task, ritentativi, log centralizzati, alert e UI di monitoraggio: capacità che un cron con script sparsi non fornisce facilmente."
   },
   {
     id: "u12038", topic: "Task fallito",
     q: "Se un task a monte fallisce, i task a valle che ne dipendono:",
     opts: [
-      "Non vengono eseguiti (o vanno in stato di attesa/skipped)",
+      "Diventano più veloci perché il task a monte è fallito",
       "Partono comunque anche se manca l'output del task a monte",
-      "Diventano più veloci perché il task a monte è fallito"
+      "Non vengono eseguiti (o vanno in stato di attesa/skipped)"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le dipendenze impediscono ai task a valle di partire se un loro predecessore è fallito, evitando di elaborare dati mancanti o incompleti. Si interviene sul task fallito e si rilancia."
   },
   {
@@ -436,22 +436,22 @@ registerSubject("Data Pipelines", [
     id: "u12040", topic: "Latenza vs costo",
     q: "Passare da batch giornaliero a streaming in tempo reale:",
     opts: [
-      "Riduce la latenza dei dati ma aumenta complessità e costi",
       "Lascia invariato il risultato dell'operazione sui dati",
+      "Riduce la latenza dei dati ma aumenta complessità e costi",
       "Elimina la necessità di monitoraggio"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il tempo reale offre dati freschissimi ma richiede architetture più complesse (streaming, code) e maggiori costi. Si sceglie solo se il business ne ha davvero bisogno."
   },
   {
     id: "u12041", topic: "Catalogo",
     q: "Un data catalog nel contesto delle pipeline aiuta a:",
     opts: [
-      "Documentare dataset, schemi e lineage per trovarli e capirli",
+      "Aumentare il numero di retry in caso di fallimento",
       "Assegnare le risorse di calcolo ai task della pipeline",
-      "Aumentare il numero di retry in caso di fallimento"
+      "Documentare dataset, schemi e lineage per trovarli e capirli"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il catalogo raccoglie metadati, descrizioni e provenienza dei dataset prodotti dalle pipeline, facilitando scoperta, comprensione e fiducia nei dati."
   },
   {
@@ -469,22 +469,22 @@ registerSubject("Data Pipelines", [
     id: "u12043", topic: "Riavvio parziale",
     q: "Poter rilanciare solo il task fallito (invece dell'intero DAG) è utile perché:",
     opts: [
-      "Risparmia tempo e risorse non rieseguendo i passi già completati",
       "Elimina i dati sorgente invece di conservarli o trasformarli",
+      "Risparmia tempo e risorse non rieseguendo i passi già completati",
       "Modifica i colori dell'interfaccia senza intervenire sulla pipeline"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Se un solo passo fallisce, ri-eseguire da capo tutta la pipeline è spreco. Gli orchestratori permettono di riavviare dal punto di fallimento, sfruttando gli output già prodotti (se idempotenti)."
   },
   {
     id: "u12044", topic: "Dipendenza esterna",
     q: "Una pipeline che dipende dall'output di un'altra si può gestire con:",
     opts: [
-      "Sensor o trigger che attendono il completamento dell'altra pipeline",
+      "L'esecuzione delle due pipeline in ordine casuale",
       "La copia manuale dell'output da una pipeline all'altra",
-      "L'esecuzione delle due pipeline in ordine casuale"
+      "Sensor o trigger che attendono il completamento dell'altra pipeline"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le dipendenze tra pipeline si gestiscono con sensori o trigger cross-DAG che fanno partire una pipeline solo quando l'altra ha prodotto i dati necessari."
   },
   {
@@ -502,22 +502,22 @@ registerSubject("Data Pipelines", [
     id: "u12046", topic: "Costanza dello schema",
     q: "Un cambiamento improvviso dello schema della sorgente (schema drift) può:",
     opts: [
-      "Rompere la pipeline se non gestito",
       "Migliorare automaticamente le prestazioni delle query",
+      "Rompere la pipeline se non gestito",
       "Ridurre il numero di partizioni dei dati elaborati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Se la sorgente cambia struttura (colonne aggiunte/rimosse/rinominate) senza che la pipeline se ne accorga, l'elaborazione può fallire o produrre dati errati. Serve gestione e monitoraggio dello schema."
   },
   {
     id: "u12047", topic: "Trasformazione nel DW",
     q: "Nell'ELT, spostare la trasformazione nel data warehouse permette di:",
     opts: [
-      "Sfruttare la potenza di calcolo del DW e usare SQL/dbt versionato",
+      "Eliminare la necessità di estrarre i dati dalle sorgenti",
       "Evitare del tutto qualsiasi trasformazione dei dati",
-      "Eliminare la necessità di estrarre i dati dalle sorgenti"
+      "Sfruttare la potenza di calcolo del DW e usare SQL/dbt versionato"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I data warehouse cloud sono molto potenti: trasformare i dati lì con SQL (spesso via dbt) è scalabile, versionabile e testabile, a differenza di trasformare fuori prima del caricamento."
   },
   {
@@ -535,22 +535,22 @@ registerSubject("Data Pipelines", [
     id: "u12049", topic: "Costi cloud",
     q: "Ottimizzare una pipeline in cloud spesso significa:",
     opts: [
-      "Ridurre dati elaborati inutilmente e usare caricamenti incrementali",
       "Elaborare sempre l'intero dataset a ogni esecuzione",
+      "Ridurre dati elaborati inutilmente e usare caricamenti incrementali",
       "Disattivare il monitoraggio per risparmiare risorse"
     ],
-    correct: [0],
+    correct: [1],
     exp: "In cloud si paga per calcolo e storage usati: processare solo i dati necessari (incrementale), pulire dati inutili e schedulare bene riduce i costi senza sacrificare i risultati."
   },
   {
     id: "u12050", topic: "Pipeline affidabile",
     q: "Quale caratteristica ha una pipeline dati affidabile?",
     opts: [
-      "L'idempotenza delle esecuzioni",
+      "L'esecuzione senza alcun monitoraggio",
       "L'assenza di gestione degli errori",
-      "L'esecuzione senza alcun monitoraggio"
+      "L'idempotenza delle esecuzioni"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Una pipeline affidabile è idempotente, ha retry automatici e monitoraggio/alert. L'assenza di gestione errori o di monitoraggio la rende fragile e inaffidabile."
   },
   {
@@ -568,22 +568,22 @@ registerSubject("Data Pipelines", [
     id: "u12052", topic: "Scheduler",
     q: "Lo scheduler di Airflow si occupa di:",
     opts: [
-      "Decidere quali task eseguire e quando, in base a schedulazione e dipendenze",
       "Memorizzare fisicamente i dati elaborati dai task",
+      "Decidere quali task eseguire e quando, in base a schedulazione e dipendenze",
       "Creare le dashboard di business intelligence"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Lo scheduler valuta i DAG, determina le run da avviare (in base a schedulazione e stato delle dipendenze) e mette i task in coda per l'esecuzione da parte dei worker."
   },
   {
     id: "u12053", topic: "Worker",
     q: "I 'worker' in un sistema di orchestrazione:",
     opts: [
-      "Eseguono concretamente i task assegnati",
+      "Assegnano le priorità ai task in coda",
       "Definiscono la struttura del DAG e le dipendenze",
-      "Assegnano le priorità ai task in coda"
+      "Eseguono concretamente i task assegnati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I worker sono i processi che eseguono i task. In architetture distribuite più worker eseguono task in parallelo, scalando la capacità di elaborazione della pipeline."
   },
   {
@@ -601,22 +601,22 @@ registerSubject("Data Pipelines", [
     id: "u12055", topic: "Partizionamento",
     q: "Partizionare i dati per data nel data lake/warehouse serve a:",
     opts: [
-      "Leggere solo le partizioni rilevanti, velocizzando query e caricamenti",
       "Rallentare le query obbligando a leggere tutti i dati",
+      "Leggere solo le partizioni rilevanti, velocizzando query e caricamenti",
       "Aumentare i duplicati distribuendo i dati su più file"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il partizionamento (es. per giorno) permette di leggere/riscrivere solo i dati del periodo interessato invece dell'intero dataset, migliorando performance ed efficienza dei caricamenti incrementali."
   },
   {
     id: "u12056", topic: "Recupero da errore",
     q: "Dopo un fallimento, una buona pipeline deve poter:",
     opts: [
-      "Ripartire in sicurezza senza corrompere o duplicare i dati",
+      "Ignorare l'errore e proseguire a caso",
       "Cancellare tutti i dati",
-      "Ignorare l'errore e proseguire a caso"
+      "Ripartire in sicurezza senza corrompere o duplicare i dati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La ripartenza sicura (grazie a idempotenza e stato dei task) permette di riprendere dal punto giusto senza danni ai dati. È essenziale in produzione, dove i fallimenti capitano."
   },
   {
@@ -634,22 +634,22 @@ registerSubject("Data Pipelines", [
     id: "u12058", topic: "Orchestrazione vs esecuzione",
     q: "Un orchestratore come Airflow tipicamente:",
     opts: [
-      "Coordina i task ma delega l'esecuzione pesante ad altri sistemi",
       "Non avvia task né coordina esecuzioni della pipeline",
+      "Coordina i task ma delega l'esecuzione pesante ad altri sistemi",
       "Sostituisce il warehouse invece di coordinare task e dipendenze"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Airflow eccelle nell'orchestrazione (quando/ordine), ma il calcolo pesante è meglio delegarlo a motori appositi (data warehouse, Spark). Airflow innesca e coordina, non è un motore di elaborazione dati."
   },
   {
     id: "u12059", topic: "Pipeline dichiarativa",
     q: "Definire cosa deve accadere (dichiarativo) invece di ogni passo procedurale aiuta a:",
     opts: [
-      "Rendere la pipeline più leggibile e manutenibile",
+      "Nascondere le dipendenze tra i vari task",
       "Aumentare la latenza complessiva della pipeline",
-      "Nascondere le dipendenze tra i vari task"
+      "Rendere la pipeline più leggibile e manutenibile"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Un approccio dichiarativo (es. modelli dbt, DAG con dipendenze esplicite) descrive obiettivi e relazioni, lasciando al sistema i dettagli di esecuzione: più chiaro e manutenibile."
   },
   {
@@ -667,22 +667,22 @@ registerSubject("Data Pipelines", [
     id: "u12061", topic: "Metadati di esecuzione",
     q: "Registrare metadati sulle run (durata, righe processate, esito) serve a:",
     opts: [
-      "Monitorare le performance e diagnosticare anomalie nel tempo",
       "Definire lo schema dei dati letti dalle sorgenti",
+      "Monitorare le performance e diagnosticare anomalie nel tempo",
       "Sostituire i log dettagliati dei singoli task"
     ],
-    correct: [0],
+    correct: [1],
     exp: "I metadati di esecuzione permettono di individuare rallentamenti, cali di volume o fallimenti ricorrenti, misurando l'affidabilità e la salute della pipeline nel tempo."
   },
   {
     id: "u12062", topic: "Concorrenza",
     q: "Limitare la concorrenza (numero di task paralleli) serve a:",
     opts: [
-      "Evitare di sovraccaricare le risorse o le sorgenti dati",
+      "Ridurre lo spazio occupato dai dati sul disco",
       "Aumentare il numero di retry in caso di fallimento",
-      "Ridurre lo spazio occupato dai dati sul disco"
+      "Evitare di sovraccaricare le risorse o le sorgenti dati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Troppi task in parallelo possono saturare CPU, memoria o le connessioni alla sorgente. Impostare limiti di concorrenza protegge i sistemi e mantiene la pipeline stabile."
   },
   {
@@ -700,22 +700,22 @@ registerSubject("Data Pipelines", [
     id: "u12064", topic: "Priorità",
     q: "Le priorità dei task in un orchestratore servono a:",
     opts: [
-      "Decidere quali eseguire prima quando le risorse sono limitate",
       "Definire lo schema dei dati prodotti dai task",
+      "Decidere quali eseguire prima quando le risorse sono limitate",
       "Cancellare i task a bassa priorità dal DAG"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Quando più task competono per risorse limitate, le priorità stabiliscono l'ordine, assicurando che i processi critici (es. quelli con SLA stringenti) vengano serviti per primi."
   },
   {
     id: "u12065", topic: "Estrazione da API",
     q: "Estrarre dati da un'API con paginazione richiede di:",
     opts: [
-      "Iterare sulle pagine finché non si esauriscono i risultati",
+      "Ordinare le pagine in modo casuale prima di leggerle",
       "Richiedere tutte le pagine in un'unica chiamata sola",
-      "Ordinare le pagine in modo casuale prima di leggerle"
+      "Iterare sulle pagine finché non si esauriscono i risultati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le API restituiscono i dati a pagine: la pipeline deve iterare (seguendo cursori o offset) finché non ci sono più risultati, gestendo anche i limiti di frequenza (rate limit)."
   },
   {
@@ -733,22 +733,22 @@ registerSubject("Data Pipelines", [
     id: "u12067", topic: "Backoff",
     q: "Un retry con 'exponential backoff' significa:",
     opts: [
-      "Aumentare progressivamente l'attesa tra un tentativo e il successivo",
       "Riprovare subito senza attese",
+      "Aumentare progressivamente l'attesa tra un tentativo e il successivo",
       "Rimuovere il task fallito invece di ritentarne l'esecuzione"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Con l'exponential backoff gli intervalli tra i retry crescono (1s, 2s, 4s...): dà tempo a un servizio sovraccarico di riprendersi ed evita di martellarlo con richieste ravvicinate."
   },
   {
     id: "u12068", topic: "Data contract",
     q: "Un 'data contract' tra produttore e consumatore di dati definisce:",
     opts: [
-      "Lo schema e le garanzie attese sui dati scambiati",
+      "La capacità della rete tra servizi, non una regola di dipendenza",
       "La scelta cromatica delle visualizzazioni, senza effetto sui dati",
-      "La capacità della rete tra servizi, non una regola di dipendenza"
+      "Lo schema e le garanzie attese sui dati scambiati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il data contract stabilisce struttura, tipi, significato e SLA dei dati forniti: riduce le rotture da schema drift e allinea le aspettative tra chi produce e chi consuma i dati."
   },
   {
@@ -766,22 +766,22 @@ registerSubject("Data Pipelines", [
     id: "u12070", topic: "Idempotenza vs append",
     q: "Un task che fa solo 'append' dei dati a ogni run:",
     opts: [
-      "Rischia duplicati se rieseguito: non è idempotente di per sé",
       "È sempre idempotente",
+      "Rischia duplicati se rieseguito: non è idempotente di per sé",
       "Elimina i dati sorgente invece di conservarli o trasformarli"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'append cieco duplica i dati se la run viene ripetuta. Per l'idempotenza serve sovrascrivere la partizione o usare upsert su chiave, così i retry non creano doppioni."
   },
   {
     id: "u12071", topic: "Documentazione",
     q: "Documentare una pipeline (scopo, sorgenti, trasformazioni) serve a:",
     opts: [
-      "Facilitare manutenzione, onboarding e fiducia nei dati",
+      "Ridurre lo spazio occupato dai dati sul warehouse",
       "Aumentare la velocità di esecuzione della pipeline",
-      "Ridurre lo spazio occupato dai dati sul warehouse"
+      "Facilitare manutenzione, onboarding e fiducia nei dati"
     ],
-    correct: [0],
+    correct: [2],
     exp: "La documentazione rende la pipeline comprensibile a chi la mantiene o consuma i dati: cosa fa, da dove vengono i dati e come sono trasformati, aumentando fiducia e manutenibilità."
   },
   {
@@ -799,22 +799,22 @@ registerSubject("Data Pipelines", [
     id: "u12073", topic: "Snapshot sorgente",
     q: "Fare uno snapshot periodico di una tabella sorgente mutabile serve a:",
     opts: [
-      "Catturarne lo stato nel tempo per storicizzazione e SCD",
       "Cancellare definitivamente la tabella sorgente originale",
+      "Catturarne lo stato nel tempo per storicizzazione e SCD",
       "Aumentare la velocità delle query sulla sorgente"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Se la sorgente sovrascrive i dati, gli snapshot ne registrano lo stato a intervalli, permettendo di ricostruire la storia (utile per le Slowly Changing Dimensions)."
   },
   {
     id: "u12074", topic: "Trigger a valle",
     q: "Il concetto di 'trigger rule' in Airflow definisce:",
     opts: [
-      "A quali condizioni sui task a monte un task deve partire",
+      "La capacità della rete tra servizi, non una regola di dipendenza",
       "Il colore mostrato nell'interfaccia per distinguere lo stato del task",
-      "La capacità della rete tra servizi, non una regola di dipendenza"
+      "A quali condizioni sui task a monte un task deve partire"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le trigger rule (all_success, one_failed, all_done...) stabiliscono quando un task si attiva in base allo stato dei predecessori, gestendo flussi condizionali e di gestione errori."
   },
   {
@@ -832,22 +832,22 @@ registerSubject("Data Pipelines", [
     id: "u12076", topic: "Modello incrementale",
     q: "Per un caricamento incrementale servono tipicamente:",
     opts: [
-      "Una chiave e un campo temporale/watermark per individuare le novità",
       "Soltanto un ordinamento casuale delle righe della sorgente",
+      "Una chiave e un campo temporale/watermark per individuare le novità",
       "Un unico task che cancella e ricarica l'intera tabella"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Per caricare solo le novità servono un identificatore (chiave per gli upsert) e un riferimento temporale (data di modifica) che indichi cosa è cambiato dall'ultima esecuzione."
   },
   {
     id: "u12077", topic: "Pipeline come prodotto",
     q: "Trattare i dati/pipeline 'come un prodotto' significa:",
     opts: [
-      "Curarne qualità, affidabilità, documentazione e i bisogni degli utenti",
+      "Aumentare il numero di run senza alcun monitoraggio",
       "Ignorare completamente chi consuma i dati a valle",
-      "Aumentare il numero di run senza alcun monitoraggio"
+      "Curarne qualità, affidabilità, documentazione e i bisogni degli utenti"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'approccio 'data as a product' pone attenzione a chi consuma i dati: affidabilità, SLA, qualità e documentazione, come per qualsiasi prodotto con i suoi clienti."
   },
   {
@@ -865,22 +865,22 @@ registerSubject("Data Pipelines", [
     id: "u12079", topic: "Timeout",
     q: "Impostare un timeout su un task serve a:",
     opts: [
-      "Interromperlo se supera una durata massima, evitando blocchi indefiniti",
       "Aumentare le risorse assegnate al task automaticamente",
+      "Interromperlo se supera una durata massima, evitando blocchi indefiniti",
       "Cifrare i dati elaborati dal task"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il timeout evita che un task 'appeso' (es. per una sorgente che non risponde) blocchi la pipeline all'infinito: dopo il limite viene interrotto e può scattare un retry o un alert."
   },
   {
     id: "u12080", topic: "Consistenza a valle",
     q: "Caricare dati parziali nel DW durante un errore può causare:",
     opts: [
-      "Report incoerenti; meglio caricare in modo atomico/transazionale",
+      "Una riduzione automatica dello spazio occupato",
       "Nessun problema, anzi rende i dati più freschi",
-      "Una riduzione automatica dello spazio occupato"
+      "Report incoerenti; meglio caricare in modo atomico/transazionale"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Se una run fallisce a metà lasciando dati parziali, i report diventano incoerenti. Caricare in modo atomico (tutto o niente) o su una partizione sostituita mantiene la coerenza."
   },
   {
@@ -898,22 +898,22 @@ registerSubject("Data Pipelines", [
     id: "u12082", topic: "Osservabilità",
     q: "L'osservabilità dei dati (data observability) riguarda:",
     opts: [
-      "Monitorare freschezza, volume, schema e qualità per accorgersi dei problemi",
       "Solo impostazioni grafiche di presentazione, senza controlli sui dati",
+      "Monitorare freschezza, volume, schema e qualità per accorgersi dei problemi",
       "Il numero di visualizzazioni presenti nel report o nella dashboard"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La data observability sorveglia metriche come freschezza, volumi, distribuzione, schema e qualità, avvisando quando qualcosa devia dall'atteso, prima che impatti i consumatori."
   },
   {
     id: "u12083", topic: "Ordine di caricamento",
     q: "Perché caricare le dimensioni prima dei fatti?",
     opts: [
-      "Perché i fatti referenziano le chiavi delle dimensioni, che devono già esistere",
+      "Perché i fatti vanno sempre cancellati dopo le dimensioni",
       "Perché le dimensioni occupano più spazio dei fatti",
-      "Perché i fatti vanno sempre cancellati dopo le dimensioni"
+      "Perché i fatti referenziano le chiavi delle dimensioni, che devono già esistere"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Le fact table contengono foreign key verso le dimensioni: se un fatto arriva prima della dimensione corrispondente, il collegamento manca. Quindi si caricano prima le dimensioni."
   },
   {
@@ -931,22 +931,22 @@ registerSubject("Data Pipelines", [
     id: "u12085", topic: "Ingestione",
     q: "L'ingestione (ingestion) dei dati è la fase in cui:",
     opts: [
-      "I dati vengono acquisiti dalle sorgenti verso la piattaforma dati",
       "I dati vengono cancellati dopo essere stati letti",
+      "I dati vengono acquisiti dalle sorgenti verso la piattaforma dati",
       "Si generano i grafici finali per gli utenti"
     ],
-    correct: [0],
+    correct: [1],
     exp: "L'ingestione è il primo passo: portare i dati (batch o streaming) dalle sorgenti (database, API, file, code) nella piattaforma (lake/warehouse) per le successive elaborazioni."
   },
   {
     id: "u12086", topic: "Trasformazioni testate",
     q: "Aggiungere test alle trasformazioni (es. con dbt) permette di:",
     opts: [
-      "Individuare regressioni e problemi di qualità prima della pubblicazione",
+      "Assegnare le risorse di calcolo ai vari modelli",
       "Aumentare il numero di righe duplicate nei risultati",
-      "Assegnare le risorse di calcolo ai vari modelli"
+      "Individuare regressioni e problemi di qualità prima della pubblicazione"
     ],
-    correct: [0],
+    correct: [2],
     exp: "I test verificano che le trasformazioni producano risultati corretti e che i dati rispettino le regole (unicità, non nulli, valori attesi): intercettano errori prima che arrivino agli utenti."
   },
   {
@@ -964,22 +964,22 @@ registerSubject("Data Pipelines", [
     id: "u12088", topic: "Separazione responsabilità",
     q: "Separare estrazione, trasformazione e caricamento in fasi distinte aiuta a:",
     opts: [
-      "Isolare i problemi e riutilizzare/ritentare singole fasi",
       "Confondere le fasi rendendole indistinguibili tra loro",
+      "Isolare i problemi e riutilizzare/ritentare singole fasi",
       "Impedire di individuare in quale punto avviene un errore"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Fasi ben separate (E, T, L) permettono di individuare in quale punto qualcosa è andato storto, ritentare solo quella fase e riutilizzare i componenti in altre pipeline."
   },
   {
     id: "u12089", topic: "Compressione e formati",
     q: "Usare formati colonnari compressi (es. Parquet) nelle pipeline aiuta a:",
     opts: [
-      "Ridurre spazio e velocizzare le letture analitiche",
+      "Impedire la lettura selettiva delle colonne",
       "Rallentare le letture obbligando a scorrere tutto",
-      "Impedire la lettura selettiva delle colonne"
+      "Ridurre spazio e velocizzare le letture analitiche"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Parquet (colonnare, compresso) riduce lo storage e permette di leggere solo le colonne necessarie: molto più efficiente del CSV per elaborazioni analitiche su grandi volumi."
   },
   {
@@ -997,22 +997,22 @@ registerSubject("Data Pipelines", [
     id: "u12091", topic: "Coda di messaggi",
     q: "Una coda di messaggi (message queue) in una pipeline serve a:",
     opts: [
-      "Disaccoppiare produttori e consumatori, bufferizzando gli eventi",
       "Accoppiare strettamente i due sistemi tra loro",
+      "Disaccoppiare produttori e consumatori, bufferizzando gli eventi",
       "Rallentare volutamente l'intera pipeline"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La coda fa da cuscinetto tra chi produce e chi consuma i dati: assorbe i picchi, disaccoppia i sistemi e rende la pipeline più resiliente. Tipica nelle architetture di streaming."
   },
   {
     id: "u12092", topic: "Trasformazione vs orchestrazione",
     q: "Dbt e Airflow sono:",
     opts: [
-      "Complementari: dbt trasforma nel DW, Airflow orchestra i passi",
+      "Due strumenti di grafica",
       "Concorrenti che fanno la stessa cosa",
-      "Due strumenti di grafica"
+      "Complementari: dbt trasforma nel DW, Airflow orchestra i passi"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Airflow orchestra (quando/ordine dei task), dbt esegue le trasformazioni SQL dentro il warehouse. Spesso Airflow schedula ed esegue i job dbt: lavorano insieme."
   },
   {
@@ -1030,22 +1030,22 @@ registerSubject("Data Pipelines", [
     id: "u12094", topic: "Auditing",
     q: "Registrare metriche di audit (righe lette/scritte, scarti) per ogni run serve a:",
     opts: [
-      "Verificare che i dati siano stati processati correttamente e riconciliarli",
       "Sostituire completamente i log dettagliati dei task",
+      "Verificare che i dati siano stati processati correttamente e riconciliarli",
       "Ridurre il numero di utenti che accedono ai dati"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Le metriche di audit permettono di riconciliare i conteggi (input vs output), individuare perdite o duplicazioni di dati e dimostrare la correttezza dell'elaborazione."
   },
   {
     id: "u12095", topic: "Dipendenze inter-DAG",
     q: "Un ExternalTaskSensor in Airflow serve a:",
     opts: [
-      "Attendere il completamento di un task in un altro DAG",
+      "Cancellare i DAG che non vengono più utilizzati",
       "Eseguire in parallelo tutti i task dello stesso DAG",
-      "Cancellare i DAG che non vengono più utilizzati"
+      "Attendere il completamento di un task in un altro DAG"
     ],
-    correct: [0],
+    correct: [2],
     exp: "L'ExternalTaskSensor mette in pausa un DAG finché un task di un altro DAG non è completato: gestisce dipendenze tra pipeline diverse mantenendo l'ordine corretto."
   },
   {
@@ -1063,22 +1063,22 @@ registerSubject("Data Pipelines", [
     id: "u12097", topic: "Riconciliazione",
     q: "La riconciliazione dei dati nella pipeline verifica che:",
     opts: [
-      "I conteggi/totali a valle corrispondano a quelli attesi dalla sorgente",
       "I dati vengano cifrati durante il trasferimento tra le fasi",
+      "I conteggi/totali a valle corrispondano a quelli attesi dalla sorgente",
       "Le trasformazioni vengano eseguite nell'ordine corretto"
     ],
-    correct: [0],
+    correct: [1],
     exp: "La riconciliazione confronta i totali tra sorgente e destinazione (righe, somme) per assicurarsi che nessun dato sia andato perso o duplicato durante l'elaborazione."
   },
   {
     id: "u12098", topic: "Ripetibilità",
     q: "Una pipeline 'deterministica' produce, a parità di input:",
     opts: [
-      "Sempre lo stesso output",
+      "Output casuali",
       "Output diversi ogni volta",
-      "Output casuali"
+      "Sempre lo stesso output"
     ],
-    correct: [0],
+    correct: [2],
     exp: "Il determinismo garantisce risultati riproducibili: stesso input → stesso output. È alla base della testabilità, del debugging e della fiducia nei dati prodotti."
   },
   {
@@ -1096,11 +1096,11 @@ registerSubject("Data Pipelines", [
     id: "u12100", topic: "Flusso pipeline",
     q: "Un flusso tipico di data pipeline orchestrata è:",
     opts: [
-      "Ingestione → staging → trasformazione → caricamento nel DW → verifica qualità",
       "Staging → ingestione → caricamento nel DW → trasformazione → verifica qualità",
+      "Ingestione → staging → trasformazione → caricamento nel DW → verifica qualità",
       "Verifica qualità → ingestione → staging → trasformazione → caricamento nel DW"
     ],
-    correct: [0],
+    correct: [1],
     exp: "Il flusso: acquisire i dati (ingestion), depositarli in staging, trasformarli (pulizia, modellazione), caricarli nel data warehouse e verificarne la qualità, il tutto orchestrato e monitorato."
   },
   // === AGGIUNGI NUOVE DOMANDE DATA PIPELINES QUI ===
