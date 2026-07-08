@@ -1,0 +1,5 @@
+[
+{"id":"py100","opts":["Solleva un TypeError: le stringhe sono immutabili","La stringa viene modificata e la variabile s diventa 'Xiao'","Non accade nulla: l'assegnazione è ignorata e s resta 'ciao'"],"correct":[0]},
+{"id":"py112","opts":["Sono immutabili: non puoi aggiungere, togliere o cambiare elementi","Sono modificabili come le liste, ad esempio con i metodi append e pop","Possono contenere soltanto numeri, non stringhe o altri tipi di oggetti"],"correct":[0]},
+{"id":"py145","opts":["Funziona: t diventa (1, [2, 3, 4]), la lista interna è modificabile","Solleva un errore, perché le tuple sono immutabili in ogni loro parte","Non fa nulla, perché un append su un elemento di tupla viene ignorato"],"correct":[0]}
+]
