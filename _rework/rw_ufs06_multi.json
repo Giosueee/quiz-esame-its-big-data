@@ -1,0 +1,4 @@
+[
+{"id":"u06006","q":"Quale di questi è un indice di posizione (tendenza centrale)?","opts":["La media aritmetica","La deviazione standard","Il campo di variazione (range)"],"correct":[0],"exp":"Media, mediana e moda sono indici di POSIZIONE (descrivono il centro della distribuzione). La deviazione standard e il campo di variazione misurano invece la DISPERSIONE dei dati."},
+{"id":"u06051","q":"Quale di queste è una variabile qualitativa (categorica)?","opts":["Il colore degli occhi","L'altezza misurata in centimetri","Il numero di figli di una persona"],"correct":[0],"exp":"Il colore degli occhi è qualitativo (categorie senza ordine numerico). L'altezza in cm e il numero di figli sono variabili QUANTITATIVE (misurabili con numeri): rispettivamente continua e discreta."}
+]
