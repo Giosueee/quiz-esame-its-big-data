@@ -1,0 +1,154 @@
+====================================================================
+DATASET: 1520 domande | risposta singola: 1474 | multi-risposta: 46
+====================================================================
+
+[1] LUNGHEZZA opzioni (caratteri)
+  corretta:   media  56.5  sd 20.3
+  distrattori: media  43.3  sd 20.6
+  corretta e' la PIU' LUNGA: 1002/1474 = 68.0%  (atteso ~25%)
+  corretta e' la PIU' CORTA: 158/1474 = 10.7%  (atteso ~25%)
+  quando e' la piu' lunga, margine medio sul 2o: 13.7 caratteri
+
+[2] PARENTESI
+  corretta con '(...)' e nessun distrattore: 228/1474 = 15.5%
+
+[3] ECO LESSICALE (stem condivisi con la domanda)
+  overlap medio stem<->corretta:    0.364
+  overlap medio stem<->distrattori: 0.314
+  corretta con eco ESCLUSIVA (stem in comune con domanda che nessun distrattore ha): 152/1474 = 10.3%
+
+[4] DISTRATTORI FUORI TEMA (proxy: 0 parole in comune con domanda+corretta)
+  domande con >=1 distrattore fuori tema: 1191/1474 = 80.8%
+
+[5] TERMINI ASSOLUTI (sempre/mai/solo/tutti/nessuno...)
+  presenti nella corretta:    144/1474 =  9.8%
+  presenti in un distrattore: 699/1474 = 47.4%
+
+[6] POSIZIONE risposta corretta (lettera)
+  A: 1401 = 95.0%
+  B:   59 =  4.0%
+  C:   12 =  0.8%
+  D:    2 =  0.1%
+
+====================================================================
+ESEMPI
+====================================================================
+
+-- Bias LUNGHEZZA (corretta piu' lunga, margine >25) --
+    [u02003 SO Reti Virtualizzazione] Che cos'è un processo?
+       A) Un programma in esecuzione, con il proprio spazio di memoria <=OK
+       B) Un file salvato sul disco
+       C) Un dispositivo hardware di input
+       D) Una riga di codice sorgente
+
+    [u02008 SO Reti Virtualizzazione] A cosa serve la memoria virtuale?
+       A) A far usare ai programmi più memoria di quella fisica disponibile <=OK
+       B) A rendere il disco più veloce della RAM
+       C) A cifrare i dati in memoria
+       D) A eliminare la necessità della RAM
+
+    [u02020 SO Reti Virtualizzazione] Qual è la differenza tra switch e router?
+       A) Lo switch collega dispositivi nella stessa rete; il router collega reti diverse <=OK
+       B) Sono lo stesso dispositivo
+       C) Il router collega solo due computer
+       D) Lo switch serve solo per il Wi-Fi
+
+    [u02021 SO Reti Virtualizzazione] Cos'è la virtualizzazione?
+       A) Creare versioni virtuali di risorse (server, storage, reti) su hardware fisico <=OK
+       B) Aumentare fisicamente la RAM del computer
+       C) Cancellare i dati in modo sicuro
+       D) Cifrare l'intero disco rigido
+
+
+-- Bias PARENTESI --
+    [py010 Python] La funzione input() restituisce sempre un valore di tipo...
+       A) int
+       B) float
+       C) str (stringa) <=OK
+       D) dipende da cosa scrive l'utente
+
+    [py026 Python] Quanto vale 'hello' in 'Hello World!' ?
+       A) False, perché l'operatore in distingue maiuscole e minuscole (case sensitive) <=OK
+       B) True, perché la frase contiene comunque la sequenza di lettere h-e-l-l-o
+       C) True, perché l'operatore in ignora la differenza tra maiuscole e minuscole
+       D) Solleva un errore perché in funziona solo con le liste, non con le stringhe
+
+    [py030 Python] In una catena if / elif / elif / else, quanti blocchi vengono eseguiti al massimo?
+       A) Solo il primo blocco la cui condizione è vera (oppure l'else se nessuna lo è) <=OK
+       B) Tutti i blocchi la cui condizione risulta vera, valutati uno dopo l'altro in ordine
+       C) Sempre due blocchi: quello dell'if iniziale e in aggiunta quello finale dell'else
+       D) Nessun blocco viene eseguito finché non si verifica esattamente una sola condizione
+
+    [py032 Python] Cosa rappresenta range(5) ?
+       A) I numeri da 1 a 5 inclusi
+       B) I numeri da 0 a 4 (0 incluso, 5 escluso) <=OK
+       C) I numeri da 0 a 5 inclusi
+       D) Una lista già materializzata [0,1,2,3,4]
+
+
+-- ECO LESSICALE --
+    (stem in eco: ['hell', 'world'])
+    [py018 Python] Dato stringa = 'Hello World', cosa produce f'La frase è {stringa}!' ?
+       A) 'La frase è {stringa}!'
+       B) 'La frase è Hello World!' <=OK
+       C) Errore di sintassi
+       D) 'La frase è stringa!'
+
+    (stem in eco: ['true'])
+    [py025 Python] Quanto vale (True and False) or True ?
+       A) False
+       B) True <=OK
+       C) None
+       D) Errore
+
+    (stem in eco: ['iter'])
+    [py035 Python] Qual è una regola importante quando si itera con un for su una sequenza?
+       A) Non aggiungere né togliere elementi dalla sequenza che si sta iterando in quel momento <=OK
+       B) Bisogna sempre usare range() al posto di scorrere direttamente gli elementi della lista
+       C) Non si possono usare le liste come sequenza: servono per forza tuple oppure dizionari
+       D) Ogni ciclo for deve sempre terminare con un blocco else, altrimenti non risulta valido
+
+    (stem in eco: ['immutabil', 'stringh'])
+    [py100 Python] Le stringhe in Python sono immutabili. Cosa succede eseguendo s = 'ciao'; s[0] = 'X' ?
+       A) Solleva un TypeError: le stringhe sono immutabili e non si modificano per indice <=OK
+       B) La stringa viene modificata correttamente e la variabile s diventa 'Xiao'
+       C) Non accade nulla: l'assegnazione viene ignorata e s resta invariata a 'ciao'
+       D) Restituisce il carattere 'X' senza però modificare la variabile s originale
+
+
+-- DISTRATTORE FUORI TEMA --
+    (fuori tema: "Tutte le variabili sono numeri interi, a meno di conversioni fatte esplicitamente")
+    [py002 Python] Cosa significa che Python ha 'tipizzazione dinamica'?
+       A) Il tipo di una variabile è determinato a runtime e può anche cambiare <=OK
+       B) Devi dichiarare esplicitamente il tipo di ogni variabile prima di poterla usare
+       C) Tutte le variabili sono numeri interi, a meno di conversioni fatte esplicitamente
+       D) Una volta assegnato, il valore di una variabile non può più essere modificato
+
+    (fuori tema: "1 spazio")
+    [py004 Python] Quanti spazi si usano (per convenzione) per indentare un blocco di codice in Python?
+       A) 1 spazio
+       B) 2 spazi
+       C) 4 spazi <=OK
+       D) 8 spazi
+
+    (fuori tema: "13.33")
+    [py006 Python] Quanto vale 40 // 3 in Python?
+       A) 13.33
+       B) 13 <=OK
+       C) 1
+       D) 12
+
+    (fuori tema: "13")
+    [py007 Python] Quanto vale 40 % 3 in Python?
+       A) 13
+       B) 1 <=OK
+       C) 0
+       D) 3
+
+    (fuori tema: "15")
+    [py008 Python] Quanto vale 5 ** 3 in Python?
+       A) 15
+       B) 125 <=OK
+       C) 8
+       D) 53
+

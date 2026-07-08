@@ -1,0 +1,31 @@
+====================================================================
+DATASET: 1520 domande | risposta singola: 1474 | multi-risposta: 46
+====================================================================
+
+[1] LUNGHEZZA opzioni (caratteri)
+  corretta:   media  56.5  sd 20.3
+  distrattori: media  43.3  sd 20.6
+  corretta e' la PIU' LUNGA: 1002/1474 = 68.0%  (atteso ~25%)
+  corretta e' la PIU' CORTA: 158/1474 = 10.7%  (atteso ~25%)
+  quando e' la piu' lunga, margine medio sul 2o: 13.7 caratteri
+
+[2] PARENTESI
+  corretta con '(...)' e nessun distrattore: 228/1474 = 15.5%
+
+[3] ECO LESSICALE (stem condivisi con la domanda)
+  overlap medio stem<->corretta:    0.364
+  overlap medio stem<->distrattori: 0.314
+  corretta con eco ESCLUSIVA (stem in comune con domanda che nessun distrattore ha): 152/1474 = 10.3%
+
+[4] DISTRATTORI FUORI TEMA (proxy: 0 parole in comune con domanda+corretta)
+  domande con >=1 distrattore fuori tema: 1191/1474 = 80.8%
+
+[5] TERMINI ASSOLUTI (sempre/mai/solo/tutti/nessuno...)
+  presenti nella corretta:    144/1474 =  9.8%
+  presenti in un distrattore: 699/1474 = 47.4%
+
+[6] POSIZIONE risposta corretta (lettera)
+  A: 1401 = 95.0%
+  B:   59 =  4.0%
+  C:   12 =  0.8%
+  D:    2 =  0.1%

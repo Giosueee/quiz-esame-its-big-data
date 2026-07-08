@@ -1,0 +1,37 @@
+[
+ {"id":"u02008","subject":"SO Reti","topic":"Gestione memoria","q":"A cosa serve la memoria virtuale?",
+  "opts":["A spostare nella cache del processore i dati usati più di frequente","A ridurre il consumo di RAM comprimendo i processi inattivi","A dare a ogni processo più spazio di indirizzi della RAM fisica"],
+  "correct":[2],"exp":"La memoria virtuale offre a ogni processo uno spazio di indirizzi ampio e continuo, più grande della RAM fisica, usando il disco (paging/swap). La cache CPU e la compressione di memoria sono meccanismi diversi."},
+
+ {"id":"py010","subject":"Python","topic":"Input e Output","q":"Di che tipo è il valore restituito dalla funzione input()?",
+  "opts":["Una stringa, qualunque cosa l'utente digiti","Il tipo Python corrispondente a ciò che scrive","Un intero quando inserisce solo cifre numeriche"],
+  "correct":[0],"exp":"input() restituisce sempre una str, anche se l'utente digita numeri: per ottenere un numero devi convertire, es. int(input())."},
+
+ {"id":"py002","subject":"Python","topic":"Basi del linguaggio","q":"Cosa significa che Python ha 'tipizzazione dinamica'?",
+  "opts":["Che ogni variabile va dichiarata col suo tipo prima dell'uso","Che il tipo di una variabile è deciso a runtime e può cambiare","Che una variabile, una volta assegnata, non può cambiare tipo"],
+  "correct":[1],"exp":"Con la tipizzazione dinamica il tipo si determina a runtime: x=5 è int, poi x='ciao' diventa str. Nessuna dichiarazione di tipo (quella è statica) e nessun vincolo di immutabilità della variabile."},
+
+ {"id":"sql044","subject":"SQL","topic":"GROUP BY","q":"Se in una SELECT con funzione di aggregazione includi anche un campo non aggregato, cosa devi fare?",
+  "opts":["Aggiungere quel campo anche nella clausola GROUP BY","Spostare quel campo dentro una clausola HAVING","Togliere la funzione di aggregazione dalla SELECT"],
+  "correct":[0],"exp":"Ogni campo non aggregato nella SELECT deve comparire nella GROUP BY. HAVING filtra i gruppi (non elenca colonne); togliere l'aggregato cambia il senso della query."},
+
+ {"id":"u06048","subject":"Statistica","topic":"Errore standard","q":"L'errore standard della media misura:",
+  "opts":["La media dei valori osservati nel campione estratto","La probabilità che il test statistico dia esito errato","La variabilità della media da un campione all'altro"],
+  "correct":[2],"exp":"L'errore standard è la deviazione standard della distribuzione delle medie campionarie: quantifica quanto la media di un campione varia rispetto ad altri campioni. Non è la media né una probabilità di errore."},
+
+ {"id":"u09001","subject":"Machine Learning","topic":"Tipi di ML","q":"Nel machine learning supervisionato:",
+  "opts":["Il modello individua da solo raggruppamenti nei dati non etichettati","Il modello migliora per tentativi in base a una ricompensa ricevuta","Il modello impara da esempi con l'output corretto già noto"],
+  "correct":[2],"exp":"Nel supervisionato ogni esempio ha una label (output noto) e il modello impara la relazione input→output. Individuare gruppi senza label è non supervisionato; imparare per ricompensa è apprendimento per rinforzo."},
+
+ {"id":"py056","subject":"Python","topic":"Ambienti virtuali","q":"A cosa serve un ambiente virtuale (virtual environment)?",
+  "opts":["A eseguire il codice con un interprete più veloce","A tenere separate le dipendenze dei diversi progetti Python","A impacchettare il progetto in un unico eseguibile"],
+  "correct":[1],"exp":"Un virtual environment isola le librerie di un progetto da quelle degli altri e dal Python di sistema, evitando conflitti di versione. Non accelera l'interprete né crea un eseguibile."},
+
+ {"id":"__NEW_py_code","subject":"Python","topic":"Lettura di codice","q":"Cosa stampa questo codice?\n\nnums = [1, 2, 3, 4, 5, 6]\nprint([n*n for n in nums if n % 2 != 0])",
+  "opts":["[1, 4, 9, 16, 25, 36]","[1, 9, 25]","[1, 3, 5]"],
+  "correct":[1],"exp":"La comprehension tiene solo i dispari (if n%2!=0 → 1,3,5) e ne fa il quadrato → [1, 9, 25]. [1,4,9,16,25,36] ignora il filtro; [1,3,5] dimentica il quadrato."},
+
+ {"id":"__NEW_sql_code","subject":"SQL","topic":"Lettura di codice","q":"Vendite(prodotto,importo)=('A',100),('B',50),('A',30),('C',80),('A',20). Cosa restituisce?\n\nSELECT prodotto, SUM(importo) AS tot FROM Vendite GROUP BY prodotto HAVING SUM(importo) > 60;",
+  "opts":["A → 150 e C → 80","A → 150, B → 50 e C → 80","A → 100 e C → 80"],
+  "correct":[0],"exp":"Somme per prodotto: A=150, B=50, C=80; HAVING SUM>60 tiene A e C. Includere anche B ignora HAVING; ottenere A=100 significa applicare la condizione riga per riga come un WHERE, prima del raggruppamento."}
+]
