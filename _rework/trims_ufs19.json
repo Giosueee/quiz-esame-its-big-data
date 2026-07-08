@@ -1,0 +1,23 @@
+{
+"u19003":"I processori lavorano su numeri, non su significati",
+"u19098":"Il prompting non cambia i pesi; il fine-tuning sì",
+"u19090":"Decide di usare un tool e ne usa il risultato",
+"u19082":"Spezzare i documenti in parti gestibili",
+"u19050":"Recupera contenuti vicini per significato",
+"u19069":"Un modello linguistico enorme addestrato su molti token",
+"u19008":"Il vocabolario diventa enorme con forme nuove o flesse",
+"u19099":"Quando serve conoscenza esterna aggiornata",
+"u19068":"Classificazione e traduzione tramite prompting",
+"u19100":"Preprocessing, BoW/TF-IDF, embedding, LLM, RAG",
+"u19017":"Stemming grezzo; lemmatizzazione linguistica",
+"u19009":"Bilancia copertura e dimensione del vocabolario",
+"u19095":"Costruire app su LLM con prompt, chain e tool",
+"u19044":"Non distinguono i sensi diversi di una parola",
+"u19087":"Aggiorna poche matrici a basso rango, più efficiente",
+"u19093":"Scomporre un obiettivo e svolgerlo passo passo coi tool",
+"u19011":"Perdere informazioni come le differenze semantiche",
+"u19032":"Pesare le parole per frequenza e rarità",
+"u19013":"Parole frequenti poco discriminanti, es. articoli",
+"u19067":"Pre-training, fine-tuning e feedback umano",
+"u19095b":"x"
+}

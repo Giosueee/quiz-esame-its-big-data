@@ -30,7 +30,7 @@ registerSubject("NLP e LLM", [
     id: "u19003", topic: "Rappresentazione",
     q: "Perche' il testo grezzo va trasformato prima di usarlo nei modelli?",
     opts: [
-      "Perche' i processori lavorano su rappresentazioni numeriche, non su significati testuali grezzi",
+      "I processori lavorano su numeri, non su significati",
       "Perche' i modelli accettano solo file PDF",
       "Perche' il testo non contiene informazioni"
     ],
@@ -87,7 +87,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Funziona solo con immagini",
       "Non rappresenta mai parole intere",
-      "Il vocabolario puo' diventare enorme e includere forme nuove o flesse"
+      "Il vocabolario diventa enorme con forme nuove o flesse"
     ],
     correct: [2],
     exp: "Le lingue hanno molte parole, flessioni, errori e neologismi. Un tokenizer a parole puo' incontrare molti termini rari o non visti."
@@ -96,7 +96,7 @@ registerSubject("NLP e LLM", [
     id: "u19009", topic: "Subword",
     q: "La tokenizzazione a subword e' utile perche':",
     opts: [
-      "Bilancia rappresentativita' delle parole e controllo della dimensione del vocabolario",
+      "Bilancia copertura e dimensione del vocabolario",
       "Usa solo caratteri ASCII invece di unità subword apprese",
       "Converte token o parole in frasi complete"
     ],
@@ -120,7 +120,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Rendere impossibile la tokenizzazione",
       "Aumentare sempre la precisione",
-      "Perdere informazioni rilevanti come differenze semantiche o accenti"
+      "Perdere informazioni come le differenze semantiche"
     ],
     correct: [2],
     exp: "Esempio: papa e papa' non sono equivalenti. Normalizzare senza criterio puo' cancellare distinzioni importanti."
@@ -141,7 +141,7 @@ registerSubject("NLP e LLM", [
     q: "Le stopword sono:",
     opts: [
       "Parole offensive per definizione, non semplicemente frequenti",
-      "Parole molto frequenti spesso poco discriminanti, come articoli e preposizioni",
+      "Parole frequenti poco discriminanti, es. articoli",
       "Solo nomi propri invece di parole funzionali frequenti"
     ],
     correct: [1],
@@ -186,7 +186,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Lo stemming usa transformer",
       "La lemmatizzazione elimina sempre il contesto",
-      "Stemming e' piu' semplice; lemmatizzazione conserva forme base linguistiche"
+      "Stemming grezzo; lemmatizzazione linguistica"
     ],
     correct: [2],
     exp: "Stemming taglia parti finali; lemmatizzazione riconosce la forma base, spesso usando informazioni morfologiche e lessicali."
@@ -351,7 +351,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Invocare funzioni esterne",
       "Generare testo autoregressivo",
-      "Pesare parole in base a frequenza locale e rarita' nel corpus"
+      "Pesare le parole per frequenza e rarità"
     ],
     correct: [2],
     exp: "TF-IDF e' una rappresentazione tradizionale efficace per retrieval, similarita' e classificazione di testi."
@@ -483,7 +483,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Sono modelli pensati solo per immagini, non per testo",
       "Non producono rappresentazioni vettoriali delle parole",
-      "Non gestiscono bene significati diversi della stessa parola in contesti diversi"
+      "Non distinguono i sensi diversi di una parola"
     ],
     correct: [2],
     exp: "Una parola polisemica tende ad avere un solo vettore statico, anche se in frasi diverse assume significati diversi."
@@ -549,7 +549,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Usa solo ordinamento alfabetico",
       "Cerca solo caratteri maiuscoli",
-      "Recupera contenuti vicini per significato, non solo per parole identiche"
+      "Recupera contenuti vicini per significato"
     ],
     correct: [2],
     exp: "Con embedding, query e documenti possono essere confrontati semanticamente anche se non condividono le stesse parole."
@@ -735,7 +735,7 @@ registerSubject("NLP e LLM", [
     q: "Un flusso tipico per modelli GPT include:",
     opts: [
       "Applicare solo stemming manuale senza reti neurali",
-      "Pre-training, fine-tuning e feedback umano o ottimizzazione per chat",
+      "Pre-training, fine-tuning e feedback umano",
       "Usare solo bag-of-words senza modelli neurali"
     ],
     correct: [1],
@@ -747,7 +747,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Solo PoS tagging manuale",
       "Solo completamento di una singola lettera",
-      "Classificazione, traduzione e altri task tramite prompting o adattamento"
+      "Classificazione e traduzione tramite prompting"
     ],
     correct: [2],
     exp: "I decoder-only moderni apprendono capacita' generali e possono seguire istruzioni per molti compiti testuali."
@@ -756,7 +756,7 @@ registerSubject("NLP e LLM", [
     id: "u19069", topic: "LLM",
     q: "Un Large Language Model e':",
     opts: [
-      "Un modello linguistico di grandi dimensioni addestrato su moltissimi token",
+      "Un modello linguistico enorme addestrato su molti token",
       "Un foglio di calcolo con molte colonne",
       "Un algoritmo di ordinamento stringhe"
     ],
@@ -900,7 +900,7 @@ registerSubject("NLP e LLM", [
     q: "Il chunking per testi lunghi serve a:",
     opts: [
       "Unire tutto in un prompt infinito",
-      "Spezzare documenti in parti gestibili dalla context window o dal retrieval",
+      "Spezzare i documenti in parti gestibili",
       "Convertire vettori in parole"
     ],
     correct: [1],
@@ -954,7 +954,7 @@ registerSubject("NLP e LLM", [
     id: "u19087", topic: "LoRA",
     q: "LoRA e' una tecnica che:",
     opts: [
-      "Aggiorna poche matrici a basso rango rendendo il tuning piu' efficiente",
+      "Aggiorna poche matrici a basso rango, più efficiente",
       "Usa solo parole funzionali frequenti del corpus",
       "Sostituisce la tokenizzazione"
     ],
@@ -987,7 +987,7 @@ registerSubject("NLP e LLM", [
     id: "u19090", topic: "Tool use",
     q: "Nel tool use, il modello tipicamente:",
     opts: [
-      "Decide che serve un tool, propone chiamata e poi usa il risultato restituito",
+      "Decide di usare un tool e ne usa il risultato",
       "Esegue sempre codice senza ambiente",
       "Ignora ogni funzione disponibile"
     ],
@@ -1020,7 +1020,7 @@ registerSubject("NLP e LLM", [
     id: "u19093", topic: "Agenti",
     q: "Negli agenti, planning + execution indica:",
     opts: [
-      "Scomporre un obiettivo e svolgere i passi con strumenti o chiamate successive",
+      "Scomporre un obiettivo e svolgerlo passo passo coi tool",
       "Generare un singolo token senza pianificazione di passi",
       "Limitarsi alla tokenizzazione senza azioni o strumenti"
     ],
@@ -1044,7 +1044,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Disegnare selettori CSS invece di orchestrare LLM",
       "Calcolare solo distanze euclidee tra embedding",
-      "Costruire applicazioni basate su LLM con prompt, chain, tool e integrazioni"
+      "Costruire app su LLM con prompt, chain e tool"
     ],
     correct: [2],
     exp: "LangChain offre moduli per chatbot, RAG, agenti, integrazioni con API, database e vector store."
@@ -1077,7 +1077,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Il fine-tuning e' solo un esempio nel prompt",
       "Il prompting richiede sempre GPU",
-      "Il prompting guida l'output senza cambiare pesi; il fine-tuning adatta parametri o adattatori"
+      "Il prompting non cambia i pesi; il fine-tuning sì"
     ],
     correct: [2],
     exp: "Prompting agisce nel contesto della richiesta. Fine-tuning modifica il comportamento del modello tramite addestramento aggiuntivo."
@@ -1086,7 +1086,7 @@ registerSubject("NLP e LLM", [
     id: "u19099", topic: "RAG vs fine-tuning",
     q: "Quando preferire RAG al fine-tuning?",
     opts: [
-      "Quando serve usare conoscenza esterna aggiornata o documenti specifici recuperabili",
+      "Quando serve conoscenza esterna aggiornata",
       "Quando bisogna cambiare ogni peso del modello sempre",
       "Quando non esistono documenti"
     ],
@@ -1098,7 +1098,7 @@ registerSubject("NLP e LLM", [
     q: "Quale sequenza riassume meglio l'evoluzione trattata in UFS19?",
     opts: [
       "Docker -> SQL -> kernel -> virtualizzazione",
-      "Preprocessing -> BoW/TF-IDF -> embedding -> Transformer/LLM -> RAG/agenti",
+      "Preprocessing, BoW/TF-IDF, embedding, LLM, RAG",
       "Media -> varianza -> test t -> ANOVA"
     ],
     correct: [1],
