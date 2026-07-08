@@ -7,9 +7,8 @@ registerSubject("Machine Learning", [
     id: "u09001", topic: "Tipi di ML",
     q: "Nel machine learning supervisionato:",
     opts: [
-      "Si impara da dati etichettati (input con output noto)",
+      "Si impara da dati etichettati",
       "Non ci sono etichette nei dati",
-      "Si usano solo dati testuali",
       "L'algoritmo non impara dai dati"
     ],
     correct: [0],
@@ -20,7 +19,6 @@ registerSubject("Machine Learning", [
     q: "L'apprendimento NON supervisionato serve a:",
     opts: [
       "Trovare struttura/pattern in dati senza etichette",
-      "Predire una label già definita a partire da esempi etichettati",
       "Ottimizzare una ricompensa tramite interazione con un ambiente",
       "Etichettare manualmente i dati"
     ],
@@ -33,7 +31,6 @@ registerSubject("Machine Learning", [
     opts: [
       "La classificazione predice categorie, la regressione valori numerici continui",
       "La regressione produce classi discrete invece di valori continui",
-      "Rappresentano lo stesso concetto e sono intercambiabili nell'esercizio",
       "La classificazione apprende senza label come un metodo non supervisionato"
     ],
     correct: [0],
@@ -45,8 +42,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Si adatta troppo ai dati di training e generalizza male su dati nuovi",
       "È troppo semplice e non riesce a rappresentare la relazione nei dati",
-      "Non riceve dati di training e quindi non apprende parametri",
-      "Ha pochi parametri rispetto alla complessità del fenomeno"
+      "Non riceve dati di training e quindi non apprende parametri"
     ],
     correct: [0],
     exp: "L'overfitting è l'apprendimento a memoria del rumore del training: ottime prestazioni sul training ma scarse sul test. Si combatte con regolarizzazione, più dati, modelli più semplici."
@@ -57,8 +53,7 @@ registerSubject("Machine Learning", [
     opts: [
       "È troppo semplice e non coglie i pattern nemmeno nel training",
       "È troppo complesso e rischia di adattarsi al rumore del training",
-      "Ha memorizzato il training set invece di generalizzare",
-      "Generalizza perfettamente su dati nuovi senza errore residuo"
+      "Ha memorizzato il training set invece di generalizzare"
     ],
     correct: [0],
     exp: "L'underfitting è l'opposto dell'overfitting: il modello è troppo semplice (alto bias) e va male sia sul training sia sul test. Serve un modello più espressivo o feature migliori."
@@ -69,7 +64,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Per valutare le prestazioni su dati mai visti dal modello",
       "Per aumentare artificialmente il training set a scapito della valutazione",
-      "Per ridurre il tempo di calcolo invece di stimare la generalizzazione",
       "Usare tutto il dataset insieme senza separare training e test"
     ],
     correct: [0],
@@ -81,7 +75,6 @@ registerSubject("Machine Learning", [
     opts: [
       "A scegliere iperparametri e modelli senza toccare il test",
       "Usare la validazione al posto dei dati di addestramento",
-      "A rimuovere i dati disponibili prima dell'elaborazione",
       "Assegnare manualmente le label invece di scegliere iperparametri"
     ],
     correct: [0],
@@ -93,8 +86,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Divide i dati in k parti, addestrando e validando a rotazione",
       "Usa una sola divisione training-validazione invece di ruotare i fold",
-      "Rimuove il test set invece di preservarlo per la valutazione finale",
-      "Aumenta il numero di variabili disponibili per il modello"
+      "Rimuove il test set invece di preservarlo per la valutazione finale"
     ],
     correct: [0],
     exp: "Nella k-fold i dati sono divisi in k blocchi: a turno uno fa da validazione e gli altri da training. La media dei k risultati dà una stima più robusta e usa tutti i dati."
@@ -105,8 +97,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Ridurre il bias tende ad aumentare la varianza e viceversa",
       "Bias e varianza cambiano indipendentemente dalla complessità del modello",
-      "Si possono portare a zero bias e varianza con una scelta semplice",
-      "Vale solo per problemi NLP e non per modelli generali"
+      "Si possono portare a zero bias e varianza con una scelta semplice"
     ],
     correct: [0],
     exp: "Modelli semplici hanno alto bias/bassa varianza (underfit); modelli complessi basso bias/alta varianza (overfit). L'obiettivo è il punto di equilibrio che minimizza l'errore su dati nuovi."
@@ -115,9 +106,8 @@ registerSubject("Machine Learning", [
     id: "u09010", topic: "Confusion matrix",
     q: "La matrice di confusione mostra:",
     opts: [
-      "Il confronto tra classi predette e classi reali (TP, FP, FN, TN)",
+      "Il confronto tra classi predette e classi reali",
       "Mostra solo la percentuale di predizioni corrette",
-      "Misura la relazione lineare tra variabili di input",
       "Mostra la distribuzione delle osservazioni nel dataset"
     ],
     correct: [0],
@@ -129,8 +119,7 @@ registerSubject("Machine Learning", [
     opts: [
       "La quota di previsioni corrette sul totale",
       "La quota di veri positivi sui positivi predetti",
-      "La quota di veri positivi sui positivi reali",
-      "L'errore quadratico medio"
+      "La quota di veri positivi sui positivi reali"
     ],
     correct: [0],
     exp: "Accuracy = (TP+TN)/totale. Attenzione: con classi sbilanciate può essere ingannevole (un modello che predice sempre la classe maggioritaria ha alta accuracy ma è inutile)."
@@ -141,7 +130,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Tra i casi predetti positivi, quanti lo sono davvero",
       "Tra i positivi reali, quanti sono stati trovati",
-      "L'errore medio assoluto",
       "Il numero totale di errori"
     ],
     correct: [0],
@@ -153,7 +141,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Tra i positivi reali, quanti ne ha trovati il modello",
       "Tra i predetti positivi, quanti giusti",
-      "L'accuratezza complessiva",
       "La varianza del modello"
     ],
     correct: [0],
@@ -165,8 +152,7 @@ registerSubject("Machine Learning", [
     opts: [
       "La media armonica di precision e recall",
       "La somma di precision e recall",
-      "L'accuratezza media",
-      "L'errore quadratico"
+      "L'accuratezza media"
     ],
     correct: [0],
     exp: "F1 = 2·(P·R)/(P+R): bilancia precision e recall in un unico numero, utile con classi sbilanciate. È alto solo se entrambe sono alte."
@@ -177,7 +163,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Ridurre la precision (e viceversa)",
       "Aumentare anche la precision",
-      "Non avere alcun effetto",
       "Azzerare i falsi negativi e i falsi positivi"
     ],
     correct: [0],
@@ -189,8 +174,7 @@ registerSubject("Machine Learning", [
     opts: [
       "L'errore tipico delle previsioni, nella stessa unità della variabile",
       "La percentuale di previsioni corrette",
-      "Misura la relazione lineare tra variabili di input",
-      "Il numero di classi presenti nel problema di classificazione"
+      "Misura la relazione lineare tra variabili di input"
     ],
     correct: [0],
     exp: "RMSE è la radice della media degli errori al quadrato: penalizza molto gli errori grandi ed è nelle unità della variabile target. Più basso = previsioni migliori."
@@ -201,8 +185,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Un classificatore che distingue molto bene le classi",
       "Un modello che indovina a caso",
-      "Overfitting garantito",
-      "Dati mancanti"
+      "Overfitting garantito"
     ],
     correct: [0],
     exp: "L'AUC misura la capacità di separare le classi al variare della soglia: 1 = perfetto, 0,5 = come il caso. Utile e robusta anche con classi moderatamente sbilanciate."
@@ -213,8 +196,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Per evitare che feature con scale diverse dominino il modello",
       "Per aumentare il numero di righe",
-      "Per assegnare label manuali ai dati prima di usarli nel modello",
-      "Non serve mai"
+      "Per assegnare label manuali ai dati prima di usarli nel modello"
     ],
     correct: [0],
     exp: "Algoritmi basati su distanze o gradiente (KNN, SVM, reti) sono sensibili alla scala: standardizzare (media 0, sd 1) o normalizzare mette le feature su scale comparabili."
@@ -225,7 +207,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Trasformare una variabile categorica in colonne binarie 0/1",
       "Ridurre il numero di righe",
-      "Normalizzare i numeri",
       "Rimuovere i valori mancanti"
     ],
     correct: [0],
@@ -235,9 +216,8 @@ registerSubject("Machine Learning", [
     id: "u09020", topic: "K-means",
     q: "L'algoritmo k-means serve a:",
     opts: [
-      "Raggruppare i dati in k cluster (non supervisionato)",
+      "Raggruppare i dati in k cluster",
       "Classificare con etichette note",
-      "Prevedere un valore continuo",
       "Ridurre gli errori di un albero"
     ],
     correct: [0],
@@ -248,7 +228,6 @@ registerSubject("Machine Learning", [
     q: "Nel k-means, il valore di k:",
     opts: [
       "Va scelto in anticipo dall'utente",
-      "È determinato automaticamente",
       "È sempre uguale al numero di righe",
       "Coincide col numero di feature"
     ],
@@ -261,8 +240,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Ridurre la dimensionalità conservando la massima varianza",
       "Aumentare il numero di feature",
-      "Aggiungere manualmente label ai record prima dell'addestramento",
-      "Classificare le immagini"
+      "Aggiungere manualmente label ai record prima dell'addestramento"
     ],
     correct: [0],
     exp: "La PCA proietta i dati su nuove componenti ortogonali che catturano la maggior varianza: riduce le dimensioni mantenendo l'informazione, contro la 'maledizione della dimensionalità'."
@@ -273,7 +251,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Divide i dati con una serie di domande/soglie sulle feature",
       "È un algoritmo di clustering",
-      "Non è interpretabile",
       "Funziona solo su testo"
     ],
     correct: [0],
@@ -285,8 +262,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Un insieme (ensemble) di molti alberi di decisione",
       "Un singolo albero molto profondo",
-      "Un algoritmo che raggruppa osservazioni senza label",
-      "Una rete neurale"
+      "Un algoritmo che raggruppa osservazioni senza label"
     ],
     correct: [0],
     exp: "La random forest combina molti alberi addestrati su sottocampioni casuali e ne media le previsioni: riduce l'overfitting del singolo albero ed è robusta e accurata."
@@ -297,8 +273,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Le classi dei k vicini più prossimi",
       "Una soglia sul primo attributo",
-      "La media calcolata su tutte le righe senza distinguere gruppi",
-      "Un albero di decisione"
+      "La media calcolata su tutte le righe senza distinguere gruppi"
     ],
     correct: [0],
     exp: "KNN assegna la classe più frequente tra i k punti più vicini (per distanza). È semplice, 'pigro' (non addestra un modello) e sensibile alla scala delle feature."
@@ -307,10 +282,9 @@ registerSubject("Machine Learning", [
     id: "u09026", topic: "Regressione logistica",
     q: "La regressione logistica si usa per:",
     opts: [
-      "Problemi di classificazione (probabilità di una classe)",
+      "Problemi di classificazione",
       "Prevedere valori continui illimitati",
-      "Raggruppare senza etichette",
-      "Ridurre le dimensioni"
+      "Raggruppare senza etichette"
     ],
     correct: [0],
     exp: "Nonostante il nome, la regressione logistica è un classificatore: stima la probabilità (0-1) che un'osservazione appartenga a una classe, usando la funzione sigmoide."
@@ -320,7 +294,6 @@ registerSubject("Machine Learning", [
     q: "La discesa del gradiente (gradient descent) serve a:",
     opts: [
       "Minimizzare la funzione di costo aggiornando i parametri passo passo",
-      "Aumentare l'errore",
       "Separare i dati in sottoinsiemi di training, validazione e test",
       "Assegnare nomi leggibili alle classi dopo la previsione"
     ],
@@ -333,8 +306,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Può far divergere l'ottimizzazione (salta il minimo)",
       "Rende sempre l'addestramento più preciso",
-      "Lascia invariati parametri, dati e risultato del modello",
-      "Riduce il numero di feature"
+      "Lascia invariati parametri, dati e risultato del modello"
     ],
     correct: [0],
     exp: "Un tasso di apprendimento troppo grande fa 'rimbalzare' i parametri e può divergere; troppo piccolo rende l'addestramento lentissimo. Va calibrato con attenzione."
@@ -345,8 +317,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Penalizzare la complessità del modello per ridurre l'overfitting",
       "Aumentare il numero di parametri",
-      "Aggiungere manualmente label ai record prima dell'addestramento",
-      "Accelerare la lettura dei file"
+      "Aggiungere manualmente label ai record prima dell'addestramento"
     ],
     correct: [0],
     exp: "La regolarizzazione aggiunge alla funzione di costo una penalità sui pesi grandi: L2 (ridge) li riduce, L1 (lasso) può azzerarli (selezione di feature). Combatte l'overfitting."
@@ -356,7 +327,6 @@ registerSubject("Machine Learning", [
     q: "Il data leakage (fuga di dati) si verifica quando:",
     opts: [
       "Informazioni del test/futuro filtrano nel training, gonfiando le prestazioni",
-      "Una perdita fisica o logica di record dal dataset",
       "Un modello con capacità insufficiente rispetto ai pattern",
       "Assenza di label disponibili per l'apprendimento supervisionato"
     ],
@@ -369,8 +339,7 @@ registerSubject("Machine Learning", [
     opts: [
       "È impostato prima dell'addestramento, non appreso dai dati",
       "È appreso automaticamente dai dati",
-      "È l'output del modello",
-      "È un'etichetta"
+      "È l'output del modello"
     ],
     correct: [0],
     exp: "Gli iperparametri configurano l'algoritmo e si scelgono prima (o tramite tuning su validation). I parametri veri (es. i pesi) sono invece appresi dai dati durante l'addestramento."
@@ -381,7 +350,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Può essere alta ma fuorviante, ignorando la classe rara",
       "È sempre la metrica migliore",
-      "Non è calcolabile",
       "Coincide con la recall"
     ],
     correct: [0],
@@ -393,7 +361,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Combinando più modelli deboli in uno più forte",
       "Usando un solo modello semplice",
-      "Eliminando i dati di training",
       "Riducendo sempre l'interpretabilità a zero"
     ],
     correct: [0],
@@ -405,7 +372,6 @@ registerSubject("Machine Learning", [
     opts: [
       "In sequenza, ciascuno correggendo gli errori del precedente",
       "Tutti in parallelo e indipendenti",
-      "Una sola volta insieme",
       "Senza usare le etichette"
     ],
     correct: [0],
@@ -417,7 +383,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Creare/trasformare variabili utili per migliorare il modello",
       "Aumentare il numero di righe",
-      "Scegliere gli iperparametri",
       "Separare i dati in sottoinsiemi di training, validazione e test"
     ],
     correct: [0],
@@ -429,7 +394,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Con troppe feature i dati diventano radi e i modelli peggiorano",
       "Più feature sono sempre meglio",
-      "Le dimensioni non contano",
       "I dati diventano più densi"
     ],
     correct: [0],
@@ -439,9 +403,8 @@ registerSubject("Machine Learning", [
     id: "u09037", topic: "Naive Bayes",
     q: "Il classificatore Naive Bayes assume che le feature siano:",
     opts: [
-      "Indipendenti tra loro data la classe (assunzione 'ingenua')",
+      "Indipendenti tra loro data la classe",
       "Feature sempre dipendenti tra loro data la classe",
-      "Feature necessariamente numeriche continue",
       "Feature etichettate manualmente una per una"
     ],
     correct: [0],
@@ -453,8 +416,7 @@ registerSubject("Machine Learning", [
     opts: [
       "L'iperpiano che separa le classi con il massimo margine",
       "Il centroide dei dati",
-      "Il valore medio calcolato aggregando tutte le osservazioni",
-      "Il numero di cluster"
+      "Il valore medio calcolato aggregando tutte le osservazioni"
     ],
     correct: [0],
     exp: "La SVM trova il confine (iperpiano) che massimizza la distanza (margine) dai punti più vicini di ciascuna classe. Con i kernel gestisce anche separazioni non lineari."
@@ -465,7 +427,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Una struttura ad albero (dendrogramma) di raggruppamenti annidati",
       "Un unico valore numerico invece di una struttura di cluster",
-      "Un modello addestrato su esempi con label note",
       "Una regressione che predice un valore numerico continuo"
     ],
     correct: [0],
@@ -477,8 +438,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Generalizzare bene su dati nuovi mai visti",
       "Memorizzare perfettamente il training",
-      "Avere il maggior numero di parametri",
-      "Usare tutte le feature disponibili"
+      "Avere il maggior numero di parametri"
     ],
     correct: [0],
     exp: "Un modello utile GENERALIZZA: fa buone previsioni su dati nuovi. Ottime prestazioni solo sul training (overfitting) non servono nella realtà."
@@ -489,7 +449,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Un agente impara agendo nell'ambiente e ricevendo ricompense",
       "Si usano solo dati etichettati",
-      "Non c'è alcun obiettivo",
       "I dati non cambiano nel tempo e non arrivano come flusso continuo"
     ],
     correct: [0],
@@ -500,7 +459,6 @@ registerSubject("Machine Learning", [
     q: "Un tipico flusso di un progetto ML è:",
     opts: [
       "Raccolta dati → preparazione → addestramento → valutazione → deploy",
-      "Raccolta dati → addestramento → preparazione → valutazione → deploy",
       "Raccolta dati → preparazione → valutazione → addestramento → deploy",
       "Deploy → raccolta dati → preparazione → addestramento → valutazione"
     ],
@@ -511,8 +469,7 @@ registerSubject("Machine Learning", [
     id: "u09043", topic: "Imputazione",
     q: "Gestire i valori mancanti tramite imputazione significa:",
     opts: [
-      "Sostituirli con stime (media, mediana, modello)",
-      "Eliminarli sempre",
+      "Sostituirli con stime",
       "Ignorarli lasciandoli vuoti",
       "Duplicare le righe"
     ],
@@ -525,8 +482,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Errore molto basso sul training ma alto sul test",
       "Errore alto su entrambi",
-      "Errore basso su entrambi",
-      "Nessun addestramento"
+      "Errore basso su entrambi"
     ],
     correct: [0],
     exp: "Il divario tra ottime prestazioni sul training e scarse sul test è il segno tipico dell'overfitting. Se l'errore è alto su entrambi è underfitting."
@@ -535,10 +491,9 @@ registerSubject("Machine Learning", [
     id: "u09045", topic: "Metriche regressione",
     q: "Il MAE (Mean Absolute Error) rispetto all'RMSE:",
     opts: [
-      "Penalizza meno gli errori grandi (è più robusto agli outlier)",
+      "Penalizza meno gli errori grandi",
       "Penalizza di più gli errori grandi",
-      "È sempre uguale all'RMSE",
-      "Non è una metrica di errore"
+      "È sempre uguale all'RMSE"
     ],
     correct: [0],
     exp: "Il MAE è la media degli errori in valore assoluto: tratta tutti gli errori linearmente. L'RMSE, elevando al quadrato, penalizza di più gli errori grandi ed è più sensibile agli outlier."
@@ -548,7 +503,6 @@ registerSubject("Machine Learning", [
     q: "In un problema supervisionato, la 'target' (o label) è:",
     opts: [
       "La variabile che il modello deve prevedere",
-      "Una feature di input qualsiasi",
       "Il numero di righe presenti nel dataset o nel risultato",
       "Un parametro scelto prima dell'addestramento del modello"
     ],
@@ -561,8 +515,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Media 0 e deviazione standard 1",
       "Valori tra 0 e 1",
-      "Solo valori interi",
-      "Una categoria"
+      "Solo valori interi"
     ],
     correct: [0],
     exp: "La standardizzazione (z-score) sottrae la media e divide per la deviazione standard → media 0, sd 1. La normalizzazione min-max porta invece i valori in [0,1]."
@@ -573,8 +526,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Quanto i punti sono coesi nel proprio cluster e separati dagli altri",
       "Il numero di variabili usate per rappresentare ogni osservazione",
-      "L'accuratezza rispetto a etichette note",
-      "L'errore quadratico"
+      "L'accuratezza rispetto a etichette note"
     ],
     correct: [0],
     exp: "Il silhouette (tra -1 e 1) valuta la qualità dei cluster: alto se i punti sono vicini al proprio gruppo e lontani dagli altri. Aiuta a scegliere il numero di cluster."
@@ -585,7 +537,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Per avere un riferimento minimo con cui confrontare i modelli veri",
       "Per usarlo in produzione senza modifiche",
-      "Per aumentare l'overfitting",
       "Per assegnare label manuali ai dati prima di usarli nel modello"
     ],
     correct: [0],
@@ -597,8 +548,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Aiuta a ridurre l'overfitting e migliorare la generalizzazione",
       "Aumenta sempre l'overfitting",
-      "Lascia invariati parametri, dati e risultato del modello",
-      "Elimina la necessità di valutazione"
+      "Lascia invariati parametri, dati e risultato del modello"
     ],
     correct: [0],
     exp: "Più dati (variati e rappresentativi) aiutano il modello a cogliere i pattern veri anziché il rumore, migliorando la generalizzazione. Non sostituiscono però una buona valutazione."
@@ -609,8 +559,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Tenere solo le variabili più informative, riducendo rumore e complessità",
       "Aggiungere sempre più variabili",
-      "Aggiungere manualmente label ai record prima dell'addestramento",
-      "Aumentare le righe"
+      "Aggiungere manualmente label ai record prima dell'addestramento"
     ],
     correct: [0],
     exp: "Selezionare le feature rilevanti riduce overfitting, tempi di calcolo e migliora l'interpretabilità, scartando variabili ridondanti o irrilevanti."
@@ -620,7 +569,6 @@ registerSubject("Machine Learning", [
     q: "Un modello 'parametrico' (es. regressione lineare):",
     opts: [
       "Ha un numero fisso di parametri indipendente dalla mole di dati",
-      "Cresce sempre con la dimensione del dataset osservato",
       "Non contiene parametri stimati o fissati dal modello",
       "È sempre un modello ad albero indipendentemente dalla formulazione"
     ],
@@ -633,8 +581,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Un passaggio completo su tutto il dataset di training",
       "Una sola osservazione del dataset di training",
-      "Un valore scelto prima del training e non appreso dai dati",
-      "Il sottoinsieme usato solo per la valutazione finale"
+      "Un valore scelto prima del training e non appreso dai dati"
     ],
     correct: [0],
     exp: "Un'epoca è una passata completa su tutti gli esempi di training. Si eseguono più epoche affinché il modello converga; troppe possono portare a overfitting."
@@ -645,7 +592,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Su piccoli sottoinsiemi (batch) di dati alla volta",
       "Solo dopo l'intero dataset",
-      "Su un solo esempio sempre",
       "Non avviene in nessuna configurazione utile del problema"
     ],
     correct: [0],
@@ -653,15 +599,14 @@ registerSubject("Machine Learning", [
   },
   {
     id: "u09055", topic: "Overfitting: rimedi",
-    q: "Quali tecniche riducono l'overfitting? (una o più risposte)",
+    q: "Quale tecnica riduce l'overfitting?",
     opts: [
-      "Regolarizzazione",
-      "Più dati di training",
-      "Modelli più semplici",
-      "Aumentare la complessità del modello"
+      "La regolarizzazione dei pesi del modello",
+      "L'aumento della complessità del modello",
+      "La riduzione dei dati di addestramento"
     ],
-    correct: [0,1,2],
-    exp: "Regolarizzazione, più dati, modelli più semplici (o dropout, early stopping) riducono l'overfitting. Aumentare la complessità lo PEGGIORA."
+    correct: [0],
+    exp: "Regolarizzazione, più dati di training e modelli più semplici riducono l'overfitting. Aumentare la complessità del modello o ridurre i dati lo PEGGIORANO, perché il modello memorizza il rumore."
   },
   {
     id: "u09056", topic: "Interpretabilità",
@@ -669,7 +614,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Un albero di decisione poco profondo",
       "Una rete neurale con più strati nascosti usata per apprendimento profondo",
-      "Un ensemble di 500 alberi",
       "Una SVM con kernel complesso"
     ],
     correct: [0],
@@ -680,7 +624,6 @@ registerSubject("Machine Learning", [
     q: "Nel k-means, un centroide è:",
     opts: [
       "Il punto medio di un cluster",
-      "Un'etichetta",
       "Il punto più lontano",
       "Un iperparametro fisso"
     ],
@@ -691,10 +634,9 @@ registerSubject("Machine Learning", [
     id: "u09058", topic: "Threshold",
     q: "In un classificatore probabilistico, abbassare la soglia di decisione:",
     opts: [
-      "Aumenta i positivi predetti (più recall, meno precision)",
+      "Aumenta i positivi predetti",
       "Riduce sempre i falsi negativi e i falsi positivi",
-      "Lascia invariato il risultato dell'operazione sui dati",
-      "Elimina la classe positiva"
+      "Lascia invariato il risultato dell'operazione sui dati"
     ],
     correct: [0],
     exp: "Con soglia più bassa più casi vengono etichettati positivi: sale la recall ma scende la precision. La soglia si tara secondo il costo relativo di falsi positivi e negativi."
@@ -705,7 +647,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Solo alla fine, per la valutazione finale imparziale",
       "Per scegliere gli iperparametri",
-      "Durante ogni epoca",
       "Per addestrare il modello"
     ],
     correct: [0],
@@ -717,8 +658,7 @@ registerSubject("Machine Learning", [
     opts: [
       "L'algoritmo è la procedura di apprendimento; il modello è il risultato addestrato",
       "Sono termini sinonimi e non cambiano la procedura richiesta",
-      "Il modello addestra l'algoritmo",
-      "L'algoritmo è i dati"
+      "Il modello addestra l'algoritmo"
     ],
     correct: [0],
     exp: "L'algoritmo (es. random forest) è la procedura; il modello è ciò che si ottiene dopo l'addestramento sui dati (con i parametri appresi), pronto a fare previsioni."
@@ -729,8 +669,7 @@ registerSubject("Machine Learning", [
     opts: [
       "La varianza, addestrando modelli su campioni bootstrap e mediando",
       "La componente di errore dovuta a ipotesi troppo semplici del modello",
-      "Il numero di variabili usate per rappresentare ogni osservazione",
-      "Il volume di esempi disponibili per addestramento e valutazione"
+      "Il numero di variabili usate per rappresentare ogni osservazione"
     ],
     correct: [0],
     exp: "Il bagging addestra più modelli su campioni casuali con rimpiazzo e ne aggrega le previsioni: media gli errori e riduce la varianza. La random forest ne è l'esempio."
@@ -741,8 +680,7 @@ registerSubject("Machine Learning", [
     opts: [
       "La recall (pochi falsi negativi)",
       "La precision",
-      "L'accuratezza grezza",
-      "L'RMSE"
+      "L'accuratezza grezza"
     ],
     correct: [0],
     exp: "Non individuare un malato (falso negativo) è grave: serve alta recall. Si accetta qualche falso allarme in più (precision minore) pur di non perdere casi positivi."
@@ -751,10 +689,9 @@ registerSubject("Machine Learning", [
     id: "u09063", topic: "Normalizzazione min-max",
     q: "La normalizzazione min-max porta i valori:",
     opts: [
-      "In un intervallo fisso, tipicamente [0, 1]",
+      "In un intervallo fisso",
       "A media 0 e sd 1",
-      "A soli valori interi",
-      "In categorie"
+      "A soli valori interi"
     ],
     correct: [0],
     exp: "Min-max riscala: (x−min)/(max−min) → valori in [0,1]. Sensibile agli outlier (che spostano min/max). La standardizzazione usa invece media e deviazione standard."
@@ -765,7 +702,6 @@ registerSubject("Machine Learning", [
     opts: [
       "La classe scelta dalla maggioranza dei modelli",
       "Sempre quella del primo modello",
-      "La media delle feature",
       "Una scelta casuale non guidata dai dati né da una metrica"
     ],
     correct: [0],
@@ -777,8 +713,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Il modello soffre di più bias o più varianza",
       "Una proprietà visuale del grafico, non una logica di calcolo",
-      "Il numero di classi presenti nel problema di classificazione",
-      "La velocità del disco"
+      "Il numero di classi presenti nel problema di classificazione"
     ],
     correct: [0],
     exp: "Le learning curve mostrano l'errore su training e validation al crescere dei dati: curve vicine e alte → underfit (bias); ampio gap → overfit (varianza), che più dati possono ridurre."
@@ -788,7 +723,6 @@ registerSubject("Machine Learning", [
     q: "Con classi sbilanciate, l'oversampling (es. SMOTE) serve a:",
     opts: [
       "Aumentare gli esempi della classe minoritaria",
-      "Ridurre tutti i dati",
       "Aggiungere manualmente label ai record prima dell'addestramento",
       "Cambiare l'algoritmo"
     ],
@@ -801,7 +735,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Approssimativamente lineare tra feature e target",
       "Sempre esponenziale",
-      "Categorica",
       "Una scelta casuale non guidata dai dati né da una metrica"
     ],
     correct: [0],
@@ -813,8 +746,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Un caso predetto positivo che in realtà è negativo",
       "Un positivo reale non trovato",
-      "Un vero positivo",
-      "Un dato mancante"
+      "Un vero positivo"
     ],
     correct: [0],
     exp: "FP = 'falso allarme': il modello dice positivo ma è negativo. Il falso negativo (FN) è l'opposto: un positivo reale classificato come negativo."
@@ -825,8 +757,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Visualizzare, velocizzare e ridurre l'overfitting",
       "Aumentare il numero di variabili",
-      "Aggiungere manualmente label ai record prima dell'addestramento",
-      "Creare più righe"
+      "Aggiungere manualmente label ai record prima dell'addestramento"
     ],
     correct: [0],
     exp: "Ridurre le dimensioni (PCA, t-SNE) aiuta a visualizzare i dati in 2D/3D, accelera i modelli e attenua la maledizione della dimensionalità e l'overfitting."
@@ -837,8 +768,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Direttamente il confine tra le classi (P(y|x))",
       "La distribuzione completa dei dati",
-      "Solo a generare nuovi dati",
-      "Senza usare le feature"
+      "Solo a generare nuovi dati"
     ],
     correct: [0],
     exp: "I discriminativi modellano P(classe|input), concentrandosi sul confine decisionale. I generativi (es. Naive Bayes) modellano come i dati sono generati (P(x|classe)) e poi applicano Bayes."
@@ -849,8 +779,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Un learning rate mal calibrato o dati non normalizzati",
       "Troppi dati di test",
-      "Una proprietà visuale del grafico, non una logica di calcolo",
-      "Il nome delle variabili"
+      "Una proprietà visuale del grafico, non una logica di calcolo"
     ],
     correct: [0],
     exp: "Mancata convergenza spesso deriva da learning rate troppo alto/basso, feature non scalate o dati problematici. Sono i primi aspetti da controllare."
@@ -861,8 +790,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Una stima più stabile usando tutti i dati per validare",
       "È sempre più veloce, anche quando i dati sono eterogenei o copiati",
-      "Elimina il bisogno di dati",
-      "Aumenta l'overfitting"
+      "Elimina il bisogno di dati"
     ],
     correct: [0],
     exp: "La k-fold riduce la dipendenza da un particolare split fortunato/sfortunato: ogni dato viene usato sia per addestrare sia per validare, dando una stima più affidabile."
@@ -872,7 +800,6 @@ registerSubject("Machine Learning", [
     q: "La 'feature importance' di una random forest indica:",
     opts: [
       "Quanto ciascuna variabile contribuisce alle previsioni",
-      "Il numero di alberi",
       "L'accuratezza totale",
       "La dimensione del dataset"
     ],
@@ -883,10 +810,9 @@ registerSubject("Machine Learning", [
     id: "u09074", topic: "Modello in produzione",
     q: "Le prestazioni di un modello in produzione possono peggiorare nel tempo per:",
     opts: [
-      "Il data/concept drift (i dati reali cambiano rispetto al training)",
+      "Il data/concept drift",
       "Il numero di righe del training",
-      "Il colore dell'interfaccia",
-      "Il sistema operativo"
+      "Il colore dell'interfaccia"
     ],
     correct: [0],
     exp: "Il 'drift' è il cambiamento della distribuzione dei dati o della relazione target nel tempo: il modello, addestrato sul passato, si degrada. Serve monitoraggio e ri-addestramento."
@@ -897,8 +823,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Ha un ordine naturale (es. basso<medio<alto)",
       "Non possiede un ordine naturale tra le categorie",
-      "È una variabile numerica continua, non una categoria ordinata",
-      "È una categoria assente o valore mancante nel dataset"
+      "È una variabile numerica continua, non una categoria ordinata"
     ],
     correct: [0],
     exp: "L'ordinal encoding assegna numeri crescenti a categorie ordinate. Per categorie senza ordine si usa il one-hot, per non introdurre relazioni d'ordine inesistenti."
@@ -909,7 +834,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Appresi dai dati durante l'addestramento",
       "Fissati a mano prima",
-      "Le etichette",
       "I dati grezzi"
     ],
     correct: [0],
@@ -920,7 +844,6 @@ registerSubject("Machine Learning", [
     q: "Il rilevamento di anomalie (anomaly detection) individua:",
     opts: [
       "Osservazioni che si discostano molto dal comportamento normale",
-      "La media dei dati",
       "Le classi più frequenti",
       "Il numero di variabili usate per rappresentare ogni osservazione"
     ],
@@ -933,7 +856,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Variabilità casuale non spiegabile che il modello non dovrebbe imparare",
       "La parte informativa dei dati che il modello dovrebbe apprendere",
-      "Le label vere usate come target nel training supervisionato",
       "Un parametro scelto prima dell'addestramento del modello"
     ],
     correct: [0],
@@ -945,7 +867,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Gestire separazioni non lineari senza calcolare esplicitamente nuove dimensioni",
       "Ridurre il numero di esempi disponibili per l'addestramento",
-      "Etichettare automaticamente",
       "Eliminare gli iperparametri"
     ],
     correct: [0],
@@ -956,7 +877,6 @@ registerSubject("Machine Learning", [
     q: "La grid search serve a:",
     opts: [
       "Provare sistematicamente combinazioni di iperparametri per trovare le migliori",
-      "Addestrare un solo modello",
       "Aggiungere manualmente label ai record prima dell'addestramento",
       "Ridurre il numero di righe del dataset prima dell'analisi"
     ],
@@ -968,7 +888,6 @@ registerSubject("Machine Learning", [
     q: "Il deep learning usa:",
     opts: [
       "Reti neurali con molti livelli (layer)",
-      "Solo alberi di decisione",
       "Solo regressione lineare",
       "Nessun dato viene usato per calcolare il risultato"
     ],
@@ -981,7 +900,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Introdurre non linearità permettendo di apprendere relazioni complesse",
       "Ridurre il numero di esempi disponibili per l'addestramento",
-      "Assegnare nomi leggibili alle classi dopo la previsione",
       "Serializzare il modello addestrato su disco per riutilizzarlo"
     ],
     correct: [0],
@@ -993,7 +911,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Disattiva casualmente neuroni in addestramento per ridurre l'overfitting",
       "Aggiunge neuroni alla rete durante l'addestramento",
-      "Elimina i dati di input invece di elaborarli o validarli",
       "Modifica le label del dataset invece della struttura della rete"
     ],
     correct: [0],
@@ -1004,7 +921,6 @@ registerSubject("Machine Learning", [
     q: "L'early stopping consiste nel:",
     opts: [
       "Fermare l'addestramento quando l'errore di validazione smette di migliorare",
-      "Non avviare l'addestramento del modello",
       "Usare il test set per decidere quando fermare il training",
       "Continuare l'addestramento senza criterio di arresto"
     ],
@@ -1017,7 +933,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Le stesse condizioni: stessi dati di test e stesse metriche",
       "Metriche diverse per ciascuno",
-      "Nessuna valutazione",
       "Solo il training set"
     ],
     correct: [0],
@@ -1028,7 +943,6 @@ registerSubject("Machine Learning", [
     q: "Includere tra le feature una variabile disponibile solo DOPO l'evento da prevedere causa:",
     opts: [
       "Target leakage: prestazioni gonfiate e inutili in produzione",
-      "Underfitting: modello troppo semplice anche sul training",
       "Un miglioramento reale del modello anche in produzione",
       "Nessun problema di validità nella valutazione del modello"
     ],
@@ -1041,8 +955,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Non supervisionato (nessuna etichetta nota)",
       "Supervisionato, perché sfrutta etichette note",
-      "Una tecnica di regressione su valori continui",
-      "Un metodo per ridurre le dimensioni dei dati"
+      "Una tecnica di regressione su valori continui"
     ],
     correct: [0],
     exp: "Il clustering raggruppa i dati senza etichette (non supervisionato). La classificazione, invece, usa etichette note per assegnare categorie."
@@ -1053,8 +966,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Media la metrica calcolata per classe, trattandole con lo stesso peso",
       "Pesa le classi in base alla numerosità, come una media weighted",
-      "Calcola la metrica solo sulla classe più frequente",
-      "Non è definita per problemi con più di due classi"
+      "Calcola la metrica solo sulla classe più frequente"
     ],
     correct: [0],
     exp: "La macro-media calcola la metrica per ciascuna classe e ne fa la media semplice (ogni classe conta uguale). La micro-media aggrega prima i conteggi, dando più peso alle classi numerose."
@@ -1063,8 +975,7 @@ registerSubject("Machine Learning", [
     id: "u09089", topic: "Outlier",
     q: "Gli outlier possono influenzare molto:",
     opts: [
-      "Modelli sensibili come la regressione lineare e le distanze (KNN)",
-      "Solo la resa visiva dei grafici, senza intervenire sul modello",
+      "Modelli sensibili come la regressione lineare e le distanze",
       "Nessun modello viene influenzato dagli outlier",
       "Solo problemi NLP e non modelli numerici o tabellari"
     ],
@@ -1077,8 +988,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Renderlo meno sensibile a rumore, outlier e piccole variazioni",
       "Aumentare sempre i parametri invece di ridurre sensibilità al rumore",
-      "Eliminare la valutazione invece di rendere stabile il modello",
-      "Usare meno dati di training come unica strategia di robustezza"
+      "Eliminare la valutazione invece di rendere stabile il modello"
     ],
     correct: [0],
     exp: "Un modello robusto mantiene buone prestazioni anche con dati imperfetti (rumore, outlier, drift lieve). Si ottiene con regolarizzazione, feature stabili, tecniche robuste."
@@ -1088,7 +998,6 @@ registerSubject("Machine Learning", [
     q: "A parità di prestazioni su dati nuovi, è preferibile il modello:",
     opts: [
       "Più semplice (principio di parsimonia)",
-      "Più complesso",
       "Con più feature",
       "Con più parametri"
     ],
@@ -1101,7 +1010,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Le gestisce naturalmente con split, senza per forza scalare o codificare in modo complesso",
       "Non può usare feature categoriche in nessuna forma",
-      "Richiede sempre scaling numerico anche per variabili categoriche",
       "Ignora automaticamente le feature categoriche durante lo split"
     ],
     correct: [0],
@@ -1111,9 +1019,8 @@ registerSubject("Machine Learning", [
     id: "u09093", topic: "Validazione temporale",
     q: "Con dati temporali (serie storiche), lo split train/test deve:",
     opts: [
-      "Rispettare l'ordine cronologico (addestra sul passato, testa sul futuro)",
+      "Rispettare l'ordine cronologico",
       "Mescolare casualmente passato e futuro nella valutazione",
-      "Usare osservazioni future nel training, causando leakage temporale",
       "Ignorare l'ordine temporale nello split o nella trasformazione"
     ],
     correct: [0],
@@ -1125,7 +1032,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Concatenare pre-processing e modello in un unico flusso riproducibile",
       "Solo a visualizzare i dati",
-      "A etichettare a mano",
       "A rimuovere i dati disponibili prima dell'elaborazione"
     ],
     correct: [0],
@@ -1137,7 +1043,6 @@ registerSubject("Machine Learning", [
     opts: [
       "No: è una metrica di classificazione; per la regressione si usano MAE, RMSE, R²",
       "Sì, in ogni caso, indipendentemente da frequenza e granularità dei dati",
-      "Sì, ma solo con pochi dati",
       "No, non esistono metriche per la regressione"
     ],
     correct: [0],
@@ -1148,7 +1053,6 @@ registerSubject("Machine Learning", [
     q: "Se i dati di training non rappresentano la popolazione reale, il modello:",
     opts: [
       "Erediterà quel bias e generalizzerà male sul mondo reale",
-      "Sarà comunque perfetto",
       "Ignorerà i dati",
       "Diventerà non supervisionato"
     ],
@@ -1161,8 +1065,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Misura quanto le previsioni si discostano dai valori reali, da minimizzare",
       "Va sempre massimizzata come se fosse una metrica di accuratezza",
-      "Conta il numero di feature usate dal modello",
-      "È il numero di righe"
+      "Conta il numero di feature usate dal modello"
     ],
     correct: [0],
     exp: "La loss quantifica l'errore del modello (es. MSE, cross-entropy): l'addestramento cerca i parametri che la MINIMIZZANO. Loss diverse portano a comportamenti diversi."
@@ -1173,7 +1076,6 @@ registerSubject("Machine Learning", [
     opts: [
       "Pochi dati etichettati insieme a molti dati non etichettati",
       "Solo dati etichettati",
-      "Solo ricompense",
       "Nessun dato viene usato per calcolare il risultato"
     ],
     correct: [0],
@@ -1185,8 +1087,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Spiegare le previsioni di modelli complessi (interpretabilità)",
       "Addestrare più velocemente",
-      "Aumentare il volume dei dati senza risolvere il fallimento del task",
-      "Cancellare feature"
+      "Aumentare il volume dei dati senza risolvere il fallimento del task"
     ],
     correct: [0],
     exp: "SHAP e LIME attribuiscono a ciascuna feature il contributo a una specifica previsione, rendendo interpretabili anche modelli 'black box' come reti ed ensemble."
@@ -1195,9 +1096,8 @@ registerSubject("Machine Learning", [
     id: "u09100", topic: "Ciclo ML",
     q: "Dopo il deploy, un progetto ML si considera:",
     opts: [
-      "Da monitorare e mantenere nel tempo (il ciclo non finisce)",
+      "Da monitorare e mantenere nel tempo",
       "Terminato definitivamente dopo il primo rilascio",
-      "Da ripartire completamente da zero a ogni giornata",
       "Inutile da monitorare dopo la messa in produzione"
     ],
     correct: [0],

@@ -9,7 +9,6 @@ registerSubject("Time Series", [
     opts: [
       "Una sequenza di osservazioni ordinate nel tempo",
       "Un insieme di dati senza ordine",
-      "Una tabella di categorie",
       "Un grafico a torta per rappresentare quote percentuali tra categorie"
     ],
     correct: [0],
@@ -17,23 +16,21 @@ registerSubject("Time Series", [
   },
   {
     id: "u10002", topic: "Componenti",
-    q: "Quali sono componenti tipiche di una serie temporale? (una o più risposte)",
+    q: "Quale di queste è una componente tipica di una serie temporale?",
     opts: [
-      "Trend",
-      "Stagionalità",
-      "Rumore (residuo)",
-      "Chiave primaria"
+      "Il trend (andamento di fondo)",
+      "La chiave primaria della tabella",
+      "Lo schema di normalizzazione"
     ],
-    correct: [0,1,2],
-    exp: "Una serie si scompone in trend (andamento di fondo), stagionalità (cicli regolari), componente ciclica e rumore casuale. La 'chiave primaria' è un concetto di database, non di serie storiche."
+    correct: [0],
+    exp: "Le componenti di una serie temporale sono trend, stagionalità e rumore/residuo. Chiave primaria e normalizzazione sono concetti dei database relazionali, non delle serie storiche."
   },
   {
     id: "u10003", topic: "Trend",
     q: "Il trend di una serie temporale rappresenta:",
     opts: [
-      "L'andamento di fondo a lungo termine (crescita o calo)",
+      "L'andamento di fondo a lungo termine",
       "Le oscillazioni stagionali",
-      "Il rumore casuale",
       "Un singolo valore anomalo"
     ],
     correct: [0],
@@ -45,8 +42,7 @@ registerSubject("Time Series", [
     opts: [
       "Un pattern che si ripete a intervalli regolari e noti",
       "Un aumento costante nel tempo",
-      "Un valore generato casualmente senza usare struttura o ordine dei dati",
-      "Un errore di misura"
+      "Un valore generato casualmente senza usare struttura o ordine dei dati"
     ],
     correct: [0],
     exp: "La stagionalità sono fluttuazioni regolari legate a un periodo fisso (giorno, settimana, anno): es. più gelati d'estate, più acquisti a dicembre."
@@ -57,8 +53,7 @@ registerSubject("Time Series", [
     opts: [
       "Le sue proprietà statistiche (media, varianza) restano costanti nel tempo",
       "Ha un trend crescente marcato",
-      "Cambia continuamente distribuzione",
-      "Ha molti valori mancanti"
+      "Cambia continuamente distribuzione"
     ],
     correct: [0],
     exp: "Una serie stazionaria ha media, varianza e autocorrelazione stabili nel tempo. Molti modelli (es. ARIMA) richiedono la stazionarietà, spesso ottenuta con differenziazione."
@@ -69,8 +64,7 @@ registerSubject("Time Series", [
     opts: [
       "Renderla stazionaria rimuovendo trend/stagionalità",
       "Aggiungere un trend crescente alla serie",
-      "Amplificare la componente stagionale della serie",
-      "Aumentare la frequenza di campionamento dei dati"
+      "Amplificare la componente stagionale della serie"
     ],
     correct: [0],
     exp: "Differenziare significa calcolare le differenze tra valori consecutivi (y_t − y_(t−1)): rimuove il trend e stabilizza la media, aiutando a rendere la serie stazionaria."
@@ -79,10 +73,9 @@ registerSubject("Time Series", [
     id: "u10007", topic: "ACF",
     q: "La funzione di autocorrelazione (ACF) misura:",
     opts: [
-      "La correlazione della serie con sé stessa a diversi ritardi (lag)",
+      "La correlazione della serie con sé stessa a diversi ritardi",
       "La correlazione tra due serie diverse",
-      "La media della serie calcolata sull'intero intervallo osservato",
-      "Il numero di valori mancanti"
+      "La media della serie calcolata sull'intero intervallo osservato"
     ],
     correct: [0],
     exp: "L'ACF quantifica quanto un valore è correlato con quelli passati a distanza k (lag): rivela stagionalità e persistenza. È chiave per identificare i modelli ARIMA."
@@ -93,7 +86,6 @@ registerSubject("Time Series", [
     opts: [
       "Misura la correlazione a un lag rimuovendo l'effetto dei lag intermedi",
       "Coincide con l'autocorrelazione semplice senza controllare lag intermedi",
-      "Non considera lag della serie nella misura di dipendenza",
       "Misura la relazione tra due serie distinte invece dei lag della stessa serie"
     ],
     correct: [0],
@@ -104,7 +96,6 @@ registerSubject("Time Series", [
     q: "In ARIMA(p, d, q), la lettera 'd' indica:",
     opts: [
       "Il numero di differenziazioni per rendere la serie stazionaria",
-      "Il numero di componenti stagionali",
       "La media della serie calcolata sull'intero intervallo osservato",
       "Il numero di osservazioni disponibili per stimare o valutare il modello"
     ],
@@ -117,7 +108,6 @@ registerSubject("Time Series", [
     opts: [
       "I valori passati della serie per prevedere il valore attuale",
       "Solo gli errori passati",
-      "Variabili esterne",
       "Il valore medio calcolato aggregando tutte le osservazioni"
     ],
     correct: [0],
@@ -129,8 +119,7 @@ registerSubject("Time Series", [
     opts: [
       "Gli errori (residui) dei periodi passati",
       "I valori medi delle categorie",
-      "Le variabili indipendenti",
-      "Il trend deterministico"
+      "Le variabili indipendenti"
     ],
     correct: [0],
     exp: "La parte MA usa gli errori di previsione passati per correggere la stima corrente. Da non confondere con la semplice media mobile di lisciamento."
@@ -140,7 +129,6 @@ registerSubject("Time Series", [
     q: "Una media mobile (moving average) di lisciamento serve a:",
     opts: [
       "Attenuare il rumore evidenziando l'andamento di fondo",
-      "Aumentare le oscillazioni",
       "Aggiungere artificialmente una componente stagionale al modello",
       "Trasformare valori numerici continui in categorie discrete"
     ],
@@ -152,7 +140,6 @@ registerSubject("Time Series", [
     q: "La decomposizione di una serie temporale la separa in:",
     opts: [
       "Trend, stagionalità e residuo",
-      "Righe e colonne",
       "Training e test",
       "Media e mediana"
     ],
@@ -165,7 +152,6 @@ registerSubject("Time Series", [
     opts: [
       "Cresce in ampiezza al crescere del livello della serie",
       "Mantiene ampiezza stagionale costante come in un modello additivo",
-      "Non contiene alcuna componente stagionale nel modello",
       "Assume sempre valori negativi indipendentemente dal livello"
     ],
     correct: [0],
@@ -177,7 +163,6 @@ registerSubject("Time Series", [
     opts: [
       "Prevedere i valori futuri sulla base di quelli passati",
       "Classificare le categorie",
-      "Raggruppare i dati",
       "Descrivere solo il passato"
     ],
     correct: [0],
@@ -189,7 +174,6 @@ registerSubject("Time Series", [
     opts: [
       "Rispettando l'ordine cronologico: passato per il training, futuro per il test",
       "Mescolare casualmente le osservazioni ignorando l'ordine temporale",
-      "Usando il futuro per addestrare",
       "Mescolare le date prima di dividere training e test"
     ],
     correct: [0],
@@ -201,7 +185,6 @@ registerSubject("Time Series", [
     opts: [
       "Valori casuali indipendenti, media costante e nessuna autocorrelazione",
       "Una direzione di lungo periodo marcata, non rumore bianco",
-      "Una componente stagionale evidente e ripetitiva nel tempo",
       "Una serie monotona crescente, non casuale e indipendente"
     ],
     correct: [0],
@@ -212,7 +195,6 @@ registerSubject("Time Series", [
     q: "Un 'lag' (ritardo) di una serie temporale è:",
     opts: [
       "Il valore della serie spostato indietro di uno o più periodi",
-      "La media aritmetica dei valori disponibili nella serie",
       "Un'osservazione assente o non registrata nella serie temporale",
       "La componente di lungo periodo che descrive la direzione della serie"
     ],
@@ -225,7 +207,6 @@ registerSubject("Time Series", [
     opts: [
       "Cambiare la frequenza temporale aggregando o interpolando i dati",
       "Rimuovere il trend di fondo della serie storica",
-      "Ordinare le osservazioni in base alla loro data",
       "Aggiungere rumore casuale ai valori della serie"
     ],
     correct: [0],
@@ -236,7 +217,6 @@ registerSubject("Time Series", [
     q: "Il lisciamento esponenziale (exponential smoothing) assegna ai dati passati:",
     opts: [
       "Pesi decrescenti in modo esponenziale (più recenti pesano di più)",
-      "Peso uguale a tutti",
       "Peso solo al primo valore",
       "Un peso nullo che esclude l'osservazione o la feature dal calcolo"
     ],
@@ -248,7 +228,6 @@ registerSubject("Time Series", [
     q: "Il test di Dickey-Fuller aumentato (ADF) verifica:",
     opts: [
       "Se una serie è stazionaria o presenta una radice unitaria",
-      "La normalità dei dati",
       "La correlazione tra due serie",
       "Il numero di stagioni"
     ],
@@ -261,8 +240,7 @@ registerSubject("Time Series", [
     opts: [
       "Un valore basato sugli ultimi N periodi che scorre nel tempo",
       "La media complessiva della serie, ignorando finestra e stagionalità",
-      "Un singolo valore fisso",
-      "La categoria più frequente"
+      "Un singolo valore fisso"
     ],
     correct: [0],
     exp: "Le rolling statistics (media, deviazione standard mobili) si calcolano su una finestra che scorre: utili per lisciare, individuare cambi di regime o creare feature."
@@ -273,7 +251,6 @@ registerSubject("Time Series", [
     opts: [
       "Ha durata variabile e non un periodo fisso e regolare",
       "Si ripete sempre ogni 12 mesi",
-      "È solo rumore",
       "Coincide col trend"
     ],
     correct: [0],
@@ -285,7 +262,6 @@ registerSubject("Time Series", [
     opts: [
       "Stagionalità annuale (ripetizione ogni 12 mesi)",
       "Assenza di pattern",
-      "Un trend lineare",
       "Rumore casuale senza componente informativa sfruttabile dal modello"
     ],
     correct: [0],
@@ -297,8 +273,7 @@ registerSubject("Time Series", [
     opts: [
       "Una componente stagionale",
       "Più variabili target",
-      "La regressione logistica",
-      "Il clustering"
+      "La regressione logistica"
     ],
     correct: [0],
     exp: "SARIMA (Seasonal ARIMA) aggiunge termini stagionali (P, D, Q, s) a ARIMA per modellare serie con stagionalità, oltre al trend e all'autocorrelazione ordinaria."
@@ -309,8 +284,7 @@ registerSubject("Time Series", [
     opts: [
       "Il metodo naïve: prevedere per domani il valore di oggi",
       "Una rete neurale con più strati nascosti usata per apprendimento profondo",
-      "Un ensemble di alberi",
-      "La PCA"
+      "Un ensemble di alberi"
     ],
     correct: [0],
     exp: "Il metodo naïve (ultimo valore) o quello stagionale naïve (valore dello stesso periodo dell'anno prima) sono baseline: un modello complesso deve batterle per giustificarsi."
@@ -321,7 +295,6 @@ registerSubject("Time Series", [
     opts: [
       "Differenziare la serie (una volta)",
       "Aggiungere una componente stagionale alla serie",
-      "Aggregare i dati a una frequenza più alta",
       "Riordinare le osservazioni in base al valore"
     ],
     correct: [0],
@@ -333,8 +306,7 @@ registerSubject("Time Series", [
     opts: [
       "In percentuale rispetto ai valori reali",
       "In numero di righe",
-      "Come conteggio di classi",
-      "In unità di tempo"
+      "Come conteggio di classi"
     ],
     correct: [0],
     exp: "Il MAPE misura l'errore medio in percentuale: comodo per confrontare serie di scale diverse. Attenzione: si comporta male quando i valori reali sono vicini a zero."
@@ -345,7 +317,6 @@ registerSubject("Time Series", [
     opts: [
       "Aiutare il modello a cogliere pattern stagionali e di calendario",
       "Cancellare la data",
-      "Aumentare i valori mancanti",
       "Ridurre il numero di righe del dataset prima dell'analisi"
     ],
     correct: [0],
@@ -357,7 +328,6 @@ registerSubject("Time Series", [
     opts: [
       "Previsioni di serie con trend e stagionalità in modo semi-automatico",
       "Classificare immagini statiche invece di modellare serie temporali",
-      "Raggruppare osservazioni simili senza prevedere valori futuri",
       "Gestire database operazionali invece di stimare trend e stagionalità"
     ],
     correct: [0],
@@ -368,7 +338,6 @@ registerSubject("Time Series", [
     q: "Con dati mancanti in una serie temporale, spesso si usa:",
     opts: [
       "Interpolazione (es. lineare) che rispetta l'ordine temporale",
-      "La media globale casuale",
       "La rimozione di tutte le date",
       "L'ignorare l'ordine"
     ],
@@ -381,7 +350,6 @@ registerSubject("Time Series", [
     opts: [
       "Adattarsi al rumore del passato e prevedere male il futuro",
       "Prevedere sempre perfettamente",
-      "Ignorare i dati",
       "Diventare stazionario"
     ],
     correct: [0],
@@ -391,9 +359,8 @@ registerSubject("Time Series", [
     id: "u10033", topic: "Frequenza",
     q: "La 'frequenza' di una serie temporale indica:",
     opts: [
-      "Ogni quanto sono campionate le osservazioni (oraria, giornaliera, ...)",
+      "Ogni quanto sono campionate le osservazioni",
       "Il valore massimo osservato nel vettore o nella serie",
-      "Il numero di categorie distinte presenti nella variabile",
       "La media aritmetica dei valori osservati nella variabile"
     ],
     correct: [0],
@@ -405,7 +372,6 @@ registerSubject("Time Series", [
     opts: [
       "Rimuovere la componente stagionale per osservare meglio il trend",
       "Aggiungere artificialmente una componente stagionale al modello",
-      "Aumentare la frequenza di campionamento dei dati",
       "Trasformare valori numerici continui in categorie discrete"
     ],
     correct: [0],
@@ -417,8 +383,7 @@ registerSubject("Time Series", [
     opts: [
       "Registra nel tempo più variabili contemporaneamente",
       "Ha una sola variabile",
-      "Non ha componente temporale",
-      "È statica"
+      "Non ha componente temporale"
     ],
     correct: [0],
     exp: "Nelle serie multivariate si osservano più variabili nel tempo, possibilmente correlate (es. temperatura e consumo elettrico). Modelli come VAR le trattano congiuntamente."
@@ -428,7 +393,6 @@ registerSubject("Time Series", [
     q: "Il backtesting di un modello di forecasting consiste nel:",
     opts: [
       "Simularne le previsioni sul passato per valutarne l'affidabilità",
-      "Usare dati futuri nel training, invalidando la valutazione",
       "Eliminare lo storico invece di simulare previsioni sul passato",
       "Non misurare gli errori delle previsioni simulate"
     ],
@@ -441,8 +405,7 @@ registerSubject("Time Series", [
     opts: [
       "Il logaritmo (stabilizza la varianza)",
       "L'aggiunta di una costante",
-      "L'ordinamento dei valori",
-      "La rimozione delle date"
+      "L'ordinamento dei valori"
     ],
     correct: [0],
     exp: "Applicare il logaritmo (o Box-Cox) comprime i valori grandi e stabilizza una varianza crescente, avvicinando la serie alla stazionarietà in varianza."
@@ -453,8 +416,7 @@ registerSubject("Time Series", [
     opts: [
       "Il modello non ha catturato tutta la struttura temporale",
       "Il modello è perfetto",
-      "I dati sono categorici",
-      "Non serve migliorarlo"
+      "I dati sono categorici"
     ],
     correct: [0],
     exp: "Residui autocorrelati indicano struttura non modellata (trend/stagionalità/AR residui). Idealmente i residui devono essere white noise: allora il modello è adeguato."
@@ -465,8 +427,7 @@ registerSubject("Time Series", [
     opts: [
       "Livello, trend e stagionalità con lisciamento esponenziale",
       "Considera solo il livello medio, ignorando trend e stagionalità",
-      "Non modella né livello, né trend, né stagionalità",
-      "Lavora solo con categorie e non con serie numeriche"
+      "Non modella né livello, né trend, né stagionalità"
     ],
     correct: [0],
     exp: "Holt-Winters (triplo smoothing esponenziale) modella insieme livello, trend e stagionalità, aggiornandoli con pesi esponenziali. Adatto a serie con stagionalità regolare."
@@ -477,7 +438,6 @@ registerSubject("Time Series", [
     opts: [
       "Quanto lontano nel futuro si vuole prevedere",
       "Il numero di variabili",
-      "La frequenza dei dati",
       "La media della serie calcolata sull'intero intervallo osservato"
     ],
     correct: [0],
@@ -489,8 +449,7 @@ registerSubject("Time Series", [
     opts: [
       "Visualizzarla nel tempo (line plot) per individuarne le componenti",
       "Applicare subito una rete neurale",
-      "Cancellare gli outlier",
-      "Ignorare l'ordine"
+      "Cancellare gli outlier"
     ],
     correct: [0],
     exp: "Tracciare la serie nel tempo rivela a colpo d'occhio trend, stagionalità, outlier e cambi di regime, orientando le scelte successive di trasformazione e modello."
@@ -501,7 +460,6 @@ registerSubject("Time Series", [
     opts: [
       "Non stazionaria: shock hanno effetto permanente",
       "Sempre stazionaria",
-      "Priva di rumore",
       "Perfettamente prevedibile"
     ],
     correct: [0],
@@ -513,8 +471,7 @@ registerSubject("Time Series", [
     opts: [
       "Il valore immediatamente precedente più un errore",
       "Tutti i valori passati con lo stesso peso",
-      "La media calcolata su tutte le righe senza distinguere gruppi",
-      "Gli errori futuri"
+      "La media calcolata su tutte le righe senza distinguere gruppi"
     ],
     correct: [0],
     exp: "AR(1): y_t = c + φ·y_(t−1) + ε_t. Dipende solo dal lag 1. L'ordine p in AR(p) indica quanti valori precedenti entrano nel modello."
@@ -525,7 +482,6 @@ registerSubject("Time Series", [
     opts: [
       "Individuare punti che deviano dal comportamento atteso nel tempo",
       "Calcolare la media generale di tutta la serie",
-      "Riordinare i valori dal più piccolo al più grande",
       "Rimuovere il trend di fondo dalla serie"
     ],
     correct: [0],
@@ -537,8 +493,7 @@ registerSubject("Time Series", [
     opts: [
       "Espande progressivamente la finestra di training verso il futuro",
       "Mescola casualmente passato e futuro invece di avanzare nel tempo",
-      "Usa il futuro per addestrare",
-      "Non esegue alcuna validazione temporale del modello"
+      "Usa il futuro per addestrare"
     ],
     correct: [0],
     exp: "Nella cross-validation temporale si addestra su un blocco iniziale e si valida sul successivo, avanzando nel tempo. Rispetta l'ordine ed evita di usare il futuro nel passato."
@@ -549,7 +504,6 @@ registerSubject("Time Series", [
     opts: [
       "Più stagionalità sovrapposte (giornaliera, settimanale, annuale)",
       "Nessuna stagionalità",
-      "Solo un trend lineare",
       "Rumore casuale senza componente informativa sfruttabile dal modello"
     ],
     correct: [0],
@@ -561,8 +515,7 @@ registerSubject("Time Series", [
     opts: [
       "Rimuovere la stagionalità di periodo 12",
       "Aggiungere un trend",
-      "Aumentare la frequenza di campionamento dei dati",
-      "Creare outlier"
+      "Aumentare la frequenza di campionamento dei dati"
     ],
     correct: [0],
     exp: "Sottrarre il valore dello stesso periodo dell'anno prima (lag stagionale) elimina la stagionalità, come la differenziazione ordinaria rimuove il trend. Usata in SARIMA."
@@ -572,7 +525,6 @@ registerSubject("Time Series", [
     q: "Un ACF che decade lentamente indica tipicamente:",
     opts: [
       "Presenza di un trend / non stazionarietà",
-      "Rumore bianco puro",
       "Assenza di correlazione",
       "Stagionalità perfetta"
     ],
@@ -585,8 +537,7 @@ registerSubject("Time Series", [
     opts: [
       "Il range di incertezza attorno alla previsione puntuale",
       "Il valore futuro puntuale assunto certo, senza intervallo di incertezza",
-      "La media calcolata sui dati storici senza quantificare incertezza futura",
-      "Il numero di lag"
+      "La media calcolata sui dati storici senza quantificare incertezza futura"
     ],
     correct: [0],
     exp: "Oltre alla previsione puntuale, gli intervalli quantificano l'incertezza (es. 95% di probabilità che il valore reale cada nel range). Si allargano man mano che l'orizzonte cresce."
@@ -597,8 +548,7 @@ registerSubject("Time Series", [
     opts: [
       "Si costruiscono feature di lag e di calendario adeguate",
       "Si ignora l'ordine temporale",
-      "Non si creano feature",
-      "Si usa solo la media"
+      "Non si creano feature"
     ],
     correct: [0],
     exp: "Modelli ML generici prevedono serie temporali trasformando il problema in supervisionato con feature di lag, medie mobili e calendario, e validazione temporale per evitare leakage."
@@ -609,8 +559,7 @@ registerSubject("Time Series", [
     opts: [
       "Usare trasformazioni o modelli flessibili (spline, Prophet)",
       "Ignorare sempre il trend non lineare invece di modellarlo",
-      "Applicare una sola differenziazione anche se il trend resta non lineare",
-      "Eliminare osservazioni invece di modellare la struttura della serie"
+      "Applicare una sola differenziazione anche se il trend resta non lineare"
     ],
     correct: [0],
     exp: "Trend curvilinei richiedono trasformazioni (log), differenziazioni multiple o modelli che catturano curve (spline, Prophet, modelli non lineari), non solo un detrending lineare."
@@ -620,7 +569,6 @@ registerSubject("Time Series", [
     q: "Cosa distingue dati di serie storica da dati cross-section?",
     opts: [
       "La serie storica ha un ordine temporale; la cross-section fotografa un istante",
-      "Hanno comportamento e risultato identici nello stesso contesto operativo",
       "La cross-section è sempre più grande",
       "La serie storica non ha date"
     ],
@@ -633,8 +581,7 @@ registerSubject("Time Series", [
     opts: [
       "Di quanto ciascun periodo si discosta in media dal livello base",
       "Il numero di osservazioni anomale nella serie",
-      "La correlazione tra due serie temporali distinte",
-      "Il trend lineare"
+      "La correlazione tra due serie temporali distinte"
     ],
     correct: [0],
     exp: "Gli indici stagionali misurano l'effetto tipico di ogni periodo (es. dicembre +30%, agosto −20%): servono a destagionalizzare e a costruire previsioni stagionali."
@@ -645,7 +592,6 @@ registerSubject("Time Series", [
     opts: [
       "Il valore osservato nello stesso periodo del ciclo precedente",
       "La media complessiva della serie, ignorando finestra e stagionalità",
-      "Sempre zero",
       "Un valore generato casualmente senza usare struttura o ordine dei dati"
     ],
     correct: [0],
@@ -657,8 +603,7 @@ registerSubject("Time Series", [
     opts: [
       "Senza trend né stagionalità evidenti",
       "Con forte stagionalità",
-      "Con trend crescente marcato",
-      "Categoriche"
+      "Con trend crescente marcato"
     ],
     correct: [0],
     exp: "Il simple exponential smoothing modella solo il livello: va bene per serie piatte senza trend/stagionalità. Per trend serve Holt, per stagionalità Holt-Winters."
@@ -667,9 +612,8 @@ registerSubject("Time Series", [
     id: "u10056", topic: "Correlazione spuria temporale",
     q: "Due serie entrambe con trend crescente possono apparire correlate:",
     opts: [
-      "Anche senza alcun legame reale (correlazione spuria da trend comune)",
+      "Anche senza alcun legame reale",
       "Solo in presenza di causalità diretta tra le due serie",
-      "Non avviene in nessuna configurazione utile del problema",
       "Solo quando entrambe le serie sono già stazionarie"
     ],
     correct: [0],
@@ -681,8 +625,7 @@ registerSubject("Time Series", [
     opts: [
       "Riduce il rumore ma può nascondere pattern di breve periodo",
       "Aumenta sempre il dettaglio",
-      "Lascia invariato il risultato dell'operazione sui dati",
-      "Elimina il trend"
+      "Lascia invariato il risultato dell'operazione sui dati"
     ],
     correct: [0],
     exp: "Il downsampling (es. da minuti a ore) smussa il rumore e semplifica, ma può mascherare dinamiche rapide. La scelta della granularità dipende dall'obiettivo dell'analisi."
@@ -693,8 +636,7 @@ registerSubject("Time Series", [
     opts: [
       "Identificare gli ordini di un modello ARIMA",
       "Rimuovere la stagionalità dalla serie storica",
-      "Contare i valori mancanti presenti nella serie",
-      "Normalizzare i valori della serie tra 0 e 1"
+      "Contare i valori mancanti presenti nella serie"
     ],
     correct: [0],
     exp: "I pattern di ACF (che suggerisce q) e PACF (che suggerisce p) guidano la scelta degli ordini di un modello ARIMA, insieme al grado di differenziazione d."
@@ -705,8 +647,7 @@ registerSubject("Time Series", [
     opts: [
       "Sostanzialmente imprevedibile oltre la sua media",
       "Facilmente prevedibile oltre la media nonostante assenza di struttura",
-      "Sempre crescente come una serie con trend monotono",
-      "Stagionale con pattern ripetuto a periodo fisso"
+      "Sempre crescente come una serie con trend monotono"
     ],
     correct: [0],
     exp: "Se la serie è white noise non c'è struttura da sfruttare: la miglior previsione è la media. Quando i residui di un modello sono white noise, si è estratto tutto il segnale."
@@ -717,7 +658,6 @@ registerSubject("Time Series", [
     opts: [
       "Visualizzare l'autocorrelazione a lag 1",
       "Contare le categorie",
-      "Mostrare la media",
       "Raggruppare osservazioni simili senza prevedere valori futuri"
     ],
     correct: [0],
@@ -729,7 +669,6 @@ registerSubject("Time Series", [
     opts: [
       "Impara pattern comuni condivisi tra le serie",
       "Funziona solo su una serie",
-      "Ignora i dati",
       "Non usa il tempo"
     ],
     correct: [0],
@@ -741,8 +680,7 @@ registerSubject("Time Series", [
     opts: [
       "Ciò che resta dopo aver rimosso trend e stagionalità",
       "La componente di trend già rimossa nella decomposizione",
-      "La componente periodica della serie, non il residuo irregolare",
-      "Una media calcolata su finestre temporali scorrevoli"
+      "La componente periodica della serie, non il residuo irregolare"
     ],
     correct: [0],
     exp: "Il residuo è la parte non spiegata da trend e stagionalità: idealmente casuale (white noise). Se contiene ancora struttura, il modello va migliorato."
@@ -753,7 +691,6 @@ registerSubject("Time Series", [
     opts: [
       "I valori vicini nel tempo tendono a somigliarsi",
       "Ogni valore è indipendente",
-      "Non c'è memoria",
       "La media è nulla"
     ],
     correct: [0],
@@ -765,8 +702,7 @@ registerSubject("Time Series", [
     opts: [
       "Stabilizzare la varianza e avvicinare i dati alla normalità",
       "Aggiungere artificialmente una componente stagionale al modello",
-      "Aumentare la frequenza di campionamento dei dati",
-      "Creare classi discrete a partire da valori continui"
+      "Aumentare la frequenza di campionamento dei dati"
     ],
     correct: [0],
     exp: "Box-Cox è una famiglia di trasformazioni (che include il log) per stabilizzare la varianza e rendere i dati più adatti a modelli che assumono varianza costante e normalità."
@@ -777,8 +713,7 @@ registerSubject("Time Series", [
     opts: [
       "Ricorsivo: usare le previsioni precedenti come input per le successive",
       "Ignorare gli orizzonti successivi alla prima previsione",
-      "Stimare solo l'orizzonte immediato senza catena multi-step",
-      "Usare solo la media"
+      "Stimare solo l'orizzonte immediato senza catena multi-step"
     ],
     correct: [0],
     exp: "Nel forecasting ricorsivo si prevede un passo alla volta reinserendo le previsioni come input. In alternativa si addestra un modello diretto per ciascun orizzonte."
@@ -789,7 +724,6 @@ registerSubject("Time Series", [
     opts: [
       "Tende ad accumularsi passo dopo passo",
       "Diminuisce sempre",
-      "Resta costante",
       "Diventa negativo"
     ],
     correct: [0],
@@ -800,7 +734,6 @@ registerSubject("Time Series", [
     q: "Una media mobile centrata è usata soprattutto per:",
     opts: [
       "Stimare il trend in modo simmetrico attorno a ogni punto",
-      "Prevedere il futuro",
       "Aggiungere rumore casuale alla serie osservata",
       "Classificare categorie"
     ],
@@ -813,8 +746,7 @@ registerSubject("Time Series", [
     opts: [
       "Metodi specifici (es. Croston), perché i modelli standard funzionano male",
       "Usare sempre un ARIMA classico anche con molti zeri e domanda sporadica",
-      "Non applicare alcuna tecnica specifica nonostante zeri e irregolarità",
-      "La sola media, ignorando dispersione, dipendenze o struttura dei dati"
+      "Non applicare alcuna tecnica specifica nonostante zeri e irregolarità"
     ],
     correct: [0],
     exp: "Con domanda intermittente (tanti periodi a zero) i modelli classici falliscono. Metodi come Croston stimano separatamente la frequenza e l'entità della domanda."
@@ -824,7 +756,6 @@ registerSubject("Time Series", [
     q: "In una serie mensile con stagionalità annuale, il periodo stagionale è:",
     opts: [
       "12",
-      "1",
       "365",
       "24"
     ],
@@ -837,8 +768,7 @@ registerSubject("Time Series", [
     opts: [
       "Stimare il trend con una retta/curva e sottrarlo dalla serie",
       "Aggiungere una retta al grafico senza rimuovere il trend stimato",
-      "Mescolare le osservazioni, distruggendo l'ordine temporale della serie",
-      "Ignorare l'ordine temporale nello split o nella trasformazione"
+      "Mescolare le osservazioni, distruggendo l'ordine temporale della serie"
     ],
     correct: [0],
     exp: "Si può modellare il trend come funzione del tempo (regressione) e sottrarlo, ottenendo i residui destendenzializzati. È un'alternativa alla differenziazione."
@@ -848,7 +778,6 @@ registerSubject("Time Series", [
     q: "Uno 'shock' in una serie temporale è:",
     opts: [
       "Una perturbazione improvvisa (es. evento eccezionale)",
-      "La media aritmetica dei valori osservati nella variabile",
       "La componente di lungo periodo che descrive la direzione della serie",
       "La cadenza con cui le osservazioni vengono registrate nel tempo"
     ],
@@ -861,7 +790,6 @@ registerSubject("Time Series", [
     opts: [
       "Fornire una sintesi del recente andamento della serie",
       "Aumentare il rumore",
-      "Rimuovere la data",
       "Creare classi discrete a partire da valori continui"
     ],
     correct: [0],
@@ -873,7 +801,6 @@ registerSubject("Time Series", [
     opts: [
       "Resta costante indipendentemente dal livello della serie",
       "Cresce proporzionalmente al livello medio della serie",
-      "È sempre zero, quindi non esiste componente stagionale",
       "Varia casualmente senza una relazione stabile con i dati osservati"
     ],
     correct: [0],
@@ -884,7 +811,6 @@ registerSubject("Time Series", [
     q: "Se un modello complesso non batte il metodo naïve, allora:",
     opts: [
       "Non vale la pena usarlo: non aggiunge valore predittivo",
-      "È comunque migliore",
       "Va reso più complesso a prescindere",
       "Il naïve è sbagliato"
     ],
@@ -896,7 +822,6 @@ registerSubject("Time Series", [
     q: "Oltre alla previsione, l'analisi di serie storiche serve anche a:",
     opts: [
       "Capire le componenti (trend, stagionalità) e rilevare anomalie",
-      "Contare semplicemente il numero di osservazioni",
       "Ordinare le osservazioni in base al loro valore",
       "Trasformare la serie in una variabile categorica"
     ],
@@ -909,8 +834,7 @@ registerSubject("Time Series", [
     opts: [
       "I valori passati di una serie aiutano a prevedere un'altra serie",
       "Due serie hanno la stessa media",
-      "Una serie è stazionaria",
-      "C'è stagionalità"
+      "Una serie è stazionaria"
     ],
     correct: [0],
     exp: "La causalità di Granger valuta se il passato di X migliora la previsione di Y rispetto al solo passato di Y. È una nozione predittiva, non una causalità in senso stretto."
@@ -919,8 +843,7 @@ registerSubject("Time Series", [
     id: "u10077", topic: "Frequenza irregolare",
     q: "Con osservazioni a intervalli irregolari, prima di molti modelli conviene:",
     opts: [
-      "Riportare la serie a una frequenza regolare (resampling/interpolazione)",
-      "Ignorare il problema",
+      "Riportare la serie a una frequenza regolare",
       "Rimuovere tutte le date",
       "Aggiungere rumore casuale alla serie osservata"
     ],
@@ -933,8 +856,7 @@ registerSubject("Time Series", [
     opts: [
       "Rimuovere trend e stagionalità (rendere stazionaria) e infine modellare",
       "Modellare subito la serie senza alcuna trasformazione",
-      "Aggiungere rumore casuale prima di modellare",
-      "Ridurre la granularità temporale aggregando osservazioni"
+      "Aggiungere rumore casuale prima di modellare"
     ],
     correct: [0],
     exp: "Tipico flusso: log/Box-Cox per la varianza → differenziazione per trend/stagionalità → verifica stazionarietà → identificazione e stima del modello (es. ARIMA) → diagnostica dei residui."
@@ -943,8 +865,7 @@ registerSubject("Time Series", [
     id: "u10079", topic: "Modelli esponenziali vs ARIMA",
     q: "Exponential smoothing e ARIMA sono:",
     opts: [
-      "Due famiglie di metodi, spesso complementari, per il forecasting",
-      "La stessa identica cosa",
+      "Due famiglie di metodi",
       "Metodi di clustering",
       "Tecniche di visualizzazione"
     ],
@@ -957,7 +878,6 @@ registerSubject("Time Series", [
     opts: [
       "Distorcere trend, stagionalità e previsioni se non trattato",
       "Migliorare sempre il modello",
-      "Non avere mai effetto",
       "Rendere la serie stazionaria"
     ],
     correct: [0],
@@ -969,8 +889,7 @@ registerSubject("Time Series", [
     opts: [
       "Ciclica (durata variabile, non periodo fisso)",
       "Una componente stagionale con periodo fisso e regolare",
-      "Una componente casuale senza struttura ciclica interpretabile",
-      "Una crescita o decrescita lineare di lungo periodo"
+      "Una componente casuale senza struttura ciclica interpretabile"
     ],
     correct: [0],
     exp: "I cicli economici (espansioni e recessioni) hanno durata variabile e irregolare: sono componenti cicliche, distinte dalla stagionalità che ha periodo fisso e regolare."
@@ -980,7 +899,6 @@ registerSubject("Time Series", [
     q: "Una 'lag feature' in un dataset di forecasting è:",
     opts: [
       "Una colonna col valore della serie in periodi precedenti",
-      "La data corrente",
       "Un valore generato casualmente senza usare struttura o ordine dei dati",
       "La media calcolata su tutte le righe senza distinguere gruppi"
     ],
@@ -991,9 +909,8 @@ registerSubject("Time Series", [
     id: "u10083", topic: "Stabilità del modello",
     q: "Ri-addestrare periodicamente un modello di forecasting serve a:",
     opts: [
-      "Adattarsi a nuovi dati e cambiamenti nei pattern (drift)",
+      "Adattarsi a nuovi dati e cambiamenti nei pattern",
       "Peggiorare le previsioni",
-      "Cancellare la storia",
       "Ignorare il presente"
     ],
     correct: [0],
@@ -1004,7 +921,6 @@ registerSubject("Time Series", [
     q: "Una media mobile ponderata assegna ai valori della finestra:",
     opts: [
       "Pesi diversi (spesso maggiori ai più recenti)",
-      "Sempre peso uguale",
       "Un peso nullo che esclude l'osservazione o la feature dal calcolo",
       "Peso solo al primo"
     ],
@@ -1015,9 +931,8 @@ registerSubject("Time Series", [
     id: "u10085", topic: "Autocorrelazione negativa",
     q: "Un'autocorrelazione negativa a lag 1 suggerisce che:",
     opts: [
-      "A un valore alto tende a seguirne uno basso (alternanza)",
+      "A un valore alto tende a seguirne uno basso",
       "I valori si somigliano",
-      "Non c'è struttura",
       "C'è un trend crescente"
     ],
     correct: [0],
@@ -1029,8 +944,7 @@ registerSubject("Time Series", [
     opts: [
       "AIC/BIC ed errori su dati di test (RMSE, MAE, MAPE)",
       "Una proprietà visuale del grafico, non una logica di calcolo",
-      "Il numero di righe presenti nel dataset o nel risultato",
-      "La lunghezza del codice"
+      "Il numero di righe presenti nel dataset o nel risultato"
     ],
     correct: [0],
     exp: "Si combinano criteri di informazione (AIC/BIC, che penalizzano la complessità) e l'errore su dati di validazione/test. L'obiettivo è previsione accurata senza overfitting."
@@ -1041,8 +955,7 @@ registerSubject("Time Series", [
     opts: [
       "Più difficile (più rumore e variabilità)",
       "Più facile perché si assume meno rumore nella granularità giornaliera",
-      "Con lo stesso livello di difficoltà e variabilità della serie aggregata",
-      "Impossibile da stimare anche con dati storici sufficienti"
+      "Con lo stesso livello di difficoltà e variabilità della serie aggregata"
     ],
     correct: [0],
     exp: "A granularità fine (giornaliera) c'è più rumore e variabilità (weekend, eventi), rendendo la previsione più difficile. L'aggregazione mensile smussa e spesso è più prevedibile."
@@ -1053,8 +966,7 @@ registerSubject("Time Series", [
     opts: [
       "Coesistono e vanno separati per analizzarla bene",
       "Non compaiono mai insieme",
-      "Rappresentano lo stesso concetto e sono intercambiabili nell'esercizio",
-      "Non esistono"
+      "Rappresentano lo stesso concetto e sono intercambiabili nell'esercizio"
     ],
     correct: [0],
     exp: "Le serie reali combinano più componenti sovrapposte: la decomposizione le separa per capirle e modellarle correttamente, isolando ciò che è prevedibile dal rumore."
@@ -1065,8 +977,7 @@ registerSubject("Time Series", [
     opts: [
       "Provare baseline semplici (naïve, media mobile) come riferimento",
       "Usare subito il deep learning",
-      "Evitare qualsiasi valutazione",
-      "Rimuovere i dati storici"
+      "Evitare qualsiasi valutazione"
     ],
     correct: [0],
     exp: "Partire da baseline semplici stabilisce un riferimento: molti problemi si risolvono bene senza modelli complessi, e comunque servono a giudicare i miglioramenti reali."
@@ -1077,7 +988,6 @@ registerSubject("Time Series", [
     opts: [
       "Autocorrelazioni che decadono molto lentamente",
       "Nessuna autocorrelazione",
-      "Solo stagionalità",
       "Valori indipendenti"
     ],
     correct: [0],
@@ -1089,8 +999,7 @@ registerSubject("Time Series", [
     opts: [
       "Solo sul training, per evitare leakage dal futuro",
       "Su tutta la serie compreso il test",
-      "Sul solo test",
-      "In modo casuale"
+      "Sul solo test"
     ],
     correct: [0],
     exp: "Come in ogni ML, le statistiche di scaling si stimano sul training e si applicano al test: usando anche il test (futuro) si introdurrebbe leakage."
@@ -1101,7 +1010,6 @@ registerSubject("Time Series", [
     opts: [
       "Confrontare l'andamento tra i vari cicli (es. anni) sovrapposti",
       "Contare le righe disponibili invece di analizzare il fenomeno richiesto",
-      "Mostrare la media globale",
       "Raggruppare osservazioni simili senza prevedere valori futuri"
     ],
     correct: [0],
@@ -1113,7 +1021,6 @@ registerSubject("Time Series", [
     opts: [
       "Diversi livelli di aggregazione (es. prodotto, categoria, totale)",
       "Un unico livello di aggregazione senza riconciliazione gerarchica",
-      "Nessuna struttura gerarchica tra serie aggregate e dettagliate",
       "Livelli di aggregazione scelti casualmente senza coerenza contabile"
     ],
     correct: [0],
@@ -1125,7 +1032,6 @@ registerSubject("Time Series", [
     opts: [
       "Possono influenzarne i valori e vanno modellati come variabili",
       "Non influenzano mai la serie, nemmeno in presenza di festività",
-      "Sostituiscono la componente di trend invece di affiancarla",
       "Sono rumore casuale e non variabili esplicative modellabili"
     ],
     correct: [0],
@@ -1136,7 +1042,6 @@ registerSubject("Time Series", [
     q: "Il metodo 'naïve con drift' prevede:",
     opts: [
       "L'ultimo valore più la variazione media osservata nel tempo",
-      "Sempre la media",
       "Solo l'ultimo valore",
       "Un valore generato casualmente senza usare struttura o ordine dei dati"
     ],
@@ -1149,8 +1054,7 @@ registerSubject("Time Series", [
     opts: [
       "Incorrelati, a media zero e varianza costante",
       "Fortemente autocorrelati",
-      "Con trend crescente",
-      "Tutti uguali"
+      "Con trend crescente"
     ],
     correct: [0],
     exp: "Idealmente i residui sono white noise: nessuna autocorrelazione (ACF piatta), media zero, varianza costante. In caso contrario resta struttura da modellare."
@@ -1161,8 +1065,7 @@ registerSubject("Time Series", [
     opts: [
       "Produce stime inaffidabili e previsioni scadenti",
       "Funziona sempre bene",
-      "Rende la serie stazionaria",
-      "Non ha conseguenze"
+      "Rende la serie stazionaria"
     ],
     correct: [0],
     exp: "Ignorare la non stazionarietà (trend, radice unitaria) porta a inferenze errate e correlazioni spurie. Va prima resa stazionaria (differenziazione, trasformazioni)."
@@ -1172,7 +1075,6 @@ registerSubject("Time Series", [
     q: "Una serie annuale (un dato per anno) può avere stagionalità infra-annuale?",
     opts: [
       "No: con un solo dato per anno la stagionalità intra-annuale non è osservabile",
-      "Sì, in ogni caso, indipendentemente da frequenza e granularità dei dati",
       "Sì, ma solo mensile",
       "Dipende da una proprietà grafica e non dalla struttura temporale dei dati"
     ],
@@ -1183,8 +1085,7 @@ registerSubject("Time Series", [
     id: "u10099", topic: "Interpolazione vs previsione",
     q: "Qual è la differenza tra interpolazione e previsione (estrapolazione)?",
     opts: [
-      "L'interpolazione stima valori dentro il range osservato, la previsione oltre (nel futuro)",
-      "Producono lo stesso risultato e differiscono solo nel nome usato",
+      "L'interpolazione stima valori dentro il range osservato, la previsione oltre",
       "La previsione è dentro il range",
       "L'interpolazione riguarda il futuro"
     ],
@@ -1196,7 +1097,6 @@ registerSubject("Time Series", [
     q: "Un flusso tipico di analisi di una serie temporale è:",
     opts: [
       "Visualizzare → trasformare/rendere stazionaria → modellare → validare (temporale) → prevedere",
-      "Visualizzare → modellare → trasformare/rendere stazionaria → validare (temporale) → prevedere",
       "Visualizzare → trasformare/rendere stazionaria → prevedere → modellare → validare (temporale)",
       "Prevedere → visualizzare → trasformare/rendere stazionaria → modellare → validare (temporale)"
     ],

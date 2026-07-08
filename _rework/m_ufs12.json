@@ -1,0 +1,1 @@
+[{"id":"u12050","q":"Quale caratteristica ha una pipeline dati affidabile?","opts":["L'idempotenza delle esecuzioni","L'assenza di gestione degli errori","L'esecuzione senza alcun monitoraggio"],"correct":[0],"exp":"Una pipeline affidabile è idempotente, ha retry automatici e monitoraggio/alert. L'assenza di gestione errori o di monitoraggio la rende fragile e inaffidabile."}]

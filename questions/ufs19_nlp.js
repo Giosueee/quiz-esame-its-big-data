@@ -10,7 +10,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Natural Language Processing: elaborazione automatica del linguaggio naturale",
       "Network Layer Protocol, acronimo di rete non legato al linguaggio",
-      "Numeric Linear Programming, acronimo matematico non linguistico",
       "Natural Logic Parser, parser logico ma non definizione standard di NLP"
     ],
     correct: [0],
@@ -18,15 +17,14 @@ registerSubject("NLP e LLM", [
   },
   {
     id: "u19002", topic: "Task NLP",
-    q: "Quali sono esempi di task NLP? (una o piu' risposte)",
+    q: "Quale di questi è un task di NLP?",
     opts: [
-      "Classificazione del sentiment",
-      "Named Entity Recognition",
-      "Traduzione automatica",
-      "Deframmentazione disco"
+      "Il Named Entity Recognition",
+      "La deframmentazione del disco",
+      "La compressione delle immagini"
     ],
-    correct: [0,1,2],
-    exp: "Tra i task NLP ci sono classificazione, NER, question answering, machine translation e generazione di testo. La deframmentazione disco non e' NLP."
+    correct: [0],
+    exp: "Sono task NLP la classificazione del sentiment, il Named Entity Recognition e la traduzione automatica. Deframmentazione del disco e compressione di immagini non riguardano il linguaggio."
   },
   {
     id: "u19003", topic: "Rappresentazione",
@@ -34,8 +32,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Perche' i processori lavorano su rappresentazioni numeriche, non su significati testuali grezzi",
       "Perche' i modelli accettano solo file PDF",
-      "Perche' il testo non contiene informazioni",
-      "Perche' ogni parola va cancellata"
+      "Perche' il testo non contiene informazioni"
     ],
     correct: [0],
     exp: "Il testo deve diventare token, vettori o altre rappresentazioni numeriche affinche' algoritmi e modelli possano elaborarlo."
@@ -46,7 +43,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Pulizia, tokenizzazione, vettorizzazione e modello",
       "Solo esportazione in immagine",
-      "Solo compressione ZIP",
       "Solo ordinamento alfabetico dei file"
     ],
     correct: [0],
@@ -58,23 +54,21 @@ registerSubject("NLP e LLM", [
     opts: [
       "Dividere il testo in unita' minime come caratteri, parole o subword",
       "Tradurre il testo invece di dividerlo in unità",
-      "Eliminare parole rare invece di segmentare il testo",
-      "Generare codice SQL invece di tokenizzare linguaggio naturale"
+      "Eliminare parole rare invece di segmentare il testo"
     ],
     correct: [0],
     exp: "I token sono le unita' su cui lavora il sistema: possono essere caratteri, parole, parti di parola o simboli a seconda della strategia."
   },
   {
     id: "u19006", topic: "Token",
-    q: "Quali elementi possono essere token? (una o piu' risposte)",
+    q: "Quale di questi può essere un token?",
     opts: [
-      "Parole",
-      "Subword",
-      "Caratteri",
-      "Solo frasi complete"
+      "Una subword (parte di parola)",
+      "Soltanto una frase completa",
+      "Un blocco di pixel dell'immagine"
     ],
-    correct: [0,1,2],
-    exp: "La granularita' dipende dal tokenizer. Anche spazi, punteggiatura o emoji possono essere trattati come token in alcuni sistemi."
+    correct: [0],
+    exp: "Un token può essere una parola, una subword o anche un singolo carattere. Non deve essere per forza una frase completa, e un blocco di pixel riguarda le immagini, non il testo."
   },
   {
     id: "u19007", topic: "Tokenizzazione caratteri",
@@ -82,8 +76,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Ha un vocabolario piccolo e semplice",
       "Cattura sempre bene la semantica",
-      "Produce sequenze molto corte",
-      "Elimina ogni ambiguita'"
+      "Produce sequenze molto corte"
     ],
     correct: [0],
     exp: "Usare caratteri riduce il numero di simboli possibili, ma crea sequenze lunghe e poco rappresentative semanticamente."
@@ -94,7 +87,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Il vocabolario puo' diventare enorme e includere forme nuove o flesse",
       "Non rappresenta mai parole intere",
-      "Produce solo 128 token",
       "Funziona solo con immagini"
     ],
     correct: [0],
@@ -106,7 +98,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Bilancia rappresentativita' delle parole e controllo della dimensione del vocabolario",
       "Usa solo caratteri ASCII invece di unità subword apprese",
-      "Elimina completamente ogni bisogno di normalizzare il testo",
       "Converte token o parole in frasi complete"
     ],
     correct: [0],
@@ -118,8 +109,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Ridurre varianti superficiali e carico computazionale",
       "Aumentare volutamente il rumore",
-      "Rimuovere tutti i nomi propri sempre",
-      "Sostituire i modelli ML"
+      "Rimuovere tutti i nomi propri sempre"
     ],
     correct: [0],
     exp: "Lowercase, rimozione doppi spazi, accenti o normalizzazione Unicode possono rendere il testo piu' coerente. Va pero' evitata perdita di informazione utile."
@@ -130,8 +120,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Perdere informazioni rilevanti come differenze semantiche o accenti",
       "Aumentare sempre la precisione",
-      "Rendere impossibile la tokenizzazione",
-      "Creare automaticamente un LLM"
+      "Rendere impossibile la tokenizzazione"
     ],
     correct: [0],
     exp: "Esempio: papa e papa' non sono equivalenti. Normalizzare senza criterio puo' cancellare distinzioni importanti."
@@ -142,7 +131,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Normalizzazione di caratteri equivalenti o compatibili",
       "Algoritmo di clustering",
-      "Modello transformer",
       "Misura di accuratezza"
     ],
     correct: [0],
@@ -154,8 +142,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Parole molto frequenti spesso poco discriminanti, come articoli e preposizioni",
       "Parole offensive per definizione, non semplicemente frequenti",
-      "Solo nomi propri invece di parole funzionali frequenti",
-      "Token prodotti da modelli transformer durante la generazione"
+      "Solo nomi propri invece di parole funzionali frequenti"
     ],
     correct: [0],
     exp: "Rimuoverle puo' ridurre rumore e carico computazionale, soprattutto in analisi basate su frequenze."
@@ -166,7 +153,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Quando sintassi e contesto completo sono importanti",
       "Quando si usa un corpus piccolo",
-      "Sempre, senza eccezioni",
       "Solo con testi in inglese"
     ],
     correct: [0],
@@ -178,7 +164,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "A una radice approssimata eliminando suffissi o desinenze",
       "A una traduzione inglese",
-      "A un embedding denso",
       "A una frase completa"
     ],
     correct: [0],
@@ -190,8 +175,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Il lemma, cioe' la forma base linguistica della parola",
       "Un vettore sparso di frequenze",
-      "La prima lettera della parola",
-      "Un bigramma casuale"
+      "La prima lettera della parola"
     ],
     correct: [0],
     exp: "La lemmatizzazione e' piu' accurata dello stemming ma richiede strumenti linguistici piu' ricchi e puo' essere piu' lenta."
@@ -201,7 +185,6 @@ registerSubject("NLP e LLM", [
     q: "Differenza corretta tra stemming e lemmatizzazione:",
     opts: [
       "Stemming e' piu' semplice; lemmatizzazione conserva forme base linguistiche",
-      "Sono sinonimi perfetti",
       "La lemmatizzazione elimina sempre il contesto",
       "Lo stemming usa transformer"
     ],
@@ -210,22 +193,20 @@ registerSubject("NLP e LLM", [
   },
   {
     id: "u19018", topic: "Preprocessing",
-    q: "Quali operazioni sono preprocessing testuale? (una o piu' risposte)",
+    q: "Quale di queste è un'operazione di preprocessing testuale?",
     opts: [
-      "Tokenizzazione",
-      "Normalizzazione",
-      "Rimozione stopword",
-      "Overclock della CPU"
+      "La rimozione delle stopword",
+      "L'overclock della CPU",
+      "L'indicizzazione del disco"
     ],
-    correct: [0,1,2],
-    exp: "Tokenizzazione, normalizzazione e stopword removal sono passaggi classici. L'overclock hardware non e' preprocessing NLP."
+    correct: [0],
+    exp: "Tokenizzazione, normalizzazione e rimozione delle stopword sono preprocessing testuale. Overclock della CPU e indicizzazione del disco sono operazioni di sistema, non di NLP."
   },
   {
     id: "u19019", topic: "PoS Tagging",
     q: "Il Part-of-Speech tagging assegna a ogni token:",
     opts: [
       "Una categoria grammaticale come nome, verbo o aggettivo",
-      "Una coordinata GPS",
       "Una chiave primaria SQL",
       "Un colore di dashboard"
     ],
@@ -238,7 +219,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "La stessa forma puo' avere ruoli diversi, come nome o verbo",
       "Ogni parola ha sempre un solo ruolo",
-      "I token non hanno grammatica",
       "Il contesto va rimosso sempre"
     ],
     correct: [0],
@@ -250,8 +230,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Riconoscere e classificare entita' come persone, organizzazioni, luoghi e date",
       "Misurare solo la lunghezza delle frasi senza riconoscere entità",
-      "Creare visualizzazioni 3D invece di classificare entità testuali",
-      "Comprimere il corpus senza estrarre entità nominate"
+      "Creare visualizzazioni 3D invece di classificare entità testuali"
     ],
     correct: [0],
     exp: "La NER individua nomi e riferimenti strutturabili nel testo, associandoli a categorie come PERSON, ORG, LOC, DATE o MONEY."
@@ -261,7 +240,6 @@ registerSubject("NLP e LLM", [
     q: "Quale coppia e' coerente con NER?",
     opts: [
       "Milano -> LOC",
-      "Il -> MONEY",
       "Mangiare -> DATE",
       "42 -> PERSON sempre"
     ],
@@ -274,7 +252,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Capire l'azione o richiesta implicata nel testo",
       "Creare un vocabolario di emoji",
-      "Rimuovere tutte le entita'",
       "Convertire testo in audio"
     ],
     correct: [0],
@@ -286,8 +263,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Una sequenza di n token consecutivi",
       "Una parola sempre rara",
-      "Una rete neurale ricorrente",
-      "Una funzione di loss"
+      "Una rete neurale ricorrente"
     ],
     correct: [0],
     exp: "Con token parole, il bigramma di 'il gatto nero' produce sequenze come 'il gatto' e 'gatto nero'."
@@ -297,7 +273,6 @@ registerSubject("NLP e LLM", [
     q: "In un testo tokenizzato a parole, un bigramma contiene:",
     opts: [
       "Due token consecutivi",
-      "Tre documenti",
       "Una sola lettera",
       "Tutto il corpus"
     ],
@@ -310,8 +285,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Frequenze di parole senza ordine e struttura sintattica",
       "Sequenza completa con grammatica preservata",
-      "Embedding contestuale per ogni token",
-      "Traduzione automatica"
+      "Embedding contestuale per ogni token"
     ],
     correct: [0],
     exp: "BoW ignora l'ordine delle parole e conserva soprattutto il conteggio delle feature nel vocabolario."
@@ -322,7 +296,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "L'insieme delle parole/feature presenti nel corpus",
       "La lista dei modelli disponibili",
-      "Il dizionario dei prompt",
       "Il numero di layer del transformer"
     ],
     correct: [0],
@@ -334,8 +307,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Un vettore di frequenze sulle parole del vocabolario",
       "Una rappresentazione visuale a pixel invece di un vettore testuale",
-      "Una query SQL testuale invece di una rappresentazione vettoriale",
-      "Un file audio invece di una codifica bag-of-words"
+      "Una query SQL testuale invece di una rappresentazione vettoriale"
     ],
     correct: [0],
     exp: "Ogni posizione del vettore corrisponde a una feature del vocabolario e contiene il conteggio o peso relativo."
@@ -346,7 +318,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Non cattura ordine, sintassi e semantica profonda",
       "Conserva troppo contesto grammaticale",
-      "Richiede sempre GPU",
       "Non puo' contare parole"
     ],
     correct: [0],
@@ -357,7 +328,6 @@ registerSubject("NLP e LLM", [
     q: "TF in TF-IDF indica:",
     opts: [
       "Term Frequency: quante volte un termine compare in un documento",
-      "Total Format Index, acronimo non usato per TF-IDF",
       "Transformer Fine Inference, sigla non legata alla frequenza del termine",
       "Text Function ID, interpretazione errata della sigla TF"
     ],
@@ -370,7 +340,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Rare nel corpus e quindi piu' discriminanti",
       "Comuni in tutti i documenti",
-      "Sempre grammaticali",
       "Piu' lunghe di dieci lettere"
     ],
     correct: [0],
@@ -382,7 +351,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Pesare parole in base a frequenza locale e rarita' nel corpus",
       "Generare testo autoregressivo",
-      "Creare token subword",
       "Invocare funzioni esterne"
     ],
     correct: [0],
@@ -394,7 +362,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Trasformarli in rappresentazioni numeriche come BoW o TF-IDF",
       "Lasciarli sempre come HTML grezzo",
-      "Rimuovere tutte le etichette",
       "Usare solo immagini"
     ],
     correct: [0],
@@ -405,7 +372,6 @@ registerSubject("NLP e LLM", [
     q: "BoW e TF-IDF producono spesso vettori:",
     opts: [
       "Sparsi, con molti zeri quando il vocabolario e' grande",
-      "Sempre densi e corti",
       "Una rappresentazione senza variabili misurabili o coordinate utili",
       "Solo binari senza frequenze"
     ],
@@ -418,7 +384,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Vettori densi e continui che catturano aspetti semantici",
       "Tabelle HTML con frequenze, non vettori densi continui",
-      "Liste di parole da rimuovere, non rappresentazioni dense",
       "Regole per ridurre parole alla radice, non embedding"
     ],
     correct: [0],
@@ -430,8 +395,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Lunghezza prefissata che non cresce con il vocabolario",
       "Una dimensione per ogni parola del corpus",
-      "Solo valori interi positivi",
-      "Assenza di semantica"
+      "Solo valori interi positivi"
     ],
     correct: [0],
     exp: "Un embedding ha dimensione fissata dal modello, per esempio centinaia o migliaia di numeri, indipendentemente dal vocabolario osservato."
@@ -442,7 +406,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Numeri reali in un vettore",
       "Solo lettere maiuscole",
-      "Solo token testuali",
       "Solo valori TRUE/FALSE"
     ],
     correct: [0],
@@ -454,8 +417,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Il modello codifica significato e contesto in uno spazio vettoriale",
       "Perche' hanno necessariamente le stesse parole",
-      "Perche' BoW conserva sinonimi automaticamente",
-      "Perche' il vettore e' casuale"
+      "Perche' BoW conserva sinonimi automaticamente"
     ],
     correct: [0],
     exp: "Frasi come 'il mio cane dorme' e 'il mio animale domestico dorme' possono risultare vicine anche senza coincidenza perfetta di parole."
@@ -465,7 +427,6 @@ registerSubject("NLP e LLM", [
     q: "Word2Vec produce:",
     opts: [
       "Word embeddings dove una parola e' rappresentata da un vettore",
-      "Restituire solo stopword filtrate invece di vettori",
       "Produrre solo traduzioni automatiche invece di embedding",
       "Produrre grafici di frequenza invece di vettori parola"
     ],
@@ -478,7 +439,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Predire una parola dal suo contesto",
       "Predire il contesto da una parola",
-      "Tradurre frasi intere",
       "Generare JSON strutturato"
     ],
     correct: [0],
@@ -490,8 +450,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Predire il contesto a partire da una parola",
       "Predire una parola dal documento intero",
-      "Rimuovere parole molto frequenti e poco informative dal testo",
-      "Eseguire NER"
+      "Rimuovere parole molto frequenti e poco informative dal testo"
     ],
     correct: [0],
     exp: "Skip-gram usa una parola sorgente per predire parole di contesto circostanti."
@@ -502,8 +461,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Informazioni statistiche sull'intero corpus",
       "Solo finestre locali senza corpus",
-      "Solo regole grammaticali manuali",
-      "Solo caratteri Unicode"
+      "Solo regole grammaticali manuali"
     ],
     correct: [0],
     exp: "GloVe usa co-occorrenze globali del corpus per apprendere rappresentazioni vettoriali delle parole."
@@ -514,8 +472,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Usa n-grammi di caratteri oltre alla parola intera",
       "Ignora ogni sottoparola",
-      "Usa solo parole funzionali frequenti del corpus",
-      "Non crea vettori"
+      "Usa solo parole funzionali frequenti del corpus"
     ],
     correct: [0],
     exp: "Rappresentare parole tramite n-grammi di caratteri consente di comporre vettori anche per parole rare o non viste."
@@ -526,7 +483,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Non gestiscono bene significati diversi della stessa parola in contesti diversi",
       "Non producono rappresentazioni vettoriali delle parole",
-      "Ignorano completamente le frequenze nel corpus",
       "Sono modelli pensati solo per immagini, non per testo"
     ],
     correct: [0],
@@ -538,8 +494,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Vettori diversi per la stessa parola in contesti diversi",
       "Un solo vettore fisso per ogni parola sempre",
-      "Rimozione completa della semantica",
-      "Solo rappresentazioni BoW"
+      "Rimozione completa della semantica"
     ],
     correct: [0],
     exp: "Gli embedding contestuali dipendono dalla frase: la stessa parola puo' avere rappresentazioni diverse in base al significato nel contesto."
@@ -550,7 +505,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "L'angolo/direzione tra vettori",
       "Solo la lunghezza assoluta del testo",
-      "Il numero di stopword",
       "La posizione nel documento"
     ],
     correct: [0],
@@ -561,7 +515,6 @@ registerSubject("NLP e LLM", [
     q: "Un limite della distanza euclidea sugli embedding e':",
     opts: [
       "Vettori grandi possono falsare la misura se conta troppo la magnitudine",
-      "Non usa coordinate vettoriali per misurare distanze",
       "Non può essere calcolata tra vettori numerici",
       "Misura token testuali grezzi invece di vettori embedding"
     ],
@@ -574,7 +527,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "1 - distanza",
       "distanza + stopword",
-      "numero token / layer",
       "solo ordine alfabetico"
     ],
     correct: [0],
@@ -586,8 +538,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Indicizzare embedding e recuperare elementi semanticamente simili",
       "Archiviare solo CSV invece di indicizzare embedding",
-      "Applicare stemming invece di recuperare elementi semanticamente simili",
-      "Creare grafici statici invece di fare retrieval vettoriale"
+      "Applicare stemming invece di recuperare elementi semanticamente simili"
     ],
     correct: [0],
     exp: "I vector database consentono ricerca per similarita' su embedding, base di semantic search e RAG."
@@ -598,7 +549,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Recupera contenuti vicini per significato, non solo per parole identiche",
       "Cerca solo caratteri maiuscoli",
-      "Elimina tutti i sinonimi",
       "Usa solo ordinamento alfabetico"
     ],
     correct: [0],
@@ -610,8 +560,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Modelli/API specializzate che trasformano testo in vettori",
       "Solo manualmente parola per parola",
-      "Solo database relazionali",
-      "Solo fogli Excel"
+      "Solo database relazionali"
     ],
     correct: [0],
     exp: "Le slide citano API e modelli di embedding: il punto chiave e' convertire testo in vettori usabili per similarita' e retrieval."
@@ -621,7 +570,6 @@ registerSubject("NLP e LLM", [
     q: "Un limite delle RNN rispetto ai Transformer e':",
     opts: [
       "Elaborazione piu' sequenziale e meno parallelizzabile",
-      "Assenza totale di memoria",
       "Impossibilita' di leggere token",
       "Uso esclusivo di immagini"
     ],
@@ -633,7 +581,6 @@ registerSubject("NLP e LLM", [
     q: "Il paper 'Attention is all you need' introduce:",
     opts: [
       "L'architettura Transformer basata su meccanismi di attention",
-      "Il modello Bag-of-Words",
       "La prima lista di stopword",
       "Un database vettoriale usato per retrieval semantico"
     ],
@@ -646,7 +593,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Pesare relazioni tra token della sequenza",
       "Rimuovere sempre tutti i token passati",
-      "Ignorare il contesto",
       "Contare solo le vocali"
     ],
     correct: [0],
@@ -658,7 +604,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Osservare diverse relazioni tra token in parallelo",
       "Usare una sola relazione fissa",
-      "Eliminare gli embedding",
       "Sostituire la tokenizzazione"
     ],
     correct: [0],
@@ -670,8 +615,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Trasforma la frase sorgente in rappresentazioni contestuali",
       "Genera sempre token futuri uno alla volta",
-      "Rimuove ogni informazione di posizione",
-      "Esegue solo stemming"
+      "Rimuove ogni informazione di posizione"
     ],
     correct: [0],
     exp: "L'encoder legge la sequenza e produce embedding contestuali che rappresentano il contenuto in modo ricco."
@@ -682,7 +626,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Genera output usando input e token gia' generati",
       "Crea solo un vocabolario BoW",
-      "Esegue solo NER",
       "Elimina la self-attention"
     ],
     correct: [0],
@@ -694,7 +637,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Vedere token futuri durante la generazione",
       "Vedere token passati",
-      "Usare embedding",
       "Calcolare probabilita'"
     ],
     correct: [0],
@@ -706,8 +648,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Predicendo il prossimo token dato il contesto precedente",
       "Leggendo sempre l'intera risposta futura",
-      "Ordinando parole alfabeticamente",
-      "Rimuovendo tutti i verbi"
+      "Ordinando parole alfabeticamente"
     ],
     correct: [0],
     exp: "GPT e' decoder-only autoregressivo: produce un token alla volta condizionato dai token precedenti."
@@ -718,7 +659,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Maggiore parallelizzazione durante l'addestramento",
       "Obbligo di processare sempre un token alla volta in training",
-      "Assenza di attenzione",
       "Uso solo di regole manuali"
     ],
     correct: [0],
@@ -730,8 +670,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Encoder-decoder adatta a task testo-a-testo",
       "Solo encoder come BERT",
-      "Solo decoder come GPT",
-      "Solo Bag-of-Words"
+      "Solo decoder come GPT"
     ],
     correct: [0],
     exp: "T5 trasforma diversi compiti in formato text-to-text, utile per traduzione, riassunto e task seq2seq."
@@ -742,7 +681,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Solo la parte encoder del Transformer",
       "Solo la parte decoder autoregressiva",
-      "Un vocabolario BoW puro",
       "Un database vettoriale usato per retrieval semantico"
     ],
     correct: [0],
@@ -754,8 +692,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Ogni token puo' guardare contesto a sinistra e a destra",
       "Genera token solo da sinistra a destra",
-      "Ignora il contesto precedente",
-      "Vede solo una parola"
+      "Ignora il contesto precedente"
     ],
     correct: [0],
     exp: "La bidirezionalita' lo rende forte in compiti di comprensione, classificazione e ricerca."
@@ -766,8 +703,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Comprensione, classificazione e web search",
       "Solo generazione autoregressiva lunga",
-      "Solo compressione file",
-      "Solo scraping HTML"
+      "Solo compressione file"
     ],
     correct: [0],
     exp: "Essendo encoder bidirezionale, BERT e varianti sono adatti a rappresentare testo per classificare o recuperare informazioni."
@@ -778,8 +714,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Transformer decoder-only autoregressivo",
       "Encoder-only bidirezionale",
-      "Solo n-grammi statistici",
-      "Solo TF-IDF"
+      "Solo n-grammi statistici"
     ],
     correct: [0],
     exp: "GPT predice il prossimo token dato il contesto precedente usando masked self-attention."
@@ -790,8 +725,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Predire il prossimo token dato il contesto precedente",
       "Riconoscere solo entita' geografiche",
-      "Eliminare tutte le stopword",
-      "Calcolare solo TF-IDF"
+      "Eliminare tutte le stopword"
     ],
     correct: [0],
     exp: "La predizione del prossimo token su grandi corpus e' il nucleo del pre-training autoregressivo."
@@ -802,8 +736,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Pre-training, fine-tuning e feedback umano o ottimizzazione per chat",
       "Applicare solo stemming manuale senza reti neurali",
-      "Usare solo bag-of-words senza modelli neurali",
-      "Fare solo scraping di una pagina web"
+      "Usare solo bag-of-words senza modelli neurali"
     ],
     correct: [0],
     exp: "Le slide distinguono pre-training su enormi corpus, adattamenti successivi e ottimizzazione per interazione."
@@ -814,8 +747,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Classificazione, traduzione e altri task tramite prompting o adattamento",
       "Solo completamento di una singola lettera",
-      "Solo PoS tagging manuale",
-      "Solo creazione di DFM"
+      "Solo PoS tagging manuale"
     ],
     correct: [0],
     exp: "I decoder-only moderni apprendono capacita' generali e possono seguire istruzioni per molti compiti testuali."
@@ -826,35 +758,32 @@ registerSubject("NLP e LLM", [
     opts: [
       "Un modello linguistico di grandi dimensioni addestrato su moltissimi token",
       "Un foglio di calcolo con molte colonne",
-      "Un algoritmo di ordinamento stringhe",
-      "Un server web statico"
+      "Un algoritmo di ordinamento stringhe"
     ],
     correct: [0],
     exp: "Gli LLM sono modelli di linguaggio basati su grandi reti neurali, spesso Transformer o varianti, addestrati su enormi quantita' di testo."
   },
   {
     id: "u19070", topic: "LLM capacita'",
-    q: "Quali capacita' sono tipiche degli LLM? (una o piu' risposte)",
+    q: "Quale capacità è tipica di un LLM?",
     opts: [
-      "Generazione testo",
-      "Riassunto",
-      "Question answering",
-      "Partizionamento disco"
+      "Il question answering",
+      "Il partizionamento del disco",
+      "La compilazione del codice C"
     ],
-    correct: [0,1,2],
-    exp: "Gli LLM possono generare testo, tradurre, riassumere, rispondere a domande e scrivere codice. Il partizionamento disco non e' una capacita' NLP."
+    correct: [0],
+    exp: "Gli LLM generano testo, riassumono e rispondono a domande (question answering). Partizionare un disco o compilare codice C non sono capacità linguistiche di un modello."
   },
   {
     id: "u19071", topic: "Limiti LLM",
-    q: "Quali sono limiti o rischi degli LLM? (una o piu' risposte)",
+    q: "Quale di questi è un limite o rischio degli LLM?",
     opts: [
-      "Allucinazioni",
-      "Bias",
-      "Costi computazionali",
-      "Garanzia assoluta di verita'"
+      "Le allucinazioni",
+      "La garanzia assoluta di verità",
+      "L'assenza totale di qualsiasi bias"
     ],
-    correct: [0,1,2],
-    exp: "Gli LLM possono inventare contenuti plausibili, riflettere bias dei dati e avere costi alti. Non garantiscono verita' assoluta."
+    correct: [0],
+    exp: "Limiti reali degli LLM: allucinazioni, bias e costi computazionali. Garantire la verità assoluta o essere privi di bias NON sono caratteristiche degli LLM: sono il contrario dei loro limiti."
   },
   {
     id: "u19072", topic: "Prompt",
@@ -862,7 +791,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Input testuale dato al modello per guidarne l'output",
       "Un vettore BoW sempre sparso",
-      "Un file robots.txt",
       "Un algoritmo di stemming"
     ],
     correct: [0],
@@ -873,7 +801,6 @@ registerSubject("NLP e LLM", [
     q: "Il system o developer prompt serve a:",
     opts: [
       "Dare istruzioni di comportamento o vincoli definiti dallo sviluppatore",
-      "Calcolare embedding",
       "Rimuovere parole molto frequenti e poco informative dal testo",
       "Scrivere CSS selector"
     ],
@@ -886,8 +813,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Chiedere un compito senza fornire esempi nel prompt",
       "Fornire un esempio",
-      "Fornire molti esempi",
-      "Addestrare di nuovo il modello"
+      "Fornire molti esempi"
     ],
     correct: [0],
     exp: "Nel zero-shot il modello deve generalizzare dall'istruzione e dalle sue capacita' pre-addestrate, senza esempi specifici."
@@ -897,7 +823,6 @@ registerSubject("NLP e LLM", [
     q: "One-shot prompting significa:",
     opts: [
       "Fornire un solo esempio nel prompt",
-      "Non fornire esempi",
       "Fornire centinaia di esempi",
       "Usare solo token carattere"
     ],
@@ -910,8 +835,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Fornire pochi esempi nel prompt",
       "Non fornire alcun esempio",
-      "Fare fine-tuning con GPU",
-      "Usare solo stopword"
+      "Fare fine-tuning con GPU"
     ],
     correct: [0],
     exp: "Con pochi esempi il modello inferisce pattern di risposta, classificazione o formato senza aggiornare i pesi."
@@ -922,8 +846,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Guidare il ragionamento passo passo",
       "Eliminare ogni spiegazione",
-      "Ridurre il contesto a una parola",
-      "Trasformare testo in HTML"
+      "Ridurre il contesto a una parola"
     ],
     correct: [0],
     exp: "La CoT invita il modello a scomporre problemi complessi in passaggi intermedi, quando appropriato."
@@ -933,7 +856,6 @@ registerSubject("NLP e LLM", [
     q: "La temperatura nella generazione controlla:",
     opts: [
       "Il grado di casualita' o creativita' dell'output",
-      "La lunghezza massima del contesto",
       "Il numero di documenti presenti nel corpus testuale",
       "La dimensione del vocabolario BoW"
     ],
@@ -946,7 +868,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Filtrare le scelte di token candidate durante la generazione",
       "Rimuovere parole frequenti invece di filtrare token candidati",
-      "Calcolare IDF invece di controllare il campionamento dei token",
       "Creare un encoder invece di filtrare le opzioni di generazione"
     ],
     correct: [0],
@@ -958,7 +879,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "La lunghezza massima dell'output generato",
       "Il numero di documenti presenti nel corpus testuale",
-      "La soglia di stopword",
       "La dimensione del database"
     ],
     correct: [0],
@@ -970,7 +890,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Il numero massimo di token gestibili tra input e output",
       "Il numero di righe del dataset",
-      "La finestra temporale di Kafka",
       "Il numero di stopword italiane"
     ],
     correct: [0],
@@ -982,7 +901,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Spezzare documenti in parti gestibili dalla context window o dal retrieval",
       "Unire tutto in un prompt infinito",
-      "Eliminare tutti i metadati",
       "Convertire vettori in parole"
     ],
     correct: [0],
@@ -993,7 +911,6 @@ registerSubject("NLP e LLM", [
     q: "Retrieval Augmented Generation combina:",
     opts: [
       "Recupero di informazioni esterne e generazione del modello",
-      "Applicare solo stemming e rimozione stopword",
       "Usare solo bag-of-words e part-of-speech tagging",
       "Fare solo traduzione automatica senza retrieval"
     ],
@@ -1005,7 +922,6 @@ registerSubject("NLP e LLM", [
     q: "Una pipeline RAG tipica usa:",
     opts: [
       "Embedding, motore di ricerca vettoriale e contesto recuperato",
-      "Usare solo file CSV manuali senza retrieval semantico",
       "Usare solo n-grammi senza motore di ricerca vettoriale",
       "Produrre solo grafici a barre invece di recuperare contesto"
     ],
@@ -1018,7 +934,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Ancora la risposta a documenti esterni recuperati",
       "Elimina il modello linguistico",
-      "Rimuove ogni prompt",
       "Impedisce qualsiasi errore in assoluto"
     ],
     correct: [0],
@@ -1030,7 +945,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Riaddestrare/adattare il modello su dati specifici di dominio",
       "Scrivere un prompt generico senza adattare i pesi del modello",
-      "Calcolare bag-of-words invece di adattare il modello",
       "Rimuovere token futuri invece di riaddestrare su dominio"
     ],
     correct: [0],
@@ -1041,7 +955,6 @@ registerSubject("NLP e LLM", [
     q: "LoRA e' una tecnica che:",
     opts: [
       "Aggiorna poche matrici a basso rango rendendo il tuning piu' efficiente",
-      "Cancella il modello base",
       "Usa solo parole funzionali frequenti del corpus",
       "Sostituisce la tokenizzazione"
     ],
@@ -1054,7 +967,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Restituire una chiamata strutturata a una funzione o API",
       "Accedere sempre a Internet da solo",
-      "Fare stemming piu' veloce",
       "Creare un corpus quanteda prima delle analisi testuali"
     ],
     correct: [0],
@@ -1066,7 +978,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Perche' rappresenta parametri strutturati leggibili dal programma",
       "Perché JSON sarebbe un embedding vettoriale",
-      "Perché JSON rimuoverebbe bias dal modello",
       "Perché JSON sostituirebbe qualunque API esterna"
     ],
     correct: [0],
@@ -1078,8 +989,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Decide che serve un tool, propone chiamata e poi usa il risultato restituito",
       "Esegue sempre codice senza ambiente",
-      "Ignora ogni funzione disponibile",
-      "Cancella il prompt utente"
+      "Ignora ogni funzione disponibile"
     ],
     correct: [0],
     exp: "Il modello non deve inventare il dato: quando serve, richiama uno strumento e integra l'output nella risposta finale."
@@ -1090,8 +1000,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Standardizzare come gli LLM accedono a strumenti e fonti esterne",
       "Calcolare pesi TF-IDF per termini in documenti testuali",
-      "Definire stopword italiane",
-      "Eseguire PoS tagging"
+      "Definire stopword italiane"
     ],
     correct: [0],
     exp: "MCP e' un protocollo aperto per esporre strumenti, risorse e contesto ai modelli in modo standardizzato."
@@ -1101,7 +1010,6 @@ registerSubject("NLP e LLM", [
     q: "Un agente basato su LLM e':",
     opts: [
       "Un sistema che pianifica ed esegue piu' azioni usando ragionamento e tool",
-      "Un semplice vettore BoW",
       "Un solo prompt statico senza azioni",
       "Una lista di parole comuni da rimuovere nel preprocessing"
     ],
@@ -1114,7 +1022,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Scomporre un obiettivo e svolgere i passi con strumenti o chiamate successive",
       "Generare un singolo token senza pianificazione di passi",
-      "Rimuovere il contesto invece di usarlo durante l'esecuzione",
       "Limitarsi alla tokenizzazione senza azioni o strumenti"
     ],
     correct: [0],
@@ -1122,15 +1029,14 @@ registerSubject("NLP e LLM", [
   },
   {
     id: "u19094", topic: "Tool per agenti",
-    q: "Quali possono essere tool per un agente? (una o piu' risposte)",
+    q: "Quale di questi può essere un tool per un agente LLM?",
     opts: [
-      "API esterne",
-      "Database o basi di conoscenza",
-      "Classificatori o web search",
-      "Solo punteggiatura"
+      "Un database o base di conoscenza",
+      "Soltanto i segni di punteggiatura",
+      "Soltanto gli spazi bianchi del testo"
     ],
-    correct: [0,1,2],
-    exp: "Gli agenti possono usare API, database, knowledge base, classificatori, motori di ricerca e altri strumenti esposti dal sistema."
+    correct: [0],
+    exp: "Un agente può usare come tool API esterne, database/basi di conoscenza, classificatori o web search. Punteggiatura e spazi bianchi sono elementi del testo, non strumenti."
   },
   {
     id: "u19095", topic: "LangChain",
@@ -1138,7 +1044,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Costruire applicazioni basate su LLM con prompt, chain, tool e integrazioni",
       "Calcolare solo distanze euclidee tra embedding",
-      "Fare solo rimozione di stopword dal corpus",
       "Disegnare selettori CSS invece di orchestrare LLM"
     ],
     correct: [0],
@@ -1150,7 +1055,6 @@ registerSubject("NLP e LLM", [
     opts: [
       "Costruire agenti multi-step piu' controllabili e tracciabili",
       "Tokenizzare caratteri ASCII senza modellare flussi multi-step",
-      "Calcolare solo term frequency senza orchestrare agenti",
       "Leggere file HTML invece di costruire agenti controllabili"
     ],
     correct: [0],
@@ -1162,8 +1066,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Trovare e usare modelli NLP/embedding open-source",
       "Definire espressioni cron",
-      "Creare database relazionali",
-      "Configurare reti Wi-Fi"
+      "Creare database relazionali"
     ],
     correct: [0],
     exp: "Le slide citano risorse di embedding anche su Hugging Face, piattaforma nota per modelli e dataset NLP."
@@ -1173,7 +1076,6 @@ registerSubject("NLP e LLM", [
     q: "Differenza corretta tra prompting e fine-tuning:",
     opts: [
       "Il prompting guida l'output senza cambiare pesi; il fine-tuning adatta parametri o adattatori",
-      "Rappresentano lo stesso concetto e sono intercambiabili nell'esercizio",
       "Il prompting richiede sempre GPU",
       "Il fine-tuning e' solo un esempio nel prompt"
     ],
@@ -1186,8 +1088,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Quando serve usare conoscenza esterna aggiornata o documenti specifici recuperabili",
       "Quando bisogna cambiare ogni peso del modello sempre",
-      "Quando non esistono documenti",
-      "Quando si vuole eliminare il retrieval"
+      "Quando non esistono documenti"
     ],
     correct: [0],
     exp: "La RAG e' adatta a conoscenza consultabile e aggiornabile senza riaddestrare. Il fine-tuning serve piu' per stile, formato o competenze ricorrenti."
@@ -1198,8 +1099,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Preprocessing -> BoW/TF-IDF -> embedding -> Transformer/LLM -> RAG/agenti",
       "Docker -> SQL -> kernel -> virtualizzazione",
-      "Media -> varianza -> test t -> ANOVA",
-      "Scraping -> CSS -> HTML -> robots"
+      "Media -> varianza -> test t -> ANOVA"
     ],
     correct: [0],
     exp: "UFS19 parte dalle basi del testo, passa dal NLP tradizionale alle rappresentazioni dense, poi ai Transformer, LLM e applicazioni moderne con retrieval, tool e agenti."

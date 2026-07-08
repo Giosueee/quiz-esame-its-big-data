@@ -10,8 +10,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Un processo completo dalla raccolta alla comunicazione degli insight",
       "Una sola fase di pulizia dei dati",
-      "Un grafico finale senza analisi",
-      "Una query eseguita una volta"
+      "Un grafico finale senza analisi"
     ],
     correct: [0],
     exp: "L'analisi end-to-end copre l'intero ciclo: domanda, raccolta, pulizia, trasformazione, analisi, visualizzazione e comunicazione degli insight utili all'azione."
@@ -21,7 +20,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "L'obiettivo finale di un progetto end-to-end e':",
     opts: [
       "Trasformare dati grezzi in insight azionabili",
-      "Produrre solo tabelle ordinate",
       "Scrivere codice senza comunicarlo",
       "Archiviare file senza interpretarli"
     ],
@@ -34,8 +32,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Dato -> informazione -> insight -> azione",
       "Insight -> dato -> azione -> informazione",
-      "Azione -> dato -> grafico -> file",
-      "Tabella -> codice -> cartella -> dato"
+      "Azione -> dato -> grafico -> file"
     ],
     correct: [0],
     exp: "Il dato e' grezzo; diventa informazione quando e' contestualizzato; diventa insight quando cambia la comprensione e suggerisce un'azione."
@@ -46,8 +43,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Un elemento grezzo privo di contesto interpretativo",
       "Una decisione gia' pronta",
-      "Una raccomandazione strategica",
-      "Una narrazione completa"
+      "Una raccomandazione strategica"
     ],
     correct: [0],
     exp: "Un valore come '50 euro' non dice se il prezzo e' alto o basso finche' non viene confrontato con contesto, categorie, tempo o obiettivi."
@@ -57,7 +53,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "Quando un dato diventa informazione?",
     opts: [
       "Quando viene contestualizzato e collegato ad altri elementi",
-      "Quando viene copiato in un file",
       "Quando e' lasciato senza confronto",
       "Quando viene rimosso dal dataset"
     ],
@@ -70,8 +65,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Una comprensione che cambia prospettiva o orienta un'azione",
       "Un numero isolato in una tabella",
-      "Una variabile senza contesto",
-      "Un grafico decorativo"
+      "Una variabile senza contesto"
     ],
     correct: [0],
     exp: "Un insight non descrive soltanto cosa accade: rivela un pattern, una relazione o un'anomalia che modifica il modo di interpretare il fenomeno."
@@ -82,7 +76,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Capire cosa contengono i dati e cercare pattern",
       "Presentare solo la conclusione finale",
-      "Eliminare ogni iterazione",
       "Scrivere una storia gia' chiusa"
     ],
     correct: [0],
@@ -93,7 +86,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "L'analisi esplicativa serve soprattutto a:",
     opts: [
       "Comunicare in modo chiaro cio' che e' stato scoperto",
-      "Provare ogni ipotesi possibile",
       "Tenere tutto il codice sperimentale",
       "Mostrare ogni tabella prodotta"
     ],
@@ -106,8 +98,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Gli insight possono generare nuove domande e riportare a fasi precedenti",
       "La raccolta dati avviene sempre alla fine",
-      "La comunicazione elimina ogni nuova analisi",
-      "La pulizia impedisce iterazioni"
+      "La comunicazione elimina ogni nuova analisi"
     ],
     correct: [0],
     exp: "Un progetto dati e' ciclico: analisi, comunicazione e azione possono far emergere nuove domande, richiedendo nuove raccolte o nuove trasformazioni."
@@ -118,7 +109,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Capire, interpretare e comunicare i dati correttamente",
       "Memorizzare ogni formula statistica",
-      "Usare solo un software specifico",
       "Disegnare grafici senza contesto"
     ],
     correct: [0],
@@ -130,7 +120,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Perche' rende gli insight comprensibili e orientati all'azione",
       "Perche' sostituisce la qualita' dei dati",
-      "Perche' evita ogni verifica tecnica",
       "Perche' serve solo a decorare slide"
     ],
     correct: [0],
@@ -141,7 +130,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "Una buona analisi dovrebbe partire da:",
     opts: [
       "Una domanda o problema definito chiaramente",
-      "Un grafico scelto a caso",
       "Una libreria installata prima del bisogno",
       "Un dataset senza obiettivo"
     ],
@@ -154,7 +142,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Per scegliere messaggi, metriche e livello di dettaglio rilevanti",
       "Per mostrare sempre tutti i KPI disponibili",
-      "Per evitare di spiegare il contesto",
       "Per usare lo stesso racconto con chiunque"
     ],
     correct: [0],
@@ -166,7 +153,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Rilevante, affidabile e coerente con la domanda",
       "La piu' grande possibile anche se irrilevante",
-      "Composta solo da grafici",
       "Non documentata per restare sintetica"
     ],
     correct: [0],
@@ -178,7 +164,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Per non distrarre dal messaggio principale",
       "Per nascondere i limiti dell'analisi",
-      "Per ridurre la precisione",
       "Per evitare qualsiasi confronto"
     ],
     correct: [0],
@@ -190,7 +175,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Estrazione automatizzata di dati da pagine web",
       "Creazione manuale di grafici web",
-      "Invio di email da R",
       "Compressione di file HTML"
     ],
     correct: [0],
@@ -201,7 +185,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "Lo screen scraping si basa su:",
     opts: [
       "Lettura dell'HTML e selezione di elementi tramite DOM/CSS",
-      "Solo API ufficiali strutturate",
       "Inserimento manuale dei record",
       "Query SQL su un database locale"
     ],
@@ -214,7 +197,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Piu' stabile e restituisce dati gia' strutturati",
       "Piu' fragile se cambia la grafica",
-      "Sempre illegale da usare",
       "Limitata solo a immagini"
     ],
     correct: [0],
@@ -225,7 +207,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "Perche' lo screen scraping e' fragile?",
     opts: [
       "Perche' puo' rompersi se cambia la struttura o grafica del sito",
-      "Perche' non usa mai codice",
       "Perche' produce solo dati numerici",
       "Perche' ignora sempre il DOM"
     ],
@@ -238,8 +219,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Capire le regole dichiarate dal sito per i crawler",
       "Scaricare automaticamente tutti i file",
-      "Aggirare i limiti del server",
-      "Convertire HTML in PDF"
+      "Aggirare i limiti del server"
     ],
     correct: [0],
     exp: "Il file robots.txt indica quali aree del sito sono consentite o vietate ai crawler. Non sostituisce il giudizio legale, ma e' un controllo minimo."
@@ -250,7 +230,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Presentare la richiesta al server in modo trasparente",
       "Nascondere sempre l'identita' del codice",
-      "Trasformare HTML in dataframe",
       "Eliminare il bisogno di selettori"
     ],
     correct: [0],
@@ -262,8 +241,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "La struttura ad albero degli elementi HTML della pagina",
       "Un algoritmo che raggruppa osservazioni senza label",
-      "Un formato di database relazionale",
-      "Una funzione di ggplot2"
+      "Un formato di database relazionale"
     ],
     correct: [0],
     exp: "Il DOM rappresenta la pagina come nodi annidati: titoli, paragrafi, link, immagini e altri elementi selezionabili."
@@ -274,7 +252,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Individuare gli elementi HTML da cui estrarre dati",
       "Definire una regressione statistica",
-      "Salvare credenziali di accesso",
       "Creare una matrice di frequenze"
     ],
     correct: [0],
@@ -286,8 +263,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Aiutare a individuare selettori CSS sulle pagine web",
       "Pulire stopword italiane",
-      "Calcolare pesi TF-IDF per termini in documenti testuali",
-      "Standardizzare date"
+      "Calcolare pesi TF-IDF per termini in documenti testuali"
     ],
     correct: [0],
     exp: "SelectorGadget facilita l'identificazione dei CSS selector da usare nello scraping quando si esplora una pagina HTML."
@@ -298,8 +274,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Leggere una pagina o un file HTML come oggetto analizzabile",
       "Estrarre direttamente solo numeri",
-      "Creare una wordcloud basata sulle frequenze dei termini",
-      "Fare stemming dei token"
+      "Creare una wordcloud basata sulle frequenze dei termini"
     ],
     correct: [0],
     exp: "read_html() carica il documento HTML; poi si usano selettori e funzioni come html_nodes() e html_text()/html_text2() per estrarre contenuti."
@@ -310,8 +285,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Selezionare nodi HTML usando un selettore CSS",
       "Convertire parole in token",
-      "Creare un file robots.txt",
-      "Stimare una media"
+      "Creare un file robots.txt"
     ],
     correct: [0],
     exp: "html_nodes() isola gli elementi della pagina che corrispondono al selettore CSS indicato."
@@ -321,7 +295,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "html_text2() e' usato per:",
     opts: [
       "Estrarre testo da nodi HTML con gestione piu' pulita degli spazi",
-      "Scaricare immagini in blocco",
       "Creare un corpus quanteda prima delle analisi testuali",
       "Calcolare frequenze per gruppo"
     ],
@@ -334,7 +307,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Acquisire HTML -> selezionare nodi -> estrarre testo -> costruire tabella",
       "Scrivere grafico -> cancellare HTML -> inviare email",
-      "Creare corpus -> fare stemming -> fare join",
       "Fare join -> definire CSS -> ignorare pagina"
     ],
     correct: [0],
@@ -346,8 +318,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Per lavorare su una copia riproducibile durante estrazione e debugging",
       "Per evitare di pulire i testi",
-      "Per sostituire sempre l'API",
-      "Per cancellare i metadati"
+      "Per sostituire sempre l'API"
     ],
     correct: [0],
     exp: "Salvare una pagina consente di ispezionare la stessa versione mentre si costruisce il parser, riducendo dipendenza da cambiamenti immediati del sito."
@@ -358,8 +329,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Sezioni in riga e corsi diversi come colonne",
       "Una sola colonna con tutto il testo",
-      "Solo righe duplicate per ogni parola",
-      "Una matrice di embedding"
+      "Solo righe duplicate per ogni parola"
     ],
     correct: [0],
     exp: "La consegna chiedeva di riassumere sezioni comuni delle pagine corso, confrontando le informazioni dei corsi in colonne diverse."
@@ -370,8 +340,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Sono liberi, variabili e poco strutturati rispetto alle tabelle",
       "Sono sempre gia' numerici",
-      "Hanno sempre schema fisso",
-      "Non contengono rumore"
+      "Hanno sempre schema fisso"
     ],
     correct: [0],
     exp: "Il linguaggio naturale include sinonimi, maiuscole, errori, abbreviazioni e forme diverse: va pulito e standardizzato prima dell'analisi."
@@ -381,7 +350,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "In R, un vettore character rappresenta:",
     opts: [
       "Testi o stringhe scritte tra virgolette",
-      "Solo numeri interi",
       "Solo valori TRUE/FALSE",
       "Solo date in formato ISO"
     ],
@@ -394,7 +362,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Maiuscole e minuscole possono essere trattate come valori diversi",
       "Tutti i testi diventano minuscoli automaticamente",
-      "Gli spazi vengono sempre eliminati",
       "Gli accenti vengono sempre corretti"
     ],
     correct: [0],
@@ -406,7 +373,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Unire piu' stringhe in una sola",
       "Rimuovere stopword da token",
-      "Creare una DFM",
       "Leggere una pagina HTML"
     ],
     correct: [0],
@@ -418,7 +384,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Unire tutti gli elementi di un vettore in un'unica stringa",
       "Separare colonne in piu' variabili",
-      "Rimuovere gli spazi interni",
       "Convertire tutto in maiuscolo"
     ],
     correct: [0],
@@ -430,8 +395,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Standardizzare maiuscole e minuscole nei testi",
       "Estrarre contenuto testuale da pagine o markup HTML",
-      "Calcolare frequenze di parole",
-      "Creare grafici xray"
+      "Calcolare frequenze di parole"
     ],
     correct: [0],
     exp: "Sono funzioni stringr per uniformare il formato del testo, riducendo errori in confronti, filtri e join."
@@ -442,7 +406,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Testo con iniziale maiuscola per ogni parola",
       "Testo tutto minuscolo",
-      "Solo la prima occorrenza di un pattern",
       "Una lista di parole comuni da rimuovere nel preprocessing"
     ],
     correct: [0],
@@ -454,8 +417,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "trim rimuove bordi; squish rimuove bordi e riduce spazi interni multipli",
       "trim ordina parole; squish crea token",
-      "trim elimina numeri; squish elimina stopword",
-      "sono funzioni identiche"
+      "trim elimina numeri; squish elimina stopword"
     ],
     correct: [0],
     exp: "str_trim() toglie spazi iniziali/finali; str_squish() fa anche collassare sequenze di spazi interni a uno solo."
@@ -466,8 +428,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "TRUE/FALSE per indicare se il pattern e' presente",
       "La prima parola estratta",
-      "Una matrice document-feature",
-      "Una pagina HTML"
+      "Una matrice document-feature"
     ],
     correct: [0],
     exp: "str_detect() e' utile per filtrare commenti, creare variabili logiche e contare testi che contengono parole chiave."
@@ -478,8 +439,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "replace cambia la prima occorrenza; replace_all cambia tutte le occorrenze",
       "replace ordina; replace_all tokenizza",
-      "replace legge HTML; replace_all legge PDF",
-      "non c'e' differenza"
+      "replace legge HTML; replace_all legge PDF"
     ],
     correct: [0],
     exp: "La distinzione e' critica nella pulizia: correggere una sola occorrenza puo' lasciare valori ancora incoerenti nel testo."
@@ -490,7 +450,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Restituisce tutte le corrispondenze invece della prima soltanto",
       "Restituisce solo valori booleani",
-      "Ordina alfabeticamente il vettore",
       "Rimuove automaticamente gli accenti"
     ],
     correct: [0],
@@ -502,8 +461,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Le stringhe ordinate alfabeticamente",
       "Gli indici delle stringhe ordinate",
-      "Una colonna pulita dagli spazi",
-      "Un vettore di token"
+      "Una colonna pulita dagli spazi"
     ],
     correct: [0],
     exp: "str_sort() restituisce i valori ordinati. str_order() restituisce invece le posizioni utili per riordinare un dataset."
@@ -513,7 +471,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "str_order() e' utile quando si vuole:",
     opts: [
       "Ottenere gli indici per riordinare righe in base a testo",
-      "Unire parole in una frase",
       "Trovare stopword italiane",
       "Creare un corpus partendo da colonne testuali del dataframe"
     ],
@@ -526,8 +483,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Un mini-linguaggio per descrivere pattern nel testo",
       "Un formato di grafico statistico",
-      "Una libreria per API ufficiali",
-      "Un tipo di dashboard"
+      "Una libreria per API ufficiali"
     ],
     correct: [0],
     exp: "Le regex permettono di cercare, estrarre, sostituire o rimuovere sequenze che rispettano uno schema, come cifre, prefissi o estensioni file."
@@ -538,7 +494,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "\\\\d",
       "[A-Z]",
-      "^R",
       "csv$"
     ],
     correct: [0],
@@ -549,7 +504,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "Il pattern [A-Z] indica:",
     opts: [
       "Una lettera maiuscola",
-      "Una cifra qualsiasi",
       "La fine della stringa",
       "Uno spazio qualsiasi"
     ],
@@ -562,7 +516,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Inizio della stringa",
       "Fine della stringa",
-      "Qualsiasi cifra",
       "Una vocale qualunque"
     ],
     correct: [0],
@@ -574,8 +527,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Stringhe che finiscono con csv",
       "Stringhe che iniziano con csv",
-      "Qualsiasi cifra prima di csv",
-      "Solo file non csv"
+      "Qualsiasi cifra prima di csv"
     ],
     correct: [0],
     exp: "Il simbolo $ indica la fine della stringa; csv$ intercetta nomi che terminano con csv."
@@ -586,7 +538,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Perche' il backslash va escapato dentro la stringa R",
       "Perche' \\\\s indica una cifra",
-      "Perche' R ignora gli spazi",
       "Perche' stringr non usa regex"
     ],
     correct: [0],
@@ -598,7 +549,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Come i byte vengono interpretati come lettere, simboli o emoji",
       "Come ordinare righe numeriche",
-      "Come creare una DFM",
       "Come calcolare una media"
     ],
     correct: [0],
@@ -610,23 +560,21 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Rileggere il file specificando fileEncoding appropriato",
       "Applicare sempre dfm_trim()",
-      "Rimuovere tutte le righe accentate",
-      "Cambiare il selettore CSS"
+      "Rimuovere tutte le righe accentate"
     ],
     correct: [0],
     exp: "read.csv() e funzioni simili permettono fileEncoding, per esempio UTF-8 o latin1, per interpretare correttamente i byte del file."
   },
   {
     id: "u18052", topic: "stringr funzioni",
-    q: "Quali funzioni appartengono a stringr? (una o piu' risposte)",
+    q: "Quale funzione appartiene al pacchetto stringr di R?",
     opts: [
-      "str_squish()",
       "str_detect()",
-      "str_replace_all()",
-      "dfm_trim()"
+      "dfm_trim()",
+      "read_csv()"
     ],
-    correct: [0,1,2],
-    exp: "str_squish(), str_detect() e str_replace_all() sono di stringr. dfm_trim() appartiene al flusso quanteda per matrici document-feature."
+    correct: [0],
+    exp: "stringr fornisce funzioni per le stringhe come str_squish(), str_detect(), str_replace_all(). dfm_trim() è di quanteda (analisi testuale) e read_csv() di readr."
   },
   {
     id: "u18053", topic: "Quanteda",
@@ -634,7 +582,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Analisi quantitativa di testi organizzati in corpus, token e DFM",
       "Eseguire query SQL su database",
-      "Creare selettori CSS",
       "Standardizzare date contrattuali"
     ],
     correct: [0],
@@ -646,7 +593,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Importare file testuali da analizzare",
       "Creare direttamente una dashboard",
-      "Scrivere HTML sul disco",
       "Eseguire scraping del DOM"
     ],
     correct: [0],
@@ -658,7 +604,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Una collezione organizzata di testi con eventuali metadati",
       "Una singola parola frequente",
-      "Un selettore CSS",
       "Un grafico a barre per confrontare categorie o frequenze"
     ],
     correct: [0],
@@ -670,7 +615,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "La colonna che contiene il testo da analizzare",
       "La colonna da eliminare",
-      "Il nome del grafico finale",
       "Il pattern regex da cercare"
     ],
     correct: [0],
@@ -682,7 +626,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Visualizzare o usare metadati associati ai documenti",
       "Rimuovere la punteggiatura dai token",
-      "Fare scraping di link HTML",
       "Calcolare un join tra tabelle"
     ],
     correct: [0],
@@ -694,8 +637,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Types, tokens e frasi dei documenti",
       "Solo il codice CSS usato",
-      "Solo il numero di colonne numeriche",
-      "Solo le API chiamate"
+      "Solo il numero di colonne numeriche"
     ],
     correct: [0],
     exp: "Il riepilogo del corpus aiuta a capire dimensione e struttura dei testi prima di passare a tokenizzazione e analisi."
@@ -705,7 +647,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "textstat_summary() e' utile per:",
     opts: [
       "Ottenere statistiche descrittive sui testi del corpus",
-      "Scaricare pagine web",
       "Correggere encoding automaticamente",
       "Sostituire tutte le parole"
     ],
@@ -718,7 +659,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Dividere testi in unita' minime di analisi",
       "Creare direttamente una API",
-      "Fare join tra dataset",
       "Convertire HTML in CSS"
     ],
     correct: [0],
@@ -730,8 +670,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Rimuove la punteggiatura durante la tokenizzazione",
       "Rimuove solo le stopword italiane",
-      "Converte tutto in DFM",
-      "Ordina i documenti"
+      "Converte tutto in DFM"
     ],
     correct: [0],
     exp: "tokens() puo' rimuovere punteggiatura, numeri, simboli e separatori, preparando testi piu' puliti per l'analisi."
@@ -742,8 +681,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Convertire tutti i token in minuscolo",
       "Rimuovere token troppo rari",
-      "Creare una wordcloud basata sulle frequenze dei termini",
-      "Estrarre CSS selector"
+      "Creare una wordcloud basata sulle frequenze dei termini"
     ],
     correct: [0],
     exp: "Portare i token in minuscolo rende confrontabili forme come Roma e roma, riducendo duplicazioni artificiali."
@@ -754,8 +692,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Rimuovere parole comuni italiane poco informative",
       "Unire parole composte",
-      "Creare un corpus partendo da colonne testuali del dataframe",
-      "Estrarre contenuto testuale da pagine o markup HTML"
+      "Creare un corpus partendo da colonne testuali del dataframe"
     ],
     correct: [0],
     exp: "Le stopword sono parole frequenti come articoli e preposizioni; rimuoverle puo' ridurre rumore se non sono rilevanti per l'analisi."
@@ -766,8 +703,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Usare wildcard semplici come auto* o *mente",
       "Fare solo match case-sensitive",
-      "Creare un embedding contestuale",
-      "Leggere file Latin-1"
+      "Creare un embedding contestuale"
     ],
     correct: [0],
     exp: "quanteda supporta fixed, regex e glob. Glob permette pattern semplici con jolly senza scrivere regex complesse."
@@ -778,8 +714,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Ridurre parole alla radice secondo la lingua scelta",
       "Tradurre testi in italiano",
-      "Ordinare alfabeticamente documenti",
-      "Estrarre tutte le cifre"
+      "Ordinare alfabeticamente documenti"
     ],
     correct: [0],
     exp: "Lo stemming unifica forme come amato, amare, amando in una radice comune, utile per ridurre varianti lessicali."
@@ -790,8 +725,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Trattare piu' parole come un unico token composto",
       "Rimuovere tutte le parole rare",
-      "Convertire un corpus in HTML",
-      "Standardizzare maiuscole"
+      "Convertire un corpus in HTML"
     ],
     correct: [0],
     exp: "Le multiword expressions vanno unite quando il significato dipende dalla sequenza completa, per esempio big data o colonna sonora."
@@ -802,8 +736,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Una matrice con documenti in riga e parole/feature in colonna",
       "Un file HTML con nodi selezionati",
-      "Un vettore di stringhe ordinate",
-      "Una lista di API disponibili"
+      "Un vettore di stringhe ordinate"
     ],
     correct: [0],
     exp: "La DFM traduce testi in numeri: ogni cella indica quante volte una feature compare in un documento."
@@ -813,7 +746,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "In una DFM, ogni colonna rappresenta tipicamente:",
     opts: [
       "Una feature, spesso una parola o token",
-      "Un server web",
       "Una slide della presentazione",
       "Una regola robots.txt"
     ],
@@ -826,8 +758,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Ridurre la DFM eliminando termini troppo rari o troppo frequenti",
       "Creare automaticamente un corpus",
-      "Fare scraping di una pagina web",
-      "Correggere accenti Latin-1"
+      "Fare scraping di una pagina web"
     ],
     correct: [0],
     exp: "Ridurre dimensionalita' puo' migliorare interpretabilita' e prestazioni, togliendo rumore o termini poco informativi."
@@ -838,8 +769,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Le parole piu' frequenti nella DFM",
       "I documenti piu' lunghi sempre",
-      "Le righe duplicate del dataset",
-      "I selettori CSS migliori"
+      "Le righe duplicate del dataset"
     ],
     correct: [0],
     exp: "topfeatures() offre una prima fotografia del vocabolario dominante nel corpus o in una parte della DFM."
@@ -850,7 +780,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Calcolare frequenze anche per gruppi definiti da metadati",
       "Unire token multi-parola",
-      "Scaricare pagine API",
       "Ordinare file per estensione"
     ],
     correct: [0],
@@ -862,8 +791,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Parole con dimensione proporzionale alla frequenza",
       "Relazioni causali tra variabili",
-      "Il DOM di una pagina web",
-      "La cronologia delle API"
+      "Il DOM di una pagina web"
     ],
     correct: [0],
     exp: "La wordcloud e' esplorativa: mostra rapidamente termini ricorrenti, ma non sostituisce analisi quantitative piu' rigorose."
@@ -874,7 +802,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Mostrare una parola cercata con il contesto prima e dopo",
       "Creare una tabella wide da HTML",
-      "Rimuovere tutti i simboli",
       "Calcolare una media per categoria"
     ],
     correct: [0],
@@ -885,7 +812,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "textplot_xray() visualizza:",
     opts: [
       "Le posizioni delle parole chiave nei documenti",
-      "Il numero di richieste HTTP",
       "Le colonne mancanti di un CSV",
       "La struttura di un data warehouse"
     ],
@@ -898,7 +824,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "stringr pulisce/manipola stringhe; quanteda analizza collezioni di testi",
       "stringr crea solo DFM; quanteda fa solo CSS",
-      "sono librerie identiche",
       "quanteda serve solo per database SQL"
     ],
     correct: [0],
@@ -910,7 +835,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Serve collegare pattern, contesto e implicazioni",
       "I numeri sono sempre sbagliati",
-      "I grafici non comunicano nulla",
       "Il contesto va sempre eliminato"
     ],
     correct: [0],
@@ -922,8 +846,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Come un fenomeno evolve tra periodi diversi",
       "Solo quale categoria ha piu' righe",
-      "Solo quale parola e' piu' lunga",
-      "Solo quale file pesa di piu'"
+      "Solo quale parola e' piu' lunga"
     ],
     correct: [0],
     exp: "Analizzare trend, stagionalita' o picchi temporali permette di individuare cambiamenti rilevanti, come effetti di campagne o anomalie mensili."
@@ -933,7 +856,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "Un insight basato su relazione tra variabili riguarda:",
     opts: [
       "Come due fattori si associano o influenzano nel contesto",
-      "Solo la lista delle colonne",
       "Solo l'ordine alfabetico dei nomi",
       "Solo la sintassi del codice"
     ],
@@ -945,7 +867,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "Un confronto tra categorie e' utile quando:",
     opts: [
       "Gruppi diversi potrebbero comportarsi in modo diverso",
-      "Tutte le righe sono identiche",
       "Non esistono variabili categoriali",
       "Si vuole evitare segmentazione"
     ],
@@ -958,8 +879,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Individuare casi critici o buone pratiche da approfondire",
       "Dimostrare sempre un errore di codice",
-      "Eliminare ogni confronto",
-      "Nascondere dati scomodi"
+      "Eliminare ogni confronto"
     ],
     correct: [0],
     exp: "Le anomalie non vanno solo rimosse: possono rivelare problemi, opportunita' o casi eccezionali da studiare."
@@ -970,8 +890,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Una narrazione visiva e verbale orientata a comprensione e azione",
       "Una lista completa di ogni comando eseguito",
-      "Un archivio di file non commentati",
-      "Una tabella senza messaggio"
+      "Un archivio di file non commentati"
     ],
     correct: [0],
     exp: "La storia mette in sequenza base dati, evidenza, contesto, interpretazione e azione, rendendo l'analisi comprensibile all'audience."
@@ -982,7 +901,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Comunicare fa arrivare significato, contesto e direzione all'audience",
       "Informare e comunicare sono sempre identici",
-      "Comunicare elimina i dati",
       "Informare richiede sempre meno precisione"
     ],
     correct: [0],
@@ -994,7 +912,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Riducendo fatica cognitiva e dando struttura a numeri astratti",
       "Sostituendo la verifica dei dati",
-      "Rendendo irrilevante l'audience",
       "Eliminando la necessita' di grafici"
     ],
     correct: [0],
@@ -1006,23 +923,21 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Far agire in modo coerente con le evidenze",
       "Mostrare ogni esperimento fallito",
-      "Nascondere limiti e fonti",
-      "Sostituire il dataset"
+      "Nascondere limiti e fonti"
     ],
     correct: [0],
     exp: "Gli insight devono guidare decisioni, strategie o cambiamenti. La comunicazione efficace collega evidenza e azione."
   },
   {
     id: "u18085", topic: "Ostacoli al cambiamento",
-    q: "Quali ostacoli possono impedire a un insight di generare cambiamento? (una o piu' risposte)",
+    q: "Quale ostacolo può impedire a un insight di generare cambiamento?",
     opts: [
-      "Cattiva comunicazione",
-      "Chiusura mentale",
-      "Inerzia culturale",
-      "Dataset pulito"
+      "L'inerzia culturale dell'organizzazione",
+      "Un dataset pulito e ben strutturato",
+      "Una visualizzazione chiara dei risultati"
     ],
-    correct: [0,1,2],
-    exp: "Anche un insight valido puo' non produrre effetto se il messaggio non arriva, se l'organizzazione resiste o se le abitudini bloccano il cambiamento."
+    correct: [0],
+    exp: "Cattiva comunicazione, chiusura mentale e inerzia culturale bloccano il passaggio dall'insight all'azione. Un dataset pulito e una buona visualizzazione, al contrario, FAVORISCONO il cambiamento."
   },
   {
     id: "u18086", topic: "Visualizzazione",
@@ -1030,8 +945,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Sostenere il messaggio principale e ridurre ambiguita'",
       "Mostrare ogni variabile disponibile",
-      "Essere decorativa prima che informativa",
-      "Ignorare unita' e contesto"
+      "Essere decorativa prima che informativa"
     ],
     correct: [0],
     exp: "Il grafico deve chiarire l'insight, non moltiplicare rumore. Titoli, assi, confronti e selezione delle metriche devono servire la storia."
@@ -1042,8 +956,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Team marketing interessato a percezione e coinvolgimento",
       "Team logistico sui tempi consegna",
-      "Database administrator sui backup",
-      "Sistema operativo sul kernel"
+      "Database administrator sui backup"
     ],
     correct: [0],
     exp: "Le metriche vanno scelte per audience e obiettivo. Il marketing valuta impatto comunicativo e relazione con il pubblico."
@@ -1054,8 +967,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Collegata a evidenze, contesto e decisione da prendere",
       "Una frase generica senza metrica",
-      "Una ripetizione del dataset grezzo",
-      "Un parere non verificabile"
+      "Una ripetizione del dataset grezzo"
     ],
     correct: [0],
     exp: "La raccomandazione e' credibile se deriva chiaramente dai dati e spiega che cosa fare, perche' e con quali limiti."
@@ -1066,8 +978,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Capacita' di gestire un caso reale end-to-end e presentare risultati",
       "Solo memorizzazione di comandi isolati",
-      "Solo installazione di pacchetti",
-      "Solo velocita' di digitazione"
+      "Solo installazione di pacchetti"
     ],
     correct: [0],
     exp: "La valutazione richiede integrazione: dataset, analisi, dashboard/storyline, insight e comunicazione dei risultati."
@@ -1078,7 +989,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Solo contratti attivi",
       "Solo contratti cancellati",
-      "Solo nomi dei file",
       "Solo commenti testuali"
     ],
     correct: [0],
@@ -1090,8 +1000,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Renderle uniformi e confrontabili nelle analisi",
       "Aumentare righe duplicate",
-      "Nascondere record mancanti",
-      "Evitare ogni join"
+      "Nascondere record mancanti"
     ],
     correct: [0],
     exp: "Date in formati misti rompono filtri, ordinamenti e calcoli temporali. Standardizzarle e' una condizione minima per dashboard affidabili."
@@ -1101,7 +1010,6 @@ registerSubject("End-to-end Data Analysis", [
     q: "Effettuare join corretti con l'anagrafica significa:",
     opts: [
       "Arricchire i contratti con attributi coerenti usando chiavi affidabili",
-      "Unire tabelle senza chiave",
       "Duplicare ogni riga volontariamente",
       "Sostituire i dati con grafici"
     ],
@@ -1114,8 +1022,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Rappresentare chiaramente presenza o assenza di ciascun servizio",
       "Memorizzare testi lunghi in ogni cella",
-      "Evitare qualsiasi filtro",
-      "Sostituire le date"
+      "Evitare qualsiasi filtro"
     ],
     correct: [0],
     exp: "Le colonne 0/1 rendono i servizi facili da aggregare, filtrare e visualizzare in dashboard."
@@ -1126,7 +1033,6 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Usare nomi di colonne chiari, stabili e uniformi",
       "Cambiare nomi a ogni esportazione",
-      "Usare solo abbreviazioni opache",
       "Lasciare spazi casuali nei nomi"
     ],
     correct: [0],
@@ -1138,8 +1044,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Variabili, approcci, percorso logico, prime evidenze e ipotesi",
       "Solo il colore della dashboard",
-      "Solo la lista dei pacchetti installati",
-      "Solo il nome del gruppo"
+      "Solo la lista dei pacchetti installati"
     ],
     correct: [0],
     exp: "Prima della presentazione va definita la strategia analitica: cosa si vuole capire, con quali variabili e quale storyline provvisoria."
@@ -1150,8 +1055,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Errori, formati incoerenti e duplicati possono falsare gli insight",
       "La pulizia e' solo estetica",
-      "I grafici correggono automaticamente i dati",
-      "Gli outlier vanno sempre cancellati"
+      "I grafici correggono automaticamente i dati"
     ],
     correct: [0],
     exp: "La qualita' del dato condiziona tutte le fasi successive. Insight costruiti su dati sporchi producono decisioni fragili."
@@ -1162,8 +1066,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Selezionare le evidenze piu' significative e ordinarle logicamente",
       "Mostrare ogni output prodotto",
-      "Eliminare il messaggio principale",
-      "Ignorare audience e contesto"
+      "Eliminare il messaggio principale"
     ],
     correct: [0],
     exp: "L'analisi esplicativa non e' un dump dell'esplorazione: e' una sintesi ragionata che guida chi ascolta."
@@ -1174,8 +1077,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Suggerisce chiaramente una decisione o un intervento possibile",
       "E' solo una descrizione neutra",
-      "Non ha pubblico destinatario",
-      "Non contiene implicazioni"
+      "Non ha pubblico destinatario"
     ],
     correct: [0],
     exp: "Azionabile significa che l'insight puo' orientare una scelta concreta, per esempio quando proporre un'offerta o su quale segmento intervenire."
@@ -1186,23 +1088,21 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Rispettare regole del sito, limiti e carico sul server",
       "Ignorare robots.txt e fare richieste aggressive",
-      "Raccogliere qualunque dato senza verifica",
-      "Nascondere sempre user agent"
+      "Raccogliere qualunque dato senza verifica"
     ],
     correct: [0],
     exp: "Lo scraping deve essere responsabile: controllare regole, ridurre carico, usare richieste trasparenti e considerare vincoli legali ed etici."
   },
   {
     id: "u18100", topic: "Sintesi UFS18",
-    q: "Quale combinazione riassume meglio UFS18? (una o piu' risposte)",
+    q: "Quale combinazione riassume meglio il percorso UFS18 (end-to-end)?",
     opts: [
-      "Raccolta e scraping dati",
-      "Pulizia e analisi testuale",
-      "Insight e data storytelling",
-      "Solo amministrazione di server"
+      "Raccolta dati, analisi testuale e data storytelling",
+      "Sola amministrazione dei server di produzione",
+      "Sola manutenzione dell'hardware di rete"
     ],
-    correct: [0,1,2],
-    exp: "UFS18 integra raccolta dati, manipolazione in R, testi con stringr/quanteda e comunicazione degli insight in una logica end-to-end."
+    correct: [0],
+    exp: "UFS18 copre l'intero flusso: raccolta/scraping dati, pulizia e analisi testuale, insight e data storytelling. Non riguarda l'amministrazione dei server né la manutenzione hardware."
   },
   // === AGGIUNGI NUOVE DOMANDE END-TO-END QUI ===
 ]);
