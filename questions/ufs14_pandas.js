@@ -9,8 +9,7 @@ registerSubject("Pandas", [
     opts: [
       "Un array unidimensionale etichettato (una colonna)",
       "Una tabella bidimensionale con righe e colonne",
-      "Un dizionario che associa nomi di colonna ai tipi",
-      "Un file CSV caricato in memoria"
+      "Un dizionario che associa nomi di colonna ai tipi"
     ],
     correct: [0],
     exp: "La Series è la struttura 1D di pandas: valori con un indice (etichette). Una colonna di un DataFrame è una Series."
@@ -21,8 +20,7 @@ registerSubject("Pandas", [
     opts: [
       "Una tabella 2D con righe e colonne etichettate",
       "Un array unidimensionale di valori (una sola colonna)",
-      "Un dizionario semplice di coppie chiave-valore",
-      "Un grafico generato a partire dai dati"
+      "Un dizionario semplice di coppie chiave-valore"
     ],
     correct: [0],
     exp: "Il DataFrame è la struttura tabellare 2D di pandas: colonne (Series) di tipi eventualmente diversi, con indice di riga. È il cuore dell'analisi dati in Python."
@@ -32,7 +30,6 @@ registerSubject("Pandas", [
     q: "Quale funzione legge un CSV in un DataFrame?",
     opts: [
       "pd.read_csv()",
-      "pd.load()",
       "pd.import_csv()",
       "pd.open()"
     ],
@@ -44,7 +41,6 @@ registerSubject("Pandas", [
     q: "df.head() mostra:",
     opts: [
       "Le prime righe del DataFrame",
-      "L'ultima riga",
       "Solo i nomi delle colonne",
       "Il numero di righe"
     ],
@@ -57,7 +53,6 @@ registerSubject("Pandas", [
     opts: [
       "Tipi delle colonne, valori non nulli e uso di memoria",
       "La media e la deviazione standard di ogni colonna",
-      "Le prime cinque righe del DataFrame",
       "Il numero totale di righe e nient'altro"
     ],
     correct: [0],
@@ -69,7 +64,6 @@ registerSubject("Pandas", [
     opts: [
       "Statistiche descrittive delle colonne numeriche",
       "Il tipo di ogni colonna",
-      "La prima riga",
       "Un istogramma per mostrare la distribuzione dei valori numerici"
     ],
     correct: [0],
@@ -81,7 +75,6 @@ registerSubject("Pandas", [
     opts: [
       "df['eta']",
       "df.eta()",
-      "df->eta",
       "df.get(eta)"
     ],
     correct: [0],
@@ -93,8 +86,7 @@ registerSubject("Pandas", [
     opts: [
       ".loc usa etichette, .iloc usa posizioni intere",
       "Hanno comportamento e risultato identici nello stesso contesto operativo",
-      ".iloc usa etichette e .loc posizioni, invertendo i due metodi",
-      "Nessuno dei due permette selezione di righe o colonne"
+      ".iloc usa etichette e .loc posizioni, invertendo i due metodi"
     ],
     correct: [0],
     exp: ".loc seleziona per ETICHETTA (nome indice/colonna), .iloc per POSIZIONE numerica (0,1,2...). Es: df.loc[0,'eta'] vs df.iloc[0,2]."
@@ -104,7 +96,6 @@ registerSubject("Pandas", [
     q: "df[df['eta'] > 30] restituisce:",
     opts: [
       "Le righe con età maggiore di 30",
-      "La sola colonna 'eta' del DataFrame",
       "Le prime 30 righe del DataFrame",
       "Il numero di righe con età maggiore di 30"
     ],
@@ -117,7 +108,6 @@ registerSubject("Pandas", [
     opts: [
       "& e | con le parentesi attorno a ciascuna condizione",
       "and e or di Python applicati direttamente alle Series booleane",
-      "&& e || come negli operatori logici di altri linguaggi",
       "+ e - usati per combinare maschere booleane"
     ],
     correct: [0],
@@ -129,7 +119,6 @@ registerSubject("Pandas", [
     opts: [
       "La media del prezzo per ciascuna categoria",
       "La media calcolata su tutte le righe senza distinguere gruppi",
-      "Il numero di categorie distinte presenti nella variabile",
       "La somma complessiva dei valori senza separare per categoria"
     ],
     correct: [0],
@@ -141,8 +130,7 @@ registerSubject("Pandas", [
     opts: [
       "Applica aggregazioni diverse a colonne diverse per gruppo",
       "Rimuove i gruppi creati invece di calcolare riepiloghi per gruppo",
-      "Ordina le righe secondo una chiave, senza filtrare o aggregare",
-      "Rimuove duplicati mantenendo una sola occorrenza per valore"
+      "Ordina le righe secondo una chiave, senza filtrare o aggregare"
     ],
     correct: [0],
     exp: ".agg() con un dizionario applica funzioni diverse a colonne diverse: qui media dello stipendio e conteggio degli id per ciascun reparto."
@@ -152,7 +140,6 @@ registerSubject("Pandas", [
     q: "pd.merge(df1, df2, on='id', how='inner'):",
     opts: [
       "Unisce due DataFrame tenendo solo le chiavi presenti in entrambi",
-      "Concatena righe una sotto l'altra invece di unire per chiave",
       "Rimuove colonne dal DataFrame senza modificare le righe selezionate",
       "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto"
     ],
@@ -165,7 +152,6 @@ registerSubject("Pandas", [
     opts: [
       "Impila i DataFrame uno sotto l'altro (per riga)",
       "Li affianca per colonna allineandoli sull'indice",
-      "Esegue un merge sulla chiave in comune",
       "Restituisce solo le righe presenti in entrambi"
     ],
     correct: [0],
@@ -177,8 +163,7 @@ registerSubject("Pandas", [
     opts: [
       "Una maschera booleana con True dove i valori sono mancanti",
       "Il numero totale di valori mancanti nel DataFrame",
-      "Le righe che contengono almeno un valore mancante",
-      "La media di ciascuna colonna ignorando i NaN"
+      "Le righe che contengono almeno un valore mancante"
     ],
     correct: [0],
     exp: "df.isna() (o isnull()) dà True nelle celle con NaN. df.isna().sum() conta i mancanti per colonna. Fondamentale nel data cleaning."
@@ -189,7 +174,6 @@ registerSubject("Pandas", [
     opts: [
       "Sostituire i valori mancanti con 0",
       "Eliminare le righe che contengono valori mancanti",
-      "Contare quanti valori mancanti sono presenti",
       "Sostituire i valori mancanti con la media"
     ],
     correct: [0],
@@ -200,7 +184,6 @@ registerSubject("Pandas", [
     q: "df.dropna() di default:",
     opts: [
       "Elimina le righe che contengono almeno un valore mancante",
-      "Riempie i NaN",
       "Elimina le colonne sempre",
       "Lascia invariati i valori mancanti senza rimuovere righe o colonne"
     ],
@@ -213,8 +196,7 @@ registerSubject("Pandas", [
     opts: [
       "Ordina le righe per prezzo in ordine decrescente",
       "Ordina per indice",
-      "Filtra i prezzi secondo una soglia invece di ordinare il risultato",
-      "Somma i prezzi"
+      "Filtra i prezzi secondo una soglia invece di ordinare il risultato"
     ],
     correct: [0],
     exp: "sort_values ordina per i valori di una colonna. ascending=False dà l'ordine decrescente. sort_index() ordina invece per l'indice."
@@ -224,7 +206,6 @@ registerSubject("Pandas", [
     q: "df['citta'].value_counts() restituisce:",
     opts: [
       "Il conteggio delle occorrenze di ciascun valore",
-      "La somma dei valori della colonna",
       "I valori distinti della colonna in ordine alfabetico",
       "Le prime righe della colonna 'citta'"
     ],
@@ -236,7 +217,6 @@ registerSubject("Pandas", [
     q: "df['iva'] = df['prezzo'] * 0.22 in pandas:",
     opts: [
       "Crea una nuova colonna calcolata dalle altre (operazione vettorializzata)",
-      "Genera un errore di esecuzione invece di produrre un risultato valido",
       "Rimuove una colonna esistente invece di crearne una calcolata",
       "Ordina il DataFrame per indice o per valore, lasciando invariata la struttura logica"
     ],
@@ -249,8 +229,7 @@ registerSubject("Pandas", [
     opts: [
       "La funzione len a ciascun elemento della colonna",
       "La somma delle lunghezze di tutti i nomi",
-      "Un filtro che tiene solo i nomi lunghi",
-      "Un ordinamento dei nomi per lunghezza"
+      "Un filtro che tiene solo i nomi lunghi"
     ],
     correct: [0],
     exp: "apply esegue una funzione su ogni elemento (o riga/colonna). Utile per trasformazioni personalizzate quando non basta un'operazione vettorializzata pronta."
@@ -260,7 +239,6 @@ registerSubject("Pandas", [
     q: "df['nome'].str.upper() serve a:",
     opts: [
       "Trasformare in maiuscolo i valori testuali della colonna",
-      "Contare i caratteri di ciascuna stringa",
       "Ordinare le stringhe in ordine alfabetico",
       "Rimuovere gli spazi iniziali e finali dalle stringhe"
     ],
@@ -273,8 +251,7 @@ registerSubject("Pandas", [
     opts: [
       "Convertire una colonna in tipo datetime",
       "Ordinare il DataFrame in base alla data",
-      "Estrarre l'anno da una colonna di date",
-      "Eliminare le righe con date non valide"
+      "Estrarre l'anno da una colonna di date"
     ],
     correct: [0],
     exp: "to_datetime converte stringhe/numeri in datetime, abilitando operazioni temporali (.dt.year, .dt.month, differenze tra date, resampling)."
@@ -285,7 +262,6 @@ registerSubject("Pandas", [
     opts: [
       "L'anno da una colonna datetime",
       "Il giorno della settimana da una data",
-      "Il numero di anni trascorsi da oggi",
       "La data formattata come stringa"
     ],
     correct: [0],
@@ -297,8 +273,7 @@ registerSubject("Pandas", [
     opts: [
       "Crea una tabella riassuntiva con regioni in righe e anni in colonne",
       "Elimina le righe con valori mancanti nelle vendite",
-      "Ordina le vendite per regione e per anno",
-      "Conta le righe presenti per ciascuna regione"
+      "Ordina le vendite per regione e per anno"
     ],
     correct: [0],
     exp: "pivot_table riorganizza e aggrega i dati in forma di tabella incrociata (come le tabelle pivot di Excel), applicando una funzione di aggregazione."
@@ -308,7 +283,6 @@ registerSubject("Pandas", [
     q: "df.rename(columns={'old':'new'}):",
     opts: [
       "Rinomina le colonne indicate",
-      "Cambia i valori",
       "Ordina le righe",
       "Elimina le colonne"
     ],
@@ -321,8 +295,7 @@ registerSubject("Pandas", [
     opts: [
       "Rimuove la colonna indicata",
       "Rimuove una riga per default",
-      "Rinomina la colonna",
-      "Ordina i dati"
+      "Rinomina la colonna"
     ],
     correct: [0],
     exp: "drop rimuove etichette: axis=1 per le colonne, axis=0 (default) per le righe. Restituisce un nuovo DataFrame (o inplace=True)."
@@ -333,7 +306,6 @@ registerSubject("Pandas", [
     opts: [
       "Riportare l'indice a numeri progressivi 0,1,2... spostando l'indice attuale in colonna",
       "Ordinare le righe in base ai valori dell'indice",
-      "Rimuovere una colonna dal DataFrame",
       "Filtrare le righe in base all'indice"
     ],
     correct: [0],
@@ -345,8 +317,7 @@ registerSubject("Pandas", [
     opts: [
       "Usare la colonna 'id' come indice di riga",
       "Ordinare le righe in base alla colonna 'id'",
-      "Contare i valori distinti nella colonna 'id'",
-      "Rimuovere del tutto la colonna 'id'"
+      "Contare i valori distinti nella colonna 'id'"
     ],
     correct: [0],
     exp: "set_index promuove una colonna a indice del DataFrame, utile per allineamenti e ricerche per etichetta con .loc."
@@ -357,8 +328,7 @@ registerSubject("Pandas", [
     opts: [
       "Il tipo di dato di ciascuna colonna",
       "Il numero di righe del DataFrame",
-      "La media di ogni colonna numerica",
-      "Le prime righe del DataFrame"
+      "La media di ogni colonna numerica"
     ],
     correct: [0],
     exp: "df.dtypes mostra il dtype di ogni colonna (int64, float64, object per stringhe, datetime64, category). Controllarli evita errori (es. numeri letti come testo)."
@@ -368,7 +338,6 @@ registerSubject("Pandas", [
     q: "df['x'].astype(float) serve a:",
     opts: [
       "Convertire la colonna nel tipo float",
-      "Filtrare le righe con valori decimali",
       "Ordinare la colonna in modo crescente",
       "Rimuovere i valori mancanti dalla colonna"
     ],
@@ -381,7 +350,6 @@ registerSubject("Pandas", [
     opts: [
       "Le righe duplicate",
       "Le colonne duplicate del DataFrame",
-      "Le righe con valori mancanti",
       "Le righe che non rispettano lo schema"
     ],
     correct: [0],
@@ -393,8 +361,7 @@ registerSubject("Pandas", [
     opts: [
       "Una tupla (numero di righe, numero di colonne)",
       "Restituisce solo il numero di righe, non la tupla completa",
-      "Restituisce solo il numero di colonne, non la tupla completa",
-      "Restituisce la memoria usata invece delle dimensioni tabellari"
+      "Restituisce solo il numero di colonne, non la tupla completa"
     ],
     correct: [0],
     exp: "df.shape dà (righe, colonne). len(df) dà il numero di righe. È tra i primi controlli sulle dimensioni di un dataset."
@@ -405,7 +372,6 @@ registerSubject("Pandas", [
     opts: [
       "La colonna 'nome' delle righe con età > 30",
       "Tutte le righe del DataFrame",
-      "Il numero di persone con età > 30",
       "La media dei nomi delle persone over 30"
     ],
     correct: [0],
@@ -417,8 +383,7 @@ registerSubject("Pandas", [
     opts: [
       "Sostituisce i valori secondo il dizionario di mappatura",
       "Ordina i valori in ordine crescente o decrescente senza trasformarli",
-      "Conta i valori presenti senza modificare granularità o struttura",
-      "Produce una visualizzazione grafica dei dati invece di trasformarli"
+      "Conta i valori presenti senza modificare granularità o struttura"
     ],
     correct: [0],
     exp: "map su una Series applica una funzione o un dizionario di sostituzione elemento per elemento: comodo per ricodificare valori categorici."
@@ -429,8 +394,7 @@ registerSubject("Pandas", [
     opts: [
       "Il numero di valori mancanti per ciascuna colonna",
       "Le righe che contengono valori mancanti",
-      "La media di ciascuna colonna esclusi i NaN",
-      "Il totale delle righe del DataFrame"
+      "La media di ciascuna colonna esclusi i NaN"
     ],
     correct: [0],
     exp: "isna() dà la maschera booleana; sum() la somma per colonna (True=1), ottenendo il conteggio dei mancanti per colonna. Passo chiave nell'esplorazione."
@@ -441,8 +405,7 @@ registerSubject("Pandas", [
     opts: [
       "Sono molto più veloci e concise (implementate in C)",
       "Sono sempre errate anche quando rispettano tipi, indice e contesto",
-      "I cicli non esistono",
-      "Occupano più memoria"
+      "I cicli non esistono"
     ],
     correct: [0],
     exp: "Le operazioni vettorializzate di pandas/NumPy operano su intere colonne in codice ottimizzato: molto più rapide dei cicli Python elemento per elemento."
@@ -453,8 +416,7 @@ registerSubject("Pandas", [
     opts: [
       "Filtra le righe usando un'espressione testuale",
       "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto",
-      "Rimuove colonne dal dataset invece di combinare o filtrare i record",
-      "Crea una pivot"
+      "Rimuove colonne dal dataset invece di combinare o filtrare i record"
     ],
     correct: [0],
     exp: "query filtra con una stringa leggibile, alternativa al boolean indexing. Comoda per condizioni multiple senza ripetere il nome del DataFrame."
@@ -464,7 +426,6 @@ registerSubject("Pandas", [
     q: "df['prezzo'].mean() calcola:",
     opts: [
       "La media della colonna 'prezzo'",
-      "La somma di tutti i prezzi",
       "Il numero di righe con un prezzo",
       "Il prezzo massimo della colonna"
     ],
@@ -477,8 +438,7 @@ registerSubject("Pandas", [
     opts: [
       "A ciascuna riga del DataFrame",
       "A ciascuna colonna",
-      "A un solo valore",
-      "Solo all'indice"
+      "A un solo valore"
     ],
     correct: [0],
     exp: "apply con axis=1 passa a func un'intera riga (Series); axis=0 (default) opera per colonna. Utile per calcoli che coinvolgono più colonne."
@@ -489,8 +449,7 @@ registerSubject("Pandas", [
     opts: [
       "Il numero di valori distinti",
       "L'elenco di tutti i valori della colonna",
-      "La media dei valori numerici",
-      "Le prime righe della colonna"
+      "La media dei valori numerici"
     ],
     correct: [0],
     exp: "nunique conta i valori unici (escludendo i NaN). unique() restituisce invece l'array dei valori distinti."
@@ -501,8 +460,7 @@ registerSubject("Pandas", [
     opts: [
       "Solo le colonne numeriche",
       "Solo quelle testuali",
-      "Tutte le colonne",
-      "Le prime righe"
+      "Tutte le colonne"
     ],
     correct: [0],
     exp: "select_dtypes filtra le colonne per tipo: comodo per applicare operazioni solo alle numeriche o solo alle categoriche."
@@ -512,7 +470,6 @@ registerSubject("Pandas", [
     q: "Df2 = df crea:",
     opts: [
       "Un riferimento allo stesso DataFrame (non una copia)",
-      "Una copia completamente indipendente dei dati",
       "Un DataFrame vuoto con lo stesso schema",
       "Un errore perché non si può assegnare un DataFrame"
     ],
@@ -525,8 +482,7 @@ registerSubject("Pandas", [
     opts: [
       "Imposta True nella colonna 'minorenne' solo per le righe selezionate",
       "Rimuove righe dal dataset invece di trasformare o calcolare valori",
-      "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto",
-      "Produce una visualizzazione grafica dei dati invece di trasformarli"
+      "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto"
     ],
     correct: [0],
     exp: ".loc permette di assegnare valori a un sottoinsieme di righe/colonne in modo sicuro (evita il 'SettingWithCopyWarning' del chained indexing)."
@@ -537,7 +493,6 @@ registerSubject("Pandas", [
     opts: [
       "Una tabella di contingenza tra le due variabili",
       "Un grafico a torta delle due variabili",
-      "Un filtro sulle righe con quei due valori",
       "La media di 'acquisto' per ciascun genere"
     ],
     correct: [0],
@@ -549,8 +504,7 @@ registerSubject("Pandas", [
     opts: [
       "Calcola più statistiche per gruppo in un colpo solo",
       "Elimina i gruppi con un solo elemento",
-      "Ordina i reparti per stipendio medio",
-      "Rimuove i valori mancanti dagli stipendi"
+      "Ordina i reparti per stipendio medio"
     ],
     correct: [0],
     exp: "Passando una lista di funzioni a agg si ottengono più aggregazioni contemporaneamente per ciascun gruppo (media, minimo, massimo dello stipendio)."
@@ -561,8 +515,7 @@ registerSubject("Pandas", [
     opts: [
       "Tiene le righe la cui città è tra quelle elencate",
       "Ordina la colonna città senza filtrare i valori richiesti",
-      "Conta le città presenti invece di filtrare quelle richieste",
-      "Rimuove colonne dal DataFrame invece di filtrare righe"
+      "Conta le città presenti invece di filtrare quelle richieste"
     ],
     correct: [0],
     exp: "isin verifica l'appartenenza a una lista di valori: pratico per filtrare più categorie insieme, come l'operatore IN di SQL."
@@ -573,8 +526,7 @@ registerSubject("Pandas", [
     opts: [
       "Ignora i NaN e somma i valori presenti",
       "Restituisce NaN",
-      "Genera un errore di esecuzione invece di produrre un risultato valido",
-      "Restituisce 0"
+      "Genera un errore di esecuzione invece di produrre un risultato valido"
     ],
     correct: [0],
     exp: "I metodi di aggregazione di pandas (sum, mean, ...) escludono i NaN per default (skipna=True). Attenzione: comportamento diverso da NumPy grezzo."
@@ -585,8 +537,7 @@ registerSubject("Pandas", [
     opts: [
       "La media mobile su una finestra di 7 periodi",
       "La media di tutte le vendite del DataFrame",
-      "La somma cumulata delle vendite",
-      "Il valore massimo su 7 righe consecutive"
+      "La somma cumulata delle vendite"
     ],
     correct: [0],
     exp: "rolling crea una finestra scorrevole; .mean() ne calcola la media mobile. Utile per lisciare serie e creare feature temporali."
@@ -597,8 +548,7 @@ registerSubject("Pandas", [
     opts: [
       "La somma cumulata progressiva",
       "La somma totale della colonna",
-      "La media progressiva dei valori",
-      "Il valore massimo raggiunto finora"
+      "La media progressiva dei valori"
     ],
     correct: [0],
     exp: "cumsum dà la somma progressiva riga per riga; esistono anche cumprod, cummax, cummin. Utili per totali progressivi."
@@ -608,7 +558,6 @@ registerSubject("Pandas", [
     q: "Convertire una colonna a dtype 'category' serve a:",
     opts: [
       "Risparmiare memoria e trattarla come categorica",
-      "Convertire i valori testuali in numeri",
       "Ordinare la colonna in modo alfabetico",
       "Rimuovere i valori mancanti dalla colonna"
     ],
@@ -620,7 +569,6 @@ registerSubject("Pandas", [
     q: "df.iloc[0:5] restituisce:",
     opts: [
       "Le prime cinque righe per posizione",
-      "Le righe con etichette da 0 a 5 comprese",
       "Le prime cinque colonne del DataFrame",
       "Un singolo valore nella posizione indicata"
     ],
@@ -633,8 +581,7 @@ registerSubject("Pandas", [
     opts: [
       "L'elenco (Index) dei nomi delle colonne",
       "L'elenco dei valori della prima riga",
-      "Il numero di colonne del DataFrame",
-      "I tipi di dato di ciascuna colonna"
+      "Il numero di colonne del DataFrame"
     ],
     correct: [0],
     exp: "df.columns è l'oggetto Index con i nomi delle colonne. Si può convertire in lista con list(df.columns) o rinominare riassegnandolo."
@@ -645,7 +592,6 @@ registerSubject("Pandas", [
     opts: [
       "Ordina prima per reparto, poi per stipendio dentro ciascun reparto",
       "Ordina solo per stipendio",
-      "Rimuove duplicati mantenendo una sola occorrenza per valore",
       "Filtra righe già presenti in base a una condizione booleana"
     ],
     correct: [0],
@@ -656,7 +602,6 @@ registerSubject("Pandas", [
     q: "Pandas è costruito sopra quale libreria per i calcoli numerici?",
     opts: [
       "NumPy",
-      "Matplotlib per la parte grafica",
       "scikit-learn per i calcoli",
       "Il modulo standard csv di Python"
     ],
@@ -668,7 +613,6 @@ registerSubject("Pandas", [
     q: "In pd.merge, how='left' mantiene:",
     opts: [
       "Tutte le righe del DataFrame di sinistra",
-      "Solo le corrispondenze",
       "Tutte le righe di destra",
       "Un risultato vuoto perché nessun record soddisfa la condizione"
     ],
@@ -681,8 +625,7 @@ registerSubject("Pandas", [
     opts: [
       "L'indice del risultato (si usa reset_index() per riportarla in colonna)",
       "Una normale colonna come tutte le altre",
-      "Una colonna che viene automaticamente cancellata",
-      "Un grafico riassuntivo dei gruppi"
+      "Una colonna che viene automaticamente cancellata"
     ],
     correct: [0],
     exp: "Il risultato di groupby ha come indice la chiave di raggruppamento; reset_index() la riporta come colonna normale, comodo per successive elaborazioni o merge."
@@ -693,8 +636,7 @@ registerSubject("Pandas", [
     opts: [
       "Restituisce un risultato della stessa lunghezza dell'originale (broadcast per gruppo)",
       "Restituisce una sola riga per gruppo come una normale aggregazione",
-      "Elimina la struttura dei gruppi senza produrre un risultato per ogni gruppo",
-      "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto"
+      "Elimina la struttura dei gruppi senza produrre un risultato per ogni gruppo"
     ],
     correct: [0],
     exp: "agg riduce ogni gruppo a un valore; transform restituisce un valore per OGNI riga (es. la media del gruppo ripetuta su tutte le sue righe), utile per creare feature."
@@ -704,7 +646,6 @@ registerSubject("Pandas", [
     q: "df['x'].where(df['x']>0, 0) restituisce:",
     opts: [
       "I valori dove la condizione è vera, altrimenti 0",
-      "Solo le righe con valori positivi",
       "Un errore perché where non accetta un valore",
       "La media dei valori positivi della colonna"
     ],
@@ -717,7 +658,6 @@ registerSubject("Pandas", [
     opts: [
       "Tiene le righe il cui nome contiene 'an'",
       "Ordina i nomi alfabeticamente senza cercare pattern nei dati",
-      "Conta i nomi",
       "Rimuove la colonna"
     ],
     correct: [0],
@@ -729,7 +669,6 @@ registerSubject("Pandas", [
     opts: [
       "Una Series di valori booleani (la maschera)",
       "Le righe del DataFrame con età superiore a 30",
-      "Il numero di persone con età superiore a 30",
       "Un errore perché manca il DataFrame attorno"
     ],
     correct: [0],
@@ -741,7 +680,6 @@ registerSubject("Pandas", [
     opts: [
       "L'ultimo valore valido precedente (forward fill)",
       "Il valore zero in tutte le celle mancanti",
-      "La media della colonna in cui si trova il NaN",
       "Il primo valore valido successivo (backward fill)"
     ],
     correct: [0],
@@ -753,7 +691,6 @@ registerSubject("Pandas", [
     opts: [
       "Il numero di righe del DataFrame",
       "Il numero di colonne del DataFrame",
-      "La quantità di memoria usata dal DataFrame",
       "Le prime righe del DataFrame"
     ],
     correct: [0],
@@ -764,7 +701,6 @@ registerSubject("Pandas", [
     q: "df.to_csv('out.csv', index=False):",
     opts: [
       "Salva il DataFrame in un CSV senza la colonna indice",
-      "Legge un file",
       "Elimina i dati di input invece di elaborarli o validarli",
       "Produce una visualizzazione grafica dei dati invece di trasformarli"
     ],
@@ -777,8 +713,7 @@ registerSubject("Pandas", [
     opts: [
       "Calcola la media di tutte le colonne numeriche per reparto",
       "Solo la prima colonna",
-      "Elimina la struttura dei gruppi senza produrre un risultato per ogni gruppo",
-      "Conta le righe"
+      "Elimina la struttura dei gruppi senza produrre un risultato per ogni gruppo"
     ],
     correct: [0],
     exp: "Senza specificare una colonna, l'aggregazione si applica a tutte le colonne numeriche del gruppo. numeric_only=True evita errori con colonne non numeriche."
@@ -789,8 +724,7 @@ registerSubject("Pandas", [
     opts: [
       "Sostituire valori specifici in tutto il DataFrame",
       "Filtrare le righe che contengono quel valore",
-      "Ordinare le righe in base a quel valore",
-      "Contare le occorrenze di quel valore"
+      "Ordinare le righe in base a quel valore"
     ],
     correct: [0],
     exp: "replace sostituisce valori ovunque compaiano (utile per uniformare 'placeholder' come '-', 'N/A' in veri NaN). Accetta valori singoli, liste o dizionari."
@@ -801,8 +735,7 @@ registerSubject("Pandas", [
     opts: [
       "Tutte le righe e le prime tre colonne per posizione",
       "Le prime tre righe di tutte le colonne",
-      "Un singolo valore alla posizione indicata",
-      "Le colonne con etichetta da 0 a 3"
+      "Un singolo valore alla posizione indicata"
     ],
     correct: [0],
     exp: "Con iloc si indica [righe, colonne] per posizione: ':' tutte le righe, 0:3 le prime tre colonne (estremo escluso)."
@@ -813,7 +746,6 @@ registerSubject("Pandas", [
     opts: [
       "Le proporzioni (frequenze relative) di ciascuna categoria",
       "I conteggi assoluti di ciascuna categoria",
-      "La media dei valori per categoria",
       "Le prime righe della colonna categoria"
     ],
     correct: [0],
@@ -825,8 +757,7 @@ registerSubject("Pandas", [
     opts: [
       "left_on e right_on",
       "solo il parametro on con lo stesso nome",
-      "index_col per allineare le due tabelle",
-      "how='inner' come unico modo possibile"
+      "index_col per allineare le due tabelle"
     ],
     correct: [0],
     exp: "Quando le colonne chiave si chiamano diversamente: pd.merge(a, b, left_on='id_a', right_on='id_b'). 'on' si usa solo se il nome è identico."
@@ -837,8 +768,7 @@ registerSubject("Pandas", [
     opts: [
       "La somma delle due colonne riga per riga",
       "La somma totale di tutti i valori delle due colonne",
-      "La media delle due colonne per ciascuna riga",
-      "Il numero di righe che hanno un valore in a e b"
+      "La media delle due colonne per ciascuna riga"
     ],
     correct: [0],
     exp: "axis=1 opera lungo le colonne per ciascuna riga: qui somma a+b per ogni riga. axis=0 sommerebbe verticalmente ciascuna colonna."
@@ -848,7 +778,6 @@ registerSubject("Pandas", [
     q: "Impostare un indice datetime permette di:",
     opts: [
       "Fare slicing per periodo e resampling temporale",
-      "Solo ordinare",
       "Eliminare le date",
       "Contare le righe disponibili invece di analizzare il fenomeno richiesto"
     ],
@@ -861,8 +790,7 @@ registerSubject("Pandas", [
     opts: [
       "Aggrega i dati a frequenza mensile sommandoli",
       "Filtra i mesi presenti senza aggregare alla frequenza mensile",
-      "Ordina le date dell'indice senza cambiare frequenza",
-      "Rimuove valori mancanti invece di aggregare per periodo"
+      "Ordina le date dell'indice senza cambiare frequenza"
     ],
     correct: [0],
     exp: "resample raggruppa per intervalli temporali (M=mensile, D=giornaliero) e applica un'aggregazione: è il 'groupby del tempo' per le serie."
@@ -873,8 +801,7 @@ registerSubject("Pandas", [
     opts: [
       "Gestisce i valori duplicati aggregandoli, pivot no",
       "Non aggrega mai valori duplicati nelle combinazioni indice-colonna",
-      "Funziona solo su colonne testuali e non su dati tabellari generali",
-      "Non accetta indici o colonne per riorganizzare la tabella"
+      "Funziona solo su colonne testuali e non su dati tabellari generali"
     ],
     correct: [0],
     exp: "pivot richiede combinazioni indice/colonna uniche (fallisce con duplicati); pivot_table aggrega i duplicati con una funzione (default media), gestendo casi più generali."
@@ -885,8 +812,7 @@ registerSubject("Pandas", [
     opts: [
       "Aumenta ogni prezzo del 10% con una funzione anonima",
       "Ordina i prezzi",
-      "Filtra i prezzi secondo una soglia invece di ordinare il risultato",
-      "Conta i prezzi"
+      "Filtra i prezzi secondo una soglia invece di ordinare il risultato"
     ],
     correct: [0],
     exp: "apply con una lambda applica una trasformazione al volo a ogni elemento. Per operazioni semplici, però, la vettorializzazione diretta (df['prezzo']*1.1) è più veloce."
@@ -896,7 +822,6 @@ registerSubject("Pandas", [
     q: "df.index.is_unique verifica:",
     opts: [
       "Se le etichette dell'indice sono tutte diverse",
-      "Il numero di righe distinte del DataFrame",
       "Se la colonna indice contiene valori mancanti",
       "La media dei valori dell'indice"
     ],
@@ -909,7 +834,6 @@ registerSubject("Pandas", [
     opts: [
       "Divide la stringa in più colonne separate",
       "Ordina i nomi alfabeticamente senza cercare pattern nei dati",
-      "Conta le parole solo",
       "Elimina la colonna indicata invece di modificarne i valori"
     ],
     correct: [0],
@@ -921,7 +845,6 @@ registerSubject("Pandas", [
     opts: [
       "Assegna 'adulto'/'minore' in base alla condizione, in modo vettorializzato",
       "Filtra tenendo solo le righe con età >= 18",
-      "Conta quante persone sono maggiorenni",
       "Ordina le righe in base all'età"
     ],
     correct: [0],
@@ -933,8 +856,7 @@ registerSubject("Pandas", [
     opts: [
       "L'uso di memoria di ciascuna colonna",
       "Il numero di righe di ciascuna colonna",
-      "La media dei valori di ogni colonna",
-      "Le prime righe del DataFrame"
+      "La media dei valori di ogni colonna"
     ],
     correct: [0],
     exp: "memory_usage(deep=True) stima la memoria reale (incluse le stringhe). Utile per ottimizzare (es. convertire a category o a tipi più piccoli)."
@@ -944,7 +866,6 @@ registerSubject("Pandas", [
     q: "pd.concat([df1, df2], axis=1):",
     opts: [
       "Affianca i due DataFrame per colonna",
-      "Li impila per riga",
       "Fa una join su chiave",
       "Rimuove colonne dal dataset invece di combinare o filtrare i record"
     ],
@@ -957,8 +878,7 @@ registerSubject("Pandas", [
     opts: [
       "Stimare i NaN interpolando tra valori noti",
       "Sostituire con zero",
-      "Eliminare le righe",
-      "Contare i NaN"
+      "Eliminare le righe"
     ],
     correct: [0],
     exp: "interpolate riempie i mancanti stimandoli (di default lineare) tra i valori adiacenti: utile su serie ordinate per mantenere la continuità."
@@ -969,7 +889,6 @@ registerSubject("Pandas", [
     opts: [
       "La somma di ciascuna colonna",
       "La somma di ciascuna riga",
-      "La somma totale di tutti i valori",
       "La media di ciascuna colonna"
     ],
     correct: [0],
@@ -980,7 +899,6 @@ registerSubject("Pandas", [
     q: "df.rename_axis('id') serve a:",
     opts: [
       "Dare un nome all'indice",
-      "Rinominare le colonne del DataFrame",
       "Ordinare le etichette dell'indice",
       "Rimuovere del tutto l'indice"
     ],
@@ -993,8 +911,7 @@ registerSubject("Pandas", [
     opts: [
       "Perché & ha precedenza alta e senza parentesi la valutazione sarebbe errata",
       "Le parentesi non sono mai necessarie nelle maschere booleane pandas",
-      "Serve solo a rendere più leggibile il codice, senza effetto sulla valutazione",
-      "Servono a creare nuove colonne invece di controllare la precedenza"
+      "Serve solo a rendere più leggibile il codice, senza effetto sulla valutazione"
     ],
     correct: [0],
     exp: "L'operatore & ha precedenza maggiore dei confronti, quindi senza parentesi pandas proverebbe a valutare 1 & df.b prima, dando errore. Le parentesi impongono l'ordine corretto."
@@ -1004,7 +921,6 @@ registerSubject("Pandas", [
     q: "df.assign(iva = df['prezzo']*0.22):",
     opts: [
       "Restituisce un nuovo DataFrame con la colonna aggiunta",
-      "Modifica sempre l'originale",
       "Rimuove una colonna esistente invece di crearne una calcolata",
       "Ordina i dati per una colonna o un timestamp senza cambiarne il contenuto"
     ],
@@ -1017,8 +933,7 @@ registerSubject("Pandas", [
     opts: [
       "Somma le vendite per ogni combinazione regione-anno",
       "Somma solo per regione",
-      "Elimina la struttura dei gruppi senza produrre un risultato per ogni gruppo",
-      "Ordina le vendite"
+      "Elimina la struttura dei gruppi senza produrre un risultato per ogni gruppo"
     ],
     correct: [0],
     exp: "Passando una lista a groupby si raggruppa per più chiavi: il risultato ha un indice gerarchico (MultiIndex) con una riga per ciascuna combinazione."
@@ -1029,7 +944,6 @@ registerSubject("Pandas", [
     opts: [
       "Un indice a più livelli (gerarchico)",
       "Un errore di indicizzazione del DataFrame",
-      "Un tipo di grafico multidimensionale",
       "Una singola colonna usata come chiave"
     ],
     correct: [0],
@@ -1041,7 +955,6 @@ registerSubject("Pandas", [
     opts: [
       "Operazioni vettorializzate o np.where, evitando apply quando possibile",
       "Un ciclo for che scorre riga per riga",
-      "Solo la funzione pivot_table",
       "Solo un merge tra le colonne"
     ],
     correct: [0],
@@ -1053,8 +966,7 @@ registerSubject("Pandas", [
     opts: [
       "Le tre città più frequenti",
       "Le tre città meno frequenti",
-      "La media dei valori delle prime tre città",
-      "Le prime tre righe della colonna citta"
+      "La media dei valori delle prime tre città"
     ],
     correct: [0],
     exp: "value_counts ordina per frequenza decrescente; head(3) prende i primi tre, cioè i valori più comuni. Utile per le 'top N' categorie."
@@ -1065,7 +977,6 @@ registerSubject("Pandas", [
     opts: [
       "Il numero di righe con età >= 18",
       "La somma delle età di tutte le persone",
-      "La media dell'età dei maggiorenni",
       "Le righe con età maggiore o uguale a 18"
     ],
     correct: [0],
@@ -1076,7 +987,6 @@ registerSubject("Pandas", [
     q: "Una colonna con NaN non può essere int64 standard perché:",
     opts: [
       "NaN è un float; serve il tipo 'Int64' nullable per interi con mancanti",
-      "NaN è trattato come una stringa testuale nella colonna",
       "Gli interi non sono supportati come tipo dati in pandas",
       "È un errore generico di pandas non legato al tipo nullable"
     ],
@@ -1089,8 +999,7 @@ registerSubject("Pandas", [
     opts: [
       "Statistiche per le colonne testuali (conteggio, unici, top, freq)",
       "La media e i quartili delle colonne numeriche",
-      "Le prime righe delle colonne di testo",
-      "Un grafico delle categorie più frequenti"
+      "Le prime righe delle colonne di testo"
     ],
     correct: [0],
     exp: "Per le colonne object/categoriche, describe mostra numero di valori, quanti unici, il più frequente (top) e la sua frequenza. Complementare alle statistiche numeriche."
@@ -1101,8 +1010,7 @@ registerSubject("Pandas", [
     opts: [
       "Applica una funzione personalizzata a ciascun sotto-DataFrame di gruppo",
       "Somma tutti i valori del DataFrame",
-      "Ordina le righe di ciascun reparto",
-      "Elimina i reparti con pochi elementi"
+      "Ordina le righe di ciascun reparto"
     ],
     correct: [0],
     exp: "groupby().apply passa a func l'intero sotto-DataFrame di ogni gruppo: massima flessibilità (es. calcoli che coinvolgono più colonne per gruppo), ma più lenta di agg/transform."
@@ -1113,7 +1021,6 @@ registerSubject("Pandas", [
     opts: [
       "Le righe con etichette 0, 2 e 5",
       "Le prime cinque righe del DataFrame",
-      "Le colonne nelle posizioni 0, 2 e 5",
       "Un singolo valore nella posizione 0"
     ],
     correct: [0],
@@ -1124,7 +1031,6 @@ registerSubject("Pandas", [
     q: "Per eliminare le righe con età < 0 si può:",
     opts: [
       "Filtrare tenendo df[df['eta']>=0]",
-      "Usare df.mean()",
       "Usare df.columns",
       "Usare df.head()"
     ],
@@ -1137,8 +1043,7 @@ registerSubject("Pandas", [
     opts: [
       "Il chained indexing può agire su una copia, non modificando l'originale (SettingWithCopyWarning)",
       "È più veloce perché evita controlli sull'indice e sulle copie intermedie",
-      "Fallisce sempre, anche quando la selezione produce un oggetto valido",
-      "Rimuove colonne dal DataFrame senza modificare le righe selezionate"
+      "Fallisce sempre, anche quando la selezione produce un oggetto valido"
     ],
     correct: [0],
     exp: "Il doppio indexing 'a catena' può restituire una copia temporanea: l'assegnazione potrebbe non avere effetto. Si usa invece df.loc[df.a>0, 'b'] = 1, sicuro e chiaro."
@@ -1148,7 +1053,6 @@ registerSubject("Pandas", [
     q: "pd.to_numeric(df['x'], errors='coerce'):",
     opts: [
       "Converte in numero, trasformando i valori non validi in NaN",
-      "Elimina la colonna indicata invece di modificarne i valori",
       "Ordina i valori in ordine crescente o decrescente senza trasformarli",
       "Conta i valori presenti senza modificare granularità o struttura"
     ],
@@ -1161,8 +1065,7 @@ registerSubject("Pandas", [
     opts: [
       "Le righe in base alle etichette dell'indice",
       "Le righe in base ai valori di una colonna",
-      "Le colonne in base al loro tipo di dato",
-      "Le righe rimuovendo prima i duplicati"
+      "Le colonne in base al loro tipo di dato"
     ],
     correct: [0],
     exp: "sort_index riordina per etichetta dell'indice (o delle colonne con axis=1). sort_values ordina invece per i valori di una colonna."
@@ -1172,7 +1075,6 @@ registerSubject("Pandas", [
     q: "df.round(2) su colonne numeriche:",
     opts: [
       "Arrotonda i valori a due decimali",
-      "Filtra le righe con almeno due decimali",
       "Ordina i valori numerici in modo crescente",
       "Conta i valori con due cifre decimali"
     ],
@@ -1184,7 +1086,6 @@ registerSubject("Pandas", [
     q: "df.groupby('reparto').size() restituisce:",
     opts: [
       "Il numero di righe per ciascun reparto",
-      "La somma degli stipendi per reparto",
       "La media dei valori di ciascun reparto",
       "I valori distinti presenti in ogni reparto"
     ],
@@ -1196,7 +1097,6 @@ registerSubject("Pandas", [
     q: "Un tipico flusso di analisi con pandas è:",
     opts: [
       "Caricare → esplorare → pulire → trasformare/aggregare → visualizzare/esportare",
-      "Caricare → pulire → esplorare → visualizzare/esportare → trasformare/aggregare",
       "Esplorare → caricare → pulire → trasformare/aggregare → visualizzare/esportare",
       "Visualizzare/esportare → caricare → esplorare → pulire → trasformare/aggregare"
     ],

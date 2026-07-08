@@ -9,8 +9,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "L'insieme di strumenti e processi per trasformare i dati in informazioni per le decisioni",
       "L'insieme delle tecniche per registrare le transazioni operative quotidiane",
-      "La progettazione dell'infrastruttura hardware e di rete dei sistemi aziendali",
-      "La branca dell'informatica che studia le reti neurali artificiali"
+      "La progettazione dell'infrastruttura hardware e di rete dei sistemi aziendali"
     ],
     correct: [0],
     exp: "La BI raccoglie, integra, analizza e presenta i dati aziendali (dashboard, report) per supportare le decisioni. Trasforma dati grezzi in informazioni utili al business."
@@ -21,8 +20,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Un archivio centralizzato di dati integrati e storicizzati per l'analisi",
       "Un database operativo che gestisce le transazioni in tempo reale",
-      "Un foglio di calcolo condiviso in cui si inseriscono i dati a mano",
-      "Un server web che ospita le pagine e le applicazioni aziendali"
+      "Un foglio di calcolo condiviso in cui si inseriscono i dati a mano"
     ],
     correct: [0],
     exp: "Il data warehouse consolida dati da più fonti in una struttura ottimizzata per l'analisi e il reporting, con dati storici. È il cuore dei sistemi di BI."
@@ -33,7 +31,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "OLTP gestisce transazioni operative; OLAP serve all'analisi di grandi volumi",
       "OLAP gestisce le transazioni operative; OLTP serve all'analisi storica",
-      "Sono la stessa tecnologia indicata con due nomi commerciali diversi",
       "OLTP funziona solo in cloud, mentre OLAP solo su server locali"
     ],
     correct: [0],
@@ -45,8 +42,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Una tabella dei fatti centrale è collegata a più tabelle dimensione",
       "Tutte le tabelle sono normalizzate al massimo grado per evitare ridondanze",
-      "Non esistono tabelle dimensione: i dati stanno in un'unica tabella",
-      "Le tabelle non hanno relazioni tra loro e vanno unite manualmente"
+      "Non esistono tabelle dimensione: i dati stanno in un'unica tabella"
     ],
     correct: [0],
     exp: "Lo star schema ha al centro la fact table (metriche) circondata dalle dimension table (contesto: tempo, prodotto, cliente). Denormalizzato per query analitiche veloci."
@@ -57,8 +53,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Misure numeriche (es. vendite, quantità) e chiavi verso le dimensioni",
       "Solo attributi descrittivi testuali come nome, categoria e indirizzo",
-      "Esclusivamente le date degli eventi, senza alcuna misura numerica",
-      "Nessun dato: serve solo a collegare fisicamente le altre tabelle"
+      "Esclusivamente le date degli eventi, senza alcuna misura numerica"
     ],
     correct: [0],
     exp: "La fact table registra gli eventi misurabili del business (vendite, transazioni) con metriche numeriche e foreign key verso le dimensioni. È di solito la tabella più grande."
@@ -68,7 +63,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Una tabella dimensione (dimension) contiene:",
     opts: [
       "Attributi descrittivi che danno contesto ai fatti (chi, cosa, quando, dove)",
-      "Soltanto valori numerici già aggregati come somme e medie",
       "Le transazioni operative registrate in tempo reale dai sistemi",
       "Nessuna chiave: è collegata ai fatti solo in base alla posizione"
     ],
@@ -81,8 +75,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Le dimensioni sono normalizzate in più tabelle collegate",
       "Non esiste una tabella dei fatti al centro dello schema",
-      "È sempre più veloce dello star grazie a un numero minore di join",
-      "Le tabelle non usano chiavi per collegarsi tra di loro"
+      "È sempre più veloce dello star grazie a un numero minore di join"
     ],
     correct: [0],
     exp: "Nello snowflake le dimensioni sono suddivise in sotto-tabelle normalizzate (es. prodotto→categoria→reparto): risparmia spazio ma richiede più join, spesso più lente dello star."
@@ -93,7 +86,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Extract, Transform, Load",
       "Export, Test, Link",
-      "Enter, Type, Log",
       "Edit, Transfer, List"
     ],
     correct: [0],
@@ -104,7 +96,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Qual è la differenza tra ETL ed ELT?",
     opts: [
       "Nell'ELT si caricano prima i dati grezzi e si trasformano dopo, dentro il warehouse",
-      "Sono lo stesso processo indicato con due sigle intercambiabili",
       "Nell'ELT i dati non vengono mai trasformati, ma solo copiati",
       "Nell'ETL i dati non vengono mai estratti dalle sorgenti originali"
     ],
@@ -117,8 +108,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Uno strumento di visualizzazione e reportistica dati di Microsoft",
       "Un database relazionale usato per archiviare grandi volumi di dati",
-      "Un linguaggio di programmazione per sviluppare applicazioni web",
-      "Un sistema operativo ottimizzato per l'analisi dei big data"
+      "Un linguaggio di programmazione per sviluppare applicazioni web"
     ],
     correct: [0],
     exp: "Power BI è una piattaforma di BI: importa dati da varie fonti, li modella e crea dashboard e report interattivi. Include Power Query (ETL) e il linguaggio DAX."
@@ -129,8 +119,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Il linguaggio per creare misure e colonne calcolate",
       "Un tipo di grafico interattivo per le dashboard",
-      "Il connettore che importa i dati dalle sorgenti",
-      "Il formato di file in cui si salvano i report"
+      "Il connettore che importa i dati dalle sorgenti"
     ],
     correct: [0],
     exp: "DAX (Data Analysis Expressions) è il linguaggio di formule di Power BI per definire misure (calcoli aggregati) e colonne calcolate, con funzioni come SUM, CALCULATE, FILTER."
@@ -141,8 +130,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "È un calcolo aggregato che si adatta al contesto del report",
       "È una colonna con valori fissi calcolati una volta al caricamento",
-      "È un tipo di grafico predefinito disponibile nelle dashboard",
-      "È una tabella di supporto usata per collegare le dimensioni"
+      "È un tipo di grafico predefinito disponibile nelle dashboard"
     ],
     correct: [0],
     exp: "Le misure calcolano valori aggregati (somme, medie) che reagiscono ai filtri e al contesto del visual (es. totale vendite per la selezione corrente). Sono calcolate 'al volo'."
@@ -153,7 +141,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Estrarre, pulire e trasformare i dati prima del caricamento",
       "Creare i grafici e i visual interattivi della dashboard finale",
-      "Scrivere le misure DAX che calcolano i valori aggregati",
       "Pubblicare e condividere il report con gli altri utenti"
     ],
     correct: [0],
@@ -165,7 +152,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "A trasformare i dati nel warehouse scrivendo trasformazioni in SQL versionate",
       "A estrarre i dati dalle API delle sorgenti esterne e caricarli",
-      "A creare dashboard e report interattivi per gli utenti finali",
       "A gestire e configurare i server su cui gira il warehouse"
     ],
     correct: [0],
@@ -177,7 +163,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Estrarre e caricare (EL) dati da varie fonti nel warehouse in modo automatico",
       "Trasformare i dati grezzi già caricati in modelli dimensionali",
-      "Creare i grafici e le dashboard finali per gli utenti di business",
       "Addestrare modelli di machine learning a partire dai dati raccolti"
     ],
     correct: [0],
@@ -189,8 +174,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Come registrare i cambiamenti degli attributi di una dimensione nel tempo",
       "Come gestire le transazioni operative in tempo reale sul database",
-      "Come cifrare gli attributi sensibili contenuti in una dimensione",
-      "Come configurare la rete tra il warehouse e i sistemi sorgente"
+      "Come cifrare gli attributi sensibili contenuti in una dimensione"
     ],
     correct: [0],
     exp: "Le SCD trattano l'evoluzione dei dati dimensionali (es. un cliente cambia città): il tipo 1 sovrascrive, il tipo 2 conserva lo storico creando nuove righe con validità temporale."
@@ -201,8 +185,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Modellazione dimensionale bottom-up (data mart con schemi a stella)",
       "Un unico grande modello normalizzato costruito con approccio top-down",
-      "Un'architettura priva di tabelle dei fatti, basata solo su dimensioni",
-      "Un modello pensato esclusivamente per i dati non strutturati"
+      "Un'architettura priva di tabelle dei fatti, basata solo su dimensioni"
     ],
     correct: [0],
     exp: "Kimball propone un approccio dimensionale bottom-up (data mart integrati con star schema). Inmon propone un DW centrale normalizzato (top-down) da cui derivare i data mart."
@@ -213,7 +196,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Un sottoinsieme del data warehouse focalizzato su un'area/reparto",
       "L'intero data warehouse aziendale con tutti i dati integrati",
-      "Un database operativo che gestisce le transazioni quotidiane",
       "Un semplice file CSV esportato dal data warehouse"
     ],
     correct: [0],
@@ -225,7 +207,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Il livello di dettaglio di ogni riga (cosa rappresenta una riga)",
       "Il numero complessivo di colonne presenti nella tabella dei fatti",
-      "La quantità di memoria che la tabella occupa nella cache",
       "L'ordine con cui le righe vengono restituite dalle query"
     ],
     correct: [0],
@@ -237,8 +218,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Una metrica chiave per misurare le prestazioni verso un obiettivo",
       "Un tipo di grafico usato per rappresentare i dati di vendita",
-      "Una tabella di supporto che collega i fatti alle dimensioni",
-      "Un connettore che importa i dati dalle sorgenti esterne"
+      "Una tabella di supporto che collega i fatti alle dimensioni"
     ],
     correct: [0],
     exp: "I KPI sono indicatori sintetici che misurano il progresso verso obiettivi di business (es. tasso di conversione, fatturato mensile). Sono spesso al centro delle dashboard."
@@ -248,7 +228,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Una dashboard di BI serve a:",
     opts: [
       "Mostrare a colpo d'occhio metriche e KPI con visualizzazioni interattive",
-      "Archiviare i dati grezzi provenienti dai sistemi sorgente",
       "Estrarre e trasformare i dati prima di caricarli nel warehouse",
       "Definire i permessi di accesso degli utenti ai vari report"
     ],
@@ -261,7 +240,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Per velocizzare le query analitiche riducendo il numero di join",
       "Per garantire la massima integrità dei dati durante la scrittura",
-      "Per ridurre al minimo lo spazio occupato dai dati su disco",
       "Per gestire meglio le transazioni concorrenti di molti utenti"
     ],
     correct: [0],
@@ -273,8 +251,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Passare da un livello aggregato a uno più dettagliato",
       "Aggregare i dati a un livello di dettaglio superiore",
-      "Esportare il report in un file PDF stampabile",
-      "Cambiare il tema di colori della dashboard"
+      "Esportare il report in un file PDF stampabile"
     ],
     correct: [0],
     exp: "Il drill-down approfondisce: es. da vendite annuali → mensili → giornaliere. Il roll-up è l'operazione inversa (aggregare). Sono tipici dell'analisi OLAP."
@@ -285,7 +262,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Analizzare i dati secondo più dimensioni con aggregazioni rapide",
       "Memorizzare i file binari e i documenti allegati dell'azienda",
-      "Gestire le transazioni operative in tempo reale sul database",
       "Definire i permessi di accesso ai dati per ciascun utente"
     ],
     correct: [0],
@@ -297,7 +273,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Ospitare temporaneamente i dati grezzi prima della trasformazione",
       "Mostrare le dashboard finali agli utenti di business",
-      "Archiviare in modo permanente i report già generati",
       "Gestire gli account e i permessi degli utenti del warehouse"
     ],
     correct: [0],
@@ -309,7 +284,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Un identificatore artificiale (es. progressivo) indipendente dai dati di business",
       "La chiave naturale proveniente direttamente dal sistema sorgente",
-      "Un valore descrittivo che riassume il contenuto della riga",
       "Una misura numerica calcolata a partire dai fatti collegati"
     ],
     correct: [0],
@@ -321,8 +295,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Relazioni tra colonne chiave (uno-a-molti tipicamente)",
       "Un unico file di testo che contiene tutte le tabelle",
-      "Copie manuali dei dati incollate tra una tabella e l'altra",
-      "Nessun collegamento: ogni tabella resta del tutto isolata"
+      "Copie manuali dei dati incollate tra una tabella e l'altra"
     ],
     correct: [0],
     exp: "Nel modello di Power BI si definiscono relazioni tra dimensioni e fatti (di solito uno-a-molti): permettono ai visual di filtrare e aggregare correttamente tra le tabelle."
@@ -333,8 +306,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Valutare un'espressione modificando il contesto dei filtri",
       "Creare un nuovo grafico all'interno della pagina del report",
-      "Importare i dati dalle sorgenti esterne dentro il modello",
-      "Ordinare le righe di una tabella secondo una colonna"
+      "Importare i dati dalle sorgenti esterne dentro il modello"
     ],
     correct: [0],
     exp: "CALCULATE è la funzione DAX più potente: calcola una misura applicando o modificando i filtri (es. vendite solo per una regione), controllando il contesto di calcolo."
@@ -345,8 +317,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Integra i dati in un'unica versione coerente e condivisa",
       "Duplica i dati in più copie gestite da reparti diversi",
-      "Elimina i dati storici mantenendo solo lo stato attuale",
-      "È semplicemente una copia di backup dei database operativi"
+      "Elimina i dati storici mantenendo solo lo stato attuale"
     ],
     correct: [0],
     exp: "Consolidando le fonti in un modello unico e coerente, il DW evita che reparti diversi abbiano numeri contrastanti: tutti fanno riferimento agli stessi dati certificati."
@@ -357,8 +328,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Un flusso automatizzato che sposta e trasforma i dati tra sistemi",
       "Un singolo file statico in cui sono salvati tutti i dati",
-      "Un grafico che mostra l'andamento dei dati nel tempo",
-      "Un database operativo che gestisce le transazioni quotidiane"
+      "Un grafico che mostra l'andamento dei dati nel tempo"
     ],
     correct: [0],
     exp: "La data pipeline orchestra i passi (estrazione, trasformazione, caricamento) per portare i dati dalle sorgenti alla destinazione (DW), in modo ripetibile e automatizzato."
@@ -369,7 +339,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Fissare il valore di una dimensione per estrarne una fetta",
       "Aggregare i dati salendo a un livello di dettaglio superiore",
-      "Cambiare del tutto la combinazione di colori del report",
       "Eliminare completamente una dimensione dall'analisi del cubo"
     ],
     correct: [0],
@@ -381,7 +350,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Serve al monitoraggio quotidiano; l'analitico esplora trend e cause",
       "Serve a esplorare trend e cause; l'analitico al monitoraggio quotidiano",
-      "Sono la stessa cosa: cambia soltanto il nome che si utilizza",
       "Il report operativo gestisce le transazioni, l'analitico i backup"
     ],
     correct: [0],
@@ -393,7 +361,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Il percorso e le trasformazioni dei dati dalla sorgente alla destinazione",
       "Il numero di utenti che accedono ai dati in un dato periodo",
-      "La combinazione di colori usata nei grafici della dashboard",
       "La velocità della rete che collega le sorgenti al warehouse"
     ],
     correct: [0],
@@ -405,7 +372,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Velocizzare le query analitiche frequenti",
       "Rallentare volutamente le query poco usate",
-      "Ridurre lo spazio eliminando i dati storici",
       "Impedire l'accesso concorrente alle tabelle"
     ],
     correct: [0],
@@ -417,7 +383,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Query semplici e veloci grazie a pochi join intuitivi",
       "La massima normalizzazione dei dati per evitare ogni ridondanza",
-      "L'assenza totale di ridondanza in tutte le tabelle",
       "L'impossibilità di aggregare i dati per più dimensioni"
     ],
     correct: [0],
@@ -429,8 +394,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Quali righe sono considerate nel calcolo di una misura",
       "La combinazione di colori applicata ai visual del report",
-      "Il nome della tabella da cui provengono i dati mostrati",
-      "La connessione di rete usata per accedere al database"
+      "Il nome della tabella da cui provengono i dati mostrati"
     ],
     correct: [0],
     exp: "Il contesto di filtro (dato da slicer, righe/colonne del visual, CALCULATE) definisce il sottoinsieme di dati su cui la misura viene calcolata. È centrale in DAX."
@@ -440,7 +404,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Un caricamento incrementale nel DW:",
     opts: [
       "Aggiorna solo i dati nuovi o modificati, non tutto da capo",
-      "Ricarica ogni volta l'intero dataset dalla sorgente originale",
       "Non aggiorna mai i dati una volta caricati la prima volta",
       "Cancella i dati esistenti prima di ogni nuovo caricamento"
     ],
@@ -452,7 +415,6 @@ registerSubject("BI e Data Warehouse", [
     q: "La data governance riguarda:",
     opts: [
       "Politiche, qualità, sicurezza e responsabilità sui dati",
-      "La combinazione di colori e lo stile grafico delle dashboard",
       "La velocità di elaborazione della CPU dei server del warehouse",
       "La sola procedura di backup periodico dei dati aziendali"
     ],
@@ -465,8 +427,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Creare report e analisi autonomamente, senza dipendere dall'IT",
       "Programmare direttamente il database sottostante con codice SQL",
-      "Gestire e configurare i server su cui gira la piattaforma",
-      "Scrivere i driver di connessione verso le sorgenti dati"
+      "Gestire e configurare i server su cui gira la piattaforma"
     ],
     correct: [0],
     exp: "Strumenti come Power BI abilitano gli utenti a esplorare i dati e costruire report da soli, riducendo il collo di bottiglia dell'IT, purché su dati governati e affidabili."
@@ -477,8 +438,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Un file SQL che definisce una trasformazione (una SELECT) materializzata come tabella/vista",
       "Un modello di machine learning addestrato sui dati del warehouse",
-      "Un grafico predefinito incluso nelle dashboard interattive",
-      "Un connettore che importa i dati da una sorgente esterna"
+      "Un grafico predefinito incluso nelle dashboard interattive"
     ],
     correct: [0],
     exp: "Un model dbt è una SELECT SQL che dbt esegue e materializza (come tabella o vista) nel warehouse. I model si compongono referenziandosi tra loro con ref()."
@@ -489,8 +449,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Verificare la qualità dei dati (unicità, non nulli, valori attesi)",
       "Generare automaticamente i grafici dei risultati delle query",
-      "Estrarre i dati grezzi dalle sorgenti operative dell'azienda",
-      "Gestire gli account e i permessi degli utenti del warehouse"
+      "Estrarre i dati grezzi dalle sorgenti operative dell'azienda"
     ],
     correct: [0],
     exp: "dbt permette test sui dati (es. una chiave deve essere unica e non nulla, un valore deve stare in un elenco): individua problemi di qualità nelle trasformazioni prima che arrivino ai report."
@@ -501,8 +460,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Scegliere il processo di business e definire la grana dei fatti",
       "Disegnare subito le dashboard e i grafici finali del progetto",
-      "Applicare la cifratura a tutte le tabelle del data warehouse",
-      "Acquistare l'hardware e i server su cui girerà il sistema"
+      "Applicare la cifratura a tutte le tabelle del data warehouse"
     ],
     correct: [0],
     exp: "Kimball: 1) scegliere il processo di business, 2) dichiarare la grana, 3) identificare le dimensioni, 4) identificare i fatti. Definire la grana è cruciale e precede le dimensioni."
@@ -513,7 +471,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Un grafico a linee",
       "Un grafico a torta",
-      "Una tabella di correlazione",
       "Un istogramma di una variabile"
     ],
     correct: [0],
@@ -525,8 +482,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Una riga della dimensione è collegata a molte righe dei fatti",
       "Una riga dei fatti è collegata a molte righe della dimensione",
-      "Ogni riga della dimensione corrisponde a una sola riga dei fatti",
-      "Le due tabelle non hanno alcun collegamento diretto tra loro"
+      "Ogni riga della dimensione corrisponde a una sola riga dei fatti"
     ],
     correct: [0],
     exp: "Es: un cliente (una riga in dimensione) compare in molte vendite (molte righe nei fatti). È la cardinalità tipica dello star schema: dimensione (uno) → fatti (molti)."
@@ -536,7 +492,6 @@ registerSubject("BI e Data Warehouse", [
     q: "La pianificazione dell'aggiornamento (refresh) di un report serve a:",
     opts: [
       "Mantenere i dati del report allineati alle sorgenti a intervalli regolari",
-      "Aggiornare la combinazione di colori e il layout del report",
       "Eliminare periodicamente i dati storici per liberare spazio",
       "Creare nuovi account per gli utenti che consultano il report"
     ],
@@ -549,7 +504,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Perché l'analisi richiede confronti nel tempo e trend, non solo lo stato attuale",
       "Perché conservare i dati storici occupa molto meno spazio su disco",
-      "Perché è più veloce cancellare i dati vecchi a ogni caricamento",
       "Perché i dati storici non servono mai alle decisioni aziendali"
     ],
     correct: [0],
@@ -561,7 +515,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "È calcolata riga per riga e memorizzata; la misura si calcola al volo nel contesto",
       "Si calcola al volo nel contesto; la misura è memorizzata riga per riga",
-      "Sono esattamente la stessa cosa indicata con due nomi diversi",
       "Reagisce ai filtri del report esattamente come fa una misura"
     ],
     correct: [0],
@@ -573,7 +526,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Uniformare formati, unità e definizioni durante la trasformazione",
       "Lasciare i dati esattamente come sono nelle sorgenti originali",
-      "Usare una sola sorgente dati ignorando tutte le altre",
       "Evitare qualsiasi trasformazione per non alterare i dati"
     ],
     correct: [0],
@@ -585,8 +537,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Definire metriche e relazioni in modo coerente per tutti gli utenti",
       "Cifrare i dati prima di mostrarli nelle dashboard agli utenti",
-      "Gestire la rete che collega il warehouse ai client di analisi",
-      "Sostituire completamente il database relazionale sottostante"
+      "Gestire la rete che collega il warehouse ai client di analisi"
     ],
     correct: [0],
     exp: "Il layer semantico traduce le tabelle tecniche in concetti di business (metriche, dimensioni) con definizioni condivise, così tutti calcolano gli stessi KPI allo stesso modo."
@@ -597,7 +548,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Il data lake conserva dati grezzi di ogni tipo; il DW dati strutturati e modellati",
       "Il data warehouse conserva dati grezzi; il data lake dati già modellati",
-      "Sono identici: cambia soltanto il fornitore che li commercializza",
       "Il data lake gestisce solo dati relazionali già strutturati"
     ],
     correct: [0],
@@ -608,7 +558,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Una tabella 'dimensione tempo' (date dimension) serve a:",
     opts: [
       "Fornire attributi di calendario (giorno, mese, trimestre, festività) per le analisi temporali",
-      "Memorizzare le transazioni operative con il relativo orario esatto",
       "Cifrare le date per proteggere le informazioni sensibili dei clienti",
       "Sostituire la tabella dei fatti nelle analisi che coinvolgono il tempo"
     ],
@@ -621,7 +570,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Legge solo le colonne necessarie, velocizzando le aggregazioni",
       "Registra i dati riga per riga, ideale per le transazioni operative",
-      "Occupa sempre più spazio ma garantisce una scrittura più rapida",
       "Serve esclusivamente a cifrare le colonne con dati sensibili"
     ],
     correct: [0],
@@ -633,8 +581,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Accuratezza, completezza, coerenza e tempestività dei dati",
       "La combinazione di colori usata per rappresentare i dati",
-      "La velocità della CPU dei server che ospitano i dati",
-      "Il numero di dashboard costruite a partire dai dati"
+      "La velocità della CPU dei server che ospitano i dati"
     ],
     correct: [0],
     exp: "Dati di qualità sono accurati, completi, coerenti, aggiornati e univoci. Report costruiti su dati scadenti portano a decisioni sbagliate ('garbage in, garbage out')."
@@ -645,7 +592,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Mostrare a ciascun utente solo le righe di dati che gli competono",
       "Cambiare la combinazione di colori del report per ogni utente",
-      "Velocizzare l'aggiornamento dei dati per gli utenti connessi",
       "Creare automaticamente nuove misure DAX per ciascun utente"
     ],
     correct: [0],
@@ -656,7 +602,6 @@ registerSubject("BI e Data Warehouse", [
     q: "'fatturato' e 'regione' sono rispettivamente:",
     opts: [
       "Una misura (numerica) e una dimensione (categorica)",
-      "Due misure numeriche che si possono sommare tra loro",
       "Due dimensioni categoriche usate per filtrare i dati",
       "Due tabelle dei fatti collegate alla stessa dimensione"
     ],
@@ -668,7 +613,6 @@ registerSubject("BI e Data Warehouse", [
     q: "L'aggiornamento dei dati del DW è tipicamente orchestrato:",
     opts: [
       "Da pipeline schedulate (es. notturne) che eseguono l'ETL/ELT",
-      "Manualmente ogni ora da parte degli utenti di business",
       "Non viene mai aggiornato dopo il primo caricamento iniziale",
       "Esclusivamente in tempo reale a ogni singola transazione"
     ],
@@ -681,8 +625,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Creando una nuova riga a ogni cambiamento, con date di validità",
       "Sovrascrivendo il vecchio valore con quello nuovo, senza storico",
-      "Cancellando l'intera dimensione a ogni cambiamento rilevato",
-      "Ignorando i cambiamenti e mantenendo sempre il primo valore"
+      "Cancellando l'intera dimensione a ogni cambiamento rilevato"
     ],
     correct: [0],
     exp: "La SCD di tipo 2 storicizza: quando un attributo cambia, si aggiunge una nuova riga (con chiave surrogata e periodo di validità), mantenendo anche la versione precedente. Il tipo 1 sovrascrive."
@@ -693,7 +636,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Passare a una pagina di dettaglio filtrata sul contesto selezionato",
       "Cambiare la combinazione di colori dell'intero report",
-      "Esportare l'intero report in un file PDF stampabile",
       "Eliminare un visual dalla pagina corrente del report"
     ],
     correct: [0],
@@ -704,7 +646,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Un DW tradizionale aggiorna i dati tipicamente in modalità:",
     opts: [
       "Batch (a intervalli), anche se esistono soluzioni near-real-time",
-      "Esclusivamente in tempo reale a ogni singola transazione",
       "Mai: i dati vengono caricati una sola volta all'inizio",
       "Solo manualmente, con inserimenti fatti a mano dagli utenti"
     ],
@@ -717,8 +658,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Ottimizza le prestazioni e semplifica le misure DAX",
       "Rallenta i calcoli ma garantisce una maggiore sicurezza",
-      "Impedisce di creare relazioni tra le tabelle del modello",
-      "Elimina la necessità di scrivere qualsiasi misura DAX"
+      "Impedisce di creare relazioni tra le tabelle del modello"
     ],
     correct: [0],
     exp: "Power BI lavora meglio con un modello a stella (fatti + dimensioni): relazioni chiare, query più veloci e formule DAX più semplici e prevedibili rispetto a modelli piatti o troppo normalizzati."
@@ -729,7 +669,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Aggregata secondo le dimensioni presenti nel visual",
       "Riga per riga così com'è, senza alcuna aggregazione",
-      "Come testo statico che non cambia mai con i filtri",
       "Senza alcun calcolo, mostrando solo il nome della misura"
     ],
     correct: [0],
@@ -740,7 +679,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Un connettore in uno strumento di BI serve a:",
     opts: [
       "Collegarsi a una specifica sorgente dati (database, API, file)",
-      "Creare i grafici e i visual della dashboard finale",
       "Scrivere le query SQL di trasformazione dei dati",
       "Gestire gli account e i permessi degli utenti del report"
     ],
@@ -753,8 +691,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Salvare fisicamente i risultati (più veloci in lettura, ma da aggiornare)",
       "Non salvare nulla e ricalcolare la query a ogni interrogazione",
-      "Generare automaticamente un grafico a partire dai risultati",
-      "Cifrare i dati trasformati prima di archiviarli nel warehouse"
+      "Generare automaticamente un grafico a partire dai risultati"
     ],
     correct: [0],
     exp: "Una view ricalcola la query a ogni interrogazione (sempre fresca ma potenzialmente lenta); una table salva i risultati (letture rapide, ma va rigenerata). La scelta bilancia freschezza e performance."
@@ -765,7 +702,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Può essere sommata lungo tutte le dimensioni",
       "Non può mai essere sommata lungo nessuna dimensione",
-      "È sempre espressa come una percentuale o un rapporto",
       "È in realtà una dimensione e non una misura numerica"
     ],
     correct: [0],
@@ -777,8 +713,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Relazioni molti-a-molti tra dimensioni e fatti",
       "Semplici relazioni uno-a-uno tra due tabelle",
-      "La cifratura delle chiavi che collegano le tabelle",
-      "La configurazione delle dashboard condivise"
+      "La cifratura delle chiavi che collegano le tabelle"
     ],
     correct: [0],
     exp: "La bridge table risolve relazioni molti-a-molti (es. un ordine con più promozioni), collegando le tabelle attraverso una tabella intermedia con le coppie di chiavi."
@@ -789,7 +724,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Il KPI è una metrica LEGATA a un obiettivo strategico; non tutte le metriche sono KPI",
       "La metrica è legata a un obiettivo strategico; il KPI è una misura qualsiasi",
-      "Sono la stessa cosa: due nomi diversi per lo stesso concetto",
       "La metrica è sempre più importante e strategica del KPI"
     ],
     correct: [0],
@@ -801,7 +735,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Può dare un risultato errato: serve ponderare per la numerosità",
       "Dà sempre il risultato corretto indipendentemente dai gruppi",
-      "È più preciso della media calcolata sui dati complessivi",
       "Non è mai un problema perché le medie si sommano tra loro"
     ],
     correct: [0],
@@ -813,7 +746,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Rieseguita più volte produce sempre lo stesso risultato, senza duplicare i dati",
       "Rieseguita più volte duplica i dati a ogni nuova esecuzione",
-      "Non può in alcun modo essere rieseguita una seconda volta",
       "Cancella tutti i dati esistenti a ogni singola esecuzione"
     ],
     correct: [0],
@@ -824,7 +756,6 @@ registerSubject("BI e Data Warehouse", [
     q: "L'analisi 'ad hoc' si distingue dal reporting standard perché:",
     opts: [
       "Esplora domande specifiche e non pianificate sui dati",
-      "Produce report ricorrenti predefiniti su base giornaliera",
       "Non utilizza affatto i dati del data warehouse aziendale",
       "Serve soltanto a creare grafici colorati per le presentazioni"
     ],
@@ -837,7 +768,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Usare misure ben scritte su un modello a stella pulito",
       "Molte colonne calcolate su tabelle enormi e piatte",
-      "Evitare le relazioni",
       "Importare tutto senza modellare"
     ],
     correct: [0],
@@ -849,7 +779,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Interroga la sorgente in tempo reale senza importare i dati",
       "Copia sempre tutti i dati della sorgente dentro il modello",
-      "Non riesce a connettersi ai database, ma solo ai file Excel",
       "Trasforma i dati prima di mostrarli, come fa Power Query"
     ],
     correct: [0],
@@ -861,7 +790,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Factless fact table (tabella dei fatti senza fatti)",
       "Una normale tabella dimensione con soli attributi descrittivi",
-      "Una tabella ponte che collega due dimensioni tra loro",
       "Una tabella di staging usata solo in modo temporaneo"
     ],
     correct: [0],
@@ -873,7 +801,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Pulizia, deduplicazione, join e standardizzazione dei valori",
       "La semplice copia dei file senza applicare alcuna modifica",
-      "La sola cifratura dei dati prima del caricamento finale",
       "Nessuna trasformazione: i dati passano del tutto invariati"
     ],
     correct: [0],
@@ -884,7 +811,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Un progetto di BI di successo parte tipicamente da:",
     opts: [
       "Le domande di business e i KPI che si vogliono monitorare",
-      "La scelta della combinazione di colori delle dashboard",
       "L'acquisto dell'hardware e dei server necessari al progetto",
       "Il numero di tabelle che comporranno il data warehouse"
     ],
@@ -897,8 +823,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Analizzare l'evoluzione nel tempo di grandezze che verrebbero sovrascritte",
       "Cancellare lo storico per mantenere solo il valore più recente",
-      "Cifrare periodicamente i dati per proteggerli dagli accessi",
-      "Velocizzare le transazioni operative del sistema OLTP"
+      "Cifrare periodicamente i dati per proteggerli dagli accessi"
     ],
     correct: [0],
     exp: "Gli snapshot periodici (accumulating/periodic snapshot fact) fotografano lo stato a intervalli regolari, permettendo confronti temporali su grandezze come saldi e giacenze."
@@ -909,7 +834,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Servono definizioni condivise (governance) per evitare numeri contrastanti",
       "Va bene così: ogni reparto può usare la propria definizione",
-      "Il data warehouse in questi casi diventa del tutto inutile",
       "Basta cambiare la combinazione di colori dei grafici prodotti"
     ],
     correct: [0],
@@ -921,7 +845,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Aggiorna solo i record nuovi/modificati invece di ricostruire tutto",
       "Ricostruisce sempre da capo l'intera tabella a ogni esecuzione",
-      "Non applica alcuna trasformazione ai dati del warehouse",
       "Genera automaticamente i grafici a partire dai risultati"
     ],
     correct: [0],
@@ -933,8 +856,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Il grafico a KPI o il bullet chart",
       "Il grafico a torta che mostra la composizione di un totale",
-      "Il diagramma a dispersione tra due variabili numeriche",
-      "La nuvola di parole costruita a partire dal testo"
+      "Il diagramma a dispersione tra due variabili numeriche"
     ],
     correct: [0],
     exp: "KPI card e bullet chart mostrano il valore attuale rispetto a un target/soglia, evidenziando il raggiungimento dell'obiettivo. Scelte più efficaci di grafici generici per i KPI."
@@ -945,7 +867,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Può cambiare o essere riusata: la surrogata garantisce stabilità e supporta lo storico",
       "È sempre più veloce da usare rispetto a una chiave surrogata",
-      "È vietata dagli standard di progettazione dei data warehouse",
       "Occupa molto meno spazio su disco rispetto alla surrogata"
     ],
     correct: [0],
@@ -957,8 +878,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Separare dati grezzi, puliti e aggregati pronti per il consumo",
       "Cifrare i dati con un livello di protezione diverso",
-      "Assegnare un colore diverso a ciascun livello di dati",
-      "Ridurre il numero di utenti che accedono ai dati"
+      "Assegnare un colore diverso a ciascun livello di dati"
     ],
     correct: [0],
     exp: "L'architettura a medaglione (bronze=grezzi, silver=puliti/integrati, gold=aggregati per il business) rende la pipeline modulare, tracciabile e riutilizzabile."
@@ -968,7 +888,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Uno 'slicer' in Power BI serve a:",
     opts: [
       "Filtrare interattivamente i dati del report per l'utente",
-      "Creare nuove misure DAX all'interno del modello dati",
       "Connettere il report direttamente al database sorgente",
       "Esportare l'intero report in un file PDF condivisibile"
     ],
@@ -981,7 +900,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Più fact table che condividono le stesse dimensioni (conformi)",
       "Un'unica tabella dei fatti che contiene tutti i processi insieme",
-      "Nessuna tabella dei fatti, ma solo tante tabelle dimensione",
       "Una sola dimensione condivisa senza alcuna tabella dei fatti"
     ],
     correct: [0],
@@ -993,7 +911,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Quanto sono recenti/aggiornati i dati rispetto alla realtà",
       "La combinazione di colori scelta per rappresentare i dati",
-      "La dimensione complessiva dei file salvati nel warehouse",
       "Il numero di colonne presenti in ciascuna tabella dei fatti"
     ],
     correct: [0],
@@ -1005,7 +922,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Aggregare i dati a un livello di dettaglio superiore (es. da giorno a mese)",
       "Scendere verso un livello di dettaglio più fine (es. da mese a giorno)",
-      "Passare da una dimensione di analisi a un'altra diversa",
       "Fissare il valore di una dimensione per estrarne una fetta"
     ],
     correct: [0],
@@ -1017,8 +933,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Dentro il data warehouse dopo il caricamento dei dati grezzi",
       "Fuori dal warehouse, prima di caricare i dati al suo interno",
-      "Non avviene mai: i dati restano sempre allo stato grezzo",
-      "Solo sui sistemi sorgente, prima di estrarre i dati"
+      "Non avviene mai: i dati restano sempre allo stato grezzo"
     ],
     correct: [0],
     exp: "L'ELT sfrutta la potenza di calcolo del data warehouse cloud: si caricano i dati grezzi e li si trasforma lì (con SQL/dbt), a differenza dell'ETL che trasforma prima del caricamento."
@@ -1029,7 +944,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "La dashboard sintetizza i KPI a colpo d'occhio; il report è più dettagliato e sfogliabile",
       "Il report sintetizza i KPI a colpo d'occhio; la dashboard è più dettagliata",
-      "Sono esattamente la stessa cosa indicata con due nomi diversi",
       "La dashboard non utilizza i dati, mentre il report sì"
     ],
     correct: [0],
@@ -1041,7 +955,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Foreign key verso le dimensioni più le misure numeriche",
       "Soltanto attributi descrittivi di tipo testuale",
-      "Esclusivamente le date degli eventi registrati",
       "Nessuna chiave, ma solo valori numerici sciolti"
     ],
     correct: [0],
@@ -1053,8 +966,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Documentare e rendere ricercabili i dataset e i loro significati",
       "Cifrare i dataset per proteggerli dagli accessi esterni",
-      "Generare automaticamente i grafici delle dashboard aziendali",
-      "Gestire l'allocazione di CPU e memoria dei server"
+      "Generare automaticamente i grafici delle dashboard aziendali"
     ],
     correct: [0],
     exp: "Il data catalog è un inventario dei dati aziendali con metadati, descrizioni, proprietari e lineage: aiuta gli utenti a trovare e capire i dati disponibili e affidabili."
@@ -1065,8 +977,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Riutilizzare lo stesso modello certificato per più report",
       "Duplicare inutilmente gli stessi dati dentro ogni report",
-      "Impedire la creazione di grafici all'interno dei report",
-      "Rallentare il caricamento di tutti i report collegati"
+      "Impedire la creazione di grafici all'interno dei report"
     ],
     correct: [0],
     exp: "Un dataset condiviso e certificato può alimentare più report: garantisce coerenza delle metriche e riuso, evitando che ogni report reinventi il modello."
@@ -1076,7 +987,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Le 'aggregation tables' in Power BI servono a:",
     opts: [
       "Rispondere a query su grandi volumi usando dati pre-aggregati, più veloci",
-      "Cambiare la combinazione di colori dei visual del report",
       "Cifrare i dati aggregati prima di mostrarli agli utenti",
       "Creare relazioni casuali tra le tabelle del modello dati"
     ],
@@ -1089,7 +999,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Verificare permessi, RLS e assenza di dati sensibili non autorizzati",
       "Cambiare la combinazione di colori per renderla più gradevole",
-      "Aumentare il numero di grafici presenti in ogni pagina",
       "Cancellare il modello dati per alleggerire il report"
     ],
     correct: [0],
@@ -1100,7 +1009,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Monitorare le pipeline dati serve a:",
     opts: [
       "Rilevare fallimenti, ritardi e anomalie di qualità e intervenire per tempo",
-      "Scegliere la combinazione di colori dei grafici finali",
       "Aumentare il numero di visual presenti nelle dashboard",
       "Ridurre il numero di utenti che accedono ai dati"
     ],
@@ -1113,8 +1021,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Un attributo dimensionale (es. numero d'ordine) memorizzato nella fact table",
       "Una tabella dei fatti che non contiene alcuna misura numerica",
-      "Una dimensione con milioni di righe difficile da gestire",
-      "Un errore di progettazione che va sempre corretto"
+      "Una dimensione con milioni di righe difficile da gestire"
     ],
     correct: [0],
     exp: "La dimensione degenerata è un identificativo (es. numero fattura/ordine) che sta nella fact table senza una tabella dimensione propria: utile per raggruppare le righe di uno stesso evento."
@@ -1124,7 +1031,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Perché è importante che le trasformazioni dati siano versionate (es. con dbt/git)?",
     opts: [
       "Per riproducibilità, tracciabilità delle modifiche e collaborazione",
-      "Per poter usare una gamma di colori più ampia nei report",
       "Per cifrare automaticamente i dati durante la trasformazione",
       "Non è importante: le trasformazioni non vanno versionate"
     ],
@@ -1137,7 +1043,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Non additiva: non si somma tra i gruppi, va ricalcolata dai totali",
       "Additiva come i ricavi: si somma liberamente tra i gruppi",
-      "Una dimensione categorica usata per filtrare i dati",
       "Una costante che resta sempre uguale in ogni gruppo"
     ],
     correct: [0],
@@ -1149,7 +1054,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Riduce la leggibilità e distrae dai messaggi chiave",
       "Migliora sempre la comprensione dei dati da parte dell'utente",
-      "È una regola obbligatoria imposta dagli standard di BI",
       "Non ha alcun effetto sulla qualità della comunicazione"
     ],
     correct: [0],
@@ -1161,7 +1065,6 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Per sfruttare le finestre di basso carico e avere dati pronti al mattino",
       "Perché i sistemi sorgente sono spenti durante le ore diurne",
-      "Per ridurre il consumo di risorse grafiche nei report generati",
       "Perché la cifratura dei dati funziona soltanto di notte"
     ],
     correct: [0],
@@ -1173,8 +1076,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Una dimensione condivisa e coerente tra più fact table/data mart",
       "Una dimensione che assume un significato diverso in ogni report",
-      "Una tabella dei fatti condivisa tra più data mart aziendali",
-      "Una misura numerica presente in tutte le tabelle dei fatti"
+      "Una tabella dei fatti condivisa tra più data mart aziendali"
     ],
     correct: [0],
     exp: "Le dimensioni conformi (stesso significato e chiavi in tutto il DW) permettono di integrare analisi di processi diversi (drill across), garantendo coerenza aziendale."
@@ -1184,7 +1086,6 @@ registerSubject("BI e Data Warehouse", [
     q: "L'obiettivo finale della BI è:",
     opts: [
       "Supportare decisioni migliori basate sui dati (data-driven)",
-      "Produrre il maggior numero possibile di grafici colorati",
       "Sostituire completamente i manager nelle decisioni aziendali",
       "Archiviare in modo sicuro tutti i dati storici dell'azienda"
     ],
@@ -1196,7 +1097,6 @@ registerSubject("BI e Data Warehouse", [
     q: "Un flusso tipico di un progetto BI è:",
     opts: [
       "Sorgenti → ETL/ELT → data warehouse → modello → report/dashboard",
-      "Sorgenti → data warehouse → ETL/ELT → modello → report/dashboard",
       "Sorgenti → ETL/ELT → modello → data warehouse → report/dashboard",
       "Report/dashboard → sorgenti → ETL/ELT → data warehouse → modello"
     ],
