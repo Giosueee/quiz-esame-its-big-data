@@ -52,7 +52,7 @@ registerSubject("Time Series", [
     q: "Una serie temporale è stazionaria quando:",
     opts: [
       "Ha un trend crescente marcato",
-      "Le sue proprietà statistiche (media, varianza) restano costanti nel tempo",
+      "Le sue proprietà statistiche restano costanti nel tempo",
       "Cambia continuamente distribuzione"
     ],
     correct: [1],
@@ -118,7 +118,7 @@ registerSubject("Time Series", [
     q: "La componente MA (media mobile) di ARIMA modella il valore attuale in funzione di:",
     opts: [
       "I valori medi delle categorie",
-      "Gli errori (residui) dei periodi passati",
+      "Gli errori dei periodi passati",
       "Le variabili indipendenti"
     ],
     correct: [1],
@@ -217,7 +217,7 @@ registerSubject("Time Series", [
     q: "Il lisciamento esponenziale (exponential smoothing) assegna ai dati passati:",
     opts: [
       "Peso solo al primo valore",
-      "Pesi decrescenti in modo esponenziale (più recenti pesano di più)",
+      "Pesi decrescenti in modo esponenziale",
       "Un peso nullo che esclude l'osservazione o la feature dal calcolo"
     ],
     correct: [1],
@@ -262,7 +262,7 @@ registerSubject("Time Series", [
     opts: [
       "Rumore casuale senza componente informativa sfruttabile dal modello",
       "Assenza di pattern",
-      "Stagionalità annuale (ripetizione ogni 12 mesi)"
+      "Stagionalità annuale"
     ],
     correct: [2],
     exp: "Un picco di ACF al lag corrispondente al periodo stagionale (12 per dati mensili) indica stagionalità annuale: i valori si somigliano a distanza di un anno."
@@ -295,7 +295,7 @@ registerSubject("Time Series", [
     opts: [
       "Riordinare le osservazioni in base al valore",
       "Aggiungere una componente stagionale alla serie",
-      "Differenziare la serie (una volta)"
+      "Differenziare la serie"
     ],
     correct: [2],
     exp: "Una differenziazione di ordine 1 (y_t − y_(t−1)) elimina un trend lineare. Trend più complessi possono richiedere differenziazioni multiple o detrending con regressione."
@@ -315,7 +315,7 @@ registerSubject("Time Series", [
     id: "u10029", topic: "Feature temporali",
     q: "Estrarre da una data feature come mese, giorno della settimana, festività serve a:",
     opts: [
-      "Cancellare la data",
+      "Sostituire la data con un identificativo progressivo",
       "Aiutare il modello a cogliere pattern stagionali e di calendario",
       "Ridurre il numero di righe del dataset prima dell'analisi"
     ],
@@ -337,7 +337,7 @@ registerSubject("Time Series", [
     id: "u10031", topic: "Missing in time series",
     q: "Con dati mancanti in una serie temporale, spesso si usa:",
     opts: [
-      "Interpolazione (es. lineare) che rispetta l'ordine temporale",
+      "Interpolazione che rispetta l'ordine temporale",
       "La rimozione di tutte le date",
       "L'ignorare l'ordine"
     ],
@@ -403,7 +403,7 @@ registerSubject("Time Series", [
     id: "u10037", topic: "Stazionarietà: varianza",
     q: "Se la varianza di una serie cresce nel tempo, una trasformazione utile è:",
     opts: [
-      "Il logaritmo (stabilizza la varianza)",
+      "Il logaritmo",
       "L'aggiunta di una costante",
       "L'ordinamento dei valori"
     ],
@@ -448,7 +448,7 @@ registerSubject("Time Series", [
     q: "Il primo passo nell'analisi di una serie temporale è di solito:",
     opts: [
       "Applicare subito una rete neurale",
-      "Visualizzarla nel tempo (line plot) per individuarne le componenti",
+      "Visualizzarla nel tempo per individuarne le componenti",
       "Cancellare gli outlier"
     ],
     correct: [1],
@@ -502,7 +502,7 @@ registerSubject("Time Series", [
     id: "u10046", topic: "Stagionalità multipla",
     q: "Una serie oraria di consumi elettrici può avere:",
     opts: [
-      "Più stagionalità sovrapposte (giornaliera, settimanale, annuale)",
+      "Più stagionalità sovrapposte",
       "Nessuna stagionalità",
       "Rumore casuale senza componente informativa sfruttabile dal modello"
     ],
@@ -559,7 +559,7 @@ registerSubject("Time Series", [
     opts: [
       "Applicare una sola differenziazione anche se il trend resta non lineare",
       "Ignorare sempre il trend non lineare invece di modellarlo",
-      "Usare trasformazioni o modelli flessibili (spline, Prophet)"
+      "Usare trasformazioni o modelli flessibili"
     ],
     correct: [2],
     exp: "Trend curvilinei richiedono trasformazioni (log), differenziazioni multiple o modelli che catturano curve (spline, Prophet, modelli non lineari), non solo un detrending lineare."
@@ -745,7 +745,7 @@ registerSubject("Time Series", [
     q: "Le serie 'intermittenti' (molti zeri, domanda sporadica) richiedono:",
     opts: [
       "Usare sempre un ARIMA classico anche con molti zeri e domanda sporadica",
-      "Metodi specifici (es. Croston), perché i modelli standard funzionano male",
+      "Metodi specifici, perché i modelli standard funzionano male",
       "Non applicare alcuna tecnica specifica nonostante zeri e irregolarità"
     ],
     correct: [1],
@@ -778,7 +778,7 @@ registerSubject("Time Series", [
     q: "Uno 'shock' in una serie temporale è:",
     opts: [
       "La componente di lungo periodo che descrive la direzione della serie",
-      "Una perturbazione improvvisa (es. evento eccezionale)",
+      "Una perturbazione improvvisa",
       "La cadenza con cui le osservazioni vengono registrate nel tempo"
     ],
     correct: [1],
@@ -823,7 +823,7 @@ registerSubject("Time Series", [
     opts: [
       "Trasformare la serie in una variabile categorica",
       "Ordinare le osservazioni in base al loro valore",
-      "Capire le componenti (trend, stagionalità) e rilevare anomalie"
+      "Capire le componenti e rilevare anomalie"
     ],
     correct: [2],
     exp: "L'analisi delle serie serve a descrivere e comprendere i fenomeni (trend, stagionalità, cicli), monitorare, rilevare anomalie e cambi di regime, oltre a prevedere."
@@ -856,7 +856,7 @@ registerSubject("Time Series", [
     opts: [
       "Aggiungere rumore casuale prima di modellare",
       "Modellare subito la serie senza alcuna trasformazione",
-      "Rimuovere trend e stagionalità (rendere stazionaria) e infine modellare"
+      "Rimuovere trend e stagionalità e infine modellare"
     ],
     correct: [2],
     exp: "Tipico flusso: log/Box-Cox per la varianza → differenziazione per trend/stagionalità → verifica stazionarietà → identificazione e stima del modello (es. ARIMA) → diagnostica dei residui."
@@ -922,7 +922,7 @@ registerSubject("Time Series", [
     opts: [
       "Peso solo al primo",
       "Un peso nullo che esclude l'osservazione o la feature dal calcolo",
-      "Pesi diversi (spesso maggiori ai più recenti)"
+      "Pesi diversi"
     ],
     correct: [2],
     exp: "La media mobile ponderata dà più importanza a certi valori (di solito i recenti), reagendo più prontamente ai cambiamenti rispetto alla media mobile semplice."
@@ -943,7 +943,7 @@ registerSubject("Time Series", [
     q: "Per confrontare modelli di forecasting si usano criteri come:",
     opts: [
       "Una proprietà visuale del grafico, non una logica di calcolo",
-      "AIC/BIC ed errori su dati di test (RMSE, MAE, MAPE)",
+      "AIC/BIC ed errori su dati di test",
       "Il numero di righe presenti nel dataset o nel risultato"
     ],
     correct: [1],
@@ -955,7 +955,7 @@ registerSubject("Time Series", [
     opts: [
       "Con lo stesso livello di difficoltà e variabilità della serie aggregata",
       "Più facile perché si assume meno rumore nella granularità giornaliera",
-      "Più difficile (più rumore e variabilità)"
+      "Più difficile"
     ],
     correct: [2],
     exp: "A granularità fine (giornaliera) c'è più rumore e variabilità (weekend, eventi), rendendo la previsione più difficile. L'aggregazione mensile smussa e spesso è più prevedibile."
@@ -975,9 +975,9 @@ registerSubject("Time Series", [
     id: "u10089", topic: "Previsione: punto di partenza",
     q: "Prima di scegliere un modello complesso conviene:",
     opts: [
-      "Usare subito il deep learning",
-      "Provare baseline semplici (naïve, media mobile) come riferimento",
-      "Evitare qualsiasi valutazione"
+      "Usare subito un modello di deep learning",
+      "Provare baseline semplici come riferimento",
+      "Ottimizzare gli iperparametri prima di avere un riferimento"
     ],
     correct: [1],
     exp: "Partire da baseline semplici stabilisce un riferimento: molti problemi si risolvono bene senza modelli complessi, e comunque servono a giudicare i miglioramenti reali."
@@ -1009,7 +1009,7 @@ registerSubject("Time Series", [
     q: "Uno 'seasonal plot' (per periodo) aiuta a:",
     opts: [
       "Contare le righe disponibili invece di analizzare il fenomeno richiesto",
-      "Confrontare l'andamento tra i vari cicli (es. anni) sovrapposti",
+      "Confrontare l'andamento tra i vari cicli sovrapposti",
       "Raggruppare osservazioni simili senza prevedere valori futuri"
     ],
     correct: [1],
@@ -1021,7 +1021,7 @@ registerSubject("Time Series", [
     opts: [
       "Livelli di aggregazione scelti casualmente senza coerenza contabile",
       "Un unico livello di aggregazione senza riconciliazione gerarchica",
-      "Diversi livelli di aggregazione (es. prodotto, categoria, totale)"
+      "Diversi livelli di aggregazione"
     ],
     correct: [2],
     exp: "Con dati organizzati gerarchicamente (prodotto→categoria→totale), la previsione gerarchica assicura coerenza tra i livelli (le somme dei figli tornano col padre)."

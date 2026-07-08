@@ -43,7 +43,7 @@ registerSubject("Statistica", [
     opts: [
       "La radice quadrata della varianza calcolata sui dati",
       "Il valore che divide esattamente a metà i dati ordinati in due parti",
-      "Il valore (o la classe) che si presenta con la frequenza più elevata"
+      "Il valore che si presenta con la frequenza più elevata"
     ],
     correct: [2],
     exp: "La moda è il valore più frequente. Una distribuzione può essere unimodale, bimodale o plurimodale (più mode) e in alcuni casi non avere moda se tutti i valori compaiono una sola volta."
@@ -184,7 +184,7 @@ registerSubject("Statistica", [
     id: "u06017", topic: "Boxplot",
     q: "I bordi della scatola (box) di un boxplot corrispondono a:",
     opts: [
-      "Il primo quartile (Q1) e il terzo quartile (Q3)",
+      "Il primo quartile e il terzo quartile",
       "La media più e meno una deviazione standard",
       "Il decimo e il novantesimo percentile"
     ],
@@ -208,7 +208,7 @@ registerSubject("Statistica", [
     opts: [
       "La somma del primo e del terzo quartile diviso due",
       "La differenza tra il valore massimo e il valore minimo",
-      "La differenza tra il terzo e il primo quartile (Q3 − Q1)"
+      "La differenza tra il terzo e il primo quartile"
     ],
     correct: [2],
     exp: "IQR = Q3 − Q1 misura la dispersione del 50% centrale dei dati ed è robusto agli outlier. Si usa nel boxplot per individuare i valori anomali (oltre 1,5×IQR dai quartili)."
@@ -262,7 +262,7 @@ registerSubject("Statistica", [
     q: "Due eventi si dicono incompatibili (mutuamente esclusivi) quando:",
     opts: [
       "Il verificarsi di uno non cambia la probabilità dell'altro",
-      "Non possono verificarsi entrambi contemporaneamente: P(A e B) = 0",
+      "Non possono verificarsi entrambi contemporaneamente: P = 0",
       "Hanno sempre la stessa identica probabilità di verificarsi"
     ],
     correct: [1],
@@ -274,7 +274,7 @@ registerSubject("Statistica", [
     opts: [
       "La somma delle loro probabilità è sempre uguale a 1",
       "Non possono mai verificarsi contemporaneamente nello stesso esperimento",
-      "P(A e B) = P(A) × P(B): il verificarsi di uno non influenza l'altro"
+      "P = P × P: il verificarsi di uno non influenza l'altro"
     ],
     correct: [2],
     exp: "Per eventi indipendenti la probabilità congiunta è il prodotto: P(A∩B)=P(A)·P(B), e P(A|B)=P(A). Indipendenza riguarda l'influenza reciproca, cosa diversa dall'incompatibilità."
@@ -538,7 +538,7 @@ registerSubject("Statistica", [
     opts: [
       "Diventa uguale alla deviazione standard della popolazione",
       "Aumenta, perché ci sono più dati da cui può derivare errore",
-      "Diminuisce, perché la stima diventa più precisa (si divide per √n)"
+      "Diminuisce, perché la stima diventa più precisa"
     ],
     correct: [2],
     exp: "L'errore standard = σ/√n: cresce n → diminuisce l'errore standard, cioè la media campionaria è più precisa. Per dimezzarlo serve però un campione quattro volte più grande."
@@ -844,7 +844,7 @@ registerSubject("Statistica", [
     id: "u06077", topic: "Probabilità",
     q: "Se P(A)=0,6 e P(B)=0,7, possono A e B essere incompatibili?",
     opts: [
-      "No, perché se lo fossero P(A)+P(B) dovrebbe essere ≤ 1, mentre qui vale 1,3",
+      "No, perché se lo fossero P+P dovrebbe essere ≤ 1, mentre qui vale 1,3",
       "Sì, a condizione che i due eventi siano anche statisticamente indipendenti",
       "Soltanto nel caso in cui uno dei due coincida con l'evento certo"
     ],
@@ -988,7 +988,7 @@ registerSubject("Statistica", [
     q: "Il diagramma più adatto a visualizzare la relazione tra due variabili quantitative è:",
     opts: [
       "Il diagramma a torta",
-      "Lo scatter plot (diagramma a dispersione)",
+      "Lo scatter plot",
       "Il diagramma a barre"
     ],
     correct: [1],

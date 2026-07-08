@@ -73,7 +73,7 @@ registerSubject("Modelli Statistici", [
     id: "u07007", topic: "Errore di primo tipo",
     q: "L'errore di primo tipo (di tipo I) consiste nel:",
     opts: [
-      "Rifiutare l'ipotesi nulla quando in realtà è vera (falso positivo)",
+      "Rifiutare l'ipotesi nulla quando in realtà è vera",
       "Non rifiutare l'ipotesi nulla quando in realtà è falsa",
       "Scegliere un campione troppo piccolo per il test"
     ],
@@ -85,7 +85,7 @@ registerSubject("Modelli Statistici", [
     q: "L'errore di secondo tipo (di tipo II) consiste nel:",
     opts: [
       "Rifiutare l'ipotesi nulla quando in realtà è vera",
-      "Non rifiutare l'ipotesi nulla quando in realtà è falsa (falso negativo)",
+      "Non rifiutare l'ipotesi nulla quando in realtà è falsa",
       "Confondere la media campionaria con quella della popolazione"
     ],
     correct: [1],
@@ -118,7 +118,7 @@ registerSubject("Modelli Statistici", [
     q: "Un test bilaterale (a due code) si usa quando l'ipotesi alternativa afferma che:",
     opts: [
       "Il parametro è strettamente maggiore del valore ipotizzato",
-      "Il parametro è solo diverso (≠) dal valore ipotizzato",
+      "Il parametro è solo diverso dal valore ipotizzato",
       "Il parametro è strettamente minore del valore ipotizzato"
     ],
     correct: [1],
@@ -184,7 +184,7 @@ registerSubject("Modelli Statistici", [
     q: "Se un intervallo di confidenza al 95% per una differenza NON contiene lo zero, allora:",
     opts: [
       "La differenza non è significativa perché l'intervallo è troppo ampio",
-      "La differenza è statisticamente significativa al livello 0,05 (si rifiuta H0)",
+      "La differenza è statisticamente significativa al livello 0,05",
       "Non si può trarre alcuna conclusione dal test"
     ],
     correct: [1],
@@ -262,7 +262,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Scegliendo la retta che passa per il valore massimo dei dati",
       "Facendo passare la retta esattamente per tutti i punti osservati",
-      "Minimizzando la somma dei quadrati degli scarti (residui) tra dati e retta"
+      "Minimizzando la somma dei quadrati degli scarti tra dati e retta"
     ],
     correct: [2],
     exp: "I minimi quadrati (OLS) trovano la retta che rende minima la somma dei quadrati dei residui (distanze verticali punto-retta). È il criterio standard per stimare i coefficienti della regressione."
@@ -382,7 +382,7 @@ registerSubject("Modelli Statistici", [
     q: "Un test t per campioni appaiati (paired) è indicato quando:",
     opts: [
       "Si confrontano due gruppi di persone completamente diversi",
-      "Si misurano le STESSE unità in due condizioni (es. prima e dopo)",
+      "Si misurano le STESSE unità in due condizioni",
       "Si vogliono confrontare più di due gruppi insieme"
     ],
     correct: [1],
@@ -427,7 +427,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "In entrambe le ipotesi allo stesso modo",
       "Nell'ipotesi alternativa H1",
-      "Nell'ipotesi nulla H0 (es. μ = valore)"
+      "Nell'ipotesi nulla H0"
     ],
     correct: [2],
     exp: "H0 contiene l'uguaglianza (μ = μ0), mentre H1 esprime la differenza (≠, >, <). Il test valuta se i dati sono compatibili con l'uguaglianza affermata da H0."
@@ -481,7 +481,7 @@ registerSubject("Modelli Statistici", [
     q: "È corretto formulare o modificare l'ipotesi DOPO aver guardato i dati per ottenere significatività?",
     opts: [
       "Sì, è il modo standard di procedere in statistica",
-      "No, è una pratica scorretta (HARKing/p-hacking) che invalida il test",
+      "No, è una pratica scorretta che invalida il test",
       "Sì, purché il p-value finale sia sotto 0,05"
     ],
     correct: [1],
@@ -526,7 +526,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Il coefficiente di correlazione di Pearson",
       "Un test t per due campioni indipendenti",
-      "Un test di normalità (es. Shapiro-Wilk) o un grafico Q-Q"
+      "Un test di normalità o un grafico Q-Q"
     ],
     correct: [2],
     exp: "La normalità si valuta con test dedicati (Shapiro-Wilk, Kolmogorov-Smirnov) o graficamente con il Q-Q plot, che confronta i quantili dei dati con quelli teorici della normale."
@@ -625,7 +625,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Coefficienti angolari di una regressione",
       "Medie di variabili quantitative continue",
-      "Dati di frequenza (conteggi) di variabili categoriche"
+      "Dati di frequenza di variabili categoriche"
     ],
     correct: [2],
     exp: "Il χ² lavora su CONTEGGI/frequenze di categorie (tabelle di contingenza), non su medie. Per confrontare medie servono t-test o ANOVA."
@@ -832,7 +832,7 @@ registerSubject("Modelli Statistici", [
     id: "u07076", topic: "Assunzioni regressione",
     q: "Quale di queste è un'assunzione della regressione lineare?",
     opts: [
-      "Residui con varianza costante (omoschedasticità)",
+      "Residui con varianza costante",
       "La variabile dipendente deve essere categorica",
       "Le variabili indipendenti devono essere molto correlate"
     ],

@@ -107,7 +107,7 @@ registerSubject("R", [
     q: "In ggplot2, aes() serve a:",
     opts: [
       "Salvare il grafico su file",
-      "Mappare le variabili sugli assi/estetiche (x, y, colore)",
+      "Mappare le variabili sugli assi/estetiche",
       "Calcolare le statistiche"
     ],
     correct: [1],
@@ -272,7 +272,7 @@ registerSubject("R", [
     q: "La funzione str() in R serve a:",
     opts: [
       "Convertire un oggetto in una stringa di testo",
-      "Mostrare la struttura di un oggetto (tipi e dimensioni)",
+      "Mostrare la struttura di un oggetto",
       "Rimuovere gli spazi iniziali e finali di una stringa"
     ],
     correct: [1],
@@ -284,7 +284,7 @@ registerSubject("R", [
     opts: [
       "La correlazione tra colonne",
       "Un grafico a barre per confrontare categorie o frequenze",
-      "Statistiche descrittive per ogni colonna (min, media, quartili, max)"
+      "Statistiche descrittive per ogni colonna"
     ],
     correct: [2],
     exp: "summary() fornisce un riepilogo statistico colonna per colonna: minimo, primo quartile, mediana, media, terzo quartile, massimo (e conteggio NA)."
@@ -569,7 +569,7 @@ registerSubject("R", [
     q: "quantile(x) in R restituisce:",
     opts: [
       "La sola media, ignorando dispersione, dipendenze o struttura dei dati",
-      "I quantili (0%, 25%, 50%, 75%, 100%) della distribuzione",
+      "I quantili della distribuzione",
       "Un istogramma per mostrare la distribuzione dei valori numerici"
     ],
     correct: [1],
@@ -668,7 +668,7 @@ registerSubject("R", [
     q: "In ggplot2, theme_minimal() cambia:",
     opts: [
       "Il tipo di modello",
-      "L'aspetto grafico (sfondo, griglie, stile)",
+      "L'aspetto grafico",
       "Le variabili sugli assi"
     ],
     correct: [1],
@@ -713,7 +713,7 @@ registerSubject("R", [
     opts: [
       "Rimuove righe dal dataset invece di trasformare o calcolare valori",
       "Da lungo a largo",
-      "Da formato largo a formato lungo (più righe, meno colonne)"
+      "Da formato largo a formato lungo"
     ],
     correct: [2],
     exp: "pivot_longer() 'allunga' i dati portando più colonne in coppie chiave-valore (formato tidy). pivot_wider() fa l'opposto, allargando."
@@ -755,7 +755,7 @@ registerSubject("R", [
     id: "u08069", topic: "which()",
     q: "which(x > 5) restituisce:",
     opts: [
-      "Le posizioni (indici) degli elementi che soddisfano la condizione",
+      "Le posizioni degli elementi che soddisfano la condizione",
       "I valori maggiori di 5 invece delle loro posizioni",
       "Un vettore logico TRUE/FALSE invece delle posizioni degli elementi"
     ],
@@ -767,7 +767,7 @@ registerSubject("R", [
     q: "Un factor ordinato (ordered) è utile quando:",
     opts: [
       "Le categorie non hanno ordine",
-      "Le categorie hanno un ordine naturale (es. basso<medio<alto)",
+      "Le categorie hanno un ordine naturale",
       "Non ci sono categorie"
     ],
     correct: [1],
@@ -788,7 +788,7 @@ registerSubject("R", [
     id: "u08072", topic: "NA vs NULL",
     q: "Qual è la differenza tra NA e NULL in R?",
     opts: [
-      "NA è un valore mancante; NULL è l'assenza di oggetto (nulla)",
+      "NA è un valore mancante; NULL è l'assenza di oggetto",
       "Hanno comportamento e risultato identici nello stesso contesto operativo",
       "NULL è un numero, NA una stringa"
     ],
@@ -845,7 +845,7 @@ registerSubject("R", [
     opts: [
       "Il numero di righe",
       "I valori numerici",
-      "I livelli (categorie) del factor"
+      "I livelli del factor"
     ],
     correct: [2],
     exp: "levels() elenca le categorie ammesse di un factor. L'ordine dei livelli influenza modelli e grafici (es. la categoria di riferimento nella regressione)."
@@ -944,7 +944,7 @@ registerSubject("R", [
     opts: [
       "Unire due data frame su una chiave comune",
       "Contare le righe che soddisfano una condizione",
-      "Creare una variabile con più condizioni (if/else multiplo)"
+      "Creare una variabile con più condizioni"
     ],
     correct: [2],
     exp: "case_when() gestisce condizioni multiple in modo leggibile, assegnando valori diversi a seconda dei casi: è un if/else annidato vettorializzato."
@@ -965,7 +965,7 @@ registerSubject("R", [
     q: "Un grafico adatto a mostrare la relazione tra due variabili numeriche in R è:",
     opts: [
       "Il grafico a torta",
-      "Lo scatter plot (geom_point)",
+      "Lo scatter plot",
       "Il boxplot di una sola variabile"
     ],
     correct: [1],
@@ -1010,7 +1010,7 @@ registerSubject("R", [
     opts: [
       "Un vettore",
       "Un errore",
-      "Una funzione anonima (senza nome)"
+      "Una funzione anonima"
     ],
     correct: [2],
     exp: "È una funzione anonima, spesso passata a sapply/map: sapply(1:3, function(x) x^2) → 1 4 9. R recente ammette anche la sintassi \\(x) x^2."
@@ -1043,7 +1043,7 @@ registerSubject("R", [
     opts: [
       "Sempre tutti i rami",
       "Un intero vettore elemento per elemento",
-      "Una singola condizione logica (lunghezza 1)"
+      "Una singola condizione logica"
     ],
     correct: [2],
     exp: "if() valuta UNA condizione scalare: if(x>0){...}else{...}. Per condizioni su interi vettori si usa ifelse(), vettorializzato."

@@ -1131,7 +1131,7 @@ registerSubject("Python", [
     id: "py139", topic: "Uguaglianza e identità",
     q: "a = [1, 2]; b = [1, 2]. Cosa restituiscono a == b e a is b?",
     opts: [
-      "a == b è True (stessi valori), a is b è False (oggetti diversi)",
+      "a == b è True, a is b è False",
       "Sono entrambi True, perché le due liste hanno lo stesso contenuto",
       "Sono entrambi False, perché due liste diverse non si confrontano"
     ],
@@ -1197,7 +1197,7 @@ registerSubject("Python", [
     id: "py145", topic: "Mutabilità nelle tuple",
     q: "t = (1, [2, 3]). L'istruzione t[1].append(4) cosa produce?",
     opts: [
-      "Funziona: t diventa (1, [2, 3, 4]), la lista interna è modificabile",
+      "Funziona: t diventa, la lista interna è modificabile",
       "Solleva un errore, perché le tuple sono immutabili in ogni loro parte",
       "Non fa nulla, perché un append su un elemento di tupla viene ignorato"
     ],

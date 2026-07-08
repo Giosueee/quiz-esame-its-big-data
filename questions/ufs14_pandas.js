@@ -7,7 +7,7 @@ registerSubject("Pandas", [
     id: "u14001", topic: "Strutture dati",
     q: "Cos'è una Series in pandas?",
     opts: [
-      "Un array unidimensionale etichettato (una colonna)",
+      "Un array unidimensionale etichettato",
       "Una tabella bidimensionale con righe e colonne",
       "Un dizionario che associa nomi di colonna ai tipi"
     ],
@@ -151,7 +151,7 @@ registerSubject("Pandas", [
     q: "pd.concat([df1, df2]) di default:",
     opts: [
       "Li affianca per colonna allineandoli sull'indice",
-      "Impila i DataFrame uno sotto l'altro (per riga)",
+      "Impila i DataFrame uno sotto l'altro",
       "Restituisce solo le righe presenti in entrambi"
     ],
     correct: [1],
@@ -217,7 +217,7 @@ registerSubject("Pandas", [
     q: "df['iva'] = df['prezzo'] * 0.22 in pandas:",
     opts: [
       "Rimuove una colonna esistente invece di crearne una calcolata",
-      "Crea una nuova colonna calcolata dalle altre (operazione vettorializzata)",
+      "Crea una nuova colonna calcolata dalle altre",
       "Ordina il DataFrame per indice o per valore, lasciando invariata la struttura logica"
     ],
     correct: [1],
@@ -403,7 +403,7 @@ registerSubject("Pandas", [
     id: "u14037", topic: "Vettorializzazione",
     q: "Perché in pandas si preferiscono operazioni vettorializzate ai cicli for?",
     opts: [
-      "Sono molto più veloci e concise (implementate in C)",
+      "Sono molto più veloci e concise",
       "Sono sempre errate anche quando rispettano tipi, indice e contesto",
       "I cicli non esistono"
     ],
@@ -469,7 +469,7 @@ registerSubject("Pandas", [
     id: "u14043", topic: "Copia",
     q: "Df2 = df crea:",
     opts: [
-      "Un riferimento allo stesso DataFrame (non una copia)",
+      "Un riferimento allo stesso DataFrame",
       "Un DataFrame vuoto con lo stesso schema",
       "Un errore perché non si può assegnare un DataFrame"
     ],
@@ -580,7 +580,7 @@ registerSubject("Pandas", [
     q: "df.columns restituisce:",
     opts: [
       "L'elenco dei valori della prima riga",
-      "L'elenco (Index) dei nomi delle colonne",
+      "L'elenco dei nomi delle colonne",
       "Il numero di colonne del DataFrame"
     ],
     correct: [1],
@@ -625,7 +625,7 @@ registerSubject("Pandas", [
     opts: [
       "Una colonna che viene automaticamente cancellata",
       "Una normale colonna come tutte le altre",
-      "L'indice del risultato (si usa reset_index() per riportarla in colonna)"
+      "L'indice del risultato (si usa reset_index per riportarla in colonna)"
     ],
     correct: [2],
     exp: "Il risultato di groupby ha come indice la chiave di raggruppamento; reset_index() la riporta come colonna normale, comodo per successive elaborazioni o merge."
@@ -634,7 +634,7 @@ registerSubject("Pandas", [
     id: "u14058", topic: "Applicare a gruppi",
     q: "transform() rispetto a agg() in un groupby:",
     opts: [
-      "Restituisce un risultato della stessa lunghezza dell'originale (broadcast per gruppo)",
+      "Restituisce un risultato della stessa lunghezza dell'originale",
       "Restituisce una sola riga per gruppo come una normale aggregazione",
       "Elimina la struttura dei gruppi senza produrre un risultato per ogni gruppo"
     ],
@@ -667,7 +667,7 @@ registerSubject("Pandas", [
     id: "u14061", topic: "Indicizzazione booleana",
     q: "df['eta'] > 30 (da solo) restituisce:",
     opts: [
-      "Una Series di valori booleani (la maschera)",
+      "Una Series di valori booleani",
       "Le righe del DataFrame con età superiore a 30",
       "Un errore perché manca il DataFrame attorno"
     ],
@@ -745,7 +745,7 @@ registerSubject("Pandas", [
     q: "df['categoria'].value_counts(normalize=True) restituisce:",
     opts: [
       "I conteggi assoluti di ciascuna categoria",
-      "Le proporzioni (frequenze relative) di ciascuna categoria",
+      "Le proporzioni di ciascuna categoria",
       "Le prime righe della colonna categoria"
     ],
     correct: [1],
@@ -943,7 +943,7 @@ registerSubject("Pandas", [
     q: "Un MultiIndex in pandas è:",
     opts: [
       "Un errore di indicizzazione del DataFrame",
-      "Un indice a più livelli (gerarchico)",
+      "Un indice a più livelli",
       "Una singola colonna usata come chiave"
     ],
     correct: [1],
@@ -997,7 +997,7 @@ registerSubject("Pandas", [
     id: "u14091", topic: "describe categoriche",
     q: "df.describe(include='object') mostra:",
     opts: [
-      "Statistiche per le colonne testuali (conteggio, unici, top, freq)",
+      "Statistiche per le colonne testuali",
       "La media e i quartili delle colonne numeriche",
       "Le prime righe delle colonne di testo"
     ],
@@ -1042,7 +1042,7 @@ registerSubject("Pandas", [
     q: "Perché è sconsigliato df[df.a>0]['b'] = 1?",
     opts: [
       "È più veloce perché evita controlli sull'indice e sulle copie intermedie",
-      "Il chained indexing può agire su una copia, non modificando l'originale (SettingWithCopyWarning)",
+      "Il chained indexing può agire su una copia, non modificando l'originale",
       "Fallisce sempre, anche quando la selezione produce un oggetto valido"
     ],
     correct: [1],

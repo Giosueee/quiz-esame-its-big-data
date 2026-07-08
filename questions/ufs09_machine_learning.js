@@ -162,7 +162,7 @@ registerSubject("Machine Learning", [
     q: "Aumentare la recall tende a:",
     opts: [
       "Aumentare anche la precision",
-      "Ridurre la precision (e viceversa)",
+      "Ridurre la precision",
       "Azzerare i falsi negativi e i falsi positivi"
     ],
     correct: [1],
@@ -261,7 +261,7 @@ registerSubject("Machine Learning", [
     q: "Una random forest è:",
     opts: [
       "Un singolo albero molto profondo",
-      "Un insieme (ensemble) di molti alberi di decisione",
+      "Un insieme di molti alberi di decisione",
       "Un algoritmo che raggruppa osservazioni senza label"
     ],
     correct: [1],
@@ -306,7 +306,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Lascia invariati parametri, dati e risultato del modello",
       "Rende sempre l'addestramento più preciso",
-      "Può far divergere l'ottimizzazione (salta il minimo)"
+      "Può far divergere l'ottimizzazione"
     ],
     correct: [2],
     exp: "Un tasso di apprendimento troppo grande fa 'rimbalzare' i parametri e può divergere; troppo piccolo rende l'addestramento lentissimo. Va calibrato con attenzione."
@@ -426,7 +426,7 @@ registerSubject("Machine Learning", [
     q: "Il clustering gerarchico produce:",
     opts: [
       "Un unico valore numerico invece di una struttura di cluster",
-      "Una struttura ad albero (dendrogramma) di raggruppamenti annidati",
+      "Una struttura ad albero di raggruppamenti annidati",
       "Una regressione che predice un valore numerico continuo"
     ],
     correct: [1],
@@ -591,7 +591,7 @@ registerSubject("Machine Learning", [
     q: "Nel mini-batch gradient descent, il modello aggiorna i pesi:",
     opts: [
       "Solo dopo l'intero dataset",
-      "Su piccoli sottoinsiemi (batch) di dati alla volta",
+      "Su piccoli sottoinsiemi di dati alla volta",
       "Non avviene in nessuna configurazione utile del problema"
     ],
     correct: [1],
@@ -768,7 +768,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Solo a generare nuovi dati",
       "La distribuzione completa dei dati",
-      "Direttamente il confine tra le classi (P(y|x))"
+      "Direttamente il confine tra le classi (P)"
     ],
     correct: [2],
     exp: "I discriminativi modellano P(classe|input), concentrandosi sul confine decisionale. I generativi (es. Naive Bayes) modellano come i dati sono generati (P(x|classe)) e poi applicano Bayes."
@@ -822,7 +822,7 @@ registerSubject("Machine Learning", [
     q: "L'encoding ordinale è appropriato quando la categoria:",
     opts: [
       "Non possiede un ordine naturale tra le categorie",
-      "Ha un ordine naturale (es. basso<medio<alto)",
+      "Ha un ordine naturale",
       "È una variabile numerica continua, non una categoria ordinata"
     ],
     correct: [1],
@@ -888,7 +888,7 @@ registerSubject("Machine Learning", [
     q: "Il deep learning usa:",
     opts: [
       "Solo regressione lineare",
-      "Reti neurali con molti livelli (layer)",
+      "Reti neurali con molti livelli",
       "Nessun dato viene usato per calcolare il risultato"
     ],
     correct: [1],
@@ -954,7 +954,7 @@ registerSubject("Machine Learning", [
     q: "Il clustering è:",
     opts: [
       "Supervisionato, perché sfrutta etichette note",
-      "Non supervisionato (nessuna etichetta nota)",
+      "Non supervisionato",
       "Una tecnica di regressione su valori continui"
     ],
     correct: [1],
@@ -999,7 +999,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Con più parametri",
       "Con più feature",
-      "Più semplice (principio di parsimonia)"
+      "Più semplice"
     ],
     correct: [2],
     exp: "Il rasoio di Occam: a parità di risultati, il modello più semplice generalizza meglio, è più interpretabile e meno soggetto a overfitting."
@@ -1086,7 +1086,7 @@ registerSubject("Machine Learning", [
     q: "Tecniche come SHAP e LIME servono a:",
     opts: [
       "Addestrare più velocemente",
-      "Spiegare le previsioni di modelli complessi (interpretabilità)",
+      "Spiegare le previsioni di modelli complessi",
       "Aumentare il volume dei dati senza risolvere il fallimento del task"
     ],
     correct: [1],

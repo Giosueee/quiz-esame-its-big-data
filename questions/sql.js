@@ -77,7 +77,7 @@ registerSubject("SQL", [
     opts: [
       "Una singola proprietà elementare di una tabella, come il nome o la data",
       "Un collegamento logico che mette in relazione due o più tabelle tra loro",
-      "Un oggetto (una tabella) che raccoglie dati con proprietà comuni, es. i clienti"
+      "Un oggetto che raccoglie dati con proprietà comuni, es. i clienti"
     ],
     correct: [2],
     exp: "Un'entità è un oggetto/tabella che raccoglie dati con proprietà comuni (es. i 'clienti' con indirizzo, P.IVA, recapiti). Le relazioni collegano le entità; gli attributi sono le loro proprietà."
@@ -428,7 +428,7 @@ registerSubject("SQL", [
     q: "Nella clausola JOIN, a cosa serve la parola chiave ON?",
     opts: [
       "A ordinare il risultato della join in base ai valori del campo indicato",
-      "A specificare il campo (o i campi) su cui collegare le righe delle due tabelle",
+      "A specificare il campo su cui collegare le righe delle due tabelle",
       "A definire l'alias con cui la tabella verrà richiamata nella query"
     ],
     correct: [1],
@@ -680,7 +680,7 @@ registerSubject("SQL", [
     id: "sql062", topic: "Progettazione DB",
     q: "Qual è il PRIMO passo nella progettazione di un database?",
     opts: [
-      "Determinare lo scopo del database e raccogliere i requisiti (analisi funzionale)",
+      "Determinare lo scopo del database e raccogliere i requisiti",
       "Creare subito tutte le tabelle e cominciare a inserire i dati di esempio",
       "Applicare le regole di normalizzazione per eliminare le ridondanze presenti"
     ],
@@ -692,7 +692,7 @@ registerSubject("SQL", [
     q: "Quale di queste proprietà fa parte della sicurezza dei dati (triade CIA)?",
     opts: [
       "Velocità di esecuzione delle query",
-      "Riservatezza (confidenzialità)",
+      "Riservatezza",
       "Portabilità tra sistemi diversi"
     ],
     correct: [1],
@@ -735,9 +735,9 @@ registerSubject("SQL", [
     id: "sql067", topic: "Crittografia",
     q: "Qual è la differenza tra cifratura SIMMETRICA e ASIMMETRICA?",
     opts: [
-      "La cifratura asimmetrica non utilizza alcuna chiave, mentre la simmetrica ne usa una",
-      "Simmetrica usa due chiavi diverse, mentre asimmetrica ne usa una sola per entrambe",
-      "Simmetrica usa la stessa chiave per cifrare e decifrare; asimmetrica usa due chiavi diverse"
+      "Simmetrica cifra i dati, asimmetrica si limita a comprimerli",
+      "Simmetrica usa due chiavi diverse, asimmetrica ne usa una sola",
+      "Simmetrica usa un'unica chiave; asimmetrica due chiavi diverse"
     ],
     correct: [2],
     exp: "Nella cifratura SIMMETRICA la chiave per cifrare è la STESSA che serve per decifrare. Nell'ASIMMETRICA le chiavi sono DIVERSE: si cifra con la chiave pubblica del destinatario e solo la sua chiave privata può decifrare."
@@ -845,7 +845,7 @@ registerSubject("SQL", [
     id: "sql077", topic: "Python e DB",
     q: "Qual è la sequenza corretta per interrogare un database MySQL da Python?",
     opts: [
-      "import mysql.connector, poi connect(), cursor(), execute(query) e infine il fetch",
+      "import mysql.connector, poi connect, cursor, execute e infine il fetch",
       "Prima il fetch dei risultati, poi la connessione e infine l'esecuzione della query",
       "Prima si crea il cursore, poi si importa la libreria e infine ci si connette"
     ],
@@ -912,8 +912,8 @@ registerSubject("SQL", [
     q: "Cosa significa DBaaS (Database as a Service)?",
     opts: [
       "Un servizio in cui il provider gestisce e scala il database",
-      "Un database completamente gratuito e senza limiti di spazio offerto dal cloud",
-      "Una particolare categoria di database NoSQL pensata solo per l'ambiente cloud"
+      "Un database gratuito ospitato direttamente dal provider cloud",
+      "Una categoria di database NoSQL nativa dell'ambiente cloud"
     ],
     correct: [0],
     exp: "Con il DBaaS il provider cloud gestisce l'infrastruttura (installazione, configurazione, manutenzione, scalabilità): l'utente usa il database senza preoccuparsi del server sottostante."
@@ -935,7 +935,7 @@ registerSubject("SQL", [
     opts: [
       "Genera in automatico un valore progressivo a ogni nuovo inserimento",
       "Permette di inserire qualsiasi testo, funzionando come un normale VARCHAR",
-      "Limita il campo a un insieme predefinito di valori ammessi (qui solo 'M' o 'F')"
+      "Limita il campo a un insieme predefinito di valori ammessi"
     ],
     correct: [2],
     exp: "ENUM vincola il campo a uno dei valori elencati: sesso ENUM('M','F') accetta solo 'M' o 'F'. Serve a garantire coerenza dei dati impedendo l'inserimento di valori non previsti."
@@ -968,7 +968,7 @@ registerSubject("SQL", [
     opts: [
       "Il simbolo di percentuale inteso in modo letterale, cioè il carattere %",
       "Un singolo carattere qualsiasi in quella esatta posizione della stringa",
-      "Una sequenza di zero o più caratteri qualsiasi (è il carattere jolly)"
+      "Una sequenza di zero o più caratteri qualsiasi"
     ],
     correct: [2],
     exp: "Nel LIKE, % è il carattere jolly che sostituisce QUALSIASI sequenza di caratteri (anche vuota). 'Mil%' trova tutte le stringhe che iniziano con 'Mil' (Milano, Milazzo...). Il jolly _ (underscore) sostituisce invece un singolo carattere."
@@ -1076,7 +1076,7 @@ registerSubject("SQL", [
     id: "sql107", topic: "UNION",
     q: "A cosa serve l'operatore UNION tra due SELECT?",
     opts: [
-      "Combina (impila) le righe dei due risultati in un unico elenco, togliendo i duplicati",
+      "Combina le righe dei due risultati in un unico elenco, togliendo i duplicati",
       "Affianca le colonne dei due risultati, allargando la tabella con nuovi campi a destra",
       "Ordina automaticamente le righe dei due risultati in base alla prima colonna"
     ],

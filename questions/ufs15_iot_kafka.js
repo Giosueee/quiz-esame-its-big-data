@@ -20,7 +20,7 @@ registerSubject("IoT e Streaming", [
     opts: [
       "Usa solo configurazioni o layout, senza elaborare dati osservati",
       "Elabora sempre a blocchi periodici",
-      "Processa gli eventi in continuo appena arrivano (bassa latenza)"
+      "Processa gli eventi in continuo appena arrivano"
     ],
     correct: [2],
     exp: "Lo streaming elabora i dati evento per evento in tempo (quasi) reale; il batch li accumula ed elabora a intervalli. Lo streaming abilita reazioni immediate (allarmi, dashboard live)."
@@ -62,7 +62,7 @@ registerSubject("IoT e Streaming", [
     id: "u15006", topic: "Producer",
     q: "Un 'producer' in Kafka:",
     opts: [
-      "Pubblica (scrive) messaggi su un topic",
+      "Pubblica messaggi su un topic",
       "Legge i messaggi",
       "Cancella i topic"
     ],
@@ -74,7 +74,7 @@ registerSubject("IoT e Streaming", [
     q: "Un 'consumer' in Kafka:",
     opts: [
       "Pubblica nuovi messaggi su un topic",
-      "Legge (consuma) i messaggi da un topic",
+      "Legge i messaggi da un topic",
       "Crea e configura i topic del cluster"
     ],
     correct: [1],
@@ -119,7 +119,7 @@ registerSubject("IoT e Streaming", [
     opts: [
       "Il colore dei messaggi",
       "Il numero di partizioni fisiche o logiche usate per distribuire i dati",
-      "Per quanto tempo (o quanto spazio) i messaggi vengono conservati"
+      "Per quanto tempo i messaggi vengono conservati"
     ],
     correct: [2],
     exp: "La retention stabilisce quanto a lungo Kafka conserva i messaggi (es. 7 giorni) o quanta memoria usare, dopodiché li elimina. A differenza di una coda tradizionale, i messaggi restano leggibili finché non scadono."
@@ -218,7 +218,7 @@ registerSubject("IoT e Streaming", [
     opts: [
       "Sostituire Kafka nella gestione degli stream",
       "Cifrare i messaggi che transitano nei topic Kafka",
-      "Impacchettare ed eseguire i servizi (Kafka, connettori) in container isolati"
+      "Impacchettare ed eseguire i servizi in container isolati"
     ],
     correct: [2],
     exp: "Docker permette di avviare rapidamente ambienti di streaming riproducibili (Kafka, Schema Registry, connettori) in container, utile per sviluppo, test e deployment coerenti."
@@ -305,7 +305,7 @@ registerSubject("IoT e Streaming", [
     q: "I sensori IoT generano tipicamente:",
     opts: [
       "Un singolo valore statico",
-      "Flussi continui di misurazioni (telemetria) nel tempo",
+      "Flussi continui di misurazioni nel tempo",
       "Immagini a bassa frequenza sempre"
     ],
     correct: [1],
@@ -317,7 +317,7 @@ registerSubject("IoT e Streaming", [
     opts: [
       "Cancellare i dati raccolti dai sensori dopo la lettura",
       "Elaborare tutti i dati esclusivamente nel cloud centrale",
-      "Elaborare i dati vicino ai dispositivi (sul campo) invece che solo nel cloud"
+      "Elaborare i dati vicino ai dispositivi invece che solo nel cloud"
     ],
     correct: [2],
     exp: "L'edge processa i dati vicino alla fonte (sul dispositivo o gateway): riduce latenza e banda verso il cloud, utile quando serve reazione immediata o connettività limitata."
@@ -326,7 +326,7 @@ registerSubject("IoT e Streaming", [
     id: "u15030", topic: "Coda vs log",
     q: "Kafka rispetto a una coda tradizionale (es. RabbitMQ):",
     opts: [
-      "Conserva i messaggi (log durevole) e permette a più consumatori di rileggerli",
+      "Conserva i messaggi e permette a più consumatori di rileggerli",
       "Cancella subito ogni messaggio letto",
       "È un database relazionale usato per query transazionali SQL"
     ],
@@ -338,7 +338,7 @@ registerSubject("IoT e Streaming", [
     q: "Kafka Connect serve a:",
     opts: [
       "Cifrare i topic prima di renderli disponibili ai consumer",
-      "Integrare Kafka con sistemi esterni (database, storage) tramite connettori pronti",
+      "Integrare Kafka con sistemi esterni tramite connettori pronti",
       "Creare dashboard a partire dai messaggi dei topic"
     ],
     correct: [1],
@@ -767,7 +767,7 @@ registerSubject("IoT e Streaming", [
     q: "In un'architettura event-driven i servizi comunicano:",
     opts: [
       "Solo tramite chiamate sincrone dirette tra servizi",
-      "Tramite eventi (messaggi) invece di chiamate dirette sincrone",
+      "Tramite eventi invece di chiamate dirette sincrone",
       "Solo tramite email invece di eventi applicativi"
     ],
     correct: [1],
@@ -833,7 +833,7 @@ registerSubject("IoT e Streaming", [
     q: "Un watermark nello stream processing indica:",
     opts: [
       "L'algoritmo di cifratura applicato agli eventi",
-      "Fino a quale event time si considerano arrivati (quasi) tutti gli eventi",
+      "Fino a quale event time si considerano arrivati tutti gli eventi",
       "Il colore usato per rappresentare gli eventi in ritardo"
     ],
     correct: [1],
@@ -845,7 +845,7 @@ registerSubject("IoT e Streaming", [
     opts: [
       "Senza alcun dato disponibile all'elaborazione",
       "Con un ritardo di diversi giorni sui dati",
-      "Con un piccolo ritardo (secondi), non istantaneo al millisecondo"
+      "Con un piccolo ritardo, non istantaneo al millisecondo"
     ],
     correct: [2],
     exp: "Near-real-time indica elaborazione con latenza bassa ma non nulla (secondi): sufficiente per molti casi d'uso (dashboard, allarmi) senza la complessità del vero tempo reale sub-millisecondo."
@@ -878,7 +878,7 @@ registerSubject("IoT e Streaming", [
     opts: [
       "La cifratura automatica dei messaggi ripetuti",
       "La perdita di tutti i messaggi con quella chiave",
-      "Uno squilibrio (skew): una partizione sovraccarica e le altre scariche"
+      "Uno squilibrio: una partizione sovraccarica e le altre scariche"
     ],
     correct: [2],
     exp: "Poiché la chiave determina la partizione, chiavi molto frequenti concentrano il carico su poche partizioni (data skew), limitando il parallelismo. Va scelta una chiave con buona distribuzione."

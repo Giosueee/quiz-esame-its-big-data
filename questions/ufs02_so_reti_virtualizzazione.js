@@ -558,7 +558,7 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02051", topic: "Processo: stati",
     q: "Quale di questi è uno stato tipico di un processo?",
     opts: [
-      "In attesa di un'operazione di I/O (blocked)",
+      "In attesa di un'operazione di I/O",
       "In fase di compilazione del codice sorgente",
       "Archiviato in modo permanente sul disco"
     ],

@@ -1,0 +1,2 @@
+[{"id":"sql067","opts":["Simmetrica cifra i dati, asimmetrica si limita a comprimerli","Simmetrica usa due chiavi diverse, asimmetrica ne usa una sola","Simmetrica usa un'unica chiave; asimmetrica due chiavi diverse"],"correct":[2]},
+{"id":"sql083","opts":["Un servizio in cui il provider gestisce e scala il database","Un database gratuito ospitato direttamente dal provider cloud","Una categoria di database NoSQL nativa dell'ambiente cloud"],"correct":[0]}]

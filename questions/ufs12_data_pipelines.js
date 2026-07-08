@@ -53,7 +53,7 @@ registerSubject("Data Pipelines", [
     opts: [
       "Il calendario che stabilisce quando parte la pipeline",
       "La connessione configurata verso una sorgente dati",
-      "Un'unità di lavoro (un nodo del DAG) da eseguire"
+      "Un'unità di lavoro da eseguire"
     ],
     correct: [2],
     exp: "Il task è il singolo passo del workflow (es. estrarre un file, eseguire una query). I task sono istanze di operatori e vengono collegati tra loro con dipendenze."
@@ -74,7 +74,7 @@ registerSubject("Data Pipelines", [
     q: "In Airflow, task_a >> task_b significa:",
     opts: [
       "task_a viene eseguito dopo task_b, invertendo la dipendenza indicata",
-      "task_b viene eseguito dopo task_a (a monte di b)",
+      "task_b viene eseguito dopo task_a",
       "I due task non hanno vincoli di dipendenza tra loro"
     ],
     correct: [1],
@@ -107,7 +107,7 @@ registerSubject("Data Pipelines", [
     q: "Perché un task di pipeline dovrebbe essere idempotente?",
     opts: [
       "Così viene eseguito più velocemente a ogni tentativo",
-      "Così rieseguirlo (dopo un errore) non duplica né corrompe i dati",
+      "Così rieseguirlo non duplica né corrompe i dati",
       "Così può dipendere da più task contemporaneamente"
     ],
     correct: [1],
@@ -227,7 +227,7 @@ registerSubject("Data Pipelines", [
     id: "u12021", topic: "Kimball",
     q: "Nella modellazione dati, l'approccio Kimball è:",
     opts: [
-      "Bottom-up con modellazione dimensionale (star schema, data mart)",
+      "Bottom-up con modellazione dimensionale",
       "Una rappresentazione senza variabili misurabili o coordinate utili",
       "Solo per dati non strutturati"
     ],
@@ -239,7 +239,7 @@ registerSubject("Data Pipelines", [
     q: "L'approccio Inmon al data warehouse prevede:",
     opts: [
       "Costruire solo data mart separati senza warehouse centrale",
-      "Un data warehouse centrale normalizzato (3NF) come fonte unica",
+      "Un data warehouse centrale normalizzato come fonte unica",
       "Eliminare completamente i processi ETL dal data warehouse"
     ],
     correct: [1],
@@ -350,7 +350,7 @@ registerSubject("Data Pipelines", [
     opts: [
       "Da un altro task nello stesso identico DAG",
       "Solo manualmente da un operatore a ogni esecuzione",
-      "Dal verificarsi di un evento (es. arrivo di un file) invece che a orario fisso"
+      "Dal verificarsi di un evento invece che a orario fisso"
     ],
     correct: [2],
     exp: "Le pipeline event-driven reagiscono a eventi (nuovo file, messaggio in coda) invece di una schedulazione fissa: utili quando i dati arrivano in modo irregolare o serve bassa latenza."
@@ -392,7 +392,7 @@ registerSubject("Data Pipelines", [
     id: "u12036", topic: "Estrazione incrementale",
     q: "Per estrarre solo i nuovi dati da una sorgente si usa spesso:",
     opts: [
-      "Un campo watermark (es. data di ultima modifica) per prelevare solo le novità",
+      "Un campo watermark per prelevare solo le novità",
       "Un ordinamento casuale delle righe della sorgente",
       "La cancellazione dei dati vecchi dalla sorgente"
     ],
@@ -416,7 +416,7 @@ registerSubject("Data Pipelines", [
     opts: [
       "Diventano più veloci perché il task a monte è fallito",
       "Partono comunque anche se manca l'output del task a monte",
-      "Non vengono eseguiti (o vanno in stato di attesa/skipped)"
+      "Non vengono eseguiti"
     ],
     correct: [2],
     exp: "Le dipendenze impediscono ai task a valle di partire se un loro predecessore è fallito, evitando di elaborare dati mancanti o incompleti. Si interviene sul task fallito e si rilancia."
@@ -756,8 +756,8 @@ registerSubject("Data Pipelines", [
     q: "Il 'push-down' delle trasformazioni consiste nel:",
     opts: [
       "Far eseguire le operazioni al sistema che detiene i dati",
-      "Portare sempre tutti i dati in locale prima di elaborarli",
-      "Eseguire i filtri solo dopo aver caricato tutti i dati"
+      "Portare i dati in locale prima di elaborarli",
+      "Applicare i filtri dopo aver caricato i dati"
     ],
     correct: [0],
     exp: "Spingere il calcolo dove stanno i dati (es. filtri e aggregazioni nel DW) riduce i dati trasferiti e sfrutta motori ottimizzati, invece di estrarre tutto ed elaborarlo altrove."
@@ -1052,7 +1052,7 @@ registerSubject("Data Pipelines", [
     id: "u12096", topic: "Gestione segreti",
     q: "Le credenziali per le connessioni alle sorgenti dovrebbero essere:",
     opts: [
-      "Gestite in modo sicuro (secret manager/connessioni), non scritte nel codice",
+      "Gestite in modo sicuro, non scritte nel codice",
       "Scritte in chiaro direttamente nel codice del DAG",
       "Condivise pubblicamente per facilitare la collaborazione"
     ],

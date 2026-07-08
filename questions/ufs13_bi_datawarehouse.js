@@ -51,7 +51,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13005", topic: "Fact table",
     q: "Una tabella dei fatti (fact table) contiene tipicamente:",
     opts: [
-      "Misure numeriche (es. vendite, quantità) e chiavi verso le dimensioni",
+      "Misure numeriche e chiavi verso le dimensioni",
       "Solo attributi descrittivi testuali come nome, categoria e indirizzo",
       "Esclusivamente le date degli eventi, senza alcuna misura numerica"
     ],
@@ -63,7 +63,7 @@ registerSubject("BI e Data Warehouse", [
     q: "Una tabella dimensione (dimension) contiene:",
     opts: [
       "Le transazioni operative registrate in tempo reale dai sistemi",
-      "Attributi descrittivi che danno contesto ai fatti (chi, cosa, quando, dove)",
+      "Attributi descrittivi che danno contesto ai fatti",
       "Nessuna chiave: è collegata ai fatti solo in base alla posizione"
     ],
     correct: [1],
@@ -162,7 +162,7 @@ registerSubject("BI e Data Warehouse", [
     q: "Strumenti come Fivetran servono a:",
     opts: [
       "Trasformare i dati grezzi già caricati in modelli dimensionali",
-      "Estrarre e caricare (EL) dati da varie fonti nel warehouse in modo automatico",
+      "Estrarre e caricare dati da varie fonti nel warehouse in modo automatico",
       "Addestrare modelli di machine learning a partire dai dati raccolti"
     ],
     correct: [1],
@@ -183,7 +183,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13017", topic: "Kimball vs Inmon",
     q: "L'approccio Kimball al data warehouse è caratterizzato da:",
     opts: [
-      "Modellazione dimensionale bottom-up (data mart con schemi a stella)",
+      "Modellazione dimensionale bottom-up",
       "Un unico grande modello normalizzato costruito con approccio top-down",
       "Un'architettura priva di tabelle dei fatti, basata solo su dimensioni"
     ],
@@ -207,7 +207,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "L'ordine con cui le righe vengono restituite dalle query",
       "Il numero complessivo di colonne presenti nella tabella dei fatti",
-      "Il livello di dettaglio di ogni riga (cosa rappresenta una riga)"
+      "Il livello di dettaglio di ogni riga"
     ],
     correct: [2],
     exp: "La grana definisce cosa rappresenta una singola riga dei fatti (es. una riga = una vendita di un prodotto in un giorno). Definire la grana è il primo passo della modellazione dimensionale."
@@ -282,7 +282,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13026", topic: "Chiave surrogata",
     q: "Una chiave surrogata in una dimensione è:",
     opts: [
-      "Un identificatore artificiale (es. progressivo) indipendente dai dati di business",
+      "Un identificatore artificiale indipendente dai dati di business",
       "La chiave naturale proveniente direttamente dal sistema sorgente",
       "Una misura numerica calcolata a partire dai fatti collegati"
     ],
@@ -294,7 +294,7 @@ registerSubject("BI e Data Warehouse", [
     q: "In Power BI, il modello dati collega le tabelle tramite:",
     opts: [
       "Un unico file di testo che contiene tutte le tabelle",
-      "Relazioni tra colonne chiave (uno-a-molti tipicamente)",
+      "Relazioni tra colonne chiave",
       "Copie manuali dei dati incollate tra una tabella e l'altra"
     ],
     correct: [1],
@@ -438,7 +438,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Un grafico predefinito incluso nelle dashboard interattive",
       "Un modello di machine learning addestrato sui dati del warehouse",
-      "Un file SQL che definisce una trasformazione (una SELECT) materializzata come tabella/vista"
+      "Un file SQL che definisce una trasformazione materializzata come tabella/vista"
     ],
     correct: [2],
     exp: "Un model dbt è una SELECT SQL che dbt esegue e materializza (come tabella o vista) nel warehouse. I model si compongono referenziandosi tra loro con ref()."
@@ -447,7 +447,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13041", topic: "Test dbt",
     q: "I test in dbt servono a:",
     opts: [
-      "Verificare la qualità dei dati (unicità, non nulli, valori attesi)",
+      "Verificare la qualità dei dati",
       "Generare automaticamente i grafici dei risultati delle query",
       "Estrarre i dati grezzi dalle sorgenti operative dell'azienda"
     ],
@@ -558,7 +558,7 @@ registerSubject("BI e Data Warehouse", [
     q: "Una tabella 'dimensione tempo' (date dimension) serve a:",
     opts: [
       "Cifrare le date per proteggere le informazioni sensibili dei clienti",
-      "Fornire attributi di calendario (giorno, mese, trimestre, festività) per le analisi temporali",
+      "Fornire attributi di calendario per le analisi temporali",
       "Sostituire la tabella dei fatti nelle analisi che coinvolgono il tempo"
     ],
     correct: [1],
@@ -603,7 +603,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Due tabelle dei fatti collegate alla stessa dimensione",
       "Due dimensioni categoriche usate per filtrare i dati",
-      "Una misura (numerica) e una dimensione (categorica)"
+      "Una misura e una dimensione"
     ],
     correct: [2],
     exp: "Il fatturato è una misura (si somma, si media); la regione è una dimensione (contesto per cui si analizza). Distinguere misure e dimensioni è alla base della modellazione BI."
@@ -612,7 +612,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13056", topic: "Orchestrazione",
     q: "L'aggiornamento dei dati del DW è tipicamente orchestrato:",
     opts: [
-      "Da pipeline schedulate (es. notturne) che eseguono l'ETL/ELT",
+      "Da pipeline schedulate che eseguono l'ETL/ELT",
       "Non viene mai aggiornato dopo il primo caricamento iniziale",
       "Esclusivamente in tempo reale a ogni singola transazione"
     ],
@@ -645,7 +645,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13059", topic: "Batch vs streaming",
     q: "Un DW tradizionale aggiorna i dati tipicamente in modalità:",
     opts: [
-      "Batch (a intervalli), anche se esistono soluzioni near-real-time",
+      "Batch, anche se esistono soluzioni near-real-time",
       "Mai: i dati vengono caricati una sola volta all'inizio",
       "Solo manualmente, con inserimenti fatti a mano dagli utenti"
     ],
@@ -678,7 +678,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13062", topic: "Connettori",
     q: "Un connettore in uno strumento di BI serve a:",
     opts: [
-      "Collegarsi a una specifica sorgente dati (database, API, file)",
+      "Collegarsi a una specifica sorgente dati",
       "Scrivere le query SQL di trasformazione dei dati",
       "Gestire gli account e i permessi degli utenti del report"
     ],
@@ -690,7 +690,7 @@ registerSubject("BI e Data Warehouse", [
     q: "In dbt, materializzare un model come 'table' invece che 'view' significa:",
     opts: [
       "Non salvare nulla e ricalcolare la query a ogni interrogazione",
-      "Salvare fisicamente i risultati (più veloci in lettura, ma da aggiornare)",
+      "Salvare fisicamente i risultati",
       "Generare automaticamente un grafico a partire dai risultati"
     ],
     correct: [1],
@@ -789,7 +789,7 @@ registerSubject("BI e Data Warehouse", [
     q: "Una 'fact table' senza misure numeriche, che registra solo il verificarsi di eventi, è detta:",
     opts: [
       "Una normale tabella dimensione con soli attributi descrittivi",
-      "Factless fact table (tabella dei fatti senza fatti)",
+      "Factless fact table",
       "Una tabella di staging usata solo in modo temporaneo"
     ],
     correct: [1],
@@ -834,7 +834,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Basta cambiare la combinazione di colori dei grafici prodotti",
       "Va bene così: ogni reparto può usare la propria definizione",
-      "Servono definizioni condivise (governance) per evitare numeri contrastanti"
+      "Servono definizioni condivise per evitare numeri contrastanti"
     ],
     correct: [2],
     exp: "Definizioni incoerenti generano report che si contraddicono e sfiducia nei dati. La governance stabilisce definizioni univoche (metriche certificate) come 'single source of truth'."
@@ -900,7 +900,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Una sola dimensione condivisa senza alcuna tabella dei fatti",
       "Un'unica tabella dei fatti che contiene tutti i processi insieme",
-      "Più fact table che condividono le stesse dimensioni (conformi)"
+      "Più fact table che condividono le stesse dimensioni"
     ],
     correct: [2],
     exp: "Ogni processo di business ha la sua fact table, ma condividono dimensioni 'conformi' (stesso cliente, stesso tempo): questo permette analisi integrate (drill across) tra i processi."
@@ -1020,7 +1020,7 @@ registerSubject("BI e Data Warehouse", [
     q: "Una 'dimensione degenerata' è:",
     opts: [
       "Una tabella dei fatti che non contiene alcuna misura numerica",
-      "Un attributo dimensionale (es. numero d'ordine) memorizzato nella fact table",
+      "Un attributo dimensionale memorizzato nella fact table",
       "Una dimensione con milioni di righe difficile da gestire"
     ],
     correct: [1],
@@ -1086,7 +1086,7 @@ registerSubject("BI e Data Warehouse", [
     q: "L'obiettivo finale della BI è:",
     opts: [
       "Sostituire completamente i manager nelle decisioni aziendali",
-      "Supportare decisioni migliori basate sui dati (data-driven)",
+      "Supportare decisioni migliori basate sui dati",
       "Archiviare in modo sicuro tutti i dati storici dell'azienda"
     ],
     correct: [1],

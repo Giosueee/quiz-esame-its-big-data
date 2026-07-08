@@ -30,7 +30,7 @@ registerSubject("Spark", [
     q: "Cos'è un RDD in Spark?",
     opts: [
       "Un motore SQL centralizzato che tiene le tabelle su un unico nodo",
-      "Una collezione distribuita e immutabile di dati (Resilient Distributed Dataset)",
+      "Una collezione distribuita e immutabile di dati",
       "Un formato di file colonnare compresso per salvare i risultati"
     ],
     correct: [1],
@@ -108,7 +108,7 @@ registerSubject("Spark", [
     opts: [
       "Si converte un DataFrame in formato Parquet",
       "Si applica una semplice map su ogni partizione",
-      "I dati devono essere ridistribuiti tra le partizioni (es. groupBy, join)"
+      "I dati devono essere ridistribuiti tra le partizioni"
     ],
     correct: [2],
     exp: "Lo shuffle sposta dati tra i nodi per raggruppare valori correlati (groupBy, join, reduceByKey): è costoso (I/O e rete). Minimizzare gli shuffle è chiave per le performance."
@@ -162,7 +162,7 @@ registerSubject("Spark", [
     q: "Il cluster manager (es. YARN, Kubernetes) in Spark:",
     opts: [
       "Scrive e compila il codice dell'applicazione Spark",
-      "Alloca le risorse (CPU, memoria) del cluster all'applicazione",
+      "Alloca le risorse del cluster all'applicazione",
       "Riscrive il piano di esecuzione delle query per ottimizzarle"
     ],
     correct: [1],
@@ -228,7 +228,7 @@ registerSubject("Spark", [
     q: "Un'architettura 'lakehouse' combina:",
     opts: [
       "Usa solo un warehouse tradizionale senza flessibilità del lake",
-      "La flessibilità del data lake con le funzionalità (transazioni, schema) del data warehouse",
+      "La flessibilità del data lake con le funzionalità del data warehouse",
       "Non combina né caratteristiche da lake né caratteristiche da warehouse"
     ],
     correct: [1],
@@ -249,7 +249,7 @@ registerSubject("Spark", [
     id: "u17023", topic: "Big data 3V",
     q: "Le classiche '3V' dei big data sono:",
     opts: [
-      "Volume, Velocità (Velocity), Varietà",
+      "Volume, Velocità, Varietà",
       "Velocità, Vettore, Valore",
       "Volume, Vista, Verità"
     ],
@@ -261,7 +261,7 @@ registerSubject("Spark", [
     q: "repartition() in Spark serve a:",
     opts: [
       "Eliminare definitivamente alcune partizioni per ridurre i dati",
-      "Cambiare il numero di partizioni (con shuffle) per bilanciare il parallelismo",
+      "Cambiare il numero di partizioni per bilanciare il parallelismo",
       "Unire due DataFrame partizionati sulla stessa chiave"
     ],
     correct: [1],
@@ -306,7 +306,7 @@ registerSubject("Spark", [
     opts: [
       "Gestire database SQL transazionali invece di elaborare stream con DataFrame",
       "Solo elaborazione batch",
-      "Elaborare stream con la stessa API dei DataFrame (micro-batch/continuo)"
+      "Elaborare stream con la stessa API dei DataFrame"
     ],
     correct: [2],
     exp: "Structured Streaming tratta uno stream come una tabella che cresce nel tempo, usando l'API DataFrame: lo stesso codice funziona su dati batch e in streaming, con garanzie di consegna."
@@ -348,7 +348,7 @@ registerSubject("Spark", [
     id: "u17032", topic: "filter DataFrame",
     q: "df.filter(df.eta > 30) in Spark:",
     opts: [
-      "Seleziona le righe con età maggiore di 30 (trasformazione pigra)",
+      "Seleziona le righe con età maggiore di 30",
       "Somma i valori della colonna età di tutte le righe",
       "Esegue subito il calcolo restituendo i dati al driver"
     ],
@@ -360,7 +360,7 @@ registerSubject("Spark", [
     q: "df.groupBy('reparto').agg({'stipendio':'avg'}):",
     opts: [
       "Filtra righe già presenti in base a una condizione booleana",
-      "Aggrega calcolando la media dello stipendio per reparto (comporta shuffle)",
+      "Aggrega calcolando la media dello stipendio per reparto",
       "Rimuove i gruppi creati invece di calcolare riepiloghi per gruppo"
     ],
     correct: [1],
@@ -405,7 +405,7 @@ registerSubject("Spark", [
     opts: [
       "Un database più grande",
       "Più memoria a un solo PC sempre",
-      "Più nodi/executor al cluster (scalabilità orizzontale)"
+      "Più nodi/executor al cluster"
     ],
     correct: [2],
     exp: "Spark è progettato per lo scale-out: aggiungendo nodi al cluster si aumenta la capacità di elaborare dati più grandi e più velocemente, distribuendo il lavoro tra più executor."
@@ -447,7 +447,7 @@ registerSubject("Spark", [
     id: "u17041", topic: "Coalesce",
     q: "coalesce(1) su un DataFrame serve tipicamente a:",
     opts: [
-      "Ridurre a una sola partizione (es. per scrivere un unico file), senza shuffle completo",
+      "Ridurre a una sola partizione, senza shuffle completo",
       "Ordinare le righe del DataFrame in un'unica sequenza globale",
       "Unire in una sola colonna tutti i campi del DataFrame"
     ],
@@ -492,7 +492,7 @@ registerSubject("Spark", [
     q: "persist(StorageLevel) in Spark permette di scegliere:",
     opts: [
       "L'ordine con cui le righe vengono scritte su disco",
-      "Dove conservare i dati (memoria, disco) e con quale ridondanza",
+      "Dove conservare i dati e con quale ridondanza",
       "L'algoritmo di cifratura da applicare ai dati persistiti"
     ],
     correct: [1],
@@ -504,7 +504,7 @@ registerSubject("Spark", [
     opts: [
       "Il job coincide sempre con un unico stage e un solo task",
       "Un task avvia un job che viene poi suddiviso in più stage",
-      "Un'azione avvia un job, diviso in stage (dallo shuffle), a loro volta in task"
+      "Un'azione avvia un job, diviso in stage, a loro volta in task"
     ],
     correct: [2],
     exp: "Ogni azione genera un job; Spark lo divide in stage separati dai confini di shuffle; ogni stage in task (uno per partizione) eseguiti in parallelo sugli executor."
@@ -603,7 +603,7 @@ registerSubject("Spark", [
     opts: [
       "Unire tutte le partizioni in un unico grande file",
       "Rallentare le letture obbligando a scorrere tutti i file",
-      "Leggere solo le partizioni rilevanti (partition pruning), velocizzando le query"
+      "Leggere solo le partizioni rilevanti, velocizzando le query"
     ],
     correct: [2],
     exp: "Scrivendo i dati partizionati (es. per anno/mese), le query che filtrano su quelle colonne leggono solo le cartelle interessate (partition pruning), riducendo drasticamente l'I/O."
@@ -612,7 +612,7 @@ registerSubject("Spark", [
     id: "u17056", topic: "Accumulatori",
     q: "Gli accumulatori in Spark servono a:",
     opts: [
-      "Aggregare valori (es. contatori) tra i task in modo distribuito",
+      "Aggregare valori tra i task in modo distribuito",
       "Trasmettere una tabella di lookup a tutti gli executor",
       "Ordinare i risultati prima di scriverli su disco"
     ],
@@ -789,7 +789,7 @@ registerSubject("Spark", [
     q: "Scrivere l'output con modalità 'overwrite' della partizione aiuta a:",
     opts: [
       "Aggiungere sempre nuove righe accodandole alle esistenti",
-      "Rieseguire il job senza duplicare i dati (idempotenza)",
+      "Rieseguire il job senza duplicare i dati",
       "Duplicare i dati per aumentarne la ridondanza"
     ],
     correct: [1],
@@ -810,7 +810,7 @@ registerSubject("Spark", [
     id: "u17074", topic: "Trasformazioni concatenate",
     q: "Concatenare più trasformazioni prima di un'azione permette a Spark di:",
     opts: [
-      "Fondere le operazioni in un piano efficiente (pipelining)",
+      "Fondere le operazioni in un piano efficiente",
       "Eseguire subito ciascuna trasformazione appena definita",
       "Eseguire le trasformazioni in ordine casuale"
     ],
@@ -876,7 +876,7 @@ registerSubject("Spark", [
     id: "u17080", topic: "Formato riga vs colonna",
     q: "Per query analitiche che aggregano poche colonne su molte righe è meglio:",
     opts: [
-      "Un formato colonnare (Parquet)",
+      "Un formato colonnare",
       "Un formato riga come il CSV di testo",
       "Un formato immagine per rappresentare i dati"
     ],
@@ -900,7 +900,7 @@ registerSubject("Spark", [
     opts: [
       "Nessuno storage: i dati restano solo nel driver",
       "Esclusivamente la RAM, senza storage persistente",
-      "Object storage (es. S3, ADLS, GCS)"
+      "Object storage"
     ],
     correct: [2],
     exp: "Nelle architetture cloud, Spark usa lo storage a oggetti (S3, Azure Data Lake, GCS) come layer dati economico e scalabile, spesso in formato Parquet/Delta per il lakehouse."
@@ -954,7 +954,7 @@ registerSubject("Spark", [
     q: "Perché di solito si preferiscono i DataFrame agli RDD?",
     opts: [
       "I DataFrame non sono distribuiti",
-      "Offrono ottimizzazioni (Catalyst), API più semplice e migliori performance",
+      "Offrono ottimizzazioni, API più semplice e migliori performance",
       "Gli RDD hanno più funzioni SQL"
     ],
     correct: [1],
@@ -1065,7 +1065,7 @@ registerSubject("Spark", [
     opts: [
       "Raccoglierlo in un'unica partizione e tenerlo solo in memoria",
       "Fare collect di tutti i dati nel driver e poi salvarli da lì",
-      "Scriverlo su storage distribuito (write) invece di collect nel driver"
+      "Scriverlo su storage distribuito invece di collect nel driver"
     ],
     correct: [2],
     exp: "df.write scrive in parallelo dagli executor allo storage, scalabile per grandi output. collect porterebbe tutto nel driver, rischiando out-of-memory: da evitare su grandi volumi."

@@ -151,9 +151,9 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18014", topic: "Base dati",
     q: "In una data story, una buona base dati deve essere:",
     opts: [
-      "La piu' grande possibile anche se irrilevante",
+      "Grezza e non ancora ripulita dagli errori",
       "Rilevante, affidabile e coerente con la domanda",
-      "Non documentata per restare sintetica"
+      "Focalizzata su un solo indicatore isolato"
     ],
     correct: [1],
     exp: "La credibilita' della storia dipende da dati pertinenti, fonti chiare, periodo dichiarato, unita' di misura coerenti e limiti esplicitati."
