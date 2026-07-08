@@ -1,0 +1,20 @@
+[
+{"id":"u19033","opts":["Trasformarli in rappresentazioni numeriche come BoW o TF-IDF","Passarli al modello come testo grezzo non elaborato","Convertirli in immagini prima di analizzarli"],"correct":[0]},
+{"id":"u19015","opts":["A una radice approssimata eliminando suffissi o desinenze","Alla loro traduzione corrispondente in lingua inglese","Alla forma base corretta secondo il dizionario"],"correct":[0]},
+{"id":"u19019","opts":["Un identificativo numerico univoco nel corpus","Una categoria grammaticale come nome, verbo o aggettivo","Il numero di volte in cui quel token compare"],"correct":[1]},
+{"id":"u19012","opts":["Normalizzazione di caratteri equivalenti o compatibili","Un algoritmo di raggruppamento dei documenti simili","Una metrica per valutare l'accuratezza del modello"],"correct":[0]},
+{"id":"u19020","opts":["Il contesto rallenta inutilmente l'elaborazione","Ogni parola ha un unico ruolo grammaticale fisso","La stessa forma può avere ruoli diversi, come nome o verbo"],"correct":[2]},
+{"id":"u19074","opts":["Fornire molti esempi risolti dentro il prompt","Fornire un solo esempio guida all'interno del prompt","Chiedere un compito senza fornire esempi nel prompt"],"correct":[2]},
+{"id":"u19072","opts":["Input testuale dato al modello per guidarne l'output","Un vettore sparso che conta le parole del testo","Un algoritmo che riduce le parole alla radice"],"correct":[0]},
+{"id":"u19081","opts":["Il numero massimo di token gestibili tra input e output","Il numero di documenti presenti nel dataset di training","Il numero di parole vietate nel vocabolario"],"correct":[0]},
+{"id":"u19016","opts":["Un vettore sparso con le frequenze delle parole","Il lemma, cioè la forma base linguistica della parola","La radice ottenuta tagliando i suffissi della parola"],"correct":[1]},
+{"id":"u19051","opts":["Modelli o API specializzate che trasformano testo in vettori","Contando a mano le parole di ciascun documento","Interrogando un database relazionale di parole"],"correct":[0]},
+{"id":"u19059","opts":["Disponendo le parole in ordine alfabetico crescente","Leggendo in anticipo l'intera frase da generare","Predicendo il prossimo token dato il contesto precedente"],"correct":[2]},
+{"id":"u19010","opts":["Aggiungere rumore casuale per rendere il modello robusto","Ridurre le varianti superficiali e il carico computazionale","Eliminare dal testo tutti i nomi propri di persona"],"correct":[1]},
+{"id":"u19038","opts":["Perché BoW riconosce i sinonimi in modo automatico","Perché condividono la maggior parte delle parole","Il modello codifica significato e contesto in uno spazio vettoriale"],"correct":[2]},
+{"id":"u19052","opts":["L'incapacità di elaborare testi molto lunghi","Elaborazione più sequenziale e meno parallelizzabile","Il funzionamento esclusivo su dati di tipo numerico"],"correct":[1]},
+{"id":"u19097","opts":["Definire pianificazioni temporali con espressioni cron","Trovare e usare modelli NLP ed embedding open-source","Progettare database relazionali per archiviare testi"],"correct":[1]},
+{"id":"u19008","opts":["Funziona unicamente sui dati di tipo immagine","Non riesce a rappresentare le parole intere del testo","Il vocabolario diventa enorme con forme nuove o flesse"],"correct":[2]},
+{"id":"u19056","opts":["Elimina le informazioni sulla posizione dei token","Genera i token di output uno dopo l'altro","Trasforma la frase sorgente in rappresentazioni contestuali"],"correct":[2]},
+{"id":"u19061","opts":["Solo encoder, sul modello di BERT","Encoder-decoder, adatta a task testo-a-testo","Solo decoder, sul modello di GPT"],"correct":[1]}
+]

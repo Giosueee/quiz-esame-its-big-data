@@ -1,0 +1,20 @@
+[
+{"id":"u18041","opts":["Restituisce un valore logico TRUE/FALSE per ogni stringa","Restituisce tutte le corrispondenze invece della prima soltanto","Estrae solo la prima corrispondenza trovata in ogni stringa"],"correct":[1]},
+{"id":"u18080","opts":["Segnalare un errore di misurazione sempre da correggere","Individuare casi critici o buone pratiche da approfondire","Rappresentare il comportamento tipico della maggioranza"],"correct":[1]},
+{"id":"u18093","opts":["Memorizzare il nome testuale completo di ogni servizio","Contare quante volte ciascun servizio è stato utilizzato","Rappresentare chiaramente presenza o assenza di ciascun servizio"],"correct":[2]},
+{"id":"u18005","opts":["Quando viene salvato in un file di grande dimensione","Quando viene contestualizzato e collegato ad altri elementi","Quando viene convertito in un semplice formato numerico"],"correct":[1]},
+{"id":"u18035","opts":["Separare una stringa in più elementi distinti","Unire tutti gli elementi di un vettore in un'unica stringa","Rimuovere gli spazi iniziali e finali di ogni elemento"],"correct":[1]},
+{"id":"u18076","opts":["Serve collegare pattern, contesto e implicazioni","I numeri da soli mostrano già la decisione da prendere","Basta ordinare i valori dal più grande al più piccolo"],"correct":[0]},
+{"id":"u18001","opts":["Dalla raccolta dei dati alla comunicazione degli insight","La sola fase di pulizia e trasformazione dei dati grezzi","La creazione del grafico finale di presentazione"],"correct":[0]},
+{"id":"u18049","opts":["Perché il backslash va escapato dentro la stringa R","Perché in R la sequenza \\s corrisponde a una cifra","Perché stringr richiede due backslash per ogni simbolo"],"correct":[0]},
+{"id":"u18078","opts":["L'ordine di esecuzione delle righe di codice","La frequenza con cui compare un singolo valore","Come due fattori si associano o influenzano nel contesto"],"correct":[2]},
+{"id":"u18087","opts":["Team IT interessato ai tempi di backup del database","Team logistico interessato ai tempi di consegna","Team marketing interessato a percezione e coinvolgimento"],"correct":[2]},
+{"id":"u18092","opts":["Duplicare le righe che non trovano corrispondenza","Arricchire i dati con attributi tramite chiavi affidabili","Rimuovere le colonne non presenti in entrambe le tabelle"],"correct":[1]},
+{"id":"u18004","opts":["Un elemento grezzo privo di contesto interpretativo","Una decisione operativa già pronta all'uso","Una raccomandazione strategica per il business"],"correct":[0]},
+{"id":"u18039","opts":["La matrice documento-termine dell'intero corpus","La prima corrispondenza trovata nel testo analizzato","TRUE/FALSE per indicare se il pattern è presente"],"correct":[2]},
+{"id":"u18051","opts":["Eliminare dal testo tutte le lettere accentate","Applicare dfm_trim per ridurre i termini rari","Rileggere il file specificando fileEncoding appropriato"],"correct":[2]},
+{"id":"u18091","opts":["Renderle uniformi e confrontabili nelle analisi","Aumentare il numero di righe duplicate nel dataset","Nascondere i record che hanno valori mancanti"],"correct":[0]},
+{"id":"u18021","opts":["Eliminare la necessità di selettori CSS nel codice","Cifrare i dati scambiati con il server web","Presentare la richiesta al server in modo trasparente"],"correct":[2]},
+{"id":"u18071","opts":["Unire più parole vicine in un unico token composto","Calcolare frequenze anche per gruppi di metadati","Ordinare i documenti per data di creazione"],"correct":[1]},
+{"id":"u18088","opts":["Collegata a evidenze, contesto e decisione da prendere","Una frase generica non legata ad alcuna metrica","Una semplice ripetizione dei dati grezzi di partenza"],"correct":[0]}
+]

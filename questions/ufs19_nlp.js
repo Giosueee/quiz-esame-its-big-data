@@ -85,8 +85,8 @@ registerSubject("NLP e LLM", [
     id: "u19008", topic: "Tokenizzazione parole",
     q: "Un limite della tokenizzazione a parole e':",
     opts: [
-      "Funziona solo con immagini",
-      "Non rappresenta mai parole intere",
+      "Funziona unicamente sui dati di tipo immagine",
+      "Non riesce a rappresentare le parole intere del testo",
       "Il vocabolario diventa enorme con forme nuove o flesse"
     ],
     correct: [2],
@@ -107,9 +107,9 @@ registerSubject("NLP e LLM", [
     id: "u19010", topic: "Normalizzazione",
     q: "La normalizzazione del testo serve a:",
     opts: [
-      "Aumentare volutamente il rumore",
-      "Ridurre varianti superficiali e carico computazionale",
-      "Rimuovere tutti i nomi propri"
+      "Aggiungere rumore casuale per rendere il modello robusto",
+      "Ridurre le varianti superficiali e il carico computazionale",
+      "Eliminare dal testo tutti i nomi propri di persona"
     ],
     correct: [1],
     exp: "Lowercase, rimozione doppi spazi, accenti o normalizzazione Unicode possono rendere il testo piu' coerente. Va pero' evitata perdita di informazione utile."
@@ -130,8 +130,8 @@ registerSubject("NLP e LLM", [
     q: "Unicode NFKC e' un esempio di:",
     opts: [
       "Normalizzazione di caratteri equivalenti o compatibili",
-      "Algoritmo di clustering",
-      "Misura di accuratezza"
+      "Un algoritmo di raggruppamento dei documenti simili",
+      "Una metrica per valutare l'accuratezza del modello"
     ],
     correct: [0],
     exp: "La normalizzazione Unicode puo' convertire rappresentazioni compatibili in forme standard, riducendo inconsistenze tecniche nel testo."
@@ -163,8 +163,8 @@ registerSubject("NLP e LLM", [
     q: "Lo stemming riduce le parole:",
     opts: [
       "A una radice approssimata eliminando suffissi o desinenze",
-      "A una traduzione inglese",
-      "A una frase completa"
+      "Alla loro traduzione corrispondente in lingua inglese",
+      "Alla forma base corretta secondo il dizionario"
     ],
     correct: [0],
     exp: "Lo stemming e' efficiente ma poco intelligente: puo' produrre radici che non sono parole reali."
@@ -173,9 +173,9 @@ registerSubject("NLP e LLM", [
     id: "u19016", topic: "Lemmatizzazione",
     q: "La lemmatizzazione mira a ottenere:",
     opts: [
-      "Un vettore sparso di frequenze",
-      "Il lemma, cioe' la forma base linguistica della parola",
-      "La prima lettera della parola"
+      "Un vettore sparso con le frequenze delle parole",
+      "Il lemma, cioè la forma base linguistica della parola",
+      "La radice ottenuta tagliando i suffissi della parola"
     ],
     correct: [1],
     exp: "La lemmatizzazione e' piu' accurata dello stemming ma richiede strumenti linguistici piu' ricchi e puo' essere piu' lenta."
@@ -206,9 +206,9 @@ registerSubject("NLP e LLM", [
     id: "u19019", topic: "PoS Tagging",
     q: "Il Part-of-Speech tagging assegna a ogni token:",
     opts: [
-      "Una chiave primaria SQL",
+      "Un identificativo numerico univoco nel corpus",
       "Una categoria grammaticale come nome, verbo o aggettivo",
-      "Un colore di dashboard"
+      "Il numero di volte in cui quel token compare"
     ],
     correct: [1],
     exp: "Il PoS tagging etichetta il ruolo grammaticale dei token e puo' richiedere contesto per risolvere ambiguita'."
@@ -217,9 +217,9 @@ registerSubject("NLP e LLM", [
     id: "u19020", topic: "PoS Tagging",
     q: "Perche' il contesto e' importante nel PoS tagging?",
     opts: [
-      "Il contesto va rimosso",
-      "Ogni parola ha un solo ruolo",
-      "La stessa forma puo' avere ruoli diversi, come nome o verbo"
+      "Il contesto rallenta inutilmente l'elaborazione",
+      "Ogni parola ha un unico ruolo grammaticale fisso",
+      "La stessa forma può avere ruoli diversi, come nome o verbo"
     ],
     correct: [2],
     exp: "Esempio: una parola puo' essere sostantivo in una frase e verbo in un'altra. Il sistema deve guardare la frase."
@@ -361,8 +361,8 @@ registerSubject("NLP e LLM", [
     q: "Per usare testi in un modello ML tradizionale occorre:",
     opts: [
       "Trasformarli in rappresentazioni numeriche come BoW o TF-IDF",
-      "Lasciarli come HTML grezzo",
-      "Usare solo immagini"
+      "Passarli al modello come testo grezzo non elaborato",
+      "Convertirli in immagini prima di analizzarli"
     ],
     correct: [0],
     exp: "Classificatori di spam o sentiment richiedono input numerici. La vettorizzazione rende il testo elaborabile dal modello."
@@ -415,8 +415,8 @@ registerSubject("NLP e LLM", [
     id: "u19038", topic: "Semantica",
     q: "Perche' due frasi semanticamente simili possono avere embedding vicini?",
     opts: [
-      "Perche' BoW conserva sinonimi automaticamente",
-      "Perche' hanno le stesse parole",
+      "Perché BoW riconosce i sinonimi in modo automatico",
+      "Perché condividono la maggior parte delle parole",
       "Il modello codifica significato e contesto in uno spazio vettoriale"
     ],
     correct: [2],
@@ -558,9 +558,9 @@ registerSubject("NLP e LLM", [
     id: "u19051", topic: "Embedding API",
     q: "Gli embedding possono essere ottenuti tramite:",
     opts: [
-      "Modelli/API specializzate che trasformano testo in vettori",
-      "Solo manualmente parola per parola",
-      "Solo database relazionali"
+      "Modelli o API specializzate che trasformano testo in vettori",
+      "Contando a mano le parole di ciascun documento",
+      "Interrogando un database relazionale di parole"
     ],
     correct: [0],
     exp: "Le slide citano API e modelli di embedding: il punto chiave e' convertire testo in vettori usabili per similarita' e retrieval."
@@ -569,9 +569,9 @@ registerSubject("NLP e LLM", [
     id: "u19052", topic: "RNN",
     q: "Un limite delle RNN rispetto ai Transformer e':",
     opts: [
-      "Impossibilita' di leggere token",
-      "Elaborazione piu' sequenziale e meno parallelizzabile",
-      "Uso esclusivo di immagini"
+      "L'incapacità di elaborare testi molto lunghi",
+      "Elaborazione più sequenziale e meno parallelizzabile",
+      "Il funzionamento esclusivo su dati di tipo numerico"
     ],
     correct: [1],
     exp: "Le RNN processano la sequenza passo dopo passo; i Transformer permettono maggiore parallelizzazione e connessioni piu' dirette tramite attention."
@@ -613,8 +613,8 @@ registerSubject("NLP e LLM", [
     id: "u19056", topic: "Encoder",
     q: "Nel Transformer, l'encoder:",
     opts: [
-      "Rimuove ogni informazione di posizione",
-      "Genera token futuri uno alla volta",
+      "Elimina le informazioni sulla posizione dei token",
+      "Genera i token di output uno dopo l'altro",
       "Trasforma la frase sorgente in rappresentazioni contestuali"
     ],
     correct: [2],
@@ -646,8 +646,8 @@ registerSubject("NLP e LLM", [
     id: "u19059", topic: "Autoregressione",
     q: "Un modello autoregressivo genera testo:",
     opts: [
-      "Ordinando parole alfabeticamente",
-      "Leggendo l'intera risposta futura",
+      "Disponendo le parole in ordine alfabetico crescente",
+      "Leggendo in anticipo l'intera frase da generare",
       "Predicendo il prossimo token dato il contesto precedente"
     ],
     correct: [2],
@@ -668,9 +668,9 @@ registerSubject("NLP e LLM", [
     id: "u19061", topic: "T5",
     q: "T5 mantiene un'architettura:",
     opts: [
-      "Solo encoder come BERT",
-      "Encoder-decoder adatta a task testo-a-testo",
-      "Solo decoder come GPT"
+      "Solo encoder, sul modello di BERT",
+      "Encoder-decoder, adatta a task testo-a-testo",
+      "Solo decoder, sul modello di GPT"
     ],
     correct: [1],
     exp: "T5 trasforma diversi compiti in formato text-to-text, utile per traduzione, riassunto e task seq2seq."
@@ -790,8 +790,8 @@ registerSubject("NLP e LLM", [
     q: "Un prompt e':",
     opts: [
       "Input testuale dato al modello per guidarne l'output",
-      "Un vettore BoW sparso",
-      "Un algoritmo di stemming"
+      "Un vettore sparso che conta le parole del testo",
+      "Un algoritmo che riduce le parole alla radice"
     ],
     correct: [0],
     exp: "Il prompt influenza qualita', stile, vincoli e accuratezza della risposta del modello."
@@ -811,8 +811,8 @@ registerSubject("NLP e LLM", [
     id: "u19074", topic: "Zero-shot",
     q: "Zero-shot prompting significa:",
     opts: [
-      "Fornire molti esempi",
-      "Fornire un esempio",
+      "Fornire molti esempi risolti dentro il prompt",
+      "Fornire un solo esempio guida all'interno del prompt",
       "Chiedere un compito senza fornire esempi nel prompt"
     ],
     correct: [2],
@@ -889,8 +889,8 @@ registerSubject("NLP e LLM", [
     q: "La context window e':",
     opts: [
       "Il numero massimo di token gestibili tra input e output",
-      "Il numero di righe del dataset",
-      "Il numero di stopword italiane"
+      "Il numero di documenti presenti nel dataset di training",
+      "Il numero di parole vietate nel vocabolario"
     ],
     correct: [0],
     exp: "La finestra di contesto limita quanto testo il modello puo' considerare in una singola interazione."
@@ -1064,9 +1064,9 @@ registerSubject("NLP e LLM", [
     id: "u19097", topic: "Hugging Face",
     q: "Nel contesto UFS19, Hugging Face e' rilevante per:",
     opts: [
-      "Definire espressioni cron",
-      "Trovare e usare modelli NLP/embedding open-source",
-      "Creare database relazionali"
+      "Definire pianificazioni temporali con espressioni cron",
+      "Trovare e usare modelli NLP ed embedding open-source",
+      "Progettare database relazionali per archiviare testi"
     ],
     correct: [1],
     exp: "Le slide citano risorse di embedding anche su Hugging Face, piattaforma nota per modelli e dataset NLP."

@@ -9,8 +9,8 @@ registerSubject("End-to-end Data Analysis", [
     q: "Che cosa indica un'analisi end-to-end dei dati?",
     opts: [
       "Dalla raccolta dei dati alla comunicazione degli insight",
-      "Una sola fase di pulizia dei dati",
-      "Un grafico finale senza analisi"
+      "La sola fase di pulizia e trasformazione dei dati grezzi",
+      "La creazione del grafico finale di presentazione"
     ],
     correct: [0],
     exp: "L'analisi end-to-end copre l'intero ciclo: domanda, raccolta, pulizia, trasformazione, analisi, visualizzazione e comunicazione degli insight utili all'azione."
@@ -42,8 +42,8 @@ registerSubject("End-to-end Data Analysis", [
     q: "Un dato, preso da solo, e':",
     opts: [
       "Un elemento grezzo privo di contesto interpretativo",
-      "Una decisione gia' pronta",
-      "Una raccomandazione strategica"
+      "Una decisione operativa già pronta all'uso",
+      "Una raccomandazione strategica per il business"
     ],
     correct: [0],
     exp: "Un valore come '50 euro' non dice se il prezzo e' alto o basso finche' non viene confrontato con contesto, categorie, tempo o obiettivi."
@@ -52,9 +52,9 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18005", topic: "Informazione",
     q: "Quando un dato diventa informazione?",
     opts: [
-      "Quando e' lasciato senza confronto",
+      "Quando viene salvato in un file di grande dimensione",
       "Quando viene contestualizzato e collegato ad altri elementi",
-      "Quando viene rimosso dal dataset"
+      "Quando viene convertito in un semplice formato numerico"
     ],
     correct: [1],
     exp: "Confrontare prezzi medi tra categorie, periodi o gruppi aggiunge contesto: il dato inizia a rispondere a una domanda."
@@ -228,8 +228,8 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18021", topic: "HTTP request",
     q: "Nel codice di scraping, user agent e header servono a:",
     opts: [
-      "Eliminare il bisogno di selettori",
-      "Nascondere l'identita' del codice",
+      "Eliminare la necessità di selettori CSS nel codice",
+      "Cifrare i dati scambiati con il server web",
       "Presentare la richiesta al server in modo trasparente"
     ],
     correct: [2],
@@ -382,9 +382,9 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18035", topic: "stringr str_c",
     q: "In str_c(), l'argomento collapse serve a:",
     opts: [
-      "Separare colonne in piu' variabili",
+      "Separare una stringa in più elementi distinti",
       "Unire tutti gli elementi di un vettore in un'unica stringa",
-      "Convertire tutto in maiuscolo"
+      "Rimuovere gli spazi iniziali e finali di ogni elemento"
     ],
     correct: [1],
     exp: "sep separa elementi passati insieme; collapse compatta un vettore intero in una stringa finale, spesso usando un separatore."
@@ -426,9 +426,9 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18039", topic: "stringr detect",
     q: "str_detect(string, pattern) restituisce:",
     opts: [
-      "Una matrice document-feature",
-      "La prima parola estratta",
-      "TRUE/FALSE per indicare se il pattern e' presente"
+      "La matrice documento-termine dell'intero corpus",
+      "La prima corrispondenza trovata nel testo analizzato",
+      "TRUE/FALSE per indicare se il pattern è presente"
     ],
     correct: [2],
     exp: "str_detect() e' utile per filtrare commenti, creare variabili logiche e contare testi che contengono parole chiave."
@@ -448,9 +448,9 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18041", topic: "stringr extract",
     q: "str_extract_all() rispetto a str_extract():",
     opts: [
-      "Restituisce solo valori booleani",
+      "Restituisce un valore logico TRUE/FALSE per ogni stringa",
       "Restituisce tutte le corrispondenze invece della prima soltanto",
-      "Rimuove automaticamente gli accenti"
+      "Estrae solo la prima corrispondenza trovata in ogni stringa"
     ],
     correct: [1],
     exp: "str_extract() prende la prima corrispondenza; str_extract_all() raccoglie tutte quelle presenti in ogni stringa."
@@ -536,9 +536,9 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18049", topic: "Regex",
     q: "In R, perche' spesso si scrive \\\\s invece di \\s?",
     opts: [
-      "Perche' il backslash va escapato dentro la stringa R",
-      "Perche' \\\\s indica una cifra",
-      "Perche' stringr non usa regex"
+      "Perché il backslash va escapato dentro la stringa R",
+      "Perché in R la sequenza \\s corrisponde a una cifra",
+      "Perché stringr richiede due backslash per ogni simbolo"
     ],
     correct: [0],
     exp: "R interpreta il backslash nelle stringhe. Per consegnare alla regex un backslash reale, lo si raddoppia: \\\\s rappresenta uno spazio."
@@ -558,8 +558,8 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18051", topic: "Encoding",
     q: "Quando importi un CSV con accenti corrotti, una soluzione corretta e':",
     opts: [
-      "Rimuovere tutte le righe accentate",
-      "Applicare dfm_trim",
+      "Eliminare dal testo tutte le lettere accentate",
+      "Applicare dfm_trim per ridurre i termini rari",
       "Rileggere il file specificando fileEncoding appropriato"
     ],
     correct: [2],
@@ -778,9 +778,9 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18071", topic: "Frequenze",
     q: "textstat_frequency(x, groups = ...) permette di:",
     opts: [
-      "Unire token multi-parola",
+      "Unire più parole vicine in un unico token composto",
       "Calcolare frequenze anche per gruppi di metadati",
-      "Ordinare file per estensione"
+      "Ordinare i documenti per data di creazione"
     ],
     correct: [1],
     exp: "Con groups si confrontano frequenze tra categorie, autori, fonti o periodi usando le docvars."
@@ -834,8 +834,8 @@ registerSubject("End-to-end Data Analysis", [
     q: "Per riconoscere un insight non basta guardare i numeri perche':",
     opts: [
       "Serve collegare pattern, contesto e implicazioni",
-      "I numeri sono sbagliati",
-      "Il contesto va eliminato"
+      "I numeri da soli mostrano già la decisione da prendere",
+      "Basta ordinare i valori dal più grande al più piccolo"
     ],
     correct: [0],
     exp: "Un insight nasce dal significato del pattern: bisogna chiedersi perche' accade, per chi conta e che cosa implica."
@@ -855,8 +855,8 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18078", topic: "Insight relazione",
     q: "Un insight basato su relazione tra variabili riguarda:",
     opts: [
-      "Solo la sintassi del codice",
-      "Solo l'ordine alfabetico dei nomi",
+      "L'ordine di esecuzione delle righe di codice",
+      "La frequenza con cui compare un singolo valore",
       "Come due fattori si associano o influenzano nel contesto"
     ],
     correct: [2],
@@ -877,9 +877,9 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18080", topic: "Insight anomalie",
     q: "Un outlier in una data story puo' essere utile per:",
     opts: [
-      "Dimostrare un errore di codice",
+      "Segnalare un errore di misurazione sempre da correggere",
       "Individuare casi critici o buone pratiche da approfondire",
-      "Eliminare ogni confronto"
+      "Rappresentare il comportamento tipico della maggioranza"
     ],
     correct: [1],
     exp: "Le anomalie non vanno solo rimosse: possono rivelare problemi, opportunita' o casi eccezionali da studiare."
@@ -954,8 +954,8 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18087", topic: "Metriche audience",
     q: "Nel caso rebranding, metriche come engagement rate, sentiment e share of voice sono piu' utili a:",
     opts: [
-      "Database administrator sui backup",
-      "Team logistico sui tempi consegna",
+      "Team IT interessato ai tempi di backup del database",
+      "Team logistico interessato ai tempi di consegna",
       "Team marketing interessato a percezione e coinvolgimento"
     ],
     correct: [2],
@@ -966,8 +966,8 @@ registerSubject("End-to-end Data Analysis", [
     q: "Una raccomandazione data-driven deve essere:",
     opts: [
       "Collegata a evidenze, contesto e decisione da prendere",
-      "Una frase generica senza metrica",
-      "Una ripetizione del dataset grezzo"
+      "Una frase generica non legata ad alcuna metrica",
+      "Una semplice ripetizione dei dati grezzi di partenza"
     ],
     correct: [0],
     exp: "La raccomandazione e' credibile se deriva chiaramente dai dati e spiega che cosa fare, perche' e con quali limiti."
@@ -999,8 +999,8 @@ registerSubject("End-to-end Data Analysis", [
     q: "Standardizzare le date nel dataset dashboard serve a:",
     opts: [
       "Renderle uniformi e confrontabili nelle analisi",
-      "Aumentare righe duplicate",
-      "Nascondere record mancanti"
+      "Aumentare il numero di righe duplicate nel dataset",
+      "Nascondere i record che hanno valori mancanti"
     ],
     correct: [0],
     exp: "Date in formati misti rompono filtri, ordinamenti e calcoli temporali. Standardizzarle e' una condizione minima per dashboard affidabili."
@@ -1009,9 +1009,9 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18092", topic: "Join",
     q: "Effettuare join corretti con l'anagrafica significa:",
     opts: [
-      "Duplicare ogni riga volontariamente",
+      "Duplicare le righe che non trovano corrispondenza",
       "Arricchire i dati con attributi tramite chiavi affidabili",
-      "Sostituire i dati con grafici"
+      "Rimuovere le colonne non presenti in entrambe le tabelle"
     ],
     correct: [1],
     exp: "I join devono preservare granularita' e coerenza: chiavi sbagliate creano duplicati, perdita di righe o attributi errati."
@@ -1020,8 +1020,8 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18093", topic: "Indicatori binari",
     q: "Indicatori binari 0/1 per servizi attivi servono a:",
     opts: [
-      "Evitare qualsiasi filtro",
-      "Memorizzare testi lunghi in ogni cella",
+      "Memorizzare il nome testuale completo di ogni servizio",
+      "Contare quante volte ciascun servizio è stato utilizzato",
       "Rappresentare chiaramente presenza o assenza di ciascun servizio"
     ],
     correct: [2],
