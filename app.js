@@ -49,42 +49,55 @@ const $$ = s => Array.from(document.querySelectorAll(s));
 function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
 function sameSet(a,b){ if(a.length!==b.length) return false; const s=new Set(b); return a.every(x=>s.has(x)); }
 
-/* ---------- Selezione domande (con pesi adattivi) ---------- */
-function pickQuestions(){
-  let pool = QUESTIONS.filter(q => session.area==="Tutto" || q.area===session.area);
-
-  if(session.mode==="errori"){
-    pool = pool.filter(q => statFor(q.id).everWrong);   // tutte quelle mai sbagliate
-    if(pool.length===0) return [];
-    return shuffle(pool).slice(0, session.count);
-  }
-
-  if(session.mode==="casuale"){
-    return shuffle(pool).slice(0, session.count);
-  }
-
-  // ---- Modalità ADATTIVA: peso = base + bonus se sbagliata / mai vista ----
-  const weighted = pool.map(q=>{
-    const s = statFor(q.id);
-    let w = 1;
-    if(s.seen===0)      w += 1.2;                  // le domande mai viste hanno priorità
-    if(s.wrong>0)       w += 2.5*Math.min(s.wrong,4); // gli errori pesano molto
-    if(s.lastWrong)     w += 2;                     // sbagliata l'ultima volta
-    if(s.seen>0 && s.wrong===0) w -= 0.5;           // domande già padroneggiate, meno frequenti
-    return {q, w:Math.max(0.2,w)};
-  });
-
-  // estrazione pesata senza rimpiazzo
+/* ---------- Selezione domande ---------- */
+// peso adattivo di una domanda (più alto = più probabile)
+function adaptiveWeight(q){
+  const s = statFor(q.id);
+  let w = 1;
+  if(s.seen===0)      w += 1.2;                     // mai viste: priorità
+  if(s.wrong>0)       w += 2.5*Math.min(s.wrong,4); // gli errori pesano molto
+  if(s.lastWrong)     w += 2;                        // sbagliata l'ultima volta
+  if(s.seen>0 && s.wrong===0) w -= 0.5;              // già padroneggiate: meno spesso
+  return Math.max(0.2, w);
+}
+// estrae n domande da un pool (pesata adattiva; casuale pura se mode==="casuale")
+function pickFromPool(pool, n, mode){
+  if(n<=0 || pool.length===0) return [];
+  if(mode==="casuale") return shuffle(pool).slice(0, n);
+  const bag = pool.map(q=>({q, w:adaptiveWeight(q)}));
   const chosen=[];
-  const bag = weighted.slice();
-  while(chosen.length < session.count && bag.length){
+  while(chosen.length < n && bag.length){
     const tot = bag.reduce((a,b)=>a+b.w,0);
     let r = Math.random()*tot, idx=0;
     for(let i=0;i<bag.length;i++){ r-=bag[i].w; if(r<=0){ idx=i; break; } }
-    chosen.push(bag[idx].q);
-    bag.splice(idx,1);
+    chosen.push(bag[idx].q); bag.splice(idx,1);
   }
   return chosen;
+}
+function pickQuestions(){
+  // Modalità "solo i miei errori": tutte le domande già sbagliate, in ordine casuale
+  if(session.mode==="errori"){
+    const pool = QUESTIONS.filter(q => statFor(q.id).everWrong);
+    if(pool.length===0) return [];
+    return shuffle(pool).slice(0, session.count);
+  }
+  // Altrimenti: MIX BILANCIATO fra tutte le materie (quote ~uguali per materia)
+  const subs = shuffle(SUBJECTS);                    // ordine casuale: varia chi prende il "resto"
+  const base = Math.floor(session.count / subs.length);
+  const remainder = session.count - base*subs.length;
+  let result = [];
+  subs.forEach((name, i)=>{
+    const target = base + (i < remainder ? 1 : 0);
+    const pool = QUESTIONS.filter(q => q.area===name);
+    result = result.concat(pickFromPool(pool, target, session.mode));
+  });
+  // se qualche materia aveva troppe poche domande, completa dal resto
+  if(result.length < session.count){
+    const used = new Set(result.map(q=>q.id));
+    const rest = QUESTIONS.filter(q=>!used.has(q.id));
+    result = result.concat(pickFromPool(rest, session.count - result.length, session.mode));
+  }
+  return shuffle(result);
 }
 
 /* ---------- Navigazione schermate ---------- */
@@ -129,7 +142,7 @@ function startSession(){
           <span class="tag">${escapeHTML(q.topic)}</span>
         </div>
         <div class="q-text">${escapeHTML(q.q)}</div>
-        <div class="q-hint">${multi ? "⚑ Attenzione: può avere PIÙ di una risposta corretta." : "Seleziona la risposta che ritieni corretta (potrebbe anche essercene più di una)."}</div>
+        <div class="q-hint">${multi ? "⚑ Attenzione: può avere PIÙ di una risposta corretta." : "Seleziona la risposta corretta."}</div>
         <div class="opts">${opts}</div>
       </div>`);
   });
@@ -434,17 +447,8 @@ function bindSegmented(id, key){
   }));
 }
 
-// Costruisce i pulsanti materia dalle materie effettivamente registrate
-function buildAreaButtons(){
-  const c = $("#opt-area");
-  const areas = ["Tutto", ...SUBJECTS];
-  c.innerHTML = areas.map((a,i)=>`<button class="seg${i===0?" active":""}" data-val="${escapeHTML(a)}">${escapeHTML(a)}</button>`).join("");
-  session.area = "Tutto";
-}
-
 document.addEventListener("DOMContentLoaded",()=>{
-  buildAreaButtons();
-  bindSegmented("opt-area","area");
+  session.area = "Tutto";                 // niente scelta materia: sempre mix bilanciato di tutte
   bindSegmented("opt-count","count");
   bindSegmented("opt-mode","mode");
 
