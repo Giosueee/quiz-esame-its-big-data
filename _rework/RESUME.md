@@ -64,4 +64,9 @@ Policy REPLACE per le domande-codice: sacrificare le più deboli anche se sono c
 (riscrivendone comunque il resto), oppure **solo** item davvero ridondanti/duplicati? (Default
 assunto: sostituire le più deboli e ridondanti, riscrivendo i concetti salvabili invece di perderli.)
 
-## Stato: fermato al checkpoint post-pilota. Prossimo passo = Fase 6, materia SO/Reti.
+## AVANZAMENTO Fase 6 (aggiornato)
+FATTE: ufs02 ✅ | python ✅ | sql ✅ | ufs06 statistica ✅. RESTANO: ufs06 statistica, ufs07 modelli_statistici, ufs08 r, ufs09 ml, ufs10 time_series, ufs12 data_pipelines, ufs13 bi, ufs14 pandas, ufs15 iot, ufs17 spark, ufs18 end_to_end, ufs19 nlp.
+METRICA VERA sulla lunghezza: guardare MEDIA char corretta vs distrattori (deve combaciare) e margine-quando-strettamente-piu-lunga (<~5 char = ok). Il '% piu lunga' di qa.py include i pareggi e sovrastima.
+RICETTA per file GIA' BUONO (distrattori pieni: statistica, bi, forse modelli/spark/bi): node _rework/reduce4to3.js questions/<f> ; poi convertire multi con apply.js ; trimcorrect.js sugli offender margine>=8 ; commit.
+RICETTA per file ROTTO (distrattori corti/deboli: ml, nlp, time_series, pandas, iot, data_pipelines, r, end_to_end): riscrivere a mano rw_<f>.json come ufs02 (distrattori pieni near-miss).
+Workflow per file: leggi -> _rework/rw_<file>.json (correct index0) -> node _rework/apply.js questions/<file> _rework/rw_<file>.json -> misura rank lunghezza -> trim offender margine>=8 -> commit. ALLA FINE: node _rework/balance.js (posizione 33/33/33) + python3 _rework/qa.py sul dump finale.

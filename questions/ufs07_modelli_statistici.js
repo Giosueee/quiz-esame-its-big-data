@@ -9,8 +9,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "L'affermazione di 'nessun effetto' o 'nessuna differenza' che si vuole mettere alla prova",
       "L'ipotesi che il ricercatore spera fortemente di dimostrare come vera",
-      "Il risultato certo dell'esperimento indipendentemente dai dati raccolti",
-      "La probabilità che il campione sia stato estratto in modo casuale"
+      "Il risultato certo dell'esperimento indipendentemente dai dati raccolti"
     ],
     correct: [0],
     exp: "H0 è l'ipotesi di partenza da 'sfidare' (tipicamente nessun effetto/differenza). Il test cerca prove per RIFIUTARLA a favore dell'alternativa H1. Non si 'accetta' mai H0: al più non si riesce a rifiutarla."
@@ -21,8 +20,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "L'affermazione che si vuole sostenere, contraria all'ipotesi nulla",
       "Una copia esatta dell'ipotesi nulla espressa con altre parole",
-      "L'ipotesi che viene sempre accettata a prescindere dai dati",
-      "Il livello di significatività scelto prima del test"
+      "L'ipotesi che viene sempre accettata a prescindere dai dati"
     ],
     correct: [0],
     exp: "H1 è ciò che si vuole dimostrare (es. 'c'è un effetto/differenza') ed è complementare a H0. Se i dati sono abbastanza forti da rifiutare H0, si conclude a favore di H1."
@@ -33,8 +31,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "La probabilità di rifiutare H0 quando in realtà è vera",
       "La probabilità che l'ipotesi nulla sia effettivamente vera",
-      "La percentuale di dati che cade entro una deviazione standard",
-      "La potenza del test statistico che si sta conducendo"
+      "La percentuale di dati che cade entro una deviazione standard"
     ],
     correct: [0],
     exp: "α è la soglia di rischio di errore di primo tipo: rifiutare H0 pur essendo vera (falso positivo). Fissando α=0,05 accetti un 5% di probabilità di questo errore. Va scelto PRIMA di vedere i dati."
@@ -45,8 +42,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "La probabilità di osservare dati estremi quanto quelli ottenuti, se H0 è vera",
       "La probabilità che l'ipotesi nulla sia vera dati i risultati",
-      "La probabilità di aver commesso un errore di secondo tipo",
-      "La dimensione dell'effetto misurato nel campione"
+      "La probabilità di aver commesso un errore di secondo tipo"
     ],
     correct: [0],
     exp: "Il p-value è P(dati così estremi | H0 vera). Piccolo p-value → i dati sono improbabili sotto H0 → si rifiuta H0. NON è la probabilità che H0 sia vera (errore comune)."
@@ -57,8 +53,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Il p-value è minore o uguale al livello di significatività α",
       "Il p-value è maggiore del livello di significatività α",
-      "Il p-value è esattamente uguale a 1 in ogni caso",
-      "Il valore della statistica test è pari a zero"
+      "Il p-value è esattamente uguale a 1 in ogni caso"
     ],
     correct: [0],
     exp: "Se p ≤ α si rifiuta H0 (risultato 'statisticamente significativo'); se p > α non si rifiuta. Es: con α=0,05 e p=0,02 si rifiuta H0."
@@ -69,8 +64,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "C'è il 3% di probabilità di ottenere dati così estremi se H0 fosse vera",
       "C'è il 3% di probabilità che l'ipotesi nulla sia vera",
-      "C'è il 97% di probabilità che l'ipotesi alternativa sia vera",
-      "Il 3% dei dati del campione è formato da valori anomali"
+      "C'è il 97% di probabilità che l'ipotesi alternativa sia vera"
     ],
     correct: [0],
     exp: "Il p-value NON è la probabilità che H0 sia vera. È la probabilità dei dati (o più estremi) ASSUMENDO H0 vera. Con p=0,03 < 0,05 si rifiuta H0, ma non si quantifica la probabilità delle ipotesi."
@@ -81,8 +75,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Rifiutare l'ipotesi nulla quando in realtà è vera (falso positivo)",
       "Non rifiutare l'ipotesi nulla quando in realtà è falsa",
-      "Scegliere un campione troppo piccolo per il test",
-      "Calcolare in modo errato la media del campione"
+      "Scegliere un campione troppo piccolo per il test"
     ],
     correct: [0],
     exp: "Errore di tipo I = 'falso allarme': rifiuti H0 pur essendo vera. La sua probabilità è α. Es: concludere che un farmaco funziona quando in realtà non fa nulla."
@@ -93,7 +86,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Non rifiutare l'ipotesi nulla quando in realtà è falsa (falso negativo)",
       "Rifiutare l'ipotesi nulla quando in realtà è vera",
-      "Usare un livello di significatività troppo basso per i dati",
       "Confondere la media campionaria con quella della popolazione"
     ],
     correct: [0],
@@ -105,8 +97,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "La probabilità di rifiutare correttamente H0 quando è falsa, pari a 1 − β",
       "La probabilità di commettere un errore di primo tipo, pari ad α",
-      "La probabilità che il campione sia rappresentativo della popolazione",
-      "La differenza tra la media campionaria e quella della popolazione"
+      "La probabilità che il campione sia rappresentativo della popolazione"
     ],
     correct: [0],
     exp: "La potenza (1 − β) è la capacità del test di rilevare un effetto realmente presente. Aumenta con la numerosità del campione e con la dimensione dell'effetto. Un test poco potente rischia falsi negativi."
@@ -115,10 +106,9 @@ registerSubject("Modelli Statistici", [
     id: "u07010", topic: "Errori del test",
     q: "Riducendo molto α (es. da 0,05 a 0,01), a parità di dati, il rischio di errore di secondo tipo (β):",
     opts: [
-      "Tende ad aumentare: rendendo più difficile rifiutare H0 crescono i falsi negativi",
+      "Aumenta: più difficile rifiutare H0, più falsi negativi",
       "Diminuisce insieme ad α, perché entrambi calano insieme",
-      "Resta esattamente invariato, perché sono indipendenti",
-      "Diventa pari a zero automaticamente"
+      "Resta esattamente invariato, perché sono indipendenti"
     ],
     correct: [0],
     exp: "C'è un compromesso: abbassando α diventa più difficile rifiutare H0, quindi aumentano i mancati rilevamenti (β cresce). Per ridurre entrambi gli errori serve aumentare la numerosità del campione."
@@ -127,10 +117,9 @@ registerSubject("Modelli Statistici", [
     id: "u07011", topic: "Test bilaterale",
     q: "Un test bilaterale (a due code) si usa quando l'ipotesi alternativa afferma che:",
     opts: [
-      "Il parametro è semplicemente DIVERSO dal valore ipotizzato (≠), in una direzione qualsiasi",
+      "Il parametro è solo diverso (≠) dal valore ipotizzato",
       "Il parametro è strettamente maggiore del valore ipotizzato",
-      "Il parametro è strettamente minore del valore ipotizzato",
-      "Il parametro è esattamente uguale al valore ipotizzato"
+      "Il parametro è strettamente minore del valore ipotizzato"
     ],
     correct: [0],
     exp: "Bilaterale: H1 è 'μ ≠ valore', quindi si considerano entrambe le code della distribuzione. Unilaterale (a una coda): H1 è 'μ > valore' o 'μ < valore', con una sola direzione di interesse."
@@ -141,8 +130,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "L'insieme dei valori della statistica test per cui si rifiuta l'ipotesi nulla",
       "L'intervallo che contiene sicuramente il vero valore del parametro",
-      "L'insieme dei dati anomali da eliminare prima del test",
-      "La zona in cui il p-value è sempre maggiore di α"
+      "L'insieme dei dati anomali da eliminare prima del test"
     ],
     correct: [0],
     exp: "La regione critica raccoglie i valori della statistica test 'troppo estremi' sotto H0: se la statistica calcolata vi ricade, si rifiuta H0. La sua ampiezza dipende da α."
@@ -153,8 +141,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "La deviazione standard della popolazione è ignota e si stima dal campione",
       "La deviazione standard della popolazione è nota con certezza assoluta",
-      "Il campione è composto da più di diecimila osservazioni",
-      "La variabile studiata è di tipo qualitativo nominale"
+      "Il campione è composto da più di diecimila osservazioni"
     ],
     correct: [0],
     exp: "Il t-test si usa quando σ della popolazione è sconosciuta (caso più realistico) e va stimata dal campione, specie con campioni piccoli. Lo z-test presuppone σ nota. Per n grande t e z quasi coincidono."
@@ -165,7 +152,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Code più pesanti, soprattutto con pochi gradi di libertà",
       "Una forma completamente asimmetrica verso destra",
-      "Media diversa da zero e sempre positiva",
       "Nessuna relazione con la distribuzione normale"
     ],
     correct: [0],
@@ -176,7 +162,6 @@ registerSubject("Modelli Statistici", [
     q: "In un t-test a un campione con n osservazioni, i gradi di libertà sono:",
     opts: [
       "n − 1",
-      "n",
       "n + 1",
       "n / 2"
     ],
@@ -189,8 +174,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Ripetendo il campionamento, il 95% degli intervalli così costruiti conterrebbe la vera media",
       "Il 95% dei dati del campione cade all'interno dell'intervallo calcolato",
-      "C'è il 95% di probabilità che il singolo intervallo sia sbagliato",
-      "La media campionaria ha il 95% di probabilità di essere esatta"
+      "C'è il 95% di probabilità che il singolo intervallo sia sbagliato"
     ],
     correct: [0],
     exp: "L'interpretazione corretta è frequentista: nel 95% dei campioni ripetuti l'intervallo cattura il vero parametro. Il parametro è fisso; è l'intervallo (che cambia da campione a campione) a essere aleatorio."
@@ -201,7 +185,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "La differenza è statisticamente significativa al livello 0,05 (si rifiuta H0)",
       "La differenza non è significativa perché l'intervallo è troppo ampio",
-      "Il p-value è sicuramente maggiore di 0,05",
       "Non si può trarre alcuna conclusione dal test"
     ],
     correct: [0],
@@ -213,7 +196,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Se due variabili categoriche sono associate oppure indipendenti tra loro",
       "Se la media di un campione è uguale a un valore prefissato",
-      "Se due medie di gruppi diversi sono uguali tra loro",
       "Se una variabile continua segue una distribuzione normale"
     ],
     correct: [0],
@@ -225,7 +207,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Frequenze osservate e frequenze attese sotto l'ipotesi nulla",
       "La media e la mediana dei dati campionari",
-      "La varianza di due campioni indipendenti",
       "Il coefficiente angolare e l'intercetta di una retta"
     ],
     correct: [0],
@@ -237,8 +218,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Le medie di tre o più gruppi contemporaneamente",
       "La varianza di un singolo campione con un valore atteso",
-      "Due variabili categoriche in una tabella di contingenza",
-      "La correlazione tra due variabili quantitative"
+      "Due variabili categoriche in una tabella di contingenza"
     ],
     correct: [0],
     exp: "L'ANOVA verifica se le medie di più gruppi (3 o più) sono tutte uguali o se almeno una differisce. Confrontare le medie a coppie con molti t-test aumenterebbe l'errore di primo tipo: l'ANOVA lo controlla."
@@ -248,7 +228,6 @@ registerSubject("Modelli Statistici", [
     q: "Perché non si usano tanti t-test a coppie invece di un'unica ANOVA con molti gruppi?",
     opts: [
       "Perché test multipli aumentano il rischio complessivo di errore di primo tipo",
-      "Perché il t-test non può confrontare due medie tra loro",
       "Perché l'ANOVA è l'unico test che usa la distribuzione normale",
       "Perché con più gruppi i dati diventano automaticamente qualitativi"
     ],
@@ -261,8 +240,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "La relazione lineare tra una variabile dipendente e una indipendente",
       "La distribuzione di frequenza di una singola variabile categorica",
-      "La probabilità congiunta di due eventi indipendenti",
-      "La differenza tra le medie di due gruppi distinti"
+      "La probabilità congiunta di due eventi indipendenti"
     ],
     correct: [0],
     exp: "La regressione lineare semplice stima una retta Y = a + bX per prevedere Y (dipendente) dalla X (indipendente). 'a' è l'intercetta, 'b' il coefficiente angolare (pendenza)."
@@ -272,7 +250,6 @@ registerSubject("Modelli Statistici", [
     q: "Nel modello Y = a + bX, il coefficiente angolare b rappresenta:",
     opts: [
       "La variazione attesa di Y per un aumento unitario di X",
-      "Il valore di Y quando X è uguale a zero",
       "La correlazione esatta tra X e Y espressa in percentuale",
       "La media dei residui del modello"
     ],
@@ -284,7 +261,6 @@ registerSubject("Modelli Statistici", [
     q: "Il metodo dei minimi quadrati stima la retta di regressione:",
     opts: [
       "Minimizzando la somma dei quadrati degli scarti (residui) tra dati e retta",
-      "Massimizzando la distanza tra i punti e la retta stimata",
       "Facendo passare la retta esattamente per tutti i punti osservati",
       "Scegliendo la retta che passa per il valore massimo dei dati"
     ],
@@ -297,7 +273,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "La differenza tra il valore osservato di Y e quello previsto dal modello",
       "Il valore previsto dal modello per una data osservazione",
-      "La pendenza della retta stimata sui dati",
       "Il coefficiente di correlazione tra X e Y"
     ],
     correct: [0],
@@ -309,7 +284,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "La quota di variabilità di Y spiegata dal modello di regressione",
       "La pendenza della retta di regressione stimata",
-      "La probabilità che il modello sia corretto",
       "Il numero di osservazioni usate per stimare il modello"
     ],
     correct: [0],
@@ -319,9 +293,8 @@ registerSubject("Modelli Statistici", [
     id: "u07027", topic: "Regressione",
     q: "Un R² alto garantisce che il modello di regressione sia corretto e causale?",
     opts: [
-      "No: R² alto indica buon adattamento, ma non implica correttezza del modello né causalità",
+      "No: R² alto indica adattamento, non correttezza né causalità",
       "Sì, un R² alto dimostra che X è la causa di Y",
-      "Sì, purché R² sia superiore a 0,5",
       "No, perché R² misura soltanto la pendenza della retta"
     ],
     correct: [0],
@@ -331,9 +304,8 @@ registerSubject("Modelli Statistici", [
     id: "u07028", topic: "Significatività",
     q: "Un risultato 'statisticamente significativo' è sempre importante nella pratica?",
     opts: [
-      "No: con campioni molto grandi anche effetti minuscoli risultano significativi ma irrilevanti",
+      "No: con n grande anche effetti minuscoli sono significativi",
       "Sì, significativo e importante sono sempre sinonimi",
-      "Sì, purché il p-value sia inferiore a 0,01",
       "No, perché la significatività statistica non esiste davvero"
     ],
     correct: [0],
@@ -343,9 +315,8 @@ registerSubject("Modelli Statistici", [
     id: "u07029", topic: "Interpretazione test",
     q: "Non rifiutare H0 equivale a dimostrare che H0 è vera?",
     opts: [
-      "No: significa solo che non ci sono prove sufficienti contro H0, non che sia vera",
+      "No: solo prove insufficienti contro H0, non che sia vera",
       "Sì, non rifiutare H0 la dimostra definitivamente",
-      "Sì, ma soltanto se il p-value è esattamente 1",
       "No, perché H0 va sempre rifiutata in ogni test"
     ],
     correct: [0],
@@ -357,7 +328,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Provengano da popolazioni approssimativamente normali con varianze simili",
       "Siano tutti valori interi positivi senza eccezioni",
-      "Siano di tipo categorico e non numerico",
       "Abbiano media esattamente uguale a zero"
     ],
     correct: [0],
@@ -368,7 +338,6 @@ registerSubject("Modelli Statistici", [
     q: "I test non parametrici (es. Mann-Whitney, Wilcoxon) sono utili quando:",
     opts: [
       "I dati non rispettano le assunzioni dei test parametrici",
-      "Il campione è enorme e perfettamente normale",
       "Si vuole stimare esattamente la media della popolazione",
       "Le variabili sono tutte continue e simmetriche"
     ],
@@ -381,8 +350,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Aumentare la potenza del test e ridurre l'errore standard",
       "Aumentare sia α sia il p-value",
-      "Ridurre la potenza del test statistico",
-      "Rendere impossibile rifiutare l'ipotesi nulla"
+      "Ridurre la potenza del test statistico"
     ],
     correct: [0],
     exp: "Più dati → errore standard minore e maggiore potenza (più capacità di rilevare un effetto vero). Per questo campioni grandi rendono significativi anche effetti piccoli."
@@ -391,8 +359,7 @@ registerSubject("Modelli Statistici", [
     id: "u07033", topic: "Statistica test",
     q: "La statistica test (es. t o z) misura, in sostanza:",
     opts: [
-      "Di quanto il dato campionario si discosta da H0, in unità di errore standard",
-      "La probabilità a priori che H0 sia vera",
+      "Quanto il dato si discosta da H0, in errori standard",
       "La dimensione totale del campione utilizzato",
       "Il numero di gruppi confrontati nel test"
     ],
@@ -405,7 +372,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Le medie di due gruppi distinti per stabilire se differiscono",
       "La media dello stesso gruppo prima e dopo un trattamento",
-      "Due variabili categoriche in una tabella incrociata",
       "La varianza di un campione con un valore prefissato"
     ],
     correct: [0],
@@ -417,7 +383,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Si misurano le STESSE unità in due condizioni (es. prima e dopo)",
       "Si confrontano due gruppi di persone completamente diversi",
-      "Si analizza una sola variabile categorica",
       "Si vogliono confrontare più di due gruppi insieme"
     ],
     correct: [0],
@@ -429,7 +394,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Usa più variabili indipendenti per prevedere la variabile dipendente",
       "Prevede più variabili dipendenti da una sola indipendente",
-      "Elimina la necessità di stimare l'intercetta del modello",
       "Trasforma la relazione lineare in una relazione categorica"
     ],
     correct: [0],
@@ -439,9 +403,8 @@ registerSubject("Modelli Statistici", [
     id: "u07037", topic: "Overfitting",
     q: "Aggiungere sempre più variabili a un modello di regressione:",
     opts: [
-      "Aumenta R² sui dati usati, ma rischia overfitting e scarsa generalizzazione",
+      "Aumenta R² sui dati, ma rischia overfitting",
       "Riduce sempre l'errore su nuovi dati mai visti",
-      "Non ha alcun effetto sul valore di R²",
       "Rende il modello automaticamente causale"
     ],
     correct: [0],
@@ -452,7 +415,6 @@ registerSubject("Modelli Statistici", [
     q: "Due studi con p=0,049 e p=0,051 (α=0,05) danno conclusioni:",
     opts: [
       "Opposte per la regola formale, pur essendo l'evidenza quasi identica",
-      "Identiche, perché entrambi rifiutano l'ipotesi nulla",
       "Identiche, perché entrambi non rifiutano l'ipotesi nulla",
       "Prive di senso, perché il p-value non serve a decidere"
     ],
@@ -465,8 +427,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Nell'ipotesi nulla H0 (es. μ = valore)",
       "Nell'ipotesi alternativa H1",
-      "In entrambe le ipotesi allo stesso modo",
-      "In nessuna delle due ipotesi"
+      "In entrambe le ipotesi allo stesso modo"
     ],
     correct: [0],
     exp: "H0 contiene l'uguaglianza (μ = μ0), mentre H1 esprime la differenza (≠, >, <). Il test valuta se i dati sono compatibili con l'uguaglianza affermata da H0."
@@ -475,10 +436,9 @@ registerSubject("Modelli Statistici", [
     id: "u07040", topic: "Distribuzione campionaria",
     q: "La distribuzione campionaria di una statistica è:",
     opts: [
-      "La distribuzione dei valori che la statistica assume su tutti i possibili campioni",
+      "La distribuzione della statistica su tutti i campioni possibili",
       "La distribuzione dei dati grezzi di un singolo campione",
-      "La distribuzione della popolazione di partenza",
-      "Un elenco ordinato dei dati del campione osservato"
+      "La distribuzione della popolazione di partenza"
     ],
     correct: [0],
     exp: "È la distribuzione dei valori che una statistica (es. la media) assumerebbe ripetendo il campionamento. La sua deviazione standard è l'errore standard. È il fondamento teorico dell'inferenza."
@@ -488,7 +448,6 @@ registerSubject("Modelli Statistici", [
     q: "Quadruplicando la dimensione del campione, l'errore standard della media:",
     opts: [
       "Si dimezza, perché dipende da √n al denominatore",
-      "Si riduce a un quarto, proporzionale a n",
       "Raddoppia, perché aumentano i dati",
       "Resta identico, non dipende da n"
     ],
@@ -500,7 +459,6 @@ registerSubject("Modelli Statistici", [
     q: "Nella regressione lineare semplice, R² è legato al coefficiente di correlazione r da:",
     opts: [
       "R² = r², il quadrato del coefficiente di correlazione",
-      "R² uguale a r senza elevare al quadrato",
       "R² calcolato come complemento della correlazione",
       "R² calcolato come radice della correlazione"
     ],
@@ -513,7 +471,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Interessa rilevare uno scostamento in una sola direzione precisa",
       "Non si ha alcuna ipotesi sulla direzione dell'effetto",
-      "Si vogliono controllare entrambe le code della distribuzione",
       "Il campione è troppo piccolo per un test bilaterale"
     ],
     correct: [0],
@@ -525,8 +482,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "No, è una pratica scorretta (HARKing/p-hacking) che invalida il test",
       "Sì, è il modo standard di procedere in statistica",
-      "Sì, purché il p-value finale sia sotto 0,05",
-      "No, ma solo se il campione è piccolo"
+      "Sì, purché il p-value finale sia sotto 0,05"
     ],
     correct: [0],
     exp: "Formulare ipotesi a posteriori o provare molti test finché uno risulta significativo (p-hacking) gonfia i falsi positivi e invalida l'inferenza. Le ipotesi vanno fissate PRIMA di analizzare i dati."
@@ -537,8 +493,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Il 25% della variabilità della variabile dipendente",
       "Il 75% della variabilità della variabile dipendente",
-      "Il 25% delle osservazioni del campione",
-      "Un quarto della pendenza della retta"
+      "Il 25% delle osservazioni del campione"
     ],
     correct: [0],
     exp: "R²=0,25 significa che il modello spiega il 25% della varianza di Y; il restante 75% è dovuto ad altri fattori o al caso. È un adattamento piuttosto modesto."
@@ -547,9 +502,8 @@ registerSubject("Modelli Statistici", [
     id: "u07046", topic: "Stima puntuale e intervallare",
     q: "Qual è la differenza tra stima puntuale e stima intervallare?",
     opts: [
-      "La puntuale dà un singolo valore, l'intervallare un range con un livello di confidenza",
+      "La puntuale dà un valore, l'intervallare un range di confidenza",
       "La puntuale è sempre esatta, l'intervallare sempre sbagliata",
-      "La puntuale usa la mediana, l'intervallare la media",
       "Non c'è differenza, sono due nomi per la stessa stima"
     ],
     correct: [0],
@@ -559,9 +513,8 @@ registerSubject("Modelli Statistici", [
     id: "u07047", topic: "Test statistico",
     q: "Rifiutare H0 con α=0,05 significa essere sicuri al 95% che H1 è vera?",
     opts: [
-      "No: α controlla i falsi positivi, non fornisce la probabilità che H1 sia vera",
+      "No: α controlla i falsi positivi, non la probabilità di H1",
       "Sì, è esattamente il significato di α=0,05",
-      "Sì, ma solo con campioni grandi",
       "No, perché α non ha alcun ruolo nel test"
     ],
     correct: [0],
@@ -573,7 +526,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Un test di normalità (es. Shapiro-Wilk) o un grafico Q-Q",
       "Un test t per due campioni indipendenti",
-      "Un'analisi della varianza a più gruppi",
       "Il coefficiente di correlazione di Pearson"
     ],
     correct: [0],
@@ -585,8 +537,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "La variabilità TRA i gruppi è grande rispetto a quella DENTRO i gruppi",
       "Tutti i gruppi hanno esattamente la stessa media",
-      "Il campione è troppo piccolo per concludere",
-      "Le varianze dei gruppi sono nulle"
+      "Il campione è troppo piccolo per concludere"
     ],
     correct: [0],
     exp: "La statistica F confronta la varianza tra gruppi con quella entro i gruppi. F grande → le differenze tra le medie dei gruppi superano il rumore interno → si rifiuta l'ipotesi di medie tutte uguali."
@@ -597,8 +548,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Una distribuzione osservata è compatibile con una distribuzione teorica attesa",
       "Due medie campionarie sono uguali tra loro",
-      "Esiste correlazione lineare tra due variabili numeriche",
-      "La varianza è costante tra i gruppi"
+      "Esiste correlazione lineare tra due variabili numeriche"
     ],
     correct: [0],
     exp: "Il goodness of fit confronta le frequenze osservate con quelle previste da una distribuzione teorica (es. uniforme, o proporzioni attese) per stabilire se i dati vi si adattano."
@@ -609,8 +559,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Non rifiutare l'ipotesi nulla",
       "Rifiutare l'ipotesi nulla con certezza",
-      "Concludere che l'ipotesi alternativa è vera",
-      "Ripetere obbligatoriamente l'esperimento"
+      "Concludere che l'ipotesi alternativa è vera"
     ],
     correct: [0],
     exp: "Se p > α l'evidenza contro H0 è insufficiente: non si rifiuta H0. Non significa dimostrarla vera, ma solo che i dati sono compatibili con essa."
@@ -621,7 +570,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Aumenta la probabilità dell'altro tipo di errore",
       "Riduce entrambi gli errori contemporaneamente",
-      "Non ha alcun effetto sugli errori",
       "Elimina del tutto l'incertezza del test"
     ],
     correct: [0],
@@ -633,8 +581,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Più stretto, quindi una stima più precisa",
       "Più ampio, quindi una stima meno precisa",
-      "Identico, l'ampiezza non dipende da n",
-      "Sempre centrato su zero"
+      "Identico, l'ampiezza non dipende da n"
     ],
     correct: [0],
     exp: "Più dati → errore standard minore → intervallo più stretto → stima più precisa. La numerosità è la leva principale per ottenere intervalli di confidenza più informativi."
@@ -643,10 +590,9 @@ registerSubject("Modelli Statistici", [
     id: "u07054", topic: "Regressione",
     q: "Usare un modello lineare per prevedere valori di X molto fuori dal range dei dati osservati è:",
     opts: [
-      "Rischioso (estrapolazione): il modello potrebbe non valere fuori dall'intervallo osservato",
+      "Rischioso: è un'estrapolazione fuori dall'intervallo osservato",
       "Sempre sicuro, perché la retta è definita ovunque",
-      "Impossibile, la formula non si può calcolare",
-      "Consigliato, perché aumenta l'accuratezza"
+      "Impossibile, la formula non si può calcolare"
     ],
     correct: [0],
     exp: "L'estrapolazione oltre l'intervallo dei dati è rischiosa: la relazione lineare potrebbe non reggere fuori dal range osservato. Le previsioni affidabili sono all'interno del range dei dati (interpolazione)."
@@ -657,7 +603,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Il suo valore atteso coincide con la media della popolazione",
       "Restituisce sempre esattamente la media della popolazione",
-      "Ha sempre varianza nulla",
       "È uguale alla mediana in ogni campione"
     ],
     correct: [0],
@@ -669,8 +614,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "L'ANOVA a una via",
       "Un singolo test t di Student",
-      "Il test chi-quadro di indipendenza",
-      "La regressione lineare semplice"
+      "Il test chi-quadro di indipendenza"
     ],
     correct: [0],
     exp: "Con più di due gruppi si usa l'ANOVA, che verifica in un colpo solo se almeno una media differisce, evitando l'inflazione dell'errore dei confronti multipli con tanti t-test."
@@ -681,8 +625,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Dati di frequenza (conteggi) di variabili categoriche",
       "Medie di variabili quantitative continue",
-      "Coefficienti angolari di una regressione",
-      "Deviazioni standard di due campioni"
+      "Coefficienti angolari di una regressione"
     ],
     correct: [0],
     exp: "Il χ² lavora su CONTEGGI/frequenze di categorie (tabelle di contingenza), non su medie. Per confrontare medie servono t-test o ANOVA."
@@ -691,10 +634,9 @@ registerSubject("Modelli Statistici", [
     id: "u07058", topic: "Significatività",
     q: "La 'dimensione dell'effetto' (effect size) misura:",
     opts: [
-      "L'entità pratica di una differenza o relazione, indipendentemente da n",
+      "L'entità pratica di un effetto, indipendente da n",
       "La probabilità che H0 sia vera",
-      "Il livello di significatività scelto",
-      "Il numero di code del test"
+      "Il livello di significatività scelto"
     ],
     correct: [0],
     exp: "L'effect size (es. d di Cohen) quantifica QUANTO è grande un effetto, non solo se è statisticamente rilevabile. Va riportato insieme al p-value per giudicare l'importanza reale di un risultato."
@@ -705,8 +647,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Formulare H0 e H1, scegliere α, calcolare la statistica/p-value, decidere",
       "Guardare i dati, poi scegliere l'ipotesi che risulta significativa",
-      "Calcolare il p-value, poi formulare le ipotesi in base ad esso",
-      "Decidere il risultato e poi cercare dati che lo confermino"
+      "Calcolare il p-value, poi formulare le ipotesi in base ad esso"
     ],
     correct: [0],
     exp: "Il metodo corretto: (1) ipotesi H0/H1, (2) livello α, (3) calcolo statistica test e p-value, (4) decisione. Fissare ipotesi e α PRIMA dei dati evita p-hacking e conclusioni distorte."
@@ -717,7 +658,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Il valore previsto di Y quando X è uguale a zero",
       "La variazione di Y per ogni unità di X",
-      "La correlazione tra le due variabili",
       "La media dei residui del modello"
     ],
     correct: [0],
@@ -725,15 +665,14 @@ registerSubject("Modelli Statistici", [
   },
   {
     id: "u07061", topic: "Potenza",
-    q: "Quali fattori aumentano la potenza di un test? (una o più risposte)",
+    q: "Quale fattore AUMENTA la potenza di un test?",
     opts: [
       "Un campione più numeroso",
-      "Un effetto reale più grande",
-      "Un livello di significatività α più permissivo",
+      "Un livello di significatività α più severo",
       "Una maggiore variabilità dei dati"
     ],
-    correct: [0,1,2],
-    exp: "La potenza cresce con: campione più grande, effetto più marcato, α più alto (più facile rifiutare). Una MAGGIORE variabilità dei dati invece la RIDUCE, perché aumenta l'errore standard."
+    correct: [0],
+    exp: "La potenza (1−β) cresce con un campione più grande e con un effetto reale più marcato. Un α più severo e una maggiore variabilità dei dati la RIDUCONO, rendendo più difficile rilevare un effetto."
   },
   {
     id: "u07062", topic: "Inferenza",
@@ -741,7 +680,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Trarre conclusioni sulla popolazione a partire da un campione",
       "Descrivere solo i dati del campione senza generalizzare",
-      "Eliminare completamente l'incertezza dai dati",
       "Ordinare i dati dal più piccolo al più grande"
     ],
     correct: [0],
@@ -753,8 +691,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Tende a coincidere con la normale standard",
       "Diventa fortemente asimmetrica",
-      "Si allontana sempre più dalla normale",
-      "Non è più utilizzabile"
+      "Si allontana sempre più dalla normale"
     ],
     correct: [0],
     exp: "All'aumentare dei gradi di libertà (campioni grandi) la t si avvicina alla normale standard: le code si 'alleggeriscono'. Per questo con n grande t-test e z-test danno risultati quasi identici."
@@ -765,8 +702,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Il farmaco non ha alcun effetto rispetto al controllo",
       "Il farmaco è sicuramente più efficace del controllo",
-      "Il campione è stato scelto in modo distorto",
-      "La malattia non esiste nella popolazione"
+      "Il campione è stato scelto in modo distorto"
     ],
     correct: [0],
     exp: "H0 è lo scenario 'nessun effetto' (il farmaco non fa differenza). Il test cerca prove per rifiutarla a favore di H1 ('il farmaco funziona'). Si parte sempre dallo scetticismo."
@@ -775,10 +711,9 @@ registerSubject("Modelli Statistici", [
     id: "u07065", topic: "Residui",
     q: "Se i residui di una regressione mostrano uno schema evidente (non casuale), significa che:",
     opts: [
-      "Il modello lineare probabilmente non cattura bene la relazione tra i dati",
+      "Il modello lineare non cattura bene la relazione",
       "Il modello è perfetto e non va modificato",
-      "I dati sono stati raccolti in modo casuale",
-      "La correlazione è sicuramente pari a 1"
+      "I dati sono stati raccolti in modo casuale"
     ],
     correct: [0],
     exp: "Idealmente i residui dovrebbero essere casuali attorno a zero. Uno schema (es. a curva) indica che la relazione non è lineare o mancano variabili: il modello va rivisto."
@@ -787,9 +722,8 @@ registerSubject("Modelli Statistici", [
     id: "u07066", topic: "Confidenza",
     q: "Un intervallo di confidenza al 99% rispetto a uno al 95%, a parità di dati, è:",
     opts: [
-      "Più ampio, perché richiede maggiore sicurezza di contenere il parametro",
+      "Più ampio: serve più sicurezza di contenere il parametro",
       "Più stretto, perché più preciso",
-      "Identico in ampiezza",
       "Sempre centrato su un valore più alto"
     ],
     correct: [0],
@@ -799,9 +733,8 @@ registerSubject("Modelli Statistici", [
     id: "u07067", topic: "Test",
     q: "La 'statistica test' e il 'valore critico' servono a:",
     opts: [
-      "Confrontare il risultato osservato con una soglia per decidere su H0",
+      "Confrontare il risultato con una soglia per decidere su H0",
       "Calcolare la media della popolazione",
-      "Ordinare i dati del campione",
       "Misurare la correlazione tra due variabili"
     ],
     correct: [0],
@@ -813,8 +746,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Stime distorte che non riflettono la vera popolazione",
       "Sempre stime perfette del parametro",
-      "Un p-value automaticamente uguale a zero",
-      "Una potenza del test pari a 1"
+      "Un p-value automaticamente uguale a zero"
     ],
     correct: [0],
     exp: "Se il campione è distorto (non rappresentativo), tutte le inferenze sono viziate: nessun calcolo statistico può correggere un campionamento sbagliato. La qualità del campione è cruciale."
@@ -824,7 +756,6 @@ registerSubject("Modelli Statistici", [
     q: "La regressione logistica si usa quando la variabile dipendente è:",
     opts: [
       "Categorica binaria",
-      "Continua e illimitata",
       "Sempre normalmente distribuita",
       "Una data del calendario"
     ],
@@ -835,8 +766,7 @@ registerSubject("Modelli Statistici", [
     id: "u07070", topic: "Multicollinearità",
     q: "La multicollinearità in una regressione multipla si verifica quando:",
     opts: [
-      "Due o più variabili indipendenti sono fortemente correlate tra loro",
-      "La variabile dipendente è categorica",
+      "Due o più variabili indipendenti molto correlate tra loro",
       "Il campione è troppo piccolo per il modello",
       "I residui sono perfettamente casuali"
     ],
@@ -849,8 +779,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Circa 1 falso positivo su 20 test",
       "Zero, perché le H0 sono vere",
-      "Tutte e 20 risulteranno significative",
-      "Esattamente 10 su 20"
+      "Tutte e 20 risulteranno significative"
     ],
     correct: [0],
     exp: "Con α=0,05, il 5% dei test darà un falso positivo anche se tutte le H0 sono vere: su 20 test, in media 1. È il problema dei confronti multipli, che richiede correzioni (es. Bonferroni)."
@@ -859,10 +788,9 @@ registerSubject("Modelli Statistici", [
     id: "u07072", topic: "Correzione confronti multipli",
     q: "La correzione di Bonferroni serve a:",
     opts: [
-      "Controllare l'errore di primo tipo complessivo quando si fanno molti test",
+      "Controllare l'errore di primo tipo su molti test insieme",
       "Aumentare la potenza di un singolo test",
-      "Trasformare dati non normali in normali",
-      "Stimare la pendenza di una regressione"
+      "Trasformare dati non normali in normali"
     ],
     correct: [0],
     exp: "Con test multipli, Bonferroni abbassa la soglia di significatività (α diviso il numero di test) per mantenere basso il rischio complessivo di falsi positivi. È conservativa: riduce anche la potenza."
@@ -871,9 +799,8 @@ registerSubject("Modelli Statistici", [
     id: "u07073", topic: "Inferenza bayesiana",
     q: "A differenza dell'approccio frequentista, la statistica bayesiana:",
     opts: [
-      "Assegna probabilità direttamente alle ipotesi, aggiornandole con i dati",
+      "Assegna probabilità alle ipotesi, aggiornandole coi dati",
       "Non usa mai i dati per trarre conclusioni",
-      "Non ammette alcuna forma di incertezza",
       "Coincide esattamente con il calcolo del p-value"
     ],
     correct: [0],
@@ -885,7 +812,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "No: potrebbe esserci un effetto reale non rilevato per scarsa potenza",
       "Sì, dimostra con certezza l'assenza di effetto",
-      "Sì, ma solo se il p-value è esattamente 1",
       "No, perché i campioni piccoli danno sempre risultati significativi"
     ],
     correct: [0],
@@ -897,23 +823,21 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Il valore stimato dal modello per una data X",
       "Il valore realmente osservato di Y",
-      "La differenza tra osservato e previsto",
-      "La media di tutti i valori di X"
+      "La differenza tra osservato e previsto"
     ],
     correct: [0],
     exp: "ŷ è la previsione del modello (sulla retta) per un certo X. La differenza tra il valore osservato e ŷ è il residuo, che misura l'errore del modello in quel punto."
   },
   {
     id: "u07076", topic: "Assunzioni regressione",
-    q: "Quali sono assunzioni tipiche della regressione lineare? (una o più risposte)",
+    q: "Quale di queste è un'assunzione della regressione lineare?",
     opts: [
-      "Relazione lineare tra X e Y",
       "Residui con varianza costante (omoschedasticità)",
-      "Residui indipendenti tra loro",
-      "Variabile dipendente sempre categorica"
+      "La variabile dipendente deve essere categorica",
+      "Le variabili indipendenti devono essere molto correlate"
     ],
-    correct: [0,1,2],
-    exp: "La regressione lineare assume linearità, omoschedasticità (varianza costante dei residui), indipendenza e normalità dei residui. La Y categorica è invece il caso della regressione logistica, non lineare."
+    correct: [0],
+    exp: "La regressione lineare assume linearità, residui indipendenti, normali e a varianza costante (omoschedasticità). Una dipendente categorica richiede altri modelli; forte correlazione tra le indipendenti è multicollinearità, un problema da evitare."
   },
   {
     id: "u07077", topic: "Significatività dei coefficienti",
@@ -921,7 +845,6 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Non c'è prova sufficiente che quella variabile influenzi Y",
       "La variabile influenza sicuramente e fortemente Y",
-      "Il modello nel complesso è sbagliato",
       "Il coefficiente è esattamente uguale a 1"
     ],
     correct: [0],
@@ -931,9 +854,8 @@ registerSubject("Modelli Statistici", [
     id: "u07078", topic: "Distribuzione normale",
     q: "Nell'inferenza, il teorema del limite centrale è importante perché:",
     opts: [
-      "Rende la media campionaria approssimativamente normale anche con dati non normali",
+      "Rende la media campionaria normale anche con dati non normali",
       "Rende tutti i dati grezzi perfettamente normali",
-      "Elimina la necessità di campionare",
       "Garantisce che il p-value sia sempre piccolo"
     ],
     correct: [0],
@@ -944,7 +866,6 @@ registerSubject("Modelli Statistici", [
     q: "Se H1 afferma 'μ > 100', il test è:",
     opts: [
       "Unilaterale destro (a una coda, verso valori alti)",
-      "Bilaterale (a due code)",
       "Unilaterale sinistro (verso valori bassi)",
       "Non è un test valido"
     ],
@@ -956,7 +877,6 @@ registerSubject("Modelli Statistici", [
     q: "Nella varianza campionaria si divide per n − 1 (invece che per n) per:",
     opts: [
       "Ottenere uno stimatore corretto della varianza della popolazione",
-      "Rendere il calcolo più rapido",
       "Aumentare artificialmente il risultato",
       "Trasformare la varianza in deviazione standard"
     ],
@@ -967,8 +887,7 @@ registerSubject("Modelli Statistici", [
     id: "u07081", topic: "Test",
     q: "Un p-value esattamente uguale a 0 è:",
     opts: [
-      "Praticamente impossibile: di solito è molto piccolo ma non esattamente zero",
-      "La norma in ogni test statistico",
+      "Quasi impossibile: molto piccolo ma non esattamente zero",
       "Segno che il test è stato sbagliato",
       "Uguale al livello di significatività α"
     ],
@@ -980,7 +899,6 @@ registerSubject("Modelli Statistici", [
     q: "Per confrontare la proporzione di 'successi' tra due gruppi (es. tasso di conversione A vs B) si usa:",
     opts: [
       "Un test per il confronto tra due proporzioni",
-      "Un'ANOVA a tre vie",
       "Una regressione lineare semplice",
       "Il coefficiente di correlazione di Pearson"
     ],
@@ -992,7 +910,6 @@ registerSubject("Modelli Statistici", [
     q: "Chi sceglie il valore di α e quando?",
     opts: [
       "Il ricercatore, PRIMA di analizzare i dati",
-      "Il software, automaticamente dopo il test",
       "Si ricava dai dati una volta calcolato il p-value",
       "È sempre e comunque fissato per legge a 0,05"
     ],
@@ -1005,8 +922,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Avrà pendenza vicina a zero, ma potrebbe esistere una relazione non lineare",
       "La regressione non può essere calcolata se r è circa zero",
-      "Avrà sicuramente R² alto nonostante correlazione nulla",
-      "Dimostra causalità tra X e Y senza ulteriori assunzioni"
+      "Avrà sicuramente R² alto nonostante correlazione nulla"
     ],
     correct: [0],
     exp: "r=0 → pendenza della retta ≈ 0 e R² ≈ 0 (la lineare non spiega nulla). Ma X e Y potrebbero avere una relazione non lineare (es. parabolica) che la regressione lineare non coglie."
@@ -1016,7 +932,6 @@ registerSubject("Modelli Statistici", [
     q: "Il parametro è alla popolazione come la statistica è al:",
     opts: [
       "Campione",
-      "Test",
       "Grafico",
       "Residuo"
     ],
@@ -1027,9 +942,8 @@ registerSubject("Modelli Statistici", [
     id: "u07086", topic: "Interpretazione",
     q: "'la differenza è significativa' vuol dire che è grande?",
     opts: [
-      "No: significa solo che è difficilmente attribuibile al caso, non che sia grande",
+      "No: solo difficilmente attribuibile al caso, non grande",
       "Sì, significativo vuol sempre dire grande",
-      "Sì, ma solo con α=0,01",
       "No, significa che la differenza è nulla"
     ],
     correct: [0],
@@ -1040,7 +954,6 @@ registerSubject("Modelli Statistici", [
     q: "In un grafico Q-Q, se i punti seguono bene la retta diagonale, i dati:",
     opts: [
       "Sono approssimativamente distribuiti in modo normale",
-      "Sono sicuramente uniformi",
       "Contengono solo valori anomali",
       "Non hanno alcuna distribuzione"
     ],
@@ -1053,8 +966,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Individuare QUALI gruppi differiscono tra loro nello specifico",
       "Confermare che tutti i gruppi sono uguali",
-      "Calcolare la media generale di tutti i gruppi",
-      "Verificare la normalità dei dati"
+      "Calcolare la media generale di tutti i gruppi"
     ],
     correct: [0],
     exp: "L'ANOVA dice solo che ALMENO un gruppo differisce, non quale. I test post-hoc confrontano le coppie di gruppi controllando l'errore complessivo, individuando dove stanno le differenze."
@@ -1065,8 +977,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Più piccolo della deviazione standard",
       "Più grande della deviazione standard",
-      "Identico alla deviazione standard",
-      "Sempre pari a zero"
+      "Identico alla deviazione standard"
     ],
     correct: [0],
     exp: "Errore standard = SD/√n, quindi è più piccolo della deviazione standard (che descrive la dispersione dei dati). Attenzione a non confonderli quando si leggono grafici e tabelle."
@@ -1077,8 +988,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Preferire, a parità di prestazioni, il modello più semplice",
       "Aggiungere sempre il maggior numero possibile di variabili",
-      "Scegliere il modello con R² più alto a ogni costo",
-      "Evitare del tutto i modelli statistici"
+      "Scegliere il modello con R² più alto a ogni costo"
     ],
     correct: [0],
     exp: "A parità di capacità esplicativa, il modello più semplice è preferibile: generalizza meglio, è più interpretabile e meno soggetto a overfitting. Complessità in più va giustificata da un guadagno reale."
@@ -1089,8 +999,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Mutuamente esclusive ed esaustive",
       "Entrambe potenzialmente vere contemporaneamente",
-      "Formulate dopo aver calcolato il p-value",
-      "Identiche tra loro"
+      "Formulate dopo aver calcolato il p-value"
     ],
     correct: [0],
     exp: "H0 e H1 sono complementari: non possono essere vere insieme e coprono tutte le possibilità (es. μ=100 vs μ≠100). Il test decide quale sia più compatibile con i dati."
@@ -1099,8 +1008,7 @@ registerSubject("Modelli Statistici", [
     id: "u07092", topic: "Predizione vs inferenza",
     q: "Qual è la differenza tra obiettivo predittivo e obiettivo inferenziale di un modello?",
     opts: [
-      "La predizione mira a valori accurati; l'inferenza a capire le relazioni tra variabili",
-      "Sono identici, cambiano solo il nome",
+      "La predizione mira a valori accurati; l'inferenza alle relazioni",
       "La predizione non usa i dati, l'inferenza sì",
       "L'inferenza serve solo per i grafici"
     ],
@@ -1112,7 +1020,6 @@ registerSubject("Modelli Statistici", [
     q: "Un punto molto influente (leverage alto) in una regressione:",
     opts: [
       "Può spostare in modo marcato la retta stimata da solo",
-      "Non ha mai effetto sui coefficienti",
       "È sempre da mantenere senza verifiche",
       "Coincide sempre con la media dei dati"
     ],
@@ -1123,8 +1030,7 @@ registerSubject("Modelli Statistici", [
     id: "u07094", topic: "Test statistici",
     q: "Un test 'robusto' è un test che:",
     opts: [
-      "Mantiene buone proprietà anche se alcune assunzioni sono lievemente violate",
-      "Ha sempre potenza pari a 1",
+      "Regge bene anche se le assunzioni sono lievemente violate",
       "Non richiede alcun dato per funzionare",
       "Dà sempre risultato significativo"
     ],
@@ -1135,9 +1041,8 @@ registerSubject("Modelli Statistici", [
     id: "u07095", topic: "Confidenza",
     q: "Dopo aver calcolato un IC al 95%, si può dire che il parametro ha il 95% di probabilità di stare nell'intervallo?",
     opts: [
-      "No, nell'ottica frequentista il parametro è fisso: è l'intervallo a essere aleatorio",
+      "No: per i frequentisti il parametro è fisso, l'intervallo aleatorio",
       "Sì, è esattamente questo il significato",
-      "Sì, ma solo con campioni piccoli",
       "No, perché gli IC non riguardano i parametri"
     ],
     correct: [0],
@@ -1149,8 +1054,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Probabilmente non aggiunge valore reale al modello",
       "È sicuramente la più importante del modello",
-      "Rende il modello perfetto",
-      "Va sempre mantenuta"
+      "Rende il modello perfetto"
     ],
     correct: [0],
     exp: "L'R² aggiustato penalizza le variabili inutili. Se sale R² ma scende l'aggiustato, il guadagno è solo apparente (adattamento al rumore): la variabile probabilmente non serve."
@@ -1159,9 +1063,8 @@ registerSubject("Modelli Statistici", [
     id: "u07097", topic: "Test d'ipotesi",
     q: "Il valore di α = 0,01 rispetto ad α = 0,05 rende il test:",
     opts: [
-      "Più conservativo: più difficile rifiutare H0, meno falsi positivi",
+      "Più conservativo: meno falsi positivi",
       "Più permissivo: più facile rifiutare H0",
-      "Identico nella pratica",
       "Privo di regione di rifiuto"
     ],
     correct: [0],
@@ -1171,10 +1074,9 @@ registerSubject("Modelli Statistici", [
     id: "u07098", topic: "Correlazione spuria",
     q: "Una correlazione spuria è:",
     opts: [
-      "Un'associazione statistica senza reale legame causale, spesso dovuta a una terza variabile",
+      "Un'associazione statistica senza reale legame causale",
       "Una correlazione pari esattamente a 1",
-      "Una correlazione calcolata su dati mancanti",
-      "Il coefficiente angolare di una regressione"
+      "Una correlazione calcolata su dati mancanti"
     ],
     correct: [0],
     exp: "Una correlazione spuria appare tra due variabili che in realtà non si influenzano, spesso perché entrambe dipendono da un fattore comune (confondente) o per pura coincidenza sui dati."
@@ -1183,10 +1085,9 @@ registerSubject("Modelli Statistici", [
     id: "u07099", topic: "Modelli statistici",
     q: "Un modello statistico è, in sintesi:",
     opts: [
-      "Una rappresentazione semplificata della realtà che lega i dati a parametri",
+      "Una rappresentazione semplificata della realtà, con parametri",
       "Una copia esatta e completa della realtà osservata",
-      "Un elenco grezzo di tutti i dati raccolti",
-      "Un grafico privo di ipotesi sottostanti"
+      "Un elenco grezzo di tutti i dati raccolti"
     ],
     correct: [0],
     exp: "Un modello è una semplificazione utile ('tutti i modelli sono sbagliati, alcuni sono utili'): descrive la relazione tra variabili tramite parametri, con assunzioni che vanno verificate."
@@ -1195,8 +1096,7 @@ registerSubject("Modelli Statistici", [
     id: "u07100", topic: "Inferenza",
     q: "Aumentando all'infinito la dimensione del campione, il p-value di un effetto anche minimo ma reale:",
     opts: [
-      "Tende a diventare molto piccolo, rendendo l'effetto significativo",
-      "Resta sempre esattamente uguale",
+      "Diventa molto piccolo, rendendo l'effetto significativo",
       "Tende inevitabilmente a 1",
       "Non può mai scendere sotto 0,05"
     ],

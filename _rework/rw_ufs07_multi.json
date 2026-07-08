@@ -1,0 +1,4 @@
+[
+{"id":"u07061","q":"Quale fattore AUMENTA la potenza di un test?","opts":["Un campione più numeroso","Un livello di significatività α più severo","Una maggiore variabilità dei dati"],"correct":[0],"exp":"La potenza (1−β) cresce con un campione più grande e con un effetto reale più marcato. Un α più severo e una maggiore variabilità dei dati la RIDUCONO, rendendo più difficile rilevare un effetto."},
+{"id":"u07076","q":"Quale di queste è un'assunzione della regressione lineare?","opts":["Residui con varianza costante (omoschedasticità)","La variabile dipendente deve essere categorica","Le variabili indipendenti devono essere molto correlate"],"correct":[0],"exp":"La regressione lineare assume linearità, residui indipendenti, normali e a varianza costante (omoschedasticità). Una dipendente categorica richiede altri modelli; forte correlazione tra le indipendenti è multicollinearità, un problema da evitare."}
+]
