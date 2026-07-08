@@ -1,0 +1,11 @@
+[
+{"id":"u02052","opts":["Tenere vicino alla CPU i dati usati più di frequente","Conservare i dati in modo permanente anche a computer spento","Estendere la memoria disponibile usando una porzione del disco"],"correct":[0]},
+{"id":"u02058","opts":["Il pubblico serve più clienti; il privato una sola organizzazione","Il pubblico è dedicato a un solo cliente; il privato è condiviso tra molti","Il pubblico è installato on-premise; il privato è gestito dal provider"],"correct":[0]},
+{"id":"u02084","opts":["Il router che inoltra il traffico verso le altre reti","Il server che assegna gli indirizzi IP nella rete locale","Il server che traduce i nomi di dominio in indirizzi IP"],"correct":[0]},
+{"id":"u02090","opts":["Il subentro automatico di un sistema di riserva al primario guasto","La distribuzione delle richieste tra più server attivi in parallelo","Il ripristino dei dati a partire da un backup dopo una perdita"],"correct":[0]},
+{"id":"u02024","opts":["Il tipo 1 gira sull'hardware nudo; il tipo 2 sopra un SO ospite","Il tipo 1 gira sopra un SO ospitante; il tipo 2 sull'hardware nudo","Il tipo 1 esegue container; il tipo 2 macchine virtuali complete"],"correct":[0]},
+{"id":"u02020","opts":["Lo switch collega la stessa rete; il router collega reti diverse","Lo switch collega reti diverse; il router dispositivi della stessa rete","Lo switch instrada in base agli indirizzi IP; il router in base ai MAC"],"correct":[0]},
+{"id":"u02091","opts":["Per protezione: solo il kernel può eseguire operazioni privilegiate","Per velocità: le due modalità raddoppiano la potenza di calcolo disponibile","Per compatibilità con i programmi scritti in linguaggi differenti"],"correct":[0]},
+{"id":"u02068","opts":["Più VM condividono un server fisico, sfruttandolo di più","Ogni VM riceve un server fisico dedicato esclusivamente a sé","Le VM raddoppiano la quantità di memoria fisica installata"],"correct":[0]},
+{"id":"u02046","opts":["Il software che fa comunicare il SO con un componente hardware","Un programma che ottimizza in automatico le prestazioni del disco","Il firmware integrato nel dispositivo direttamente dal produttore"],"correct":[0]}
+]

@@ -9,9 +9,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Qual è il compito principale di un sistema operativo?",
     opts: [
       "Gestire le risorse hardware e fare da intermediario con i programmi",
-      "Compilare il codice sorgente in linguaggio macchina",
-      "Navigare in internet e mostrare pagine web",
-      "Progettare i circuiti fisici del processore"
+      "Tradurre una volta per tutte il codice sorgente in linguaggio macchina",
+      "Fornire l'interfaccia grafica con cui l'utente apre le applicazioni"
     ],
     correct: [0],
     exp: "Il SO gestisce CPU, memoria, dischi e periferiche e offre ai programmi un'interfaccia uniforme per usarle, facendo da strato intermedio tra hardware e applicazioni."
@@ -20,10 +19,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02002", topic: "Kernel",
     q: "Che cos'è il kernel?",
     opts: [
-      "Il nucleo del sistema operativo, con i privilegi più alti",
-      "Un programma utente come un browser",
-      "La memoria fisica del computer",
-      "Il linguaggio di programmazione del SO"
+      "Il nucleo del sistema operativo, che gira con i privilegi più alti",
+      "Il programma con cui l'utente avvia e chiude le altre applicazioni",
+      "L'area di memoria in cui risiedono i dati dei processi utente"
     ],
     correct: [0],
     exp: "Il kernel è il cuore del SO: gira in modalità privilegiata (kernel mode) e controlla accesso a hardware, processi e memoria. Le applicazioni girano invece in user mode, con permessi ridotti."
@@ -32,10 +30,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02003", topic: "Processo",
     q: "Che cos'è un processo?",
     opts: [
-      "Un programma in esecuzione, con il proprio spazio di memoria",
-      "Un file salvato sul disco",
-      "Un dispositivo hardware di input",
-      "Una riga di codice sorgente"
+      "Un programma in esecuzione, con un proprio spazio di memoria",
+      "Un programma salvato su disco in attesa di essere avviato",
+      "Un flusso di esecuzione che condivide la memoria con altri"
     ],
     correct: [0],
     exp: "Un processo è un'istanza di un programma in esecuzione, con memoria, registri e risorse propri. Lo stesso programma può generare più processi distinti e isolati tra loro."
@@ -45,9 +42,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Qual è la differenza principale tra processo e thread?",
     opts: [
       "I thread condividono la memoria del processo; i processi sono isolati",
-      "Sono esattamente la stessa cosa",
-      "Il thread ha sempre più memoria del processo",
-      "I processi non possono essere eseguiti in parallelo"
+      "I processi condividono la memoria; i thread hanno spazi separati",
+      "I thread girano in processi diversi e comunicano solo via rete"
     ],
     correct: [0],
     exp: "Un processo ha uno spazio di memoria proprio e isolato; i thread sono flussi di esecuzione DENTRO un processo che ne condividono la memoria. I thread sono più leggeri ma richiedono sincronizzazione."
@@ -56,10 +52,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02005", topic: "Scheduling",
     q: "A cosa serve lo scheduler della CPU?",
     opts: [
-      "A decidere quale processo usa la CPU e quando",
-      "A salvare i file sul disco rigido",
-      "A collegare il computer alla rete",
-      "A tradurre il codice in linguaggio macchina"
+      "Decidere quale processo pronto usa la CPU e per quanto tempo",
+      "Spostare le pagine di memoria tra la RAM e l'area di swap",
+      "Assegnare a ogni processo un identificativo univoco alla creazione"
     ],
     correct: [0],
     exp: "Lo scheduler assegna la CPU ai processi pronti secondo una politica (round robin, priorità, ecc.), dando l'illusione che più processi girino contemporaneamente su una singola CPU."
@@ -68,10 +63,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02006", topic: "Multitasking",
     q: "Il multitasking (time sharing) consiste nel:",
     opts: [
-      "Alternare rapidamente più processi sulla CPU per farli sembrare simultanei",
-      "Usare più computer collegati in rete",
-      "Aumentare la frequenza del processore",
-      "Eseguire un solo programma per volta fino alla fine"
+      "Alternare rapidamente più processi sulla CPU così da sembrare simultanei",
+      "Distribuire i processi su più core così da eseguirli davvero in parallelo",
+      "Eseguire un processo per volta fino al termine, poi passare al successivo"
     ],
     correct: [0],
     exp: "Il multitasking assegna a turno piccole fette di tempo (time slice) ai vari processi: l'alternanza è così rapida da sembrare esecuzione simultanea, anche con una sola CPU."
@@ -80,10 +74,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02007", topic: "Deadlock",
     q: "Che cos'è un deadlock (stallo)?",
     opts: [
-      "Due o più processi bloccati in attesa reciproca di risorse",
-      "Un processo che termina correttamente",
-      "Un errore di sintassi nel codice",
-      "Un aumento improvviso della velocità della CPU"
+      "Più processi bloccati in attesa reciproca di risorse che non si liberano",
+      "Un processo che monopolizza la CPU impedendo agli altri di avanzare",
+      "Più processi che modificano una risorsa condivisa senza sincronizzarsi"
     ],
     correct: [0],
     exp: "Il deadlock si verifica quando processi si bloccano a vicenda: ognuno attende una risorsa detenuta da un altro, e nessuno può proseguire. Serve prevenirlo o rilevarlo e interromperlo."
@@ -92,10 +85,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02008", topic: "Gestione memoria",
     q: "A cosa serve la memoria virtuale?",
     opts: [
-      "A far usare ai programmi più memoria di quella fisica disponibile",
-      "A rendere il disco più veloce della RAM",
-      "A cifrare i dati in memoria",
-      "A eliminare la necessità della RAM"
+      "Dare a ogni processo più spazio di indirizzi della RAM fisica",
+      "Spostare nella cache del processore i dati usati più di frequente",
+      "Ridurre il consumo di RAM comprimendo i processi inattivi"
     ],
     correct: [0],
     exp: "La memoria virtuale usa una parte del disco (swap/paging) come estensione della RAM: ogni processo 'vede' uno spazio di indirizzi ampio e continuo, anche se la RAM fisica è limitata."
@@ -104,10 +96,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02009", topic: "Paginazione",
     q: "La paginazione della memoria consiste nel:",
     opts: [
-      "Suddividere la memoria in blocchi di dimensione fissa",
-      "Ordinare i file alfabeticamente sul disco",
-      "Cancellare la RAM a ogni avvio",
-      "Duplicare la RAM su un secondo modulo"
+      "Suddividere memoria logica e fisica in blocchi di dimensione fissa",
+      "Suddividere la memoria in segmenti di lunghezza variabile per processo",
+      "Spostare l'intero processo su disco quando la RAM è insufficiente"
     ],
     correct: [0],
     exp: "La paginazione divide memoria logica e fisica in blocchi di taglia fissa (pagine e frame): permette di caricare in RAM solo le pagine necessarie, spostando le altre su disco (swap)."
@@ -117,9 +108,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Che cos'è un file system?",
     opts: [
       "Il modo in cui il SO organizza e memorizza i file su un supporto",
-      "Un programma per navigare in internet",
-      "La memoria RAM del computer",
-      "Un protocollo di comunicazione tra servizi o dispositivi"
+      "Il programma che indicizza i file per velocizzarne la ricerca",
+      "L'area di memoria dove il SO tiene i file aperti di recente"
     ],
     correct: [0],
     exp: "Il file system definisce come dati e metadati sono organizzati su disco (cartelle, permessi, nomi). Esempi: NTFS, ext4, FAT32, APFS. Gestisce allocazione dello spazio e accesso ai file."
@@ -129,9 +119,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Quanti livelli ha il modello OSI?",
     opts: [
       "7",
-      "4",
       "5",
-      "3"
+      "4"
     ],
     correct: [0],
     exp: "Il modello OSI ha 7 livelli: Fisico, Data Link, Rete, Trasporto, Sessione, Presentazione, Applicazione. È un modello di riferimento concettuale per la comunicazione di rete."
@@ -140,10 +129,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02012", topic: "TCP/IP",
     q: "A quale livello del modello TCP/IP opera il protocollo IP?",
     opts: [
-      "Livello di rete (internet)",
+      "Livello di rete",
       "Livello di trasporto",
-      "Livello applicazione",
-      "Livello fisico"
+      "Livello applicazione"
     ],
     correct: [0],
     exp: "IP opera al livello di rete (internet) e si occupa dell'indirizzamento e dell'instradamento dei pacchetti tra reti diverse. TCP e UDP stanno al livello di trasporto sopra IP."
@@ -152,10 +140,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02013", topic: "TCP vs UDP",
     q: "Qual è la differenza principale tra TCP e UDP?",
     opts: [
-      "TCP è affidabile e orientato alla connessione; UDP è più veloce ma senza garanzie",
-      "UDP garantisce consegna e ordine mentre TCP no",
-      "TCP e UDP sono lo stesso protocollo di trasporto",
-      "TCP è usato solo per posta elettronica e non per altri servizi"
+      "TCP è affidabile e orientato alla connessione; UDP è veloce ma senza garanzie",
+      "UDP garantisce l'ordine e la consegna dei dati; TCP lavora best-effort",
+      "TCP e UDP sono entrambi senza connessione e non ritrasmettono i dati persi"
     ],
     correct: [0],
     exp: "TCP garantisce consegna ordinata e senza perdite (con conferme e ritrasmissioni) ma è più lento; UDP è 'best effort', più rapido e leggero, usato per streaming, giochi, DNS dove la velocità conta."
@@ -165,9 +152,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Un indirizzo IPv4 è composto da:",
     opts: [
       "32 bit, scritti come quattro numeri da 0 a 255",
-      "64 bit divisi in due parti",
-      "16 caratteri esadecimali",
-      "Un nome di dominio testuale"
+      "128 bit, scritti come otto gruppi esadecimali",
+      "48 bit, espressi come sei coppie esadecimali"
     ],
     correct: [0],
     exp: "IPv4 usa 32 bit, rappresentati come quattro ottetti (es. 192.168.1.1), ciascuno 0-255. IPv6 usa invece 128 bit per superare l'esaurimento degli indirizzi IPv4."
@@ -176,10 +162,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02015", topic: "DNS",
     q: "A cosa serve il DNS?",
     opts: [
-      "A tradurre i nomi di dominio in indirizzi IP",
-      "Ad assegnare automaticamente gli indirizzi IP ai dispositivi",
-      "A instradare i pacchetti tra reti diverse",
-      "A filtrare il traffico secondo regole di sicurezza"
+      "Tradurre i nomi di dominio nei corrispondenti indirizzi IP",
+      "Assegnare in automatico un indirizzo IP ai dispositivi della rete",
+      "Instradare i pacchetti verso la rete di destinazione corretta"
     ],
     correct: [0],
     exp: "Il DNS (Domain Name System) traduce nomi leggibili (es. google.com) nell'indirizzo IP corrispondente, così gli utenti non devono ricordare numeri. È una sorta di 'rubrica' di internet."
@@ -188,10 +173,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02016", topic: "HTTP",
     q: "Cosa distingue HTTPS da HTTP?",
     opts: [
-      "HTTPS cifra la comunicazione tramite TLS/SSL",
-      "HTTPS è più lento e insicuro",
-      "HTTP usa la crittografia, HTTPS no",
-      "Sono identici, cambia solo il nome"
+      "HTTPS aggiunge alla connessione la cifratura TLS/SSL dei dati",
+      "HTTPS comprime le pagine per ridurne il tempo di caricamento",
+      "HTTPS instrada il traffico attraverso un proxy che nasconde l'IP"
     ],
     correct: [0],
     exp: "HTTPS aggiunge a HTTP un livello di cifratura (TLS/SSL) che protegge i dati scambiati tra browser e server da intercettazioni e manomissioni. È lo standard per i siti sicuri."
@@ -200,10 +184,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02017", topic: "Porte",
     q: "A cosa serve il numero di porta in una comunicazione di rete?",
     opts: [
-      "A identificare l'applicazione/servizio su un host",
-      "A indicare la velocità della connessione",
-      "A cifrare i dati trasmessi",
-      "A sostituire l'indirizzo IP"
+      "Identificare l'applicazione o il servizio su un host",
+      "Indicare a quale rete appartiene il dispositivo mittente",
+      "Stabilire la priorità del pacchetto nella coda di invio"
     ],
     correct: [0],
     exp: "La porta identifica il servizio specifico su un host (es. 80 = HTTP, 443 = HTTPS, 22 = SSH). L'IP individua la macchina, la porta il programma con cui comunicare su di essa."
@@ -214,8 +197,7 @@ registerSubject("SO Reti Virtualizzazione", [
     opts: [
       "443",
       "80",
-      "21",
-      "25"
+      "22"
     ],
     correct: [0],
     exp: "HTTPS usa la porta 443; HTTP la 80. Altre note: 22 SSH, 21 FTP, 25 SMTP (email), 53 DNS. Sono le 'well-known ports' (0-1023)."
@@ -225,9 +207,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Qual è la differenza tra LAN e WAN?",
     opts: [
       "La LAN copre un'area locale; la WAN un'area geografica ampia",
-      "La WAN è sempre più piccola della LAN",
-      "Sono termini sinonimi e non cambiano la procedura richiesta",
-      "La LAN funziona solo via cavo, la WAN solo wireless"
+      "La LAN collega reti lontane; la WAN dispositivi nello stesso edificio",
+      "La LAN si basa sugli indirizzi IP; la WAN sugli indirizzi MAC"
     ],
     correct: [0],
     exp: "LAN (Local Area Network) collega dispositivi in un'area ristretta (casa, ufficio); WAN (Wide Area Network) collega reti su grandi distanze geografiche. Internet è la più grande WAN."
@@ -236,10 +217,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02020", topic: "Switch vs router",
     q: "Qual è la differenza tra switch e router?",
     opts: [
-      "Lo switch collega dispositivi nella stessa rete; il router collega reti diverse",
-      "Sono lo stesso dispositivo",
-      "Il router collega solo due computer",
-      "Lo switch serve solo per il Wi-Fi"
+      "Lo switch collega la stessa rete; il router collega reti diverse",
+      "Lo switch collega reti diverse; il router dispositivi della stessa rete",
+      "Lo switch instrada in base agli indirizzi IP; il router in base ai MAC"
     ],
     correct: [0],
     exp: "Lo switch instrada i dati tra dispositivi della STESSA rete locale (usa gli indirizzi MAC); il router collega reti diverse e instrada i pacchetti tra di esse (usa gli indirizzi IP)."
@@ -248,10 +228,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02021", topic: "Virtualizzazione",
     q: "Cos'è la virtualizzazione?",
     opts: [
-      "Creare versioni virtuali di risorse (server, storage, reti) su hardware fisico",
-      "Aumentare fisicamente la RAM del computer",
-      "Cancellare i dati in modo sicuro",
-      "Cifrare l'intero disco rigido"
+      "Creare versioni virtuali di risorse fisiche come server, storage e reti",
+      "Collegare più server fisici in un unico cluster ad alte prestazioni",
+      "Comprimere i dati sul disco così da occupare meno spazio possibile"
     ],
     correct: [0],
     exp: "La virtualizzazione astrae le risorse fisiche creando risorse virtuali: su un unico server fisico possono girare più macchine virtuali indipendenti, ottimizzando l'uso dell'hardware."
@@ -260,10 +239,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02022", topic: "Macchina virtuale",
     q: "Cos'è una macchina virtuale (VM)?",
     opts: [
-      "Un computer emulato via software, con proprio SO, su hardware fisico",
-      "Un componente hardware del processore",
-      "Un tipo di cavo di rete",
-      "Un linguaggio per scrivere codice applicativo"
+      "Un computer emulato via software, con un proprio SO, su hardware fisico",
+      "Un ambiente isolato che condivide il kernel del sistema operativo host",
+      "Una partizione del disco riservata a un secondo sistema operativo"
     ],
     correct: [0],
     exp: "Una VM è un ambiente software che simula un computer completo (CPU, memoria, disco) e ospita un proprio sistema operativo, isolato dagli altri, condividendo l'hardware fisico sottostante."
@@ -272,10 +250,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02023", topic: "Hypervisor",
     q: "Cos'è un hypervisor?",
     opts: [
-      "Il software che crea e gestisce le macchine virtuali",
-      "Un tipo di firewall di rete",
-      "Il processore fisico del server",
-      "Un protocollo di trasmissione dati"
+      "Il software che crea e gestisce le macchine virtuali su un host",
+      "Il sistema operativo ospite che gira dentro una macchina virtuale",
+      "Lo strato che distribuisce i container tra più nodi di un cluster"
     ],
     correct: [0],
     exp: "L'hypervisor (o Virtual Machine Monitor) alloca le risorse fisiche alle VM e le tiene isolate. Esempi: VMware ESXi, Hyper-V, KVM, VirtualBox."
@@ -284,10 +261,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02024", topic: "Hypervisor",
     q: "Qual è la differenza tra hypervisor di tipo 1 e di tipo 2?",
     opts: [
-      "Il tipo 1 gira direttamente sull'hardware; il tipo 2 sopra un SO ospitante",
-      "Il tipo 2 è sempre più veloce del tipo 1",
-      "Il tipo 1 richiede un SO ospitante",
-      "Hanno comportamento e risultato identici nello stesso contesto operativo"
+      "Il tipo 1 gira sull'hardware nudo; il tipo 2 sopra un SO ospite",
+      "Il tipo 1 gira sopra un SO ospitante; il tipo 2 sull'hardware nudo",
+      "Il tipo 1 esegue container; il tipo 2 macchine virtuali complete"
     ],
     correct: [0],
     exp: "L'hypervisor di tipo 1 (bare-metal, es. ESXi) gira direttamente sull'hardware, più efficiente e usato nei datacenter. Il tipo 2 (hosted, es. VirtualBox) gira come applicazione sopra un SO esistente."
@@ -297,9 +273,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Cos'è un container (es. Docker)?",
     opts: [
       "Un ambiente isolato che condivide il kernel del SO host",
-      "Una macchina virtuale con un proprio kernel completo",
-      "Un dispositivo di rete fisico",
-      "Un tipo di file compresso"
+      "Una macchina virtuale con un proprio kernel e SO completo",
+      "Un pacchetto compresso che raccoglie codice e documentazione"
     ],
     correct: [0],
     exp: "Un container isola un'applicazione e le sue dipendenze, ma condivide il kernel del SO host: è molto più leggero e veloce di una VM, che invece include un intero SO ospite."
@@ -308,10 +283,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02026", topic: "Container vs VM",
     q: "Rispetto a una VM, un container è tipicamente:",
     opts: [
-      "Più leggero e rapido da avviare",
-      "Più pesante, perché contiene un kernel proprio",
-      "Sempre meno sicuro e mai usato in produzione",
-      "Un sinonimo di macchina virtuale"
+      "Più leggero e rapido da avviare del corrispondente ambiente",
+      "Più pesante perché include un intero sistema operativo ospite",
+      "Più isolato perché emula anche l'hardware del computer"
     ],
     correct: [0],
     exp: "Il container condivide il kernel dell'host e impacchetta solo l'app e le librerie: parte in secondi e occupa poco. Una VM emula hardware e include un intero SO ospite, quindi è più pesante."
@@ -321,9 +295,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Cos'è un'immagine Docker?",
     opts: [
       "Un modello immutabile da cui si avviano i container",
-      "Un container già avviato a partire da un'immagine",
-      "Una fotografia dello schermo",
-      "Un file di log del sistema"
+      "L'istanza in esecuzione avviata a partire da un modello",
+      "Il file di testo con le istruzioni per costruire il pacchetto"
     ],
     correct: [0],
     exp: "L'immagine è un pacchetto immutabile con codice, librerie e configurazione: da una stessa immagine si possono avviare più container identici. Il container è l'istanza in esecuzione dell'immagine."
@@ -332,10 +305,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02028", topic: "Cloud",
     q: "Cosa significa IaaS (Infrastructure as a Service)?",
     opts: [
-      "Il provider offre risorse infrastrutturali (server, storage, rete) virtualizzate",
-      "Il provider fornisce solo applicazioni finite pronte all'uso",
-      "Un servizio esclusivamente di posta elettronica",
-      "Un tipo di file system distribuito"
+      "Il provider offre infrastruttura virtualizzata: server, storage e rete",
+      "Il provider offre una piattaforma pronta su cui sviluppare le app",
+      "Il provider offre un software finito da usare tramite il browser"
     ],
     correct: [0],
     exp: "Nell'IaaS il cloud fornisce infrastruttura virtualizzata (VM, storage, rete) che l'utente gestisce. Sopra ci sono PaaS (piattaforma di sviluppo) e SaaS (software pronto, es. Gmail)."
@@ -345,9 +317,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "In quale modello il provider gestisce TUTTO e l'utente usa solo l'applicazione?",
     opts: [
       "SaaS (Software as a Service)",
-      "IaaS (Infrastructure as a Service)",
-      "On-premise",
-      "Bare metal"
+      "PaaS (Platform as a Service)",
+      "IaaS (Infrastructure as a Service)"
     ],
     correct: [0],
     exp: "Nel SaaS il provider gestisce infrastruttura, piattaforma e software: l'utente usa solo l'applicazione via browser (es. Gmail, Office 365), senza preoccuparsi di server o aggiornamenti."
@@ -356,10 +327,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02030", topic: "Snapshot",
     q: "A cosa serve uno snapshot di una macchina virtuale?",
     opts: [
-      "A salvare lo stato della VM in un istante, per ripristinarlo in seguito",
-      "A cancellare definitivamente la VM",
-      "A collegare la VM alla rete",
-      "A tradurre il SO in un'altra lingua"
+      "Salvare lo stato della VM in un istante, per ripristinarlo in seguito",
+      "Copiare la VM su un altro host mentre continua a essere in esecuzione",
+      "Comprimere il disco della VM così da liberare spazio di archiviazione"
     ],
     correct: [0],
     exp: "Uno snapshot congela lo stato della VM (disco, memoria, config) in un momento preciso: utile prima di un aggiornamento rischioso, per poter tornare indietro se qualcosa va storto."
@@ -368,10 +338,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02031", topic: "Modalità di esecuzione",
     q: "In quale modalità girano i normali programmi utente?",
     opts: [
-      "User mode (modalità utente), con privilegi limitati",
-      "Kernel mode, con privilegi massimi",
-      "Sempre con accesso diretto all'hardware",
-      "In modalità di sola lettura del disco"
+      "In user mode, con privilegi limitati sull'hardware",
+      "In kernel mode, con accesso completo a tutto l'hardware",
+      "In una modalità che cambia a ogni chiamata di sistema"
     ],
     correct: [0],
     exp: "I programmi utente girano in user mode, senza accesso diretto all'hardware: per operazioni privilegiate chiamano il kernel tramite system call. Solo il kernel gira in kernel mode."
@@ -380,10 +349,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02032", topic: "System call",
     q: "Cos'è una system call?",
     opts: [
-      "Una richiesta di un programma al kernel per un servizio",
-      "Una chiamata telefonica tra due server",
-      "Un errore fatale del sistema",
-      "Un comando di rete verso internet"
+      "Una richiesta di un programma al kernel per ottenere un servizio",
+      "Una chiamata a una funzione di un'altra libreria applicativa",
+      "Un segnale hardware che interrompe l'esecuzione della CPU"
     ],
     correct: [0],
     exp: "La system call è il meccanismo con cui un'applicazione in user mode chiede al kernel un servizio privilegiato (I/O su file, creazione processi, rete). È il ponte controllato tra user e kernel mode."
@@ -393,9 +361,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Qual è la differenza principale tra RAM e disco (SSD/HDD)?",
     opts: [
       "La RAM è veloce e volatile; il disco è più lento ma persistente",
-      "La RAM conserva i dati anche da spenta",
-      "Il disco è più veloce della RAM",
-      "Sono la stessa memoria"
+      "La RAM conserva i dati da spenta; il disco li perde allo spegnimento",
+      "La RAM e il disco hanno la stessa velocità ma capacità diverse"
     ],
     correct: [0],
     exp: "La RAM è velocissima ma volatile (si svuota allo spegnimento); il disco è più lento ma conserva i dati in modo permanente. I programmi in esecuzione stanno in RAM, i file su disco."
@@ -405,9 +372,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Cosa avviene durante il boot del computer?",
     opts: [
       "Il firmware avvia il caricamento del sistema operativo in memoria",
-      "Vengono cancellati tutti i file utente",
-      "Si installano automaticamente nuovi programmi",
-      "Si spegne il processore"
+      "Il sistema operativo verifica e ripara automaticamente il file system",
+      "Il processore esegue una serie di test di stress su tutti i componenti"
     ],
     correct: [0],
     exp: "Al boot il firmware (BIOS/UEFI) esegue i test iniziali e passa il controllo al bootloader, che carica il kernel del SO in memoria e avvia il sistema fino al login."
@@ -416,10 +382,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02035", topic: "Firewall",
     q: "A cosa serve un firewall?",
     opts: [
-      "A filtrare il traffico di rete secondo regole di sicurezza",
-      "Ad aumentare la velocità del disco",
-      "A raffreddare fisicamente il processore",
-      "A tradurre i nomi di dominio in IP"
+      "Filtrare il traffico di rete secondo regole di sicurezza",
+      "Analizzare i file salvati in locale alla ricerca di malware",
+      "Cifrare il traffico in uscita verso i siti su internet"
     ],
     correct: [0],
     exp: "Il firewall controlla il traffico in ingresso e uscita, permettendo o bloccando le connessioni in base a regole (porte, IP, protocolli), per proteggere la rete da accessi non autorizzati."
@@ -429,9 +394,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Cos'è l'indirizzo MAC?",
     opts: [
       "Un identificativo fisico univoco della scheda di rete",
-      "Un indirizzo IP dinamico",
-      "Il nome del computer sulla rete",
-      "Una porta di comunicazione"
+      "Un indirizzo assegnato dal DHCP a ogni nuova connessione",
+      "Il nome con cui il computer è registrato nel sistema DNS"
     ],
     correct: [0],
     exp: "Il MAC address è un identificatore hardware univoco della scheda di rete (es. 00:1A:2B:...), assegnato dal produttore. Opera a livello data link, mentre l'IP opera a livello di rete."
@@ -440,10 +404,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02037", topic: "DHCP",
     q: "A cosa serve il protocollo DHCP?",
     opts: [
-      "Ad assegnare automaticamente gli indirizzi IP ai dispositivi",
-      "A tradurre i nomi di dominio in indirizzi IP",
-      "A instradare i pacchetti verso altre reti",
-      "A verificare l'identità degli utenti che si collegano"
+      "Assegnare automaticamente gli indirizzi IP ai dispositivi",
+      "Tradurre i nomi di dominio nei relativi indirizzi IP",
+      "Verificare le credenziali di chi si collega alla rete"
     ],
     correct: [0],
     exp: "Il DHCP assegna in automatico a ogni dispositivo che si connette un indirizzo IP (e altri parametri di rete), evitando la configurazione manuale e i conflitti di indirizzi."
@@ -452,10 +415,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02038", topic: "Subnet mask",
     q: "A cosa serve la subnet mask?",
     opts: [
-      "A distinguere la parte di rete dalla parte host di un indirizzo IP",
-      "A cifrare l'indirizzo IP",
-      "A velocizzare la connessione",
-      "A contare i dispositivi accesi"
+      "Distinguere la parte di rete dalla parte host di un indirizzo IP",
+      "Indicare il gateway a cui inviare i pacchetti diretti all'esterno",
+      "Assegnare un indirizzo IP univoco a ciascun dispositivo della rete"
     ],
     correct: [0],
     exp: "La subnet mask (es. 255.255.255.0) indica quali bit dell'IP identificano la rete e quali l'host, permettendo di suddividere una rete in sottoreti e stabilire chi è 'locale'."
@@ -464,10 +426,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02039", topic: "Ping",
     q: "A cosa serve il comando ping?",
     opts: [
-      "A verificare se un host è raggiungibile e misurarne la latenza",
-      "A cancellare un file",
-      "A installare un programma",
-      "A cifrare una connessione"
+      "Verificare se un host è raggiungibile e misurarne la latenza",
+      "Tradurre un nome di dominio nel suo indirizzo IP corrispondente",
+      "Mostrare l'elenco dei router attraversati fino alla destinazione"
     ],
     correct: [0],
     exp: "Ping invia pacchetti ICMP a un host e attende la risposta: serve a verificare la connettività di rete e a misurare il tempo di andata e ritorno (latenza)."
@@ -477,9 +438,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Quale strategia descrive un backup 'incrementale'?",
     opts: [
       "Salva solo i dati modificati dall'ultimo backup di qualsiasi tipo",
-      "Salva ogni volta tutti i dati da zero",
-      "Non salva mai nulla automaticamente",
-      "Salva solo i file di sistema"
+      "Salva tutte le modifiche fatte rispetto all'ultimo backup completo",
+      "Salva ogni volta l'intero contenuto ripartendo da zero"
     ],
     correct: [0],
     exp: "Il backup incrementale copia solo le modifiche dall'ultimo backup (completo o incrementale): occupa poco spazio ma il ripristino richiede la catena completa. Il differenziale copia le modifiche dall'ultimo completo."
@@ -488,10 +448,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02041", topic: "Concorrenza",
     q: "Cos'è una 'race condition'?",
     opts: [
-      "Un bug dovuto all'ordine imprevedibile di accesso a risorse condivise",
-      "Una gara di velocità tra due CPU",
-      "Un tipo di attacco di rete",
-      "Un errore di battitura nel codice"
+      "Un bug dovuto all'ordine imprevedibile di accesso a dati condivisi",
+      "Due processi che si bloccano a vicenda attendendo risorse l'uno dell'altro",
+      "Un processo che per bassa priorità non ottiene mai la CPU"
     ],
     correct: [0],
     exp: "La race condition avviene quando più thread/processi accedono a una risorsa condivisa senza sincronizzazione e il risultato dipende dall'ordine di esecuzione, causando comportamenti imprevedibili."
@@ -500,10 +459,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02042", topic: "Sincronizzazione",
     q: "A cosa serve un semaforo (o mutex) nella programmazione concorrente?",
     opts: [
-      "A regolare l'accesso a risorse condivise evitando conflitti",
-      "Ad aumentare la frequenza di clock della CPU",
-      "A collegare in rete due computer distinti",
-      "A distribuire i processi tra i core disponibili"
+      "Regolare l'accesso a risorse condivise evitando conflitti tra thread",
+      "Distribuire i processi tra i vari core disponibili della CPU",
+      "Ripristinare uno stato coerente del sistema dopo un guasto improvviso"
     ],
     correct: [0],
     exp: "Semafori e mutex sono meccanismi di sincronizzazione: garantiscono che una risorsa condivisa (es. una variabile o un file) sia usata da un solo thread alla volta, prevenendo le race condition."
@@ -512,10 +470,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02043", topic: "Cloud",
     q: "Cosa significa PaaS (Platform as a Service)?",
     opts: [
-      "Il provider offre una piattaforma per sviluppare e distribuire applicazioni",
-      "Il provider fornisce solo hardware fisico",
-      "Un software finito usato via browser",
-      "Un protocollo di rete sicuro"
+      "Il provider offre una piattaforma per sviluppare e distribuire app",
+      "Il provider offre solo hardware virtualizzato da configurare a mano",
+      "Il provider offre un'applicazione finita e pronta all'uso"
     ],
     correct: [0],
     exp: "Nel PaaS il provider gestisce infrastruttura e ambiente (SO, runtime, database), e lo sviluppatore si concentra solo sul codice dell'applicazione. Es: Heroku, Google App Engine."
@@ -525,9 +482,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Cosa distingue la scalabilità 'orizzontale' da quella 'verticale'?",
     opts: [
       "Orizzontale aggiunge più macchine; verticale potenzia una singola macchina",
-      "Verticale aggiunge più macchine, orizzontale ne potenzia una",
-      "Rappresentano lo stesso concetto e sono intercambiabili nell'esercizio",
-      "Riguardano solo la grafica"
+      "Orizzontale potenzia una macchina; verticale ne aggiunge di nuove",
+      "La verticale è possibile solo nel cloud, l'orizzontale solo on-premise"
     ],
     correct: [0],
     exp: "Scalare in verticale (scale up) = aumentare risorse di un server (più CPU/RAM). Scalare in orizzontale (scale out) = aggiungere più server che lavorano insieme, tipico del cloud e dei big data."
@@ -536,10 +492,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02045", topic: "Interrupt",
     q: "Cos'è un interrupt?",
     opts: [
-      "Un segnale che sospende la CPU per gestire un evento urgente",
-      "Un errore che spegne il computer",
-      "Un tipo di file eseguibile",
-      "Un comando di rete"
+      "Un segnale che sospende la CPU per gestire subito un evento urgente",
+      "Un errore irreversibile che arresta l'intero sistema operativo",
+      "Una richiesta di un programma al kernel per ottenere un servizio"
     ],
     correct: [0],
     exp: "L'interrupt è un segnale (hardware o software) che interrompe l'esecuzione corrente della CPU per gestire subito un evento (es. tasto premuto, dato dal disco), poi si riprende da dove si era rimasti."
@@ -548,10 +503,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02046", topic: "Driver",
     q: "Cos'è un driver di dispositivo?",
     opts: [
-      "Un software che permette al SO di comunicare con un componente hardware",
-      "Un cavo fisico di collegamento, non software di comunicazione hardware",
-      "Un malware, non un componente software del sistema operativo",
-      "Una porta logica di rete, non un driver hardware"
+      "Il software che fa comunicare il SO con un componente hardware",
+      "Un programma che ottimizza in automatico le prestazioni del disco",
+      "Il firmware integrato nel dispositivo direttamente dal produttore"
     ],
     correct: [0],
     exp: "Il driver traduce le richieste generiche del SO nei comandi specifici di un dispositivo (stampante, scheda video, ecc.): senza il driver giusto l'hardware non funziona correttamente."
@@ -560,10 +514,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02047", topic: "NAT",
     q: "A cosa serve il NAT (Network Address Translation)?",
     opts: [
-      "A far condividere a più dispositivi un unico IP pubblico",
-      "A cifrare il traffico web",
-      "A velocizzare il disco",
-      "A tradurre i nomi di dominio"
+      "Far condividere a più dispositivi un unico indirizzo IP pubblico",
+      "Tradurre i nomi di dominio nei relativi indirizzi IP numerici",
+      "Assegnare gli indirizzi IP privati ai dispositivi della rete locale"
     ],
     correct: [0],
     exp: "Il NAT traduce gli IP privati della rete locale in un unico IP pubblico verso internet (e viceversa): permette a molti dispositivi di uscire su internet con un solo indirizzo pubblico."
@@ -572,10 +525,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02048", topic: "VPN",
     q: "A cosa serve una VPN?",
     opts: [
-      "A creare un tunnel cifrato tra il dispositivo e una rete remota",
-      "Ad aumentare la RAM disponibile",
-      "A raffreddare il processore",
-      "A comprimere i file"
+      "Creare un tunnel cifrato tra il dispositivo e una rete remota",
+      "Filtrare il traffico in ingresso secondo regole di sicurezza",
+      "Distribuire le richieste tra più server per bilanciare il carico"
     ],
     correct: [0],
     exp: "La VPN (Virtual Private Network) crea un collegamento cifrato su internet, come se il dispositivo fosse fisicamente nella rete remota: protegge il traffico e permette accessi sicuri a distanza."
@@ -586,8 +538,7 @@ registerSubject("SO Reti Virtualizzazione", [
     opts: [
       "8",
       "4",
-      "16",
-      "1000"
+      "16"
     ],
     correct: [0],
     exp: "Un byte è composto da 8 bit. Un bit è la singola cifra binaria (0/1). Con 8 bit si rappresentano 256 valori (2^8), es. un carattere ASCII."
@@ -596,34 +547,31 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02050", topic: "Latenza vs banda",
     q: "Qual è la differenza tra latenza e larghezza di banda?",
     opts: [
-      "La latenza è il ritardo; la banda è la quantità di dati trasferibili nel tempo",
-      "Sono termini sinonimi e non cambiano la procedura richiesta",
-      "La banda è il ritardo, la latenza la quantità",
-      "Riguardano solo il Wi-Fi"
+      "La latenza è il ritardo; la banda è quanti dati passano nel tempo",
+      "La latenza è quanti dati passano; la banda è il ritardo di trasmissione",
+      "Latenza e banda misurano entrambe la velocità del disco fisso"
     ],
     correct: [0],
     exp: "La latenza è il tempo che un pacchetto impiega ad arrivare (ritardo, in ms); la banda è quanti dati passano per unità di tempo (es. Mbps). Alta banda ma alta latenza = molti dati ma con ritardo."
   },
   {
     id: "u02051", topic: "Processo: stati",
-    q: "Quali sono stati tipici di un processo? (una o più risposte)",
+    q: "Quale di questi è uno stato tipico di un processo?",
     opts: [
-      "In esecuzione (running)",
-      "Pronto (ready)",
-      "In attesa (waiting/blocked)",
-      "Compilato"
+      "In attesa di un'operazione di I/O (blocked)",
+      "In fase di compilazione del codice sorgente",
+      "Archiviato in modo permanente sul disco"
     ],
-    correct: [0,1,2],
-    exp: "Un processo passa tra stati: pronto (attende la CPU), in esecuzione (usa la CPU), in attesa (bloccato su I/O). 'Compilato' non è uno stato di esecuzione, riguarda la traduzione del codice."
+    correct: [0],
+    exp: "Un processo passa tra stati come pronto (attende la CPU), in esecuzione (usa la CPU) e in attesa/blocked (fermo su un'operazione di I/O). La compilazione riguarda la traduzione del codice, non l'esecuzione; l'archiviazione su disco riguarda i file, non i processi."
   },
   {
     id: "u02052", topic: "Cache",
     q: "A cosa serve la memoria cache della CPU?",
     opts: [
-      "A tenere vicino alla CPU i dati usati più di frequente, riducendo i tempi di accesso",
-      "Ad archiviare i file in modo permanente su disco",
-      "A collegare il computer alla rete internet",
-      "A conservare i dati anche a computer spento"
+      "Tenere vicino alla CPU i dati usati più di frequente",
+      "Conservare i dati in modo permanente anche a computer spento",
+      "Estendere la memoria disponibile usando una porzione del disco"
     ],
     correct: [0],
     exp: "La cache è una memoria piccola e velocissima tra CPU e RAM che conserva dati/istruzioni usati spesso: riduce l'attesa della CPU. Esistono livelli L1, L2, L3 di dimensione e velocità decrescenti."
@@ -633,33 +581,30 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Quale protocollo si usa per l'invio delle email?",
     opts: [
       "SMTP",
-      "HTTP",
-      "FTP",
-      "DNS"
+      "IMAP",
+      "POP3"
     ],
     correct: [0],
-    exp: "SMTP (Simple Mail Transfer Protocol) gestisce l'INVIO delle email. Per riceverle si usano IMAP o POP3. HTTP è per il web, FTP per il trasferimento file, DNS per la risoluzione dei nomi."
+    exp: "SMTP (Simple Mail Transfer Protocol) gestisce l'INVIO delle email. IMAP e POP3 servono invece a RICEVERE/scaricare la posta dal server: sono distrattori forti perché riguardano tutti l'email, ma con ruolo opposto."
   },
   {
     id: "u02054", topic: "OSI: livello trasporto",
-    q: "Quali protocolli operano al livello di trasporto? (una o più risposte)",
+    q: "Quale protocollo opera al livello di trasporto?",
     opts: [
       "TCP",
-      "UDP",
       "IP",
       "HTTP"
     ],
-    correct: [0,1],
-    exp: "TCP e UDP sono protocolli di trasporto. IP sta al livello di rete (sotto), HTTP al livello applicazione (sopra). Il trasporto gestisce la comunicazione end-to-end tra applicazioni."
+    correct: [0],
+    exp: "TCP è un protocollo di trasporto (gestisce la comunicazione end-to-end tra applicazioni). IP sta al livello di rete (sotto), HTTP al livello applicazione (sopra): entrambi plausibili ma di livelli diversi."
   },
   {
     id: "u02055", topic: "Load balancer",
     q: "A cosa serve un load balancer?",
     opts: [
-      "A distribuire il carico di richieste tra più server",
-      "A tradurre i nomi di dominio in indirizzi IP",
-      "A memorizzare in cache le pagine più richieste",
-      "A filtrare le richieste non autorizzate verso i server"
+      "Distribuire il carico delle richieste tra più server",
+      "Memorizzare in cache le pagine statiche più richieste",
+      "Bloccare le richieste che violano le regole di sicurezza"
     ],
     correct: [0],
     exp: "Il load balancer smista le richieste tra più server, evitando che uno solo si sovraccarichi: migliora prestazioni, disponibilità e tolleranza ai guasti. È chiave nella scalabilità orizzontale."
@@ -669,9 +614,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Se un programma utente vuole scrivere su disco, cosa deve fare?",
     opts: [
       "Richiederlo al kernel tramite una system call",
-      "Accedere direttamente all'hardware del disco",
-      "Riavviare il computer",
-      "Cambiare il proprio linguaggio di programmazione"
+      "Scrivere direttamente sui settori del disco tramite il driver",
+      "Passare da solo in kernel mode per eseguire l'operazione"
     ],
     correct: [0],
     exp: "In user mode il programma non può toccare l'hardware direttamente: deve chiedere al kernel tramite system call (es. write). Il kernel esegue l'operazione in modo controllato e sicuro."
@@ -681,9 +625,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Un vantaggio dei thread rispetto ai processi separati è:",
     opts: [
       "Comunicano facilmente perché condividono la stessa memoria",
-      "Sono sempre più sicuri e isolati",
-      "Occupano più risorse di un processo",
-      "Non possono mai bloccarsi"
+      "Sono più isolati perché hanno spazi di memoria separati",
+      "Continuano a girare anche se il processo padre termina"
     ],
     correct: [0],
     exp: "I thread di uno stesso processo condividono la memoria, quindi comunicano rapidamente e sono leggeri. Lo svantaggio è che la memoria condivisa richiede sincronizzazione per evitare errori."
@@ -692,10 +635,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02058", topic: "Cloud pubblico/privato",
     q: "Cosa distingue un cloud pubblico da uno privato?",
     opts: [
-      "Il pubblico è condiviso da più clienti; il privato è dedicato a una sola organizzazione",
-      "Il privato è sempre gratuito",
-      "Il pubblico non è accessibile da internet",
-      "Rappresentano lo stesso concetto e sono intercambiabili nell'esercizio"
+      "Il pubblico serve più clienti; il privato una sola organizzazione",
+      "Il pubblico è dedicato a un solo cliente; il privato è condiviso tra molti",
+      "Il pubblico è installato on-premise; il privato è gestito dal provider"
     ],
     correct: [0],
     exp: "Il cloud pubblico (AWS, Azure) è condiviso tra molti clienti sull'infrastruttura del provider; il privato è riservato a una singola organizzazione. L'ibrido combina i due."
@@ -704,10 +646,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02059", topic: "Overhead virtualizzazione",
     q: "Perché i container si sono diffusi rispetto alle VM per il deployment?",
     opts: [
-      "Sono leggeri, veloci da avviare e portabili tra ambienti",
-      "Sono più pesanti ma più sicuri delle VM",
-      "Includono sempre un intero SO ospite",
-      "Non richiedono alcun sistema operativo"
+      "Sono leggeri, veloci da avviare e portabili tra ambienti diversi",
+      "Includono un intero SO ospite che ne garantisce l'isolamento",
+      "Non richiedono alcun sistema operativo sottostante per funzionare"
     ],
     correct: [0],
     exp: "I container avviano in secondi, occupano poche risorse (condividono il kernel host) e garantiscono che l'app giri identica ovunque ('funziona sulla mia macchina' risolto). Ideali per microservizi e CI/CD."
@@ -716,10 +657,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02060", topic: "Orchestrazione",
     q: "A cosa serve Kubernetes?",
     opts: [
-      "A orchestrare (gestire e scalare) container su più macchine",
-      "A costruire le immagini da cui partono i container",
-      "A sostituire il sistema operativo dei server",
-      "A configurare la rete fisica del data center"
+      "Orchestrare e scalare i container distribuiti su più macchine",
+      "Costruire le immagini da cui vengono avviati i container",
+      "Fornire il kernel condiviso su cui i container vengono eseguiti"
     ],
     correct: [0],
     exp: "Kubernetes orchestra i container: li distribuisce sui nodi, li riavvia se cadono, li scala in base al carico e ne gestisce il networking. Docker crea/esegue i container, Kubernetes li coordina su larga scala."
@@ -729,9 +669,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "In un sistema Unix/Linux, i permessi di un file riguardano:",
     opts: [
       "Lettura, scrittura ed esecuzione per proprietario, gruppo e altri",
-      "Solo la dimensione del file",
-      "La velocità di accesso al file",
-      "Il colore dell'icona del file"
+      "La priorità di esecuzione assegnata al processo che apre il file",
+      "L'ordine con cui i file vengono elencati all'interno della cartella"
     ],
     correct: [0],
     exp: "I permessi Unix definiscono chi può leggere (r), scrivere (w) ed eseguire (x) un file, per tre categorie: proprietario, gruppo e altri. Si gestiscono con chmod (es. 755)."
@@ -740,10 +679,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02062", topic: "Shell",
     q: "Cos'è la shell (es. Bash)?",
     opts: [
-      "Un interprete di comandi per interagire con il SO da riga di comando",
-      "Il processore del computer",
-      "Un protocollo di comunicazione tra servizi o dispositivi",
-      "La memoria cache"
+      "Un interprete di comandi per usare il SO da riga di comando",
+      "Il nucleo del SO che gestisce direttamente hardware e processi",
+      "La finestra grafica con cui si aprono e chiudono le applicazioni"
     ],
     correct: [0],
     exp: "La shell è l'interfaccia testuale che interpreta i comandi dell'utente e li fa eseguire al SO (es. Bash, Zsh, PowerShell). Permette anche di scrivere script per automatizzare operazioni."
@@ -753,9 +691,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Cos'è un pacchetto in una rete?",
     opts: [
       "Un'unità di dati con intestazione e payload, instradata sulla rete",
-      "Un cavo fisico usato per collegare dispositivi di rete",
-      "Un programma applicativo installato sul computer",
-      "Un dispositivo fisico, non un pacchetto dati trasmesso"
+      "Una connessione stabile aperta tra due applicazioni che dialogano",
+      "L'insieme di regole condivise che governa la comunicazione"
     ],
     correct: [0],
     exp: "I dati vengono suddivisi in pacchetti: ognuno ha un'intestazione (con indirizzi sorgente/destinazione) e un payload (i dati). I pacchetti viaggiano indipendentemente e vengono riassemblati a destinazione."
@@ -765,9 +702,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Perché è stato introdotto IPv6?",
     opts: [
       "Per superare l'esaurimento degli indirizzi disponibili con IPv4",
-      "Perché IPv4 era troppo veloce",
-      "Per eliminare la necessità del DNS",
-      "Per rendere le reti più lente"
+      "Per sostituire il protocollo TCP con uno più veloce ed efficiente",
+      "Per eliminare la necessità dei router tra reti differenti"
     ],
     correct: [0],
     exp: "IPv4 (32 bit) offre ~4,3 miliardi di indirizzi, ormai insufficienti. IPv6 usa 128 bit, fornendo un numero enorme di indirizzi e migliorie in sicurezza e instradamento."
@@ -777,9 +713,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Cos'è un processo 'zombie' in Unix?",
     opts: [
       "Un processo terminato il cui stato non è ancora stato letto dal padre",
-      "Un processo che consuma tutta la CPU",
-      "Un virus informatico",
-      "Un processo eseguito due volte"
+      "Un processo figlio ancora vivo il cui padre è già terminato",
+      "Un processo che consuma tutta la CPU rallentando l'intero sistema"
     ],
     correct: [0],
     exp: "Uno zombie è un processo figlio già terminato ma la cui voce resta nella tabella dei processi finché il padre non ne 'raccoglie' lo stato di uscita (wait). Occupa solo una voce, non risorse reali."
@@ -789,9 +724,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Il throughput di un sistema indica:",
     opts: [
       "La quantità di lavoro completato nell'unità di tempo",
-      "Il ritardo di una singola operazione",
-      "La temperatura del processore",
-      "Il numero di errori di rete"
+      "Il ritardo con cui una singola operazione viene completata",
+      "La percentuale di tempo in cui il sistema resta operativo"
     ],
     correct: [0],
     exp: "Il throughput misura quanto lavoro (es. richieste, dati) un sistema porta a termine per unità di tempo. È diverso dalla latenza, che misura il ritardo di una singola operazione."
@@ -801,9 +735,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Se il DNS non funziona ma la rete sì, cosa succede tipicamente?",
     opts: [
       "Si può navigare per indirizzo IP ma non per nome di dominio",
-      "Non si può fare assolutamente nulla in rete",
-      "La connessione diventa più veloce",
-      "I file locali si cancellano"
+      "Si può navigare per nome ma non digitando direttamente l'IP",
+      "La rete continua a funzionare senza alcun tipo di limitazione"
     ],
     correct: [0],
     exp: "Senza DNS i nomi (es. google.com) non vengono risolti in IP, quindi la navigazione 'per nome' fallisce, ma raggiungendo direttamente l'IP la connessione funziona: il problema è solo la traduzione dei nomi."
@@ -812,10 +745,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02068", topic: "Virtualizzazione risorse",
     q: "La virtualizzazione migliora l'uso dell'hardware perché:",
     opts: [
-      "Più VM condividono lo stesso server fisico, aumentandone l'utilizzo",
-      "Raddoppia fisicamente la RAM installata",
-      "Elimina la necessità di un sistema operativo",
-      "Rende inutile la CPU"
+      "Più VM condividono un server fisico, sfruttandolo di più",
+      "Ogni VM riceve un server fisico dedicato esclusivamente a sé",
+      "Le VM raddoppiano la quantità di memoria fisica installata"
     ],
     correct: [0],
     exp: "Un server fisico spesso è sottoutilizzato; consolidando più VM sullo stesso hardware si sfruttano meglio le risorse, si riducono i costi e si semplifica la gestione (consolidamento server)."
@@ -824,10 +756,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02069", topic: "Firewall vs antivirus",
     q: "Firewall e antivirus fanno la stessa cosa?",
     opts: [
-      "No: il firewall filtra il traffico di rete, l'antivirus rileva software malevolo",
-      "Firewall e antivirus sono sinonimi e fanno lo stesso controllo",
-      "Il firewall analizza file locali alla ricerca di malware",
-      "L'antivirus gestisce indirizzi IP e regole di rete"
+      "Il firewall filtra il traffico di rete, l'antivirus rileva software malevolo",
+      "Il firewall analizza i file locali, l'antivirus controlla il traffico di rete",
+      "Entrambi cifrano i dati dell'utente per proteggerli dagli attacchi"
     ],
     correct: [0],
     exp: "Il firewall controlla le connessioni di rete (chi entra/esce); l'antivirus analizza file e programmi per individuare malware. Sono complementari, non alternativi."
@@ -837,9 +768,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "L'elasticità del cloud significa che:",
     opts: [
       "Le risorse si adattano automaticamente in su o in giù in base al carico",
-      "Le risorse sono fisse e non cambiano mai",
-      "I dati vengono sempre cancellati ogni notte",
-      "Il servizio funziona solo offline"
+      "Le risorse restano fisse e vanno riconfigurate manualmente ogni volta",
+      "I dati vengono replicati automaticamente in più regioni geografiche"
     ],
     correct: [0],
     exp: "L'elasticità permette di aumentare le risorse quando il carico cresce e ridurle quando cala, pagando solo per quel che si usa. È uno dei vantaggi chiave del cloud rispetto all'hardware fisico."
@@ -848,10 +778,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02071", topic: "Protocollo SSH",
     q: "A cosa serve SSH?",
     opts: [
-      "Ad accedere in modo sicuro e cifrato a un computer remoto",
-      "A inviare email",
-      "A navigare pagine web non sicure",
-      "A cancellare file da remoto senza cifratura"
+      "Accedere in modo sicuro e cifrato a un computer remoto",
+      "Trasferire file tra due host su una connessione non cifrata",
+      "Assegnare gli indirizzi IP ai dispositivi remoti della rete"
     ],
     correct: [0],
     exp: "SSH (Secure Shell) permette di collegarsi e gestire un computer remoto tramite una connessione cifrata (di norma sulla porta 22), sostituendo protocolli insicuri come Telnet."
@@ -860,10 +789,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02072", topic: "Multiprocessore",
     q: "Un sistema multi-core permette di:",
     opts: [
-      "Eseguire realmente più istruzioni in parallelo su core diversi",
-      "Aumentare la dimensione del disco",
-      "Cifrare automaticamente i dati",
-      "Collegare più monitor"
+      "Eseguire davvero più istruzioni in parallelo su core diversi",
+      "Alternare rapidamente i processi su un'unica unità di calcolo",
+      "Aumentare la frequenza di clock del singolo core della CPU"
     ],
     correct: [0],
     exp: "Un processore multi-core ha più unità di elaborazione (core): può eseguire davvero più thread in parallelo, a differenza del semplice time sharing su una singola CPU che solo li alterna."
@@ -872,10 +800,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02073", topic: "Storage",
     q: "Cosa distingue lo storage a oggetti (object storage) dal file system tradizionale?",
     opts: [
-      "Memorizza dati come oggetti con metadati, ideale per grandi volumi non strutturati",
-      "È sempre più lento e meno scalabile",
-      "Usa cartelle annidate come unico modo di organizzare i dati",
-      "Non può essere usato nel cloud"
+      "Memorizza i dati come oggetti con metadati, ideale per grandi volumi",
+      "Organizza i dati in una gerarchia di cartelle e sottocartelle annidate",
+      "Memorizza i dati in righe e colonne di tabelle tra loro collegate"
     ],
     correct: [0],
     exp: "L'object storage (es. Amazon S3) archivia i dati come oggetti con identificativo e metadati in uno spazio piatto, altamente scalabile per file, backup e big data. Il file system usa una gerarchia di cartelle."
@@ -884,10 +811,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02074", topic: "Concorrenza vs parallelismo",
     q: "Concorrenza e parallelismo sono la stessa cosa?",
     opts: [
-      "No: la concorrenza gestisce più attività 'insieme', il parallelismo le esegue davvero simultaneamente",
-      "Sì, sono sinonimi esatti",
-      "Il parallelismo esiste solo con una CPU singola",
-      "La concorrenza richiede sempre più computer"
+      "La concorrenza gestisce più attività insieme; il parallelismo le esegue simultaneamente",
+      "La concorrenza esegue davvero in simultanea; il parallelismo si limita ad alternarle",
+      "Sono la stessa cosa e richiedono entrambi più core fisici"
     ],
     correct: [0],
     exp: "Concorrenza = gestire più task che progrediscono nello stesso periodo (anche alternandoli su una CPU). Parallelismo = eseguirli letteralmente allo stesso istante su più core. Il parallelismo è una forma di concorrenza."
@@ -896,10 +822,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02075", topic: "Rete: banda",
     q: "1 Gbps di larghezza di banda equivale a:",
     opts: [
-      "1 gigabit al secondo di dati trasferibili",
-      "Una quantità di storage disponibile, non un tasso di trasferimento",
-      "Una frequenza di CPU, non una misura di throughput dei dati",
-      "Un tempo di risposta, non una misura di volume per secondo"
+      "1 gigabit al secondo di dati trasferibili sulla rete",
+      "1 gigabyte di spazio di archiviazione reso disponibile",
+      "1 miliardo di operazioni al secondo eseguite dalla CPU"
     ],
     correct: [0],
     exp: "Gbps = gigabit per secondo, misura la velocità di trasferimento (banda). Attenzione: 1 byte = 8 bit, quindi 1 Gbps ≈ 125 MB/s. Non va confuso con lo spazio su disco (GB)."
@@ -909,9 +834,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Cosa si intende per alta disponibilità (high availability)?",
     opts: [
       "Un sistema progettato per restare operativo anche in caso di guasti",
-      "Un sistema molto veloce ma spesso spento",
-      "Un sistema con tanto spazio su disco",
-      "Un sistema senza connessione di rete"
+      "Un sistema che elabora enormi quantità di dati in parallelo",
+      "Un sistema che garantisce risposte entro scadenze temporali rigide"
     ],
     correct: [0],
     exp: "L'alta disponibilità mira a minimizzare i tempi di inattività tramite ridondanza, failover e bilanciamento: se un componente si guasta, un altro subentra così il servizio resta attivo."
@@ -920,10 +844,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02077", topic: "Container: portabilità",
     q: "Perché si dice che un container garantisce portabilità?",
     opts: [
-      "L'app e le sue dipendenze girano identiche su qualsiasi host con il runtime",
-      "Perché può essere trasportato solo su chiavetta USB",
-      "Perché funziona solo su un tipo di computer",
-      "Perché non contiene alcuna dipendenza"
+      "App e dipendenze girano identiche su qualunque host col runtime",
+      "Il container si può spostare solo copiandolo su un supporto USB",
+      "Il container funziona unicamente sul sistema che l'ha creato"
     ],
     correct: [0],
     exp: "Il container impacchetta app e dipendenze in un ambiente standard: gira uguale su portatile, server on-premise o cloud, purché ci sia il runtime (es. Docker). Elimina i problemi 'sul mio PC funziona'."
@@ -932,10 +855,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02078", topic: "Bootloader",
     q: "Cos'è il bootloader?",
     opts: [
-      "Il programma che carica il sistema operativo all'avvio",
-      "Un antivirus di sistema",
-      "Un tipo di rete locale",
-      "La memoria cache della CPU"
+      "Il programma che carica il sistema operativo in memoria all'avvio",
+      "Il firmware che esegue i test iniziali sui componenti hardware",
+      "Il processo che gestisce l'autenticazione e il login degli utenti"
     ],
     correct: [0],
     exp: "Il bootloader (es. GRUB) è avviato dal firmware e carica il kernel del SO in memoria, avviando il sistema. Può anche permettere di scegliere tra più sistemi operativi installati."
@@ -945,9 +867,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Cos'è un protocollo di rete?",
     opts: [
       "Un insieme di regole condivise per far comunicare i dispositivi",
-      "Un cavo di rete fisico",
-      "Un tipo di computer",
-      "Un file di configurazione locale"
+      "Il dispositivo fisico che collega tra loro reti diverse",
+      "Il programma applicativo che invia i dati attraverso la rete"
     ],
     correct: [0],
     exp: "Un protocollo definisce formato dei messaggi, tempi e regole della comunicazione, così dispositivi diversi si capiscono (es. TCP/IP, HTTP). Senza protocolli comuni la comunicazione sarebbe impossibile."
@@ -956,10 +877,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02080", topic: "Memoria: swap",
     q: "Cosa succede quando il sistema fa 'swapping' intenso?",
     opts: [
-      "Le prestazioni calano",
-      "Il computer diventa più veloce",
-      "La RAM viene cancellata",
-      "La CPU si spegne"
+      "Le prestazioni calano perché il disco è molto più lento della RAM",
+      "Le prestazioni migliorano perché si libera spazio nella RAM",
+      "La RAM viene svuotata e i programmi aperti si chiudono da soli"
     ],
     correct: [0],
     exp: "Se la RAM è insufficiente, il SO sposta pagine su disco (swap). Uno swapping eccessivo (thrashing) rallenta molto il sistema, perché il disco è molto più lento della RAM."
@@ -968,10 +888,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02081", topic: "Cloud: costi",
     q: "Il modello 'pay-as-you-go' del cloud significa:",
     opts: [
-      "Si paga in base all'effettivo utilizzo delle risorse",
-      "Si paga una cifra fissa a vita",
-      "Il servizio è sempre gratuito",
-      "Si paga solo l'hardware fisico acquistato"
+      "Si paga in base all'effettivo utilizzo delle risorse consumate",
+      "Si paga un canone fisso indipendente da quanto si consuma",
+      "Si paga una sola volta l'hardware fisico acquistato in anticipo"
     ],
     correct: [0],
     exp: "Con il pay-as-you-go paghi solo le risorse che consumi (ore di calcolo, GB di storage, traffico), senza grandi investimenti iniziali: trasforma i costi da capitale a operativi."
@@ -982,20 +901,18 @@ registerSubject("SO Reti Virtualizzazione", [
     opts: [
       "ps (o top/htop)",
       "ls",
-      "cd",
-      "echo"
+      "df"
     ],
     correct: [0],
-    exp: "ps elenca i processi; top/htop li mostrano in tempo reale con uso di CPU e memoria. ls elenca file, cd cambia cartella, echo stampa testo."
+    exp: "ps elenca i processi attivi; top/htop li mostrano in tempo reale con uso di CPU e memoria. ls elenca i file di una cartella e df mostra lo spazio libero sui dischi: comandi reali ma con tutt'altro scopo."
   },
   {
     id: "u02083", topic: "Isolamento",
     q: "Due VM sullo stesso host fisico condividono lo stesso sistema operativo?",
     opts: [
       "No: ogni VM ha il proprio sistema operativo indipendente",
-      "Sì, condividono sempre lo stesso SO",
-      "Sì, ma solo il kernel",
-      "No, ma condividono gli stessi file utente"
+      "Sì: tutte le VM condividono il kernel del sistema operativo host",
+      "Sì: condividono il SO ma mantengono file utente separati"
     ],
     correct: [0],
     exp: "Ogni VM ha un SO ospite completo e indipendente, isolato dalle altre. Sono i CONTAINER a condividere il kernel del SO host, non le VM."
@@ -1004,25 +921,23 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02084", topic: "Rete: gateway",
     q: "Cos'è il gateway predefinito (default gateway)?",
     opts: [
-      "Il dispositivo (di solito il router) che instrada il traffico verso altre reti",
-      "Il nome del computer principale",
-      "Un tipo di firewall software",
-      "La velocità massima della rete"
+      "Il router che inoltra il traffico verso le altre reti",
+      "Il server che assegna gli indirizzi IP nella rete locale",
+      "Il server che traduce i nomi di dominio in indirizzi IP"
     ],
     correct: [0],
     exp: "Il default gateway è l'indirizzo (tipicamente il router) a cui un dispositivo invia i pacchetti destinati a reti diverse dalla propria, es. per raggiungere internet."
   },
   {
     id: "u02085", topic: "Sistema operativo: tipi",
-    q: "Quale di questi è un sistema operativo? (una o più risposte)",
+    q: "Quale di questi è un sistema operativo?",
     opts: [
       "Linux",
-      "Windows",
-      "macOS",
-      "MySQL"
+      "MySQL",
+      "Apache"
     ],
-    correct: [0,1,2],
-    exp: "Linux, Windows e macOS sono sistemi operativi. MySQL è invece un DBMS (sistema di gestione di database), un'applicazione che gira sopra il sistema operativo."
+    correct: [0],
+    exp: "Linux è un sistema operativo. MySQL è un DBMS (gestione di database) e Apache è un web server: entrambi sono applicazioni che girano SOPRA il sistema operativo, non sistemi operativi."
   },
   {
     id: "u02086", topic: "Rete: ISO/OSI applicazione",
@@ -1030,8 +945,7 @@ registerSubject("SO Reti Virtualizzazione", [
     opts: [
       "Applicazione",
       "Trasporto",
-      "Rete",
-      "Fisico"
+      "Rete"
     ],
     correct: [0],
     exp: "HTTP è un protocollo di livello applicazione (il più alto): definisce come client e server web si scambiano richieste e risposte. Sotto usa TCP (trasporto) e IP (rete)."
@@ -1040,10 +954,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02087", topic: "Virtualizzazione: overcommit",
     q: "L'overcommitment delle risorse in virtualizzazione significa:",
     opts: [
-      "Assegnare alle VM più risorse virtuali di quelle fisiche realmente presenti",
-      "Lasciare metà hardware sempre inutilizzato",
-      "Usare esattamente le risorse fisiche disponibili",
-      "Disattivare la virtualizzazione"
+      "Assegnare alle VM più risorse virtuali di quelle fisiche presenti",
+      "Riservare a ogni VM risorse fisiche esclusive, fisse e non condivise",
+      "Lasciare inutilizzata metà delle risorse fisiche per sicurezza"
     ],
     correct: [0],
     exp: "L'overcommit assegna alle VM, nel complesso, più CPU/RAM di quelle fisiche, contando sul fatto che non tutte le VM le usino al massimo contemporaneamente. Va gestito per evitare cali di prestazioni."
@@ -1052,10 +965,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02088", topic: "Processo: PID",
     q: "Cos'è il PID di un processo?",
     opts: [
-      "Un numero identificativo univoco del processo",
-      "La priorità del processo",
-      "La quantità di RAM usata",
-      "Il nome del programma"
+      "Un numero identificativo univoco assegnato al processo",
+      "Il valore di priorità con cui il processo viene schedulato",
+      "La quantità di memoria che il processo occupa in RAM"
     ],
     correct: [0],
     exp: "Il PID (Process IDentifier) è un numero univoco assegnato dal SO a ogni processo, usato per riferirsi a esso (es. per terminarlo con kill PID)."
@@ -1066,20 +978,18 @@ registerSubject("SO Reti Virtualizzazione", [
     opts: [
       "HTTP → HTTPS",
       "TCP → UDP",
-      "IP → MAC",
-      "DNS → DHCP"
+      "IP → MAC"
     ],
     correct: [0],
-    exp: "HTTPS è la versione cifrata (via TLS) di HTTP. TCP/UDP sono protocolli diversi, non uno la versione sicura dell'altro; IP e MAC sono indirizzi di livelli diversi; DNS e DHCP hanno scopi diversi."
+    exp: "HTTPS è la versione cifrata (via TLS) di HTTP: stesso protocollo, resa sicura. TCP e UDP sono protocolli di trasporto diversi (non uno la versione sicura dell'altro); IP e MAC sono indirizzi di livelli differenti."
   },
   {
     id: "u02090", topic: "Failover",
     q: "Cos'è il failover?",
     opts: [
-      "Il passaggio automatico a un sistema di riserva quando quello primario si guasta",
-      "Un guasto irreversibile del sistema",
-      "Un aumento della velocità della rete",
-      "La cancellazione dei backup"
+      "Il subentro automatico di un sistema di riserva al primario guasto",
+      "La distribuzione delle richieste tra più server attivi in parallelo",
+      "Il ripristino dei dati a partire da un backup dopo una perdita"
     ],
     correct: [0],
     exp: "Il failover è il meccanismo per cui, se il componente attivo si guasta, un componente di riserva subentra automaticamente mantenendo il servizio: è alla base dell'alta disponibilità."
@@ -1088,10 +998,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02091", topic: "SO: modalità",
     q: "Perché esistono user mode e kernel mode?",
     opts: [
-      "Per proteggere il sistema: solo il kernel può eseguire operazioni privilegiate",
-      "Per rendere il computer più lento",
-      "Perché gli utenti preferiscono due modalità",
-      "Per raddoppiare la memoria"
+      "Per protezione: solo il kernel può eseguire operazioni privilegiate",
+      "Per velocità: le due modalità raddoppiano la potenza di calcolo disponibile",
+      "Per compatibilità con i programmi scritti in linguaggi differenti"
     ],
     correct: [0],
     exp: "La separazione tra user e kernel mode è una protezione: un programma difettoso o malevolo in user mode non può danneggiare direttamente hardware e sistema, deve passare dal kernel controllato."
@@ -1100,10 +1009,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02092", topic: "Rete: banda vs latenza",
     q: "Per una videochiamata fluida conta soprattutto:",
     opts: [
-      "Bassa latenza (poco ritardo)",
-      "Grande capacità del disco",
-      "Alta frequenza della CPU",
-      "Molte porte USB"
+      "Una bassa latenza, cioè un ritardo di rete minimo",
+      "Una grande larghezza di banda, anche con ritardo elevato",
+      "Un indirizzo IP statico e pubblico assegnato al dispositivo"
     ],
     correct: [0],
     exp: "Nelle comunicazioni in tempo reale (videochiamate, giochi) la bassa latenza è cruciale: un ritardo elevato rende la conversazione scattosa, anche con banda abbondante."
@@ -1112,10 +1020,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02093", topic: "Container: Dockerfile",
     q: "Cos'è un Dockerfile?",
     opts: [
-      "Un file di testo con le istruzioni per costruire un'immagine Docker",
-      "Un container già avviato a partire da un'immagine",
-      "Un log di errori",
-      "Una rete virtuale"
+      "Un file di testo con le istruzioni per costruire un'immagine",
+      "L'istanza in esecuzione avviata a partire da un'immagine",
+      "Un registro online dove si pubblicano le immagini pronte"
     ],
     correct: [0],
     exp: "Il Dockerfile descrive passo passo come costruire un'immagine (SO base, dipendenze, codice, comando di avvio). Da esso si crea l'immagine, da cui si avviano i container."
@@ -1125,9 +1032,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Un messaggio 'broadcast' in una rete è:",
     opts: [
       "Un messaggio inviato a tutti i dispositivi della rete locale",
-      "Un messaggio a un solo destinatario",
-      "Un messaggio cifrato punto a punto",
-      "Un errore di trasmissione"
+      "Un messaggio inviato a un unico destinatario ben preciso",
+      "Un messaggio inviato solo a un gruppo selezionato di host"
     ],
     correct: [0],
     exp: "Il broadcast invia lo stesso messaggio a tutti i dispositivi del segmento di rete. L'unicast va a un singolo destinatario, il multicast a un gruppo selezionato."
@@ -1137,9 +1043,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Un sistema operativo real-time è progettato per:",
     opts: [
       "Garantire risposte entro tempi rigidamente definiti",
-      "Essere il più economico possibile",
-      "Avere la grafica più bella",
-      "Occupare meno spazio su disco"
+      "Elaborare grandi volumi di dati con la massima velocità media",
+      "Restare operativo il più a lungo possibile senza subire guasti"
     ],
     correct: [0],
     exp: "Un SO real-time garantisce che le operazioni critiche siano completate entro scadenze temporali precise (deterministiche): essenziale in ambiti come automotive, avionica, controllo industriale."
@@ -1148,10 +1053,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02096", topic: "Cloud: regioni",
     q: "Perché i provider cloud offrono più 'regioni' geografiche?",
     opts: [
-      "Per ridurre la latenza verso gli utenti e rispettare vincoli normativi sui dati",
-      "Per rendere il servizio più costoso",
-      "Per obbligare a usare un solo datacenter",
-      "Per cancellare i dati periodicamente"
+      "Ridurre la latenza verso gli utenti e rispettare i vincoli sui dati",
+      "Concentrare tutti i dati in un unico grande datacenter centrale",
+      "Aumentare il costo del servizio in proporzione alla distanza"
     ],
     correct: [0],
     exp: "Distribuire i datacenter in regioni diverse avvicina i servizi agli utenti (meno latenza), aumenta la resilienza ai disastri e permette di rispettare leggi che impongono dove tenere i dati."
@@ -1160,10 +1064,9 @@ registerSubject("SO Reti Virtualizzazione", [
     id: "u02097", topic: "Processo: fork",
     q: "L'operazione 'fork' in Unix:",
     opts: [
-      "Crea un nuovo processo figlio copia di quello padre",
-      "Cancella un processo",
-      "Aumenta la RAM",
-      "Chiude la connessione di rete"
+      "Crea un nuovo processo figlio, copia di quello padre",
+      "Sostituisce il programma del processo corrente con un altro",
+      "Crea un nuovo thread che condivide la memoria del processo"
     ],
     correct: [0],
     exp: "fork() genera un nuovo processo (figlio) quasi identico al padre, con un proprio PID e spazio di memoria. È il meccanismo classico Unix per creare nuovi processi."
@@ -1173,9 +1076,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Un firewall 'stateful' rispetto a uno 'stateless':",
     opts: [
       "Tiene traccia dello stato delle connessioni per decidere cosa permettere",
-      "Non controlla mai pacchetti o stato delle connessioni",
-      "È sempre meno sicuro indipendentemente dalle regole configurate",
-      "Funziona solo in reti isolate senza accesso a Internet"
+      "Valuta ogni pacchetto isolatamente in base a regole fisse e statiche",
+      "Cifra tutte le connessioni consentite tra il client e il server"
     ],
     correct: [0],
     exp: "Il firewall stateful conosce il contesto delle connessioni (es. una risposta a una richiesta legittima viene ammessa), offrendo controllo più fine dello stateless, che valuta ogni pacchetto isolatamente."
@@ -1185,9 +1087,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "La 'live migration' di una VM consiste nel:",
     opts: [
       "Spostare una VM in esecuzione su un altro host senza interromperla",
-      "Cancellare la VM e ricrearla da zero",
-      "Convertire la VM in un file di testo",
-      "Spegnere l'host fisico"
+      "Salvare lo stato della VM per poterlo ripristinare più avanti",
+      "Convertire una macchina virtuale in un container più leggero"
     ],
     correct: [0],
     exp: "La live migration trasferisce una VM attiva da un server fisico a un altro senza fermare i servizi: utile per manutenzione hardware, bilanciamento del carico e alta disponibilità."
@@ -1197,9 +1098,8 @@ registerSubject("SO Reti Virtualizzazione", [
     q: "Le estensioni hardware come Intel VT-x o AMD-V servono a:",
     opts: [
       "Supportare in modo efficiente la virtualizzazione a livello di CPU",
-      "Aumentare la frequenza di clock del processore",
-      "Gestire il raffreddamento della CPU sotto carico",
-      "Ampliare la memoria cache di primo livello"
+      "Aumentare la frequenza di clock del processore quando è sotto carico",
+      "Cifrare via hardware i dati che transitano nella memoria RAM"
     ],
     correct: [0],
     exp: "VT-x (Intel) e AMD-V sono estensioni del processore che rendono la virtualizzazione più efficiente, permettendo alle VM di eseguire istruzioni con minor overhead. Sono spesso da abilitare nel BIOS/UEFI."
