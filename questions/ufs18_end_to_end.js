@@ -97,7 +97,7 @@ registerSubject("End-to-end Data Analysis", [
     q: "Perche' il ciclo end-to-end non e' lineare una volta per tutte?",
     opts: [
       "La comunicazione elimina ogni nuova analisi",
-      "La raccolta dati avviene sempre alla fine",
+      "La raccolta dati avviene alla fine",
       "Gli insight generano nuove domande e fasi precedenti"
     ],
     correct: [2],
@@ -141,7 +141,7 @@ registerSubject("End-to-end Data Analysis", [
     q: "Perche' conoscere l'audience e' importante nella data story?",
     opts: [
       "Per scegliere messaggi e metriche rilevanti",
-      "Per mostrare sempre tutti i KPI disponibili",
+      "Per mostrare tutti i KPI disponibili",
       "Per usare lo stesso racconto con chiunque"
     ],
     correct: [0],
@@ -208,7 +208,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Può rompersi se cambia la struttura del sito",
       "Perche' produce solo dati numerici",
-      "Perche' ignora sempre il DOM"
+      "Perche' ignora il DOM"
     ],
     correct: [0],
     exp: "I selettori CSS dipendono dalla struttura HTML. Se classi, nodi o layout cambiano, il codice puo' non trovare piu' gli elementi attesi."
@@ -229,7 +229,7 @@ registerSubject("End-to-end Data Analysis", [
     q: "Nel codice di scraping, user agent e header servono a:",
     opts: [
       "Eliminare il bisogno di selettori",
-      "Nascondere sempre l'identita' del codice",
+      "Nascondere l'identita' del codice",
       "Presentare la richiesta al server in modo trasparente"
     ],
     correct: [2],
@@ -318,7 +318,7 @@ registerSubject("End-to-end Data Analysis", [
     opts: [
       "Per evitare di pulire i testi",
       "Per lavorare su una copia riproducibile dei dati",
-      "Per sostituire sempre l'API"
+      "Per sostituire l'API"
     ],
     correct: [1],
     exp: "Salvare una pagina consente di ispezionare la stessa versione mentre si costruisce il parser, riducendo dipendenza da cambiamenti immediati del sito."
@@ -339,8 +339,8 @@ registerSubject("End-to-end Data Analysis", [
     q: "Perche' i testi sono difficili da analizzare automaticamente?",
     opts: [
       "Sono liberi e poco strutturati",
-      "Sono sempre gia' numerici",
-      "Hanno sempre schema fisso"
+      "Sono gia' numerici",
+      "Hanno schema fisso"
     ],
     correct: [0],
     exp: "Il linguaggio naturale include sinonimi, maiuscole, errori, abbreviazioni e forme diverse: va pulito e standardizzato prima dell'analisi."
@@ -360,7 +360,7 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18033", topic: "Case sensitivity",
     q: "R e' case-sensitive: questo significa che:",
     opts: [
-      "Gli accenti vengono sempre corretti",
+      "Gli accenti vengono corretti",
       "Tutti i testi diventano minuscoli automaticamente",
       "Maiuscole e minuscole possono essere trattate come valori diversi"
     ],
@@ -559,7 +559,7 @@ registerSubject("End-to-end Data Analysis", [
     q: "Quando importi un CSV con accenti corrotti, una soluzione corretta e':",
     opts: [
       "Rimuovere tutte le righe accentate",
-      "Applicare sempre dfm_trim()",
+      "Applicare dfm_trim",
       "Rileggere il file specificando fileEncoding appropriato"
     ],
     correct: [2],
@@ -768,7 +768,7 @@ registerSubject("End-to-end Data Analysis", [
     q: "topfeatures(dfm1, 10) restituisce:",
     opts: [
       "Le parole piu' frequenti nella DFM",
-      "I documenti piu' lunghi sempre",
+      "I documenti piu' lunghi",
       "Le righe duplicate del dataset"
     ],
     correct: [0],
@@ -834,8 +834,8 @@ registerSubject("End-to-end Data Analysis", [
     q: "Per riconoscere un insight non basta guardare i numeri perche':",
     opts: [
       "Serve collegare pattern, contesto e implicazioni",
-      "I numeri sono sempre sbagliati",
-      "Il contesto va sempre eliminato"
+      "I numeri sono sbagliati",
+      "Il contesto va eliminato"
     ],
     correct: [0],
     exp: "Un insight nasce dal significato del pattern: bisogna chiedersi perche' accade, per chi conta e che cosa implica."
@@ -877,7 +877,7 @@ registerSubject("End-to-end Data Analysis", [
     id: "u18080", topic: "Insight anomalie",
     q: "Un outlier in una data story puo' essere utile per:",
     opts: [
-      "Dimostrare sempre un errore di codice",
+      "Dimostrare un errore di codice",
       "Individuare casi critici o buone pratiche da approfondire",
       "Eliminare ogni confronto"
     ],
@@ -900,8 +900,8 @@ registerSubject("End-to-end Data Analysis", [
     q: "Differenza tra informare e comunicare nel data storytelling:",
     opts: [
       "Comunicare porta significato e direzione all'audience",
-      "Informare e comunicare sono sempre identici",
-      "Informare richiede sempre meno precisione"
+      "Informare e comunicare sono identici",
+      "Informare richiede meno precisione"
     ],
     correct: [0],
     exp: "Dire un numero e' informazione; spiegare cosa significa per un obiettivo e che azione suggerisce e' comunicazione."

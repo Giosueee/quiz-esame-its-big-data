@@ -139,7 +139,7 @@ registerSubject("Data Pipelines", [
     id: "u12013", topic: "ETL vs ELT",
     q: "Nell'ELT rispetto all'ETL:",
     opts: [
-      "Trasformare sempre prima del caricamento come nell'ETL classico",
+      "Trasformare prima del caricamento come nell'ETL classico",
       "Si caricano prima i dati grezzi e si trasformano dopo, nel warehouse",
       "Non caricare mai dati nel warehouse o nel lake"
     ],
@@ -151,7 +151,7 @@ registerSubject("Data Pipelines", [
     q: "L'elaborazione batch differisce dallo streaming perché:",
     opts: [
       "Lo streaming processa a blocchi",
-      "Il batch è sempre in tempo reale",
+      "Il batch è in tempo reale",
       "Il batch processa dati a blocchi periodici; lo streaming in continuo, in tempo reale"
     ],
     correct: [2],
@@ -240,7 +240,7 @@ registerSubject("Data Pipelines", [
     opts: [
       "Costruire solo data mart separati senza warehouse centrale",
       "Un data warehouse centrale normalizzato come fonte unica",
-      "Eliminare completamente i processi ETL dal data warehouse"
+      "Eliminare i processi ETL dal data warehouse"
     ],
     correct: [1],
     exp: "Inmon propone un Corporate Information Factory: un DW centrale in terza forma normale, da cui si derivano data mart dimensionali. Approccio top-down, robusto ma più lungo da realizzare."
@@ -283,7 +283,7 @@ registerSubject("Data Pipelines", [
     q: "Un caricamento incrementale rispetto al full load:",
     opts: [
       "Elimina i dati sorgente invece di conservarli o trasformarli",
-      "Ricarica sempre tutto",
+      "Ricarica tutto",
       "Elabora solo i dati nuovi/modificati, riducendo tempi e costi"
     ],
     correct: [2],
@@ -382,7 +382,7 @@ registerSubject("Data Pipelines", [
     q: "Un modo per rendere idempotente un caricamento è:",
     opts: [
       "Cancellare tutto ogni volta a caso",
-      "Aggiungere sempre nuove righe",
+      "Aggiungere nuove righe",
       "Sostituire/sovrascrivere la partizione della data invece di accodare sempre"
     ],
     correct: [2],
@@ -514,7 +514,7 @@ registerSubject("Data Pipelines", [
     q: "Nell'ELT, spostare la trasformazione nel data warehouse permette di:",
     opts: [
       "Eliminare la necessità di estrarre i dati dalle sorgenti",
-      "Evitare del tutto qualsiasi trasformazione dei dati",
+      "Evitare qualsiasi trasformazione dei dati",
       "Sfruttare la potenza di calcolo del DW e usare SQL/dbt versionato"
     ],
     correct: [2],
@@ -535,7 +535,7 @@ registerSubject("Data Pipelines", [
     id: "u12049", topic: "Costi cloud",
     q: "Ottimizzare una pipeline in cloud spesso significa:",
     opts: [
-      "Elaborare sempre l'intero dataset a ogni esecuzione",
+      "Elaborare l'intero dataset a ogni esecuzione",
       "Ridurre dati elaborati inutilmente e usare caricamenti incrementali",
       "Disattivare il monitoraggio per risparmiare risorse"
     ],
@@ -766,7 +766,7 @@ registerSubject("Data Pipelines", [
     id: "u12070", topic: "Idempotenza vs append",
     q: "Un task che fa solo 'append' dei dati a ogni run:",
     opts: [
-      "È sempre idempotente",
+      "È idempotente",
       "Rischia duplicati se rieseguito: non è idempotente di per sé",
       "Elimina i dati sorgente invece di conservarli o trasformarli"
     ],
@@ -844,7 +844,7 @@ registerSubject("Data Pipelines", [
     q: "Trattare i dati/pipeline 'come un prodotto' significa:",
     opts: [
       "Aumentare il numero di run senza alcun monitoraggio",
-      "Ignorare completamente chi consuma i dati a valle",
+      "Ignorare chi consuma i dati a valle",
       "Curarne qualità, affidabilità, documentazione e i bisogni degli utenti"
     ],
     correct: [2],
@@ -855,7 +855,7 @@ registerSubject("Data Pipelines", [
     q: "Il branching in una pipeline permette di:",
     opts: [
       "Eseguire percorsi diversi in base a una condizione",
-      "Eseguire sempre tutti i task senza eccezioni",
+      "Eseguire tutti i task senza eccezioni",
       "Aumentare il numero di retry dei task"
     ],
     correct: [0],
@@ -909,7 +909,7 @@ registerSubject("Data Pipelines", [
     id: "u12083", topic: "Ordine di caricamento",
     q: "Perché caricare le dimensioni prima dei fatti?",
     opts: [
-      "Perché i fatti vanno sempre cancellati dopo le dimensioni",
+      "Perché i fatti vanno cancellati dopo le dimensioni",
       "Perché le dimensioni occupano più spazio dei fatti",
       "Perché i fatti referenziano le chiavi delle dimensioni, che devono già esistere"
     ],
@@ -1030,7 +1030,7 @@ registerSubject("Data Pipelines", [
     id: "u12094", topic: "Auditing",
     q: "Registrare metriche di audit (righe lette/scritte, scarti) per ogni run serve a:",
     opts: [
-      "Sostituire completamente i log dettagliati dei task",
+      "Sostituire i log dettagliati dei task",
       "Verificare che i dati siano stati processati correttamente e riconciliarli",
       "Ridurre il numero di utenti che accedono ai dati"
     ],
@@ -1086,7 +1086,7 @@ registerSubject("Data Pipelines", [
     q: "Per gestire molti DAG e task, l'orchestratore può:",
     opts: [
       "Distribuire l'esecuzione su più worker in parallelo",
-      "Eseguire tutto su un solo processo sempre",
+      "Eseguire tutto su un solo processo",
       "Cancellare i DAG"
     ],
     correct: [0],

@@ -20,7 +20,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Una copia esatta dell'ipotesi nulla espressa con altre parole",
       "L'affermazione che si vuole sostenere, contraria all'ipotesi nulla",
-      "L'ipotesi che viene sempre accettata a prescindere dai dati"
+      "L'ipotesi che viene accettata dai dati"
     ],
     correct: [1],
     exp: "H1 è ciò che si vuole dimostrare (es. 'c'è un effetto/differenza') ed è complementare a H0. Se i dati sono abbastanza forti da rifiutare H0, si conclude a favore di H1."
@@ -53,7 +53,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Il p-value è maggiore del livello di significatività α",
       "Il p-value è minore o uguale al livello di significatività α",
-      "Il p-value è esattamente uguale a 1 in ogni caso"
+      "Il p-value è esattamente uguale a 1"
     ],
     correct: [1],
     exp: "Se p ≤ α si rifiuta H0 (risultato 'statisticamente significativo'); se p > α non si rifiuta. Es: con α=0,05 e p=0,02 si rifiuta H0."
@@ -150,7 +150,7 @@ registerSubject("Modelli Statistici", [
     id: "u07014", topic: "Distribuzione t",
     q: "La distribuzione t di Student, rispetto alla normale standard, ha:",
     opts: [
-      "Una forma completamente asimmetrica verso destra",
+      "Una forma asimmetrica verso destra",
       "Code più pesanti, soprattutto con pochi gradi di libertà",
       "Nessuna relazione con la distribuzione normale"
     ],
@@ -305,7 +305,7 @@ registerSubject("Modelli Statistici", [
     q: "Un risultato 'statisticamente significativo' è sempre importante nella pratica?",
     opts: [
       "No: con n grande anche effetti minuscoli sono significativi",
-      "Sì, significativo e importante sono sempre sinonimi",
+      "Sì, significativo e importante sono sinonimi",
       "No, perché la significatività statistica non esiste davvero"
     ],
     correct: [0],
@@ -317,7 +317,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Sì, non rifiutare H0 la dimostra definitivamente",
       "No: solo prove insufficienti contro H0, non che sia vera",
-      "No, perché H0 va sempre rifiutata in ogni test"
+      "No, perché H0 va rifiutata in ogni test"
     ],
     correct: [1],
     exp: "'Assenza di prova non è prova di assenza': non rifiutare H0 vuol dire solo che i dati non bastano a smentirla, magari per campione piccolo o test poco potente. Non la si 'accetta' come vera."
@@ -381,7 +381,7 @@ registerSubject("Modelli Statistici", [
     id: "u07035", topic: "Test appaiato",
     q: "Un test t per campioni appaiati (paired) è indicato quando:",
     opts: [
-      "Si confrontano due gruppi di persone completamente diversi",
+      "Si confrontano due gruppi di persone diversi",
       "Si misurano le STESSE unità in due condizioni",
       "Si vogliono confrontare più di due gruppi insieme"
     ],
@@ -404,7 +404,7 @@ registerSubject("Modelli Statistici", [
     q: "Aggiungere sempre più variabili a un modello di regressione:",
     opts: [
       "Aumenta R² sui dati, ma rischia overfitting",
-      "Riduce sempre l'errore su nuovi dati mai visti",
+      "Riduce l'errore su nuovi dati mai visti",
       "Rende il modello automaticamente causale"
     ],
     correct: [0],
@@ -503,7 +503,7 @@ registerSubject("Modelli Statistici", [
     q: "Qual è la differenza tra stima puntuale e stima intervallare?",
     opts: [
       "La puntuale dà un valore, l'intervallare un range di confidenza",
-      "La puntuale è sempre esatta, l'intervallare sempre sbagliata",
+      "La puntuale è esatta, l'intervallare sbagliata",
       "Non c'è differenza, sono due nomi per la stessa stima"
     ],
     correct: [0],
@@ -570,7 +570,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Aumenta la probabilità dell'altro tipo di errore",
       "Riduce entrambi gli errori contemporaneamente",
-      "Elimina del tutto l'incertezza del test"
+      "Elimina l'incertezza del test"
     ],
     correct: [0],
     exp: "Esiste un trade-off tra errore di tipo I (α) e di tipo II (β): stringere uno tende ad allargare l'altro. L'unico modo per ridurli entrambi è aumentare la numerosità del campione."
@@ -591,7 +591,7 @@ registerSubject("Modelli Statistici", [
     q: "Usare un modello lineare per prevedere valori di X molto fuori dal range dei dati osservati è:",
     opts: [
       "Impossibile, la formula non si può calcolare",
-      "Sempre sicuro, perché la retta è definita ovunque",
+      "sicuro, perché la retta è definita ovunque",
       "Rischioso: è un'estrapolazione fuori dall'intervallo osservato"
     ],
     correct: [2],
@@ -602,7 +602,7 @@ registerSubject("Modelli Statistici", [
     q: "La media campionaria è uno stimatore corretto della media della popolazione perché:",
     opts: [
       "Il suo valore atteso coincide con la media della popolazione",
-      "Restituisce sempre esattamente la media della popolazione",
+      "Restituisce esattamente la media della popolazione",
       "È uguale alla mediana in ogni campione"
     ],
     correct: [0],
@@ -689,7 +689,7 @@ registerSubject("Modelli Statistici", [
     id: "u07063", topic: "t-test",
     q: "Con un campione molto grande, la distribuzione t:",
     opts: [
-      "Si allontana sempre più dalla normale",
+      "Si allontana più dalla normale",
       "Diventa fortemente asimmetrica",
       "Tende a coincidere con la normale standard"
     ],
@@ -722,7 +722,7 @@ registerSubject("Modelli Statistici", [
     id: "u07066", topic: "Confidenza",
     q: "Un intervallo di confidenza al 99% rispetto a uno al 95%, a parità di dati, è:",
     opts: [
-      "Sempre centrato su un valore più alto",
+      "centrato su un valore più alto",
       "Più stretto, perché più preciso",
       "Più ampio: serve più sicurezza di contenere il parametro"
     ],
@@ -744,7 +744,7 @@ registerSubject("Modelli Statistici", [
     id: "u07068", topic: "Campionamento",
     q: "Un campione non rappresentativo produce:",
     opts: [
-      "Sempre stime perfette del parametro",
+      "stime perfette del parametro",
       "Stime distorte che non riflettono la vera popolazione",
       "Un p-value automaticamente uguale a zero"
     ],
@@ -756,7 +756,7 @@ registerSubject("Modelli Statistici", [
     q: "La regressione logistica si usa quando la variabile dipendente è:",
     opts: [
       "Una data del calendario",
-      "Sempre normalmente distribuita",
+      "normalmente distribuita",
       "Categorica binaria"
     ],
     correct: [2],
@@ -812,7 +812,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Sì, dimostra con certezza l'assenza di effetto",
       "No: potrebbe esserci un effetto reale non rilevato per scarsa potenza",
-      "No, perché i campioni piccoli danno sempre risultati significativi"
+      "No, perché i campioni piccoli danno risultati significativi"
     ],
     correct: [1],
     exp: "Un campione piccolo ha bassa potenza: può non rilevare un effetto reale (falso negativo). 'Non significativo' non equivale a 'nessun effetto': serve un campione adeguato per concludere."
@@ -854,7 +854,7 @@ registerSubject("Modelli Statistici", [
     id: "u07078", topic: "Distribuzione normale",
     q: "Nell'inferenza, il teorema del limite centrale è importante perché:",
     opts: [
-      "Garantisce che il p-value sia sempre piccolo",
+      "Garantisce che il p-value sia piccolo",
       "Rende tutti i dati grezzi perfettamente normali",
       "Rende la media campionaria normale anche con dati non normali"
     ],
@@ -911,7 +911,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Si ricava dai dati una volta calcolato il p-value",
       "Il ricercatore, PRIMA di analizzare i dati",
-      "È sempre e comunque fissato per legge a 0,05"
+      "È e comunque fissato per legge a 0,05"
     ],
     correct: [1],
     exp: "α è deciso a priori dal ricercatore in base al contesto (0,05 è comune, ma in ambito medico può essere 0,01). Sceglierlo dopo aver visto i dati invaliderebbe il test."
@@ -942,7 +942,7 @@ registerSubject("Modelli Statistici", [
     id: "u07086", topic: "Interpretazione",
     q: "'la differenza è significativa' vuol dire che è grande?",
     opts: [
-      "Sì, significativo vuol sempre dire grande",
+      "Sì, significativo vuol dire grande",
       "No: solo difficilmente attribuibile al caso, non grande",
       "No, significa che la differenza è nulla"
     ],
@@ -987,7 +987,7 @@ registerSubject("Modelli Statistici", [
     q: "Il principio di parsimonia (rasoio di Occam) nella modellazione suggerisce di:",
     opts: [
       "Scegliere il modello con R² più alto a ogni costo",
-      "Aggiungere sempre il maggior numero possibile di variabili",
+      "Aggiungere il maggior numero possibile di variabili",
       "Preferire, a parità di prestazioni, il modello più semplice"
     ],
     correct: [2],
@@ -1019,8 +1019,8 @@ registerSubject("Modelli Statistici", [
     id: "u07093", topic: "Outlier in regressione",
     q: "Un punto molto influente (leverage alto) in una regressione:",
     opts: [
-      "Coincide sempre con la media dei dati",
-      "È sempre da mantenere senza verifiche",
+      "Coincide con la media dei dati",
+      "È da mantenere senza verifiche",
       "Può spostare in modo marcato la retta stimata da solo"
     ],
     correct: [2],
@@ -1032,7 +1032,7 @@ registerSubject("Modelli Statistici", [
     opts: [
       "Regge bene anche se le assunzioni sono lievemente violate",
       "Non richiede alcun dato per funzionare",
-      "Dà sempre risultato significativo"
+      "Dà risultato significativo"
     ],
     correct: [0],
     exp: "La robustezza è la capacità di un test di dare risultati validi anche con moderate violazioni delle assunzioni (es. lieve non normalità). Alcuni test sono più robusti di altri a certe deviazioni."

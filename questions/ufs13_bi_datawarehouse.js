@@ -73,7 +73,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13007", topic: "Schema a fiocco",
     q: "Lo schema a fiocco di neve (snowflake) differisce dallo star perché:",
     opts: [
-      "È sempre più veloce dello star grazie a un numero minore di join",
+      "È più veloce dello star grazie a un numero minore di join",
       "Non esiste una tabella dei fatti al centro dello schema",
       "Le dimensioni sono normalizzate in più tabelle collegate"
     ],
@@ -337,7 +337,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13031", topic: "OLAP operazioni",
     q: "L'operazione OLAP di 'slice' consiste nel:",
     opts: [
-      "Eliminare completamente una dimensione dall'analisi del cubo",
+      "Eliminare una dimensione dall'analisi del cubo",
       "Aggregare i dati salendo a un livello di dettaglio superiore",
       "Fissare il valore di una dimensione per estrarne una fetta"
     ],
@@ -724,7 +724,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "La metrica è legata a un obiettivo strategico; il KPI è una misura qualsiasi",
       "Il KPI è una metrica LEGATA a un obiettivo strategico; non tutte le metriche sono KPI",
-      "La metrica è sempre più importante e strategica del KPI"
+      "La metrica è più importante e strategica del KPI"
     ],
     correct: [1],
     exp: "Una metrica è qualunque valore misurabile; il KPI è una metrica selezionata perché critica per un obiettivo (es. il tasso di abbandono per l'obiettivo di retention). Pochi KPI, molte metriche."
@@ -734,7 +734,7 @@ registerSubject("BI e Data Warehouse", [
     q: "Fare la 'media delle medie' su gruppi di dimensione diversa:",
     opts: [
       "Non è mai un problema perché le medie si sommano tra loro",
-      "Dà sempre il risultato corretto indipendentemente dai gruppi",
+      "Dà il risultato corretto indipendentemente dai gruppi",
       "Può dare un risultato errato: serve ponderare per la numerosità"
     ],
     correct: [2],
@@ -778,7 +778,7 @@ registerSubject("BI e Data Warehouse", [
     q: "Il 'DirectQuery' in Power BI (rispetto all'import):",
     opts: [
       "Interroga la sorgente in tempo reale senza importare i dati",
-      "Copia sempre tutti i dati della sorgente dentro il modello",
+      "Copia tutti i dati della sorgente dentro il modello",
       "Trasforma i dati prima di mostrarli, come fa Power Query"
     ],
     correct: [0],
@@ -799,7 +799,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13073", topic: "Trasformazioni comuni",
     q: "Tra le trasformazioni ETL più comuni c'è:",
     opts: [
-      "Nessuna trasformazione: i dati passano del tutto invariati",
+      "Nessuna trasformazione: i dati passano invariati",
       "La semplice copia dei file senza applicare alcuna modifica",
       "Pulizia, deduplicazione, join e standardizzazione dei valori"
     ],
@@ -844,7 +844,7 @@ registerSubject("BI e Data Warehouse", [
     q: "Un model 'incremental' in dbt:",
     opts: [
       "Aggiorna solo i record nuovi/modificati invece di ricostruire tutto",
-      "Ricostruisce sempre da capo l'intera tabella a ogni esecuzione",
+      "Ricostruisce da capo l'intera tabella a ogni esecuzione",
       "Genera automaticamente i grafici a partire dai risultati"
     ],
     correct: [0],
@@ -866,7 +866,7 @@ registerSubject("BI e Data Warehouse", [
     q: "Perché non usare la chiave naturale (es. codice cliente) come chiave della dimensione?",
     opts: [
       "Occupa molto meno spazio su disco rispetto alla surrogata",
-      "È sempre più veloce da usare rispetto a una chiave surrogata",
+      "È più veloce da usare rispetto a una chiave surrogata",
       "Può cambiare o essere riusata: la surrogata garantisce stabilità e supporta lo storico"
     ],
     correct: [2],
@@ -931,7 +931,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13085", topic: "Trasformazione vs caricamento",
     q: "Nell'ELT moderno, la trasformazione avviene:",
     opts: [
-      "Non avviene mai: i dati restano sempre allo stato grezzo",
+      "Non avviene mai: i dati restano allo stato grezzo",
       "Fuori dal warehouse, prima di caricare i dati al suo interno",
       "Dentro il data warehouse dopo il caricamento dei dati grezzi"
     ],
@@ -1043,7 +1043,7 @@ registerSubject("BI e Data Warehouse", [
     opts: [
       "Non additiva: non si somma tra i gruppi, va ricalcolata dai totali",
       "Additiva come i ricavi: si somma liberamente tra i gruppi",
-      "Una costante che resta sempre uguale in ogni gruppo"
+      "Una costante che resta uguale in ogni gruppo"
     ],
     correct: [0],
     exp: "I rapporti/percentuali non sono additivi: sommare i margini % dei gruppi è sbagliato. Vanno ricalcolati dai totali di ricavi e costi. Errore frequente nei report."
@@ -1052,7 +1052,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13096", topic: "Scelta del visual",
     q: "Usare troppi colori e grafici in una dashboard:",
     opts: [
-      "Migliora sempre la comprensione dei dati da parte dell'utente",
+      "Migliora la comprensione dei dati da parte dell'utente",
       "Riduce la leggibilità e distrae dai messaggi chiave",
       "Non ha alcun effetto sulla qualità della comunicazione"
     ],
@@ -1085,7 +1085,7 @@ registerSubject("BI e Data Warehouse", [
     id: "u13099", topic: "Valore della BI",
     q: "L'obiettivo finale della BI è:",
     opts: [
-      "Sostituire completamente i manager nelle decisioni aziendali",
+      "Sostituire i manager nelle decisioni aziendali",
       "Supportare decisioni migliori basate sui dati",
       "Archiviare in modo sicuro tutti i dati storici dell'azienda"
     ],

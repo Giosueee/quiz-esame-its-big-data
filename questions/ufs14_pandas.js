@@ -30,7 +30,7 @@ registerSubject("Pandas", [
     q: "Quale funzione legge un CSV in un DataFrame?",
     opts: [
       "pd.open()",
-      "pd.import_csv()",
+      "pd.import_csv",
       "pd.read_csv()"
     ],
     correct: [2],
@@ -86,7 +86,7 @@ registerSubject("Pandas", [
     opts: [
       "Hanno comportamento e risultato identici nello stesso contesto operativo",
       ".loc usa etichette, .iloc usa posizioni intere",
-      ".iloc usa etichette e .loc posizioni, invertendo i due metodi"
+      ".iloc usa etichette e.loc posizioni, invertendo i due metodi"
     ],
     correct: [1],
     exp: ".loc seleziona per ETICHETTA (nome indice/colonna), .iloc per POSIZIONE numerica (0,1,2...). Es: df.loc[0,'eta'] vs df.iloc[0,2]."
@@ -183,7 +183,7 @@ registerSubject("Pandas", [
     id: "u14017", topic: "Valori mancanti",
     q: "df.dropna() di default:",
     opts: [
-      "Elimina le colonne sempre",
+      "Elimina le colonne",
       "Elimina le righe che contengono almeno un valore mancante",
       "Lascia invariati i valori mancanti senza rimuovere righe o colonne"
     ],
@@ -404,7 +404,7 @@ registerSubject("Pandas", [
     q: "Perché in pandas si preferiscono operazioni vettorializzate ai cicli for?",
     opts: [
       "Sono molto più veloci e concise",
-      "Sono sempre errate anche quando rispettano tipi, indice e contesto",
+      "Sono errate anche quando rispettano tipi, indice e contesto",
       "I cicli non esistono"
     ],
     correct: [0],
@@ -900,7 +900,7 @@ registerSubject("Pandas", [
     opts: [
       "Dare un nome all'indice",
       "Ordinare le etichette dell'indice",
-      "Rimuovere del tutto l'indice"
+      "Rimuovere l'indice"
     ],
     correct: [0],
     exp: "rename_axis assegna un nome all'asse dell'indice (o delle colonne): utile per chiarezza e dopo groupby, quando l'indice ha un significato."
@@ -1032,7 +1032,7 @@ registerSubject("Pandas", [
     opts: [
       "Filtrare tenendo df[df['eta']>=0]",
       "Usare df.columns",
-      "Usare df.head()"
+      "Usare df.head"
     ],
     correct: [0],
     exp: "Non c'è bisogno di 'cancellare': si ricrea il DataFrame filtrando le righe valide, es. df = df[df['eta']>=0]. È l'approccio idiomatico in pandas."
@@ -1043,7 +1043,7 @@ registerSubject("Pandas", [
     opts: [
       "È più veloce perché evita controlli sull'indice e sulle copie intermedie",
       "Il chained indexing può agire su una copia, non modificando l'originale",
-      "Fallisce sempre, anche quando la selezione produce un oggetto valido"
+      "Fallisce, anche quando la selezione produce un oggetto valido"
     ],
     correct: [1],
     exp: "Il doppio indexing 'a catena' può restituire una copia temporanea: l'assegnazione potrebbe non avere effetto. Si usa invece df.loc[df.a>0, 'b'] = 1, sicuro e chiaro."

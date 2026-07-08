@@ -53,7 +53,7 @@ registerSubject("Statistica", [
     q: "Aggiungendo a un campione un nuovo dato pari esattamente alla media attuale, la media:",
     opts: [
       "Resta invariata, perché il nuovo valore coincide con la media stessa",
-      "Aumenta sempre, perché cresce il numero di osservazioni del campione",
+      "Aumenta, perché cresce il numero di osservazioni del campione",
       "Diventa uguale alla mediana del nuovo insieme di dati"
     ],
     correct: [0],
@@ -197,7 +197,7 @@ registerSubject("Statistica", [
     opts: [
       "È il valore che compare nel 25% dei casi come modalità",
       "È il valore sotto il quale si trova il 25% delle osservazioni",
-      "Corrisponde sempre a un quarto del valore massimo"
+      "Corrisponde a un quarto del valore massimo"
     ],
     correct: [1],
     exp: "Il p-esimo percentile è il valore sotto cui cade il p% delle osservazioni. Il 25° percentile coincide con il primo quartile Q1; il 50° con la mediana; il 75° con Q3."
@@ -263,7 +263,7 @@ registerSubject("Statistica", [
     opts: [
       "Il verificarsi di uno non cambia la probabilità dell'altro",
       "Non possono verificarsi entrambi contemporaneamente: P = 0",
-      "Hanno sempre la stessa identica probabilità di verificarsi"
+      "Hanno la stessa identica probabilità di verificarsi"
     ],
     correct: [1],
     exp: "Eventi incompatibili non possono accadere insieme: la loro intersezione è vuota, P(A∩B)=0. Attenzione: incompatibile NON significa indipendente (anzi, due eventi incompatibili con prob. positiva sono dipendenti)."
@@ -272,7 +272,7 @@ registerSubject("Statistica", [
     id: "u06025", topic: "Eventi indipendenti",
     q: "Due eventi A e B sono indipendenti quando:",
     opts: [
-      "La somma delle loro probabilità è sempre uguale a 1",
+      "La somma delle loro probabilità è uguale a 1",
       "Non possono mai verificarsi contemporaneamente nello stesso esperimento",
       "P = P × P: il verificarsi di uno non influenza l'altro"
     ],
@@ -284,7 +284,7 @@ registerSubject("Statistica", [
     q: "Per due eventi qualsiasi A e B, P(A o B) è uguale a:",
     opts: [
       "P(A) + P(B) − P(A e B)",
-      "P(A) + P(B), sempre e in ogni caso",
+      "P(A) + P(B),",
       "P(A) × P(B) se sono incompatibili"
     ],
     correct: [0],
@@ -318,7 +318,7 @@ registerSubject("Statistica", [
     opts: [
       "No, in generale sono diverse",
       "Sì, ma solo quando i due eventi sono tra loro incompatibili",
-      "No, ma la loro somma è sempre pari esattamente a 1"
+      "No, ma la loro somma è pari esattamente a 1"
     ],
     correct: [0],
     exp: "P(A|B) ≠ P(B|A) in generale (è l'errore del 'condizionale invertito'). Il teorema di Bayes lega le due: P(A|B) = P(B|A)·P(A)/P(B). Sono uguali solo se P(A)=P(B)."
@@ -351,7 +351,7 @@ registerSubject("Statistica", [
     opts: [
       "Può assumere un numero finito o numerabile di valori distinti",
       "Può assumere qualsiasi valore reale in un intervallo continuo",
-      "Assume sempre e solo valori compresi tra 0 e 1"
+      "Assume e solo valori compresi tra 0 e 1"
     ],
     correct: [0],
     exp: "Una variabile discreta assume valori 'separati' e numerabili (es. il numero di teste in 3 lanci). Una variabile continua può assumere infiniti valori in un intervallo (es. l'altezza)."
@@ -438,7 +438,7 @@ registerSubject("Statistica", [
     q: "In una distribuzione asimmetrica con coda a destra (asimmetria positiva), di solito:",
     opts: [
       "La moda è maggiore sia della media sia della mediana",
-      "Media e mediana coincidono sempre nonostante l'asimmetria",
+      "Media e mediana coincidono nonostante l'asimmetria",
       "La media è maggiore della mediana, tirata verso i valori alti"
     ],
     correct: [2],
@@ -503,7 +503,7 @@ registerSubject("Statistica", [
     id: "u06046", topic: "Parametro e statistica",
     q: "La media calcolata su un campione è un...",
     opts: [
-      "Un valore sempre uguale alla media della popolazione",
+      "Un valore uguale alla media della popolazione",
       "Un parametro, perché descrive l'intera popolazione",
       "Una statistica, perché calcolata sui dati campionari"
     ],
@@ -569,7 +569,7 @@ registerSubject("Statistica", [
     id: "u06052", topic: "Scale di misura",
     q: "Una variabile su scala ORDINALE:",
     opts: [
-      "È sempre e comunque una variabile numerica di tipo continuo, come il peso o l'altezza",
+      "È e comunque una variabile numerica di tipo continuo, come il peso o l'altezza",
       "Ha categorie prive di qualsiasi ordine possibile tra loro, come ad esempio il colore",
       "Ha categorie ordinabili ma senza distanze numeriche significative, es. basso/medio/alto"
     ],
@@ -602,8 +602,8 @@ registerSubject("Statistica", [
     id: "u06055", topic: "Stima",
     q: "Uno stimatore si dice corretto (non distorto) quando:",
     opts: [
-      "Fornisce sempre un valore superiore al parametro reale",
-      "Restituisce sempre lo stesso valore in ogni campione",
+      "Fornisce un valore superiore al parametro reale",
+      "Restituisce lo stesso valore in ogni campione",
       "Il valore atteso coincide col parametro da stimare"
     ],
     correct: [2],
@@ -944,7 +944,7 @@ registerSubject("Statistica", [
     q: "La moda è sempre unica?",
     opts: [
       "No: può essere bimodale, plurimodale, oppure non avere alcuna moda",
-      "Sì, ogni distribuzione possiede sempre esattamente una sola moda",
+      "Sì, ogni distribuzione possiede esattamente una sola moda",
       "No, ma soltanto quando si tratta di variabili di tipo continuo"
     ],
     correct: [0],

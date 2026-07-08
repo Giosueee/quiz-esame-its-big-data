@@ -74,7 +74,7 @@ registerSubject("NLP e LLM", [
     id: "u19007", topic: "Tokenizzazione caratteri",
     q: "Un vantaggio della tokenizzazione a caratteri e':",
     opts: [
-      "Cattura sempre bene la semantica",
+      "Cattura bene la semantica",
       "Ha un vocabolario piccolo e semplice",
       "Produce sequenze molto corte"
     ],
@@ -109,7 +109,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Aumentare volutamente il rumore",
       "Ridurre varianti superficiali e carico computazionale",
-      "Rimuovere tutti i nomi propri sempre"
+      "Rimuovere tutti i nomi propri"
     ],
     correct: [1],
     exp: "Lowercase, rimozione doppi spazi, accenti o normalizzazione Unicode possono rendere il testo piu' coerente. Va pero' evitata perdita di informazione utile."
@@ -119,7 +119,7 @@ registerSubject("NLP e LLM", [
     q: "Quale rischio ha una normalizzazione troppo aggressiva?",
     opts: [
       "Rendere impossibile la tokenizzazione",
-      "Aumentare sempre la precisione",
+      "Aumentare la precisione",
       "Perdere informazioni come le differenze semantiche"
     ],
     correct: [2],
@@ -185,7 +185,7 @@ registerSubject("NLP e LLM", [
     q: "Differenza corretta tra stemming e lemmatizzazione:",
     opts: [
       "Lo stemming usa transformer",
-      "La lemmatizzazione elimina sempre il contesto",
+      "La lemmatizzazione elimina il contesto",
       "Stemming grezzo; lemmatizzazione linguistica"
     ],
     correct: [2],
@@ -217,8 +217,8 @@ registerSubject("NLP e LLM", [
     id: "u19020", topic: "PoS Tagging",
     q: "Perche' il contesto e' importante nel PoS tagging?",
     opts: [
-      "Il contesto va rimosso sempre",
-      "Ogni parola ha sempre un solo ruolo",
+      "Il contesto va rimosso",
+      "Ogni parola ha un solo ruolo",
       "La stessa forma puo' avere ruoli diversi, come nome o verbo"
     ],
     correct: [2],
@@ -241,7 +241,7 @@ registerSubject("NLP e LLM", [
     opts: [
       "Mangiare -> DATE",
       "Milano -> LOC",
-      "42 -> PERSON sempre"
+      "42 -> PERSON"
     ],
     correct: [1],
     exp: "Milano e' tipicamente un luogo. Le altre associazioni sono errate o non valide senza contesto specifico."
@@ -262,7 +262,7 @@ registerSubject("NLP e LLM", [
     q: "Un n-gramma e':",
     opts: [
       "Una sequenza di n token consecutivi",
-      "Una parola sempre rara",
+      "Una parola rara",
       "Una rete neurale ricorrente"
     ],
     correct: [0],
@@ -361,7 +361,7 @@ registerSubject("NLP e LLM", [
     q: "Per usare testi in un modello ML tradizionale occorre:",
     opts: [
       "Trasformarli in rappresentazioni numeriche come BoW o TF-IDF",
-      "Lasciarli sempre come HTML grezzo",
+      "Lasciarli come HTML grezzo",
       "Usare solo immagini"
     ],
     correct: [0],
@@ -416,7 +416,7 @@ registerSubject("NLP e LLM", [
     q: "Perche' due frasi semanticamente simili possono avere embedding vicini?",
     opts: [
       "Perche' BoW conserva sinonimi automaticamente",
-      "Perche' hanno necessariamente le stesse parole",
+      "Perche' hanno le stesse parole",
       "Il modello codifica significato e contesto in uno spazio vettoriale"
     ],
     correct: [2],
@@ -493,7 +493,7 @@ registerSubject("NLP e LLM", [
     q: "Con embedding contestuali come ELMo si passa a:",
     opts: [
       "Vettori diversi per la stessa parola in contesti diversi",
-      "Un solo vettore fisso per ogni parola sempre",
+      "Un solo vettore fisso per ogni parola",
       "Rimozione completa della semantica"
     ],
     correct: [0],
@@ -592,7 +592,7 @@ registerSubject("NLP e LLM", [
     q: "Il meccanismo di attention permette al modello di:",
     opts: [
       "Pesare relazioni tra token della sequenza",
-      "Rimuovere sempre tutti i token passati",
+      "Rimuovere tutti i token passati",
       "Contare solo le vocali"
     ],
     correct: [0],
@@ -614,7 +614,7 @@ registerSubject("NLP e LLM", [
     q: "Nel Transformer, l'encoder:",
     opts: [
       "Rimuove ogni informazione di posizione",
-      "Genera sempre token futuri uno alla volta",
+      "Genera token futuri uno alla volta",
       "Trasforma la frase sorgente in rappresentazioni contestuali"
     ],
     correct: [2],
@@ -647,7 +647,7 @@ registerSubject("NLP e LLM", [
     q: "Un modello autoregressivo genera testo:",
     opts: [
       "Ordinando parole alfabeticamente",
-      "Leggendo sempre l'intera risposta futura",
+      "Leggendo l'intera risposta futura",
       "Predicendo il prossimo token dato il contesto precedente"
     ],
     correct: [2],
@@ -658,7 +658,7 @@ registerSubject("NLP e LLM", [
     q: "Uno dei vantaggi dei Transformer rispetto a modelli ricorrenti e':",
     opts: [
       "Maggiore parallelizzazione durante l'addestramento",
-      "Obbligo di processare sempre un token alla volta in training",
+      "Obbligo di processare un token alla volta in training",
       "Uso solo di regole manuali"
     ],
     correct: [0],
@@ -790,7 +790,7 @@ registerSubject("NLP e LLM", [
     q: "Un prompt e':",
     opts: [
       "Input testuale dato al modello per guidarne l'output",
-      "Un vettore BoW sempre sparso",
+      "Un vettore BoW sparso",
       "Un algoritmo di stemming"
     ],
     correct: [0],
@@ -965,7 +965,7 @@ registerSubject("NLP e LLM", [
     id: "u19088", topic: "Function calling",
     q: "Il function calling permette al modello di:",
     opts: [
-      "Accedere sempre a Internet da solo",
+      "Accedere a Internet da solo",
       "Restituire una chiamata strutturata a una funzione o API",
       "Creare un corpus quanteda prima delle analisi testuali"
     ],
@@ -988,7 +988,7 @@ registerSubject("NLP e LLM", [
     q: "Nel tool use, il modello tipicamente:",
     opts: [
       "Decide di usare un tool e ne usa il risultato",
-      "Esegue sempre codice senza ambiente",
+      "Esegue codice senza ambiente",
       "Ignora ogni funzione disponibile"
     ],
     correct: [0],
@@ -1076,7 +1076,7 @@ registerSubject("NLP e LLM", [
     q: "Differenza corretta tra prompting e fine-tuning:",
     opts: [
       "Il fine-tuning e' solo un esempio nel prompt",
-      "Il prompting richiede sempre GPU",
+      "Il prompting richiede GPU",
       "Il prompting non cambia i pesi; il fine-tuning sì"
     ],
     correct: [2],
@@ -1087,7 +1087,7 @@ registerSubject("NLP e LLM", [
     q: "Quando preferire RAG al fine-tuning?",
     opts: [
       "Quando serve conoscenza esterna aggiornata",
-      "Quando bisogna cambiare ogni peso del modello sempre",
+      "Quando bisogna cambiare ogni peso del modello",
       "Quando non esistono documenti"
     ],
     correct: [0],

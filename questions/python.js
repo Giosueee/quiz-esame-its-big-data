@@ -241,7 +241,7 @@ registerSubject("Python", [
     q: "Dato d = {'a':5,'b':10}, cosa restituisce d.get('casa', 0) ?",
     opts: [
       "0, cioè il valore di default indicato come secondo argomento",
-      "None, ignorando del tutto il secondo argomento passato",
+      "None, ignorando il secondo argomento passato",
       "Solleva un KeyError perché la chiave 'casa' non esiste"
     ],
     correct: [0],
@@ -329,7 +329,7 @@ registerSubject("Python", [
     q: "Cosa manca SEMPRE alla fine della riga di un if (o for, while, def)?",
     opts: [
       "Una parentesi graffa {",
-      "Il punto e virgola ;",
+      "Il punto e virgola;",
       "I due punti :"
     ],
     correct: [2],
@@ -341,7 +341,7 @@ registerSubject("Python", [
     opts: [
       "Solo il primo blocco la cui condizione è vera, oppure l'else",
       "Tutti i blocchi la cui condizione risulta vera, in ordine",
-      "Sempre due blocchi: quello dell'if iniziale e quello dell'else"
+      "due blocchi: quello dell'if iniziale e quello dell'else"
     ],
     correct: [0],
     exp: "Python valuta le condizioni dall'alto verso il basso ed esegue SOLO il primo ramo la cui condizione risulta vera; poi esce dall'intera struttura. Se nessuna condizione è vera esegue l'else (se presente)."
@@ -373,7 +373,7 @@ registerSubject("Python", [
     q: "Perché questo codice NON modifica la lista? \n\nfor animale in animali:\n    animale = animale.upper()",
     opts: [
       "La variabile del ciclo è una copia: riassegnarla non tocca l'elemento nella lista",
-      "Il metodo upper() non esiste per le stringhe, quindi la riga viene ignorata",
+      "Il metodo upper non esiste per le stringhe, quindi la riga viene ignorata",
       "Manca l'istruzione return, senza la quale la modifica non viene applicata"
     ],
     correct: [0],
@@ -395,7 +395,7 @@ registerSubject("Python", [
     q: "Qual è una regola importante quando si itera con un for su una sequenza?",
     opts: [
       "Terminare ogni ciclo for con un blocco else, altrimenti non è valido",
-      "Usare sempre range() al posto di scorrere direttamente gli elementi",
+      "Usare range al posto di scorrere direttamente gli elementi",
       "Non aggiungere né togliere elementi dalla sequenza che stai iterando"
     ],
     correct: [2],
@@ -484,7 +484,7 @@ registerSubject("Python", [
     opts: [
       "Possono contenere molte istruzioni e cicli come una normale funzione",
       "Sono anonime e contengono una sola espressione, senza def né return",
-      "Richiedono sempre la parola chiave return per restituire un valore"
+      "Richiedono la parola chiave return per restituire un valore"
     ],
     correct: [1],
     exp: "Una lambda è una funzione anonima 'al volo': niente def, niente return (il valore è l'espressione stessa) e sta su una sola riga con una sola espressione. lambda x,y: x+y equivale a una def che ritorna x+y."
@@ -878,7 +878,7 @@ registerSubject("Python", [
     id: "py116", topic: "Set (insiemi)",
     q: "Quale affermazione sui set (insiemi) è corretta?",
     opts: [
-      "Mantengono sempre l'ordine di inserimento come fanno le liste",
+      "Mantengono l'ordine di inserimento come fanno le liste",
       "Non contengono valori duplicati e non hanno un ordine garantito",
       "Si accede ai loro elementi per indice, ad esempio con s[0]"
     ],
@@ -1022,7 +1022,7 @@ registerSubject("Python", [
     q: "Per usare math.sqrt(9) cosa devi fare prima?",
     opts: [
       "Definire tu una funzione chiamata sqrt",
-      "Niente, è una funzione sempre disponibile",
+      "Niente, è una funzione disponibile",
       "Importare il modulo: import math"
     ],
     correct: [2],
@@ -1066,7 +1066,7 @@ registerSubject("Python", [
     q: "Qual è la differenza tra sorted(lista) e lista.sort() ?",
     opts: [
       "sorted() crea una nuova lista ordinata; .sort() ordina sul posto e dà None",
-      "sort() crea una nuova lista ordinata; sorted() modifica quella originale",
+      "sort crea una nuova lista ordinata; sorted modifica quella originale",
       "Sono equivalenti: entrambi restituiscono una nuova lista ordinata"
     ],
     correct: [0],

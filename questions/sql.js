@@ -318,7 +318,7 @@ registerSubject("SQL", [
     q: "Nella INSERT, se un campo è AUTO_INCREMENT / IDENTITY (es. l'ID)...",
     opts: [
       "Non serve indicarlo: lo compila automaticamente il DBMS col valore successivo",
-      "Devi indicarne sempre il valore a mano, altrimenti la riga non viene inserita",
+      "Devi indicarne il valore a mano, altrimenti la riga non viene inserita",
       "L'inserimento fallisce con un errore perché il campo ID non è stato specificato"
     ],
     correct: [0],
@@ -462,7 +462,7 @@ registerSubject("SQL", [
     opts: [
       "Gli operatori AND e OR non possono mai comparire insieme nella stessa WHERE",
       "Conta la precedenza degli operatori: senza parentesi il risultato può cambiare",
-      "Mancano gli apici attorno ai valori numerici, che in SQL vanno sempre messi"
+      "Mancano gli apici attorno ai valori numerici, che in SQL vanno messi"
     ],
     correct: [1],
     exp: "Come in matematica, anche nella logica booleana conta la PRECEDENZA (AND si valuta prima di OR). Senza parentesi il significato cambia. Vanno usate le parentesi per raggruppare correttamente: es. ...AND (Età<30 OR Età>55)."
@@ -517,7 +517,7 @@ registerSubject("SQL", [
     opts: [
       "O tutte le operazioni riescono, o falliscono tutte: se una salta, si annulla tutto",
       "Le operazioni della transazione vengono eseguite una alla volta, senza fretta",
-      "Ogni operazione è indipendente e viene salvata subito, a prescindere dalle altre"
+      "Ogni operazione è indipendente e viene salvata subito, dalle altre"
     ],
     correct: [0],
     exp: "Atomicità: la transazione è un'unità indivisibile. O TUTTE le operazioni vanno a buon fine, oppure viene annullato tutto (rollback), incluse quelle già completate. Esempio classico: bonifico bancario (prelievo + accredito insieme)."
@@ -526,7 +526,7 @@ registerSubject("SQL", [
     id: "sql048", topic: "Proprietà ACID",
     q: "Cosa distingue i DBMS relazionali dai database NoSQL riguardo ad ACID?",
     opts: [
-      "I database NoSQL sono sempre ACID compliant, mentre quelli relazionali non lo sono",
+      "I database NoSQL sono ACID compliant, mentre quelli relazionali non lo sono",
       "I DBMS relazionali sono ACID compliant, adatti dove i dati devono essere validi",
       "Le proprietà ACID riguardano solo la velocità di esecuzione delle query, non i dati"
     ],
@@ -726,7 +726,7 @@ registerSubject("SQL", [
     opts: [
       "Lasciare le password di default per comodità di accesso",
       "Crittografare i dati sia a riposo sia in transito",
-      "Disattivare del tutto i log per risparmiare spazio"
+      "Disattivare i log per risparmiare spazio"
     ],
     correct: [1],
     exp: "Best practice: crittografare i dati (a riposo e in transito), aggiornare il software con le patch, proteggere i backup. Lasciare password di default o disattivare i log sono invece gravi vulnerabilità."
@@ -759,7 +759,7 @@ registerSubject("SQL", [
     opts: [
       "AES da solo è insicuro, perciò RSA viene usato per cifrare l'intero messaggio ogni volta",
       "RSA è sicuro ma lento: serve a scambiare una chiave AES temporanea, poi si cifra con AES",
-      "RSA non funziona su Internet, quindi AES lo sostituisce del tutto tra client e server"
+      "RSA non funziona su Internet, quindi AES lo sostituisce tra client e server"
     ],
     correct: [1],
     exp: "RSA (asimmetrico) è solido ma lento; AES (simmetrico) è veloce. Soluzione ibrida: RSA serve solo a scambiare in modo sicuro una chiave AES temporanea; poi la comunicazione vera e propria viaggia cifrata con AES, veloce."
@@ -768,8 +768,8 @@ registerSubject("SQL", [
     id: "sql070", topic: "Crittografia",
     q: "In MySQL, quale funzione permette di memorizzare un dato in forma cifrata?",
     opts: [
-      "crypt_field()",
-      "encrypt_data()",
+      "crypt_field",
+      "encrypt_data",
       "aes_encrypt()"
     ],
     correct: [2],
@@ -856,9 +856,9 @@ registerSubject("SQL", [
     id: "sql078", topic: "Python e DB",
     q: "Qual è la differenza tra i metodi fetchone() e fetchall() del cursor?",
     opts: [
-      "fetchall() restituisce una sola riga, mentre fetchone() l'intero risultato",
+      "fetchall restituisce una sola riga, mentre fetchone l'intero risultato",
       "fetchone() restituisce una sola riga; fetchall() restituisce tutte le righe",
-      "fetchone() cancella la prima riga dal database dopo averla letta dal cursore"
+      "fetchone cancella la prima riga dal database dopo averla letta dal cursore"
     ],
     correct: [1],
     exp: "fetchone() recupera UNA riga alla volta dal risultato della query; fetchall() recupera TUTTE le righe (come lista). Si scelgono in base a quanti risultati ci si aspetta."
@@ -922,7 +922,7 @@ registerSubject("SQL", [
     id: "sql084", topic: "Cloud DB",
     q: "Quale di questi è un vantaggio tipico di un database in cloud?",
     opts: [
-      "Il funzionamento anche del tutto senza connessione a Internet",
+      "Il funzionamento anche senza connessione a Internet",
       "L'accessibilità globale da qualsiasi luogo connesso a Internet",
       "L'eliminazione della necessità di qualsiasi copia di backup"
     ],
@@ -1209,7 +1209,7 @@ registerSubject("SQL", [
     q: "SELECT DISTINCT Citta, Nome FROM Clienti. Su cosa agisce DISTINCT?",
     opts: [
       "Sulla COMBINAZIONE di tutte le colonne selezionate, non solo sulla prima",
-      "Solo sulla prima colonna elencata, cioè Citta, ignorando del tutto Nome",
+      "Solo sulla prima colonna elencata, cioè Citta, ignorando Nome",
       "Su ogni colonna separatamente, restituendo due elenchi distinti di valori"
     ],
     correct: [0],

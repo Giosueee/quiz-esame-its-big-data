@@ -19,7 +19,7 @@ registerSubject("IoT e Streaming", [
     q: "L'elaborazione in streaming differisce dal batch perché:",
     opts: [
       "Usa solo configurazioni o layout, senza elaborare dati osservati",
-      "Elabora sempre a blocchi periodici",
+      "Elabora a blocchi periodici",
       "Processa gli eventi in continuo appena arrivano"
     ],
     correct: [2],
@@ -129,7 +129,7 @@ registerSubject("IoT e Streaming", [
     q: "La replica (replication) delle partizioni in Kafka serve a:",
     opts: [
       "Garantire durabilità e tolleranza ai guasti mantenendo copie su più broker",
-      "Velocizzare sempre la scrittura dei messaggi sul disco",
+      "Velocizzare la scrittura dei messaggi sul disco",
       "Ordinare i messaggi tra partizioni diverse dello stesso topic"
     ],
     correct: [0],
@@ -261,7 +261,7 @@ registerSubject("IoT e Streaming", [
     q: "In Kafka l'ordine dei messaggi è garantito:",
     opts: [
       "Solo all'interno di una singola partizione, non tra partizioni diverse",
-      "Sempre a livello globale su tutte le partizioni del topic",
+      "a livello globale su tutte le partizioni del topic",
       "Mai, perché Kafka non garantisce alcun ordinamento"
     ],
     correct: [0],
@@ -294,7 +294,7 @@ registerSubject("IoT e Streaming", [
     q: "La differenza tra 'event time' e 'processing time' è:",
     opts: [
       "Event time è quando l'evento è accaduto; processing time quando viene elaborato",
-      "Event time è sempre dopo",
+      "Event time è dopo",
       "Processing time non esiste"
     ],
     correct: [0],
@@ -306,7 +306,7 @@ registerSubject("IoT e Streaming", [
     opts: [
       "Un singolo valore statico",
       "Flussi continui di misurazioni nel tempo",
-      "Immagini a bassa frequenza sempre"
+      "Immagini a bassa frequenza"
     ],
     correct: [1],
     exp: "I sensori (temperatura, movimento, GPS) producono telemetria: serie di misure ad alta frequenza. Questi flussi vengono ingeriti e processati in streaming per monitoraggio e allarmi."
@@ -382,7 +382,7 @@ registerSubject("IoT e Streaming", [
     q: "Lo streaming abilita dashboard in tempo reale perché:",
     opts: [
       "Usa solo configurazioni o layout, senza elaborare dati osservati",
-      "I dati sono sempre vecchi",
+      "I dati sono vecchi",
       "I dati vengono elaborati e mostrati appena arrivano"
     ],
     correct: [2],
@@ -403,7 +403,7 @@ registerSubject("IoT e Streaming", [
     id: "u15037", topic: "Compattazione log",
     q: "La 'log compaction' in Kafka mantiene:",
     opts: [
-      "Tutti i messaggi per sempre",
+      "Tutti i messaggi per",
       "Solo l'ultimo valore per ciascuna chiave",
       "Solo i primi messaggi"
     ],
@@ -414,7 +414,7 @@ registerSubject("IoT e Streaming", [
     id: "u15038", topic: "Delivery semantics",
     q: "La semantica 'at-most-once' comporta:",
     opts: [
-      "Sempre esattamente una volta",
+      "esattamente una volta",
       "Nessuna perdita, possibili duplicati",
       "Possibile perdita di messaggi, ma nessun duplicato"
     ],
@@ -426,7 +426,7 @@ registerSubject("IoT e Streaming", [
     q: "Usare un broker di messaggi tra sistemi serve a:",
     opts: [
       "Disaccoppiarli, assorbire i picchi e aumentare la resilienza",
-      "Accoppiarli strettamente per sincronizzarli sempre",
+      "Accoppiarli strettamente per sincronizzarli",
       "Cifrare tutti i dati scambiati tra i sistemi"
     ],
     correct: [0],
@@ -525,7 +525,7 @@ registerSubject("IoT e Streaming", [
     q: "Nello streaming si preferiscono formati come Avro/Protobuf a JSON perché:",
     opts: [
       "Sono più compatti ed efficienti e supportano gli schemi",
-      "JSON è sempre più veloce anche senza schema e serializzazione compatta",
+      "JSON è più veloce anche senza schema e serializzazione compatta",
       "Occupano più spazio anche con codifica binaria compatta"
     ],
     correct: [0],
@@ -601,7 +601,7 @@ registerSubject("IoT e Streaming", [
     id: "u15055", topic: "Idempotenza consumer",
     q: "Con garanzia at-least-once, il consumer dovrebbe essere:",
     opts: [
-      "Sempre più veloce indipendentemente da stato e duplicati",
+      "più veloce indipendentemente da stato e duplicati",
       "Idempotente, per gestire correttamente eventuali messaggi duplicati",
       "Indifferente ai duplicati anche con consegna at-least-once"
     ],
@@ -658,7 +658,7 @@ registerSubject("IoT e Streaming", [
     opts: [
       "Reagire immediatamente a eventi",
       "Salvare eventi grezzi senza trasformazioni né controlli di qualità",
-      "Sostituire completamente il data warehouse aziendale"
+      "Sostituire il data warehouse aziendale"
     ],
     correct: [0],
     exp: "Analizzare gli eventi appena accadono permette azioni immediate: bloccare una frode, allertare su un guasto, personalizzare l'esperienza. È il valore chiave dello streaming rispetto al batch."
@@ -690,7 +690,7 @@ registerSubject("IoT e Streaming", [
     q: "Una 'sliding window' differisce dalla tumbling perché:",
     opts: [
       "Le finestre si sovrappongono, scorrendo di un passo",
-      "È sempre molto più lunga di una tumbling window",
+      "È molto più lunga di una tumbling window",
       "Non calcola alcuna aggregazione sugli eventi"
     ],
     correct: [0],
@@ -1054,7 +1054,7 @@ registerSubject("IoT e Streaming", [
     opts: [
       "Bufferizzano localmente i dati e li inviano quando la connessione torna",
       "Cancellano immediatamente i dati che non riescono a inviare",
-      "Ignorano del tutto lo stato della connessione"
+      "Ignorano lo stato della connessione"
     ],
     correct: [0],
     exp: "Con reti instabili, i dispositivi/gateway memorizzano localmente la telemetria (store-and-forward) e la trasmettono al ripristino della connessione, evitando perdite di dati."

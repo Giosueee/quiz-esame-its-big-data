@@ -152,7 +152,7 @@ registerSubject("Time Series", [
     opts: [
       "Mantiene ampiezza stagionale costante come in un modello additivo",
       "Cresce in ampiezza al crescere del livello della serie",
-      "Assume sempre valori negativi indipendentemente dal livello"
+      "Assume valori negativi indipendentemente dal livello"
     ],
     correct: [1],
     exp: "Modello additivo: serie = trend + stagionalità + residuo (ampiezza stagionale costante). Moltiplicativo: componenti moltiplicate, con ampiezza stagionale proporzionale al livello."
@@ -249,7 +249,7 @@ registerSubject("Time Series", [
     id: "u10023", topic: "Componente ciclica",
     q: "La componente ciclica differisce dalla stagionale perché:",
     opts: [
-      "Si ripete sempre ogni 12 mesi",
+      "Si ripete ogni 12 mesi",
       "Ha durata variabile e non un periodo fisso e regolare",
       "Coincide col trend"
     ],
@@ -348,7 +348,7 @@ registerSubject("Time Series", [
     id: "u10032", topic: "Overfitting temporale",
     q: "Un modello di forecasting troppo complesso rischia di:",
     opts: [
-      "Prevedere sempre perfettamente",
+      "Prevedere perfettamente",
       "Adattarsi al rumore del passato e prevedere male il futuro",
       "Diventare stazionario"
     ],
@@ -459,7 +459,7 @@ registerSubject("Time Series", [
     q: "Una serie con 'radice unitaria' (es. random walk) è:",
     opts: [
       "Perfettamente prevedibile",
-      "Sempre stazionaria",
+      "stazionaria",
       "Non stazionaria: shock hanno effetto permanente"
     ],
     correct: [2],
@@ -558,7 +558,7 @@ registerSubject("Time Series", [
     q: "Se il trend di una serie non è lineare, si può:",
     opts: [
       "Applicare una sola differenziazione anche se il trend resta non lineare",
-      "Ignorare sempre il trend non lineare invece di modellarlo",
+      "Ignorare il trend non lineare invece di modellarlo",
       "Usare trasformazioni o modelli flessibili"
     ],
     correct: [2],
@@ -569,7 +569,7 @@ registerSubject("Time Series", [
     q: "Cosa distingue dati di serie storica da dati cross-section?",
     opts: [
       "La serie storica ha un ordine temporale; la cross-section fotografa un istante",
-      "La cross-section è sempre più grande",
+      "La cross-section è più grande",
       "La serie storica non ha date"
     ],
     correct: [0],
@@ -624,7 +624,7 @@ registerSubject("Time Series", [
     q: "Aggregare dati ad alta frequenza a una frequenza più bassa:",
     opts: [
       "Lascia invariato il risultato dell'operazione sui dati",
-      "Aumenta sempre il dettaglio",
+      "Aumenta il dettaglio",
       "Riduce il rumore ma può nascondere pattern di breve periodo"
     ],
     correct: [2],
@@ -647,7 +647,7 @@ registerSubject("Time Series", [
     opts: [
       "Facilmente prevedibile oltre la media nonostante assenza di struttura",
       "Sostanzialmente imprevedibile oltre la sua media",
-      "Sempre crescente come una serie con trend monotono"
+      "crescente come una serie con trend monotono"
     ],
     correct: [1],
     exp: "Se la serie è white noise non c'è struttura da sfruttare: la miglior previsione è la media. Quando i residui di un modello sono white noise, si è estratto tutto il segnale."
@@ -723,7 +723,7 @@ registerSubject("Time Series", [
     q: "Nelle previsioni ricorsive a lungo orizzonte l'errore:",
     opts: [
       "Diventa negativo",
-      "Diminuisce sempre",
+      "Diminuisce",
       "Tende ad accumularsi passo dopo passo"
     ],
     correct: [2],
@@ -744,7 +744,7 @@ registerSubject("Time Series", [
     id: "u10068", topic: "Serie intermittenti",
     q: "Le serie 'intermittenti' (molti zeri, domanda sporadica) richiedono:",
     opts: [
-      "Usare sempre un ARIMA classico anche con molti zeri e domanda sporadica",
+      "Usare un ARIMA classico anche con molti zeri e domanda sporadica",
       "Metodi specifici, perché i modelli standard funzionano male",
       "Non applicare alcuna tecnica specifica nonostante zeri e irregolarità"
     ],
@@ -810,7 +810,7 @@ registerSubject("Time Series", [
     id: "u10074", topic: "Valutazione: naïve",
     q: "Se un modello complesso non batte il metodo naïve, allora:",
     opts: [
-      "Va reso più complesso a prescindere",
+      "Va reso più complesso",
       "Non vale la pena usarlo: non aggiunge valore predittivo",
       "Il naïve è sbagliato"
     ],
@@ -876,7 +876,7 @@ registerSubject("Time Series", [
     id: "u10080", topic: "Serie e outlier",
     q: "Un outlier in una serie temporale può:",
     opts: [
-      "Migliorare sempre il modello",
+      "Migliorare il modello",
       "Distorcere trend, stagionalità e previsioni se non trattato",
       "Rendere la serie stazionaria"
     ],
@@ -1064,7 +1064,7 @@ registerSubject("Time Series", [
     q: "Applicare un modello che richiede stazionarietà a una serie non stazionaria:",
     opts: [
       "Produce stime inaffidabili e previsioni scadenti",
-      "Funziona sempre bene",
+      "Funziona bene",
       "Rende la serie stazionaria"
     ],
     correct: [0],

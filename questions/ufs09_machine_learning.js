@@ -227,7 +227,7 @@ registerSubject("Machine Learning", [
     id: "u09021", topic: "K-means",
     q: "Nel k-means, il valore di k:",
     opts: [
-      "È sempre uguale al numero di righe",
+      "È uguale al numero di righe",
       "Va scelto in anticipo dall'utente",
       "Coincide col numero di feature"
     ],
@@ -305,7 +305,7 @@ registerSubject("Machine Learning", [
     q: "Un learning rate troppo alto nella discesa del gradiente:",
     opts: [
       "Lascia invariati parametri, dati e risultato del modello",
-      "Rende sempre l'addestramento più preciso",
+      "Rende l'addestramento più preciso",
       "Può far divergere l'ottimizzazione"
     ],
     correct: [2],
@@ -349,7 +349,7 @@ registerSubject("Machine Learning", [
     q: "Con classi molto sbilanciate (es. 99% vs 1%), l'accuratezza:",
     opts: [
       "Può essere alta ma fuorviante, ignorando la classe rara",
-      "È sempre la metrica migliore",
+      "È la metrica migliore",
       "Coincide con la recall"
     ],
     correct: [0],
@@ -361,7 +361,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Usando un solo modello semplice",
       "Combinando più modelli deboli in uno più forte",
-      "Riducendo sempre l'interpretabilità a zero"
+      "Riducendo l'interpretabilità a zero"
     ],
     correct: [1],
     exp: "Gli ensemble aggregano più modelli: il bagging (random forest) riduce la varianza, il boosting (es. XGBoost) riduce il bias addestrando in sequenza correggendo gli errori."
@@ -392,7 +392,7 @@ registerSubject("Machine Learning", [
     id: "u09036", topic: "Curse of dimensionality",
     q: "La 'maledizione della dimensionalità' indica che:",
     opts: [
-      "Più feature sono sempre meglio",
+      "Più feature sono meglio",
       "Con troppe feature i dati diventano radi e i modelli peggiorano",
       "I dati diventano più densi"
     ],
@@ -404,7 +404,7 @@ registerSubject("Machine Learning", [
     q: "Il classificatore Naive Bayes assume che le feature siano:",
     opts: [
       "Feature etichettate manualmente una per una",
-      "Feature sempre dipendenti tra loro data la classe",
+      "Feature dipendenti tra loro data la classe",
       "Indipendenti tra loro data la classe"
     ],
     correct: [2],
@@ -493,7 +493,7 @@ registerSubject("Machine Learning", [
     opts: [
       "Penalizza di più gli errori grandi",
       "Penalizza meno gli errori grandi",
-      "È sempre uguale all'RMSE"
+      "È uguale all'RMSE"
     ],
     correct: [1],
     exp: "Il MAE è la media degli errori in valore assoluto: tratta tutti gli errori linearmente. L'RMSE, elevando al quadrato, penalizza di più gli errori grandi ed è più sensibile agli outlier."
@@ -547,7 +547,7 @@ registerSubject("Machine Learning", [
     q: "Aumentare la quantità di dati di training tipicamente:",
     opts: [
       "Aiuta a ridurre l'overfitting e migliorare la generalizzazione",
-      "Aumenta sempre l'overfitting",
+      "Aumenta l'overfitting",
       "Lascia invariati parametri, dati e risultato del modello"
     ],
     correct: [0],
@@ -557,7 +557,7 @@ registerSubject("Machine Learning", [
     id: "u09051", topic: "Feature selection",
     q: "La selezione delle feature (feature selection) serve a:",
     opts: [
-      "Aggiungere sempre più variabili",
+      "Aggiungere più variabili",
       "Tenere solo le variabili più informative, riducendo rumore e complessità",
       "Aggiungere manualmente label ai record prima dell'addestramento"
     ],
@@ -568,7 +568,7 @@ registerSubject("Machine Learning", [
     id: "u09052", topic: "Modello parametrico",
     q: "Un modello 'parametrico' (es. regressione lineare):",
     opts: [
-      "È sempre un modello ad albero indipendentemente dalla formulazione",
+      "È un modello ad albero indipendentemente dalla formulazione",
       "Non contiene parametri stimati o fissati dal modello",
       "Ha un numero fisso di parametri indipendente dalla mole di dati"
     ],
@@ -635,7 +635,7 @@ registerSubject("Machine Learning", [
     q: "In un classificatore probabilistico, abbassare la soglia di decisione:",
     opts: [
       "Lascia invariato il risultato dell'operazione sui dati",
-      "Riduce sempre i falsi negativi e i falsi positivi",
+      "Riduce i falsi negativi e i falsi positivi",
       "Aumenta i positivi predetti"
     ],
     correct: [2],
@@ -701,7 +701,7 @@ registerSubject("Machine Learning", [
     q: "In un classificatore ensemble a votazione, la previsione finale è:",
     opts: [
       "Una scelta casuale non guidata dai dati né da una metrica",
-      "Sempre quella del primo modello",
+      "quella del primo modello",
       "La classe scelta dalla maggioranza dei modelli"
     ],
     correct: [2],
@@ -734,7 +734,7 @@ registerSubject("Machine Learning", [
     q: "La regressione lineare presuppone una relazione:",
     opts: [
       "Una scelta casuale non guidata dai dati né da una metrica",
-      "Sempre esponenziale",
+      "esponenziale",
       "Approssimativamente lineare tra feature e target"
     ],
     correct: [2],
@@ -788,7 +788,7 @@ registerSubject("Machine Learning", [
     id: "u09072", topic: "Cross-val: vantaggio",
     q: "Il vantaggio della cross-validation rispetto a un singolo split è:",
     opts: [
-      "È sempre più veloce, anche quando i dati sono eterogenei o copiati",
+      "È più veloce, anche quando i dati sono eterogenei o copiati",
       "Una stima più stabile usando tutti i dati per validare",
       "Elimina il bisogno di dati"
     ],
@@ -986,7 +986,7 @@ registerSubject("Machine Learning", [
     id: "u09090", topic: "Modello robusto",
     q: "Rendere un modello più robusto significa:",
     opts: [
-      "Aumentare sempre i parametri invece di ridurre sensibilità al rumore",
+      "Aumentare i parametri invece di ridurre sensibilità al rumore",
       "Renderlo meno sensibile a rumore, outlier e piccole variazioni",
       "Eliminare la valutazione invece di rendere stabile il modello"
     ],
@@ -1042,7 +1042,7 @@ registerSubject("Machine Learning", [
     q: "L'accuratezza (accuracy) si usa in un problema di regressione?",
     opts: [
       "No: è una metrica di classificazione; per la regressione si usano MAE, RMSE, R²",
-      "Sì, in ogni caso, indipendentemente da frequenza e granularità dei dati",
+      "Sì,, indipendentemente da frequenza e granularità dei dati",
       "No, non esistono metriche per la regressione"
     ],
     correct: [0],
@@ -1064,7 +1064,7 @@ registerSubject("Machine Learning", [
     q: "La funzione di costo (loss) in un modello:",
     opts: [
       "Conta il numero di feature usate dal modello",
-      "Va sempre massimizzata come se fosse una metrica di accuratezza",
+      "Va massimizzata come se fosse una metrica di accuratezza",
       "Misura quanto le previsioni si discostano dai valori reali, da minimizzare"
     ],
     correct: [2],

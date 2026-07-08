@@ -117,7 +117,7 @@ registerSubject("R", [
     id: "u08011", topic: "ggplot2",
     q: "Quale geom si usa per un diagramma a dispersione (scatter) in ggplot2?",
     opts: [
-      "geom_histogram()",
+      "geom_histogram",
       "geom_line()",
       "geom_point()"
     ],
@@ -262,7 +262,7 @@ registerSubject("R", [
     opts: [
       "Può contenere elementi di tipi diversi",
       "Può contenere solo numeri",
-      "È sempre più veloce, anche quando i dati sono eterogenei o copiati"
+      "È più veloce, anche quando i dati sono eterogenei o copiati"
     ],
     correct: [0],
     exp: "La lista è una struttura eterogenea: può contenere numeri, stringhe, vettori, altre liste. Il vettore invece richiede elementi tutti dello stesso tipo."
@@ -294,8 +294,8 @@ registerSubject("R", [
     q: "Quale geom di ggplot2 crea un istogramma?",
     opts: [
       "geom_histogram()",
-      "geom_point()",
-      "geom_boxplot()"
+      "geom_point",
+      "geom_boxplot"
     ],
     correct: [0],
     exp: "geom_histogram() rappresenta la distribuzione di una variabile continua in classi. geom_boxplot() mostra invece quartili e outlier."
@@ -316,7 +316,7 @@ registerSubject("R", [
     q: "Perché usare un factor invece di una stringa per una variabile categorica?",
     opts: [
       "Non permette di definire o usare livelli ordinati",
-      "Occupa sempre più memoria rispetto a una stringa semplice",
+      "Occupa più memoria rispetto a una stringa semplice",
       "Gestisce i livelli in modo esplicito ed è trattato correttamente da modelli e grafici"
     ],
     correct: [2],
@@ -459,8 +459,8 @@ registerSubject("R", [
     q: "Per contare le occorrenze di una categoria in ggplot2 si usa spesso:",
     opts: [
       "geom_bar()",
-      "geom_point()",
-      "geom_smooth()"
+      "geom_point",
+      "geom_smooth"
     ],
     correct: [0],
     exp: "geom_bar() conta e rappresenta le frequenze delle categorie. Per barre con altezze già calcolate si usa geom_col()."
@@ -645,8 +645,8 @@ registerSubject("R", [
     id: "u08059", topic: "Riepilogo per gruppo",
     q: "Qual è l'equivalente R del GROUP BY di SQL?",
     opts: [
-      "arrange(), che riordina righe senza riassumere gruppi",
-      "select(), che sceglie colonne senza calcolare aggregazioni",
+      "arrange, che riordina righe senza riassumere gruppi",
+      "select, che sceglie colonne senza calcolare aggregazioni",
       "group_by() seguito da summarise() in dplyr"
     ],
     correct: [2],
@@ -745,7 +745,7 @@ registerSubject("R", [
     q: "seq(0, 10, by = 2) genera:",
     opts: [
       "2 4 6 8 10",
-      "0 1 2 ... 10",
+      "0 1 2... 10",
       "0 2 4 6 8 10"
     ],
     correct: [2],
@@ -888,7 +888,7 @@ registerSubject("R", [
     q: "mean(df$prezzo) e summarise(df, mean(prezzo)) danno:",
     opts: [
       "Lo stesso valore, con sintassi diverse",
-      "Valori sempre diversi",
+      "Valori diversi",
       "Un errore il secondo"
     ],
     correct: [0],
@@ -922,7 +922,7 @@ registerSubject("R", [
     opts: [
       "Il pacchetto readxl (read_excel())",
       "read.csv()",
-      "install.packages()"
+      "install.packages"
     ],
     correct: [0],
     exp: "read_excel() del pacchetto readxl importa fogli .xlsx/.xls in un data frame. read.csv() è invece per i file CSV di testo."
@@ -1020,8 +1020,8 @@ registerSubject("R", [
     q: "Per sostituire gli NA con la media in una colonna si può:",
     opts: [
       "Assegnare la media agli elementi dove is.na è TRUE",
-      "Usare ggplot(), che costruisce grafici dai dati",
-      "Usare setwd(), che cambia la directory di lavoro"
+      "Usare ggplot, che costruisce grafici dai dati",
+      "Usare setwd, che cambia la directory di lavoro"
     ],
     correct: [0],
     exp: "Es: x[is.na(x)] <- mean(x, na.rm=TRUE) imputa i mancanti con la media. È una strategia semplice (ne esistono di più sofisticate)."
@@ -1041,7 +1041,7 @@ registerSubject("R", [
     id: "u08095", topic: "Struttura condizionale",
     q: "In R, l'if classico (non vettorializzato) valuta:",
     opts: [
-      "Sempre tutti i rami",
+      "tutti i rami",
       "Un intero vettore elemento per elemento",
       "Una singola condizione logica"
     ],
@@ -1086,7 +1086,7 @@ registerSubject("R", [
     q: "Perché in R si preferiscono le operazioni vettorializzate ai cicli for?",
     opts: [
       "Sono più concise e spesso molto più veloci",
-      "Sono sempre errate anche quando rispettano tipi, indice e contesto",
+      "Sono errate anche quando rispettano tipi, indice e contesto",
       "Non esistono i cicli in R"
     ],
     correct: [0],

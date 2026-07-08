@@ -40,7 +40,7 @@ registerSubject("Spark", [
     id: "u17004", topic: "DataFrame",
     q: "Un DataFrame in Spark è:",
     opts: [
-      "Una singola riga di dati restituita da un'azione come first()",
+      "Una singola riga di dati restituita da un'azione come first",
       "Un file di testo grezzo privo di schema e di tipi",
       "Una collezione distribuita organizzata in colonne con schema, come una tabella"
     ],
@@ -404,7 +404,7 @@ registerSubject("Spark", [
     q: "Spark scala aggiungendo:",
     opts: [
       "Un database più grande",
-      "Più memoria a un solo PC sempre",
+      "Più memoria a un solo PC",
       "Più nodi/executor al cluster"
     ],
     correct: [2],
@@ -416,7 +416,7 @@ registerSubject("Spark", [
     opts: [
       "Il numero di partizioni dei dati",
       "Il numero totale di righe del dataset in ingresso",
-      "Sempre uno, indipendentemente da come sono divisi i dati"
+      "uno, indipendentemente da come sono divisi i dati"
     ],
     correct: [0],
     exp: "Ogni partizione viene elaborata da un task: quindi il parallelismo di uno stage è determinato dal numero di partizioni. Ecco perché il partizionamento influenza le performance."
@@ -425,7 +425,7 @@ registerSubject("Spark", [
     id: "u17039", topic: "Spark vs pandas",
     q: "Quando preferire Spark a pandas?",
     opts: [
-      "Sempre, anche per dataset piccoli che stanno in memoria",
+      ", anche per dataset piccoli che stanno in memoria",
       "Quando i dati sono troppo grandi per la memoria di una singola macchina",
       "Mai: pandas gestisce qualsiasi volume meglio di Spark"
     ],
@@ -481,7 +481,7 @@ registerSubject("Spark", [
     q: "Salvare i risultati in Parquet invece che CSV in Spark:",
     opts: [
       "Migliora compressione e velocità di lettura successiva",
-      "È sempre più lento anche nelle letture colonnari successive",
+      "È più lento anche nelle letture colonnari successive",
       "Occupa più spazio del CSV anche con compressione colonnare"
     ],
     correct: [0],
@@ -502,7 +502,7 @@ registerSubject("Spark", [
     id: "u17046", topic: "Job, stage, task",
     q: "La gerarchia di esecuzione in Spark è:",
     opts: [
-      "Il job coincide sempre con un unico stage e un solo task",
+      "Il job coincide con un unico stage e un solo task",
       "Un task avvia un job che viene poi suddiviso in più stage",
       "Un'azione avvia un job, diviso in stage, a loro volta in task"
     ],
@@ -514,7 +514,7 @@ registerSubject("Spark", [
     q: "Una UDF (User Defined Function) in Spark:",
     opts: [
       "Permette logica personalizzata ma è spesso meno ottimizzata delle funzioni native",
-      "È una funzione predefinita di Spark SQL sempre più veloce del codice utente",
+      "È una funzione predefinita di Spark SQL più veloce del codice utente",
       "È un tipo di join distribuito tra due DataFrame di grandi dimensioni"
     ],
     correct: [0],
@@ -536,7 +536,7 @@ registerSubject("Spark", [
     q: "Con Structured Streaming, rispetto al batch, cambia principalmente:",
     opts: [
       "Non si possono usare i DataFrame",
-      "La sintassi è completamente diversa",
+      "La sintassi è diversa",
       "La sorgente è continua e i risultati si aggiornano incrementalmente"
     ],
     correct: [2],
@@ -580,7 +580,7 @@ registerSubject("Spark", [
     q: "Leggere un grande CSV con inferenza dello schema:",
     opts: [
       "Richiede una scansione extra dei dati; definire lo schema è più efficiente",
-      "È sempre gratuita perché lo schema è già nel file CSV",
+      "È gratuita perché lo schema è già nel file CSV",
       "Ordina automaticamente le colonne in base al tipo"
     ],
     correct: [0],
@@ -634,7 +634,7 @@ registerSubject("Spark", [
     id: "u17058", topic: "Spark e SQL",
     q: "Scrivere una query con l'API DataFrame o con Spark SQL:",
     opts: [
-      "DataFrame è sempre più lento",
+      "DataFrame è più lento",
       "Danno risultati diversi",
       "Dà lo stesso piano ottimizzato: sono due modi per lo stesso motore"
     ],
@@ -667,7 +667,7 @@ registerSubject("Spark", [
     id: "u17061", topic: "Formati semi-strutturati",
     q: "Quale formato Spark legge nativamente?",
     opts: [
-      "Eseguibili .exe di Windows",
+      "Eseguibili.exe di Windows",
       "Solo file cifrati",
       "Parquet"
     ],
@@ -679,7 +679,7 @@ registerSubject("Spark", [
     q: "Il 'predicate pushdown' consiste nel:",
     opts: [
       "Applicare i filtri il più vicino possibile alla sorgente, leggendo meno dati",
-      "Leggere sempre tutti i dati e filtrarli solo alla fine",
+      "Leggere tutti i dati e filtrarli solo alla fine",
       "Ordinare i dati prima di applicare qualsiasi filtro"
     ],
     correct: [0],
@@ -757,7 +757,7 @@ registerSubject("Spark", [
     opts: [
       "Non usa mai la rete perché avviene tutto in memoria",
       "Comporta scrittura su disco e trasferimento di dati in rete tra i nodi",
-      "È sempre gratuito quando i dati sono già partizionati"
+      "È gratuito quando i dati sono già partizionati"
     ],
     correct: [1],
     exp: "Lo shuffle scrive i dati intermedi su disco e li trasferisce tra executor via rete: I/O e rete sono le operazioni più lente, quindi ridurre gli shuffle è la principale leva di ottimizzazione."
@@ -788,7 +788,7 @@ registerSubject("Spark", [
     id: "u17072", topic: "Idempotenza scrittura",
     q: "Scrivere l'output con modalità 'overwrite' della partizione aiuta a:",
     opts: [
-      "Aggiungere sempre nuove righe accodandole alle esistenti",
+      "Aggiungere nuove righe accodandole alle esistenti",
       "Rieseguire il job senza duplicare i dati",
       "Duplicare i dati per aumentarne la ridondanza"
     ],
@@ -844,7 +844,7 @@ registerSubject("Spark", [
     q: "Per un join tra una tabella grande e una piccola conviene:",
     opts: [
       "Usare un broadcast join per evitare lo shuffle della tabella grande",
-      "Fare sempre uno shuffle join di entrambe le tabelle",
+      "Fare uno shuffle join di entrambe le tabelle",
       "Portare entrambe le tabelle nel driver e unirle lì"
     ],
     correct: [0],
@@ -854,7 +854,7 @@ registerSubject("Spark", [
     id: "u17078", topic: "Numero partizioni default",
     q: "Un numero di partizioni troppo basso in Spark:",
     opts: [
-      "Migliora sempre le prestazioni riducendo l'overhead",
+      "Migliora le prestazioni riducendo l'overhead",
       "Limita il parallelismo, sottoutilizzando il cluster",
       "Aumenta automaticamente il numero di executor"
     ],
@@ -887,7 +887,7 @@ registerSubject("Spark", [
     id: "u17081", topic: "Cache e memoria",
     q: "Mettere in cache un DataFrame che si usa una sola volta:",
     opts: [
-      "È sempre utile perché la cache accelera qualsiasi lettura",
+      "È utile perché la cache accelera qualsiasi lettura",
       "Non conviene: spreca memoria senza beneficio",
       "Raddoppia la velocità grazie alla ridondanza in memoria"
     ],
@@ -997,7 +997,7 @@ registerSubject("Spark", [
     id: "u17091", topic: "Analisi su cluster",
     q: "L'obiettivo di Spark per l'analisi su larga scala è:",
     opts: [
-      "Sostituire completamente gli strumenti di visualizzazione dati",
+      "Sostituire gli strumenti di visualizzazione dati",
       "Elaborare esclusivamente dataset molto piccoli e semplici",
       "Elaborare volumi che una singola macchina non gestirebbe, in tempi ragionevoli"
     ],
@@ -1087,7 +1087,7 @@ registerSubject("Spark", [
     opts: [
       "Aumenta i dati letti perché carica anche le colonne inutili",
       "Riduce i dati letti ed elaborati, migliorando le performance",
-      "Non ha alcun effetto perché Spark legge sempre tutte le colonne"
+      "Non ha alcun effetto perché Spark legge tutte le colonne"
     ],
     correct: [1],
     exp: "Leggere solo le colonne che servono (specie da formati colonnari come Parquet) riduce l'I/O e la memoria usata: Spark lo fa automaticamente quando il piano lo permette (Catalyst)."
